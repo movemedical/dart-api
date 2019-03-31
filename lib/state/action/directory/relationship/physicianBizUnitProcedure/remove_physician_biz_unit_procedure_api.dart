@@ -1,0 +1,20 @@
+import 'package:built_value/serializer.dart';
+import 'package:modux/modux.dart';
+import 'package:movemedical_api/command.dart';
+
+import 'package:movemedical_api/model/action/directory/relationship/physicianBizUnitProcedure/remove_physician_biz_unit_procedure_api_request.dart';
+export 'package:movemedical_api/model/action/directory/relationship/physicianBizUnitProcedure/remove_physician_biz_unit_procedure_api_request.dart';
+
+part 'remove_physician_biz_unit_procedure_api.g.dart';
+
+abstract class RemovePhysicianBizUnitProcedureApi extends ApiDispatcher<RemovePhysicianBizUnitProcedureApiRequest, Null, RemovePhysicianBizUnitProcedureApi> {
+  @override
+  String get path => 'v1/directory/relationship/physician_bizunit_procedure/remove';
+  
+  @override
+  Serializer<RemovePhysicianBizUnitProcedureApiRequest> get requestSerializer => RemovePhysicianBizUnitProcedureApiRequest.serializer;
+  
+  RemovePhysicianBizUnitProcedureApi._();
+  
+  factory RemovePhysicianBizUnitProcedureApi(RemovePhysicianBizUnitProcedureApiOptions options) = _$RemovePhysicianBizUnitProcedureApi;
+}

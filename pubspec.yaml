@@ -1,0 +1,25 @@
+name: movemedical_api
+description: Move Medical API
+
+version: 0.9.0
+
+environment:
+  sdk: ">=2.1.0-dev.9.4 <3.0.0"
+
+dependencies:
+  http: ^0.12.0+1
+  modux:
+    git: git://github.com/movemedical/modux-dart
+
+dev_dependencies:
+  analyzer: ^0.34.3
+  build: ^1.0.3
+  build_runner: ^1.1.3
+  test: ^1.5.1
+  mockito: ^4.0.0
+#  build_web_compilers: ^1.1.0
+
+  built_value_generator:
+    git: git://github.com/movemedical/built-value-generator
+  modux_generator:
+    git: git://github.com/movemedical/modux-dart-generator

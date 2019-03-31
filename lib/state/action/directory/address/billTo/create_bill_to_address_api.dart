@@ -1,0 +1,20 @@
+import 'package:built_value/serializer.dart';
+import 'package:modux/modux.dart';
+import 'package:movemedical_api/command.dart';
+
+import 'package:movemedical_api/model/action/directory/address/billTo/create_bill_to_address_api_request.dart';
+export 'package:movemedical_api/model/action/directory/address/billTo/create_bill_to_address_api_request.dart';
+
+part 'create_bill_to_address_api.g.dart';
+
+abstract class CreateBillToAddressApi extends ApiDispatcher<CreateBillToAddressApiRequest, Null, CreateBillToAddressApi> {
+  @override
+  String get path => 'v1/directory/address/bill_to/create';
+  
+  @override
+  Serializer<CreateBillToAddressApiRequest> get requestSerializer => CreateBillToAddressApiRequest.serializer;
+  
+  CreateBillToAddressApi._();
+  
+  factory CreateBillToAddressApi(CreateBillToAddressApiOptions options) = _$CreateBillToAddressApi;
+}
