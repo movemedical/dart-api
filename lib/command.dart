@@ -39,14 +39,6 @@ abstract class ApiActions
 
   FieldDispatcher<GetUiSetupMobileApiResponse> get activeSetup;
 
-  @override
-  void $reducer(ReducerBuilder reducer) {
-    super.$reducer(reducer);
-  }
-
-  @override
-  void middleware(MiddlewareBuilder builder) {}
-
   ApiActions._();
 
   factory ApiActions(ApiActionsOptions options) = _$ApiActions;
@@ -490,7 +482,7 @@ class ApiService implements StoreService {
     if (data is List<int>) {
       try {
         d = utf8.decode(data);
-      } on Error catch (e) {}
+      } catch (e, stackTrace) {}
     }
 
     if (data == 'ping') {
@@ -860,7 +852,7 @@ class HttpPoolClient {
 
         return complete(CallResponse<RespT>(DateTime.now().difference(started),
             response.statusCode, response.headers, result));
-      } on Error catch (e, stackTrace) {
+      } catch (e, stackTrace) {
         return CallResponse<RespT>.err(DateTime.now().difference(started),
             CallResponseError.serialization, e, stackTrace);
       } finally {
@@ -893,7 +885,7 @@ class HttpPoolClient {
         return Future.value(conn);
       } on TimeoutException catch (e, stackTrace) {
         return Future.error(e, stackTrace);
-      } on Error catch (e, stackTrace) {
+      } catch (e, stackTrace) {
         return Future.error(e, stackTrace);
       } finally {
         _backlog.remove(future);
@@ -928,7 +920,7 @@ class HttpPoolClient {
       conn.unlink();
       try {
         conn._client.close();
-      } on Error catch (e) {}
+      } catch (e) {}
       conn = _HttpConn(this, factory());
       _active.add(conn);
     }
@@ -941,7 +933,7 @@ class HttpPoolClient {
         try {
           next.complete(conn);
           return;
-        } on Error catch (e, stackTrace) {
+        } catch (e, stackTrace) {
           // ignore.
         }
       }
