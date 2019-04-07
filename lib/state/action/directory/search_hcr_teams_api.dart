@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/search_hcr_teams_api_resp
 
 part 'search_hcr_teams_api.g.dart';
 
-abstract class SearchHcrTeamsApi extends ApiDispatcher<SearchHcrTeamsApiRequest, SearchHcrTeamsApiResponse, SearchHcrTeamsApi> {
+abstract class SearchHcrTeamsApi extends ApiDispatcher<SearchHcrTeamsApiRequest,
+SearchHcrTeamsApiRequestBuilder,
+SearchHcrTeamsApiResponse,
+SearchHcrTeamsApiResponseBuilder,
+SearchHcrTeamsApi> {
   @override
   String get path => 'v1/directory/list_hcr_team';
-  
-  @override
-  Serializer<SearchHcrTeamsApiRequest> get requestSerializer => SearchHcrTeamsApiRequest.serializer;
-  
-  @override
-  Serializer<SearchHcrTeamsApiResponse> get responseSerializer => SearchHcrTeamsApiResponse.serializer;
   
   SearchHcrTeamsApi._();
   

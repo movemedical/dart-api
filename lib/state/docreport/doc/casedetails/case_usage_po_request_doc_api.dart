@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/doc/casedetails/case_usage_po_re
 
 part 'case_usage_po_request_doc_api.g.dart';
 
-abstract class CaseUsagePoRequestDocApi extends ApiDispatcher<CaseUsagePoRequestDocApiRequest, Null, CaseUsagePoRequestDocApi> {
+abstract class CaseUsagePoRequestDocApi extends ApiDispatcher<CaseUsagePoRequestDocApiRequest,
+CaseUsagePoRequestDocApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CaseUsagePoRequestDocApi> {
   @override
   String get path => 'v1/doc/case_usage_po_request';
-  
-  @override
-  Serializer<CaseUsagePoRequestDocApiRequest> get requestSerializer => CaseUsagePoRequestDocApiRequest.serializer;
   
   CaseUsagePoRequestDocApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/export/audit/request_audit_item_
 
 part 'request_audit_item_export_doc_api.g.dart';
 
-abstract class RequestAuditItemExportDocApi extends ApiDispatcher<RequestAuditItemExportDocApiRequest, Null, RequestAuditItemExportDocApi> {
+abstract class RequestAuditItemExportDocApi extends ApiDispatcher<RequestAuditItemExportDocApiRequest,
+RequestAuditItemExportDocApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestAuditItemExportDocApi> {
   @override
   String get path => 'v1/docreport/export/audit_items';
-  
-  @override
-  Serializer<RequestAuditItemExportDocApiRequest> get requestSerializer => RequestAuditItemExportDocApiRequest.serializer;
   
   RequestAuditItemExportDocApi._();
   

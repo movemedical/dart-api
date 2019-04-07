@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/get_audits_due_count_api_
 
 part 'get_audits_due_count_api.g.dart';
 
-abstract class GetAuditsDueCountApi extends ApiDispatcher<GetAuditsDueCountApiRequest, GetAuditsDueCountApiResponse, GetAuditsDueCountApi> {
+abstract class GetAuditsDueCountApi extends ApiDispatcher<GetAuditsDueCountApiRequest,
+GetAuditsDueCountApiRequestBuilder,
+GetAuditsDueCountApiResponse,
+GetAuditsDueCountApiResponseBuilder,
+GetAuditsDueCountApi> {
   @override
   String get path => 'v1/dashboard/get_audits_due_count';
-  
-  @override
-  Serializer<GetAuditsDueCountApiRequest> get requestSerializer => GetAuditsDueCountApiRequest.serializer;
-  
-  @override
-  Serializer<GetAuditsDueCountApiResponse> get responseSerializer => GetAuditsDueCountApiResponse.serializer;
   
   GetAuditsDueCountApi._();
   

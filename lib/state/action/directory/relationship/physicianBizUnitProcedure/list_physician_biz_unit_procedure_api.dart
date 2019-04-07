@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/physicianBiz
 
 part 'list_physician_biz_unit_procedure_api.g.dart';
 
-abstract class ListPhysicianBizUnitProcedureApi extends ApiDispatcher<ListPhysicianBizUnitProcedureApiRequest, ListPhysicianBizUnitProcedureApiResponse, ListPhysicianBizUnitProcedureApi> {
+abstract class ListPhysicianBizUnitProcedureApi extends ApiDispatcher<ListPhysicianBizUnitProcedureApiRequest,
+ListPhysicianBizUnitProcedureApiRequestBuilder,
+ListPhysicianBizUnitProcedureApiResponse,
+ListPhysicianBizUnitProcedureApiResponseBuilder,
+ListPhysicianBizUnitProcedureApi> {
   @override
   String get path => 'v1/directory/relationship/physician_biz_unit_procedure/list';
-  
-  @override
-  Serializer<ListPhysicianBizUnitProcedureApiRequest> get requestSerializer => ListPhysicianBizUnitProcedureApiRequest.serializer;
-  
-  @override
-  Serializer<ListPhysicianBizUnitProcedureApiResponse> get responseSerializer => ListPhysicianBizUnitProcedureApiResponse.serializer;
   
   ListPhysicianBizUnitProcedureApi._();
   

@@ -10,91 +10,92 @@ part of 'update_item_category_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateItemCategoryApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateItemCategoryApi> UpdateItemCategoryApiOptions();
 
 class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateItemCategoryApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateItemCategoryApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateItemCategoryApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateItemCategoryApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateItemCategoryApi,
           Command<ApiCommand<UpdateItemCategoryApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>,
-          UpdateItemCategoryApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
+          UpdateItemCategoryApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, CommandProgress>> $progress;
 
   _$UpdateItemCategoryApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateItemCategoryApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateItemCategoryApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateItemCategoryApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateItemCategoryApi,
                     Command<ApiCommand<UpdateItemCategoryApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>,
-                UpdateItemCategoryApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateItemCategoryApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateItemCategoryApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateItemCategoryApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateItemCategoryApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateItemCategoryApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,15 @@ class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
       _$UpdateItemCategoryApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<UpdateItemCategoryApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<UpdateItemCategoryApiRequest>,
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +135,30 @@ class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateItemCategoryApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateItemCategoryApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateItemCategoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateItemCategoryApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateItemCategoryApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateItemCategoryApiRequest> get commandPayloadSerializer =>
+      UpdateItemCategoryApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

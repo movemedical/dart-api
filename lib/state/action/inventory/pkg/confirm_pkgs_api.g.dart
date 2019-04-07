@@ -10,74 +10,75 @@ part of 'confirm_pkgs_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>,
     ConfirmPkgsApi> ConfirmPkgsApiOptions();
 
 class _$ConfirmPkgsApi extends ConfirmPkgsApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>,
       ConfirmPkgsApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, Command<ApiCommand<ConfirmPkgsApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
-          ConfirmPkgsApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
+          ConfirmPkgsApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, CommandProgress>> $progress;
 
   _$ConfirmPkgsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmPkgsApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
                 ConfirmPkgsApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
                 ConfirmPkgsApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ConfirmPkgsApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     ConfirmPkgsApi,
                     Command<ApiCommand<ConfirmPkgsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmPkgsApiRequest>,
-                ApiResult<Null>,
-                ConfirmPkgsApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<ConfirmPkgsApiRequest>,
+                    ApiResult<Empty>,
+                    ConfirmPkgsApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
                 ConfirmPkgsApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
                 ConfirmPkgsApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmPkgsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmPkgsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,14 +87,14 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
       _$ConfirmPkgsApi._(options());
 
   @override
-  CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<ConfirmPkgsApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -116,6 +117,30 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ConfirmPkgsApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<ConfirmPkgsApiRequest> newCommandBuilder() =>
+      ApiCommand<ConfirmPkgsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ConfirmPkgsApiRequestBuilder newCommandPayloadBuilder() =>
+      ConfirmPkgsApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<ConfirmPkgsApiRequest> get commandPayloadSerializer =>
+      ConfirmPkgsApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

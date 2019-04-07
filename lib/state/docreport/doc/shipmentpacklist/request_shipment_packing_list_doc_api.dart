@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/doc/shipmentpacklist/request_shi
 
 part 'request_shipment_packing_list_doc_api.g.dart';
 
-abstract class RequestShipmentPackingListDocApi extends ApiDispatcher<RequestShipmentPackingListDocApiRequest, Null, RequestShipmentPackingListDocApi> {
+abstract class RequestShipmentPackingListDocApi extends ApiDispatcher<RequestShipmentPackingListDocApiRequest,
+RequestShipmentPackingListDocApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestShipmentPackingListDocApi> {
   @override
   String get path => 'v1/doc/shipmentPackingList';
-  
-  @override
-  Serializer<RequestShipmentPackingListDocApiRequest> get requestSerializer => RequestShipmentPackingListDocApiRequest.serializer;
   
   RequestShipmentPackingListDocApi._();
   

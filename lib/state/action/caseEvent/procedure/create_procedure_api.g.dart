@@ -160,4 +160,31 @@ class _$CreateProcedureApi extends CreateProcedureApi {
         FullType(ApiCommand, [FullType(CreateProcedureApiRequest)]),
         FullType(ApiResult, [FullType(CreateProcedureApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateProcedureApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateProcedureApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateProcedureApiResponse> newResultBuilder() =>
+      ApiResult<CreateProcedureApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateProcedureApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateProcedureApiRequest().toBuilder();
+
+  @override
+  CreateProcedureApiResponseBuilder newResultPayloadBuilder() =>
+      CreateProcedureApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateProcedureApiRequest> get commandPayloadSerializer =>
+      CreateProcedureApiRequest.serializer;
+
+  @override
+  Serializer<CreateProcedureApiResponse> get resultPayloadSerializer =>
+      CreateProcedureApiResponse.serializer;
 }

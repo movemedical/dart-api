@@ -11,98 +11,99 @@ part of 'add_containers_to_be_counted_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<AddContainersToBeCountedApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AddContainersToBeCountedApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AddContainersToBeCountedApi> AddContainersToBeCountedApiOptions();
 
 class _$AddContainersToBeCountedApi extends AddContainersToBeCountedApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AddContainersToBeCountedApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>, AddContainersToBeCountedApi, String>> $clear;
+          ApiResult<Empty>, AddContainersToBeCountedApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>, AddContainersToBeCountedApi, String>> $cancel;
+          ApiResult<Empty>, AddContainersToBeCountedApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddContainersToBeCountedApi,
           Command<ApiCommand<AddContainersToBeCountedApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddContainersToBeCountedApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>, AddContainersToBeCountedApi, String>> $detach;
+          ApiResult<Empty>, AddContainersToBeCountedApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>, AddContainersToBeCountedApi, String>> $attach;
+          ApiResult<Empty>, AddContainersToBeCountedApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddContainersToBeCountedApi,
           CommandProgress>> $progress;
 
   _$AddContainersToBeCountedApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddContainersToBeCountedApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddContainersToBeCountedApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddContainersToBeCountedApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddContainersToBeCountedApi,
                     Command<ApiCommand<AddContainersToBeCountedApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>,
-                AddContainersToBeCountedApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddContainersToBeCountedApiRequest>,
+                    ApiResult<Empty>,
+                    AddContainersToBeCountedApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddContainersToBeCountedApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddContainersToBeCountedApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddContainersToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddContainersToBeCountedApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$AddContainersToBeCountedApi extends AddContainersToBeCountedApi {
       _$AddContainersToBeCountedApi._(options());
 
   @override
-  CommandState<ApiCommand<AddContainersToBeCountedApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddContainersToBeCountedApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<AddContainersToBeCountedApiRequest>, ApiResult<Null>>();
+          ApiCommand<AddContainersToBeCountedApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddContainersToBeCountedApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddContainersToBeCountedApiRequest>, ApiResult<Null>>();
+          ApiCommand<AddContainersToBeCountedApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$AddContainersToBeCountedApi extends AddContainersToBeCountedApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddContainersToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddContainersToBeCountedApiRequest> newCommandBuilder() =>
+      ApiCommand<AddContainersToBeCountedApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddContainersToBeCountedApiRequestBuilder newCommandPayloadBuilder() =>
+      AddContainersToBeCountedApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddContainersToBeCountedApiRequest> get commandPayloadSerializer =>
+      AddContainersToBeCountedApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

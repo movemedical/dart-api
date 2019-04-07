@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/zone/create_zone_api_resp
 
 part 'create_zone_api.g.dart';
 
-abstract class CreateZoneApi extends ApiDispatcher<CreateZoneApiRequest, CreateZoneApiResponse, CreateZoneApi> {
+abstract class CreateZoneApi extends ApiDispatcher<CreateZoneApiRequest,
+CreateZoneApiRequestBuilder,
+CreateZoneApiResponse,
+CreateZoneApiResponseBuilder,
+CreateZoneApi> {
   @override
   String get path => 'v1/inventory/zone/create';
-  
-  @override
-  Serializer<CreateZoneApiRequest> get requestSerializer => CreateZoneApiRequest.serializer;
-  
-  @override
-  Serializer<CreateZoneApiResponse> get responseSerializer => CreateZoneApiResponse.serializer;
   
   CreateZoneApi._();
   

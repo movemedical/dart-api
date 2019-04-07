@@ -10,91 +10,92 @@ part of 'remove_hcr_to_org_unit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RemoveHcrToOrgUnitApi> RemoveHcrToOrgUnitApiOptions();
 
 class _$RemoveHcrToOrgUnitApi extends RemoveHcrToOrgUnitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveHcrToOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>,
           RemoveHcrToOrgUnitApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>,
           RemoveHcrToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveHcrToOrgUnitApi,
           Command<ApiCommand<RemoveHcrToOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>,
-          RemoveHcrToOrgUnitApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>,
+          RemoveHcrToOrgUnitApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>,
           RemoveHcrToOrgUnitApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>,
           RemoveHcrToOrgUnitApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>,
           RemoveHcrToOrgUnitApi, CommandProgress>> $progress;
 
   _$RemoveHcrToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveHcrToOrgUnitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveHcrToOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveHcrToOrgUnitApi,
                     Command<ApiCommand<RemoveHcrToOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>,
-                RemoveHcrToOrgUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveHcrToOrgUnitApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveHcrToOrgUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveHcrToOrgUnitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveHcrToOrgUnitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveHcrToOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,15 @@ class _$RemoveHcrToOrgUnitApi extends RemoveHcrToOrgUnitApi {
       _$RemoveHcrToOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<RemoveHcrToOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<RemoveHcrToOrgUnitApiRequest>,
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +135,30 @@ class _$RemoveHcrToOrgUnitApi extends RemoveHcrToOrgUnitApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveHcrToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveHcrToOrgUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<RemoveHcrToOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveHcrToOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      RemoveHcrToOrgUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveHcrToOrgUnitApiRequest> get commandPayloadSerializer =>
+      RemoveHcrToOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

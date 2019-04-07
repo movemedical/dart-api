@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/procedureToB
 
 part 'create_procedure_to_biz_unit_api.g.dart';
 
-abstract class CreateProcedureToBizUnitApi extends ApiDispatcher<CreateProcedureToBizUnitApiRequest, Null, CreateProcedureToBizUnitApi> {
+abstract class CreateProcedureToBizUnitApi extends ApiDispatcher<CreateProcedureToBizUnitApiRequest,
+CreateProcedureToBizUnitApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreateProcedureToBizUnitApi> {
   @override
   String get path => 'v1/directory/relationship/procedure_to_bizunit/create';
-  
-  @override
-  Serializer<CreateProcedureToBizUnitApiRequest> get requestSerializer => CreateProcedureToBizUnitApiRequest.serializer;
   
   CreateProcedureToBizUnitApi._();
   

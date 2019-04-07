@@ -164,4 +164,31 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
         FullType(ApiCommand, [FullType(RequestCreditHoldReportApiRequest)]),
         FullType(ApiResult, [FullType(RequestCreditHoldReportApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestCreditHoldReportApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestCreditHoldReportApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestCreditHoldReportApiResponse> newResultBuilder() =>
+      ApiResult<RequestCreditHoldReportApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestCreditHoldReportApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestCreditHoldReportApiRequest().toBuilder();
+
+  @override
+  RequestCreditHoldReportApiResponseBuilder newResultPayloadBuilder() =>
+      RequestCreditHoldReportApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestCreditHoldReportApiRequest> get commandPayloadSerializer =>
+      RequestCreditHoldReportApiRequest.serializer;
+
+  @override
+  Serializer<RequestCreditHoldReportApiResponse> get resultPayloadSerializer =>
+      RequestCreditHoldReportApiResponse.serializer;
 }

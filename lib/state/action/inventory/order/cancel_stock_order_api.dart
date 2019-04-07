@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/order/cancel_stock_order_
 
 part 'cancel_stock_order_api.g.dart';
 
-abstract class CancelStockOrderApi extends ApiDispatcher<CancelStockOrderApiRequest, Null, CancelStockOrderApi> {
+abstract class CancelStockOrderApi extends ApiDispatcher<CancelStockOrderApiRequest,
+CancelStockOrderApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CancelStockOrderApi> {
   @override
   String get path => 'v1/inventory/order/cancel';
-  
-  @override
-  Serializer<CancelStockOrderApiRequest> get requestSerializer => CancelStockOrderApiRequest.serializer;
   
   CancelStockOrderApi._();
   

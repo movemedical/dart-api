@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/catalog/create_lot_api_response.dar
 
 part 'create_lot_api.g.dart';
 
-abstract class CreateLotApi extends ApiDispatcher<CreateLotApiRequest, CreateLotApiResponse, CreateLotApi> {
+abstract class CreateLotApi extends ApiDispatcher<CreateLotApiRequest,
+CreateLotApiRequestBuilder,
+CreateLotApiResponse,
+CreateLotApiResponseBuilder,
+CreateLotApi> {
   @override
   String get path => 'v1/catalog/lot/create';
-  
-  @override
-  Serializer<CreateLotApiRequest> get requestSerializer => CreateLotApiRequest.serializer;
-  
-  @override
-  Serializer<CreateLotApiResponse> get responseSerializer => CreateLotApiResponse.serializer;
   
   CreateLotApi._();
   

@@ -10,70 +10,68 @@ part of 'update_ae_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>,
     UpdateAeApi> UpdateAeApiOptions();
 
 class _$UpdateAeApi extends UpdateAeApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>,
       UpdateAeApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>> $replace;
+      CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
           UpdateAeApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
           UpdateAeApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
           UpdateAeApi, Command<ApiCommand<UpdateAeApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
-          UpdateAeApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
+          UpdateAeApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
           UpdateAeApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
           UpdateAeApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
           UpdateAeApi, CommandProgress>> $progress;
 
   _$UpdateAeApi._(this.$options)
       : $replace = $options.action<
-                CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>>(
+                CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>>(
             '\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
                 UpdateAeApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
                 UpdateAeApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
-                CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+                CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
                     UpdateAeApi, Command<ApiCommand<UpdateAeApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateAeApiRequest>,
-                ApiResult<Null>,
-                UpdateAeApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
+                    UpdateAeApi, CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
                 UpdateAeApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>,
                 UpdateAeApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAeApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateAeApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -82,13 +80,13 @@ class _$UpdateAeApi extends UpdateAeApi {
       _$UpdateAeApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>> get $initial =>
-      CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>();
+  CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>> get $initial =>
+      CommandState<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateAeApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<UpdateAeApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<UpdateAeApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -111,6 +109,30 @@ class _$UpdateAeApi extends UpdateAeApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateAeApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateAeApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateAeApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateAeApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateAeApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateAeApiRequest> get commandPayloadSerializer =>
+      UpdateAeApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

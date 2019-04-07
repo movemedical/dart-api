@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stock/list_stock_for_sour
 
 part 'list_stock_for_sourcing_matrix_api.g.dart';
 
-abstract class ListStockForSourcingMatrixApi extends ApiDispatcher<ListStockForSourcingMatrixApiRequest, ListStockForSourcingMatrixApiResponse, ListStockForSourcingMatrixApi> {
+abstract class ListStockForSourcingMatrixApi extends ApiDispatcher<ListStockForSourcingMatrixApiRequest,
+ListStockForSourcingMatrixApiRequestBuilder,
+ListStockForSourcingMatrixApiResponse,
+ListStockForSourcingMatrixApiResponseBuilder,
+ListStockForSourcingMatrixApi> {
   @override
   String get path => 'v1/inventory/stock/list_for_sourcing_matrix';
-  
-  @override
-  Serializer<ListStockForSourcingMatrixApiRequest> get requestSerializer => ListStockForSourcingMatrixApiRequest.serializer;
-  
-  @override
-  Serializer<ListStockForSourcingMatrixApiResponse> get responseSerializer => ListStockForSourcingMatrixApiResponse.serializer;
   
   ListStockForSourcingMatrixApi._();
   

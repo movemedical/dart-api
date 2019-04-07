@@ -165,4 +165,34 @@ class _$ListUsersForIssueAssignmentApi extends ListUsersForIssueAssignmentApi {
         FullType(ApiCommand, [FullType(ListUsersForIssueAssignmentApiRequest)]),
         FullType(ApiResult, [FullType(ListUsersForIssueAssignmentApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListUsersForIssueAssignmentApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListUsersForIssueAssignmentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListUsersForIssueAssignmentApiResponse> newResultBuilder() =>
+      ApiResult<ListUsersForIssueAssignmentApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListUsersForIssueAssignmentApiRequestBuilder newCommandPayloadBuilder() =>
+      ListUsersForIssueAssignmentApiRequest().toBuilder();
+
+  @override
+  ListUsersForIssueAssignmentApiResponseBuilder newResultPayloadBuilder() =>
+      ListUsersForIssueAssignmentApiResponse().toBuilder();
+
+  @override
+  Serializer<ListUsersForIssueAssignmentApiRequest>
+      get commandPayloadSerializer =>
+          ListUsersForIssueAssignmentApiRequest.serializer;
+
+  @override
+  Serializer<ListUsersForIssueAssignmentApiResponse>
+      get resultPayloadSerializer =>
+          ListUsersForIssueAssignmentApiResponse.serializer;
 }

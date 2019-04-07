@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/remove_assignees_ap
 
 part 'remove_assignees_api.g.dart';
 
-abstract class RemoveAssigneesApi extends ApiDispatcher<RemoveAssigneesApiRequest, Null, RemoveAssigneesApi> {
+abstract class RemoveAssigneesApi extends ApiDispatcher<RemoveAssigneesApiRequest,
+RemoveAssigneesApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RemoveAssigneesApi> {
   @override
   String get path => 'v1/inventory/audit/remove_assignees';
-  
-  @override
-  Serializer<RemoveAssigneesApiRequest> get requestSerializer => RemoveAssigneesApiRequest.serializer;
   
   RemoveAssigneesApi._();
   

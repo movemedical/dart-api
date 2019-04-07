@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/delegate/rem
 
 part 'remove_delegate_api.g.dart';
 
-abstract class RemoveDelegateApi extends ApiDispatcher<RemoveDelegateApiRequest, Null, RemoveDelegateApi> {
+abstract class RemoveDelegateApi extends ApiDispatcher<RemoveDelegateApiRequest,
+RemoveDelegateApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RemoveDelegateApi> {
   @override
   String get path => 'v1/directory/relationship/delegate/remove';
-  
-  @override
-  Serializer<RemoveDelegateApiRequest> get requestSerializer => RemoveDelegateApiRequest.serializer;
   
   RemoveDelegateApi._();
   

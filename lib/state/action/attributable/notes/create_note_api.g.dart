@@ -147,4 +147,31 @@ class _$CreateNoteApi extends CreateNoteApi {
         FullType(ApiCommand, [FullType(CreateNoteApiRequest)]),
         FullType(ApiResult, [FullType(CreateNoteApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateNoteApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateNoteApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateNoteApiResponse> newResultBuilder() =>
+      ApiResult<CreateNoteApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateNoteApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateNoteApiRequest().toBuilder();
+
+  @override
+  CreateNoteApiResponseBuilder newResultPayloadBuilder() =>
+      CreateNoteApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateNoteApiRequest> get commandPayloadSerializer =>
+      CreateNoteApiRequest.serializer;
+
+  @override
+  Serializer<CreateNoteApiResponse> get resultPayloadSerializer =>
+      CreateNoteApiResponse.serializer;
 }

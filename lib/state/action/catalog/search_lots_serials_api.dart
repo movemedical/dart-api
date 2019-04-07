@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/catalog/search_lots_serials_api_res
 
 part 'search_lots_serials_api.g.dart';
 
-abstract class SearchLotsSerialsApi extends ApiDispatcher<SearchLotsSerialsApiRequest, SearchLotsSerialsApiResponse, SearchLotsSerialsApi> {
+abstract class SearchLotsSerialsApi extends ApiDispatcher<SearchLotsSerialsApiRequest,
+SearchLotsSerialsApiRequestBuilder,
+SearchLotsSerialsApiResponse,
+SearchLotsSerialsApiResponseBuilder,
+SearchLotsSerialsApi> {
   @override
   String get path => 'v1/catalog/search_lots_serials';
-  
-  @override
-  Serializer<SearchLotsSerialsApiRequest> get requestSerializer => SearchLotsSerialsApiRequest.serializer;
-  
-  @override
-  Serializer<SearchLotsSerialsApiResponse> get responseSerializer => SearchLotsSerialsApiResponse.serializer;
   
   SearchLotsSerialsApi._();
   

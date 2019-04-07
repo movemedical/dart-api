@@ -161,4 +161,31 @@ class _$BuildUsageRestockPlanApi extends BuildUsageRestockPlanApi {
         FullType(ApiCommand, [FullType(BuildUsageRestockPlanApiRequest)]),
         FullType(ApiResult, [FullType(BuildUsageRestockPlanApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<BuildUsageRestockPlanApiRequest> newCommandBuilder() =>
+      ApiCommand<BuildUsageRestockPlanApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<BuildUsageRestockPlanApiResponse> newResultBuilder() =>
+      ApiResult<BuildUsageRestockPlanApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  BuildUsageRestockPlanApiRequestBuilder newCommandPayloadBuilder() =>
+      BuildUsageRestockPlanApiRequest().toBuilder();
+
+  @override
+  BuildUsageRestockPlanApiResponseBuilder newResultPayloadBuilder() =>
+      BuildUsageRestockPlanApiResponse().toBuilder();
+
+  @override
+  Serializer<BuildUsageRestockPlanApiRequest> get commandPayloadSerializer =>
+      BuildUsageRestockPlanApiRequest.serializer;
+
+  @override
+  Serializer<BuildUsageRestockPlanApiResponse> get resultPayloadSerializer =>
+      BuildUsageRestockPlanApiResponse.serializer;
 }

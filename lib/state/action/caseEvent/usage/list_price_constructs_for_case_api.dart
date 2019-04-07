@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/usage/list_price_construc
 
 part 'list_price_constructs_for_case_api.g.dart';
 
-abstract class ListPriceConstructsForCaseApi extends ApiDispatcher<ListPriceConstructsForCaseApiRequest, ListPriceConstructsForCaseApiResponse, ListPriceConstructsForCaseApi> {
+abstract class ListPriceConstructsForCaseApi extends ApiDispatcher<ListPriceConstructsForCaseApiRequest,
+ListPriceConstructsForCaseApiRequestBuilder,
+ListPriceConstructsForCaseApiResponse,
+ListPriceConstructsForCaseApiResponseBuilder,
+ListPriceConstructsForCaseApi> {
   @override
   String get path => 'v1/case_event/usage/list_price_constructs';
-  
-  @override
-  Serializer<ListPriceConstructsForCaseApiRequest> get requestSerializer => ListPriceConstructsForCaseApiRequest.serializer;
-  
-  @override
-  Serializer<ListPriceConstructsForCaseApiResponse> get responseSerializer => ListPriceConstructsForCaseApiResponse.serializer;
   
   ListPriceConstructsForCaseApi._();
   

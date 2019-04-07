@@ -164,4 +164,31 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
         FullType(ApiCommand, [FullType(GetItemLotSerialHistoryApiRequest)]),
         FullType(ApiResult, [FullType(GetItemLotSerialHistoryApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetItemLotSerialHistoryApiRequest> newCommandBuilder() =>
+      ApiCommand<GetItemLotSerialHistoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetItemLotSerialHistoryApiResponse> newResultBuilder() =>
+      ApiResult<GetItemLotSerialHistoryApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetItemLotSerialHistoryApiRequestBuilder newCommandPayloadBuilder() =>
+      GetItemLotSerialHistoryApiRequest().toBuilder();
+
+  @override
+  GetItemLotSerialHistoryApiResponseBuilder newResultPayloadBuilder() =>
+      GetItemLotSerialHistoryApiResponse().toBuilder();
+
+  @override
+  Serializer<GetItemLotSerialHistoryApiRequest> get commandPayloadSerializer =>
+      GetItemLotSerialHistoryApiRequest.serializer;
+
+  @override
+  Serializer<GetItemLotSerialHistoryApiResponse> get resultPayloadSerializer =>
+      GetItemLotSerialHistoryApiResponse.serializer;
 }

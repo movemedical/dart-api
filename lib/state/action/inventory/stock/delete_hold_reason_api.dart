@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/stock/delete_hold_reason_
 
 part 'delete_hold_reason_api.g.dart';
 
-abstract class DeleteHoldReasonApi extends ApiDispatcher<DeleteHoldReasonApiRequest, Null, DeleteHoldReasonApi> {
+abstract class DeleteHoldReasonApi extends ApiDispatcher<DeleteHoldReasonApiRequest,
+DeleteHoldReasonApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteHoldReasonApi> {
   @override
   String get path => 'v1/inventory/stock/hold_reason/delete';
-  
-  @override
-  Serializer<DeleteHoldReasonApiRequest> get requestSerializer => DeleteHoldReasonApiRequest.serializer;
   
   DeleteHoldReasonApi._();
   

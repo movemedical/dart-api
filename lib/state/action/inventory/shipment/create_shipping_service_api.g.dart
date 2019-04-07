@@ -161,4 +161,31 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
         FullType(ApiCommand, [FullType(CreateShippingServiceApiRequest)]),
         FullType(ApiResult, [FullType(CreateShippingServiceApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateShippingServiceApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateShippingServiceApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateShippingServiceApiResponse> newResultBuilder() =>
+      ApiResult<CreateShippingServiceApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateShippingServiceApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateShippingServiceApiRequest().toBuilder();
+
+  @override
+  CreateShippingServiceApiResponseBuilder newResultPayloadBuilder() =>
+      CreateShippingServiceApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateShippingServiceApiRequest> get commandPayloadSerializer =>
+      CreateShippingServiceApiRequest.serializer;
+
+  @override
+  Serializer<CreateShippingServiceApiResponse> get resultPayloadSerializer =>
+      CreateShippingServiceApiResponse.serializer;
 }

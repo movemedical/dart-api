@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_case_events_api_resp
 
 part 'list_case_events_api.g.dart';
 
-abstract class ListCaseEventsApi extends ApiDispatcher<ListCaseEventsApiRequest, ListCaseEventsApiResponse, ListCaseEventsApi> {
+abstract class ListCaseEventsApi extends ApiDispatcher<ListCaseEventsApiRequest,
+ListCaseEventsApiRequestBuilder,
+ListCaseEventsApiResponse,
+ListCaseEventsApiResponseBuilder,
+ListCaseEventsApi> {
   @override
   String get path => 'v1/case_event/list';
-  
-  @override
-  Serializer<ListCaseEventsApiRequest> get requestSerializer => ListCaseEventsApiRequest.serializer;
-  
-  @override
-  Serializer<ListCaseEventsApiResponse> get responseSerializer => ListCaseEventsApiResponse.serializer;
   
   ListCaseEventsApi._();
   

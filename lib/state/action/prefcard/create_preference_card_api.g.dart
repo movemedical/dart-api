@@ -160,4 +160,31 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
         FullType(ApiCommand, [FullType(CreatePreferenceCardApiRequest)]),
         FullType(ApiResult, [FullType(CreatePreferenceCardApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreatePreferenceCardApiRequest> newCommandBuilder() =>
+      ApiCommand<CreatePreferenceCardApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreatePreferenceCardApiResponse> newResultBuilder() =>
+      ApiResult<CreatePreferenceCardApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreatePreferenceCardApiRequestBuilder newCommandPayloadBuilder() =>
+      CreatePreferenceCardApiRequest().toBuilder();
+
+  @override
+  CreatePreferenceCardApiResponseBuilder newResultPayloadBuilder() =>
+      CreatePreferenceCardApiResponse().toBuilder();
+
+  @override
+  Serializer<CreatePreferenceCardApiRequest> get commandPayloadSerializer =>
+      CreatePreferenceCardApiRequest.serializer;
+
+  @override
+  Serializer<CreatePreferenceCardApiResponse> get resultPayloadSerializer =>
+      CreatePreferenceCardApiResponse.serializer;
 }

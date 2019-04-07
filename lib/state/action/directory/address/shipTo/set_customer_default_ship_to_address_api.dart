@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/address/shipTo/set_custom
 
 part 'set_customer_default_ship_to_address_api.g.dart';
 
-abstract class SetCustomerDefaultShipToAddressApi extends ApiDispatcher<SetCustomerDefaultShipToAddressApiRequest, Null, SetCustomerDefaultShipToAddressApi> {
+abstract class SetCustomerDefaultShipToAddressApi extends ApiDispatcher<SetCustomerDefaultShipToAddressApiRequest,
+SetCustomerDefaultShipToAddressApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SetCustomerDefaultShipToAddressApi> {
   @override
   String get path => 'v1/directory/address/ship_to/set_customer_default';
-  
-  @override
-  Serializer<SetCustomerDefaultShipToAddressApiRequest> get requestSerializer => SetCustomerDefaultShipToAddressApiRequest.serializer;
   
   SetCustomerDefaultShipToAddressApi._();
   

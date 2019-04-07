@@ -160,4 +160,31 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
         FullType(ApiCommand, [FullType(ListUnitOfMeasureApiRequest)]),
         FullType(ApiResult, [FullType(ListUnitOfMeasureApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListUnitOfMeasureApiRequest> newCommandBuilder() =>
+      ApiCommand<ListUnitOfMeasureApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListUnitOfMeasureApiResponse> newResultBuilder() =>
+      ApiResult<ListUnitOfMeasureApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListUnitOfMeasureApiRequestBuilder newCommandPayloadBuilder() =>
+      ListUnitOfMeasureApiRequest().toBuilder();
+
+  @override
+  ListUnitOfMeasureApiResponseBuilder newResultPayloadBuilder() =>
+      ListUnitOfMeasureApiResponse().toBuilder();
+
+  @override
+  Serializer<ListUnitOfMeasureApiRequest> get commandPayloadSerializer =>
+      ListUnitOfMeasureApiRequest.serializer;
+
+  @override
+  Serializer<ListUnitOfMeasureApiResponse> get resultPayloadSerializer =>
+      ListUnitOfMeasureApiResponse.serializer;
 }

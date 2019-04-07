@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/customer/get_customer
 
 part 'get_customer_api.g.dart';
 
-abstract class GetCustomerApi extends ApiDispatcher<GetCustomerApiRequest, GetCustomerApiResponse, GetCustomerApi> {
+abstract class GetCustomerApi extends ApiDispatcher<GetCustomerApiRequest,
+GetCustomerApiRequestBuilder,
+GetCustomerApiResponse,
+GetCustomerApiResponseBuilder,
+GetCustomerApi> {
   @override
   String get path => 'v1/directory/org/customer/get';
-  
-  @override
-  Serializer<GetCustomerApiRequest> get requestSerializer => GetCustomerApiRequest.serializer;
-  
-  @override
-  Serializer<GetCustomerApiResponse> get responseSerializer => GetCustomerApiResponse.serializer;
   
   GetCustomerApi._();
   

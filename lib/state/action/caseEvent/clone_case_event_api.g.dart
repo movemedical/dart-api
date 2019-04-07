@@ -159,4 +159,31 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
         FullType(ApiCommand, [FullType(CloneCaseEventApiRequest)]),
         FullType(ApiResult, [FullType(CloneCaseEventApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CloneCaseEventApiRequest> newCommandBuilder() =>
+      ApiCommand<CloneCaseEventApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CloneCaseEventApiResponse> newResultBuilder() =>
+      ApiResult<CloneCaseEventApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CloneCaseEventApiRequestBuilder newCommandPayloadBuilder() =>
+      CloneCaseEventApiRequest().toBuilder();
+
+  @override
+  CloneCaseEventApiResponseBuilder newResultPayloadBuilder() =>
+      CloneCaseEventApiResponse().toBuilder();
+
+  @override
+  Serializer<CloneCaseEventApiRequest> get commandPayloadSerializer =>
+      CloneCaseEventApiRequest.serializer;
+
+  @override
+  Serializer<CloneCaseEventApiResponse> get resultPayloadSerializer =>
+      CloneCaseEventApiResponse.serializer;
 }

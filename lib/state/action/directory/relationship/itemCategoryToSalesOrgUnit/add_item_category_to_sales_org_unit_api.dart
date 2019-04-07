@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/itemCategory
 
 part 'add_item_category_to_sales_org_unit_api.g.dart';
 
-abstract class AddItemCategoryToSalesOrgUnitApi extends ApiDispatcher<AddItemCategoryToSalesOrgUnitApiRequest, Null, AddItemCategoryToSalesOrgUnitApi> {
+abstract class AddItemCategoryToSalesOrgUnitApi extends ApiDispatcher<AddItemCategoryToSalesOrgUnitApiRequest,
+AddItemCategoryToSalesOrgUnitApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AddItemCategoryToSalesOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/item_category_to_sales_org_unit/add';
-  
-  @override
-  Serializer<AddItemCategoryToSalesOrgUnitApiRequest> get requestSerializer => AddItemCategoryToSalesOrgUnitApiRequest.serializer;
   
   AddItemCategoryToSalesOrgUnitApi._();
   

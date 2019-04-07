@@ -10,98 +10,99 @@ part of 'request_unbilled_report_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RequestUnbilledReportApi> RequestUnbilledReportApiOptions();
 
 class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RequestUnbilledReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>, RequestUnbilledReportApi, String>> $clear;
+          ApiResult<Empty>, RequestUnbilledReportApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>, RequestUnbilledReportApi, String>> $cancel;
+          ApiResult<Empty>, RequestUnbilledReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnbilledReportApi,
           Command<ApiCommand<RequestUnbilledReportApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnbilledReportApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>, RequestUnbilledReportApi, String>> $detach;
+          ApiResult<Empty>, RequestUnbilledReportApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>, RequestUnbilledReportApi, String>> $attach;
+          ApiResult<Empty>, RequestUnbilledReportApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnbilledReportApi,
           CommandProgress>> $progress;
 
   _$RequestUnbilledReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnbilledReportApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnbilledReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestUnbilledReportApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RequestUnbilledReportApi,
                     Command<ApiCommand<RequestUnbilledReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>,
-                RequestUnbilledReportApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RequestUnbilledReportApiRequest>,
+                    ApiResult<Empty>,
+                    RequestUnbilledReportApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnbilledReportApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnbilledReportApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnbilledReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -110,15 +111,15 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
       _$RequestUnbilledReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -141,6 +142,30 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestUnbilledReportApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestUnbilledReportApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestUnbilledReportApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestUnbilledReportApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestUnbilledReportApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RequestUnbilledReportApiRequest> get commandPayloadSerializer =>
+      RequestUnbilledReportApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

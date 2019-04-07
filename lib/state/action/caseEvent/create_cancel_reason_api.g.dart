@@ -160,4 +160,31 @@ class _$CreateCancelReasonApi extends CreateCancelReasonApi {
         FullType(ApiCommand, [FullType(CreateCancelReasonApiRequest)]),
         FullType(ApiResult, [FullType(CreateCancelReasonApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateCancelReasonApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateCancelReasonApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateCancelReasonApiResponse> newResultBuilder() =>
+      ApiResult<CreateCancelReasonApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateCancelReasonApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateCancelReasonApiRequest().toBuilder();
+
+  @override
+  CreateCancelReasonApiResponseBuilder newResultPayloadBuilder() =>
+      CreateCancelReasonApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateCancelReasonApiRequest> get commandPayloadSerializer =>
+      CreateCancelReasonApiRequest.serializer;
+
+  @override
+  Serializer<CreateCancelReasonApiResponse> get resultPayloadSerializer =>
+      CreateCancelReasonApiResponse.serializer;
 }

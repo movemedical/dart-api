@@ -10,98 +10,99 @@ part of 'mark_notifications_read_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<MarkNotificationsReadApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     MarkNotificationsReadApi> MarkNotificationsReadApiOptions();
 
 class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       MarkNotificationsReadApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>, MarkNotificationsReadApi, String>> $clear;
+          ApiResult<Empty>, MarkNotificationsReadApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>, MarkNotificationsReadApi, String>> $cancel;
+          ApiResult<Empty>, MarkNotificationsReadApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           MarkNotificationsReadApi,
           Command<ApiCommand<MarkNotificationsReadApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           MarkNotificationsReadApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>, MarkNotificationsReadApi, String>> $detach;
+          ApiResult<Empty>, MarkNotificationsReadApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>, MarkNotificationsReadApi, String>> $attach;
+          ApiResult<Empty>, MarkNotificationsReadApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           MarkNotificationsReadApi,
           CommandProgress>> $progress;
 
   _$MarkNotificationsReadApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkNotificationsReadApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkNotificationsReadApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<MarkNotificationsReadApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     MarkNotificationsReadApi,
                     Command<ApiCommand<MarkNotificationsReadApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>,
-                MarkNotificationsReadApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<MarkNotificationsReadApiRequest>,
+                    ApiResult<Empty>,
+                    MarkNotificationsReadApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkNotificationsReadApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkNotificationsReadApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkNotificationsReadApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -110,15 +111,15 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
       _$MarkNotificationsReadApi._(options());
 
   @override
-  CommandState<ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Null>>();
+          ApiCommand<MarkNotificationsReadApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -141,6 +142,30 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(MarkNotificationsReadApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<MarkNotificationsReadApiRequest> newCommandBuilder() =>
+      ApiCommand<MarkNotificationsReadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  MarkNotificationsReadApiRequestBuilder newCommandPayloadBuilder() =>
+      MarkNotificationsReadApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<MarkNotificationsReadApiRequest> get commandPayloadSerializer =>
+      MarkNotificationsReadApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

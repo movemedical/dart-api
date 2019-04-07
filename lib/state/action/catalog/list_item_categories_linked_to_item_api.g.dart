@@ -170,4 +170,35 @@ class _$ListItemCategoriesLinkedToItemApi
         FullType(
             ApiResult, [FullType(ListItemCategoriesLinkedToItemApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListItemCategoriesLinkedToItemApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListItemCategoriesLinkedToItemApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListItemCategoriesLinkedToItemApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListItemCategoriesLinkedToItemApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListItemCategoriesLinkedToItemApiRequestBuilder newCommandPayloadBuilder() =>
+      ListItemCategoriesLinkedToItemApiRequest().toBuilder();
+
+  @override
+  ListItemCategoriesLinkedToItemApiResponseBuilder newResultPayloadBuilder() =>
+      ListItemCategoriesLinkedToItemApiResponse().toBuilder();
+
+  @override
+  Serializer<ListItemCategoriesLinkedToItemApiRequest>
+      get commandPayloadSerializer =>
+          ListItemCategoriesLinkedToItemApiRequest.serializer;
+
+  @override
+  Serializer<ListItemCategoriesLinkedToItemApiResponse>
+      get resultPayloadSerializer =>
+          ListItemCategoriesLinkedToItemApiResponse.serializer;
 }

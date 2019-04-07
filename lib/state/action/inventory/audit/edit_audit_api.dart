@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/edit_audit_api_requ
 
 part 'edit_audit_api.g.dart';
 
-abstract class EditAuditApi extends ApiDispatcher<EditAuditApiRequest, Null, EditAuditApi> {
+abstract class EditAuditApi extends ApiDispatcher<EditAuditApiRequest,
+EditAuditApiRequestBuilder,
+Empty,
+EmptyBuilder,
+EditAuditApi> {
   @override
   String get path => 'v1/inventory/audit/edit_audit';
-  
-  @override
-  Serializer<EditAuditApiRequest> get requestSerializer => EditAuditApiRequest.serializer;
   
   EditAuditApi._();
   

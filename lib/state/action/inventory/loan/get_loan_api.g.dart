@@ -144,4 +144,31 @@ class _$GetLoanApi extends GetLoanApi {
         FullType(ApiCommand, [FullType(GetLoanApiRequest)]),
         FullType(ApiResult, [FullType(GetLoanApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetLoanApiRequest> newCommandBuilder() =>
+      ApiCommand<GetLoanApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetLoanApiResponse> newResultBuilder() =>
+      ApiResult<GetLoanApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetLoanApiRequestBuilder newCommandPayloadBuilder() =>
+      GetLoanApiRequest().toBuilder();
+
+  @override
+  GetLoanApiResponseBuilder newResultPayloadBuilder() =>
+      GetLoanApiResponse().toBuilder();
+
+  @override
+  Serializer<GetLoanApiRequest> get commandPayloadSerializer =>
+      GetLoanApiRequest.serializer;
+
+  @override
+  Serializer<GetLoanApiResponse> get resultPayloadSerializer =>
+      GetLoanApiResponse.serializer;
 }

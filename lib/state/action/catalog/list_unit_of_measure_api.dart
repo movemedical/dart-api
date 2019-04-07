@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/catalog/list_unit_of_measure_api_re
 
 part 'list_unit_of_measure_api.g.dart';
 
-abstract class ListUnitOfMeasureApi extends ApiDispatcher<ListUnitOfMeasureApiRequest, ListUnitOfMeasureApiResponse, ListUnitOfMeasureApi> {
+abstract class ListUnitOfMeasureApi extends ApiDispatcher<ListUnitOfMeasureApiRequest,
+ListUnitOfMeasureApiRequestBuilder,
+ListUnitOfMeasureApiResponse,
+ListUnitOfMeasureApiResponseBuilder,
+ListUnitOfMeasureApi> {
   @override
   String get path => 'v1/catalog/unit_of_measure';
-  
-  @override
-  Serializer<ListUnitOfMeasureApiRequest> get requestSerializer => ListUnitOfMeasureApiRequest.serializer;
-  
-  @override
-  Serializer<ListUnitOfMeasureApiResponse> get responseSerializer => ListUnitOfMeasureApiResponse.serializer;
   
   ListUnitOfMeasureApi._();
   

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/facility/create_facil
 
 part 'create_facility_api.g.dart';
 
-abstract class CreateFacilityApi extends ApiDispatcher<CreateFacilityApiRequest, CreateFacilityApiResponse, CreateFacilityApi> {
+abstract class CreateFacilityApi extends ApiDispatcher<CreateFacilityApiRequest,
+CreateFacilityApiRequestBuilder,
+CreateFacilityApiResponse,
+CreateFacilityApiResponseBuilder,
+CreateFacilityApi> {
   @override
   String get path => 'v1/directory/org/facility/create';
-  
-  @override
-  Serializer<CreateFacilityApiRequest> get requestSerializer => CreateFacilityApiRequest.serializer;
-  
-  @override
-  Serializer<CreateFacilityApiResponse> get responseSerializer => CreateFacilityApiResponse.serializer;
   
   CreateFacilityApi._();
   

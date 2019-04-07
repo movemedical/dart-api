@@ -160,4 +160,31 @@ class _$ListChildLoanLinesApi extends ListChildLoanLinesApi {
         FullType(ApiCommand, [FullType(ListChildLoanLinesApiRequest)]),
         FullType(ApiResult, [FullType(ListChildLoanLinesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListChildLoanLinesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListChildLoanLinesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListChildLoanLinesApiResponse> newResultBuilder() =>
+      ApiResult<ListChildLoanLinesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListChildLoanLinesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListChildLoanLinesApiRequest().toBuilder();
+
+  @override
+  ListChildLoanLinesApiResponseBuilder newResultPayloadBuilder() =>
+      ListChildLoanLinesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListChildLoanLinesApiRequest> get commandPayloadSerializer =>
+      ListChildLoanLinesApiRequest.serializer;
+
+  @override
+  Serializer<ListChildLoanLinesApiResponse> get resultPayloadSerializer =>
+      ListChildLoanLinesApiResponse.serializer;
 }

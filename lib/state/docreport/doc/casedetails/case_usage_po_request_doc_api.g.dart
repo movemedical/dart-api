@@ -10,98 +10,99 @@ part of 'case_usage_po_request_doc_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CaseUsagePoRequestDocApi> CaseUsagePoRequestDocApiOptions();
 
 class _$CaseUsagePoRequestDocApi extends CaseUsagePoRequestDocApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CaseUsagePoRequestDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>, CaseUsagePoRequestDocApi, String>> $clear;
+          ApiResult<Empty>, CaseUsagePoRequestDocApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>, CaseUsagePoRequestDocApi, String>> $cancel;
+          ApiResult<Empty>, CaseUsagePoRequestDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CaseUsagePoRequestDocApi,
           Command<ApiCommand<CaseUsagePoRequestDocApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CaseUsagePoRequestDocApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>, CaseUsagePoRequestDocApi, String>> $detach;
+          ApiResult<Empty>, CaseUsagePoRequestDocApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>, CaseUsagePoRequestDocApi, String>> $attach;
+          ApiResult<Empty>, CaseUsagePoRequestDocApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CaseUsagePoRequestDocApi,
           CommandProgress>> $progress;
 
   _$CaseUsagePoRequestDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseUsagePoRequestDocApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseUsagePoRequestDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CaseUsagePoRequestDocApi,
                     Command<ApiCommand<CaseUsagePoRequestDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>,
-                CaseUsagePoRequestDocApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CaseUsagePoRequestDocApiRequest>,
+                    ApiResult<Empty>,
+                    CaseUsagePoRequestDocApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseUsagePoRequestDocApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseUsagePoRequestDocApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CaseUsagePoRequestDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseUsagePoRequestDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -110,15 +111,15 @@ class _$CaseUsagePoRequestDocApi extends CaseUsagePoRequestDocApi {
       _$CaseUsagePoRequestDocApi._(options());
 
   @override
-  CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<CaseUsagePoRequestDocApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CaseUsagePoRequestDocApiRequest>, ApiResult<Null>>();
+          ApiCommand<CaseUsagePoRequestDocApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -141,6 +142,30 @@ class _$CaseUsagePoRequestDocApi extends CaseUsagePoRequestDocApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CaseUsagePoRequestDocApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CaseUsagePoRequestDocApiRequest> newCommandBuilder() =>
+      ApiCommand<CaseUsagePoRequestDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CaseUsagePoRequestDocApiRequestBuilder newCommandPayloadBuilder() =>
+      CaseUsagePoRequestDocApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CaseUsagePoRequestDocApiRequest> get commandPayloadSerializer =>
+      CaseUsagePoRequestDocApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

@@ -160,4 +160,31 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
         FullType(ApiCommand, [FullType(ListHCRForFacilityApiRequest)]),
         FullType(ApiResult, [FullType(ListHCRForFacilityApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHCRForFacilityApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHCRForFacilityApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHCRForFacilityApiResponse> newResultBuilder() =>
+      ApiResult<ListHCRForFacilityApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHCRForFacilityApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHCRForFacilityApiRequest().toBuilder();
+
+  @override
+  ListHCRForFacilityApiResponseBuilder newResultPayloadBuilder() =>
+      ListHCRForFacilityApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHCRForFacilityApiRequest> get commandPayloadSerializer =>
+      ListHCRForFacilityApiRequest.serializer;
+
+  @override
+  Serializer<ListHCRForFacilityApiResponse> get resultPayloadSerializer =>
+      ListHCRForFacilityApiResponse.serializer;
 }

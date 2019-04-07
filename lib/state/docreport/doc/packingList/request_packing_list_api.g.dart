@@ -160,4 +160,31 @@ class _$RequestPackingListApi extends RequestPackingListApi {
         FullType(ApiCommand, [FullType(RequestPackingListApiRequest)]),
         FullType(ApiResult, [FullType(RequestPackingListApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestPackingListApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestPackingListApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestPackingListApiResponse> newResultBuilder() =>
+      ApiResult<RequestPackingListApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestPackingListApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestPackingListApiRequest().toBuilder();
+
+  @override
+  RequestPackingListApiResponseBuilder newResultPayloadBuilder() =>
+      RequestPackingListApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestPackingListApiRequest> get commandPayloadSerializer =>
+      RequestPackingListApiRequest.serializer;
+
+  @override
+  Serializer<RequestPackingListApiResponse> get resultPayloadSerializer =>
+      RequestPackingListApiResponse.serializer;
 }

@@ -161,4 +161,31 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
         FullType(ApiCommand, [FullType(GetUnreadMessageCountApiRequest)]),
         FullType(ApiResult, [FullType(GetUnreadMessageCountApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetUnreadMessageCountApiRequest> newCommandBuilder() =>
+      ApiCommand<GetUnreadMessageCountApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetUnreadMessageCountApiResponse> newResultBuilder() =>
+      ApiResult<GetUnreadMessageCountApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetUnreadMessageCountApiRequestBuilder newCommandPayloadBuilder() =>
+      GetUnreadMessageCountApiRequest().toBuilder();
+
+  @override
+  GetUnreadMessageCountApiResponseBuilder newResultPayloadBuilder() =>
+      GetUnreadMessageCountApiResponse().toBuilder();
+
+  @override
+  Serializer<GetUnreadMessageCountApiRequest> get commandPayloadSerializer =>
+      GetUnreadMessageCountApiRequest.serializer;
+
+  @override
+  Serializer<GetUnreadMessageCountApiResponse> get resultPayloadSerializer =>
+      GetUnreadMessageCountApiResponse.serializer;
 }

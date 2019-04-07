@@ -10,77 +10,78 @@ part of 'add_hcr_matrix_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>,
     AddHcrMatrixApi> AddHcrMatrixApiOptions();
 
 class _$AddHcrMatrixApi extends AddHcrMatrixApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>,
       AddHcrMatrixApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
           AddHcrMatrixApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
           AddHcrMatrixApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddHcrMatrixApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddHcrMatrixApi,
           Command<ApiCommand<AddHcrMatrixApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
-          AddHcrMatrixApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
+          AddHcrMatrixApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
           AddHcrMatrixApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
           AddHcrMatrixApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
           AddHcrMatrixApi, CommandProgress>> $progress;
 
   _$AddHcrMatrixApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddHcrMatrixApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
                 AddHcrMatrixApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
                 AddHcrMatrixApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddHcrMatrixApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddHcrMatrixApi,
                     Command<ApiCommand<AddHcrMatrixApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrMatrixApiRequest>,
-                ApiResult<Null>,
-                AddHcrMatrixApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddHcrMatrixApiRequest>,
+                    ApiResult<Empty>,
+                    AddHcrMatrixApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
                 AddHcrMatrixApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>,
                 AddHcrMatrixApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrMatrixApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrMatrixApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -89,14 +90,14 @@ class _$AddHcrMatrixApi extends AddHcrMatrixApi {
       _$AddHcrMatrixApi._(options());
 
   @override
-  CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<AddHcrMatrixApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -119,6 +120,30 @@ class _$AddHcrMatrixApi extends AddHcrMatrixApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddHcrMatrixApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddHcrMatrixApiRequest> newCommandBuilder() =>
+      ApiCommand<AddHcrMatrixApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddHcrMatrixApiRequestBuilder newCommandPayloadBuilder() =>
+      AddHcrMatrixApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddHcrMatrixApiRequest> get commandPayloadSerializer =>
+      AddHcrMatrixApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

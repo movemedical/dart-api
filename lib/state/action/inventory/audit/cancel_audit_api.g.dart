@@ -10,74 +10,75 @@ part of 'cancel_audit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>,
     CancelAuditApi> CancelAuditApiOptions();
 
 class _$CancelAuditApi extends CancelAuditApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>,
       CancelAuditApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
           CancelAuditApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
           CancelAuditApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
           CancelAuditApi, Command<ApiCommand<CancelAuditApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
-          CancelAuditApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
+          CancelAuditApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
           CancelAuditApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
           CancelAuditApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
           CancelAuditApi, CommandProgress>> $progress;
 
   _$CancelAuditApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CancelAuditApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
                 CancelAuditApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
                 CancelAuditApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CancelAuditApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CancelAuditApi,
                     Command<ApiCommand<CancelAuditApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CancelAuditApiRequest>,
-                ApiResult<Null>,
-                CancelAuditApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CancelAuditApiRequest>,
+                    ApiResult<Empty>,
+                    CancelAuditApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
                 CancelAuditApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>,
                 CancelAuditApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CancelAuditApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CancelAuditApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,14 +87,14 @@ class _$CancelAuditApi extends CancelAuditApi {
       _$CancelAuditApi._(options());
 
   @override
-  CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CancelAuditApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<CancelAuditApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<CancelAuditApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -116,6 +117,30 @@ class _$CancelAuditApi extends CancelAuditApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CancelAuditApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CancelAuditApiRequest> newCommandBuilder() =>
+      ApiCommand<CancelAuditApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CancelAuditApiRequestBuilder newCommandPayloadBuilder() =>
+      CancelAuditApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CancelAuditApiRequest> get commandPayloadSerializer =>
+      CancelAuditApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

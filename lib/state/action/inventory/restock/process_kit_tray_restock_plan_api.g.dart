@@ -164,4 +164,33 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
         FullType(ApiCommand, [FullType(ProcessKitTrayRestockPlanApiRequest)]),
         FullType(ApiResult, [FullType(ProcessKitTrayRestockPlanApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ProcessKitTrayRestockPlanApiRequest> newCommandBuilder() =>
+      ApiCommand<ProcessKitTrayRestockPlanApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ProcessKitTrayRestockPlanApiResponse> newResultBuilder() =>
+      ApiResult<ProcessKitTrayRestockPlanApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ProcessKitTrayRestockPlanApiRequestBuilder newCommandPayloadBuilder() =>
+      ProcessKitTrayRestockPlanApiRequest().toBuilder();
+
+  @override
+  ProcessKitTrayRestockPlanApiResponseBuilder newResultPayloadBuilder() =>
+      ProcessKitTrayRestockPlanApiResponse().toBuilder();
+
+  @override
+  Serializer<ProcessKitTrayRestockPlanApiRequest>
+      get commandPayloadSerializer =>
+          ProcessKitTrayRestockPlanApiRequest.serializer;
+
+  @override
+  Serializer<ProcessKitTrayRestockPlanApiResponse>
+      get resultPayloadSerializer =>
+          ProcessKitTrayRestockPlanApiResponse.serializer;
 }

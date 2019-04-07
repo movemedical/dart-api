@@ -146,4 +146,31 @@ class _$ListLotsApi extends ListLotsApi {
         FullType(ApiCommand, [FullType(ListLotsApiRequest)]),
         FullType(ApiResult, [FullType(ListLotsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListLotsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListLotsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListLotsApiResponse> newResultBuilder() =>
+      ApiResult<ListLotsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListLotsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListLotsApiRequest().toBuilder();
+
+  @override
+  ListLotsApiResponseBuilder newResultPayloadBuilder() =>
+      ListLotsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListLotsApiRequest> get commandPayloadSerializer =>
+      ListLotsApiRequest.serializer;
+
+  @override
+  Serializer<ListLotsApiResponse> get resultPayloadSerializer =>
+      ListLotsApiResponse.serializer;
 }

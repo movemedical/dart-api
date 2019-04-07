@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/messaging/messages/create_message_a
 
 part 'create_message_api.g.dart';
 
-abstract class CreateMessageApi extends ApiDispatcher<CreateMessageApiRequest, CreateMessageApiResponse, CreateMessageApi> {
+abstract class CreateMessageApi extends ApiDispatcher<CreateMessageApiRequest,
+CreateMessageApiRequestBuilder,
+CreateMessageApiResponse,
+CreateMessageApiResponseBuilder,
+CreateMessageApi> {
   @override
   String get path => 'v1/messaging/messages/create';
-  
-  @override
-  Serializer<CreateMessageApiRequest> get requestSerializer => CreateMessageApiRequest.serializer;
-  
-  @override
-  Serializer<CreateMessageApiResponse> get responseSerializer => CreateMessageApiResponse.serializer;
   
   CreateMessageApi._();
   

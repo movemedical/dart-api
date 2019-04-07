@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/order/list_order_files_ap
 
 part 'list_order_files_api.g.dart';
 
-abstract class ListOrderFilesApi extends ApiDispatcher<ListOrderFilesApiRequest, ListOrderFilesApiResponse, ListOrderFilesApi> {
+abstract class ListOrderFilesApi extends ApiDispatcher<ListOrderFilesApiRequest,
+ListOrderFilesApiRequestBuilder,
+ListOrderFilesApiResponse,
+ListOrderFilesApiResponseBuilder,
+ListOrderFilesApi> {
   @override
   String get path => 'v1/order/files/list';
-  
-  @override
-  Serializer<ListOrderFilesApiRequest> get requestSerializer => ListOrderFilesApiRequest.serializer;
-  
-  @override
-  Serializer<ListOrderFilesApiResponse> get responseSerializer => ListOrderFilesApiResponse.serializer;
   
   ListOrderFilesApi._();
   

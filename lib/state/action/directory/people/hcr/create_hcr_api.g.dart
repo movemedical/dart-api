@@ -146,4 +146,31 @@ class _$CreateHcrApi extends CreateHcrApi {
         FullType(ApiCommand, [FullType(CreateHcrApiRequest)]),
         FullType(ApiResult, [FullType(CreateHcrApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateHcrApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateHcrApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateHcrApiResponse> newResultBuilder() =>
+      ApiResult<CreateHcrApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateHcrApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateHcrApiRequest().toBuilder();
+
+  @override
+  CreateHcrApiResponseBuilder newResultPayloadBuilder() =>
+      CreateHcrApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateHcrApiRequest> get commandPayloadSerializer =>
+      CreateHcrApiRequest.serializer;
+
+  @override
+  Serializer<CreateHcrApiResponse> get resultPayloadSerializer =>
+      CreateHcrApiResponse.serializer;
 }

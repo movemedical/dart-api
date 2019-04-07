@@ -160,4 +160,31 @@ class _$ListTeamMembersApi extends ListTeamMembersApi {
         FullType(ApiCommand, [FullType(ListTeamMembersApiRequest)]),
         FullType(ApiResult, [FullType(ListTeamMembersApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListTeamMembersApiRequest> newCommandBuilder() =>
+      ApiCommand<ListTeamMembersApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListTeamMembersApiResponse> newResultBuilder() =>
+      ApiResult<ListTeamMembersApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListTeamMembersApiRequestBuilder newCommandPayloadBuilder() =>
+      ListTeamMembersApiRequest().toBuilder();
+
+  @override
+  ListTeamMembersApiResponseBuilder newResultPayloadBuilder() =>
+      ListTeamMembersApiResponse().toBuilder();
+
+  @override
+  Serializer<ListTeamMembersApiRequest> get commandPayloadSerializer =>
+      ListTeamMembersApiRequest.serializer;
+
+  @override
+  Serializer<ListTeamMembersApiResponse> get resultPayloadSerializer =>
+      ListTeamMembersApiResponse.serializer;
 }

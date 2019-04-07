@@ -160,4 +160,31 @@ class _$GetSubProcedureApi extends GetSubProcedureApi {
         FullType(ApiCommand, [FullType(GetSubProcedureApiRequest)]),
         FullType(ApiResult, [FullType(GetSubProcedureApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetSubProcedureApiRequest> newCommandBuilder() =>
+      ApiCommand<GetSubProcedureApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetSubProcedureApiResponse> newResultBuilder() =>
+      ApiResult<GetSubProcedureApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetSubProcedureApiRequestBuilder newCommandPayloadBuilder() =>
+      GetSubProcedureApiRequest().toBuilder();
+
+  @override
+  GetSubProcedureApiResponseBuilder newResultPayloadBuilder() =>
+      GetSubProcedureApiResponse().toBuilder();
+
+  @override
+  Serializer<GetSubProcedureApiRequest> get commandPayloadSerializer =>
+      GetSubProcedureApiRequest.serializer;
+
+  @override
+  Serializer<GetSubProcedureApiResponse> get resultPayloadSerializer =>
+      GetSubProcedureApiResponse.serializer;
 }

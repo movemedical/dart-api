@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/report/caseusage/request_unrecon
 
 part 'request_unreconciled_case_usage_report_api.g.dart';
 
-abstract class RequestUnreconciledCaseUsageReportApi extends ApiDispatcher<RequestUnreconciledCaseUsageReportApiRequest, Null, RequestUnreconciledCaseUsageReportApi> {
+abstract class RequestUnreconciledCaseUsageReportApi extends ApiDispatcher<RequestUnreconciledCaseUsageReportApiRequest,
+RequestUnreconciledCaseUsageReportApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestUnreconciledCaseUsageReportApi> {
   @override
   String get path => 'v1/docreport/unreconciled_case_usage';
-  
-  @override
-  Serializer<RequestUnreconciledCaseUsageReportApiRequest> get requestSerializer => RequestUnreconciledCaseUsageReportApiRequest.serializer;
   
   RequestUnreconciledCaseUsageReportApi._();
   

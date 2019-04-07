@@ -160,4 +160,31 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
         FullType(ApiCommand, [FullType(ListLinesForInvoiceApiRequest)]),
         FullType(ApiResult, [FullType(ListLinesForInvoiceApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListLinesForInvoiceApiRequest> newCommandBuilder() =>
+      ApiCommand<ListLinesForInvoiceApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListLinesForInvoiceApiResponse> newResultBuilder() =>
+      ApiResult<ListLinesForInvoiceApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListLinesForInvoiceApiRequestBuilder newCommandPayloadBuilder() =>
+      ListLinesForInvoiceApiRequest().toBuilder();
+
+  @override
+  ListLinesForInvoiceApiResponseBuilder newResultPayloadBuilder() =>
+      ListLinesForInvoiceApiResponse().toBuilder();
+
+  @override
+  Serializer<ListLinesForInvoiceApiRequest> get commandPayloadSerializer =>
+      ListLinesForInvoiceApiRequest.serializer;
+
+  @override
+  Serializer<ListLinesForInvoiceApiResponse> get resultPayloadSerializer =>
+      ListLinesForInvoiceApiResponse.serializer;
 }

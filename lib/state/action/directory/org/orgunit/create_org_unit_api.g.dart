@@ -159,4 +159,31 @@ class _$CreateOrgUnitApi extends CreateOrgUnitApi {
         FullType(ApiCommand, [FullType(CreateOrgUnitApiRequest)]),
         FullType(ApiResult, [FullType(CreateOrgUnitApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateOrgUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateOrgUnitApiResponse> newResultBuilder() =>
+      ApiResult<CreateOrgUnitApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateOrgUnitApiRequest().toBuilder();
+
+  @override
+  CreateOrgUnitApiResponseBuilder newResultPayloadBuilder() =>
+      CreateOrgUnitApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateOrgUnitApiRequest> get commandPayloadSerializer =>
+      CreateOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<CreateOrgUnitApiResponse> get resultPayloadSerializer =>
+      CreateOrgUnitApiResponse.serializer;
 }

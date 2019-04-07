@@ -144,4 +144,31 @@ class _$ListSSOApi extends ListSSOApi {
         FullType(ApiCommand, [FullType(ListSSOApiRequest)]),
         FullType(ApiResult, [FullType(ListSSOApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListSSOApiRequest> newCommandBuilder() =>
+      ApiCommand<ListSSOApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListSSOApiResponse> newResultBuilder() =>
+      ApiResult<ListSSOApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListSSOApiRequestBuilder newCommandPayloadBuilder() =>
+      ListSSOApiRequest().toBuilder();
+
+  @override
+  ListSSOApiResponseBuilder newResultPayloadBuilder() =>
+      ListSSOApiResponse().toBuilder();
+
+  @override
+  Serializer<ListSSOApiRequest> get commandPayloadSerializer =>
+      ListSSOApiRequest.serializer;
+
+  @override
+  Serializer<ListSSOApiResponse> get resultPayloadSerializer =>
+      ListSSOApiResponse.serializer;
 }

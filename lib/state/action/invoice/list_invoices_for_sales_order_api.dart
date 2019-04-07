@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/invoice/list_invoices_for_sales_ord
 
 part 'list_invoices_for_sales_order_api.g.dart';
 
-abstract class ListInvoicesForSalesOrderApi extends ApiDispatcher<ListInvoicesForSalesOrderApiRequest, ListInvoicesForSalesOrderApiResponse, ListInvoicesForSalesOrderApi> {
+abstract class ListInvoicesForSalesOrderApi extends ApiDispatcher<ListInvoicesForSalesOrderApiRequest,
+ListInvoicesForSalesOrderApiRequestBuilder,
+ListInvoicesForSalesOrderApiResponse,
+ListInvoicesForSalesOrderApiResponseBuilder,
+ListInvoicesForSalesOrderApi> {
   @override
   String get path => 'v1/invoice/list_for_sales_order';
-  
-  @override
-  Serializer<ListInvoicesForSalesOrderApiRequest> get requestSerializer => ListInvoicesForSalesOrderApiRequest.serializer;
-  
-  @override
-  Serializer<ListInvoicesForSalesOrderApiResponse> get responseSerializer => ListInvoicesForSalesOrderApiResponse.serializer;
   
   ListInvoicesForSalesOrderApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/sales/salesorder/finalize_usage_api
 
 part 'finalize_usage_api.g.dart';
 
-abstract class FinalizeUsageApi extends ApiDispatcher<FinalizeUsageApiRequest, Null, FinalizeUsageApi> {
+abstract class FinalizeUsageApi extends ApiDispatcher<FinalizeUsageApiRequest,
+FinalizeUsageApiRequestBuilder,
+Empty,
+EmptyBuilder,
+FinalizeUsageApi> {
   @override
   String get path => 'v1/sales/sales_order/finalize';
-  
-  @override
-  Serializer<FinalizeUsageApiRequest> get requestSerializer => FinalizeUsageApiRequest.serializer;
   
   FinalizeUsageApi._();
   

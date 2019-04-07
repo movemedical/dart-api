@@ -147,4 +147,31 @@ class _$ListOrdersApi extends ListOrdersApi {
         FullType(ApiCommand, [FullType(ListOrdersApiRequest)]),
         FullType(ApiResult, [FullType(ListOrdersApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListOrdersApiRequest> newCommandBuilder() =>
+      ApiCommand<ListOrdersApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListOrdersApiResponse> newResultBuilder() =>
+      ApiResult<ListOrdersApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListOrdersApiRequestBuilder newCommandPayloadBuilder() =>
+      ListOrdersApiRequest().toBuilder();
+
+  @override
+  ListOrdersApiResponseBuilder newResultPayloadBuilder() =>
+      ListOrdersApiResponse().toBuilder();
+
+  @override
+  Serializer<ListOrdersApiRequest> get commandPayloadSerializer =>
+      ListOrdersApiRequest.serializer;
+
+  @override
+  Serializer<ListOrdersApiResponse> get resultPayloadSerializer =>
+      ListOrdersApiResponse.serializer;
 }

@@ -176,4 +176,39 @@ class _$GetWebServiceLogRequestResponseUrlsApi
         FullType(ApiResult,
             [FullType(GetWebServiceLogRequestResponseUrlsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetWebServiceLogRequestResponseUrlsApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<GetWebServiceLogRequestResponseUrlsApiRequest>()
+              .toBuilder();
+
+  @override
+  ApiResultBuilder<GetWebServiceLogRequestResponseUrlsApiResponse>
+      newResultBuilder() =>
+          ApiResult<GetWebServiceLogRequestResponseUrlsApiResponse>()
+              .toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetWebServiceLogRequestResponseUrlsApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          GetWebServiceLogRequestResponseUrlsApiRequest().toBuilder();
+
+  @override
+  GetWebServiceLogRequestResponseUrlsApiResponseBuilder
+      newResultPayloadBuilder() =>
+          GetWebServiceLogRequestResponseUrlsApiResponse().toBuilder();
+
+  @override
+  Serializer<GetWebServiceLogRequestResponseUrlsApiRequest>
+      get commandPayloadSerializer =>
+          GetWebServiceLogRequestResponseUrlsApiRequest.serializer;
+
+  @override
+  Serializer<GetWebServiceLogRequestResponseUrlsApiResponse>
+      get resultPayloadSerializer =>
+          GetWebServiceLogRequestResponseUrlsApiResponse.serializer;
 }

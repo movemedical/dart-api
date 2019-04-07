@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/get_case_requirements_del
 
 part 'get_case_requirements_delivery_info_api.g.dart';
 
-abstract class GetCaseRequirementsDeliveryInfoApi extends ApiDispatcher<GetCaseRequirementsDeliveryInfoApiRequest, GetCaseRequirementsDeliveryInfoApiResponse, GetCaseRequirementsDeliveryInfoApi> {
+abstract class GetCaseRequirementsDeliveryInfoApi extends ApiDispatcher<GetCaseRequirementsDeliveryInfoApiRequest,
+GetCaseRequirementsDeliveryInfoApiRequestBuilder,
+GetCaseRequirementsDeliveryInfoApiResponse,
+GetCaseRequirementsDeliveryInfoApiResponseBuilder,
+GetCaseRequirementsDeliveryInfoApi> {
   @override
   String get path => 'v1/case_event/get_req_delivery_info';
-  
-  @override
-  Serializer<GetCaseRequirementsDeliveryInfoApiRequest> get requestSerializer => GetCaseRequirementsDeliveryInfoApiRequest.serializer;
-  
-  @override
-  Serializer<GetCaseRequirementsDeliveryInfoApiResponse> get responseSerializer => GetCaseRequirementsDeliveryInfoApiResponse.serializer;
   
   GetCaseRequirementsDeliveryInfoApi._();
   

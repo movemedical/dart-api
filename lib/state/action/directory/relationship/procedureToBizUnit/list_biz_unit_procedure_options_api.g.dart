@@ -165,4 +165,34 @@ class _$ListBizUnitProcedureOptionsApi extends ListBizUnitProcedureOptionsApi {
         FullType(ApiCommand, [FullType(ListBizUnitProcedureOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListBizUnitProcedureOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListBizUnitProcedureOptionsApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListBizUnitProcedureOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListBizUnitProcedureOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListBizUnitProcedureOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListBizUnitProcedureOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListBizUnitProcedureOptionsApiRequest().toBuilder();
+
+  @override
+  ListBizUnitProcedureOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListBizUnitProcedureOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListBizUnitProcedureOptionsApiRequest>
+      get commandPayloadSerializer =>
+          ListBizUnitProcedureOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListBizUnitProcedureOptionsApiResponse>
+      get resultPayloadSerializer =>
+          ListBizUnitProcedureOptionsApiResponse.serializer;
 }

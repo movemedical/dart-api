@@ -10,77 +10,91 @@ part of 'reset_password_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>,
     ResetPasswordApi> ResetPasswordApiOptions();
 
 class _$ResetPasswordApi extends ResetPasswordApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>,
+          ApiResult<Empty>>,
       ResetPasswordApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ResetPasswordApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ResetPasswordApi,
           Command<ApiCommand<ResetPasswordApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
-          ResetPasswordApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
+          ResetPasswordApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, CommandProgress>> $progress;
 
   _$ResetPasswordApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
-                ResetPasswordApi, String>>('\$clear', (a) => a?.$clear),
+            CommandPayload<
+                ApiCommand<ResetPasswordApiRequest>,
+                ApiResult<Empty>,
+                ResetPasswordApi,
+                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
-                ResetPasswordApi, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<ResetPasswordApiRequest>,
+                ApiResult<Empty>,
+                ResetPasswordApi,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ResetPasswordApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     ResetPasswordApi,
                     Command<ApiCommand<ResetPasswordApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
+                CommandPayload<
+                    ApiCommand<ResetPasswordApiRequest>,
+                    ApiResult<Empty>,
+                    ResetPasswordApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
+        $detach = $options.action<
             CommandPayload<
                 ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetPasswordApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
-                ResetPasswordApi, String>>('\$detach', (a) => a?.$detach),
+                String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>,
-                ResetPasswordApi, String>>('\$attach', (a) => a?.$attach),
+            CommandPayload<
+                ApiCommand<ResetPasswordApiRequest>,
+                ApiResult<Empty>,
+                ResetPasswordApi,
+                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetPasswordApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -89,14 +103,14 @@ class _$ResetPasswordApi extends ResetPasswordApi {
       _$ResetPasswordApi._(options());
 
   @override
-  CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<ResetPasswordApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -119,6 +133,30 @@ class _$ResetPasswordApi extends ResetPasswordApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ResetPasswordApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<ResetPasswordApiRequest> newCommandBuilder() =>
+      ApiCommand<ResetPasswordApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ResetPasswordApiRequestBuilder newCommandPayloadBuilder() =>
+      ResetPasswordApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<ResetPasswordApiRequest> get commandPayloadSerializer =>
+      ResetPasswordApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

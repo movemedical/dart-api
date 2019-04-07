@@ -1505,4 +1505,29 @@ class _$LoginDispatcher extends LoginDispatcher {
         FullType(ApiCommand, [FullType(LoginRequest)]),
         FullType(ApiResult, [FullType(LoginResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<LoginRequest> newCommandBuilder() =>
+      ApiCommand<LoginRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<LoginResponse> newResultBuilder() =>
+      ApiResult<LoginResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  LoginRequestBuilder newCommandPayloadBuilder() => LoginRequest().toBuilder();
+
+  @override
+  LoginResponseBuilder newResultPayloadBuilder() => LoginResponse().toBuilder();
+
+  @override
+  Serializer<LoginRequest> get commandPayloadSerializer =>
+      LoginRequest.serializer;
+
+  @override
+  Serializer<LoginResponse> get resultPayloadSerializer =>
+      LoginResponse.serializer;
 }

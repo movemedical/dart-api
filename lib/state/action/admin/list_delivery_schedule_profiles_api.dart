@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/admin/list_delivery_schedule_profil
 
 part 'list_delivery_schedule_profiles_api.g.dart';
 
-abstract class ListDeliveryScheduleProfilesApi extends ApiDispatcher<ListDeliveryScheduleProfilesApiRequest, ListDeliveryScheduleProfilesApiResponse, ListDeliveryScheduleProfilesApi> {
+abstract class ListDeliveryScheduleProfilesApi extends ApiDispatcher<ListDeliveryScheduleProfilesApiRequest,
+ListDeliveryScheduleProfilesApiRequestBuilder,
+ListDeliveryScheduleProfilesApiResponse,
+ListDeliveryScheduleProfilesApiResponseBuilder,
+ListDeliveryScheduleProfilesApi> {
   @override
   String get path => 'v1/admin/delivery_profile/list';
-  
-  @override
-  Serializer<ListDeliveryScheduleProfilesApiRequest> get requestSerializer => ListDeliveryScheduleProfilesApiRequest.serializer;
-  
-  @override
-  Serializer<ListDeliveryScheduleProfilesApiResponse> get responseSerializer => ListDeliveryScheduleProfilesApiResponse.serializer;
   
   ListDeliveryScheduleProfilesApi._();
   

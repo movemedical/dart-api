@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/address/shipTo/create_shi
 
 part 'create_ship_to_address_api.g.dart';
 
-abstract class CreateShipToAddressApi extends ApiDispatcher<CreateShipToAddressApiRequest, CreateShipToAddressApiResponse, CreateShipToAddressApi> {
+abstract class CreateShipToAddressApi extends ApiDispatcher<CreateShipToAddressApiRequest,
+CreateShipToAddressApiRequestBuilder,
+CreateShipToAddressApiResponse,
+CreateShipToAddressApiResponseBuilder,
+CreateShipToAddressApi> {
   @override
   String get path => 'v1/directory/address/ship_to/create';
-  
-  @override
-  Serializer<CreateShipToAddressApiRequest> get requestSerializer => CreateShipToAddressApiRequest.serializer;
-  
-  @override
-  Serializer<CreateShipToAddressApiResponse> get responseSerializer => CreateShipToAddressApiResponse.serializer;
   
   CreateShipToAddressApi._();
   

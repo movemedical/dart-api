@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/stock/update_hold_reason_
 
 part 'update_hold_reason_api.g.dart';
 
-abstract class UpdateHoldReasonApi extends ApiDispatcher<UpdateHoldReasonApiRequest, Null, UpdateHoldReasonApi> {
+abstract class UpdateHoldReasonApi extends ApiDispatcher<UpdateHoldReasonApiRequest,
+UpdateHoldReasonApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateHoldReasonApi> {
   @override
   String get path => 'v1/inventory/stock/hold_reason/update';
-  
-  @override
-  Serializer<UpdateHoldReasonApiRequest> get requestSerializer => UpdateHoldReasonApiRequest.serializer;
   
   UpdateHoldReasonApi._();
   

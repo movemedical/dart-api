@@ -133,4 +133,31 @@ class _$GetHcrApi extends GetHcrApi {
         FullType(ApiCommand, [FullType(GetHcrApiRequest)]),
         FullType(ApiResult, [FullType(GetHcrApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetHcrApiRequest> newCommandBuilder() =>
+      ApiCommand<GetHcrApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetHcrApiResponse> newResultBuilder() =>
+      ApiResult<GetHcrApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetHcrApiRequestBuilder newCommandPayloadBuilder() =>
+      GetHcrApiRequest().toBuilder();
+
+  @override
+  GetHcrApiResponseBuilder newResultPayloadBuilder() =>
+      GetHcrApiResponse().toBuilder();
+
+  @override
+  Serializer<GetHcrApiRequest> get commandPayloadSerializer =>
+      GetHcrApiRequest.serializer;
+
+  @override
+  Serializer<GetHcrApiResponse> get resultPayloadSerializer =>
+      GetHcrApiResponse.serializer;
 }

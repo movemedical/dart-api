@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/order/skip_erp_api_reques
 
 part 'skip_erp_api.g.dart';
 
-abstract class SkipErpApi extends ApiDispatcher<SkipErpApiRequest, Null, SkipErpApi> {
+abstract class SkipErpApi extends ApiDispatcher<SkipErpApiRequest,
+SkipErpApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SkipErpApi> {
   @override
   String get path => 'v1/inventory/order/skip_erp';
-  
-  @override
-  Serializer<SkipErpApiRequest> get requestSerializer => SkipErpApiRequest.serializer;
   
   SkipErpApi._();
   

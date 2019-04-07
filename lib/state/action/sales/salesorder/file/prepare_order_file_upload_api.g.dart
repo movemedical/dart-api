@@ -162,4 +162,31 @@ class _$PrepareOrderFileUploadApi extends PrepareOrderFileUploadApi {
         FullType(ApiCommand, [FullType(PrepareOrderFileUploadApiRequest)]),
         FullType(ApiResult, [FullType(PrepareOrderFileUploadApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PrepareOrderFileUploadApiRequest> newCommandBuilder() =>
+      ApiCommand<PrepareOrderFileUploadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PrepareOrderFileUploadApiResponse> newResultBuilder() =>
+      ApiResult<PrepareOrderFileUploadApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PrepareOrderFileUploadApiRequestBuilder newCommandPayloadBuilder() =>
+      PrepareOrderFileUploadApiRequest().toBuilder();
+
+  @override
+  PrepareOrderFileUploadApiResponseBuilder newResultPayloadBuilder() =>
+      PrepareOrderFileUploadApiResponse().toBuilder();
+
+  @override
+  Serializer<PrepareOrderFileUploadApiRequest> get commandPayloadSerializer =>
+      PrepareOrderFileUploadApiRequest.serializer;
+
+  @override
+  Serializer<PrepareOrderFileUploadApiResponse> get resultPayloadSerializer =>
+      PrepareOrderFileUploadApiResponse.serializer;
 }

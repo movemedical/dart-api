@@ -144,4 +144,31 @@ class _$GetItemApi extends GetItemApi {
         FullType(ApiCommand, [FullType(GetItemApiRequest)]),
         FullType(ApiResult, [FullType(GetItemApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetItemApiRequest> newCommandBuilder() =>
+      ApiCommand<GetItemApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetItemApiResponse> newResultBuilder() =>
+      ApiResult<GetItemApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetItemApiRequestBuilder newCommandPayloadBuilder() =>
+      GetItemApiRequest().toBuilder();
+
+  @override
+  GetItemApiResponseBuilder newResultPayloadBuilder() =>
+      GetItemApiResponse().toBuilder();
+
+  @override
+  Serializer<GetItemApiRequest> get commandPayloadSerializer =>
+      GetItemApiRequest.serializer;
+
+  @override
+  Serializer<GetItemApiResponse> get resultPayloadSerializer =>
+      GetItemApiResponse.serializer;
 }

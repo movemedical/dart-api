@@ -159,4 +159,31 @@ class _$CreateCustomerApi extends CreateCustomerApi {
         FullType(ApiCommand, [FullType(CreateCustomerApiRequest)]),
         FullType(ApiResult, [FullType(CreateCustomerApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateCustomerApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateCustomerApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateCustomerApiResponse> newResultBuilder() =>
+      ApiResult<CreateCustomerApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateCustomerApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateCustomerApiRequest().toBuilder();
+
+  @override
+  CreateCustomerApiResponseBuilder newResultPayloadBuilder() =>
+      CreateCustomerApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateCustomerApiRequest> get commandPayloadSerializer =>
+      CreateCustomerApiRequest.serializer;
+
+  @override
+  Serializer<CreateCustomerApiResponse> get resultPayloadSerializer =>
+      CreateCustomerApiResponse.serializer;
 }

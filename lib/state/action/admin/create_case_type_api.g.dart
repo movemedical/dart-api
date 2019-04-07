@@ -159,4 +159,31 @@ class _$CreateCaseTypeApi extends CreateCaseTypeApi {
         FullType(ApiCommand, [FullType(CreateCaseTypeApiRequest)]),
         FullType(ApiResult, [FullType(CreateCaseTypeApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateCaseTypeApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateCaseTypeApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateCaseTypeApiResponse> newResultBuilder() =>
+      ApiResult<CreateCaseTypeApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateCaseTypeApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateCaseTypeApiRequest().toBuilder();
+
+  @override
+  CreateCaseTypeApiResponseBuilder newResultPayloadBuilder() =>
+      CreateCaseTypeApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateCaseTypeApiRequest> get commandPayloadSerializer =>
+      CreateCaseTypeApiRequest.serializer;
+
+  @override
+  Serializer<CreateCaseTypeApiResponse> get resultPayloadSerializer =>
+      CreateCaseTypeApiResponse.serializer;
 }

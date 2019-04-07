@@ -10,70 +10,74 @@ part of 'edit_audit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>,
     EditAuditApi> EditAuditApiOptions();
 
 class _$EditAuditApi extends EditAuditApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>,
       EditAuditApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>> $replace;
+      CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, Command<ApiCommand<EditAuditApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
-          EditAuditApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
+          EditAuditApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, CommandProgress>> $progress;
 
   _$EditAuditApi._(this.$options)
       : $replace = $options.action<
-                CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>>(
-            '\$replace', (a) => a?.$replace),
+            CommandState<ApiCommand<EditAuditApiRequest>,
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
                 EditAuditApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
                 EditAuditApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
-                CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
-                    EditAuditApi, Command<ApiCommand<EditAuditApiRequest>>>>(
+                CommandPayload<
+                    ApiCommand<EditAuditApiRequest>,
+                    ApiResult<Empty>,
+                    EditAuditApi,
+                    Command<ApiCommand<EditAuditApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<EditAuditApiRequest>,
-                ApiResult<Null>,
-                EditAuditApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<EditAuditApiRequest>,
+                    ApiResult<Empty>,
+                    EditAuditApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
                 EditAuditApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
                 EditAuditApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EditAuditApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EditAuditApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -82,13 +86,14 @@ class _$EditAuditApi extends EditAuditApi {
       _$EditAuditApi._(options());
 
   @override
-  CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Null>> get $initial =>
-      CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>();
+  CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>
+      get $initial =>
+          CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<EditAuditApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<EditAuditApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -111,6 +116,30 @@ class _$EditAuditApi extends EditAuditApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EditAuditApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<EditAuditApiRequest> newCommandBuilder() =>
+      ApiCommand<EditAuditApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  EditAuditApiRequestBuilder newCommandPayloadBuilder() =>
+      EditAuditApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<EditAuditApiRequest> get commandPayloadSerializer =>
+      EditAuditApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

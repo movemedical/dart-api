@@ -161,4 +161,31 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
         FullType(ApiCommand, [FullType(GetPickProcessingDataApiRequest)]),
         FullType(ApiResult, [FullType(GetPickProcessingDataApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetPickProcessingDataApiRequest> newCommandBuilder() =>
+      ApiCommand<GetPickProcessingDataApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetPickProcessingDataApiResponse> newResultBuilder() =>
+      ApiResult<GetPickProcessingDataApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetPickProcessingDataApiRequestBuilder newCommandPayloadBuilder() =>
+      GetPickProcessingDataApiRequest().toBuilder();
+
+  @override
+  GetPickProcessingDataApiResponseBuilder newResultPayloadBuilder() =>
+      GetPickProcessingDataApiResponse().toBuilder();
+
+  @override
+  Serializer<GetPickProcessingDataApiRequest> get commandPayloadSerializer =>
+      GetPickProcessingDataApiRequest.serializer;
+
+  @override
+  Serializer<GetPickProcessingDataApiResponse> get resultPayloadSerializer =>
+      GetPickProcessingDataApiResponse.serializer;
 }

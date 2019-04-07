@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/kit/decommission_kit_api_
 
 part 'decommission_kit_api.g.dart';
 
-abstract class DecommissionKitApi extends ApiDispatcher<DecommissionKitApiRequest, Null, DecommissionKitApi> {
+abstract class DecommissionKitApi extends ApiDispatcher<DecommissionKitApiRequest,
+DecommissionKitApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DecommissionKitApi> {
   @override
   String get path => 'v1/inventory/kit/decommission';
-  
-  @override
-  Serializer<DecommissionKitApiRequest> get requestSerializer => DecommissionKitApiRequest.serializer;
   
   DecommissionKitApi._();
   

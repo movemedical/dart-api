@@ -160,4 +160,31 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
         FullType(ApiCommand, [FullType(GetExpiringItemsApiRequest)]),
         FullType(ApiResult, [FullType(GetExpiringItemsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetExpiringItemsApiRequest> newCommandBuilder() =>
+      ApiCommand<GetExpiringItemsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetExpiringItemsApiResponse> newResultBuilder() =>
+      ApiResult<GetExpiringItemsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetExpiringItemsApiRequestBuilder newCommandPayloadBuilder() =>
+      GetExpiringItemsApiRequest().toBuilder();
+
+  @override
+  GetExpiringItemsApiResponseBuilder newResultPayloadBuilder() =>
+      GetExpiringItemsApiResponse().toBuilder();
+
+  @override
+  Serializer<GetExpiringItemsApiRequest> get commandPayloadSerializer =>
+      GetExpiringItemsApiRequest.serializer;
+
+  @override
+  Serializer<GetExpiringItemsApiResponse> get resultPayloadSerializer =>
+      GetExpiringItemsApiResponse.serializer;
 }

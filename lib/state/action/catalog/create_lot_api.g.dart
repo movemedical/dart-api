@@ -146,4 +146,31 @@ class _$CreateLotApi extends CreateLotApi {
         FullType(ApiCommand, [FullType(CreateLotApiRequest)]),
         FullType(ApiResult, [FullType(CreateLotApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateLotApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateLotApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateLotApiResponse> newResultBuilder() =>
+      ApiResult<CreateLotApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateLotApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateLotApiRequest().toBuilder();
+
+  @override
+  CreateLotApiResponseBuilder newResultPayloadBuilder() =>
+      CreateLotApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateLotApiRequest> get commandPayloadSerializer =>
+      CreateLotApiRequest.serializer;
+
+  @override
+  Serializer<CreateLotApiResponse> get resultPayloadSerializer =>
+      CreateLotApiResponse.serializer;
 }

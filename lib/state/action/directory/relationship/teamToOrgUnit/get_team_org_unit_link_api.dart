@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/teamToOrgUni
 
 part 'get_team_org_unit_link_api.g.dart';
 
-abstract class GetTeamOrgUnitLinkApi extends ApiDispatcher<GetTeamOrgUnitLinkApiRequest, GetTeamOrgUnitLinkApiResponse, GetTeamOrgUnitLinkApi> {
+abstract class GetTeamOrgUnitLinkApi extends ApiDispatcher<GetTeamOrgUnitLinkApiRequest,
+GetTeamOrgUnitLinkApiRequestBuilder,
+GetTeamOrgUnitLinkApiResponse,
+GetTeamOrgUnitLinkApiResponseBuilder,
+GetTeamOrgUnitLinkApi> {
   @override
   String get path => 'v1/directory/relationship/team_to_org_unit/get';
-  
-  @override
-  Serializer<GetTeamOrgUnitLinkApiRequest> get requestSerializer => GetTeamOrgUnitLinkApiRequest.serializer;
-  
-  @override
-  Serializer<GetTeamOrgUnitLinkApiResponse> get responseSerializer => GetTeamOrgUnitLinkApiResponse.serializer;
   
   GetTeamOrgUnitLinkApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/integration/files/regenerate_import
 
 part 'regenerate_import_file_api.g.dart';
 
-abstract class RegenerateImportFileApi extends ApiDispatcher<RegenerateImportFileApiRequest, Null, RegenerateImportFileApi> {
+abstract class RegenerateImportFileApi extends ApiDispatcher<RegenerateImportFileApiRequest,
+RegenerateImportFileApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RegenerateImportFileApi> {
   @override
   String get path => 'v1/integration/file/regenerate_import_file';
-  
-  @override
-  Serializer<RegenerateImportFileApiRequest> get requestSerializer => RegenerateImportFileApiRequest.serializer;
   
   RegenerateImportFileApi._();
   

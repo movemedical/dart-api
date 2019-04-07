@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/hcrToOrgUnit
 
 part 'list_hcr_org_unit_links_api.g.dart';
 
-abstract class ListHcrOrgUnitLinksApi extends ApiDispatcher<ListHcrOrgUnitLinksApiRequest, ListHcrOrgUnitLinksApiResponse, ListHcrOrgUnitLinksApi> {
+abstract class ListHcrOrgUnitLinksApi extends ApiDispatcher<ListHcrOrgUnitLinksApiRequest,
+ListHcrOrgUnitLinksApiRequestBuilder,
+ListHcrOrgUnitLinksApiResponse,
+ListHcrOrgUnitLinksApiResponseBuilder,
+ListHcrOrgUnitLinksApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_org_unit/list_links';
-  
-  @override
-  Serializer<ListHcrOrgUnitLinksApiRequest> get requestSerializer => ListHcrOrgUnitLinksApiRequest.serializer;
-  
-  @override
-  Serializer<ListHcrOrgUnitLinksApiResponse> get responseSerializer => ListHcrOrgUnitLinksApiResponse.serializer;
   
   ListHcrOrgUnitLinksApi._();
   

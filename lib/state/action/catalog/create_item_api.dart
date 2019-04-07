@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/catalog/create_item_api_response.da
 
 part 'create_item_api.g.dart';
 
-abstract class CreateItemApi extends ApiDispatcher<CreateItemApiRequest, CreateItemApiResponse, CreateItemApi> {
+abstract class CreateItemApi extends ApiDispatcher<CreateItemApiRequest,
+CreateItemApiRequestBuilder,
+CreateItemApiResponse,
+CreateItemApiResponseBuilder,
+CreateItemApi> {
   @override
   String get path => 'v1/catalog/item/create';
-  
-  @override
-  Serializer<CreateItemApiRequest> get requestSerializer => CreateItemApiRequest.serializer;
-  
-  @override
-  Serializer<CreateItemApiResponse> get responseSerializer => CreateItemApiResponse.serializer;
   
   CreateItemApi._();
   

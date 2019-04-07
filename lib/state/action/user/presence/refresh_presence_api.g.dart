@@ -10,90 +10,92 @@ part of 'refresh_presence_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>,
+        ApiResult<Empty>>,
     RefreshPresenceApi> RefreshPresenceApiOptions();
 
 class _$RefreshPresenceApi extends RefreshPresenceApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RefreshPresenceApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RefreshPresenceApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RefreshPresenceApi,
           Command<ApiCommand<RefreshPresenceApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>,
-          RefreshPresenceApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
+          RefreshPresenceApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, CommandProgress>> $progress;
 
   _$RefreshPresenceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RefreshPresenceApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RefreshPresenceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RefreshPresenceApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RefreshPresenceApi,
                     Command<ApiCommand<RefreshPresenceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>,
-                RefreshPresenceApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RefreshPresenceApiRequest>,
+                    ApiResult<Empty>,
+                    RefreshPresenceApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RefreshPresenceApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RefreshPresenceApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RefreshPresenceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -102,14 +104,14 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
       _$RefreshPresenceApi._(options());
 
   @override
-  CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<RefreshPresenceApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RefreshPresenceApiRequest>, ApiResult<Null>>();
+          ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -132,6 +134,30 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RefreshPresenceApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RefreshPresenceApiRequest> newCommandBuilder() =>
+      ApiCommand<RefreshPresenceApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RefreshPresenceApiRequestBuilder newCommandPayloadBuilder() =>
+      RefreshPresenceApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RefreshPresenceApiRequest> get commandPayloadSerializer =>
+      RefreshPresenceApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

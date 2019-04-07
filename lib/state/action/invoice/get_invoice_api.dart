@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/invoice/get_invoice_api_response.da
 
 part 'get_invoice_api.g.dart';
 
-abstract class GetInvoiceApi extends ApiDispatcher<GetInvoiceApiRequest, GetInvoiceApiResponse, GetInvoiceApi> {
+abstract class GetInvoiceApi extends ApiDispatcher<GetInvoiceApiRequest,
+GetInvoiceApiRequestBuilder,
+GetInvoiceApiResponse,
+GetInvoiceApiResponseBuilder,
+GetInvoiceApi> {
   @override
   String get path => 'v1/invoice/get';
-  
-  @override
-  Serializer<GetInvoiceApiRequest> get requestSerializer => GetInvoiceApiRequest.serializer;
-  
-  @override
-  Serializer<GetInvoiceApiResponse> get responseSerializer => GetInvoiceApiResponse.serializer;
   
   GetInvoiceApi._();
   

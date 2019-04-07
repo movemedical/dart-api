@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/create_audit_entrie
 
 part 'create_audit_entries_api.g.dart';
 
-abstract class CreateAuditEntriesApi extends ApiDispatcher<CreateAuditEntriesApiRequest, Null, CreateAuditEntriesApi> {
+abstract class CreateAuditEntriesApi extends ApiDispatcher<CreateAuditEntriesApiRequest,
+CreateAuditEntriesApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreateAuditEntriesApi> {
   @override
   String get path => 'v1/inventory/audit/entry/create';
-  
-  @override
-  Serializer<CreateAuditEntriesApiRequest> get requestSerializer => CreateAuditEntriesApiRequest.serializer;
   
   CreateAuditEntriesApi._();
   

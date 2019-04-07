@@ -10,73 +10,75 @@ part of 'deliver_pkg_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>,
     DeliverPkgApi> DeliverPkgApiOptions();
 
 class _$DeliverPkgApi extends DeliverPkgApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>,
       DeliverPkgApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>> $replace;
+          CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>>
+      $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, Command<ApiCommand<DeliverPkgApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
-          DeliverPkgApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
+          DeliverPkgApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, CommandProgress>> $progress;
 
   _$DeliverPkgApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeliverPkgApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
                 DeliverPkgApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
                 DeliverPkgApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeliverPkgApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     DeliverPkgApi,
                     Command<ApiCommand<DeliverPkgApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<DeliverPkgApiRequest>,
-                ApiResult<Null>,
-                DeliverPkgApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<DeliverPkgApiRequest>,
+                    ApiResult<Empty>,
+                    DeliverPkgApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
                 DeliverPkgApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
                 DeliverPkgApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeliverPkgApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeliverPkgApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -85,14 +87,14 @@ class _$DeliverPkgApi extends DeliverPkgApi {
       _$DeliverPkgApi._(options());
 
   @override
-  CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<DeliverPkgApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -115,6 +117,30 @@ class _$DeliverPkgApi extends DeliverPkgApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeliverPkgApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<DeliverPkgApiRequest> newCommandBuilder() =>
+      ApiCommand<DeliverPkgApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  DeliverPkgApiRequestBuilder newCommandPayloadBuilder() =>
+      DeliverPkgApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<DeliverPkgApiRequest> get commandPayloadSerializer =>
+      DeliverPkgApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

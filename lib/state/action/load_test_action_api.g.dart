@@ -159,4 +159,31 @@ class _$LoadTestActionApi extends LoadTestActionApi {
         FullType(ApiCommand, [FullType(LoadTestActionApiRequest)]),
         FullType(ApiResult, [FullType(LoadTestActionApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<LoadTestActionApiRequest> newCommandBuilder() =>
+      ApiCommand<LoadTestActionApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<LoadTestActionApiResponse> newResultBuilder() =>
+      ApiResult<LoadTestActionApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  LoadTestActionApiRequestBuilder newCommandPayloadBuilder() =>
+      LoadTestActionApiRequest().toBuilder();
+
+  @override
+  LoadTestActionApiResponseBuilder newResultPayloadBuilder() =>
+      LoadTestActionApiResponse().toBuilder();
+
+  @override
+  Serializer<LoadTestActionApiRequest> get commandPayloadSerializer =>
+      LoadTestActionApiRequest.serializer;
+
+  @override
+  Serializer<LoadTestActionApiResponse> get resultPayloadSerializer =>
+      LoadTestActionApiResponse.serializer;
 }

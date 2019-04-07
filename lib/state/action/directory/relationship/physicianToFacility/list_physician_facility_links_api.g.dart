@@ -164,4 +164,33 @@ class _$ListPhysicianFacilityLinksApi extends ListPhysicianFacilityLinksApi {
         FullType(ApiCommand, [FullType(ListPhysicianFacilityLinksApiRequest)]),
         FullType(ApiResult, [FullType(ListPhysicianFacilityLinksApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListPhysicianFacilityLinksApiRequest> newCommandBuilder() =>
+      ApiCommand<ListPhysicianFacilityLinksApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListPhysicianFacilityLinksApiResponse> newResultBuilder() =>
+      ApiResult<ListPhysicianFacilityLinksApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListPhysicianFacilityLinksApiRequestBuilder newCommandPayloadBuilder() =>
+      ListPhysicianFacilityLinksApiRequest().toBuilder();
+
+  @override
+  ListPhysicianFacilityLinksApiResponseBuilder newResultPayloadBuilder() =>
+      ListPhysicianFacilityLinksApiResponse().toBuilder();
+
+  @override
+  Serializer<ListPhysicianFacilityLinksApiRequest>
+      get commandPayloadSerializer =>
+          ListPhysicianFacilityLinksApiRequest.serializer;
+
+  @override
+  Serializer<ListPhysicianFacilityLinksApiResponse>
+      get resultPayloadSerializer =>
+          ListPhysicianFacilityLinksApiResponse.serializer;
 }

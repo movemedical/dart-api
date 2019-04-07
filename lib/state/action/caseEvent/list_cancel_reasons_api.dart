@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_cancel_reasons_api_r
 
 part 'list_cancel_reasons_api.g.dart';
 
-abstract class ListCancelReasonsApi extends ApiDispatcher<ListCancelReasonsApiRequest, ListCancelReasonsApiResponse, ListCancelReasonsApi> {
+abstract class ListCancelReasonsApi extends ApiDispatcher<ListCancelReasonsApiRequest,
+ListCancelReasonsApiRequestBuilder,
+ListCancelReasonsApiResponse,
+ListCancelReasonsApiResponseBuilder,
+ListCancelReasonsApi> {
   @override
   String get path => 'v1/case_event/list_cancel_reasons';
-  
-  @override
-  Serializer<ListCancelReasonsApiRequest> get requestSerializer => ListCancelReasonsApiRequest.serializer;
-  
-  @override
-  Serializer<ListCancelReasonsApiResponse> get responseSerializer => ListCancelReasonsApiResponse.serializer;
   
   ListCancelReasonsApi._();
   

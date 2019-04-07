@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/procedureToI
 
 part 'remove_procedure_from_item_category_api.g.dart';
 
-abstract class RemoveProcedureFromItemCategoryApi extends ApiDispatcher<RemoveProcedureFromItemCategoryApiRequest, Null, RemoveProcedureFromItemCategoryApi> {
+abstract class RemoveProcedureFromItemCategoryApi extends ApiDispatcher<RemoveProcedureFromItemCategoryApiRequest,
+RemoveProcedureFromItemCategoryApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RemoveProcedureFromItemCategoryApi> {
   @override
   String get path => 'v1/directory/relationship/procedure_from_item_category/remove';
-  
-  @override
-  Serializer<RemoveProcedureFromItemCategoryApiRequest> get requestSerializer => RemoveProcedureFromItemCategoryApiRequest.serializer;
   
   RemoveProcedureFromItemCategoryApi._();
   

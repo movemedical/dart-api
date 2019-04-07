@@ -162,4 +162,31 @@ class _$ListDeliverToAddressesApi extends ListDeliverToAddressesApi {
         FullType(ApiCommand, [FullType(ListDeliverToAddressesApiRequest)]),
         FullType(ApiResult, [FullType(ListDeliverToAddressesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListDeliverToAddressesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListDeliverToAddressesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListDeliverToAddressesApiResponse> newResultBuilder() =>
+      ApiResult<ListDeliverToAddressesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListDeliverToAddressesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListDeliverToAddressesApiRequest().toBuilder();
+
+  @override
+  ListDeliverToAddressesApiResponseBuilder newResultPayloadBuilder() =>
+      ListDeliverToAddressesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListDeliverToAddressesApiRequest> get commandPayloadSerializer =>
+      ListDeliverToAddressesApiRequest.serializer;
+
+  @override
+  Serializer<ListDeliverToAddressesApiResponse> get resultPayloadSerializer =>
+      ListDeliverToAddressesApiResponse.serializer;
 }

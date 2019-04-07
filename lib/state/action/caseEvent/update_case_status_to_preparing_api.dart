@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/update_case_status_to_pre
 
 part 'update_case_status_to_preparing_api.g.dart';
 
-abstract class UpdateCaseStatusToPreparingApi extends ApiDispatcher<UpdateCaseStatusToPreparingApiRequest, Null, UpdateCaseStatusToPreparingApi> {
+abstract class UpdateCaseStatusToPreparingApi extends ApiDispatcher<UpdateCaseStatusToPreparingApiRequest,
+UpdateCaseStatusToPreparingApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateCaseStatusToPreparingApi> {
   @override
   String get path => 'v1/case_event/status/update_to_preparing';
-  
-  @override
-  Serializer<UpdateCaseStatusToPreparingApiRequest> get requestSerializer => UpdateCaseStatusToPreparingApiRequest.serializer;
   
   UpdateCaseStatusToPreparingApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pick/assign_picks_api_req
 
 part 'assign_picks_api.g.dart';
 
-abstract class AssignPicksApi extends ApiDispatcher<AssignPicksApiRequest, Null, AssignPicksApi> {
+abstract class AssignPicksApi extends ApiDispatcher<AssignPicksApiRequest,
+AssignPicksApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AssignPicksApi> {
   @override
   String get path => 'v1/inventory/pick/assign';
-  
-  @override
-  Serializer<AssignPicksApiRequest> get requestSerializer => AssignPicksApiRequest.serializer;
   
   AssignPicksApi._();
   

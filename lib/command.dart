@@ -172,22 +172,6 @@ abstract class ApiResult<RESP>
       action?.payload?.value;
 }
 
-class ApiResultUnWrapper<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>
-    implements Function {
-  final Function(CommandResult<ApiResult<RESP>>, RESP) handler;
-
-  ApiResultUnWrapper(this.handler);
-
-  call(
-      ModuxEvent<
-              CommandPayload<ApiCommand<REQ>, ApiResult<RESP>, D,
-                  CommandResult<ApiResult<RESP>>>>
-          event) {
-    return handler?.call(
-        event.value.payload, event?.value?.payload?.value?.value);
-  }
-}
-
 @BuiltValueEnum(wireName: 'api/ApiResultCode')
 class ApiResultCode extends EnumClass {
   static Serializer<ApiResultCode> get serializer => _$apiResultCodeSerializer;
@@ -208,37 +192,57 @@ class ApiResultCode extends EnumClass {
   static ApiResultCode valueOf(String name) => _$apiResultCodeValueOf(name);
 }
 
-abstract class ApiDispatcher<REQ, RESP,
-        Actions extends ApiDispatcher<REQ, RESP, Actions>>
-    extends CommandDispatcher<ApiCommand<REQ>, ApiResult<RESP>, Actions> {
-  @override
-  Serializer<ApiCommand> get commandSerializer => ApiCommand.serializer;
-
-  @override
-  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
-
-  Serializer<REQ> get requestSerializer;
-
-  Serializer<RESP> get responseSerializer => null;
-
-  @override
-  Type get dispatcherType => ApiService;
-
+///
+abstract class ApiDispatcher<
+    Req extends Built<Req, ReqBuilder>,
+    ReqBuilder extends Builder<Req, ReqBuilder>,
+    Resp extends Built<Resp, RespBuilder>,
+    RespBuilder extends Builder<Resp, RespBuilder>,
+    Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+        Actions>> extends NestedBuiltCommandDispatcher<
+    ApiCommand<Req>,
+    ApiCommandBuilder<Req>,
+    Req,
+    ReqBuilder,
+    ApiResult<Resp>,
+    ApiResultBuilder<Resp>,
+    Resp,
+    RespBuilder,
+    Actions> {
   String get path;
 
-  void call(REQ request, {int timeout = 15000}) => super
-      .send(create(request, timeout: timeout, path: path), timeout: timeout);
+  void call(
+          {Req request,
+          void builder(ReqBuilder),
+          Duration timeout = const Duration(seconds: 15)}) =>
+      super.send(
+          create(
+              request: request, builder: builder, timeout: timeout, path: path),
+          timeout: timeout?.inMilliseconds);
 
-  ApiCommand<REQ> create(REQ payload,
-          {String path = '', int timeout = 15000, bool unsecured = false}) =>
-      ApiCommand<REQ>((b) => b
-        ..path = path
-        ..payload = payload
-        ..unsecured = unsecured);
+  ApiCommand<Req> create(
+      {Req request,
+      void builder(ReqBuilder),
+      String path = '',
+      Duration timeout = const Duration(seconds: 15),
+      bool unsecured = false}) {
+    if (request == null) {
+      final b = newCommandPayloadBuilder();
+      if (b != null) {
+        builder?.call(b);
+        request = b.build();
+      }
+    }
+    return ApiCommand<Req>((b) => b
+      ..path = path
+      ..payload = request
+      ..unsecured = unsecured);
+  }
 
   @override
-  ApiFuture<REQ, RESP, Actions> newFuture(Command<ApiCommand<REQ>> command) =>
-      ApiFuture<REQ, RESP, Actions>(
+  ApiFuture<Req, ReqBuilder, Resp, RespBuilder, Actions> newFuture(
+          Command<ApiCommand<Req>> command) =>
+      ApiFuture<Req, ReqBuilder, Resp, RespBuilder, Actions>(
           $store.service<ApiService>(), this, command);
 
   @override
@@ -340,14 +344,20 @@ class ApiService implements StoreService {
     // Connect WebSocket.
     _connectWs(response);
 
-    actions.setupCommand(GetUiSetupMobileApiRequest(
-        (b) => b..appVersion = state.appVersion ?? 'Move Dart'));
+    actions.setupCommand(
+        request: GetUiSetupMobileApiRequest(
+            (b) => b..appVersion = state.appVersion ?? 'Move Dart'));
   }
 
-  Future<CommandResult<ApiResult<RESP>>>
-      execute<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>(
-          ApiDispatcher<REQ, RESP, D> dispatcher,
-          Command<ApiCommand<REQ>> command) async {
+  Future<CommandResult<ApiResult<Resp>>> execute<
+          Req extends Built<Req, ReqBuilder>,
+          ReqBuilder extends Builder<Req, ReqBuilder>,
+          Resp extends Built<Resp, RespBuilder>,
+          RespBuilder extends Builder<Resp, RespBuilder>,
+          Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+              Actions>>(
+      ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder, Actions> dispatcher,
+      Command<ApiCommand<Req>> command) async {
     final future = dispatcher.newFuture(command);
     final result = await future._call(this);
 
@@ -359,18 +369,23 @@ class ApiService implements StoreService {
     return result;
   }
 
-  Future<CommandResult<ApiResult<RESP>>>
-      _execute<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>(
-          ApiFuture future,
-          ApiDispatcher<REQ, RESP, D> dispatcher,
-          Command<ApiCommand<REQ>> command) async {
+  Future<CommandResult<ApiResult<Resp>>> _execute<
+          Req extends Built<Req, ReqBuilder>,
+          ReqBuilder extends Builder<Req, ReqBuilder>,
+          Resp extends Built<Resp, RespBuilder>,
+          RespBuilder extends Builder<Resp, RespBuilder>,
+          Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+              Actions>>(
+      ApiFuture future,
+      ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder, Actions> dispatcher,
+      Command<ApiCommand<Req>> command) async {
     if (future == null) {
       return null;
     }
 
     final apiCommand = command.payload;
 
-    CallResponse<RESP> resp = null;
+    CallResponse<Resp> resp = null;
     try {
       Duration timeout;
       if (command.timeout == null || command.timeout <= 0) {
@@ -400,7 +415,7 @@ class ApiService implements StoreService {
         switch (resp.errorType) {
           case CallResponseError.serialization:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.serialization,
                     message: resp.error?.toString()));
@@ -408,7 +423,7 @@ class ApiService implements StoreService {
 
           case CallResponseError.deserialization:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.serialization,
                     message: resp.error?.toString()));
@@ -416,7 +431,7 @@ class ApiService implements StoreService {
 
           case CallResponseError.network:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.network,
                     message: resp.error?.toString()));
@@ -424,7 +439,7 @@ class ApiService implements StoreService {
 
           case CallResponseError.timeout:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.timeout,
                     message: resp.error?.toString()));
@@ -432,7 +447,7 @@ class ApiService implements StoreService {
 
           case CallResponseError.closed:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.canceled,
                     message: resp.error?.toString()));
@@ -440,7 +455,7 @@ class ApiService implements StoreService {
 
           case CallResponseError.busy:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.canceled,
                     message: resp.error?.toString()));
@@ -448,7 +463,7 @@ class ApiService implements StoreService {
 
           case CallResponseError.error:
             future.complete(CommandResultCode.done,
-                response: ApiResult<RESP>.of(
+                response: ApiResult<Resp>.of(
                     statusCode: resp.statusCode,
                     code: ApiResultCode.error,
                     message: resp.error?.toString()));
@@ -456,7 +471,7 @@ class ApiService implements StoreService {
         }
       } else {
         future.complete(CommandResultCode.done,
-            response: ApiResult<RESP>.of(
+            response: ApiResult<Resp>.of(
                 statusCode: resp.statusCode,
                 code: ApiResultCode.done,
                 value: resp.result));
@@ -465,7 +480,7 @@ class ApiService implements StoreService {
       return future.completer.future;
     } catch (e, stackTrace) {
       future.complete(CommandResultCode.done,
-          response: ApiResult<RESP>.of(
+          response: ApiResult<Resp>.of(
               code: ApiResultCode.error, message: e?.toString()));
       return future.completer.future;
     }
@@ -539,8 +554,14 @@ class ApiService implements StoreService {
     }
   }
 
-  String _apiUrl<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>(
-      ApiDispatcher<REQ, RESP, D> dispatcher) {
+  String _apiUrl<
+          Req extends Built<Req, ReqBuilder>,
+          ReqBuilder extends Builder<Req, ReqBuilder>,
+          Resp extends Built<Resp, RespBuilder>,
+          RespBuilder extends Builder<Resp, RespBuilder>,
+          Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+              Actions>>(
+      ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder, Actions> dispatcher) {
     final path = _pathOf(dispatcher);
     if (path == null || path.isEmpty) return '';
 
@@ -555,8 +576,14 @@ class ApiService implements StoreService {
     }
   }
 
-  String _pathOf<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>(
-      ApiDispatcher<REQ, RESP, D> dispatcher) {
+  String _pathOf<
+          Req extends Built<Req, ReqBuilder>,
+          ReqBuilder extends Builder<Req, ReqBuilder>,
+          Resp extends Built<Resp, RespBuilder>,
+          RespBuilder extends Builder<Resp, RespBuilder>,
+          Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+              Actions>>(
+      ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder, Actions> dispatcher) {
     if (dispatcher == null) return '';
     final path = dispatcher.path;
     if (path == null) return '';
@@ -573,16 +600,22 @@ class ApiService implements StoreService {
   }
 }
 
-///
-class ApiFuture<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>
-    extends CommandFuture<ApiCommand<REQ>, ApiResult<RESP>, D> {
+class ApiFuture<
+        Req extends Built<Req, ReqBuilder>,
+        ReqBuilder extends Builder<Req, ReqBuilder>,
+        Resp extends Built<Resp, RespBuilder>,
+        RespBuilder extends Builder<Resp, RespBuilder>,
+        Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+            Actions>>
+    extends CommandFuture<ApiCommand<Req>, ApiResult<Resp>, Actions> {
   final ApiService service;
 
-  ApiFuture(this.service, D dispatcher, Command<ApiCommand<REQ>> command)
+  ApiFuture(this.service, Actions dispatcher, Command<ApiCommand<Req>> command)
       : super(dispatcher, command);
 
-  Future<CommandResult<ApiResult<RESP>>> _call(ApiService service) {
-    return service._execute<REQ, RESP, D>(this, dispatcher, command);
+  Future<CommandResult<ApiResult<Resp>>> _call(ApiService service) {
+    return service._execute<Req, ReqBuilder, Resp, RespBuilder, Actions>(
+        this, dispatcher, command);
   }
 
   @override
@@ -590,9 +623,9 @@ class ApiFuture<REQ, RESP, D extends ApiDispatcher<REQ, RESP, D>>
     service._execute(this, dispatcher, command);
   }
 
-  Serializer<REQ> get reqSerializer => dispatcher.requestSerializer;
+  Serializer<Req> get reqSerializer => dispatcher.commandPayloadSerializer;
 
-  Serializer<RESP> get respSerializer => dispatcher.responseSerializer;
+  Serializer<Resp> get respSerializer => dispatcher.resultPayloadSerializer;
 }
 
 ////////////////////////////////
@@ -655,21 +688,39 @@ abstract class LoginResponse
   static Serializer<LoginResponse> get serializer => _$loginResponseSerializer;
 }
 
-abstract class LoginDispatcher
-    extends ApiDispatcher<LoginRequest, LoginResponse, LoginDispatcher> {
+abstract class LoginDispatcher extends ApiDispatcher<LoginRequest,
+    LoginRequestBuilder, LoginResponse, LoginResponseBuilder, LoginDispatcher> {
   @override
   String get path => '/auth/move/login';
-
-  @override
-  Serializer<LoginRequest> get requestSerializer => LoginRequest.serializer;
-
-  @override
-  Serializer<LoginResponse> get responseSerializer => LoginResponse.serializer;
 
   LoginDispatcher._();
 
   factory LoginDispatcher(LoginDispatcherOptions options) = _$LoginDispatcher;
 }
+
+//abstract class LoginDispatcher
+//    extends ApiDispatcher<LoginRequest, LoginResponse, LoginDispatcher> {
+//  @override
+//  String get path => '/auth/move/login';
+//
+//  @override
+//  Serializer<LoginRequest> get requestSerializer => LoginRequest.serializer;
+//
+//  @override
+//  Serializer<LoginResponse> get responseSerializer => LoginResponse.serializer;
+//
+//  void run(
+//      {LoginRequestBuilder builder(LoginRequestBuilder b),
+//      Duration timeout = const Duration(seconds: 15)}) {
+//    final b = LoginRequest().toBuilder();
+//    builder?.call(b);
+//    call(b.build(), timeout: timeout?.inMilliseconds ?? null);
+//  }
+//
+//  LoginDispatcher._();
+//
+//  factory LoginDispatcher(LoginDispatcherOptions options) = _$LoginDispatcher;
+//}
 
 enum CallResponseError {
   network,

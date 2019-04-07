@@ -10,91 +10,95 @@ part of 'adjust_stock_quantity_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AdjustStockQuantityApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AdjustStockQuantityApi> AdjustStockQuantityApiOptions();
 
 class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AdjustStockQuantityApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>,
-          AdjustStockQuantityApi, String>> $clear;
+      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
+          ApiResult<Empty>, AdjustStockQuantityApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>,
-          AdjustStockQuantityApi, String>> $cancel;
+      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
+          ApiResult<Empty>, AdjustStockQuantityApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AdjustStockQuantityApi,
           Command<ApiCommand<AdjustStockQuantityApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>,
-          AdjustStockQuantityApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<
+          ApiCommand<AdjustStockQuantityApiRequest>,
+          ApiResult<Empty>,
+          AdjustStockQuantityApi,
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>,
-          AdjustStockQuantityApi, String>> $detach;
+      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
+          ApiResult<Empty>, AdjustStockQuantityApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>,
-          AdjustStockQuantityApi, String>> $attach;
+      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
+          ApiResult<Empty>, AdjustStockQuantityApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>,
-          AdjustStockQuantityApi, CommandProgress>> $progress;
+      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
+          ApiResult<Empty>, AdjustStockQuantityApi, CommandProgress>> $progress;
 
   _$AdjustStockQuantityApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AdjustStockQuantityApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AdjustStockQuantityApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AdjustStockQuantityApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AdjustStockQuantityApi,
                     Command<ApiCommand<AdjustStockQuantityApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>,
-                AdjustStockQuantityApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AdjustStockQuantityApiRequest>,
+                    ApiResult<Empty>,
+                    AdjustStockQuantityApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AdjustStockQuantityApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AdjustStockQuantityApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AdjustStockQuantityApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,15 +107,15 @@ class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
       _$AdjustStockQuantityApi._(options());
 
   @override
-  CommandState<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Null>>();
+          ApiCommand<AdjustStockQuantityApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -134,6 +138,30 @@ class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AdjustStockQuantityApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AdjustStockQuantityApiRequest> newCommandBuilder() =>
+      ApiCommand<AdjustStockQuantityApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AdjustStockQuantityApiRequestBuilder newCommandPayloadBuilder() =>
+      AdjustStockQuantityApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AdjustStockQuantityApiRequest> get commandPayloadSerializer =>
+      AdjustStockQuantityApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

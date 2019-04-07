@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/usage/barcode_scans_to_us
 
 part 'barcode_scans_to_usage_api.g.dart';
 
-abstract class BarcodeScansToUsageApi extends ApiDispatcher<BarcodeScansToUsageApiRequest, BarcodeScansToUsageApiResponse, BarcodeScansToUsageApi> {
+abstract class BarcodeScansToUsageApi extends ApiDispatcher<BarcodeScansToUsageApiRequest,
+BarcodeScansToUsageApiRequestBuilder,
+BarcodeScansToUsageApiResponse,
+BarcodeScansToUsageApiResponseBuilder,
+BarcodeScansToUsageApi> {
   @override
   String get path => 'v1/case_event/usage/barode_scans_to_usage';
-  
-  @override
-  Serializer<BarcodeScansToUsageApiRequest> get requestSerializer => BarcodeScansToUsageApiRequest.serializer;
-  
-  @override
-  Serializer<BarcodeScansToUsageApiResponse> get responseSerializer => BarcodeScansToUsageApiResponse.serializer;
   
   BarcodeScansToUsageApi._();
   

@@ -161,4 +161,31 @@ class _$ListIntegrationIssuesApi extends ListIntegrationIssuesApi {
         FullType(ApiCommand, [FullType(ListIntegrationIssuesApiRequest)]),
         FullType(ApiResult, [FullType(ListIntegrationIssuesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListIntegrationIssuesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListIntegrationIssuesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListIntegrationIssuesApiResponse> newResultBuilder() =>
+      ApiResult<ListIntegrationIssuesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListIntegrationIssuesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListIntegrationIssuesApiRequest().toBuilder();
+
+  @override
+  ListIntegrationIssuesApiResponseBuilder newResultPayloadBuilder() =>
+      ListIntegrationIssuesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListIntegrationIssuesApiRequest> get commandPayloadSerializer =>
+      ListIntegrationIssuesApiRequest.serializer;
+
+  @override
+  Serializer<ListIntegrationIssuesApiResponse> get resultPayloadSerializer =>
+      ListIntegrationIssuesApiResponse.serializer;
 }

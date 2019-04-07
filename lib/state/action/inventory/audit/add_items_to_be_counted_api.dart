@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/add_items_to_be_cou
 
 part 'add_items_to_be_counted_api.g.dart';
 
-abstract class AddItemsToBeCountedApi extends ApiDispatcher<AddItemsToBeCountedApiRequest, Null, AddItemsToBeCountedApi> {
+abstract class AddItemsToBeCountedApi extends ApiDispatcher<AddItemsToBeCountedApiRequest,
+AddItemsToBeCountedApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AddItemsToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/add_items_to_be_counted';
-  
-  @override
-  Serializer<AddItemsToBeCountedApiRequest> get requestSerializer => AddItemsToBeCountedApiRequest.serializer;
   
   AddItemsToBeCountedApi._();
   

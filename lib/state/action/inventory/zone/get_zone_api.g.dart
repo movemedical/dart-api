@@ -144,4 +144,31 @@ class _$GetZoneApi extends GetZoneApi {
         FullType(ApiCommand, [FullType(GetZoneApiRequest)]),
         FullType(ApiResult, [FullType(GetZoneApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetZoneApiRequest> newCommandBuilder() =>
+      ApiCommand<GetZoneApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetZoneApiResponse> newResultBuilder() =>
+      ApiResult<GetZoneApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetZoneApiRequestBuilder newCommandPayloadBuilder() =>
+      GetZoneApiRequest().toBuilder();
+
+  @override
+  GetZoneApiResponseBuilder newResultPayloadBuilder() =>
+      GetZoneApiResponse().toBuilder();
+
+  @override
+  Serializer<GetZoneApiRequest> get commandPayloadSerializer =>
+      GetZoneApiRequest.serializer;
+
+  @override
+  Serializer<GetZoneApiResponse> get resultPayloadSerializer =>
+      GetZoneApiResponse.serializer;
 }

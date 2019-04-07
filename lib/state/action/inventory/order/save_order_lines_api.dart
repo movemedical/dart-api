@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/order/save_order_lines_ap
 
 part 'save_order_lines_api.g.dart';
 
-abstract class SaveOrderLinesApi extends ApiDispatcher<SaveOrderLinesApiRequest, Null, SaveOrderLinesApi> {
+abstract class SaveOrderLinesApi extends ApiDispatcher<SaveOrderLinesApiRequest,
+SaveOrderLinesApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SaveOrderLinesApi> {
   @override
   String get path => 'v1/inventory/order/save_order_lines';
-  
-  @override
-  Serializer<SaveOrderLinesApiRequest> get requestSerializer => SaveOrderLinesApiRequest.serializer;
   
   SaveOrderLinesApi._();
   

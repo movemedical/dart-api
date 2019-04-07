@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/prefcard/list_preference_card_items
 
 part 'list_preference_card_items_api.g.dart';
 
-abstract class ListPreferenceCardItemsApi extends ApiDispatcher<ListPreferenceCardItemsApiRequest, ListPreferenceCardItemsApiResponse, ListPreferenceCardItemsApi> {
+abstract class ListPreferenceCardItemsApi extends ApiDispatcher<ListPreferenceCardItemsApiRequest,
+ListPreferenceCardItemsApiRequestBuilder,
+ListPreferenceCardItemsApiResponse,
+ListPreferenceCardItemsApiResponseBuilder,
+ListPreferenceCardItemsApi> {
   @override
   String get path => 'v1/prefcard/items/list';
-  
-  @override
-  Serializer<ListPreferenceCardItemsApiRequest> get requestSerializer => ListPreferenceCardItemsApiRequest.serializer;
-  
-  @override
-  Serializer<ListPreferenceCardItemsApiResponse> get responseSerializer => ListPreferenceCardItemsApiResponse.serializer;
   
   ListPreferenceCardItemsApi._();
   

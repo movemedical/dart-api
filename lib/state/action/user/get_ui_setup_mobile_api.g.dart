@@ -160,4 +160,31 @@ class _$GetUiSetupMobileApi extends GetUiSetupMobileApi {
         FullType(ApiCommand, [FullType(GetUiSetupMobileApiRequest)]),
         FullType(ApiResult, [FullType(GetUiSetupMobileApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetUiSetupMobileApiRequest> newCommandBuilder() =>
+      ApiCommand<GetUiSetupMobileApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetUiSetupMobileApiResponse> newResultBuilder() =>
+      ApiResult<GetUiSetupMobileApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetUiSetupMobileApiRequestBuilder newCommandPayloadBuilder() =>
+      GetUiSetupMobileApiRequest().toBuilder();
+
+  @override
+  GetUiSetupMobileApiResponseBuilder newResultPayloadBuilder() =>
+      GetUiSetupMobileApiResponse().toBuilder();
+
+  @override
+  Serializer<GetUiSetupMobileApiRequest> get commandPayloadSerializer =>
+      GetUiSetupMobileApiRequest.serializer;
+
+  @override
+  Serializer<GetUiSetupMobileApiResponse> get resultPayloadSerializer =>
+      GetUiSetupMobileApiResponse.serializer;
 }

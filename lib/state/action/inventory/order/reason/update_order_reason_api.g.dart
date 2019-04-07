@@ -10,91 +10,92 @@ part of 'update_order_reason_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateOrderReasonApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateOrderReasonApi> UpdateOrderReasonApiOptions();
 
 class _$UpdateOrderReasonApi extends UpdateOrderReasonApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateOrderReasonApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateOrderReasonApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateOrderReasonApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>,
           UpdateOrderReasonApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>,
           UpdateOrderReasonApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateOrderReasonApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateOrderReasonApi,
           Command<ApiCommand<UpdateOrderReasonApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>,
-          UpdateOrderReasonApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>,
+          UpdateOrderReasonApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>,
           UpdateOrderReasonApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>,
           UpdateOrderReasonApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>,
           UpdateOrderReasonApi, CommandProgress>> $progress;
 
   _$UpdateOrderReasonApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateOrderReasonApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateOrderReasonApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateOrderReasonApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateOrderReasonApi,
                     Command<ApiCommand<UpdateOrderReasonApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>,
-                UpdateOrderReasonApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateOrderReasonApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateOrderReasonApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateOrderReasonApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateOrderReasonApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateOrderReasonApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$UpdateOrderReasonApi extends UpdateOrderReasonApi {
       _$UpdateOrderReasonApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<UpdateOrderReasonApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateOrderReasonApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$UpdateOrderReasonApi extends UpdateOrderReasonApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateOrderReasonApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateOrderReasonApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateOrderReasonApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateOrderReasonApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateOrderReasonApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateOrderReasonApiRequest> get commandPayloadSerializer =>
+      UpdateOrderReasonApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

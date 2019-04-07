@@ -160,4 +160,31 @@ class _$RunCustomActionApi extends RunCustomActionApi {
         FullType(ApiCommand, [FullType(RunCustomActionApiRequest)]),
         FullType(ApiResult, [FullType(RunCustomActionApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RunCustomActionApiRequest> newCommandBuilder() =>
+      ApiCommand<RunCustomActionApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RunCustomActionApiResponse> newResultBuilder() =>
+      ApiResult<RunCustomActionApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RunCustomActionApiRequestBuilder newCommandPayloadBuilder() =>
+      RunCustomActionApiRequest().toBuilder();
+
+  @override
+  RunCustomActionApiResponseBuilder newResultPayloadBuilder() =>
+      RunCustomActionApiResponse().toBuilder();
+
+  @override
+  Serializer<RunCustomActionApiRequest> get commandPayloadSerializer =>
+      RunCustomActionApiRequest.serializer;
+
+  @override
+  Serializer<RunCustomActionApiResponse> get resultPayloadSerializer =>
+      RunCustomActionApiResponse.serializer;
 }

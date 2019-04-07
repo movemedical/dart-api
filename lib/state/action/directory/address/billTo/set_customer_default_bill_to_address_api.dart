@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/address/billTo/set_custom
 
 part 'set_customer_default_bill_to_address_api.g.dart';
 
-abstract class SetCustomerDefaultBillToAddressApi extends ApiDispatcher<SetCustomerDefaultBillToAddressApiRequest, Null, SetCustomerDefaultBillToAddressApi> {
+abstract class SetCustomerDefaultBillToAddressApi extends ApiDispatcher<SetCustomerDefaultBillToAddressApiRequest,
+SetCustomerDefaultBillToAddressApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SetCustomerDefaultBillToAddressApi> {
   @override
   String get path => 'v1/directory/address/bill_to/set_customer_default';
-  
-  @override
-  Serializer<SetCustomerDefaultBillToAddressApiRequest> get requestSerializer => SetCustomerDefaultBillToAddressApiRequest.serializer;
   
   SetCustomerDefaultBillToAddressApi._();
   

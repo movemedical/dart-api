@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/audit/list_audit_entries_
 
 part 'list_audit_entries_api.g.dart';
 
-abstract class ListAuditEntriesApi extends ApiDispatcher<ListAuditEntriesApiRequest, ListAuditEntriesApiResponse, ListAuditEntriesApi> {
+abstract class ListAuditEntriesApi extends ApiDispatcher<ListAuditEntriesApiRequest,
+ListAuditEntriesApiRequestBuilder,
+ListAuditEntriesApiResponse,
+ListAuditEntriesApiResponseBuilder,
+ListAuditEntriesApi> {
   @override
   String get path => 'v1/inventory/audit/list_audit_entries';
-  
-  @override
-  Serializer<ListAuditEntriesApiRequest> get requestSerializer => ListAuditEntriesApiRequest.serializer;
-  
-  @override
-  Serializer<ListAuditEntriesApiResponse> get responseSerializer => ListAuditEntriesApiResponse.serializer;
   
   ListAuditEntriesApi._();
   

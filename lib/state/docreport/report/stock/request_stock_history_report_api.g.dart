@@ -11,98 +11,99 @@ part of 'request_stock_history_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RequestStockHistoryReportApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RequestStockHistoryReportApi> RequestStockHistoryReportApiOptions();
 
 class _$RequestStockHistoryReportApi extends RequestStockHistoryReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RequestStockHistoryReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>, RequestStockHistoryReportApi, String>> $clear;
+          ApiResult<Empty>, RequestStockHistoryReportApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>, RequestStockHistoryReportApi, String>> $cancel;
+          ApiResult<Empty>, RequestStockHistoryReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestStockHistoryReportApi,
           Command<ApiCommand<RequestStockHistoryReportApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestStockHistoryReportApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>, RequestStockHistoryReportApi, String>> $detach;
+          ApiResult<Empty>, RequestStockHistoryReportApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>, RequestStockHistoryReportApi, String>> $attach;
+          ApiResult<Empty>, RequestStockHistoryReportApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestStockHistoryReportApi,
           CommandProgress>> $progress;
 
   _$RequestStockHistoryReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestStockHistoryReportApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestStockHistoryReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestStockHistoryReportApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RequestStockHistoryReportApi,
                     Command<ApiCommand<RequestStockHistoryReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>,
-                RequestStockHistoryReportApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RequestStockHistoryReportApiRequest>,
+                    ApiResult<Empty>,
+                    RequestStockHistoryReportApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestStockHistoryReportApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestStockHistoryReportApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockHistoryReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestStockHistoryReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$RequestStockHistoryReportApi extends RequestStockHistoryReportApi {
       _$RequestStockHistoryReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestStockHistoryReportApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RequestStockHistoryReportApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<RequestStockHistoryReportApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestStockHistoryReportApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestStockHistoryReportApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestStockHistoryReportApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestStockHistoryReportApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$RequestStockHistoryReportApi extends RequestStockHistoryReportApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestStockHistoryReportApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestStockHistoryReportApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestStockHistoryReportApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestStockHistoryReportApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestStockHistoryReportApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RequestStockHistoryReportApiRequest>
+      get commandPayloadSerializer =>
+          RequestStockHistoryReportApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

@@ -168,4 +168,35 @@ class _$ProcessStockOrderRestockPlanApi
             ApiCommand, [FullType(ProcessStockOrderRestockPlanApiRequest)]),
         FullType(ApiResult, [FullType(ProcessStockOrderRestockPlanApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ProcessStockOrderRestockPlanApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ProcessStockOrderRestockPlanApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ProcessStockOrderRestockPlanApiResponse>
+      newResultBuilder() =>
+          ApiResult<ProcessStockOrderRestockPlanApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ProcessStockOrderRestockPlanApiRequestBuilder newCommandPayloadBuilder() =>
+      ProcessStockOrderRestockPlanApiRequest().toBuilder();
+
+  @override
+  ProcessStockOrderRestockPlanApiResponseBuilder newResultPayloadBuilder() =>
+      ProcessStockOrderRestockPlanApiResponse().toBuilder();
+
+  @override
+  Serializer<ProcessStockOrderRestockPlanApiRequest>
+      get commandPayloadSerializer =>
+          ProcessStockOrderRestockPlanApiRequest.serializer;
+
+  @override
+  Serializer<ProcessStockOrderRestockPlanApiResponse>
+      get resultPayloadSerializer =>
+          ProcessStockOrderRestockPlanApiResponse.serializer;
 }

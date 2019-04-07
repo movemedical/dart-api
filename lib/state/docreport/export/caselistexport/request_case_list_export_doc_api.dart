@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/export/caselistexport/request_ca
 
 part 'request_case_list_export_doc_api.g.dart';
 
-abstract class RequestCaseListExportDocApi extends ApiDispatcher<RequestCaseListExportDocApiRequest, Null, RequestCaseListExportDocApi> {
+abstract class RequestCaseListExportDocApi extends ApiDispatcher<RequestCaseListExportDocApiRequest,
+RequestCaseListExportDocApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestCaseListExportDocApi> {
   @override
   String get path => 'v1/docreport/export/caseListExport';
-  
-  @override
-  Serializer<RequestCaseListExportDocApiRequest> get requestSerializer => RequestCaseListExportDocApiRequest.serializer;
   
   RequestCaseListExportDocApi._();
   

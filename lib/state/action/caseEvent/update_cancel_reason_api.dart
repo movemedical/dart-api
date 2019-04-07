@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/update_cancel_reason_api_
 
 part 'update_cancel_reason_api.g.dart';
 
-abstract class UpdateCancelReasonApi extends ApiDispatcher<UpdateCancelReasonApiRequest, Null, UpdateCancelReasonApi> {
+abstract class UpdateCancelReasonApi extends ApiDispatcher<UpdateCancelReasonApiRequest,
+UpdateCancelReasonApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateCancelReasonApi> {
   @override
   String get path => 'v1/case_event/cancel_reason/update';
-  
-  @override
-  Serializer<UpdateCancelReasonApiRequest> get requestSerializer => UpdateCancelReasonApiRequest.serializer;
   
   UpdateCancelReasonApi._();
   

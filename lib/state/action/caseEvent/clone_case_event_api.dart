@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/clone_case_event_api_resp
 
 part 'clone_case_event_api.g.dart';
 
-abstract class CloneCaseEventApi extends ApiDispatcher<CloneCaseEventApiRequest, CloneCaseEventApiResponse, CloneCaseEventApi> {
+abstract class CloneCaseEventApi extends ApiDispatcher<CloneCaseEventApiRequest,
+CloneCaseEventApiRequestBuilder,
+CloneCaseEventApiResponse,
+CloneCaseEventApiResponseBuilder,
+CloneCaseEventApi> {
   @override
   String get path => 'v1/case_event/clone';
-  
-  @override
-  Serializer<CloneCaseEventApiRequest> get requestSerializer => CloneCaseEventApiRequest.serializer;
-  
-  @override
-  Serializer<CloneCaseEventApiResponse> get responseSerializer => CloneCaseEventApiResponse.serializer;
   
   CloneCaseEventApi._();
   

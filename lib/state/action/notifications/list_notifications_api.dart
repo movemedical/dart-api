@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/notifications/list_notifications_ap
 
 part 'list_notifications_api.g.dart';
 
-abstract class ListNotificationsApi extends ApiDispatcher<ListNotificationsApiRequest, ListNotificationsApiResponse, ListNotificationsApi> {
+abstract class ListNotificationsApi extends ApiDispatcher<ListNotificationsApiRequest,
+ListNotificationsApiRequestBuilder,
+ListNotificationsApiResponse,
+ListNotificationsApiResponseBuilder,
+ListNotificationsApi> {
   @override
   String get path => 'v1/notifications/list';
-  
-  @override
-  Serializer<ListNotificationsApiRequest> get requestSerializer => ListNotificationsApiRequest.serializer;
-  
-  @override
-  Serializer<ListNotificationsApiResponse> get responseSerializer => ListNotificationsApiResponse.serializer;
   
   ListNotificationsApi._();
   

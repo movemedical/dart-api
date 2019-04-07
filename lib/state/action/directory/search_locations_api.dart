@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/search_locations_api_resp
 
 part 'search_locations_api.g.dart';
 
-abstract class SearchLocationsApi extends ApiDispatcher<SearchLocationsApiRequest, SearchLocationsApiResponse, SearchLocationsApi> {
+abstract class SearchLocationsApi extends ApiDispatcher<SearchLocationsApiRequest,
+SearchLocationsApiRequestBuilder,
+SearchLocationsApiResponse,
+SearchLocationsApiResponseBuilder,
+SearchLocationsApi> {
   @override
   String get path => 'v1/directory/search_locations';
-  
-  @override
-  Serializer<SearchLocationsApiRequest> get requestSerializer => SearchLocationsApiRequest.serializer;
-  
-  @override
-  Serializer<SearchLocationsApiResponse> get responseSerializer => SearchLocationsApiResponse.serializer;
   
   SearchLocationsApi._();
   

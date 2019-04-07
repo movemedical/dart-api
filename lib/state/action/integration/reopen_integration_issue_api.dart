@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/integration/reopen_integration_issu
 
 part 'reopen_integration_issue_api.g.dart';
 
-abstract class ReopenIntegrationIssueApi extends ApiDispatcher<ReopenIntegrationIssueApiRequest, Null, ReopenIntegrationIssueApi> {
+abstract class ReopenIntegrationIssueApi extends ApiDispatcher<ReopenIntegrationIssueApiRequest,
+ReopenIntegrationIssueApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ReopenIntegrationIssueApi> {
   @override
   String get path => 'v1/integration/reopen_integration_issue';
-  
-  @override
-  Serializer<ReopenIntegrationIssueApiRequest> get requestSerializer => ReopenIntegrationIssueApiRequest.serializer;
   
   ReopenIntegrationIssueApi._();
   

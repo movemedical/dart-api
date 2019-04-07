@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/hcrToTeam/ad
 
 part 'add_hcr_to_team_api.g.dart';
 
-abstract class AddHcrToTeamApi extends ApiDispatcher<AddHcrToTeamApiRequest, Null, AddHcrToTeamApi> {
+abstract class AddHcrToTeamApi extends ApiDispatcher<AddHcrToTeamApiRequest,
+AddHcrToTeamApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AddHcrToTeamApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_team/add';
-  
-  @override
-  Serializer<AddHcrToTeamApiRequest> get requestSerializer => AddHcrToTeamApiRequest.serializer;
   
   AddHcrToTeamApi._();
   

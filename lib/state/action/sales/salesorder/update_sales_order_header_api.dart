@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/sales/salesorder/update_sales_order
 
 part 'update_sales_order_header_api.g.dart';
 
-abstract class UpdateSalesOrderHeaderApi extends ApiDispatcher<UpdateSalesOrderHeaderApiRequest, UpdateSalesOrderHeaderApiResponse, UpdateSalesOrderHeaderApi> {
+abstract class UpdateSalesOrderHeaderApi extends ApiDispatcher<UpdateSalesOrderHeaderApiRequest,
+UpdateSalesOrderHeaderApiRequestBuilder,
+UpdateSalesOrderHeaderApiResponse,
+UpdateSalesOrderHeaderApiResponseBuilder,
+UpdateSalesOrderHeaderApi> {
   @override
   String get path => 'v1/sales/sales_order/update_order_header';
-  
-  @override
-  Serializer<UpdateSalesOrderHeaderApiRequest> get requestSerializer => UpdateSalesOrderHeaderApiRequest.serializer;
-  
-  @override
-  Serializer<UpdateSalesOrderHeaderApiResponse> get responseSerializer => UpdateSalesOrderHeaderApiResponse.serializer;
   
   UpdateSalesOrderHeaderApi._();
   

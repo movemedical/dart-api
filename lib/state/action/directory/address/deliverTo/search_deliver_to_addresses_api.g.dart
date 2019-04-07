@@ -164,4 +164,31 @@ class _$SearchDeliverToAddressesApi extends SearchDeliverToAddressesApi {
         FullType(ApiCommand, [FullType(SearchDeliverToAddressesApiRequest)]),
         FullType(ApiResult, [FullType(SearchDeliverToAddressesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchDeliverToAddressesApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchDeliverToAddressesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchDeliverToAddressesApiResponse> newResultBuilder() =>
+      ApiResult<SearchDeliverToAddressesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchDeliverToAddressesApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchDeliverToAddressesApiRequest().toBuilder();
+
+  @override
+  SearchDeliverToAddressesApiResponseBuilder newResultPayloadBuilder() =>
+      SearchDeliverToAddressesApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchDeliverToAddressesApiRequest> get commandPayloadSerializer =>
+      SearchDeliverToAddressesApiRequest.serializer;
+
+  @override
+  Serializer<SearchDeliverToAddressesApiResponse> get resultPayloadSerializer =>
+      SearchDeliverToAddressesApiResponse.serializer;
 }

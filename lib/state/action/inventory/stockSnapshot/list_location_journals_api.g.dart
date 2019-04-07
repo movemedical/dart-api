@@ -160,4 +160,31 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
         FullType(ApiCommand, [FullType(ListLocationJournalsApiRequest)]),
         FullType(ApiResult, [FullType(ListLocationJournalsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListLocationJournalsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListLocationJournalsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListLocationJournalsApiResponse> newResultBuilder() =>
+      ApiResult<ListLocationJournalsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListLocationJournalsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListLocationJournalsApiRequest().toBuilder();
+
+  @override
+  ListLocationJournalsApiResponseBuilder newResultPayloadBuilder() =>
+      ListLocationJournalsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListLocationJournalsApiRequest> get commandPayloadSerializer =>
+      ListLocationJournalsApiRequest.serializer;
+
+  @override
+  Serializer<ListLocationJournalsApiResponse> get resultPayloadSerializer =>
+      ListLocationJournalsApiResponse.serializer;
 }

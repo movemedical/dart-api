@@ -10,91 +10,92 @@ part of 'save_team_to_org_unit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<SaveTeamToOrgUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     SaveTeamToOrgUnitApi> SaveTeamToOrgUnitApiOptions();
 
 class _$SaveTeamToOrgUnitApi extends SaveTeamToOrgUnitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<SaveTeamToOrgUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       SaveTeamToOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveTeamToOrgUnitApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveTeamToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveTeamToOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           SaveTeamToOrgUnitApi,
           Command<ApiCommand<SaveTeamToOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>,
-          SaveTeamToOrgUnitApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>,
+          SaveTeamToOrgUnitApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveTeamToOrgUnitApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveTeamToOrgUnitApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveTeamToOrgUnitApi, CommandProgress>> $progress;
 
   _$SaveTeamToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveTeamToOrgUnitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveTeamToOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     SaveTeamToOrgUnitApi,
                     Command<ApiCommand<SaveTeamToOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>,
-                SaveTeamToOrgUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<SaveTeamToOrgUnitApiRequest>,
+                    ApiResult<Empty>,
+                    SaveTeamToOrgUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveTeamToOrgUnitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveTeamToOrgUnitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveTeamToOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveTeamToOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$SaveTeamToOrgUnitApi extends SaveTeamToOrgUnitApi {
       _$SaveTeamToOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<SaveTeamToOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Null>>();
+          ApiCommand<SaveTeamToOrgUnitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$SaveTeamToOrgUnitApi extends SaveTeamToOrgUnitApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveTeamToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<SaveTeamToOrgUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<SaveTeamToOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SaveTeamToOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      SaveTeamToOrgUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<SaveTeamToOrgUnitApiRequest> get commandPayloadSerializer =>
+      SaveTeamToOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

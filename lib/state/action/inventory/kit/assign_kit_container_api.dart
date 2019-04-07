@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/kit/assign_kit_container_
 
 part 'assign_kit_container_api.g.dart';
 
-abstract class AssignKitContainerApi extends ApiDispatcher<AssignKitContainerApiRequest, Null, AssignKitContainerApi> {
+abstract class AssignKitContainerApi extends ApiDispatcher<AssignKitContainerApiRequest,
+AssignKitContainerApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AssignKitContainerApi> {
   @override
   String get path => 'v1/inventory/kit/assignKitContainers';
-  
-  @override
-  Serializer<AssignKitContainerApiRequest> get requestSerializer => AssignKitContainerApiRequest.serializer;
   
   AssignKitContainerApi._();
   

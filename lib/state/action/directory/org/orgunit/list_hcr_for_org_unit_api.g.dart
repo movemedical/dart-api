@@ -160,4 +160,31 @@ class _$ListHCRForOrgUnitApi extends ListHCRForOrgUnitApi {
         FullType(ApiCommand, [FullType(ListHCRForOrgUnitApiRequest)]),
         FullType(ApiResult, [FullType(ListHCRForOrgUnitApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHCRForOrgUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHCRForOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHCRForOrgUnitApiResponse> newResultBuilder() =>
+      ApiResult<ListHCRForOrgUnitApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHCRForOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHCRForOrgUnitApiRequest().toBuilder();
+
+  @override
+  ListHCRForOrgUnitApiResponseBuilder newResultPayloadBuilder() =>
+      ListHCRForOrgUnitApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHCRForOrgUnitApiRequest> get commandPayloadSerializer =>
+      ListHCRForOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<ListHCRForOrgUnitApiResponse> get resultPayloadSerializer =>
+      ListHCRForOrgUnitApiResponse.serializer;
 }

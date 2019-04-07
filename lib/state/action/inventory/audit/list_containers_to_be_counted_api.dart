@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/audit/list_containers_to_
 
 part 'list_containers_to_be_counted_api.g.dart';
 
-abstract class ListContainersToBeCountedApi extends ApiDispatcher<ListContainersToBeCountedApiRequest, ListContainersToBeCountedApiResponse, ListContainersToBeCountedApi> {
+abstract class ListContainersToBeCountedApi extends ApiDispatcher<ListContainersToBeCountedApiRequest,
+ListContainersToBeCountedApiRequestBuilder,
+ListContainersToBeCountedApiResponse,
+ListContainersToBeCountedApiResponseBuilder,
+ListContainersToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/list_containers_to_be_counted';
-  
-  @override
-  Serializer<ListContainersToBeCountedApiRequest> get requestSerializer => ListContainersToBeCountedApiRequest.serializer;
-  
-  @override
-  Serializer<ListContainersToBeCountedApiResponse> get responseSerializer => ListContainersToBeCountedApiResponse.serializer;
   
   ListContainersToBeCountedApi._();
   

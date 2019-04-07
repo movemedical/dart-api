@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/catalog/create_item_category_api_re
 
 part 'create_item_category_api.g.dart';
 
-abstract class CreateItemCategoryApi extends ApiDispatcher<CreateItemCategoryApiRequest, CreateItemCategoryApiResponse, CreateItemCategoryApi> {
+abstract class CreateItemCategoryApi extends ApiDispatcher<CreateItemCategoryApiRequest,
+CreateItemCategoryApiRequestBuilder,
+CreateItemCategoryApiResponse,
+CreateItemCategoryApiResponseBuilder,
+CreateItemCategoryApi> {
   @override
   String get path => 'v1/catalog/item_category/create';
-  
-  @override
-  Serializer<CreateItemCategoryApiRequest> get requestSerializer => CreateItemCategoryApiRequest.serializer;
-  
-  @override
-  Serializer<CreateItemCategoryApiResponse> get responseSerializer => CreateItemCategoryApiResponse.serializer;
   
   CreateItemCategoryApi._();
   

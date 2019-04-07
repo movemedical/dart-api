@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/loan/get_loan_api_respons
 
 part 'get_loan_api.g.dart';
 
-abstract class GetLoanApi extends ApiDispatcher<GetLoanApiRequest, GetLoanApiResponse, GetLoanApi> {
+abstract class GetLoanApi extends ApiDispatcher<GetLoanApiRequest,
+GetLoanApiRequestBuilder,
+GetLoanApiResponse,
+GetLoanApiResponseBuilder,
+GetLoanApi> {
   @override
   String get path => 'v1/inventory/loan/get';
-  
-  @override
-  Serializer<GetLoanApiRequest> get requestSerializer => GetLoanApiRequest.serializer;
-  
-  @override
-  Serializer<GetLoanApiResponse> get responseSerializer => GetLoanApiResponse.serializer;
   
   GetLoanApi._();
   

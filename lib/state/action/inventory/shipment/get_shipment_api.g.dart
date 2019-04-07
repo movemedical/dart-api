@@ -147,4 +147,31 @@ class _$GetShipmentApi extends GetShipmentApi {
         FullType(ApiCommand, [FullType(GetShipmentApiRequest)]),
         FullType(ApiResult, [FullType(GetShipmentApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetShipmentApiRequest> newCommandBuilder() =>
+      ApiCommand<GetShipmentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetShipmentApiResponse> newResultBuilder() =>
+      ApiResult<GetShipmentApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetShipmentApiRequestBuilder newCommandPayloadBuilder() =>
+      GetShipmentApiRequest().toBuilder();
+
+  @override
+  GetShipmentApiResponseBuilder newResultPayloadBuilder() =>
+      GetShipmentApiResponse().toBuilder();
+
+  @override
+  Serializer<GetShipmentApiRequest> get commandPayloadSerializer =>
+      GetShipmentApiRequest.serializer;
+
+  @override
+  Serializer<GetShipmentApiResponse> get resultPayloadSerializer =>
+      GetShipmentApiResponse.serializer;
 }

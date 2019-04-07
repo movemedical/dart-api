@@ -160,4 +160,31 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
         FullType(ApiCommand, [FullType(CreateHoldReasonApiRequest)]),
         FullType(ApiResult, [FullType(CreateHoldReasonApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateHoldReasonApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateHoldReasonApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateHoldReasonApiResponse> newResultBuilder() =>
+      ApiResult<CreateHoldReasonApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateHoldReasonApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateHoldReasonApiRequest().toBuilder();
+
+  @override
+  CreateHoldReasonApiResponseBuilder newResultPayloadBuilder() =>
+      CreateHoldReasonApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateHoldReasonApiRequest> get commandPayloadSerializer =>
+      CreateHoldReasonApiRequest.serializer;
+
+  @override
+  Serializer<CreateHoldReasonApiResponse> get resultPayloadSerializer =>
+      CreateHoldReasonApiResponse.serializer;
 }

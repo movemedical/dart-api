@@ -147,4 +147,31 @@ class _$GetInvoiceApi extends GetInvoiceApi {
         FullType(ApiCommand, [FullType(GetInvoiceApiRequest)]),
         FullType(ApiResult, [FullType(GetInvoiceApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetInvoiceApiRequest> newCommandBuilder() =>
+      ApiCommand<GetInvoiceApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetInvoiceApiResponse> newResultBuilder() =>
+      ApiResult<GetInvoiceApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetInvoiceApiRequestBuilder newCommandPayloadBuilder() =>
+      GetInvoiceApiRequest().toBuilder();
+
+  @override
+  GetInvoiceApiResponseBuilder newResultPayloadBuilder() =>
+      GetInvoiceApiResponse().toBuilder();
+
+  @override
+  Serializer<GetInvoiceApiRequest> get commandPayloadSerializer =>
+      GetInvoiceApiRequest.serializer;
+
+  @override
+  Serializer<GetInvoiceApiResponse> get resultPayloadSerializer =>
+      GetInvoiceApiResponse.serializer;
 }

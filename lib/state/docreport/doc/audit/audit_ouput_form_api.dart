@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/doc/audit/audit_ouput_form_api_r
 
 part 'audit_ouput_form_api.g.dart';
 
-abstract class AuditOuputFormApi extends ApiDispatcher<AuditOuputFormApiRequest, AuditOuputFormApiResponse, AuditOuputFormApi> {
+abstract class AuditOuputFormApi extends ApiDispatcher<AuditOuputFormApiRequest,
+AuditOuputFormApiRequestBuilder,
+AuditOuputFormApiResponse,
+AuditOuputFormApiResponseBuilder,
+AuditOuputFormApi> {
   @override
   String get path => 'v1/doc/audit/output_form';
-  
-  @override
-  Serializer<AuditOuputFormApiRequest> get requestSerializer => AuditOuputFormApiRequest.serializer;
-  
-  @override
-  Serializer<AuditOuputFormApiResponse> get responseSerializer => AuditOuputFormApiResponse.serializer;
   
   AuditOuputFormApi._();
   

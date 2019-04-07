@@ -10,94 +10,99 @@ part of 'save_case_requirements_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<SaveCaseRequirementsApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     SaveCaseRequirementsApi> SaveCaseRequirementsApiOptions();
 
 class _$SaveCaseRequirementsApi extends SaveCaseRequirementsApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<SaveCaseRequirementsApiRequest>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       SaveCaseRequirementsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>, SaveCaseRequirementsApi, String>> $clear;
+          ApiResult<Empty>, SaveCaseRequirementsApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>, SaveCaseRequirementsApi, String>> $cancel;
+          ApiResult<Empty>, SaveCaseRequirementsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           SaveCaseRequirementsApi,
           Command<ApiCommand<SaveCaseRequirementsApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           SaveCaseRequirementsApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>, SaveCaseRequirementsApi, String>> $detach;
+          ApiResult<Empty>, SaveCaseRequirementsApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>, SaveCaseRequirementsApi, String>> $attach;
+          ApiResult<Empty>, SaveCaseRequirementsApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>, SaveCaseRequirementsApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<SaveCaseRequirementsApiRequest>,
+          ApiResult<Empty>,
+          SaveCaseRequirementsApi,
+          CommandProgress>> $progress;
 
   _$SaveCaseRequirementsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveCaseRequirementsApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveCaseRequirementsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SaveCaseRequirementsApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     SaveCaseRequirementsApi,
                     Command<ApiCommand<SaveCaseRequirementsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>,
-                SaveCaseRequirementsApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<SaveCaseRequirementsApiRequest>,
+                    ApiResult<Empty>,
+                    SaveCaseRequirementsApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveCaseRequirementsApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveCaseRequirementsApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SaveCaseRequirementsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -106,15 +111,15 @@ class _$SaveCaseRequirementsApi extends SaveCaseRequirementsApi {
       _$SaveCaseRequirementsApi._(options());
 
   @override
-  CommandState<ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<SaveCaseRequirementsApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Null>>();
+          ApiCommand<SaveCaseRequirementsApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -137,6 +142,30 @@ class _$SaveCaseRequirementsApi extends SaveCaseRequirementsApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveCaseRequirementsApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<SaveCaseRequirementsApiRequest> newCommandBuilder() =>
+      ApiCommand<SaveCaseRequirementsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SaveCaseRequirementsApiRequestBuilder newCommandPayloadBuilder() =>
+      SaveCaseRequirementsApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<SaveCaseRequirementsApiRequest> get commandPayloadSerializer =>
+      SaveCaseRequirementsApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

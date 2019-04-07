@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/bizUnitToOrg
 
 part 'list_biz_unit_link_options_for_org_unit_api.g.dart';
 
-abstract class ListBizUnitLinkOptionsForOrgUnitApi extends ApiDispatcher<ListBizUnitLinkOptionsForOrgUnitApiRequest, ListBizUnitLinkOptionsForOrgUnitApiResponse, ListBizUnitLinkOptionsForOrgUnitApi> {
+abstract class ListBizUnitLinkOptionsForOrgUnitApi extends ApiDispatcher<ListBizUnitLinkOptionsForOrgUnitApiRequest,
+ListBizUnitLinkOptionsForOrgUnitApiRequestBuilder,
+ListBizUnitLinkOptionsForOrgUnitApiResponse,
+ListBizUnitLinkOptionsForOrgUnitApiResponseBuilder,
+ListBizUnitLinkOptionsForOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/biz_unit_to_org_unit/list_biz_unit_link_options_for_org_unit';
-  
-  @override
-  Serializer<ListBizUnitLinkOptionsForOrgUnitApiRequest> get requestSerializer => ListBizUnitLinkOptionsForOrgUnitApiRequest.serializer;
-  
-  @override
-  Serializer<ListBizUnitLinkOptionsForOrgUnitApiResponse> get responseSerializer => ListBizUnitLinkOptionsForOrgUnitApiResponse.serializer;
   
   ListBizUnitLinkOptionsForOrgUnitApi._();
   

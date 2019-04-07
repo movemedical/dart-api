@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/org/org/update_org_api_re
 
 part 'update_org_api.g.dart';
 
-abstract class UpdateOrgApi extends ApiDispatcher<UpdateOrgApiRequest, Null, UpdateOrgApi> {
+abstract class UpdateOrgApi extends ApiDispatcher<UpdateOrgApiRequest,
+UpdateOrgApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateOrgApi> {
   @override
   String get path => 'v1/directory/org/org/update';
-  
-  @override
-  Serializer<UpdateOrgApiRequest> get requestSerializer => UpdateOrgApiRequest.serializer;
   
   UpdateOrgApi._();
   

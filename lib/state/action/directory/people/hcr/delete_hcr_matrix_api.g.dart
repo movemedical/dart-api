@@ -10,90 +10,92 @@ part of 'delete_hcr_matrix_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>,
+        ApiResult<Empty>>,
     DeleteHcrMatrixApi> DeleteHcrMatrixApiOptions();
 
 class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       DeleteHcrMatrixApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
           DeleteHcrMatrixApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
           DeleteHcrMatrixApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DeleteHcrMatrixApi,
           Command<ApiCommand<DeleteHcrMatrixApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>,
-          DeleteHcrMatrixApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
+          DeleteHcrMatrixApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
           DeleteHcrMatrixApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
           DeleteHcrMatrixApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
           DeleteHcrMatrixApi, CommandProgress>> $progress;
 
   _$DeleteHcrMatrixApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteHcrMatrixApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteHcrMatrixApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteHcrMatrixApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     DeleteHcrMatrixApi,
                     Command<ApiCommand<DeleteHcrMatrixApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>,
-                DeleteHcrMatrixApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<DeleteHcrMatrixApiRequest>,
+                    ApiResult<Empty>,
+                    DeleteHcrMatrixApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteHcrMatrixApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteHcrMatrixApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteHcrMatrixApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -102,14 +104,14 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
       _$DeleteHcrMatrixApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Null>>();
+          ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -132,6 +134,30 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteHcrMatrixApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<DeleteHcrMatrixApiRequest> newCommandBuilder() =>
+      ApiCommand<DeleteHcrMatrixApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  DeleteHcrMatrixApiRequestBuilder newCommandPayloadBuilder() =>
+      DeleteHcrMatrixApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<DeleteHcrMatrixApiRequest> get commandPayloadSerializer =>
+      DeleteHcrMatrixApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

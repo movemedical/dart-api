@@ -159,4 +159,31 @@ class _$GetUiSetupAllApi extends GetUiSetupAllApi {
         FullType(ApiCommand, [FullType(GetUiSetupAllApiRequest)]),
         FullType(ApiResult, [FullType(GetUiSetupAllApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetUiSetupAllApiRequest> newCommandBuilder() =>
+      ApiCommand<GetUiSetupAllApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetUiSetupAllApiResponse> newResultBuilder() =>
+      ApiResult<GetUiSetupAllApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetUiSetupAllApiRequestBuilder newCommandPayloadBuilder() =>
+      GetUiSetupAllApiRequest().toBuilder();
+
+  @override
+  GetUiSetupAllApiResponseBuilder newResultPayloadBuilder() =>
+      GetUiSetupAllApiResponse().toBuilder();
+
+  @override
+  Serializer<GetUiSetupAllApiRequest> get commandPayloadSerializer =>
+      GetUiSetupAllApiRequest.serializer;
+
+  @override
+  Serializer<GetUiSetupAllApiResponse> get resultPayloadSerializer =>
+      GetUiSetupAllApiResponse.serializer;
 }

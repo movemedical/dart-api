@@ -10,91 +10,92 @@ part of 'add_user_nav_history_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AddUserNavHistoryApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AddUserNavHistoryApi> AddUserNavHistoryApiOptions();
 
 class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AddUserNavHistoryApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AddUserNavHistoryApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddUserNavHistoryApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddUserNavHistoryApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddUserNavHistoryApi,
           Command<ApiCommand<AddUserNavHistoryApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>,
-          AddUserNavHistoryApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
+          AddUserNavHistoryApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, CommandProgress>> $progress;
 
   _$AddUserNavHistoryApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddUserNavHistoryApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddUserNavHistoryApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddUserNavHistoryApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddUserNavHistoryApi,
                     Command<ApiCommand<AddUserNavHistoryApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>,
-                AddUserNavHistoryApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddUserNavHistoryApiRequest>,
+                    ApiResult<Empty>,
+                    AddUserNavHistoryApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddUserNavHistoryApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddUserNavHistoryApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddUserNavHistoryApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
       _$AddUserNavHistoryApi._(options());
 
   @override
-  CommandState<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<AddUserNavHistoryApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Null>>();
+          ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddUserNavHistoryApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddUserNavHistoryApiRequest> newCommandBuilder() =>
+      ApiCommand<AddUserNavHistoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddUserNavHistoryApiRequestBuilder newCommandPayloadBuilder() =>
+      AddUserNavHistoryApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddUserNavHistoryApiRequest> get commandPayloadSerializer =>
+      AddUserNavHistoryApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

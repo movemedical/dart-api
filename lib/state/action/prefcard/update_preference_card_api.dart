@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/prefcard/update_preference_card_api
 
 part 'update_preference_card_api.g.dart';
 
-abstract class UpdatePreferenceCardApi extends ApiDispatcher<UpdatePreferenceCardApiRequest, Null, UpdatePreferenceCardApi> {
+abstract class UpdatePreferenceCardApi extends ApiDispatcher<UpdatePreferenceCardApiRequest,
+UpdatePreferenceCardApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdatePreferenceCardApi> {
   @override
   String get path => 'v1/prefcard/update';
-  
-  @override
-  Serializer<UpdatePreferenceCardApiRequest> get requestSerializer => UpdatePreferenceCardApiRequest.serializer;
   
   UpdatePreferenceCardApi._();
   

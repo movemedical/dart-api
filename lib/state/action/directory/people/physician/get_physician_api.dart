@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/people/physician/get_phys
 
 part 'get_physician_api.g.dart';
 
-abstract class GetPhysicianApi extends ApiDispatcher<GetPhysicianApiRequest, GetPhysicianApiResponse, GetPhysicianApi> {
+abstract class GetPhysicianApi extends ApiDispatcher<GetPhysicianApiRequest,
+GetPhysicianApiRequestBuilder,
+GetPhysicianApiResponse,
+GetPhysicianApiResponseBuilder,
+GetPhysicianApi> {
   @override
   String get path => 'v1/directory/people/physician/get';
-  
-  @override
-  Serializer<GetPhysicianApiRequest> get requestSerializer => GetPhysicianApiRequest.serializer;
-  
-  @override
-  Serializer<GetPhysicianApiResponse> get responseSerializer => GetPhysicianApiResponse.serializer;
   
   GetPhysicianApi._();
   

@@ -10,94 +10,99 @@ part of 'update_import_log_error_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateImportLogErrorApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateImportLogErrorApi> UpdateImportLogErrorApiOptions();
 
 class _$UpdateImportLogErrorApi extends UpdateImportLogErrorApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateImportLogErrorApiRequest>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateImportLogErrorApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>, UpdateImportLogErrorApi, String>> $clear;
+          ApiResult<Empty>, UpdateImportLogErrorApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>, UpdateImportLogErrorApi, String>> $cancel;
+          ApiResult<Empty>, UpdateImportLogErrorApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateImportLogErrorApi,
           Command<ApiCommand<UpdateImportLogErrorApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateImportLogErrorApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>, UpdateImportLogErrorApi, String>> $detach;
+          ApiResult<Empty>, UpdateImportLogErrorApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>, UpdateImportLogErrorApi, String>> $attach;
+          ApiResult<Empty>, UpdateImportLogErrorApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>, UpdateImportLogErrorApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<UpdateImportLogErrorApiRequest>,
+          ApiResult<Empty>,
+          UpdateImportLogErrorApi,
+          CommandProgress>> $progress;
 
   _$UpdateImportLogErrorApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateImportLogErrorApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateImportLogErrorApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateImportLogErrorApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateImportLogErrorApi,
                     Command<ApiCommand<UpdateImportLogErrorApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>,
-                UpdateImportLogErrorApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateImportLogErrorApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateImportLogErrorApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateImportLogErrorApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateImportLogErrorApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateImportLogErrorApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateImportLogErrorApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -106,15 +111,15 @@ class _$UpdateImportLogErrorApi extends UpdateImportLogErrorApi {
       _$UpdateImportLogErrorApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateImportLogErrorApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateImportLogErrorApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -137,6 +142,30 @@ class _$UpdateImportLogErrorApi extends UpdateImportLogErrorApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateImportLogErrorApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateImportLogErrorApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateImportLogErrorApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateImportLogErrorApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateImportLogErrorApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateImportLogErrorApiRequest> get commandPayloadSerializer =>
+      UpdateImportLogErrorApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

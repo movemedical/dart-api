@@ -10,91 +10,92 @@ part of 'delete_order_reason_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<DeleteOrderReasonApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     DeleteOrderReasonApi> DeleteOrderReasonApiOptions();
 
 class _$DeleteOrderReasonApi extends DeleteOrderReasonApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<DeleteOrderReasonApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       DeleteOrderReasonApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeleteOrderReasonApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>,
           DeleteOrderReasonApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>,
           DeleteOrderReasonApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteOrderReasonApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DeleteOrderReasonApi,
           Command<ApiCommand<DeleteOrderReasonApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>,
-          DeleteOrderReasonApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>,
+          DeleteOrderReasonApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>,
           DeleteOrderReasonApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>,
           DeleteOrderReasonApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>,
           DeleteOrderReasonApi, CommandProgress>> $progress;
 
   _$DeleteOrderReasonApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteOrderReasonApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteOrderReasonApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteOrderReasonApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     DeleteOrderReasonApi,
                     Command<ApiCommand<DeleteOrderReasonApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>,
-                DeleteOrderReasonApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<DeleteOrderReasonApiRequest>,
+                    ApiResult<Empty>,
+                    DeleteOrderReasonApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteOrderReasonApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteOrderReasonApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteOrderReasonApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteOrderReasonApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$DeleteOrderReasonApi extends DeleteOrderReasonApi {
       _$DeleteOrderReasonApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<DeleteOrderReasonApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Null>>();
+          ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$DeleteOrderReasonApi extends DeleteOrderReasonApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteOrderReasonApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<DeleteOrderReasonApiRequest> newCommandBuilder() =>
+      ApiCommand<DeleteOrderReasonApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  DeleteOrderReasonApiRequestBuilder newCommandPayloadBuilder() =>
+      DeleteOrderReasonApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<DeleteOrderReasonApiRequest> get commandPayloadSerializer =>
+      DeleteOrderReasonApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

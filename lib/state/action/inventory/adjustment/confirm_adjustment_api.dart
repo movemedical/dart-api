@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/adjustment/confirm_adjust
 
 part 'confirm_adjustment_api.g.dart';
 
-abstract class ConfirmAdjustmentApi extends ApiDispatcher<ConfirmAdjustmentApiRequest, Null, ConfirmAdjustmentApi> {
+abstract class ConfirmAdjustmentApi extends ApiDispatcher<ConfirmAdjustmentApiRequest,
+ConfirmAdjustmentApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ConfirmAdjustmentApi> {
   @override
   String get path => 'v1/inventory/adjustment/confirm';
-  
-  @override
-  Serializer<ConfirmAdjustmentApiRequest> get requestSerializer => ConfirmAdjustmentApiRequest.serializer;
   
   ConfirmAdjustmentApi._();
   

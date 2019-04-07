@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/report/openbilling/request_open_
 
 part 'request_open_billing_report_api.g.dart';
 
-abstract class RequestOpenBillingReportApi extends ApiDispatcher<RequestOpenBillingReportApiRequest, Null, RequestOpenBillingReportApi> {
+abstract class RequestOpenBillingReportApi extends ApiDispatcher<RequestOpenBillingReportApiRequest,
+RequestOpenBillingReportApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestOpenBillingReportApi> {
   @override
   String get path => 'v1/doc/open_billing';
-  
-  @override
-  Serializer<RequestOpenBillingReportApiRequest> get requestSerializer => RequestOpenBillingReportApiRequest.serializer;
   
   RequestOpenBillingReportApi._();
   

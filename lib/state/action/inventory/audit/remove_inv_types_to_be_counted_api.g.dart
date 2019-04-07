@@ -11,98 +11,99 @@ part of 'remove_inv_types_to_be_counted_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RemoveInvTypesToBeCountedApi> RemoveInvTypesToBeCountedApiOptions();
 
 class _$RemoveInvTypesToBeCountedApi extends RemoveInvTypesToBeCountedApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveInvTypesToBeCountedApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, RemoveInvTypesToBeCountedApi, String>> $clear;
+          ApiResult<Empty>, RemoveInvTypesToBeCountedApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, RemoveInvTypesToBeCountedApi, String>> $cancel;
+          ApiResult<Empty>, RemoveInvTypesToBeCountedApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveInvTypesToBeCountedApi,
           Command<ApiCommand<RemoveInvTypesToBeCountedApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveInvTypesToBeCountedApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, RemoveInvTypesToBeCountedApi, String>> $detach;
+          ApiResult<Empty>, RemoveInvTypesToBeCountedApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, RemoveInvTypesToBeCountedApi, String>> $attach;
+          ApiResult<Empty>, RemoveInvTypesToBeCountedApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveInvTypesToBeCountedApi,
           CommandProgress>> $progress;
 
   _$RemoveInvTypesToBeCountedApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveInvTypesToBeCountedApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveInvTypesToBeCountedApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveInvTypesToBeCountedApi,
                     Command<ApiCommand<RemoveInvTypesToBeCountedApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
-                RemoveInvTypesToBeCountedApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveInvTypesToBeCountedApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveInvTypesToBeCountedApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveInvTypesToBeCountedApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveInvTypesToBeCountedApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$RemoveInvTypesToBeCountedApi extends RemoveInvTypesToBeCountedApi {
       _$RemoveInvTypesToBeCountedApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveInvTypesToBeCountedApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<RemoveInvTypesToBeCountedApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemoveInvTypesToBeCountedApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveInvTypesToBeCountedApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemoveInvTypesToBeCountedApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$RemoveInvTypesToBeCountedApi extends RemoveInvTypesToBeCountedApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveInvTypesToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveInvTypesToBeCountedApiRequest> newCommandBuilder() =>
+      ApiCommand<RemoveInvTypesToBeCountedApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveInvTypesToBeCountedApiRequestBuilder newCommandPayloadBuilder() =>
+      RemoveInvTypesToBeCountedApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveInvTypesToBeCountedApiRequest>
+      get commandPayloadSerializer =>
+          RemoveInvTypesToBeCountedApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

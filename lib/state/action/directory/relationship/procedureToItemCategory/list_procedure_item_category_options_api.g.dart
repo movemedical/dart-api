@@ -173,4 +173,37 @@ class _$ListProcedureItemCategoryOptionsApi
         FullType(
             ApiResult, [FullType(ListProcedureItemCategoryOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListProcedureItemCategoryOptionsApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListProcedureItemCategoryOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListProcedureItemCategoryOptionsApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListProcedureItemCategoryOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListProcedureItemCategoryOptionsApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          ListProcedureItemCategoryOptionsApiRequest().toBuilder();
+
+  @override
+  ListProcedureItemCategoryOptionsApiResponseBuilder
+      newResultPayloadBuilder() =>
+          ListProcedureItemCategoryOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListProcedureItemCategoryOptionsApiRequest>
+      get commandPayloadSerializer =>
+          ListProcedureItemCategoryOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListProcedureItemCategoryOptionsApiResponse>
+      get resultPayloadSerializer =>
+          ListProcedureItemCategoryOptionsApiResponse.serializer;
 }

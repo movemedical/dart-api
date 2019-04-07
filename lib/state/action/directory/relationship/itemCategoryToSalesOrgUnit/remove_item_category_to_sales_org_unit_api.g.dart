@@ -11,112 +11,116 @@ part of 'remove_item_category_to_sales_org_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RemoveItemCategoryToSalesOrgUnitApi> RemoveItemCategoryToSalesOrgUnitApiOptions();
 
 class _$RemoveItemCategoryToSalesOrgUnitApi
     extends RemoveItemCategoryToSalesOrgUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveItemCategoryToSalesOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>, RemoveItemCategoryToSalesOrgUnitApi, String>> $clear;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
+          RemoveItemCategoryToSalesOrgUnitApi,
+          String>> $clear;
+  final ActionDispatcher<
+      CommandPayload<
+          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
+          ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               RemoveItemCategoryToSalesOrgUnitApi,
               Command<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
           String>> $detach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
           String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
           CommandProgress>> $progress;
 
   _$RemoveItemCategoryToSalesOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveItemCategoryToSalesOrgUnitApi,
                     Command<
                         ApiCommand<
                             RemoveItemCategoryToSalesOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
-                RemoveItemCategoryToSalesOrgUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveItemCategoryToSalesOrgUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -127,17 +131,17 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
 
   @override
   CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -161,6 +165,33 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(RemoveItemCategoryToSalesOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveItemCategoryToSalesOrgUnitApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveItemCategoryToSalesOrgUnitApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          RemoveItemCategoryToSalesOrgUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveItemCategoryToSalesOrgUnitApiRequest>
+      get commandPayloadSerializer =>
+          RemoveItemCategoryToSalesOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

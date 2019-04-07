@@ -10,90 +10,91 @@ part of 'remove_ae_to_team_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>>,
     RemoveAeToTeamApi> RemoveAeToTeamApiOptions();
 
 class _$RemoveAeToTeamApi extends RemoveAeToTeamApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemoveAeToTeamApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveAeToTeamApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>,
           RemoveAeToTeamApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>,
           RemoveAeToTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveAeToTeamApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveAeToTeamApi,
           Command<ApiCommand<RemoveAeToTeamApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>,
-          RemoveAeToTeamApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>,
+          RemoveAeToTeamApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>,
           RemoveAeToTeamApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>,
           RemoveAeToTeamApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>,
           RemoveAeToTeamApi, CommandProgress>> $progress;
 
   _$RemoveAeToTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAeToTeamApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAeToTeamApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveAeToTeamApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveAeToTeamApi,
                     Command<ApiCommand<RemoveAeToTeamApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>,
-                RemoveAeToTeamApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveAeToTeamApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveAeToTeamApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAeToTeamApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAeToTeamApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAeToTeamApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAeToTeamApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -102,14 +103,14 @@ class _$RemoveAeToTeamApi extends RemoveAeToTeamApi {
       _$RemoveAeToTeamApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>
-      get $initial =>
-          CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>();
+  CommandState<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>>
+      get $initial => CommandState<ApiCommand<RemoveAeToTeamApiRequest>,
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<RemoveAeToTeamApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<RemoveAeToTeamApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -132,6 +133,30 @@ class _$RemoveAeToTeamApi extends RemoveAeToTeamApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveAeToTeamApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveAeToTeamApiRequest> newCommandBuilder() =>
+      ApiCommand<RemoveAeToTeamApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveAeToTeamApiRequestBuilder newCommandPayloadBuilder() =>
+      RemoveAeToTeamApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveAeToTeamApiRequest> get commandPayloadSerializer =>
+      RemoveAeToTeamApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

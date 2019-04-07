@@ -10,94 +10,99 @@ part of 'archive_conversations_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<ArchiveConversationsApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     ArchiveConversationsApi> ArchiveConversationsApiOptions();
 
 class _$ArchiveConversationsApi extends ArchiveConversationsApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<ArchiveConversationsApiRequest>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       ArchiveConversationsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>, ArchiveConversationsApi, String>> $clear;
+          ApiResult<Empty>, ArchiveConversationsApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>, ArchiveConversationsApi, String>> $cancel;
+          ApiResult<Empty>, ArchiveConversationsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ArchiveConversationsApi,
           Command<ApiCommand<ArchiveConversationsApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ArchiveConversationsApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>, ArchiveConversationsApi, String>> $detach;
+          ApiResult<Empty>, ArchiveConversationsApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>, ArchiveConversationsApi, String>> $attach;
+          ApiResult<Empty>, ArchiveConversationsApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>, ArchiveConversationsApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<ArchiveConversationsApiRequest>,
+          ApiResult<Empty>,
+          ArchiveConversationsApi,
+          CommandProgress>> $progress;
 
   _$ArchiveConversationsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ArchiveConversationsApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ArchiveConversationsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ArchiveConversationsApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     ArchiveConversationsApi,
                     Command<ApiCommand<ArchiveConversationsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>,
-                ArchiveConversationsApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<ArchiveConversationsApiRequest>,
+                    ApiResult<Empty>,
+                    ArchiveConversationsApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ArchiveConversationsApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ArchiveConversationsApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ArchiveConversationsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -106,15 +111,15 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
       _$ArchiveConversationsApi._(options());
 
   @override
-  CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Null>>();
+          ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -137,6 +142,30 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ArchiveConversationsApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<ArchiveConversationsApiRequest> newCommandBuilder() =>
+      ApiCommand<ArchiveConversationsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ArchiveConversationsApiRequestBuilder newCommandPayloadBuilder() =>
+      ArchiveConversationsApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<ArchiveConversationsApiRequest> get commandPayloadSerializer =>
+      ArchiveConversationsApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

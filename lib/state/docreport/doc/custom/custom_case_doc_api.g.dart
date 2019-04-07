@@ -159,4 +159,31 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
         FullType(ApiCommand, [FullType(CustomCaseDocApiRequest)]),
         FullType(ApiResult, [FullType(CustomCaseDocApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CustomCaseDocApiRequest> newCommandBuilder() =>
+      ApiCommand<CustomCaseDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CustomCaseDocApiResponse> newResultBuilder() =>
+      ApiResult<CustomCaseDocApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CustomCaseDocApiRequestBuilder newCommandPayloadBuilder() =>
+      CustomCaseDocApiRequest().toBuilder();
+
+  @override
+  CustomCaseDocApiResponseBuilder newResultPayloadBuilder() =>
+      CustomCaseDocApiResponse().toBuilder();
+
+  @override
+  Serializer<CustomCaseDocApiRequest> get commandPayloadSerializer =>
+      CustomCaseDocApiRequest.serializer;
+
+  @override
+  Serializer<CustomCaseDocApiResponse> get resultPayloadSerializer =>
+      CustomCaseDocApiResponse.serializer;
 }

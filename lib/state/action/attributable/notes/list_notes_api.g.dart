@@ -146,4 +146,31 @@ class _$ListNotesApi extends ListNotesApi {
         FullType(ApiCommand, [FullType(ListNotesApiRequest)]),
         FullType(ApiResult, [FullType(ListNotesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListNotesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListNotesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListNotesApiResponse> newResultBuilder() =>
+      ApiResult<ListNotesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListNotesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListNotesApiRequest().toBuilder();
+
+  @override
+  ListNotesApiResponseBuilder newResultPayloadBuilder() =>
+      ListNotesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListNotesApiRequest> get commandPayloadSerializer =>
+      ListNotesApiRequest.serializer;
+
+  @override
+  Serializer<ListNotesApiResponse> get resultPayloadSerializer =>
+      ListNotesApiResponse.serializer;
 }

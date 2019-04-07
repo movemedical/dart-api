@@ -170,4 +170,35 @@ class _$PrepareIntegrationFileDownloadApi
         FullType(
             ApiResult, [FullType(PrepareIntegrationFileDownloadApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PrepareIntegrationFileDownloadApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<PrepareIntegrationFileDownloadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PrepareIntegrationFileDownloadApiResponse>
+      newResultBuilder() =>
+          ApiResult<PrepareIntegrationFileDownloadApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PrepareIntegrationFileDownloadApiRequestBuilder newCommandPayloadBuilder() =>
+      PrepareIntegrationFileDownloadApiRequest().toBuilder();
+
+  @override
+  PrepareIntegrationFileDownloadApiResponseBuilder newResultPayloadBuilder() =>
+      PrepareIntegrationFileDownloadApiResponse().toBuilder();
+
+  @override
+  Serializer<PrepareIntegrationFileDownloadApiRequest>
+      get commandPayloadSerializer =>
+          PrepareIntegrationFileDownloadApiRequest.serializer;
+
+  @override
+  Serializer<PrepareIntegrationFileDownloadApiResponse>
+      get resultPayloadSerializer =>
+          PrepareIntegrationFileDownloadApiResponse.serializer;
 }

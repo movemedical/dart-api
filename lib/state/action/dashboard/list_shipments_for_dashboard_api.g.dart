@@ -164,4 +164,33 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
         FullType(ApiCommand, [FullType(ListShipmentsForDashboardApiRequest)]),
         FullType(ApiResult, [FullType(ListShipmentsForDashboardApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListShipmentsForDashboardApiRequest> newCommandBuilder() =>
+      ApiCommand<ListShipmentsForDashboardApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListShipmentsForDashboardApiResponse> newResultBuilder() =>
+      ApiResult<ListShipmentsForDashboardApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListShipmentsForDashboardApiRequestBuilder newCommandPayloadBuilder() =>
+      ListShipmentsForDashboardApiRequest().toBuilder();
+
+  @override
+  ListShipmentsForDashboardApiResponseBuilder newResultPayloadBuilder() =>
+      ListShipmentsForDashboardApiResponse().toBuilder();
+
+  @override
+  Serializer<ListShipmentsForDashboardApiRequest>
+      get commandPayloadSerializer =>
+          ListShipmentsForDashboardApiRequest.serializer;
+
+  @override
+  Serializer<ListShipmentsForDashboardApiResponse>
+      get resultPayloadSerializer =>
+          ListShipmentsForDashboardApiResponse.serializer;
 }

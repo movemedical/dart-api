@@ -159,4 +159,31 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
         FullType(ApiCommand, [FullType(ListHcrMatrixApiRequest)]),
         FullType(ApiResult, [FullType(ListHcrMatrixApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHcrMatrixApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHcrMatrixApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHcrMatrixApiResponse> newResultBuilder() =>
+      ApiResult<ListHcrMatrixApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHcrMatrixApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHcrMatrixApiRequest().toBuilder();
+
+  @override
+  ListHcrMatrixApiResponseBuilder newResultPayloadBuilder() =>
+      ListHcrMatrixApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHcrMatrixApiRequest> get commandPayloadSerializer =>
+      ListHcrMatrixApiRequest.serializer;
+
+  @override
+  Serializer<ListHcrMatrixApiResponse> get resultPayloadSerializer =>
+      ListHcrMatrixApiResponse.serializer;
 }

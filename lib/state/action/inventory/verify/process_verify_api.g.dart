@@ -159,4 +159,31 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
         FullType(ApiCommand, [FullType(ProcessVerifyApiRequest)]),
         FullType(ApiResult, [FullType(ProcessVerifyApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ProcessVerifyApiRequest> newCommandBuilder() =>
+      ApiCommand<ProcessVerifyApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ProcessVerifyApiResponse> newResultBuilder() =>
+      ApiResult<ProcessVerifyApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ProcessVerifyApiRequestBuilder newCommandPayloadBuilder() =>
+      ProcessVerifyApiRequest().toBuilder();
+
+  @override
+  ProcessVerifyApiResponseBuilder newResultPayloadBuilder() =>
+      ProcessVerifyApiResponse().toBuilder();
+
+  @override
+  Serializer<ProcessVerifyApiRequest> get commandPayloadSerializer =>
+      ProcessVerifyApiRequest.serializer;
+
+  @override
+  Serializer<ProcessVerifyApiResponse> get resultPayloadSerializer =>
+      ProcessVerifyApiResponse.serializer;
 }

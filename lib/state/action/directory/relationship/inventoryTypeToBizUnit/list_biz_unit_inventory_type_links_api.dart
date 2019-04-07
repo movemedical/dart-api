@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/inventoryTyp
 
 part 'list_biz_unit_inventory_type_links_api.g.dart';
 
-abstract class ListBizUnitInventoryTypeLinksApi extends ApiDispatcher<ListBizUnitInventoryTypeLinksApiRequest, ListBizUnitInventoryTypeLinksApiResponse, ListBizUnitInventoryTypeLinksApi> {
+abstract class ListBizUnitInventoryTypeLinksApi extends ApiDispatcher<ListBizUnitInventoryTypeLinksApiRequest,
+ListBizUnitInventoryTypeLinksApiRequestBuilder,
+ListBizUnitInventoryTypeLinksApiResponse,
+ListBizUnitInventoryTypeLinksApiResponseBuilder,
+ListBizUnitInventoryTypeLinksApi> {
   @override
   String get path => 'v1/directory/relationship/inventory_type_to_biz_unit/list_links';
-  
-  @override
-  Serializer<ListBizUnitInventoryTypeLinksApiRequest> get requestSerializer => ListBizUnitInventoryTypeLinksApiRequest.serializer;
-  
-  @override
-  Serializer<ListBizUnitInventoryTypeLinksApiResponse> get responseSerializer => ListBizUnitInventoryTypeLinksApiResponse.serializer;
   
   ListBizUnitInventoryTypeLinksApi._();
   

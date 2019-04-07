@@ -159,4 +159,31 @@ class _$SearchContactsApi extends SearchContactsApi {
         FullType(ApiCommand, [FullType(SearchContactsApiRequest)]),
         FullType(ApiResult, [FullType(SearchContactsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchContactsApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchContactsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchContactsApiResponse> newResultBuilder() =>
+      ApiResult<SearchContactsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchContactsApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchContactsApiRequest().toBuilder();
+
+  @override
+  SearchContactsApiResponseBuilder newResultPayloadBuilder() =>
+      SearchContactsApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchContactsApiRequest> get commandPayloadSerializer =>
+      SearchContactsApiRequest.serializer;
+
+  @override
+  Serializer<SearchContactsApiResponse> get resultPayloadSerializer =>
+      SearchContactsApiResponse.serializer;
 }

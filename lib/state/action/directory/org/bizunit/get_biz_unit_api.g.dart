@@ -147,4 +147,31 @@ class _$GetBizUnitApi extends GetBizUnitApi {
         FullType(ApiCommand, [FullType(GetBizUnitApiRequest)]),
         FullType(ApiResult, [FullType(GetBizUnitApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetBizUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<GetBizUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetBizUnitApiResponse> newResultBuilder() =>
+      ApiResult<GetBizUnitApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetBizUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      GetBizUnitApiRequest().toBuilder();
+
+  @override
+  GetBizUnitApiResponseBuilder newResultPayloadBuilder() =>
+      GetBizUnitApiResponse().toBuilder();
+
+  @override
+  Serializer<GetBizUnitApiRequest> get commandPayloadSerializer =>
+      GetBizUnitApiRequest.serializer;
+
+  @override
+  Serializer<GetBizUnitApiResponse> get resultPayloadSerializer =>
+      GetBizUnitApiResponse.serializer;
 }

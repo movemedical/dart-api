@@ -160,4 +160,31 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
         FullType(ApiCommand, [FullType(RequestOnHandReportApiRequest)]),
         FullType(ApiResult, [FullType(RequestOnHandReportApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestOnHandReportApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestOnHandReportApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestOnHandReportApiResponse> newResultBuilder() =>
+      ApiResult<RequestOnHandReportApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestOnHandReportApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestOnHandReportApiRequest().toBuilder();
+
+  @override
+  RequestOnHandReportApiResponseBuilder newResultPayloadBuilder() =>
+      RequestOnHandReportApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestOnHandReportApiRequest> get commandPayloadSerializer =>
+      RequestOnHandReportApiRequest.serializer;
+
+  @override
+  Serializer<RequestOnHandReportApiResponse> get resultPayloadSerializer =>
+      RequestOnHandReportApiResponse.serializer;
 }

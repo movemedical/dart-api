@@ -164,4 +164,31 @@ class _$ListOrgUnitFacilityLinksApi extends ListOrgUnitFacilityLinksApi {
         FullType(ApiCommand, [FullType(ListOrgUnitFacilityLinksApiRequest)]),
         FullType(ApiResult, [FullType(ListOrgUnitFacilityLinksApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListOrgUnitFacilityLinksApiRequest> newCommandBuilder() =>
+      ApiCommand<ListOrgUnitFacilityLinksApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListOrgUnitFacilityLinksApiResponse> newResultBuilder() =>
+      ApiResult<ListOrgUnitFacilityLinksApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListOrgUnitFacilityLinksApiRequestBuilder newCommandPayloadBuilder() =>
+      ListOrgUnitFacilityLinksApiRequest().toBuilder();
+
+  @override
+  ListOrgUnitFacilityLinksApiResponseBuilder newResultPayloadBuilder() =>
+      ListOrgUnitFacilityLinksApiResponse().toBuilder();
+
+  @override
+  Serializer<ListOrgUnitFacilityLinksApiRequest> get commandPayloadSerializer =>
+      ListOrgUnitFacilityLinksApiRequest.serializer;
+
+  @override
+  Serializer<ListOrgUnitFacilityLinksApiResponse> get resultPayloadSerializer =>
+      ListOrgUnitFacilityLinksApiResponse.serializer;
 }

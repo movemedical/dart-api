@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/customer/create_custo
 
 part 'create_customer_api.g.dart';
 
-abstract class CreateCustomerApi extends ApiDispatcher<CreateCustomerApiRequest, CreateCustomerApiResponse, CreateCustomerApi> {
+abstract class CreateCustomerApi extends ApiDispatcher<CreateCustomerApiRequest,
+CreateCustomerApiRequestBuilder,
+CreateCustomerApiResponse,
+CreateCustomerApiResponseBuilder,
+CreateCustomerApi> {
   @override
   String get path => 'v1/directory/org/customer/create';
-  
-  @override
-  Serializer<CreateCustomerApiRequest> get requestSerializer => CreateCustomerApiRequest.serializer;
-  
-  @override
-  Serializer<CreateCustomerApiResponse> get responseSerializer => CreateCustomerApiResponse.serializer;
   
   CreateCustomerApi._();
   

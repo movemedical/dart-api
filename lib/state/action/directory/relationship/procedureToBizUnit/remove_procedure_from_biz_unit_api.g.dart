@@ -11,98 +11,99 @@ part of 'remove_procedure_from_biz_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RemoveProcedureFromBizUnitApi> RemoveProcedureFromBizUnitApiOptions();
 
 class _$RemoveProcedureFromBizUnitApi extends RemoveProcedureFromBizUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveProcedureFromBizUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromBizUnitApi, String>> $clear;
+          ApiResult<Empty>, RemoveProcedureFromBizUnitApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromBizUnitApi, String>> $cancel;
+          ApiResult<Empty>, RemoveProcedureFromBizUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveProcedureFromBizUnitApi,
           Command<ApiCommand<RemoveProcedureFromBizUnitApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveProcedureFromBizUnitApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromBizUnitApi, String>> $detach;
+          ApiResult<Empty>, RemoveProcedureFromBizUnitApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromBizUnitApi, String>> $attach;
+          ApiResult<Empty>, RemoveProcedureFromBizUnitApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveProcedureFromBizUnitApi,
           CommandProgress>> $progress;
 
   _$RemoveProcedureFromBizUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromBizUnitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromBizUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveProcedureFromBizUnitApi,
                     Command<ApiCommand<RemoveProcedureFromBizUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>,
-                RemoveProcedureFromBizUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveProcedureFromBizUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromBizUnitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromBizUnitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromBizUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -113,15 +114,15 @@ class _$RemoveProcedureFromBizUnitApi extends RemoveProcedureFromBizUnitApi {
 
   @override
   CommandState<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<RemoveProcedureFromBizUnitApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemoveProcedureFromBizUnitApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveProcedureFromBizUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveProcedureFromBizUnitApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemoveProcedureFromBizUnitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -144,6 +145,31 @@ class _$RemoveProcedureFromBizUnitApi extends RemoveProcedureFromBizUnitApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveProcedureFromBizUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveProcedureFromBizUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<RemoveProcedureFromBizUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveProcedureFromBizUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      RemoveProcedureFromBizUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveProcedureFromBizUnitApiRequest>
+      get commandPayloadSerializer =>
+          RemoveProcedureFromBizUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

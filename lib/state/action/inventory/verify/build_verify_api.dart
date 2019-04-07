@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/verify/build_verify_api_r
 
 part 'build_verify_api.g.dart';
 
-abstract class BuildVerifyApi extends ApiDispatcher<BuildVerifyApiRequest, BuildVerifyApiResponse, BuildVerifyApi> {
+abstract class BuildVerifyApi extends ApiDispatcher<BuildVerifyApiRequest,
+BuildVerifyApiRequestBuilder,
+BuildVerifyApiResponse,
+BuildVerifyApiResponseBuilder,
+BuildVerifyApi> {
   @override
   String get path => 'v1/inventory/verify/build';
-  
-  @override
-  Serializer<BuildVerifyApiRequest> get requestSerializer => BuildVerifyApiRequest.serializer;
-  
-  @override
-  Serializer<BuildVerifyApiResponse> get responseSerializer => BuildVerifyApiResponse.serializer;
   
   BuildVerifyApi._();
   

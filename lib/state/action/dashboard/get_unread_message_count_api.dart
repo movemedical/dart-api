@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/get_unread_message_count_
 
 part 'get_unread_message_count_api.g.dart';
 
-abstract class GetUnreadMessageCountApi extends ApiDispatcher<GetUnreadMessageCountApiRequest, GetUnreadMessageCountApiResponse, GetUnreadMessageCountApi> {
+abstract class GetUnreadMessageCountApi extends ApiDispatcher<GetUnreadMessageCountApiRequest,
+GetUnreadMessageCountApiRequestBuilder,
+GetUnreadMessageCountApiResponse,
+GetUnreadMessageCountApiResponseBuilder,
+GetUnreadMessageCountApi> {
   @override
   String get path => 'v1/dashboard/get_unread_message_count';
-  
-  @override
-  Serializer<GetUnreadMessageCountApiRequest> get requestSerializer => GetUnreadMessageCountApiRequest.serializer;
-  
-  @override
-  Serializer<GetUnreadMessageCountApiResponse> get responseSerializer => GetUnreadMessageCountApiResponse.serializer;
   
   GetUnreadMessageCountApi._();
   

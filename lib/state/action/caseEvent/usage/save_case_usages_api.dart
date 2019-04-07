@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/usage/save_case_usages_ap
 
 part 'save_case_usages_api.g.dart';
 
-abstract class SaveCaseUsagesApi extends ApiDispatcher<SaveCaseUsagesApiRequest, SaveCaseUsagesApiResponse, SaveCaseUsagesApi> {
+abstract class SaveCaseUsagesApi extends ApiDispatcher<SaveCaseUsagesApiRequest,
+SaveCaseUsagesApiRequestBuilder,
+SaveCaseUsagesApiResponse,
+SaveCaseUsagesApiResponseBuilder,
+SaveCaseUsagesApi> {
   @override
   String get path => 'v1/case_event/usage/save';
-  
-  @override
-  Serializer<SaveCaseUsagesApiRequest> get requestSerializer => SaveCaseUsagesApiRequest.serializer;
-  
-  @override
-  Serializer<SaveCaseUsagesApiResponse> get responseSerializer => SaveCaseUsagesApiResponse.serializer;
   
   SaveCaseUsagesApi._();
   

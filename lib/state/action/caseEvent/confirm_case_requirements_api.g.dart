@@ -11,98 +11,99 @@ part of 'confirm_case_requirements_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     ConfirmCaseRequirementsApi> ConfirmCaseRequirementsApiOptions();
 
 class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       ConfirmCaseRequirementsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>, ConfirmCaseRequirementsApi, String>> $clear;
+          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>, ConfirmCaseRequirementsApi, String>> $cancel;
+          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ConfirmCaseRequirementsApi,
           Command<ApiCommand<ConfirmCaseRequirementsApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ConfirmCaseRequirementsApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>, ConfirmCaseRequirementsApi, String>> $detach;
+          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>, ConfirmCaseRequirementsApi, String>> $attach;
+          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ConfirmCaseRequirementsApi,
           CommandProgress>> $progress;
 
   _$ConfirmCaseRequirementsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmCaseRequirementsApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmCaseRequirementsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     ConfirmCaseRequirementsApi,
                     Command<ApiCommand<ConfirmCaseRequirementsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>,
-                ConfirmCaseRequirementsApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<ConfirmCaseRequirementsApiRequest>,
+                    ApiResult<Empty>,
+                    ConfirmCaseRequirementsApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmCaseRequirementsApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmCaseRequirementsApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmCaseRequirementsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
       _$ConfirmCaseRequirementsApi._(options());
 
   @override
-  CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Null>>();
+          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Null>>();
+          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ConfirmCaseRequirementsApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<ConfirmCaseRequirementsApiRequest> newCommandBuilder() =>
+      ApiCommand<ConfirmCaseRequirementsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ConfirmCaseRequirementsApiRequestBuilder newCommandPayloadBuilder() =>
+      ConfirmCaseRequirementsApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<ConfirmCaseRequirementsApiRequest> get commandPayloadSerializer =>
+      ConfirmCaseRequirementsApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/inventoryType/create_inve
 
 part 'create_inventory_type_api.g.dart';
 
-abstract class CreateInventoryTypeApi extends ApiDispatcher<CreateInventoryTypeApiRequest, CreateInventoryTypeApiResponse, CreateInventoryTypeApi> {
+abstract class CreateInventoryTypeApi extends ApiDispatcher<CreateInventoryTypeApiRequest,
+CreateInventoryTypeApiRequestBuilder,
+CreateInventoryTypeApiResponse,
+CreateInventoryTypeApiResponseBuilder,
+CreateInventoryTypeApi> {
   @override
   String get path => 'v1/inventory/inventory_type/create';
-  
-  @override
-  Serializer<CreateInventoryTypeApiRequest> get requestSerializer => CreateInventoryTypeApiRequest.serializer;
-  
-  @override
-  Serializer<CreateInventoryTypeApiResponse> get responseSerializer => CreateInventoryTypeApiResponse.serializer;
   
   CreateInventoryTypeApi._();
   

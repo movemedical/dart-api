@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stock/search_expiration_l
 
 part 'search_expiration_levels_api.g.dart';
 
-abstract class SearchExpirationLevelsApi extends ApiDispatcher<SearchExpirationLevelsApiRequest, SearchExpirationLevelsApiResponse, SearchExpirationLevelsApi> {
+abstract class SearchExpirationLevelsApi extends ApiDispatcher<SearchExpirationLevelsApiRequest,
+SearchExpirationLevelsApiRequestBuilder,
+SearchExpirationLevelsApiResponse,
+SearchExpirationLevelsApiResponseBuilder,
+SearchExpirationLevelsApi> {
   @override
   String get path => 'v1/inventory/stock/list_expiration_levels';
-  
-  @override
-  Serializer<SearchExpirationLevelsApiRequest> get requestSerializer => SearchExpirationLevelsApiRequest.serializer;
-  
-  @override
-  Serializer<SearchExpirationLevelsApiResponse> get responseSerializer => SearchExpirationLevelsApiResponse.serializer;
   
   SearchExpirationLevelsApi._();
   

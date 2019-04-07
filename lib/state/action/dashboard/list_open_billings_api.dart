@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/list_open_billings_api_re
 
 part 'list_open_billings_api.g.dart';
 
-abstract class ListOpenBillingsApi extends ApiDispatcher<ListOpenBillingsApiRequest, ListOpenBillingsApiResponse, ListOpenBillingsApi> {
+abstract class ListOpenBillingsApi extends ApiDispatcher<ListOpenBillingsApiRequest,
+ListOpenBillingsApiRequestBuilder,
+ListOpenBillingsApiResponse,
+ListOpenBillingsApiResponseBuilder,
+ListOpenBillingsApi> {
   @override
   String get path => 'v1/dashboard/list_open_billings';
-  
-  @override
-  Serializer<ListOpenBillingsApiRequest> get requestSerializer => ListOpenBillingsApiRequest.serializer;
-  
-  @override
-  Serializer<ListOpenBillingsApiResponse> get responseSerializer => ListOpenBillingsApiResponse.serializer;
   
   ListOpenBillingsApi._();
   

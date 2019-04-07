@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/bizunit/create_biz_un
 
 part 'create_biz_unit_api.g.dart';
 
-abstract class CreateBizUnitApi extends ApiDispatcher<CreateBizUnitApiRequest, CreateBizUnitApiResponse, CreateBizUnitApi> {
+abstract class CreateBizUnitApi extends ApiDispatcher<CreateBizUnitApiRequest,
+CreateBizUnitApiRequestBuilder,
+CreateBizUnitApiResponse,
+CreateBizUnitApiResponseBuilder,
+CreateBizUnitApi> {
   @override
   String get path => 'v1/directory/org/bizunit/create';
-  
-  @override
-  Serializer<CreateBizUnitApiRequest> get requestSerializer => CreateBizUnitApiRequest.serializer;
-  
-  @override
-  Serializer<CreateBizUnitApiResponse> get responseSerializer => CreateBizUnitApiResponse.serializer;
   
   CreateBizUnitApi._();
   

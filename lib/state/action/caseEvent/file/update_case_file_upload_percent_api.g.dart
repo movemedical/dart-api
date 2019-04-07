@@ -11,99 +11,100 @@ part of 'update_case_file_upload_percent_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateCaseFileUploadPercentApi> UpdateCaseFileUploadPercentApiOptions();
 
 class _$UpdateCaseFileUploadPercentApi extends UpdateCaseFileUploadPercentApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateCaseFileUploadPercentApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateCaseFileUploadPercentApi, String>> $clear;
+          ApiResult<Empty>, UpdateCaseFileUploadPercentApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateCaseFileUploadPercentApi, String>> $cancel;
+          ApiResult<Empty>, UpdateCaseFileUploadPercentApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseFileUploadPercentApi,
           Command<ApiCommand<UpdateCaseFileUploadPercentApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseFileUploadPercentApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateCaseFileUploadPercentApi, String>> $detach;
+          ApiResult<Empty>, UpdateCaseFileUploadPercentApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateCaseFileUploadPercentApi, String>> $attach;
+          ApiResult<Empty>, UpdateCaseFileUploadPercentApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseFileUploadPercentApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseFileUploadPercentApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseFileUploadPercentApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseFileUploadPercentApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateCaseFileUploadPercentApi,
                     Command<
                         ApiCommand<UpdateCaseFileUploadPercentApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>,
-                UpdateCaseFileUploadPercentApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateCaseFileUploadPercentApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseFileUploadPercentApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseFileUploadPercentApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseFileUploadPercentApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -114,15 +115,17 @@ class _$UpdateCaseFileUploadPercentApi extends UpdateCaseFileUploadPercentApi {
 
   @override
   CommandState<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<UpdateCaseFileUploadPercentApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCaseFileUploadPercentApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateCaseFileUploadPercentApiRequest>,
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -145,6 +148,32 @@ class _$UpdateCaseFileUploadPercentApi extends UpdateCaseFileUploadPercentApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseFileUploadPercentApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateCaseFileUploadPercentApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<UpdateCaseFileUploadPercentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateCaseFileUploadPercentApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateCaseFileUploadPercentApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateCaseFileUploadPercentApiRequest>
+      get commandPayloadSerializer =>
+          UpdateCaseFileUploadPercentApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

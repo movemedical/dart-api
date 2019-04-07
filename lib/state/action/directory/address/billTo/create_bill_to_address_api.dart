@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/address/billTo/create_bil
 
 part 'create_bill_to_address_api.g.dart';
 
-abstract class CreateBillToAddressApi extends ApiDispatcher<CreateBillToAddressApiRequest, Null, CreateBillToAddressApi> {
+abstract class CreateBillToAddressApi extends ApiDispatcher<CreateBillToAddressApiRequest,
+CreateBillToAddressApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreateBillToAddressApi> {
   @override
   String get path => 'v1/directory/address/bill_to/create';
-  
-  @override
-  Serializer<CreateBillToAddressApiRequest> get requestSerializer => CreateBillToAddressApiRequest.serializer;
   
   CreateBillToAddressApi._();
   

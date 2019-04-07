@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/report/stock/request_stock_histo
 
 part 'request_stock_history_report_api.g.dart';
 
-abstract class RequestStockHistoryReportApi extends ApiDispatcher<RequestStockHistoryReportApiRequest, Null, RequestStockHistoryReportApi> {
+abstract class RequestStockHistoryReportApi extends ApiDispatcher<RequestStockHistoryReportApiRequest,
+RequestStockHistoryReportApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestStockHistoryReportApi> {
   @override
   String get path => 'v1/docreport/stock_history';
-  
-  @override
-  Serializer<RequestStockHistoryReportApiRequest> get requestSerializer => RequestStockHistoryReportApiRequest.serializer;
   
   RequestStockHistoryReportApi._();
   

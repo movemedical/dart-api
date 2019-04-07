@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/file/update_case_file_upl
 
 part 'update_case_file_upload_percent_api.g.dart';
 
-abstract class UpdateCaseFileUploadPercentApi extends ApiDispatcher<UpdateCaseFileUploadPercentApiRequest, Null, UpdateCaseFileUploadPercentApi> {
+abstract class UpdateCaseFileUploadPercentApi extends ApiDispatcher<UpdateCaseFileUploadPercentApiRequest,
+UpdateCaseFileUploadPercentApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateCaseFileUploadPercentApi> {
   @override
   String get path => 'v1/case_event/file/update_upload_percent';
-  
-  @override
-  Serializer<UpdateCaseFileUploadPercentApiRequest> get requestSerializer => UpdateCaseFileUploadPercentApiRequest.serializer;
   
   UpdateCaseFileUploadPercentApi._();
   

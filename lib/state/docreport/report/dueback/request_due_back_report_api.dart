@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/report/dueback/request_due_back_
 
 part 'request_due_back_report_api.g.dart';
 
-abstract class RequestDueBackReportApi extends ApiDispatcher<RequestDueBackReportApiRequest, RequestDueBackReportApiResponse, RequestDueBackReportApi> {
+abstract class RequestDueBackReportApi extends ApiDispatcher<RequestDueBackReportApiRequest,
+RequestDueBackReportApiRequestBuilder,
+RequestDueBackReportApiResponse,
+RequestDueBackReportApiResponseBuilder,
+RequestDueBackReportApi> {
   @override
   String get path => 'v1/doc/due_back';
-  
-  @override
-  Serializer<RequestDueBackReportApiRequest> get requestSerializer => RequestDueBackReportApiRequest.serializer;
-  
-  @override
-  Serializer<RequestDueBackReportApiResponse> get responseSerializer => RequestDueBackReportApiResponse.serializer;
   
   RequestDueBackReportApi._();
   

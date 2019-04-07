@@ -10,70 +10,68 @@ part of 'skip_erp_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>,
     SkipErpApi> SkipErpApiOptions();
 
 class _$SkipErpApi extends SkipErpApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>,
       SkipErpApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>> $replace;
+      CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          String>> $clear;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          String>> $cancel;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          Command<ApiCommand<SkipErpApiRequest>>>> $execute;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, Command<ApiCommand<SkipErpApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          String>> $detach;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          String>> $attach;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>, SkipErpApi,
-          CommandProgress>> $progress;
+      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+          SkipErpApi, CommandProgress>> $progress;
 
   _$SkipErpApi._(this.$options)
       : $replace = $options.action<
-                CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>>(
+                CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>>(
             '\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                 SkipErpApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                 SkipErpApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
-                CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>,
+                CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                     SkipErpApi, Command<ApiCommand<SkipErpApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<SkipErpApiRequest>,
-                ApiResult<Null>,
-                SkipErpApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
+                    SkipErpApi, CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                 SkipErpApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                 SkipErpApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SkipErpApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SkipErpApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -81,13 +79,13 @@ class _$SkipErpApi extends SkipErpApi {
   factory _$SkipErpApi(SkipErpApiOptions options) => _$SkipErpApi._(options());
 
   @override
-  CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Null>> get $initial =>
-      CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>();
+  CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>> get $initial =>
+      CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>
-      $newBuilder() =>
-          CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Null>>();
+  CommandStateBuilder<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>
+      $newBuilder() => CommandStateBuilder<ApiCommand<SkipErpApiRequest>,
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -110,6 +108,30 @@ class _$SkipErpApi extends SkipErpApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SkipErpApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<SkipErpApiRequest> newCommandBuilder() =>
+      ApiCommand<SkipErpApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SkipErpApiRequestBuilder newCommandPayloadBuilder() =>
+      SkipErpApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<SkipErpApiRequest> get commandPayloadSerializer =>
+      SkipErpApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

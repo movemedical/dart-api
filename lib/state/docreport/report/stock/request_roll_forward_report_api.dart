@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/report/stock/request_roll_forwar
 
 part 'request_roll_forward_report_api.g.dart';
 
-abstract class RequestRollForwardReportApi extends ApiDispatcher<RequestRollForwardReportApiRequest, Null, RequestRollForwardReportApi> {
+abstract class RequestRollForwardReportApi extends ApiDispatcher<RequestRollForwardReportApiRequest,
+RequestRollForwardReportApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestRollForwardReportApi> {
   @override
   String get path => 'v1/docreport/roll_forward';
-  
-  @override
-  Serializer<RequestRollForwardReportApiRequest> get requestSerializer => RequestRollForwardReportApiRequest.serializer;
   
   RequestRollForwardReportApi._();
   

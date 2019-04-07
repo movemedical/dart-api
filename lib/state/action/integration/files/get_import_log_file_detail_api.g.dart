@@ -162,4 +162,31 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
         FullType(ApiCommand, [FullType(GetImportLogFileDetailApiRequest)]),
         FullType(ApiResult, [FullType(GetImportLogFileDetailApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetImportLogFileDetailApiRequest> newCommandBuilder() =>
+      ApiCommand<GetImportLogFileDetailApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetImportLogFileDetailApiResponse> newResultBuilder() =>
+      ApiResult<GetImportLogFileDetailApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetImportLogFileDetailApiRequestBuilder newCommandPayloadBuilder() =>
+      GetImportLogFileDetailApiRequest().toBuilder();
+
+  @override
+  GetImportLogFileDetailApiResponseBuilder newResultPayloadBuilder() =>
+      GetImportLogFileDetailApiResponse().toBuilder();
+
+  @override
+  Serializer<GetImportLogFileDetailApiRequest> get commandPayloadSerializer =>
+      GetImportLogFileDetailApiRequest.serializer;
+
+  @override
+  Serializer<GetImportLogFileDetailApiResponse> get resultPayloadSerializer =>
+      GetImportLogFileDetailApiResponse.serializer;
 }

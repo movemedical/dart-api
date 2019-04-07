@@ -160,4 +160,31 @@ class _$ListImportLogErrorsApi extends ListImportLogErrorsApi {
         FullType(ApiCommand, [FullType(ListImportLogErrorsApiRequest)]),
         FullType(ApiResult, [FullType(ListImportLogErrorsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListImportLogErrorsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListImportLogErrorsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListImportLogErrorsApiResponse> newResultBuilder() =>
+      ApiResult<ListImportLogErrorsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListImportLogErrorsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListImportLogErrorsApiRequest().toBuilder();
+
+  @override
+  ListImportLogErrorsApiResponseBuilder newResultPayloadBuilder() =>
+      ListImportLogErrorsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListImportLogErrorsApiRequest> get commandPayloadSerializer =>
+      ListImportLogErrorsApiRequest.serializer;
+
+  @override
+  Serializer<ListImportLogErrorsApiResponse> get resultPayloadSerializer =>
+      ListImportLogErrorsApiResponse.serializer;
 }

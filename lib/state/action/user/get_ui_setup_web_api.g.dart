@@ -159,4 +159,31 @@ class _$GetUiSetupWebApi extends GetUiSetupWebApi {
         FullType(ApiCommand, [FullType(GetUiSetupWebApiRequest)]),
         FullType(ApiResult, [FullType(GetUiSetupWebApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetUiSetupWebApiRequest> newCommandBuilder() =>
+      ApiCommand<GetUiSetupWebApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetUiSetupWebApiResponse> newResultBuilder() =>
+      ApiResult<GetUiSetupWebApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetUiSetupWebApiRequestBuilder newCommandPayloadBuilder() =>
+      GetUiSetupWebApiRequest().toBuilder();
+
+  @override
+  GetUiSetupWebApiResponseBuilder newResultPayloadBuilder() =>
+      GetUiSetupWebApiResponse().toBuilder();
+
+  @override
+  Serializer<GetUiSetupWebApiRequest> get commandPayloadSerializer =>
+      GetUiSetupWebApiRequest.serializer;
+
+  @override
+  Serializer<GetUiSetupWebApiResponse> get resultPayloadSerializer =>
+      GetUiSetupWebApiResponse.serializer;
 }

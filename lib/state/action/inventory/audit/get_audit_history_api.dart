@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/audit/get_audit_history_a
 
 part 'get_audit_history_api.g.dart';
 
-abstract class GetAuditHistoryApi extends ApiDispatcher<GetAuditHistoryApiRequest, GetAuditHistoryApiResponse, GetAuditHistoryApi> {
+abstract class GetAuditHistoryApi extends ApiDispatcher<GetAuditHistoryApiRequest,
+GetAuditHistoryApiRequestBuilder,
+GetAuditHistoryApiResponse,
+GetAuditHistoryApiResponseBuilder,
+GetAuditHistoryApi> {
   @override
   String get path => 'v1/inventory/audit/get_audit_history';
-  
-  @override
-  Serializer<GetAuditHistoryApiRequest> get requestSerializer => GetAuditHistoryApiRequest.serializer;
-  
-  @override
-  Serializer<GetAuditHistoryApiResponse> get responseSerializer => GetAuditHistoryApiResponse.serializer;
   
   GetAuditHistoryApi._();
   

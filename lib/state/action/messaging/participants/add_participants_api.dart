@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/messaging/participants/add_particip
 
 part 'add_participants_api.g.dart';
 
-abstract class AddParticipantsApi extends ApiDispatcher<AddParticipantsApiRequest, Null, AddParticipantsApi> {
+abstract class AddParticipantsApi extends ApiDispatcher<AddParticipantsApiRequest,
+AddParticipantsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AddParticipantsApi> {
   @override
   String get path => 'v1/messaging/participants/add_participants';
-  
-  @override
-  Serializer<AddParticipantsApiRequest> get requestSerializer => AddParticipantsApiRequest.serializer;
   
   AddParticipantsApi._();
   

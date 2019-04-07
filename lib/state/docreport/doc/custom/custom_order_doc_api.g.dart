@@ -159,4 +159,31 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
         FullType(ApiCommand, [FullType(CustomOrderDocApiRequest)]),
         FullType(ApiResult, [FullType(CustomOrderDocApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CustomOrderDocApiRequest> newCommandBuilder() =>
+      ApiCommand<CustomOrderDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CustomOrderDocApiResponse> newResultBuilder() =>
+      ApiResult<CustomOrderDocApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CustomOrderDocApiRequestBuilder newCommandPayloadBuilder() =>
+      CustomOrderDocApiRequest().toBuilder();
+
+  @override
+  CustomOrderDocApiResponseBuilder newResultPayloadBuilder() =>
+      CustomOrderDocApiResponse().toBuilder();
+
+  @override
+  Serializer<CustomOrderDocApiRequest> get commandPayloadSerializer =>
+      CustomOrderDocApiRequest.serializer;
+
+  @override
+  Serializer<CustomOrderDocApiResponse> get resultPayloadSerializer =>
+      CustomOrderDocApiResponse.serializer;
 }

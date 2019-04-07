@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/address/deliverTo/list_de
 
 part 'list_deliver_to_addresses_api.g.dart';
 
-abstract class ListDeliverToAddressesApi extends ApiDispatcher<ListDeliverToAddressesApiRequest, ListDeliverToAddressesApiResponse, ListDeliverToAddressesApi> {
+abstract class ListDeliverToAddressesApi extends ApiDispatcher<ListDeliverToAddressesApiRequest,
+ListDeliverToAddressesApiRequestBuilder,
+ListDeliverToAddressesApiResponse,
+ListDeliverToAddressesApiResponseBuilder,
+ListDeliverToAddressesApi> {
   @override
   String get path => 'v1/directory/address/deliver_to/list';
-  
-  @override
-  Serializer<ListDeliverToAddressesApiRequest> get requestSerializer => ListDeliverToAddressesApiRequest.serializer;
-  
-  @override
-  Serializer<ListDeliverToAddressesApiResponse> get responseSerializer => ListDeliverToAddressesApiResponse.serializer;
   
   ListDeliverToAddressesApi._();
   

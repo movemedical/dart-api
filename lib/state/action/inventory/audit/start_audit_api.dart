@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/start_audit_api_req
 
 part 'start_audit_api.g.dart';
 
-abstract class StartAuditApi extends ApiDispatcher<StartAuditApiRequest, Null, StartAuditApi> {
+abstract class StartAuditApi extends ApiDispatcher<StartAuditApiRequest,
+StartAuditApiRequestBuilder,
+Empty,
+EmptyBuilder,
+StartAuditApi> {
   @override
   String get path => 'v1/inventory/audit/start';
-  
-  @override
-  Serializer<StartAuditApiRequest> get requestSerializer => StartAuditApiRequest.serializer;
   
   StartAuditApi._();
   

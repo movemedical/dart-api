@@ -161,4 +161,31 @@ class _$RequestStockExportDocApi extends RequestStockExportDocApi {
         FullType(ApiCommand, [FullType(RequestStockExportDocApiRequest)]),
         FullType(ApiResult, [FullType(RequestStockExportDocApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestStockExportDocApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestStockExportDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestStockExportDocApiResponse> newResultBuilder() =>
+      ApiResult<RequestStockExportDocApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestStockExportDocApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestStockExportDocApiRequest().toBuilder();
+
+  @override
+  RequestStockExportDocApiResponseBuilder newResultPayloadBuilder() =>
+      RequestStockExportDocApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestStockExportDocApiRequest> get commandPayloadSerializer =>
+      RequestStockExportDocApiRequest.serializer;
+
+  @override
+  Serializer<RequestStockExportDocApiResponse> get resultPayloadSerializer =>
+      RequestStockExportDocApiResponse.serializer;
 }

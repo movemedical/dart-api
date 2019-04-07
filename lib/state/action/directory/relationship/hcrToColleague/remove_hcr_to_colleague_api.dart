@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/hcrToColleag
 
 part 'remove_hcr_to_colleague_api.g.dart';
 
-abstract class RemoveHcrToColleagueApi extends ApiDispatcher<RemoveHcrToColleagueApiRequest, Null, RemoveHcrToColleagueApi> {
+abstract class RemoveHcrToColleagueApi extends ApiDispatcher<RemoveHcrToColleagueApiRequest,
+RemoveHcrToColleagueApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RemoveHcrToColleagueApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_colleague/remove';
-  
-  @override
-  Serializer<RemoveHcrToColleagueApiRequest> get requestSerializer => RemoveHcrToColleagueApiRequest.serializer;
   
   RemoveHcrToColleagueApi._();
   

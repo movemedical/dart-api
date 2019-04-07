@@ -159,4 +159,31 @@ class _$ListCaseFilesApi extends ListCaseFilesApi {
         FullType(ApiCommand, [FullType(ListCaseFilesApiRequest)]),
         FullType(ApiResult, [FullType(ListCaseFilesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListCaseFilesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListCaseFilesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListCaseFilesApiResponse> newResultBuilder() =>
+      ApiResult<ListCaseFilesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListCaseFilesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListCaseFilesApiRequest().toBuilder();
+
+  @override
+  ListCaseFilesApiResponseBuilder newResultPayloadBuilder() =>
+      ListCaseFilesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListCaseFilesApiRequest> get commandPayloadSerializer =>
+      ListCaseFilesApiRequest.serializer;
+
+  @override
+  Serializer<ListCaseFilesApiResponse> get resultPayloadSerializer =>
+      ListCaseFilesApiResponse.serializer;
 }

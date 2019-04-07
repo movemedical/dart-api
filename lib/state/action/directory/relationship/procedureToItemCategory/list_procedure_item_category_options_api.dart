@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/procedureToI
 
 part 'list_procedure_item_category_options_api.g.dart';
 
-abstract class ListProcedureItemCategoryOptionsApi extends ApiDispatcher<ListProcedureItemCategoryOptionsApiRequest, ListProcedureItemCategoryOptionsApiResponse, ListProcedureItemCategoryOptionsApi> {
+abstract class ListProcedureItemCategoryOptionsApi extends ApiDispatcher<ListProcedureItemCategoryOptionsApiRequest,
+ListProcedureItemCategoryOptionsApiRequestBuilder,
+ListProcedureItemCategoryOptionsApiResponse,
+ListProcedureItemCategoryOptionsApiResponseBuilder,
+ListProcedureItemCategoryOptionsApi> {
   @override
   String get path => 'v1/directory/relationship/procedure_to_item_category/list_item_category_options';
-  
-  @override
-  Serializer<ListProcedureItemCategoryOptionsApiRequest> get requestSerializer => ListProcedureItemCategoryOptionsApiRequest.serializer;
-  
-  @override
-  Serializer<ListProcedureItemCategoryOptionsApiResponse> get responseSerializer => ListProcedureItemCategoryOptionsApiResponse.serializer;
   
   ListProcedureItemCategoryOptionsApi._();
   

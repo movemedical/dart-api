@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/get_procedure_api_respons
 
 part 'get_procedure_api.g.dart';
 
-abstract class GetProcedureApi extends ApiDispatcher<GetProcedureApiRequest, GetProcedureApiResponse, GetProcedureApi> {
+abstract class GetProcedureApi extends ApiDispatcher<GetProcedureApiRequest,
+GetProcedureApiRequestBuilder,
+GetProcedureApiResponse,
+GetProcedureApiResponseBuilder,
+GetProcedureApi> {
   @override
   String get path => 'v1/case_event/procedure/get';
-  
-  @override
-  Serializer<GetProcedureApiRequest> get requestSerializer => GetProcedureApiRequest.serializer;
-  
-  @override
-  Serializer<GetProcedureApiResponse> get responseSerializer => GetProcedureApiResponse.serializer;
   
   GetProcedureApi._();
   

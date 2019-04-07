@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/bizUnitToOrg
 
 part 'create_biz_unit_to_org_unit_api.g.dart';
 
-abstract class CreateBizUnitToOrgUnitApi extends ApiDispatcher<CreateBizUnitToOrgUnitApiRequest, Null, CreateBizUnitToOrgUnitApi> {
+abstract class CreateBizUnitToOrgUnitApi extends ApiDispatcher<CreateBizUnitToOrgUnitApiRequest,
+CreateBizUnitToOrgUnitApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreateBizUnitToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/biz_unit_to_org_unit/create';
-  
-  @override
-  Serializer<CreateBizUnitToOrgUnitApiRequest> get requestSerializer => CreateBizUnitToOrgUnitApiRequest.serializer;
   
   CreateBizUnitToOrgUnitApi._();
   

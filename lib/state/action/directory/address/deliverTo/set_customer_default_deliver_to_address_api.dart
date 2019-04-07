@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/address/deliverTo/set_cus
 
 part 'set_customer_default_deliver_to_address_api.g.dart';
 
-abstract class SetCustomerDefaultDeliverToAddressApi extends ApiDispatcher<SetCustomerDefaultDeliverToAddressApiRequest, Null, SetCustomerDefaultDeliverToAddressApi> {
+abstract class SetCustomerDefaultDeliverToAddressApi extends ApiDispatcher<SetCustomerDefaultDeliverToAddressApiRequest,
+SetCustomerDefaultDeliverToAddressApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SetCustomerDefaultDeliverToAddressApi> {
   @override
   String get path => 'v1/directory/address/deliver_to/set_customer_default';
-  
-  @override
-  Serializer<SetCustomerDefaultDeliverToAddressApiRequest> get requestSerializer => SetCustomerDefaultDeliverToAddressApiRequest.serializer;
   
   SetCustomerDefaultDeliverToAddressApi._();
   

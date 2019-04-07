@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/prefcard/create_preference_card_api
 
 part 'create_preference_card_api.g.dart';
 
-abstract class CreatePreferenceCardApi extends ApiDispatcher<CreatePreferenceCardApiRequest, CreatePreferenceCardApiResponse, CreatePreferenceCardApi> {
+abstract class CreatePreferenceCardApi extends ApiDispatcher<CreatePreferenceCardApiRequest,
+CreatePreferenceCardApiRequestBuilder,
+CreatePreferenceCardApiResponse,
+CreatePreferenceCardApiResponseBuilder,
+CreatePreferenceCardApi> {
   @override
   String get path => 'v1/prefcard/create';
-  
-  @override
-  Serializer<CreatePreferenceCardApiRequest> get requestSerializer => CreatePreferenceCardApiRequest.serializer;
-  
-  @override
-  Serializer<CreatePreferenceCardApiResponse> get responseSerializer => CreatePreferenceCardApiResponse.serializer;
   
   CreatePreferenceCardApi._();
   

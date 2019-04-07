@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/address/deliverTo/search_
 
 part 'search_deliver_to_addresses_api.g.dart';
 
-abstract class SearchDeliverToAddressesApi extends ApiDispatcher<SearchDeliverToAddressesApiRequest, SearchDeliverToAddressesApiResponse, SearchDeliverToAddressesApi> {
+abstract class SearchDeliverToAddressesApi extends ApiDispatcher<SearchDeliverToAddressesApiRequest,
+SearchDeliverToAddressesApiRequestBuilder,
+SearchDeliverToAddressesApiResponse,
+SearchDeliverToAddressesApiResponseBuilder,
+SearchDeliverToAddressesApi> {
   @override
   String get path => 'v1/directory/address/deliver_to/search';
-  
-  @override
-  Serializer<SearchDeliverToAddressesApiRequest> get requestSerializer => SearchDeliverToAddressesApiRequest.serializer;
-  
-  @override
-  Serializer<SearchDeliverToAddressesApiResponse> get responseSerializer => SearchDeliverToAddressesApiResponse.serializer;
   
   SearchDeliverToAddressesApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/sales/salesorder/update_sales_order
 
 part 'update_sales_order_custom_fields_api.g.dart';
 
-abstract class UpdateSalesOrderCustomFieldsApi extends ApiDispatcher<UpdateSalesOrderCustomFieldsApiRequest, Null, UpdateSalesOrderCustomFieldsApi> {
+abstract class UpdateSalesOrderCustomFieldsApi extends ApiDispatcher<UpdateSalesOrderCustomFieldsApiRequest,
+UpdateSalesOrderCustomFieldsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateSalesOrderCustomFieldsApi> {
   @override
   String get path => 'v1/sales/sales_order/update_order_custom_fields';
-  
-  @override
-  Serializer<UpdateSalesOrderCustomFieldsApiRequest> get requestSerializer => UpdateSalesOrderCustomFieldsApiRequest.serializer;
   
   UpdateSalesOrderCustomFieldsApi._();
   

@@ -164,4 +164,33 @@ class _$PrepareFacilityFileUploadApi extends PrepareFacilityFileUploadApi {
         FullType(ApiCommand, [FullType(PrepareFacilityFileUploadApiRequest)]),
         FullType(ApiResult, [FullType(PrepareFacilityFileUploadApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PrepareFacilityFileUploadApiRequest> newCommandBuilder() =>
+      ApiCommand<PrepareFacilityFileUploadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PrepareFacilityFileUploadApiResponse> newResultBuilder() =>
+      ApiResult<PrepareFacilityFileUploadApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PrepareFacilityFileUploadApiRequestBuilder newCommandPayloadBuilder() =>
+      PrepareFacilityFileUploadApiRequest().toBuilder();
+
+  @override
+  PrepareFacilityFileUploadApiResponseBuilder newResultPayloadBuilder() =>
+      PrepareFacilityFileUploadApiResponse().toBuilder();
+
+  @override
+  Serializer<PrepareFacilityFileUploadApiRequest>
+      get commandPayloadSerializer =>
+          PrepareFacilityFileUploadApiRequest.serializer;
+
+  @override
+  Serializer<PrepareFacilityFileUploadApiResponse>
+      get resultPayloadSerializer =>
+          PrepareFacilityFileUploadApiResponse.serializer;
 }

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/reset_inventory_and_sched
 
 part 'reset_inventory_and_schedule_api.g.dart';
 
-abstract class ResetInventoryAndScheduleApi extends ApiDispatcher<ResetInventoryAndScheduleApiRequest, Null, ResetInventoryAndScheduleApi> {
+abstract class ResetInventoryAndScheduleApi extends ApiDispatcher<ResetInventoryAndScheduleApiRequest,
+ResetInventoryAndScheduleApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ResetInventoryAndScheduleApi> {
   @override
   String get path => 'v1/inventory/reset_inventory_and_schedule';
-  
-  @override
-  Serializer<ResetInventoryAndScheduleApiRequest> get requestSerializer => ResetInventoryAndScheduleApiRequest.serializer;
   
   ResetInventoryAndScheduleApi._();
   

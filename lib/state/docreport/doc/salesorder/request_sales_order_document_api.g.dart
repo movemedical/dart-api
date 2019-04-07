@@ -11,98 +11,99 @@ part of 'request_sales_order_document_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RequestSalesOrderDocumentApi> RequestSalesOrderDocumentApiOptions();
 
 class _$RequestSalesOrderDocumentApi extends RequestSalesOrderDocumentApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RequestSalesOrderDocumentApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>, RequestSalesOrderDocumentApi, String>> $clear;
+          ApiResult<Empty>, RequestSalesOrderDocumentApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>, RequestSalesOrderDocumentApi, String>> $cancel;
+          ApiResult<Empty>, RequestSalesOrderDocumentApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestSalesOrderDocumentApi,
           Command<ApiCommand<RequestSalesOrderDocumentApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestSalesOrderDocumentApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>, RequestSalesOrderDocumentApi, String>> $detach;
+          ApiResult<Empty>, RequestSalesOrderDocumentApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>, RequestSalesOrderDocumentApi, String>> $attach;
+          ApiResult<Empty>, RequestSalesOrderDocumentApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestSalesOrderDocumentApi,
           CommandProgress>> $progress;
 
   _$RequestSalesOrderDocumentApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestSalesOrderDocumentApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestSalesOrderDocumentApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RequestSalesOrderDocumentApi,
                     Command<ApiCommand<RequestSalesOrderDocumentApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>,
-                RequestSalesOrderDocumentApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RequestSalesOrderDocumentApiRequest>,
+                    ApiResult<Empty>,
+                    RequestSalesOrderDocumentApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestSalesOrderDocumentApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestSalesOrderDocumentApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderDocumentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestSalesOrderDocumentApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$RequestSalesOrderDocumentApi extends RequestSalesOrderDocumentApi {
       _$RequestSalesOrderDocumentApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestSalesOrderDocumentApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RequestSalesOrderDocumentApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<RequestSalesOrderDocumentApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestSalesOrderDocumentApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestSalesOrderDocumentApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestSalesOrderDocumentApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestSalesOrderDocumentApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$RequestSalesOrderDocumentApi extends RequestSalesOrderDocumentApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestSalesOrderDocumentApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestSalesOrderDocumentApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestSalesOrderDocumentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestSalesOrderDocumentApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestSalesOrderDocumentApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RequestSalesOrderDocumentApiRequest>
+      get commandPayloadSerializer =>
+          RequestSalesOrderDocumentApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stockSnapshot/list_locati
 
 part 'list_location_journals_api.g.dart';
 
-abstract class ListLocationJournalsApi extends ApiDispatcher<ListLocationJournalsApiRequest, ListLocationJournalsApiResponse, ListLocationJournalsApi> {
+abstract class ListLocationJournalsApi extends ApiDispatcher<ListLocationJournalsApiRequest,
+ListLocationJournalsApiRequestBuilder,
+ListLocationJournalsApiResponse,
+ListLocationJournalsApiResponseBuilder,
+ListLocationJournalsApi> {
   @override
   String get path => 'v1/inventory/stock/list_location_journals';
-  
-  @override
-  Serializer<ListLocationJournalsApiRequest> get requestSerializer => ListLocationJournalsApiRequest.serializer;
-  
-  @override
-  Serializer<ListLocationJournalsApiResponse> get responseSerializer => ListLocationJournalsApiResponse.serializer;
   
   ListLocationJournalsApi._();
   

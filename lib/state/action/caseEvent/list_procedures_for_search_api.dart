@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_procedures_for_searc
 
 part 'list_procedures_for_search_api.g.dart';
 
-abstract class ListProceduresForSearchApi extends ApiDispatcher<ListProceduresForSearchApiRequest, ListProceduresForSearchApiResponse, ListProceduresForSearchApi> {
+abstract class ListProceduresForSearchApi extends ApiDispatcher<ListProceduresForSearchApiRequest,
+ListProceduresForSearchApiRequestBuilder,
+ListProceduresForSearchApiResponse,
+ListProceduresForSearchApiResponseBuilder,
+ListProceduresForSearchApi> {
   @override
   String get path => 'v1/case_event/list_procedures_for_search';
-  
-  @override
-  Serializer<ListProceduresForSearchApiRequest> get requestSerializer => ListProceduresForSearchApiRequest.serializer;
-  
-  @override
-  Serializer<ListProceduresForSearchApiResponse> get responseSerializer => ListProceduresForSearchApiResponse.serializer;
   
   ListProceduresForSearchApi._();
   

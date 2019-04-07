@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/sales/get_item_pricing_api_response
 
 part 'get_item_pricing_api.g.dart';
 
-abstract class GetItemPricingApi extends ApiDispatcher<GetItemPricingApiRequest, GetItemPricingApiResponse, GetItemPricingApi> {
+abstract class GetItemPricingApi extends ApiDispatcher<GetItemPricingApiRequest,
+GetItemPricingApiRequestBuilder,
+GetItemPricingApiResponse,
+GetItemPricingApiResponseBuilder,
+GetItemPricingApi> {
   @override
   String get path => 'v1/sales/get_item_pricing';
-  
-  @override
-  Serializer<GetItemPricingApiRequest> get requestSerializer => GetItemPricingApiRequest.serializer;
-  
-  @override
-  Serializer<GetItemPricingApiResponse> get responseSerializer => GetItemPricingApiResponse.serializer;
   
   GetItemPricingApi._();
   

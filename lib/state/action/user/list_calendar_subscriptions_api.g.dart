@@ -164,4 +164,33 @@ class _$ListCalendarSubscriptionsApi extends ListCalendarSubscriptionsApi {
         FullType(ApiCommand, [FullType(ListCalendarSubscriptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListCalendarSubscriptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListCalendarSubscriptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListCalendarSubscriptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListCalendarSubscriptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListCalendarSubscriptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListCalendarSubscriptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListCalendarSubscriptionsApiRequest().toBuilder();
+
+  @override
+  ListCalendarSubscriptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListCalendarSubscriptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListCalendarSubscriptionsApiRequest>
+      get commandPayloadSerializer =>
+          ListCalendarSubscriptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListCalendarSubscriptionsApiResponse>
+      get resultPayloadSerializer =>
+          ListCalendarSubscriptionsApiResponse.serializer;
 }

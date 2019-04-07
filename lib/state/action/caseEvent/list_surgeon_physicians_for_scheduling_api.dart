@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_surgeon_physicians_f
 
 part 'list_surgeon_physicians_for_scheduling_api.g.dart';
 
-abstract class ListSurgeonPhysiciansForSchedulingApi extends ApiDispatcher<ListSurgeonPhysiciansForSchedulingApiRequest, ListSurgeonPhysiciansForSchedulingApiResponse, ListSurgeonPhysiciansForSchedulingApi> {
+abstract class ListSurgeonPhysiciansForSchedulingApi extends ApiDispatcher<ListSurgeonPhysiciansForSchedulingApiRequest,
+ListSurgeonPhysiciansForSchedulingApiRequestBuilder,
+ListSurgeonPhysiciansForSchedulingApiResponse,
+ListSurgeonPhysiciansForSchedulingApiResponseBuilder,
+ListSurgeonPhysiciansForSchedulingApi> {
   @override
   String get path => 'v1/case_event/list_surgeon_physicians_for_scheduling';
-  
-  @override
-  Serializer<ListSurgeonPhysiciansForSchedulingApiRequest> get requestSerializer => ListSurgeonPhysiciansForSchedulingApiRequest.serializer;
-  
-  @override
-  Serializer<ListSurgeonPhysiciansForSchedulingApiResponse> get responseSerializer => ListSurgeonPhysiciansForSchedulingApiResponse.serializer;
   
   ListSurgeonPhysiciansForSchedulingApi._();
   

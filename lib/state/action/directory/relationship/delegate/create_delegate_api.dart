@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/delegate/cre
 
 part 'create_delegate_api.g.dart';
 
-abstract class CreateDelegateApi extends ApiDispatcher<CreateDelegateApiRequest, Null, CreateDelegateApi> {
+abstract class CreateDelegateApi extends ApiDispatcher<CreateDelegateApiRequest,
+CreateDelegateApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreateDelegateApi> {
   @override
   String get path => 'v1/directory/relationship/delegate/create';
-  
-  @override
-  Serializer<CreateDelegateApiRequest> get requestSerializer => CreateDelegateApiRequest.serializer;
   
   CreateDelegateApi._();
   

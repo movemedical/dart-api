@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/edit_case_event_schedulin
 
 part 'edit_case_event_scheduling_api.g.dart';
 
-abstract class EditCaseEventSchedulingApi extends ApiDispatcher<EditCaseEventSchedulingApiRequest, Null, EditCaseEventSchedulingApi> {
+abstract class EditCaseEventSchedulingApi extends ApiDispatcher<EditCaseEventSchedulingApiRequest,
+EditCaseEventSchedulingApiRequestBuilder,
+Empty,
+EmptyBuilder,
+EditCaseEventSchedulingApi> {
   @override
   String get path => 'v1/case_event/edit_case_event_scheduling';
-  
-  @override
-  Serializer<EditCaseEventSchedulingApiRequest> get requestSerializer => EditCaseEventSchedulingApiRequest.serializer;
   
   EditCaseEventSchedulingApi._();
   

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stock/create_stock_api_re
 
 part 'create_stock_api.g.dart';
 
-abstract class CreateStockApi extends ApiDispatcher<CreateStockApiRequest, CreateStockApiResponse, CreateStockApi> {
+abstract class CreateStockApi extends ApiDispatcher<CreateStockApiRequest,
+CreateStockApiRequestBuilder,
+CreateStockApiResponse,
+CreateStockApiResponseBuilder,
+CreateStockApi> {
   @override
   String get path => 'v1/inventory/stock/create';
-  
-  @override
-  Serializer<CreateStockApiRequest> get requestSerializer => CreateStockApiRequest.serializer;
-  
-  @override
-  Serializer<CreateStockApiResponse> get responseSerializer => CreateStockApiResponse.serializer;
   
   CreateStockApi._();
   

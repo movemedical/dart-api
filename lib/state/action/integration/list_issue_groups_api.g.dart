@@ -160,4 +160,31 @@ class _$ListIssueGroupsApi extends ListIssueGroupsApi {
         FullType(ApiCommand, [FullType(ListIssueGroupsApiRequest)]),
         FullType(ApiResult, [FullType(ListIssueGroupsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListIssueGroupsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListIssueGroupsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListIssueGroupsApiResponse> newResultBuilder() =>
+      ApiResult<ListIssueGroupsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListIssueGroupsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListIssueGroupsApiRequest().toBuilder();
+
+  @override
+  ListIssueGroupsApiResponseBuilder newResultPayloadBuilder() =>
+      ListIssueGroupsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListIssueGroupsApiRequest> get commandPayloadSerializer =>
+      ListIssueGroupsApiRequest.serializer;
+
+  @override
+  Serializer<ListIssueGroupsApiResponse> get resultPayloadSerializer =>
+      ListIssueGroupsApiResponse.serializer;
 }

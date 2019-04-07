@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/admin/update_delivery_schedule_prof
 
 part 'update_delivery_schedule_profile_api.g.dart';
 
-abstract class UpdateDeliveryScheduleProfileApi extends ApiDispatcher<UpdateDeliveryScheduleProfileApiRequest, Null, UpdateDeliveryScheduleProfileApi> {
+abstract class UpdateDeliveryScheduleProfileApi extends ApiDispatcher<UpdateDeliveryScheduleProfileApiRequest,
+UpdateDeliveryScheduleProfileApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateDeliveryScheduleProfileApi> {
   @override
   String get path => 'v1/admin/delivery_profile/update';
-  
-  @override
-  Serializer<UpdateDeliveryScheduleProfileApiRequest> get requestSerializer => UpdateDeliveryScheduleProfileApiRequest.serializer;
   
   UpdateDeliveryScheduleProfileApi._();
   

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/report/backOrder/request_back_or
 
 part 'request_back_order_report_api.g.dart';
 
-abstract class RequestBackOrderReportApi extends ApiDispatcher<RequestBackOrderReportApiRequest, RequestBackOrderReportApiResponse, RequestBackOrderReportApi> {
+abstract class RequestBackOrderReportApi extends ApiDispatcher<RequestBackOrderReportApiRequest,
+RequestBackOrderReportApiRequestBuilder,
+RequestBackOrderReportApiResponse,
+RequestBackOrderReportApiResponseBuilder,
+RequestBackOrderReportApi> {
   @override
   String get path => 'v1/doc/back_order';
-  
-  @override
-  Serializer<RequestBackOrderReportApiRequest> get requestSerializer => RequestBackOrderReportApiRequest.serializer;
-  
-  @override
-  Serializer<RequestBackOrderReportApiResponse> get responseSerializer => RequestBackOrderReportApiResponse.serializer;
   
   RequestBackOrderReportApi._();
   

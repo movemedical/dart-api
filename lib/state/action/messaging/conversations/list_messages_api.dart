@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/messaging/conversations/list_messag
 
 part 'list_messages_api.g.dart';
 
-abstract class ListMessagesApi extends ApiDispatcher<ListMessagesApiRequest, ListMessagesApiResponse, ListMessagesApi> {
+abstract class ListMessagesApi extends ApiDispatcher<ListMessagesApiRequest,
+ListMessagesApiRequestBuilder,
+ListMessagesApiResponse,
+ListMessagesApiResponseBuilder,
+ListMessagesApi> {
   @override
   String get path => 'v1/messaging/conversations/list_messages';
-  
-  @override
-  Serializer<ListMessagesApiRequest> get requestSerializer => ListMessagesApiRequest.serializer;
-  
-  @override
-  Serializer<ListMessagesApiResponse> get responseSerializer => ListMessagesApiResponse.serializer;
   
   ListMessagesApi._();
   

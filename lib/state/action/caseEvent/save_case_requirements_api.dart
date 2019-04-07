@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/save_case_requirements_ap
 
 part 'save_case_requirements_api.g.dart';
 
-abstract class SaveCaseRequirementsApi extends ApiDispatcher<SaveCaseRequirementsApiRequest, Null, SaveCaseRequirementsApi> {
+abstract class SaveCaseRequirementsApi extends ApiDispatcher<SaveCaseRequirementsApiRequest,
+SaveCaseRequirementsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SaveCaseRequirementsApi> {
   @override
   String get path => 'v1/case_event/requirement/save';
-  
-  @override
-  Serializer<SaveCaseRequirementsApiRequest> get requestSerializer => SaveCaseRequirementsApiRequest.serializer;
   
   SaveCaseRequirementsApi._();
   

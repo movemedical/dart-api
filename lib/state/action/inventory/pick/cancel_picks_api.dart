@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pick/cancel_picks_api_req
 
 part 'cancel_picks_api.g.dart';
 
-abstract class CancelPicksApi extends ApiDispatcher<CancelPicksApiRequest, Null, CancelPicksApi> {
+abstract class CancelPicksApi extends ApiDispatcher<CancelPicksApiRequest,
+CancelPicksApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CancelPicksApi> {
   @override
   String get path => 'v1/inventory/pick/cancelMultiple';
-  
-  @override
-  Serializer<CancelPicksApiRequest> get requestSerializer => CancelPicksApiRequest.serializer;
   
   CancelPicksApi._();
   

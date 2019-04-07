@@ -160,4 +160,31 @@ class _$GetCaseCountByDayApi extends GetCaseCountByDayApi {
         FullType(ApiCommand, [FullType(GetCaseCountByDayApiRequest)]),
         FullType(ApiResult, [FullType(GetCaseCountByDayApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetCaseCountByDayApiRequest> newCommandBuilder() =>
+      ApiCommand<GetCaseCountByDayApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetCaseCountByDayApiResponse> newResultBuilder() =>
+      ApiResult<GetCaseCountByDayApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetCaseCountByDayApiRequestBuilder newCommandPayloadBuilder() =>
+      GetCaseCountByDayApiRequest().toBuilder();
+
+  @override
+  GetCaseCountByDayApiResponseBuilder newResultPayloadBuilder() =>
+      GetCaseCountByDayApiResponse().toBuilder();
+
+  @override
+  Serializer<GetCaseCountByDayApiRequest> get commandPayloadSerializer =>
+      GetCaseCountByDayApiRequest.serializer;
+
+  @override
+  Serializer<GetCaseCountByDayApiResponse> get resultPayloadSerializer =>
+      GetCaseCountByDayApiResponse.serializer;
 }

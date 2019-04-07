@@ -160,4 +160,31 @@ class _$GetWebServiceLogApi extends GetWebServiceLogApi {
         FullType(ApiCommand, [FullType(GetWebServiceLogApiRequest)]),
         FullType(ApiResult, [FullType(GetWebServiceLogApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetWebServiceLogApiRequest> newCommandBuilder() =>
+      ApiCommand<GetWebServiceLogApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetWebServiceLogApiResponse> newResultBuilder() =>
+      ApiResult<GetWebServiceLogApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetWebServiceLogApiRequestBuilder newCommandPayloadBuilder() =>
+      GetWebServiceLogApiRequest().toBuilder();
+
+  @override
+  GetWebServiceLogApiResponseBuilder newResultPayloadBuilder() =>
+      GetWebServiceLogApiResponse().toBuilder();
+
+  @override
+  Serializer<GetWebServiceLogApiRequest> get commandPayloadSerializer =>
+      GetWebServiceLogApiRequest.serializer;
+
+  @override
+  Serializer<GetWebServiceLogApiResponse> get resultPayloadSerializer =>
+      GetWebServiceLogApiResponse.serializer;
 }

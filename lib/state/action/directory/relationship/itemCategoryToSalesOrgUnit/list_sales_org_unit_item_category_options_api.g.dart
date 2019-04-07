@@ -176,4 +176,39 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
         FullType(ApiResult,
             [FullType(ListSalesOrgUnitItemCategoryOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListSalesOrgUnitItemCategoryOptionsApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>()
+              .toBuilder();
+
+  @override
+  ApiResultBuilder<ListSalesOrgUnitItemCategoryOptionsApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>()
+              .toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListSalesOrgUnitItemCategoryOptionsApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          ListSalesOrgUnitItemCategoryOptionsApiRequest().toBuilder();
+
+  @override
+  ListSalesOrgUnitItemCategoryOptionsApiResponseBuilder
+      newResultPayloadBuilder() =>
+          ListSalesOrgUnitItemCategoryOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListSalesOrgUnitItemCategoryOptionsApiRequest>
+      get commandPayloadSerializer =>
+          ListSalesOrgUnitItemCategoryOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListSalesOrgUnitItemCategoryOptionsApiResponse>
+      get resultPayloadSerializer =>
+          ListSalesOrgUnitItemCategoryOptionsApiResponse.serializer;
 }

@@ -159,4 +159,31 @@ class _$CreateFacilityApi extends CreateFacilityApi {
         FullType(ApiCommand, [FullType(CreateFacilityApiRequest)]),
         FullType(ApiResult, [FullType(CreateFacilityApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateFacilityApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateFacilityApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateFacilityApiResponse> newResultBuilder() =>
+      ApiResult<CreateFacilityApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateFacilityApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateFacilityApiRequest().toBuilder();
+
+  @override
+  CreateFacilityApiResponseBuilder newResultPayloadBuilder() =>
+      CreateFacilityApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateFacilityApiRequest> get commandPayloadSerializer =>
+      CreateFacilityApiRequest.serializer;
+
+  @override
+  Serializer<CreateFacilityApiResponse> get resultPayloadSerializer =>
+      CreateFacilityApiResponse.serializer;
 }

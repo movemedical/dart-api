@@ -160,4 +160,31 @@ class _$GetExportLogDetailApi extends GetExportLogDetailApi {
         FullType(ApiCommand, [FullType(GetExportLogDetailApiRequest)]),
         FullType(ApiResult, [FullType(GetExportLogDetailApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetExportLogDetailApiRequest> newCommandBuilder() =>
+      ApiCommand<GetExportLogDetailApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetExportLogDetailApiResponse> newResultBuilder() =>
+      ApiResult<GetExportLogDetailApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetExportLogDetailApiRequestBuilder newCommandPayloadBuilder() =>
+      GetExportLogDetailApiRequest().toBuilder();
+
+  @override
+  GetExportLogDetailApiResponseBuilder newResultPayloadBuilder() =>
+      GetExportLogDetailApiResponse().toBuilder();
+
+  @override
+  Serializer<GetExportLogDetailApiRequest> get commandPayloadSerializer =>
+      GetExportLogDetailApiRequest.serializer;
+
+  @override
+  Serializer<GetExportLogDetailApiResponse> get resultPayloadSerializer =>
+      GetExportLogDetailApiResponse.serializer;
 }

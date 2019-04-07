@@ -10,90 +10,92 @@ part of 'remove_assignees_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<RemoveAssigneesApiRequest>,
+        ApiResult<Empty>>,
     RemoveAssigneesApi> RemoveAssigneesApiOptions();
 
 class _$RemoveAssigneesApi extends RemoveAssigneesApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemoveAssigneesApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveAssigneesApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>,
           RemoveAssigneesApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>,
           RemoveAssigneesApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveAssigneesApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveAssigneesApi,
           Command<ApiCommand<RemoveAssigneesApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>,
-          RemoveAssigneesApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>,
+          RemoveAssigneesApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>,
           RemoveAssigneesApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>,
           RemoveAssigneesApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>,
           RemoveAssigneesApi, CommandProgress>> $progress;
 
   _$RemoveAssigneesApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAssigneesApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAssigneesApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveAssigneesApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveAssigneesApi,
                     Command<ApiCommand<RemoveAssigneesApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>,
-                RemoveAssigneesApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveAssigneesApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveAssigneesApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAssigneesApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAssigneesApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveAssigneesApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveAssigneesApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -102,14 +104,14 @@ class _$RemoveAssigneesApi extends RemoveAssigneesApi {
       _$RemoveAssigneesApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<RemoveAssigneesApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemoveAssigneesApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -132,6 +134,30 @@ class _$RemoveAssigneesApi extends RemoveAssigneesApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveAssigneesApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveAssigneesApiRequest> newCommandBuilder() =>
+      ApiCommand<RemoveAssigneesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveAssigneesApiRequestBuilder newCommandPayloadBuilder() =>
+      RemoveAssigneesApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveAssigneesApiRequest> get commandPayloadSerializer =>
+      RemoveAssigneesApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

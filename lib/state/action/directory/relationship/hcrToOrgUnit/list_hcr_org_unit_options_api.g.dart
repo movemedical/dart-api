@@ -161,4 +161,31 @@ class _$ListHcrOrgUnitOptionsApi extends ListHcrOrgUnitOptionsApi {
         FullType(ApiCommand, [FullType(ListHcrOrgUnitOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListHcrOrgUnitOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHcrOrgUnitOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHcrOrgUnitOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHcrOrgUnitOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListHcrOrgUnitOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHcrOrgUnitOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHcrOrgUnitOptionsApiRequest().toBuilder();
+
+  @override
+  ListHcrOrgUnitOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListHcrOrgUnitOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHcrOrgUnitOptionsApiRequest> get commandPayloadSerializer =>
+      ListHcrOrgUnitOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListHcrOrgUnitOptionsApiResponse> get resultPayloadSerializer =>
+      ListHcrOrgUnitOptionsApiResponse.serializer;
 }

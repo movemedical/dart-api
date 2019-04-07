@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_hcr_matrix_api_respo
 
 part 'list_hcr_matrix_api.g.dart';
 
-abstract class ListHcrMatrixApi extends ApiDispatcher<ListHcrMatrixApiRequest, ListHcrMatrixApiResponse, ListHcrMatrixApi> {
+abstract class ListHcrMatrixApi extends ApiDispatcher<ListHcrMatrixApiRequest,
+ListHcrMatrixApiRequestBuilder,
+ListHcrMatrixApiResponse,
+ListHcrMatrixApiResponseBuilder,
+ListHcrMatrixApi> {
   @override
   String get path => 'v1/case_event/hcr_matrix/list';
-  
-  @override
-  Serializer<ListHcrMatrixApiRequest> get requestSerializer => ListHcrMatrixApiRequest.serializer;
-  
-  @override
-  Serializer<ListHcrMatrixApiResponse> get responseSerializer => ListHcrMatrixApiResponse.serializer;
   
   ListHcrMatrixApi._();
   

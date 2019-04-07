@@ -160,4 +160,31 @@ class _$ListUserNavHistoryApi extends ListUserNavHistoryApi {
         FullType(ApiCommand, [FullType(ListUserNavHistoryApiRequest)]),
         FullType(ApiResult, [FullType(ListUserNavHistoryApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListUserNavHistoryApiRequest> newCommandBuilder() =>
+      ApiCommand<ListUserNavHistoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListUserNavHistoryApiResponse> newResultBuilder() =>
+      ApiResult<ListUserNavHistoryApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListUserNavHistoryApiRequestBuilder newCommandPayloadBuilder() =>
+      ListUserNavHistoryApiRequest().toBuilder();
+
+  @override
+  ListUserNavHistoryApiResponseBuilder newResultPayloadBuilder() =>
+      ListUserNavHistoryApiResponse().toBuilder();
+
+  @override
+  Serializer<ListUserNavHistoryApiRequest> get commandPayloadSerializer =>
+      ListUserNavHistoryApiRequest.serializer;
+
+  @override
+  Serializer<ListUserNavHistoryApiResponse> get resultPayloadSerializer =>
+      ListUserNavHistoryApiResponse.serializer;
 }

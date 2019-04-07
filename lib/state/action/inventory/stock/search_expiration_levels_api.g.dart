@@ -162,4 +162,31 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
         FullType(ApiCommand, [FullType(SearchExpirationLevelsApiRequest)]),
         FullType(ApiResult, [FullType(SearchExpirationLevelsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchExpirationLevelsApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchExpirationLevelsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchExpirationLevelsApiResponse> newResultBuilder() =>
+      ApiResult<SearchExpirationLevelsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchExpirationLevelsApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchExpirationLevelsApiRequest().toBuilder();
+
+  @override
+  SearchExpirationLevelsApiResponseBuilder newResultPayloadBuilder() =>
+      SearchExpirationLevelsApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchExpirationLevelsApiRequest> get commandPayloadSerializer =>
+      SearchExpirationLevelsApiRequest.serializer;
+
+  @override
+  Serializer<SearchExpirationLevelsApiResponse> get resultPayloadSerializer =>
+      SearchExpirationLevelsApiResponse.serializer;
 }

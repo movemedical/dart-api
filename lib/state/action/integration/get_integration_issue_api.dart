@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/get_integration_issue_a
 
 part 'get_integration_issue_api.g.dart';
 
-abstract class GetIntegrationIssueApi extends ApiDispatcher<GetIntegrationIssueApiRequest, GetIntegrationIssueApiResponse, GetIntegrationIssueApi> {
+abstract class GetIntegrationIssueApi extends ApiDispatcher<GetIntegrationIssueApiRequest,
+GetIntegrationIssueApiRequestBuilder,
+GetIntegrationIssueApiResponse,
+GetIntegrationIssueApiResponseBuilder,
+GetIntegrationIssueApi> {
   @override
   String get path => 'v1/integration/get_integration_issue';
-  
-  @override
-  Serializer<GetIntegrationIssueApiRequest> get requestSerializer => GetIntegrationIssueApiRequest.serializer;
-  
-  @override
-  Serializer<GetIntegrationIssueApiResponse> get responseSerializer => GetIntegrationIssueApiResponse.serializer;
   
   GetIntegrationIssueApi._();
   

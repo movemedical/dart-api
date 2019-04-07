@@ -161,4 +161,31 @@ class _$ListFacilityDelegatesApi extends ListFacilityDelegatesApi {
         FullType(ApiCommand, [FullType(ListFacilityDelegatesApiRequest)]),
         FullType(ApiResult, [FullType(ListFacilityDelegatesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListFacilityDelegatesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListFacilityDelegatesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListFacilityDelegatesApiResponse> newResultBuilder() =>
+      ApiResult<ListFacilityDelegatesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListFacilityDelegatesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListFacilityDelegatesApiRequest().toBuilder();
+
+  @override
+  ListFacilityDelegatesApiResponseBuilder newResultPayloadBuilder() =>
+      ListFacilityDelegatesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListFacilityDelegatesApiRequest> get commandPayloadSerializer =>
+      ListFacilityDelegatesApiRequest.serializer;
+
+  @override
+  Serializer<ListFacilityDelegatesApiResponse> get resultPayloadSerializer =>
+      ListFacilityDelegatesApiResponse.serializer;
 }

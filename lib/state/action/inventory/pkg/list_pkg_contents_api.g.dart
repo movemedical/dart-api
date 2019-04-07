@@ -160,4 +160,31 @@ class _$ListPkgContentsApi extends ListPkgContentsApi {
         FullType(ApiCommand, [FullType(ListPkgContentsApiRequest)]),
         FullType(ApiResult, [FullType(ListPkgContentsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListPkgContentsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListPkgContentsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListPkgContentsApiResponse> newResultBuilder() =>
+      ApiResult<ListPkgContentsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListPkgContentsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListPkgContentsApiRequest().toBuilder();
+
+  @override
+  ListPkgContentsApiResponseBuilder newResultPayloadBuilder() =>
+      ListPkgContentsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListPkgContentsApiRequest> get commandPayloadSerializer =>
+      ListPkgContentsApiRequest.serializer;
+
+  @override
+  Serializer<ListPkgContentsApiResponse> get resultPayloadSerializer =>
+      ListPkgContentsApiResponse.serializer;
 }

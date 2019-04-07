@@ -147,4 +147,31 @@ class _$BuildVerifyApi extends BuildVerifyApi {
         FullType(ApiCommand, [FullType(BuildVerifyApiRequest)]),
         FullType(ApiResult, [FullType(BuildVerifyApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<BuildVerifyApiRequest> newCommandBuilder() =>
+      ApiCommand<BuildVerifyApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<BuildVerifyApiResponse> newResultBuilder() =>
+      ApiResult<BuildVerifyApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  BuildVerifyApiRequestBuilder newCommandPayloadBuilder() =>
+      BuildVerifyApiRequest().toBuilder();
+
+  @override
+  BuildVerifyApiResponseBuilder newResultPayloadBuilder() =>
+      BuildVerifyApiResponse().toBuilder();
+
+  @override
+  Serializer<BuildVerifyApiRequest> get commandPayloadSerializer =>
+      BuildVerifyApiRequest.serializer;
+
+  @override
+  Serializer<BuildVerifyApiResponse> get resultPayloadSerializer =>
+      BuildVerifyApiResponse.serializer;
 }

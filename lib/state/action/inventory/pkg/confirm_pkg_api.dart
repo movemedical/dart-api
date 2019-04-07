@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pkg/confirm_pkg_api_reque
 
 part 'confirm_pkg_api.g.dart';
 
-abstract class ConfirmPkgApi extends ApiDispatcher<ConfirmPkgApiRequest, Null, ConfirmPkgApi> {
+abstract class ConfirmPkgApi extends ApiDispatcher<ConfirmPkgApiRequest,
+ConfirmPkgApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ConfirmPkgApi> {
   @override
   String get path => 'v1/inventory/pkg/confirm';
-  
-  @override
-  Serializer<ConfirmPkgApiRequest> get requestSerializer => ConfirmPkgApiRequest.serializer;
   
   ConfirmPkgApi._();
   

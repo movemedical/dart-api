@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/doc/barcode/request_stock_barcod
 
 part 'request_stock_barcode_doc_api.g.dart';
 
-abstract class RequestStockBarcodeDocApi extends ApiDispatcher<RequestStockBarcodeDocApiRequest, RequestStockBarcodeDocApiResponse, RequestStockBarcodeDocApi> {
+abstract class RequestStockBarcodeDocApi extends ApiDispatcher<RequestStockBarcodeDocApiRequest,
+RequestStockBarcodeDocApiRequestBuilder,
+RequestStockBarcodeDocApiResponse,
+RequestStockBarcodeDocApiResponseBuilder,
+RequestStockBarcodeDocApi> {
   @override
   String get path => 'v1/docreport/barcode/requestStockBarcodeDoc';
-  
-  @override
-  Serializer<RequestStockBarcodeDocApiRequest> get requestSerializer => RequestStockBarcodeDocApiRequest.serializer;
-  
-  @override
-  Serializer<RequestStockBarcodeDocApiResponse> get responseSerializer => RequestStockBarcodeDocApiResponse.serializer;
   
   RequestStockBarcodeDocApi._();
   

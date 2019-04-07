@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/teamToOrgUni
 
 part 'remove_team_to_org_unit_api.g.dart';
 
-abstract class RemoveTeamToOrgUnitApi extends ApiDispatcher<RemoveTeamToOrgUnitApiRequest, Null, RemoveTeamToOrgUnitApi> {
+abstract class RemoveTeamToOrgUnitApi extends ApiDispatcher<RemoveTeamToOrgUnitApiRequest,
+RemoveTeamToOrgUnitApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RemoveTeamToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/team_to_org_unit/remove';
-  
-  @override
-  Serializer<RemoveTeamToOrgUnitApiRequest> get requestSerializer => RemoveTeamToOrgUnitApiRequest.serializer;
   
   RemoveTeamToOrgUnitApi._();
   

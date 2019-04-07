@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/inventoryType/update_inve
 
 part 'update_inventory_type_api.g.dart';
 
-abstract class UpdateInventoryTypeApi extends ApiDispatcher<UpdateInventoryTypeApiRequest, Null, UpdateInventoryTypeApi> {
+abstract class UpdateInventoryTypeApi extends ApiDispatcher<UpdateInventoryTypeApiRequest,
+UpdateInventoryTypeApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateInventoryTypeApi> {
   @override
   String get path => 'v1/inventory/inventory_type/update';
-  
-  @override
-  Serializer<UpdateInventoryTypeApiRequest> get requestSerializer => UpdateInventoryTypeApiRequest.serializer;
   
   UpdateInventoryTypeApi._();
   

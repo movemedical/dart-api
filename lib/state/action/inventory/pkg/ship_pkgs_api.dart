@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pkg/ship_pkgs_api_request
 
 part 'ship_pkgs_api.g.dart';
 
-abstract class ShipPkgsApi extends ApiDispatcher<ShipPkgsApiRequest, Null, ShipPkgsApi> {
+abstract class ShipPkgsApi extends ApiDispatcher<ShipPkgsApiRequest,
+ShipPkgsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ShipPkgsApi> {
   @override
   String get path => 'v1/inventory/pkg/shipMultiple';
-  
-  @override
-  Serializer<ShipPkgsApiRequest> get requestSerializer => ShipPkgsApiRequest.serializer;
   
   ShipPkgsApi._();
   

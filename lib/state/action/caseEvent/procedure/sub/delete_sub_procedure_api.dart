@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/procedure/sub/delete_sub_
 
 part 'delete_sub_procedure_api.g.dart';
 
-abstract class DeleteSubProcedureApi extends ApiDispatcher<DeleteSubProcedureApiRequest, Null, DeleteSubProcedureApi> {
+abstract class DeleteSubProcedureApi extends ApiDispatcher<DeleteSubProcedureApiRequest,
+DeleteSubProcedureApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteSubProcedureApi> {
   @override
   String get path => 'v1/case_event/procedure/sub/delete';
-  
-  @override
-  Serializer<DeleteSubProcedureApiRequest> get requestSerializer => DeleteSubProcedureApiRequest.serializer;
   
   DeleteSubProcedureApi._();
   

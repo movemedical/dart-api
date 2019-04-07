@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/reschedule_event_api_requ
 
 part 'reschedule_event_api.g.dart';
 
-abstract class RescheduleEventApi extends ApiDispatcher<RescheduleEventApiRequest, Null, RescheduleEventApi> {
+abstract class RescheduleEventApi extends ApiDispatcher<RescheduleEventApiRequest,
+RescheduleEventApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RescheduleEventApi> {
   @override
   String get path => 'v1/case_event/reschedule';
-  
-  @override
-  Serializer<RescheduleEventApiRequest> get requestSerializer => RescheduleEventApiRequest.serializer;
   
   RescheduleEventApi._();
   

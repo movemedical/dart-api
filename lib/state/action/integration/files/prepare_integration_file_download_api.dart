@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/files/prepare_integrati
 
 part 'prepare_integration_file_download_api.g.dart';
 
-abstract class PrepareIntegrationFileDownloadApi extends ApiDispatcher<PrepareIntegrationFileDownloadApiRequest, PrepareIntegrationFileDownloadApiResponse, PrepareIntegrationFileDownloadApi> {
+abstract class PrepareIntegrationFileDownloadApi extends ApiDispatcher<PrepareIntegrationFileDownloadApiRequest,
+PrepareIntegrationFileDownloadApiRequestBuilder,
+PrepareIntegrationFileDownloadApiResponse,
+PrepareIntegrationFileDownloadApiResponseBuilder,
+PrepareIntegrationFileDownloadApi> {
   @override
   String get path => 'v1/integration/files/prepare_integration_file_download';
-  
-  @override
-  Serializer<PrepareIntegrationFileDownloadApiRequest> get requestSerializer => PrepareIntegrationFileDownloadApiRequest.serializer;
-  
-  @override
-  Serializer<PrepareIntegrationFileDownloadApiResponse> get responseSerializer => PrepareIntegrationFileDownloadApiResponse.serializer;
   
   PrepareIntegrationFileDownloadApi._();
   

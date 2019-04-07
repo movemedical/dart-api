@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/order/edit_order_shipping
 
 part 'edit_order_shipping_service_api.g.dart';
 
-abstract class EditOrderShippingServiceApi extends ApiDispatcher<EditOrderShippingServiceApiRequest, Null, EditOrderShippingServiceApi> {
+abstract class EditOrderShippingServiceApi extends ApiDispatcher<EditOrderShippingServiceApiRequest,
+EditOrderShippingServiceApiRequestBuilder,
+Empty,
+EmptyBuilder,
+EditOrderShippingServiceApi> {
   @override
   String get path => 'v1/inventory/order/edit_shipping_service';
-  
-  @override
-  Serializer<EditOrderShippingServiceApiRequest> get requestSerializer => EditOrderShippingServiceApiRequest.serializer;
   
   EditOrderShippingServiceApi._();
   

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/user/get_ui_setup_web_api_response.
 
 part 'get_ui_setup_web_api.g.dart';
 
-abstract class GetUiSetupWebApi extends ApiDispatcher<GetUiSetupWebApiRequest, GetUiSetupWebApiResponse, GetUiSetupWebApi> {
+abstract class GetUiSetupWebApi extends ApiDispatcher<GetUiSetupWebApiRequest,
+GetUiSetupWebApiRequestBuilder,
+GetUiSetupWebApiResponse,
+GetUiSetupWebApiResponseBuilder,
+GetUiSetupWebApi> {
   @override
   String get path => 'v1/user/ui_setup_web';
-  
-  @override
-  Serializer<GetUiSetupWebApiRequest> get requestSerializer => GetUiSetupWebApiRequest.serializer;
-  
-  @override
-  Serializer<GetUiSetupWebApiResponse> get responseSerializer => GetUiSetupWebApiResponse.serializer;
   
   GetUiSetupWebApi._();
   

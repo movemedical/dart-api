@@ -164,4 +164,33 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
         FullType(ApiCommand, [FullType(ListStockForSourcingMatrixApiRequest)]),
         FullType(ApiResult, [FullType(ListStockForSourcingMatrixApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListStockForSourcingMatrixApiRequest> newCommandBuilder() =>
+      ApiCommand<ListStockForSourcingMatrixApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListStockForSourcingMatrixApiResponse> newResultBuilder() =>
+      ApiResult<ListStockForSourcingMatrixApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListStockForSourcingMatrixApiRequestBuilder newCommandPayloadBuilder() =>
+      ListStockForSourcingMatrixApiRequest().toBuilder();
+
+  @override
+  ListStockForSourcingMatrixApiResponseBuilder newResultPayloadBuilder() =>
+      ListStockForSourcingMatrixApiResponse().toBuilder();
+
+  @override
+  Serializer<ListStockForSourcingMatrixApiRequest>
+      get commandPayloadSerializer =>
+          ListStockForSourcingMatrixApiRequest.serializer;
+
+  @override
+  Serializer<ListStockForSourcingMatrixApiResponse>
+      get resultPayloadSerializer =>
+          ListStockForSourcingMatrixApiResponse.serializer;
 }

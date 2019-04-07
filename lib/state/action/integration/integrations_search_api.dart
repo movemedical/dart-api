@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/integrations_search_api
 
 part 'integrations_search_api.g.dart';
 
-abstract class IntegrationsSearchApi extends ApiDispatcher<IntegrationsSearchApiRequest, IntegrationsSearchApiResponse, IntegrationsSearchApi> {
+abstract class IntegrationsSearchApi extends ApiDispatcher<IntegrationsSearchApiRequest,
+IntegrationsSearchApiRequestBuilder,
+IntegrationsSearchApiResponse,
+IntegrationsSearchApiResponseBuilder,
+IntegrationsSearchApi> {
   @override
   String get path => 'v1/integration/integrations_search';
-  
-  @override
-  Serializer<IntegrationsSearchApiRequest> get requestSerializer => IntegrationsSearchApiRequest.serializer;
-  
-  @override
-  Serializer<IntegrationsSearchApiResponse> get responseSerializer => IntegrationsSearchApiResponse.serializer;
   
   IntegrationsSearchApi._();
   

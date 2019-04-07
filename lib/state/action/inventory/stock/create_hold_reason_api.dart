@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stock/create_hold_reason_
 
 part 'create_hold_reason_api.g.dart';
 
-abstract class CreateHoldReasonApi extends ApiDispatcher<CreateHoldReasonApiRequest, CreateHoldReasonApiResponse, CreateHoldReasonApi> {
+abstract class CreateHoldReasonApi extends ApiDispatcher<CreateHoldReasonApiRequest,
+CreateHoldReasonApiRequestBuilder,
+CreateHoldReasonApiResponse,
+CreateHoldReasonApiResponseBuilder,
+CreateHoldReasonApi> {
   @override
   String get path => 'v1/inventory/hold_reason/create';
-  
-  @override
-  Serializer<CreateHoldReasonApiRequest> get requestSerializer => CreateHoldReasonApiRequest.serializer;
-  
-  @override
-  Serializer<CreateHoldReasonApiResponse> get responseSerializer => CreateHoldReasonApiResponse.serializer;
   
   CreateHoldReasonApi._();
   

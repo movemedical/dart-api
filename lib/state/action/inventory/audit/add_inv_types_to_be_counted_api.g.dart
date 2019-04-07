@@ -10,98 +10,100 @@ part of 'add_inv_types_to_be_counted_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AddInvTypesToBeCountedApi> AddInvTypesToBeCountedApiOptions();
 
 class _$AddInvTypesToBeCountedApi extends AddInvTypesToBeCountedApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AddInvTypesToBeCountedApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, AddInvTypesToBeCountedApi, String>> $clear;
+          ApiResult<Empty>, AddInvTypesToBeCountedApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, AddInvTypesToBeCountedApi, String>> $cancel;
+          ApiResult<Empty>, AddInvTypesToBeCountedApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddInvTypesToBeCountedApi,
           Command<ApiCommand<AddInvTypesToBeCountedApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddInvTypesToBeCountedApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, AddInvTypesToBeCountedApi, String>> $detach;
+          ApiResult<Empty>, AddInvTypesToBeCountedApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>, AddInvTypesToBeCountedApi, String>> $attach;
+          ApiResult<Empty>, AddInvTypesToBeCountedApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddInvTypesToBeCountedApi,
           CommandProgress>> $progress;
 
   _$AddInvTypesToBeCountedApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddInvTypesToBeCountedApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddInvTypesToBeCountedApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddInvTypesToBeCountedApi,
                     Command<ApiCommand<AddInvTypesToBeCountedApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
-                AddInvTypesToBeCountedApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddInvTypesToBeCountedApiRequest>,
+                    ApiResult<Empty>,
+                    AddInvTypesToBeCountedApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddInvTypesToBeCountedApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddInvTypesToBeCountedApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddInvTypesToBeCountedApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddInvTypesToBeCountedApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -111,15 +113,15 @@ class _$AddInvTypesToBeCountedApi extends AddInvTypesToBeCountedApi {
       _$AddInvTypesToBeCountedApi._(options());
 
   @override
-  CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddInvTypesToBeCountedApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddInvTypesToBeCountedApiRequest>, ApiResult<Null>>();
+          ApiCommand<AddInvTypesToBeCountedApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -142,6 +144,30 @@ class _$AddInvTypesToBeCountedApi extends AddInvTypesToBeCountedApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddInvTypesToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddInvTypesToBeCountedApiRequest> newCommandBuilder() =>
+      ApiCommand<AddInvTypesToBeCountedApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddInvTypesToBeCountedApiRequestBuilder newCommandPayloadBuilder() =>
+      AddInvTypesToBeCountedApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddInvTypesToBeCountedApiRequest> get commandPayloadSerializer =>
+      AddInvTypesToBeCountedApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

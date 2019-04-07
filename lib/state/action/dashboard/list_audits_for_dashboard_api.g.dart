@@ -162,4 +162,31 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
         FullType(ApiCommand, [FullType(ListAuditsForDashboardApiRequest)]),
         FullType(ApiResult, [FullType(ListAuditsForDashboardApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAuditsForDashboardApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAuditsForDashboardApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAuditsForDashboardApiResponse> newResultBuilder() =>
+      ApiResult<ListAuditsForDashboardApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAuditsForDashboardApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAuditsForDashboardApiRequest().toBuilder();
+
+  @override
+  ListAuditsForDashboardApiResponseBuilder newResultPayloadBuilder() =>
+      ListAuditsForDashboardApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAuditsForDashboardApiRequest> get commandPayloadSerializer =>
+      ListAuditsForDashboardApiRequest.serializer;
+
+  @override
+  Serializer<ListAuditsForDashboardApiResponse> get resultPayloadSerializer =>
+      ListAuditsForDashboardApiResponse.serializer;
 }

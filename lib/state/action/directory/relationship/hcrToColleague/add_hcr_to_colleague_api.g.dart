@@ -10,91 +10,92 @@ part of 'add_hcr_to_colleague_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AddHcrToColleagueApi> AddHcrToColleagueApiOptions();
 
 class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AddHcrToColleagueApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddHcrToColleagueApi,
           Command<ApiCommand<AddHcrToColleagueApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>,
-          AddHcrToColleagueApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
+          AddHcrToColleagueApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, CommandProgress>> $progress;
 
   _$AddHcrToColleagueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrToColleagueApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrToColleagueApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddHcrToColleagueApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddHcrToColleagueApi,
                     Command<ApiCommand<AddHcrToColleagueApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>,
-                AddHcrToColleagueApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddHcrToColleagueApiRequest>,
+                    ApiResult<Empty>,
+                    AddHcrToColleagueApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrToColleagueApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrToColleagueApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrToColleagueApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
       _$AddHcrToColleagueApi._(options());
 
   @override
-  CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Null>>();
+          ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddHcrToColleagueApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddHcrToColleagueApiRequest> newCommandBuilder() =>
+      ApiCommand<AddHcrToColleagueApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddHcrToColleagueApiRequestBuilder newCommandPayloadBuilder() =>
+      AddHcrToColleagueApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddHcrToColleagueApiRequest> get commandPayloadSerializer =>
+      AddHcrToColleagueApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

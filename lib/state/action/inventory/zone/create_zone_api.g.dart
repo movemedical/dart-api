@@ -147,4 +147,31 @@ class _$CreateZoneApi extends CreateZoneApi {
         FullType(ApiCommand, [FullType(CreateZoneApiRequest)]),
         FullType(ApiResult, [FullType(CreateZoneApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateZoneApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateZoneApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateZoneApiResponse> newResultBuilder() =>
+      ApiResult<CreateZoneApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateZoneApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateZoneApiRequest().toBuilder();
+
+  @override
+  CreateZoneApiResponseBuilder newResultPayloadBuilder() =>
+      CreateZoneApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateZoneApiRequest> get commandPayloadSerializer =>
+      CreateZoneApiRequest.serializer;
+
+  @override
+  Serializer<CreateZoneApiResponse> get resultPayloadSerializer =>
+      CreateZoneApiResponse.serializer;
 }

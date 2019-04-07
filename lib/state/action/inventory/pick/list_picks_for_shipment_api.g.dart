@@ -160,4 +160,31 @@ class _$ListPicksForShipmentApi extends ListPicksForShipmentApi {
         FullType(ApiCommand, [FullType(ListPicksForShipmentApiRequest)]),
         FullType(ApiResult, [FullType(ListPicksForShipmentApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListPicksForShipmentApiRequest> newCommandBuilder() =>
+      ApiCommand<ListPicksForShipmentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListPicksForShipmentApiResponse> newResultBuilder() =>
+      ApiResult<ListPicksForShipmentApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListPicksForShipmentApiRequestBuilder newCommandPayloadBuilder() =>
+      ListPicksForShipmentApiRequest().toBuilder();
+
+  @override
+  ListPicksForShipmentApiResponseBuilder newResultPayloadBuilder() =>
+      ListPicksForShipmentApiResponse().toBuilder();
+
+  @override
+  Serializer<ListPicksForShipmentApiRequest> get commandPayloadSerializer =>
+      ListPicksForShipmentApiRequest.serializer;
+
+  @override
+  Serializer<ListPicksForShipmentApiResponse> get resultPayloadSerializer =>
+      ListPicksForShipmentApiResponse.serializer;
 }

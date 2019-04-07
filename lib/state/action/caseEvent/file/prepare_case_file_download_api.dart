@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/file/prepare_case_file_do
 
 part 'prepare_case_file_download_api.g.dart';
 
-abstract class PrepareCaseFileDownloadApi extends ApiDispatcher<PrepareCaseFileDownloadApiRequest, PrepareCaseFileDownloadApiResponse, PrepareCaseFileDownloadApi> {
+abstract class PrepareCaseFileDownloadApi extends ApiDispatcher<PrepareCaseFileDownloadApiRequest,
+PrepareCaseFileDownloadApiRequestBuilder,
+PrepareCaseFileDownloadApiResponse,
+PrepareCaseFileDownloadApiResponseBuilder,
+PrepareCaseFileDownloadApi> {
   @override
   String get path => 'v1/case_event/file/prepare_download';
-  
-  @override
-  Serializer<PrepareCaseFileDownloadApiRequest> get requestSerializer => PrepareCaseFileDownloadApiRequest.serializer;
-  
-  @override
-  Serializer<PrepareCaseFileDownloadApiResponse> get responseSerializer => PrepareCaseFileDownloadApiResponse.serializer;
   
   PrepareCaseFileDownloadApi._();
   

@@ -160,4 +160,31 @@ class _$ListDelegateOptionsApi extends ListDelegateOptionsApi {
         FullType(ApiCommand, [FullType(ListDelegateOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListDelegateOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListDelegateOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListDelegateOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListDelegateOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListDelegateOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListDelegateOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListDelegateOptionsApiRequest().toBuilder();
+
+  @override
+  ListDelegateOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListDelegateOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListDelegateOptionsApiRequest> get commandPayloadSerializer =>
+      ListDelegateOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListDelegateOptionsApiResponse> get resultPayloadSerializer =>
+      ListDelegateOptionsApiResponse.serializer;
 }

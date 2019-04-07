@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/report/user/request_user_permiss
 
 part 'request_user_permissions_report_api.g.dart';
 
-abstract class RequestUserPermissionsReportApi extends ApiDispatcher<RequestUserPermissionsReportApiRequest, Null, RequestUserPermissionsReportApi> {
+abstract class RequestUserPermissionsReportApi extends ApiDispatcher<RequestUserPermissionsReportApiRequest,
+RequestUserPermissionsReportApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestUserPermissionsReportApi> {
   @override
   String get path => 'v1/docreport/user_permissions';
-  
-  @override
-  Serializer<RequestUserPermissionsReportApiRequest> get requestSerializer => RequestUserPermissionsReportApiRequest.serializer;
   
   RequestUserPermissionsReportApi._();
   

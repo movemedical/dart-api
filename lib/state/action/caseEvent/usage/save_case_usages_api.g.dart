@@ -159,4 +159,31 @@ class _$SaveCaseUsagesApi extends SaveCaseUsagesApi {
         FullType(ApiCommand, [FullType(SaveCaseUsagesApiRequest)]),
         FullType(ApiResult, [FullType(SaveCaseUsagesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SaveCaseUsagesApiRequest> newCommandBuilder() =>
+      ApiCommand<SaveCaseUsagesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SaveCaseUsagesApiResponse> newResultBuilder() =>
+      ApiResult<SaveCaseUsagesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SaveCaseUsagesApiRequestBuilder newCommandPayloadBuilder() =>
+      SaveCaseUsagesApiRequest().toBuilder();
+
+  @override
+  SaveCaseUsagesApiResponseBuilder newResultPayloadBuilder() =>
+      SaveCaseUsagesApiResponse().toBuilder();
+
+  @override
+  Serializer<SaveCaseUsagesApiRequest> get commandPayloadSerializer =>
+      SaveCaseUsagesApiRequest.serializer;
+
+  @override
+  Serializer<SaveCaseUsagesApiResponse> get resultPayloadSerializer =>
+      SaveCaseUsagesApiResponse.serializer;
 }

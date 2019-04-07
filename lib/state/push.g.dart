@@ -857,7 +857,6 @@ typedef StatelessActionsOptions<PushDispatcher> PushDispatcherOptions();
 class _$PushDispatcher extends PushDispatcher {
   final StatelessActionsOptions<PushDispatcher> $options;
 
-  final ActionDispatcher<NoState> $replace;
   final ActionDispatcher<AuditFilePushMessage> auditFilePushMessage;
   final ActionDispatcher<AuditFileUpdatePushMessage> auditFileUpdatePushMessage;
   final ActionDispatcher<AuditUpdatedPushMessage> auditUpdatedPushMessage;
@@ -892,8 +891,7 @@ class _$PushDispatcher extends PushDispatcher {
   final ActionDispatcher<MovePresenceEvent> movePresenceEvent;
 
   _$PushDispatcher._(this.$options)
-      : $replace = $options.action<NoState>('\$replace', (a) => a?.$replace),
-        auditFilePushMessage = $options.action<AuditFilePushMessage>(
+      : auditFilePushMessage = $options.action<AuditFilePushMessage>(
             'auditFilePushMessage', (a) => a?.auditFilePushMessage),
         auditFileUpdatePushMessage =
             $options.action<AuditFileUpdatePushMessage>(
@@ -972,7 +970,6 @@ class _$PushDispatcher extends PushDispatcher {
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
-        this.$replace,
         this.auditFilePushMessage,
         this.auditFileUpdatePushMessage,
         this.auditUpdatedPushMessage,

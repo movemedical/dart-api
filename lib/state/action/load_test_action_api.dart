@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/load_test_action_api_response.dart'
 
 part 'load_test_action_api.g.dart';
 
-abstract class LoadTestActionApi extends ApiDispatcher<LoadTestActionApiRequest, LoadTestActionApiResponse, LoadTestActionApi> {
+abstract class LoadTestActionApi extends ApiDispatcher<LoadTestActionApiRequest,
+LoadTestActionApiRequestBuilder,
+LoadTestActionApiResponse,
+LoadTestActionApiResponseBuilder,
+LoadTestActionApi> {
   @override
   String get path => 'v1/load_test';
-  
-  @override
-  Serializer<LoadTestActionApiRequest> get requestSerializer => LoadTestActionApiRequest.serializer;
-  
-  @override
-  Serializer<LoadTestActionApiResponse> get responseSerializer => LoadTestActionApiResponse.serializer;
   
   LoadTestActionApi._();
   

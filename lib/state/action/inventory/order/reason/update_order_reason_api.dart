@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/order/reason/update_order
 
 part 'update_order_reason_api.g.dart';
 
-abstract class UpdateOrderReasonApi extends ApiDispatcher<UpdateOrderReasonApiRequest, Null, UpdateOrderReasonApi> {
+abstract class UpdateOrderReasonApi extends ApiDispatcher<UpdateOrderReasonApiRequest,
+UpdateOrderReasonApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateOrderReasonApi> {
   @override
   String get path => 'v1/inventory/order/reason/update';
-  
-  @override
-  Serializer<UpdateOrderReasonApiRequest> get requestSerializer => UpdateOrderReasonApiRequest.serializer;
   
   UpdateOrderReasonApi._();
   

@@ -160,4 +160,31 @@ class _$ListExportLogFilesApi extends ListExportLogFilesApi {
         FullType(ApiCommand, [FullType(ListExportLogFilesApiRequest)]),
         FullType(ApiResult, [FullType(ListExportLogFilesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListExportLogFilesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListExportLogFilesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListExportLogFilesApiResponse> newResultBuilder() =>
+      ApiResult<ListExportLogFilesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListExportLogFilesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListExportLogFilesApiRequest().toBuilder();
+
+  @override
+  ListExportLogFilesApiResponseBuilder newResultPayloadBuilder() =>
+      ListExportLogFilesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListExportLogFilesApiRequest> get commandPayloadSerializer =>
+      ListExportLogFilesApiRequest.serializer;
+
+  @override
+  Serializer<ListExportLogFilesApiResponse> get resultPayloadSerializer =>
+      ListExportLogFilesApiResponse.serializer;
 }

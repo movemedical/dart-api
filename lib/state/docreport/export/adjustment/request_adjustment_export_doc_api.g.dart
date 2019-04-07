@@ -164,4 +164,33 @@ class _$RequestAdjustmentExportDocApi extends RequestAdjustmentExportDocApi {
         FullType(ApiCommand, [FullType(RequestAdjustmentExportDocApiRequest)]),
         FullType(ApiResult, [FullType(RequestAdjustmentExportDocApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestAdjustmentExportDocApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestAdjustmentExportDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestAdjustmentExportDocApiResponse> newResultBuilder() =>
+      ApiResult<RequestAdjustmentExportDocApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestAdjustmentExportDocApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestAdjustmentExportDocApiRequest().toBuilder();
+
+  @override
+  RequestAdjustmentExportDocApiResponseBuilder newResultPayloadBuilder() =>
+      RequestAdjustmentExportDocApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestAdjustmentExportDocApiRequest>
+      get commandPayloadSerializer =>
+          RequestAdjustmentExportDocApiRequest.serializer;
+
+  @override
+  Serializer<RequestAdjustmentExportDocApiResponse>
+      get resultPayloadSerializer =>
+          RequestAdjustmentExportDocApiResponse.serializer;
 }

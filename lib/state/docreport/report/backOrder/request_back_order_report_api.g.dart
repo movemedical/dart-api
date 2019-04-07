@@ -162,4 +162,31 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
         FullType(ApiCommand, [FullType(RequestBackOrderReportApiRequest)]),
         FullType(ApiResult, [FullType(RequestBackOrderReportApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestBackOrderReportApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestBackOrderReportApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestBackOrderReportApiResponse> newResultBuilder() =>
+      ApiResult<RequestBackOrderReportApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestBackOrderReportApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestBackOrderReportApiRequest().toBuilder();
+
+  @override
+  RequestBackOrderReportApiResponseBuilder newResultPayloadBuilder() =>
+      RequestBackOrderReportApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestBackOrderReportApiRequest> get commandPayloadSerializer =>
+      RequestBackOrderReportApiRequest.serializer;
+
+  @override
+  Serializer<RequestBackOrderReportApiResponse> get resultPayloadSerializer =>
+      RequestBackOrderReportApiResponse.serializer;
 }

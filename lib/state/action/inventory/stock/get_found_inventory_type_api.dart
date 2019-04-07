@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stock/get_found_inventory
 
 part 'get_found_inventory_type_api.g.dart';
 
-abstract class GetFoundInventoryTypeApi extends ApiDispatcher<GetFoundInventoryTypeApiRequest, GetFoundInventoryTypeApiResponse, GetFoundInventoryTypeApi> {
+abstract class GetFoundInventoryTypeApi extends ApiDispatcher<GetFoundInventoryTypeApiRequest,
+GetFoundInventoryTypeApiRequestBuilder,
+GetFoundInventoryTypeApiResponse,
+GetFoundInventoryTypeApiResponseBuilder,
+GetFoundInventoryTypeApi> {
   @override
   String get path => 'v1/inventory/stock/get_found_inventory_type';
-  
-  @override
-  Serializer<GetFoundInventoryTypeApiRequest> get requestSerializer => GetFoundInventoryTypeApiRequest.serializer;
-  
-  @override
-  Serializer<GetFoundInventoryTypeApiResponse> get responseSerializer => GetFoundInventoryTypeApiResponse.serializer;
   
   GetFoundInventoryTypeApi._();
   

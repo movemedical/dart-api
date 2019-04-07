@@ -23,4 +23,5 @@ dev_dependencies:
   built_value_generator:
     git: git://github.com/movemedical/built-value-generator
   modux_generator:
+#    path: ../modux-dart-generator
     git: git://github.com/movemedical/modux-dart-generator

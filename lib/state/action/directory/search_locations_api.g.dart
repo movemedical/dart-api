@@ -160,4 +160,31 @@ class _$SearchLocationsApi extends SearchLocationsApi {
         FullType(ApiCommand, [FullType(SearchLocationsApiRequest)]),
         FullType(ApiResult, [FullType(SearchLocationsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchLocationsApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchLocationsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchLocationsApiResponse> newResultBuilder() =>
+      ApiResult<SearchLocationsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchLocationsApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchLocationsApiRequest().toBuilder();
+
+  @override
+  SearchLocationsApiResponseBuilder newResultPayloadBuilder() =>
+      SearchLocationsApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchLocationsApiRequest> get commandPayloadSerializer =>
+      SearchLocationsApiRequest.serializer;
+
+  @override
+  Serializer<SearchLocationsApiResponse> get resultPayloadSerializer =>
+      SearchLocationsApiResponse.serializer;
 }

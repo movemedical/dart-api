@@ -160,4 +160,31 @@ class _$BarcodeScansToStockApi extends BarcodeScansToStockApi {
         FullType(ApiCommand, [FullType(BarcodeScansToStockApiRequest)]),
         FullType(ApiResult, [FullType(BarcodeScansToStockApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<BarcodeScansToStockApiRequest> newCommandBuilder() =>
+      ApiCommand<BarcodeScansToStockApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<BarcodeScansToStockApiResponse> newResultBuilder() =>
+      ApiResult<BarcodeScansToStockApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  BarcodeScansToStockApiRequestBuilder newCommandPayloadBuilder() =>
+      BarcodeScansToStockApiRequest().toBuilder();
+
+  @override
+  BarcodeScansToStockApiResponseBuilder newResultPayloadBuilder() =>
+      BarcodeScansToStockApiResponse().toBuilder();
+
+  @override
+  Serializer<BarcodeScansToStockApiRequest> get commandPayloadSerializer =>
+      BarcodeScansToStockApiRequest.serializer;
+
+  @override
+  Serializer<BarcodeScansToStockApiResponse> get resultPayloadSerializer =>
+      BarcodeScansToStockApiResponse.serializer;
 }

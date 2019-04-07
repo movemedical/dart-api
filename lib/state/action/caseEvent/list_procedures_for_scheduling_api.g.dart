@@ -165,4 +165,34 @@ class _$ListProceduresForSchedulingApi extends ListProceduresForSchedulingApi {
         FullType(ApiCommand, [FullType(ListProceduresForSchedulingApiRequest)]),
         FullType(ApiResult, [FullType(ListProceduresForSchedulingApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListProceduresForSchedulingApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListProceduresForSchedulingApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListProceduresForSchedulingApiResponse> newResultBuilder() =>
+      ApiResult<ListProceduresForSchedulingApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListProceduresForSchedulingApiRequestBuilder newCommandPayloadBuilder() =>
+      ListProceduresForSchedulingApiRequest().toBuilder();
+
+  @override
+  ListProceduresForSchedulingApiResponseBuilder newResultPayloadBuilder() =>
+      ListProceduresForSchedulingApiResponse().toBuilder();
+
+  @override
+  Serializer<ListProceduresForSchedulingApiRequest>
+      get commandPayloadSerializer =>
+          ListProceduresForSchedulingApiRequest.serializer;
+
+  @override
+  Serializer<ListProceduresForSchedulingApiResponse>
+      get resultPayloadSerializer =>
+          ListProceduresForSchedulingApiResponse.serializer;
 }

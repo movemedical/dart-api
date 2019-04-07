@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/adjustment/list_adjustmen
 
 part 'list_adjustments_api.g.dart';
 
-abstract class ListAdjustmentsApi extends ApiDispatcher<ListAdjustmentsApiRequest, ListAdjustmentsApiResponse, ListAdjustmentsApi> {
+abstract class ListAdjustmentsApi extends ApiDispatcher<ListAdjustmentsApiRequest,
+ListAdjustmentsApiRequestBuilder,
+ListAdjustmentsApiResponse,
+ListAdjustmentsApiResponseBuilder,
+ListAdjustmentsApi> {
   @override
   String get path => 'v1/inventory/adjustment/list';
-  
-  @override
-  Serializer<ListAdjustmentsApiRequest> get requestSerializer => ListAdjustmentsApiRequest.serializer;
-  
-  @override
-  Serializer<ListAdjustmentsApiResponse> get responseSerializer => ListAdjustmentsApiResponse.serializer;
   
   ListAdjustmentsApi._();
   

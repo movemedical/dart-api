@@ -165,4 +165,34 @@ class _$GetOrderReasonSpecificationApi extends GetOrderReasonSpecificationApi {
         FullType(ApiCommand, [FullType(GetOrderReasonSpecificationApiRequest)]),
         FullType(ApiResult, [FullType(GetOrderReasonSpecificationApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetOrderReasonSpecificationApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<GetOrderReasonSpecificationApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetOrderReasonSpecificationApiResponse> newResultBuilder() =>
+      ApiResult<GetOrderReasonSpecificationApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetOrderReasonSpecificationApiRequestBuilder newCommandPayloadBuilder() =>
+      GetOrderReasonSpecificationApiRequest().toBuilder();
+
+  @override
+  GetOrderReasonSpecificationApiResponseBuilder newResultPayloadBuilder() =>
+      GetOrderReasonSpecificationApiResponse().toBuilder();
+
+  @override
+  Serializer<GetOrderReasonSpecificationApiRequest>
+      get commandPayloadSerializer =>
+          GetOrderReasonSpecificationApiRequest.serializer;
+
+  @override
+  Serializer<GetOrderReasonSpecificationApiResponse>
+      get resultPayloadSerializer =>
+          GetOrderReasonSpecificationApiResponse.serializer;
 }

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/aeToTeam/lis
 
 part 'list_ae_team_options_api.g.dart';
 
-abstract class ListAeTeamOptionsApi extends ApiDispatcher<ListAeTeamOptionsApiRequest, ListAeTeamOptionsApiResponse, ListAeTeamOptionsApi> {
+abstract class ListAeTeamOptionsApi extends ApiDispatcher<ListAeTeamOptionsApiRequest,
+ListAeTeamOptionsApiRequestBuilder,
+ListAeTeamOptionsApiResponse,
+ListAeTeamOptionsApiResponseBuilder,
+ListAeTeamOptionsApi> {
   @override
   String get path => 'v1/directory/relationship/ae_to_team/list_options';
-  
-  @override
-  Serializer<ListAeTeamOptionsApiRequest> get requestSerializer => ListAeTeamOptionsApiRequest.serializer;
-  
-  @override
-  Serializer<ListAeTeamOptionsApiResponse> get responseSerializer => ListAeTeamOptionsApiResponse.serializer;
   
   ListAeTeamOptionsApi._();
   

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/order/create_order_from_o
 
 part 'create_order_from_open_lines_api.g.dart';
 
-abstract class CreateOrderFromOpenLinesApi extends ApiDispatcher<CreateOrderFromOpenLinesApiRequest, CreateOrderFromOpenLinesApiResponse, CreateOrderFromOpenLinesApi> {
+abstract class CreateOrderFromOpenLinesApi extends ApiDispatcher<CreateOrderFromOpenLinesApiRequest,
+CreateOrderFromOpenLinesApiRequestBuilder,
+CreateOrderFromOpenLinesApiResponse,
+CreateOrderFromOpenLinesApiResponseBuilder,
+CreateOrderFromOpenLinesApi> {
   @override
   String get path => 'v1/inventory/order/create_from_open_lines';
-  
-  @override
-  Serializer<CreateOrderFromOpenLinesApiRequest> get requestSerializer => CreateOrderFromOpenLinesApiRequest.serializer;
-  
-  @override
-  Serializer<CreateOrderFromOpenLinesApiResponse> get responseSerializer => CreateOrderFromOpenLinesApiResponse.serializer;
   
   CreateOrderFromOpenLinesApi._();
   

@@ -160,4 +160,31 @@ class _$ListWebServiceLogsApi extends ListWebServiceLogsApi {
         FullType(ApiCommand, [FullType(ListWebServiceLogsApiRequest)]),
         FullType(ApiResult, [FullType(ListWebServiceLogsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListWebServiceLogsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListWebServiceLogsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListWebServiceLogsApiResponse> newResultBuilder() =>
+      ApiResult<ListWebServiceLogsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListWebServiceLogsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListWebServiceLogsApiRequest().toBuilder();
+
+  @override
+  ListWebServiceLogsApiResponseBuilder newResultPayloadBuilder() =>
+      ListWebServiceLogsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListWebServiceLogsApiRequest> get commandPayloadSerializer =>
+      ListWebServiceLogsApiRequest.serializer;
+
+  @override
+  Serializer<ListWebServiceLogsApiResponse> get resultPayloadSerializer =>
+      ListWebServiceLogsApiResponse.serializer;
 }

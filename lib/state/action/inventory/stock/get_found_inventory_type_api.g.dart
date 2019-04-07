@@ -161,4 +161,31 @@ class _$GetFoundInventoryTypeApi extends GetFoundInventoryTypeApi {
         FullType(ApiCommand, [FullType(GetFoundInventoryTypeApiRequest)]),
         FullType(ApiResult, [FullType(GetFoundInventoryTypeApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetFoundInventoryTypeApiRequest> newCommandBuilder() =>
+      ApiCommand<GetFoundInventoryTypeApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetFoundInventoryTypeApiResponse> newResultBuilder() =>
+      ApiResult<GetFoundInventoryTypeApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetFoundInventoryTypeApiRequestBuilder newCommandPayloadBuilder() =>
+      GetFoundInventoryTypeApiRequest().toBuilder();
+
+  @override
+  GetFoundInventoryTypeApiResponseBuilder newResultPayloadBuilder() =>
+      GetFoundInventoryTypeApiResponse().toBuilder();
+
+  @override
+  Serializer<GetFoundInventoryTypeApiRequest> get commandPayloadSerializer =>
+      GetFoundInventoryTypeApiRequest.serializer;
+
+  @override
+  Serializer<GetFoundInventoryTypeApiResponse> get resultPayloadSerializer =>
+      GetFoundInventoryTypeApiResponse.serializer;
 }

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/stock/move_stock_within_l
 
 part 'move_stock_within_location_api.g.dart';
 
-abstract class MoveStockWithinLocationApi extends ApiDispatcher<MoveStockWithinLocationApiRequest, Null, MoveStockWithinLocationApi> {
+abstract class MoveStockWithinLocationApi extends ApiDispatcher<MoveStockWithinLocationApiRequest,
+MoveStockWithinLocationApiRequestBuilder,
+Empty,
+EmptyBuilder,
+MoveStockWithinLocationApi> {
   @override
   String get path => 'v1/inventory/stock/move_within_location';
-  
-  @override
-  Serializer<MoveStockWithinLocationApiRequest> get requestSerializer => MoveStockWithinLocationApiRequest.serializer;
   
   MoveStockWithinLocationApi._();
   

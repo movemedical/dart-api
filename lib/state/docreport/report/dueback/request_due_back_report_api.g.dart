@@ -160,4 +160,31 @@ class _$RequestDueBackReportApi extends RequestDueBackReportApi {
         FullType(ApiCommand, [FullType(RequestDueBackReportApiRequest)]),
         FullType(ApiResult, [FullType(RequestDueBackReportApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestDueBackReportApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestDueBackReportApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestDueBackReportApiResponse> newResultBuilder() =>
+      ApiResult<RequestDueBackReportApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestDueBackReportApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestDueBackReportApiRequest().toBuilder();
+
+  @override
+  RequestDueBackReportApiResponseBuilder newResultPayloadBuilder() =>
+      RequestDueBackReportApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestDueBackReportApiRequest> get commandPayloadSerializer =>
+      RequestDueBackReportApiRequest.serializer;
+
+  @override
+  Serializer<RequestDueBackReportApiResponse> get resultPayloadSerializer =>
+      RequestDueBackReportApiResponse.serializer;
 }

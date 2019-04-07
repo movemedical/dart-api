@@ -11,98 +11,99 @@ part of 'update_case_status_to_post_op_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateCaseStatusToPostOpApi> UpdateCaseStatusToPostOpApiOptions();
 
 class _$UpdateCaseStatusToPostOpApi extends UpdateCaseStatusToPostOpApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateCaseStatusToPostOpApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToPostOpApi, String>> $clear;
+          ApiResult<Empty>, UpdateCaseStatusToPostOpApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToPostOpApi, String>> $cancel;
+          ApiResult<Empty>, UpdateCaseStatusToPostOpApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseStatusToPostOpApi,
           Command<ApiCommand<UpdateCaseStatusToPostOpApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseStatusToPostOpApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToPostOpApi, String>> $detach;
+          ApiResult<Empty>, UpdateCaseStatusToPostOpApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToPostOpApi, String>> $attach;
+          ApiResult<Empty>, UpdateCaseStatusToPostOpApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseStatusToPostOpApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseStatusToPostOpApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToPostOpApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToPostOpApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateCaseStatusToPostOpApi,
                     Command<ApiCommand<UpdateCaseStatusToPostOpApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>,
-                UpdateCaseStatusToPostOpApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateCaseStatusToPostOpApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToPostOpApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToPostOpApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToPostOpApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$UpdateCaseStatusToPostOpApi extends UpdateCaseStatusToPostOpApi {
       _$UpdateCaseStatusToPostOpApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateCaseStatusToPostOpApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdateCaseStatusToPostOpApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<UpdateCaseStatusToPostOpApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateCaseStatusToPostOpApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseStatusToPostOpApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCaseStatusToPostOpApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateCaseStatusToPostOpApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$UpdateCaseStatusToPostOpApi extends UpdateCaseStatusToPostOpApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseStatusToPostOpApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateCaseStatusToPostOpApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateCaseStatusToPostOpApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateCaseStatusToPostOpApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateCaseStatusToPostOpApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateCaseStatusToPostOpApiRequest> get commandPayloadSerializer =>
+      UpdateCaseStatusToPostOpApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

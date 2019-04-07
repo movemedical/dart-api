@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/get_expiring_items_api_re
 
 part 'get_expiring_items_api.g.dart';
 
-abstract class GetExpiringItemsApi extends ApiDispatcher<GetExpiringItemsApiRequest, GetExpiringItemsApiResponse, GetExpiringItemsApi> {
+abstract class GetExpiringItemsApi extends ApiDispatcher<GetExpiringItemsApiRequest,
+GetExpiringItemsApiRequestBuilder,
+GetExpiringItemsApiResponse,
+GetExpiringItemsApiResponseBuilder,
+GetExpiringItemsApi> {
   @override
   String get path => 'v1/dashboard/expiring_items';
-  
-  @override
-  Serializer<GetExpiringItemsApiRequest> get requestSerializer => GetExpiringItemsApiRequest.serializer;
-  
-  @override
-  Serializer<GetExpiringItemsApiResponse> get responseSerializer => GetExpiringItemsApiResponse.serializer;
   
   GetExpiringItemsApi._();
   

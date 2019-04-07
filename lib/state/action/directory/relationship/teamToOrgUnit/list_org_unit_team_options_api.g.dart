@@ -162,4 +162,31 @@ class _$ListOrgUnitTeamOptionsApi extends ListOrgUnitTeamOptionsApi {
         FullType(ApiCommand, [FullType(ListOrgUnitTeamOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListOrgUnitTeamOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListOrgUnitTeamOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListOrgUnitTeamOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListOrgUnitTeamOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListOrgUnitTeamOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListOrgUnitTeamOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListOrgUnitTeamOptionsApiRequest().toBuilder();
+
+  @override
+  ListOrgUnitTeamOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListOrgUnitTeamOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListOrgUnitTeamOptionsApiRequest> get commandPayloadSerializer =>
+      ListOrgUnitTeamOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListOrgUnitTeamOptionsApiResponse> get resultPayloadSerializer =>
+      ListOrgUnitTeamOptionsApiResponse.serializer;
 }

@@ -10,74 +10,75 @@ part of 'create_picks_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>,
     CreatePicksApi> CreatePicksApiOptions();
 
 class _$CreatePicksApi extends CreatePicksApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>,
       CreatePicksApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
           CreatePicksApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
           CreatePicksApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
           CreatePicksApi, Command<ApiCommand<CreatePicksApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
-          CreatePicksApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
+          CreatePicksApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
           CreatePicksApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
           CreatePicksApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
           CreatePicksApi, CommandProgress>> $progress;
 
   _$CreatePicksApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreatePicksApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
                 CreatePicksApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
                 CreatePicksApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CreatePicksApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CreatePicksApi,
                     Command<ApiCommand<CreatePicksApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePicksApiRequest>,
-                ApiResult<Null>,
-                CreatePicksApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CreatePicksApiRequest>,
+                    ApiResult<Empty>,
+                    CreatePicksApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
                 CreatePicksApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>,
                 CreatePicksApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreatePicksApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreatePicksApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,14 +87,14 @@ class _$CreatePicksApi extends CreatePicksApi {
       _$CreatePicksApi._(options());
 
   @override
-  CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CreatePicksApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<CreatePicksApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<CreatePicksApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -116,6 +117,30 @@ class _$CreatePicksApi extends CreatePicksApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreatePicksApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreatePicksApiRequest> newCommandBuilder() =>
+      ApiCommand<CreatePicksApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreatePicksApiRequestBuilder newCommandPayloadBuilder() =>
+      CreatePicksApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CreatePicksApiRequest> get commandPayloadSerializer =>
+      CreatePicksApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

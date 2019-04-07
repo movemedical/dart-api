@@ -172,4 +172,35 @@ class _$GetCaseRequirementsDeliveryInfoApi
         FullType(
             ApiResult, [FullType(GetCaseRequirementsDeliveryInfoApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetCaseRequirementsDeliveryInfoApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<GetCaseRequirementsDeliveryInfoApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetCaseRequirementsDeliveryInfoApiResponse>
+      newResultBuilder() =>
+          ApiResult<GetCaseRequirementsDeliveryInfoApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetCaseRequirementsDeliveryInfoApiRequestBuilder newCommandPayloadBuilder() =>
+      GetCaseRequirementsDeliveryInfoApiRequest().toBuilder();
+
+  @override
+  GetCaseRequirementsDeliveryInfoApiResponseBuilder newResultPayloadBuilder() =>
+      GetCaseRequirementsDeliveryInfoApiResponse().toBuilder();
+
+  @override
+  Serializer<GetCaseRequirementsDeliveryInfoApiRequest>
+      get commandPayloadSerializer =>
+          GetCaseRequirementsDeliveryInfoApiRequest.serializer;
+
+  @override
+  Serializer<GetCaseRequirementsDeliveryInfoApiResponse>
+      get resultPayloadSerializer =>
+          GetCaseRequirementsDeliveryInfoApiResponse.serializer;
 }

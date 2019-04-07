@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/cancel_audit_api_re
 
 part 'cancel_audit_api.g.dart';
 
-abstract class CancelAuditApi extends ApiDispatcher<CancelAuditApiRequest, Null, CancelAuditApi> {
+abstract class CancelAuditApi extends ApiDispatcher<CancelAuditApiRequest,
+CancelAuditApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CancelAuditApi> {
   @override
   String get path => 'v1/inventory/audit/cancel';
-  
-  @override
-  Serializer<CancelAuditApiRequest> get requestSerializer => CancelAuditApiRequest.serializer;
   
   CancelAuditApi._();
   

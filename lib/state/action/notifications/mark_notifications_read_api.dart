@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/notifications/mark_notifications_re
 
 part 'mark_notifications_read_api.g.dart';
 
-abstract class MarkNotificationsReadApi extends ApiDispatcher<MarkNotificationsReadApiRequest, Null, MarkNotificationsReadApi> {
+abstract class MarkNotificationsReadApi extends ApiDispatcher<MarkNotificationsReadApiRequest,
+MarkNotificationsReadApiRequestBuilder,
+Empty,
+EmptyBuilder,
+MarkNotificationsReadApi> {
   @override
   String get path => 'v1/notifications/mark_as_read';
-  
-  @override
-  Serializer<MarkNotificationsReadApiRequest> get requestSerializer => MarkNotificationsReadApiRequest.serializer;
   
   MarkNotificationsReadApi._();
   

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/attributable/notes/list_notes_api_r
 
 part 'list_notes_api.g.dart';
 
-abstract class ListNotesApi extends ApiDispatcher<ListNotesApiRequest, ListNotesApiResponse, ListNotesApi> {
+abstract class ListNotesApi extends ApiDispatcher<ListNotesApiRequest,
+ListNotesApiRequestBuilder,
+ListNotesApiResponse,
+ListNotesApiResponseBuilder,
+ListNotesApi> {
   @override
   String get path => 'v1/attributable/notes/listnotes';
-  
-  @override
-  Serializer<ListNotesApiRequest> get requestSerializer => ListNotesApiRequest.serializer;
-  
-  @override
-  Serializer<ListNotesApiResponse> get responseSerializer => ListNotesApiResponse.serializer;
   
   ListNotesApi._();
   

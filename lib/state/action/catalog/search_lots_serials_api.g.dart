@@ -160,4 +160,31 @@ class _$SearchLotsSerialsApi extends SearchLotsSerialsApi {
         FullType(ApiCommand, [FullType(SearchLotsSerialsApiRequest)]),
         FullType(ApiResult, [FullType(SearchLotsSerialsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchLotsSerialsApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchLotsSerialsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchLotsSerialsApiResponse> newResultBuilder() =>
+      ApiResult<SearchLotsSerialsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchLotsSerialsApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchLotsSerialsApiRequest().toBuilder();
+
+  @override
+  SearchLotsSerialsApiResponseBuilder newResultPayloadBuilder() =>
+      SearchLotsSerialsApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchLotsSerialsApiRequest> get commandPayloadSerializer =>
+      SearchLotsSerialsApiRequest.serializer;
+
+  @override
+  Serializer<SearchLotsSerialsApiResponse> get resultPayloadSerializer =>
+      SearchLotsSerialsApiResponse.serializer;
 }

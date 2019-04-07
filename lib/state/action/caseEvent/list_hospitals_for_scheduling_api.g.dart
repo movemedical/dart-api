@@ -164,4 +164,33 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
         FullType(ApiCommand, [FullType(ListHospitalsForSchedulingApiRequest)]),
         FullType(ApiResult, [FullType(ListHospitalsForSchedulingApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHospitalsForSchedulingApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHospitalsForSchedulingApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHospitalsForSchedulingApiResponse> newResultBuilder() =>
+      ApiResult<ListHospitalsForSchedulingApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHospitalsForSchedulingApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHospitalsForSchedulingApiRequest().toBuilder();
+
+  @override
+  ListHospitalsForSchedulingApiResponseBuilder newResultPayloadBuilder() =>
+      ListHospitalsForSchedulingApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHospitalsForSchedulingApiRequest>
+      get commandPayloadSerializer =>
+          ListHospitalsForSchedulingApiRequest.serializer;
+
+  @override
+  Serializer<ListHospitalsForSchedulingApiResponse>
+      get resultPayloadSerializer =>
+          ListHospitalsForSchedulingApiResponse.serializer;
 }

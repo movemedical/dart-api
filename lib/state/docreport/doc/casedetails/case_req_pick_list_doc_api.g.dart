@@ -10,91 +10,92 @@ part of 'case_req_pick_list_doc_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<CaseReqPickListDocApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CaseReqPickListDocApi> CaseReqPickListDocApiOptions();
 
 class _$CaseReqPickListDocApi extends CaseReqPickListDocApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<CaseReqPickListDocApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CaseReqPickListDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CaseReqPickListDocApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>,
           CaseReqPickListDocApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>,
           CaseReqPickListDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CaseReqPickListDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CaseReqPickListDocApi,
           Command<ApiCommand<CaseReqPickListDocApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>,
-          CaseReqPickListDocApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>,
+          CaseReqPickListDocApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>,
           CaseReqPickListDocApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>,
           CaseReqPickListDocApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>,
           CaseReqPickListDocApi, CommandProgress>> $progress;
 
   _$CaseReqPickListDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseReqPickListDocApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseReqPickListDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CaseReqPickListDocApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CaseReqPickListDocApi,
                     Command<ApiCommand<CaseReqPickListDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>,
-                CaseReqPickListDocApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CaseReqPickListDocApiRequest>,
+                    ApiResult<Empty>,
+                    CaseReqPickListDocApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseReqPickListDocApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseReqPickListDocApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CaseReqPickListDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CaseReqPickListDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,15 @@ class _$CaseReqPickListDocApi extends CaseReqPickListDocApi {
       _$CaseReqPickListDocApi._(options());
 
   @override
-  CommandState<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<CaseReqPickListDocApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<CaseReqPickListDocApiRequest>,
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Null>>();
+          ApiCommand<CaseReqPickListDocApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +135,30 @@ class _$CaseReqPickListDocApi extends CaseReqPickListDocApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CaseReqPickListDocApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CaseReqPickListDocApiRequest> newCommandBuilder() =>
+      ApiCommand<CaseReqPickListDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CaseReqPickListDocApiRequestBuilder newCommandPayloadBuilder() =>
+      CaseReqPickListDocApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CaseReqPickListDocApiRequest> get commandPayloadSerializer =>
+      CaseReqPickListDocApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

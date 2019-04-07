@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/close_audit_item_ap
 
 part 'close_audit_item_api.g.dart';
 
-abstract class CloseAuditItemApi extends ApiDispatcher<CloseAuditItemApiRequest, Null, CloseAuditItemApi> {
+abstract class CloseAuditItemApi extends ApiDispatcher<CloseAuditItemApiRequest,
+CloseAuditItemApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CloseAuditItemApi> {
   @override
   String get path => 'v1/inventory/audit/close_item';
-  
-  @override
-  Serializer<CloseAuditItemApiRequest> get requestSerializer => CloseAuditItemApiRequest.serializer;
   
   CloseAuditItemApi._();
   

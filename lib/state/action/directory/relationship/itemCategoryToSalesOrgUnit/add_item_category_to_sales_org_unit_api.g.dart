@@ -11,101 +11,102 @@ part of 'add_item_category_to_sales_org_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AddItemCategoryToSalesOrgUnitApi> AddItemCategoryToSalesOrgUnitApiOptions();
 
 class _$AddItemCategoryToSalesOrgUnitApi
     extends AddItemCategoryToSalesOrgUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AddItemCategoryToSalesOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>, AddItemCategoryToSalesOrgUnitApi, String>> $clear;
+          ApiResult<Empty>, AddItemCategoryToSalesOrgUnitApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>, AddItemCategoryToSalesOrgUnitApi, String>> $cancel;
+          ApiResult<Empty>, AddItemCategoryToSalesOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               AddItemCategoryToSalesOrgUnitApi,
               Command<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddItemCategoryToSalesOrgUnitApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>, AddItemCategoryToSalesOrgUnitApi, String>> $detach;
+          ApiResult<Empty>, AddItemCategoryToSalesOrgUnitApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>, AddItemCategoryToSalesOrgUnitApi, String>> $attach;
+          ApiResult<Empty>, AddItemCategoryToSalesOrgUnitApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddItemCategoryToSalesOrgUnitApi,
           CommandProgress>> $progress;
 
   _$AddItemCategoryToSalesOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddItemCategoryToSalesOrgUnitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddItemCategoryToSalesOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddItemCategoryToSalesOrgUnitApi,
                     Command<
                         ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
-                AddItemCategoryToSalesOrgUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
+                    ApiResult<Empty>,
+                    AddItemCategoryToSalesOrgUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddItemCategoryToSalesOrgUnitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddItemCategoryToSalesOrgUnitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddItemCategoryToSalesOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -116,17 +117,17 @@ class _$AddItemCategoryToSalesOrgUnitApi
 
   @override
   CommandState<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -150,6 +151,32 @@ class _$AddItemCategoryToSalesOrgUnitApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(AddItemCategoryToSalesOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddItemCategoryToSalesOrgUnitApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<AddItemCategoryToSalesOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddItemCategoryToSalesOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      AddItemCategoryToSalesOrgUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddItemCategoryToSalesOrgUnitApiRequest>
+      get commandPayloadSerializer =>
+          AddItemCategoryToSalesOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

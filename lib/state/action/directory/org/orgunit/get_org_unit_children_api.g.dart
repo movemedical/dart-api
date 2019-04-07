@@ -160,4 +160,31 @@ class _$GetOrgUnitChildrenApi extends GetOrgUnitChildrenApi {
         FullType(ApiCommand, [FullType(GetOrgUnitChildrenApiRequest)]),
         FullType(ApiResult, [FullType(GetOrgUnitChildrenApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetOrgUnitChildrenApiRequest> newCommandBuilder() =>
+      ApiCommand<GetOrgUnitChildrenApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetOrgUnitChildrenApiResponse> newResultBuilder() =>
+      ApiResult<GetOrgUnitChildrenApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetOrgUnitChildrenApiRequestBuilder newCommandPayloadBuilder() =>
+      GetOrgUnitChildrenApiRequest().toBuilder();
+
+  @override
+  GetOrgUnitChildrenApiResponseBuilder newResultPayloadBuilder() =>
+      GetOrgUnitChildrenApiResponse().toBuilder();
+
+  @override
+  Serializer<GetOrgUnitChildrenApiRequest> get commandPayloadSerializer =>
+      GetOrgUnitChildrenApiRequest.serializer;
+
+  @override
+  Serializer<GetOrgUnitChildrenApiResponse> get resultPayloadSerializer =>
+      GetOrgUnitChildrenApiResponse.serializer;
 }

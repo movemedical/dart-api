@@ -173,4 +173,37 @@ class _$ListBizUnitLinkOptionsForOrgUnitApi
         FullType(
             ApiResult, [FullType(ListBizUnitLinkOptionsForOrgUnitApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListBizUnitLinkOptionsForOrgUnitApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListBizUnitLinkOptionsForOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListBizUnitLinkOptionsForOrgUnitApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListBizUnitLinkOptionsForOrgUnitApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListBizUnitLinkOptionsForOrgUnitApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          ListBizUnitLinkOptionsForOrgUnitApiRequest().toBuilder();
+
+  @override
+  ListBizUnitLinkOptionsForOrgUnitApiResponseBuilder
+      newResultPayloadBuilder() =>
+          ListBizUnitLinkOptionsForOrgUnitApiResponse().toBuilder();
+
+  @override
+  Serializer<ListBizUnitLinkOptionsForOrgUnitApiRequest>
+      get commandPayloadSerializer =>
+          ListBizUnitLinkOptionsForOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<ListBizUnitLinkOptionsForOrgUnitApiResponse>
+      get resultPayloadSerializer =>
+          ListBizUnitLinkOptionsForOrgUnitApiResponse.serializer;
 }

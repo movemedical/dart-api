@@ -160,4 +160,31 @@ class _$ListAdjustmentsApi extends ListAdjustmentsApi {
         FullType(ApiCommand, [FullType(ListAdjustmentsApiRequest)]),
         FullType(ApiResult, [FullType(ListAdjustmentsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAdjustmentsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAdjustmentsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAdjustmentsApiResponse> newResultBuilder() =>
+      ApiResult<ListAdjustmentsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAdjustmentsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAdjustmentsApiRequest().toBuilder();
+
+  @override
+  ListAdjustmentsApiResponseBuilder newResultPayloadBuilder() =>
+      ListAdjustmentsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAdjustmentsApiRequest> get commandPayloadSerializer =>
+      ListAdjustmentsApiRequest.serializer;
+
+  @override
+  Serializer<ListAdjustmentsApiResponse> get resultPayloadSerializer =>
+      ListAdjustmentsApiResponse.serializer;
 }

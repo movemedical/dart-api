@@ -160,4 +160,31 @@ class _$ListCancelReasonsApi extends ListCancelReasonsApi {
         FullType(ApiCommand, [FullType(ListCancelReasonsApiRequest)]),
         FullType(ApiResult, [FullType(ListCancelReasonsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListCancelReasonsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListCancelReasonsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListCancelReasonsApiResponse> newResultBuilder() =>
+      ApiResult<ListCancelReasonsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListCancelReasonsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListCancelReasonsApiRequest().toBuilder();
+
+  @override
+  ListCancelReasonsApiResponseBuilder newResultPayloadBuilder() =>
+      ListCancelReasonsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListCancelReasonsApiRequest> get commandPayloadSerializer =>
+      ListCancelReasonsApiRequest.serializer;
+
+  @override
+  Serializer<ListCancelReasonsApiResponse> get resultPayloadSerializer =>
+      ListCancelReasonsApiResponse.serializer;
 }

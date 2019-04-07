@@ -10,90 +10,91 @@ part of 'update_facility_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>>,
     UpdateFacilityApi> UpdateFacilityApiOptions();
 
 class _$UpdateFacilityApi extends UpdateFacilityApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateFacilityApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateFacilityApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>,
           UpdateFacilityApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>,
           UpdateFacilityApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateFacilityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateFacilityApi,
           Command<ApiCommand<UpdateFacilityApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>,
-          UpdateFacilityApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>,
+          UpdateFacilityApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>,
           UpdateFacilityApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>,
           UpdateFacilityApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>,
           UpdateFacilityApi, CommandProgress>> $progress;
 
   _$UpdateFacilityApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateFacilityApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateFacilityApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateFacilityApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateFacilityApi,
                     Command<ApiCommand<UpdateFacilityApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>,
-                UpdateFacilityApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateFacilityApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateFacilityApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateFacilityApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateFacilityApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateFacilityApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -102,14 +103,14 @@ class _$UpdateFacilityApi extends UpdateFacilityApi {
       _$UpdateFacilityApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>
-      get $initial =>
-          CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>();
+  CommandState<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>>
+      get $initial => CommandState<ApiCommand<UpdateFacilityApiRequest>,
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<UpdateFacilityApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<UpdateFacilityApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -132,6 +133,30 @@ class _$UpdateFacilityApi extends UpdateFacilityApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateFacilityApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateFacilityApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateFacilityApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateFacilityApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateFacilityApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateFacilityApiRequest> get commandPayloadSerializer =>
+      UpdateFacilityApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

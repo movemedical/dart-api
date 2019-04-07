@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/stock/adjust_stock_quanti
 
 part 'adjust_stock_quantity_api.g.dart';
 
-abstract class AdjustStockQuantityApi extends ApiDispatcher<AdjustStockQuantityApiRequest, Null, AdjustStockQuantityApi> {
+abstract class AdjustStockQuantityApi extends ApiDispatcher<AdjustStockQuantityApiRequest,
+AdjustStockQuantityApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AdjustStockQuantityApi> {
   @override
   String get path => 'v1/inventory/stock/adjust_stock_quantity';
-  
-  @override
-  Serializer<AdjustStockQuantityApiRequest> get requestSerializer => AdjustStockQuantityApiRequest.serializer;
   
   AdjustStockQuantityApi._();
   

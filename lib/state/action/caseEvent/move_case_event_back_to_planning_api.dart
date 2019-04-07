@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/move_case_event_back_to_p
 
 part 'move_case_event_back_to_planning_api.g.dart';
 
-abstract class MoveCaseEventBackToPlanningApi extends ApiDispatcher<MoveCaseEventBackToPlanningApiRequest, Null, MoveCaseEventBackToPlanningApi> {
+abstract class MoveCaseEventBackToPlanningApi extends ApiDispatcher<MoveCaseEventBackToPlanningApiRequest,
+MoveCaseEventBackToPlanningApiRequestBuilder,
+Empty,
+EmptyBuilder,
+MoveCaseEventBackToPlanningApi> {
   @override
   String get path => 'v1/case_event/move_to_planning';
-  
-  @override
-  Serializer<MoveCaseEventBackToPlanningApiRequest> get requestSerializer => MoveCaseEventBackToPlanningApiRequest.serializer;
   
   MoveCaseEventBackToPlanningApi._();
   

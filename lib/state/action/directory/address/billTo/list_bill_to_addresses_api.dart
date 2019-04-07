@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/address/billTo/list_bill_
 
 part 'list_bill_to_addresses_api.g.dart';
 
-abstract class ListBillToAddressesApi extends ApiDispatcher<ListBillToAddressesApiRequest, ListBillToAddressesApiResponse, ListBillToAddressesApi> {
+abstract class ListBillToAddressesApi extends ApiDispatcher<ListBillToAddressesApiRequest,
+ListBillToAddressesApiRequestBuilder,
+ListBillToAddressesApiResponse,
+ListBillToAddressesApiResponseBuilder,
+ListBillToAddressesApi> {
   @override
   String get path => 'v1/directory/address/bill_to/list';
-  
-  @override
-  Serializer<ListBillToAddressesApiRequest> get requestSerializer => ListBillToAddressesApiRequest.serializer;
-  
-  @override
-  Serializer<ListBillToAddressesApiResponse> get responseSerializer => ListBillToAddressesApiResponse.serializer;
   
   ListBillToAddressesApi._();
   

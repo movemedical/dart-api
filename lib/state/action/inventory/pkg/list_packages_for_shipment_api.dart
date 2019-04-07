@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/pkg/list_packages_for_shi
 
 part 'list_packages_for_shipment_api.g.dart';
 
-abstract class ListPackagesForShipmentApi extends ApiDispatcher<ListPackagesForShipmentApiRequest, ListPackagesForShipmentApiResponse, ListPackagesForShipmentApi> {
+abstract class ListPackagesForShipmentApi extends ApiDispatcher<ListPackagesForShipmentApiRequest,
+ListPackagesForShipmentApiRequestBuilder,
+ListPackagesForShipmentApiResponse,
+ListPackagesForShipmentApiResponseBuilder,
+ListPackagesForShipmentApi> {
   @override
   String get path => 'v1/inventory/pkg/list_for_shipment';
-  
-  @override
-  Serializer<ListPackagesForShipmentApiRequest> get requestSerializer => ListPackagesForShipmentApiRequest.serializer;
-  
-  @override
-  Serializer<ListPackagesForShipmentApiResponse> get responseSerializer => ListPackagesForShipmentApiResponse.serializer;
   
   ListPackagesForShipmentApi._();
   

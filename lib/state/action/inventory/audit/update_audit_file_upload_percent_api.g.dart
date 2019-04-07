@@ -11,101 +11,102 @@ part of 'update_audit_file_upload_percent_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateAuditFileUploadPercentApi> UpdateAuditFileUploadPercentApiOptions();
 
 class _$UpdateAuditFileUploadPercentApi
     extends UpdateAuditFileUploadPercentApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateAuditFileUploadPercentApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateAuditFileUploadPercentApi, String>> $clear;
+          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateAuditFileUploadPercentApi, String>> $cancel;
+          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               UpdateAuditFileUploadPercentApi,
               Command<ApiCommand<UpdateAuditFileUploadPercentApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateAuditFileUploadPercentApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateAuditFileUploadPercentApi, String>> $detach;
+          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>, UpdateAuditFileUploadPercentApi, String>> $attach;
+          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateAuditFileUploadPercentApi,
           CommandProgress>> $progress;
 
   _$UpdateAuditFileUploadPercentApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateAuditFileUploadPercentApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateAuditFileUploadPercentApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateAuditFileUploadPercentApi,
                     Command<
                         ApiCommand<UpdateAuditFileUploadPercentApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>,
-                UpdateAuditFileUploadPercentApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateAuditFileUploadPercentApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateAuditFileUploadPercentApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateAuditFileUploadPercentApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateAuditFileUploadPercentApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -116,17 +117,17 @@ class _$UpdateAuditFileUploadPercentApi
 
   @override
   CommandState<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -150,6 +151,32 @@ class _$UpdateAuditFileUploadPercentApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(UpdateAuditFileUploadPercentApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateAuditFileUploadPercentApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<UpdateAuditFileUploadPercentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateAuditFileUploadPercentApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateAuditFileUploadPercentApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateAuditFileUploadPercentApiRequest>
+      get commandPayloadSerializer =>
+          UpdateAuditFileUploadPercentApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

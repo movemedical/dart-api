@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/list_upcoming_cases_api_r
 
 part 'list_upcoming_cases_api.g.dart';
 
-abstract class ListUpcomingCasesApi extends ApiDispatcher<ListUpcomingCasesApiRequest, ListUpcomingCasesApiResponse, ListUpcomingCasesApi> {
+abstract class ListUpcomingCasesApi extends ApiDispatcher<ListUpcomingCasesApiRequest,
+ListUpcomingCasesApiRequestBuilder,
+ListUpcomingCasesApiResponse,
+ListUpcomingCasesApiResponseBuilder,
+ListUpcomingCasesApi> {
   @override
   String get path => 'v1/dashboard/list_upcoming_cases';
-  
-  @override
-  Serializer<ListUpcomingCasesApiRequest> get requestSerializer => ListUpcomingCasesApiRequest.serializer;
-  
-  @override
-  Serializer<ListUpcomingCasesApiResponse> get responseSerializer => ListUpcomingCasesApiResponse.serializer;
   
   ListUpcomingCasesApi._();
   

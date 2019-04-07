@@ -146,4 +146,31 @@ class _$ListZonesApi extends ListZonesApi {
         FullType(ApiCommand, [FullType(ListZonesApiRequest)]),
         FullType(ApiResult, [FullType(ListZonesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListZonesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListZonesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListZonesApiResponse> newResultBuilder() =>
+      ApiResult<ListZonesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListZonesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListZonesApiRequest().toBuilder();
+
+  @override
+  ListZonesApiResponseBuilder newResultPayloadBuilder() =>
+      ListZonesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListZonesApiRequest> get commandPayloadSerializer =>
+      ListZonesApiRequest.serializer;
+
+  @override
+  Serializer<ListZonesApiResponse> get resultPayloadSerializer =>
+      ListZonesApiResponse.serializer;
 }

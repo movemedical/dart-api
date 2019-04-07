@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/user/unlock_user_api_request.dart';
 
 part 'unlock_user_api.g.dart';
 
-abstract class UnlockUserApi extends ApiDispatcher<UnlockUserApiRequest, Null, UnlockUserApi> {
+abstract class UnlockUserApi extends ApiDispatcher<UnlockUserApiRequest,
+UnlockUserApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UnlockUserApi> {
   @override
   String get path => 'v1/user/unlock';
-  
-  @override
-  Serializer<UnlockUserApiRequest> get requestSerializer => UnlockUserApiRequest.serializer;
   
   UnlockUserApi._();
   

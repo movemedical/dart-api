@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/procedure/update_procedur
 
 part 'update_procedure_api.g.dart';
 
-abstract class UpdateProcedureApi extends ApiDispatcher<UpdateProcedureApiRequest, Null, UpdateProcedureApi> {
+abstract class UpdateProcedureApi extends ApiDispatcher<UpdateProcedureApiRequest,
+UpdateProcedureApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateProcedureApi> {
   @override
   String get path => 'v1/case_event/procedure/update';
-  
-  @override
-  Serializer<UpdateProcedureApiRequest> get requestSerializer => UpdateProcedureApiRequest.serializer;
   
   UpdateProcedureApi._();
   

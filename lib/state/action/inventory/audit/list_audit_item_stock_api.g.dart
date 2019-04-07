@@ -160,4 +160,31 @@ class _$ListAuditItemStockApi extends ListAuditItemStockApi {
         FullType(ApiCommand, [FullType(ListAuditItemStockApiRequest)]),
         FullType(ApiResult, [FullType(ListAuditItemStockApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAuditItemStockApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAuditItemStockApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAuditItemStockApiResponse> newResultBuilder() =>
+      ApiResult<ListAuditItemStockApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAuditItemStockApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAuditItemStockApiRequest().toBuilder();
+
+  @override
+  ListAuditItemStockApiResponseBuilder newResultPayloadBuilder() =>
+      ListAuditItemStockApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAuditItemStockApiRequest> get commandPayloadSerializer =>
+      ListAuditItemStockApiRequest.serializer;
+
+  @override
+  Serializer<ListAuditItemStockApiResponse> get resultPayloadSerializer =>
+      ListAuditItemStockApiResponse.serializer;
 }

@@ -159,4 +159,31 @@ class _$AuditOuputFormApi extends AuditOuputFormApi {
         FullType(ApiCommand, [FullType(AuditOuputFormApiRequest)]),
         FullType(ApiResult, [FullType(AuditOuputFormApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<AuditOuputFormApiRequest> newCommandBuilder() =>
+      ApiCommand<AuditOuputFormApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<AuditOuputFormApiResponse> newResultBuilder() =>
+      ApiResult<AuditOuputFormApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AuditOuputFormApiRequestBuilder newCommandPayloadBuilder() =>
+      AuditOuputFormApiRequest().toBuilder();
+
+  @override
+  AuditOuputFormApiResponseBuilder newResultPayloadBuilder() =>
+      AuditOuputFormApiResponse().toBuilder();
+
+  @override
+  Serializer<AuditOuputFormApiRequest> get commandPayloadSerializer =>
+      AuditOuputFormApiRequest.serializer;
+
+  @override
+  Serializer<AuditOuputFormApiResponse> get resultPayloadSerializer =>
+      AuditOuputFormApiResponse.serializer;
 }

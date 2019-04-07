@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/orgunit/list_org_unit
 
 part 'list_org_units_api.g.dart';
 
-abstract class ListOrgUnitsApi extends ApiDispatcher<ListOrgUnitsApiRequest, ListOrgUnitsApiResponse, ListOrgUnitsApi> {
+abstract class ListOrgUnitsApi extends ApiDispatcher<ListOrgUnitsApiRequest,
+ListOrgUnitsApiRequestBuilder,
+ListOrgUnitsApiResponse,
+ListOrgUnitsApiResponseBuilder,
+ListOrgUnitsApi> {
   @override
   String get path => 'v1/directory/org/org_unit/list_org_units';
-  
-  @override
-  Serializer<ListOrgUnitsApiRequest> get requestSerializer => ListOrgUnitsApiRequest.serializer;
-  
-  @override
-  Serializer<ListOrgUnitsApiResponse> get responseSerializer => ListOrgUnitsApiResponse.serializer;
   
   ListOrgUnitsApi._();
   

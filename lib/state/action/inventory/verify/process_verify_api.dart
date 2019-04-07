@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/verify/process_verify_api
 
 part 'process_verify_api.g.dart';
 
-abstract class ProcessVerifyApi extends ApiDispatcher<ProcessVerifyApiRequest, ProcessVerifyApiResponse, ProcessVerifyApi> {
+abstract class ProcessVerifyApi extends ApiDispatcher<ProcessVerifyApiRequest,
+ProcessVerifyApiRequestBuilder,
+ProcessVerifyApiResponse,
+ProcessVerifyApiResponseBuilder,
+ProcessVerifyApi> {
   @override
   String get path => 'v1/inventory/verify/process';
-  
-  @override
-  Serializer<ProcessVerifyApiRequest> get requestSerializer => ProcessVerifyApiRequest.serializer;
-  
-  @override
-  Serializer<ProcessVerifyApiResponse> get responseSerializer => ProcessVerifyApiResponse.serializer;
   
   ProcessVerifyApi._();
   

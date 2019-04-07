@@ -160,4 +160,31 @@ class _$ListNotificationsApi extends ListNotificationsApi {
         FullType(ApiCommand, [FullType(ListNotificationsApiRequest)]),
         FullType(ApiResult, [FullType(ListNotificationsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListNotificationsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListNotificationsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListNotificationsApiResponse> newResultBuilder() =>
+      ApiResult<ListNotificationsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListNotificationsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListNotificationsApiRequest().toBuilder();
+
+  @override
+  ListNotificationsApiResponseBuilder newResultPayloadBuilder() =>
+      ListNotificationsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListNotificationsApiRequest> get commandPayloadSerializer =>
+      ListNotificationsApiRequest.serializer;
+
+  @override
+  Serializer<ListNotificationsApiResponse> get resultPayloadSerializer =>
+      ListNotificationsApiResponse.serializer;
 }

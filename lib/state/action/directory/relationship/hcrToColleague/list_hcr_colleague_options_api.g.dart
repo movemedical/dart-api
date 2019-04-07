@@ -164,4 +164,31 @@ class _$ListHcrColleagueOptionsApi extends ListHcrColleagueOptionsApi {
         FullType(ApiCommand, [FullType(ListHcrColleagueOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListHcrColleagueOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHcrColleagueOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHcrColleagueOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHcrColleagueOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListHcrColleagueOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHcrColleagueOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHcrColleagueOptionsApiRequest().toBuilder();
+
+  @override
+  ListHcrColleagueOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListHcrColleagueOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHcrColleagueOptionsApiRequest> get commandPayloadSerializer =>
+      ListHcrColleagueOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListHcrColleagueOptionsApiResponse> get resultPayloadSerializer =>
+      ListHcrColleagueOptionsApiResponse.serializer;
 }

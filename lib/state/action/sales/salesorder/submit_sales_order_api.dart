@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/sales/salesorder/submit_sales_order
 
 part 'submit_sales_order_api.g.dart';
 
-abstract class SubmitSalesOrderApi extends ApiDispatcher<SubmitSalesOrderApiRequest, SubmitSalesOrderApiResponse, SubmitSalesOrderApi> {
+abstract class SubmitSalesOrderApi extends ApiDispatcher<SubmitSalesOrderApiRequest,
+SubmitSalesOrderApiRequestBuilder,
+SubmitSalesOrderApiResponse,
+SubmitSalesOrderApiResponseBuilder,
+SubmitSalesOrderApi> {
   @override
   String get path => 'v1/sales/sales_order/submit';
-  
-  @override
-  Serializer<SubmitSalesOrderApiRequest> get requestSerializer => SubmitSalesOrderApiRequest.serializer;
-  
-  @override
-  Serializer<SubmitSalesOrderApiResponse> get responseSerializer => SubmitSalesOrderApiResponse.serializer;
   
   SubmitSalesOrderApi._();
   

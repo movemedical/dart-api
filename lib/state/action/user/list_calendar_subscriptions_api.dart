@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/user/list_calendar_subscriptions_ap
 
 part 'list_calendar_subscriptions_api.g.dart';
 
-abstract class ListCalendarSubscriptionsApi extends ApiDispatcher<ListCalendarSubscriptionsApiRequest, ListCalendarSubscriptionsApiResponse, ListCalendarSubscriptionsApi> {
+abstract class ListCalendarSubscriptionsApi extends ApiDispatcher<ListCalendarSubscriptionsApiRequest,
+ListCalendarSubscriptionsApiRequestBuilder,
+ListCalendarSubscriptionsApiResponse,
+ListCalendarSubscriptionsApiResponseBuilder,
+ListCalendarSubscriptionsApi> {
   @override
   String get path => 'user/calendar/list_subscriptions';
-  
-  @override
-  Serializer<ListCalendarSubscriptionsApiRequest> get requestSerializer => ListCalendarSubscriptionsApiRequest.serializer;
-  
-  @override
-  Serializer<ListCalendarSubscriptionsApiResponse> get responseSerializer => ListCalendarSubscriptionsApiResponse.serializer;
   
   ListCalendarSubscriptionsApi._();
   

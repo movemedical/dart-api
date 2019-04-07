@@ -160,4 +160,31 @@ class _$GetKitContainersApi extends GetKitContainersApi {
         FullType(ApiCommand, [FullType(GetKitContainersApiRequest)]),
         FullType(ApiResult, [FullType(GetKitContainersApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetKitContainersApiRequest> newCommandBuilder() =>
+      ApiCommand<GetKitContainersApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetKitContainersApiResponse> newResultBuilder() =>
+      ApiResult<GetKitContainersApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetKitContainersApiRequestBuilder newCommandPayloadBuilder() =>
+      GetKitContainersApiRequest().toBuilder();
+
+  @override
+  GetKitContainersApiResponseBuilder newResultPayloadBuilder() =>
+      GetKitContainersApiResponse().toBuilder();
+
+  @override
+  Serializer<GetKitContainersApiRequest> get commandPayloadSerializer =>
+      GetKitContainersApiRequest.serializer;
+
+  @override
+  Serializer<GetKitContainersApiResponse> get resultPayloadSerializer =>
+      GetKitContainersApiResponse.serializer;
 }

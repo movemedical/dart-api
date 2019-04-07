@@ -160,4 +160,31 @@ class _$GetCaseEventHistoryApi extends GetCaseEventHistoryApi {
         FullType(ApiCommand, [FullType(GetCaseEventHistoryApiRequest)]),
         FullType(ApiResult, [FullType(GetCaseEventHistoryApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetCaseEventHistoryApiRequest> newCommandBuilder() =>
+      ApiCommand<GetCaseEventHistoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetCaseEventHistoryApiResponse> newResultBuilder() =>
+      ApiResult<GetCaseEventHistoryApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetCaseEventHistoryApiRequestBuilder newCommandPayloadBuilder() =>
+      GetCaseEventHistoryApiRequest().toBuilder();
+
+  @override
+  GetCaseEventHistoryApiResponseBuilder newResultPayloadBuilder() =>
+      GetCaseEventHistoryApiResponse().toBuilder();
+
+  @override
+  Serializer<GetCaseEventHistoryApiRequest> get commandPayloadSerializer =>
+      GetCaseEventHistoryApiRequest.serializer;
+
+  @override
+  Serializer<GetCaseEventHistoryApiResponse> get resultPayloadSerializer =>
+      GetCaseEventHistoryApiResponse.serializer;
 }

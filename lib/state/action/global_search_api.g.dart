@@ -147,4 +147,31 @@ class _$GlobalSearchApi extends GlobalSearchApi {
         FullType(ApiCommand, [FullType(GlobalSearchApiRequest)]),
         FullType(ApiResult, [FullType(GlobalSearchApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GlobalSearchApiRequest> newCommandBuilder() =>
+      ApiCommand<GlobalSearchApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GlobalSearchApiResponse> newResultBuilder() =>
+      ApiResult<GlobalSearchApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GlobalSearchApiRequestBuilder newCommandPayloadBuilder() =>
+      GlobalSearchApiRequest().toBuilder();
+
+  @override
+  GlobalSearchApiResponseBuilder newResultPayloadBuilder() =>
+      GlobalSearchApiResponse().toBuilder();
+
+  @override
+  Serializer<GlobalSearchApiRequest> get commandPayloadSerializer =>
+      GlobalSearchApiRequest.serializer;
+
+  @override
+  Serializer<GlobalSearchApiResponse> get resultPayloadSerializer =>
+      GlobalSearchApiResponse.serializer;
 }

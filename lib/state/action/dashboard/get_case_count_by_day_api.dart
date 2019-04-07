@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/get_case_count_by_day_api
 
 part 'get_case_count_by_day_api.g.dart';
 
-abstract class GetCaseCountByDayApi extends ApiDispatcher<GetCaseCountByDayApiRequest, GetCaseCountByDayApiResponse, GetCaseCountByDayApi> {
+abstract class GetCaseCountByDayApi extends ApiDispatcher<GetCaseCountByDayApiRequest,
+GetCaseCountByDayApiRequestBuilder,
+GetCaseCountByDayApiResponse,
+GetCaseCountByDayApiResponseBuilder,
+GetCaseCountByDayApi> {
   @override
   String get path => 'v1/dashboard/get_case_count_by_day';
-  
-  @override
-  Serializer<GetCaseCountByDayApiRequest> get requestSerializer => GetCaseCountByDayApiRequest.serializer;
-  
-  @override
-  Serializer<GetCaseCountByDayApiResponse> get responseSerializer => GetCaseCountByDayApiResponse.serializer;
   
   GetCaseCountByDayApi._();
   

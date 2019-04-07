@@ -174,4 +174,37 @@ class _$PreviewApplyPreferenceCardsToCaseApi
         FullType(
             ApiResult, [FullType(PreviewApplyPreferenceCardsToCaseApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PreviewApplyPreferenceCardsToCaseApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<PreviewApplyPreferenceCardsToCaseApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PreviewApplyPreferenceCardsToCaseApiResponse>
+      newResultBuilder() =>
+          ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PreviewApplyPreferenceCardsToCaseApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          PreviewApplyPreferenceCardsToCaseApiRequest().toBuilder();
+
+  @override
+  PreviewApplyPreferenceCardsToCaseApiResponseBuilder
+      newResultPayloadBuilder() =>
+          PreviewApplyPreferenceCardsToCaseApiResponse().toBuilder();
+
+  @override
+  Serializer<PreviewApplyPreferenceCardsToCaseApiRequest>
+      get commandPayloadSerializer =>
+          PreviewApplyPreferenceCardsToCaseApiRequest.serializer;
+
+  @override
+  Serializer<PreviewApplyPreferenceCardsToCaseApiResponse>
+      get resultPayloadSerializer =>
+          PreviewApplyPreferenceCardsToCaseApiResponse.serializer;
 }

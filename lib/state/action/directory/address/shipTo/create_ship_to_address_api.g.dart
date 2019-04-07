@@ -160,4 +160,31 @@ class _$CreateShipToAddressApi extends CreateShipToAddressApi {
         FullType(ApiCommand, [FullType(CreateShipToAddressApiRequest)]),
         FullType(ApiResult, [FullType(CreateShipToAddressApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateShipToAddressApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateShipToAddressApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateShipToAddressApiResponse> newResultBuilder() =>
+      ApiResult<CreateShipToAddressApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateShipToAddressApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateShipToAddressApiRequest().toBuilder();
+
+  @override
+  CreateShipToAddressApiResponseBuilder newResultPayloadBuilder() =>
+      CreateShipToAddressApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateShipToAddressApiRequest> get commandPayloadSerializer =>
+      CreateShipToAddressApiRequest.serializer;
+
+  @override
+  Serializer<CreateShipToAddressApiResponse> get resultPayloadSerializer =>
+      CreateShipToAddressApiResponse.serializer;
 }

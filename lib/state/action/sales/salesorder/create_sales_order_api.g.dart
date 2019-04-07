@@ -160,4 +160,31 @@ class _$CreateSalesOrderApi extends CreateSalesOrderApi {
         FullType(ApiCommand, [FullType(CreateSalesOrderApiRequest)]),
         FullType(ApiResult, [FullType(CreateSalesOrderApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateSalesOrderApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateSalesOrderApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateSalesOrderApiResponse> newResultBuilder() =>
+      ApiResult<CreateSalesOrderApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateSalesOrderApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateSalesOrderApiRequest().toBuilder();
+
+  @override
+  CreateSalesOrderApiResponseBuilder newResultPayloadBuilder() =>
+      CreateSalesOrderApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateSalesOrderApiRequest> get commandPayloadSerializer =>
+      CreateSalesOrderApiRequest.serializer;
+
+  @override
+  Serializer<CreateSalesOrderApiResponse> get resultPayloadSerializer =>
+      CreateSalesOrderApiResponse.serializer;
 }

@@ -160,4 +160,31 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
         FullType(ApiCommand, [FullType(GetAuditsDueCountApiRequest)]),
         FullType(ApiResult, [FullType(GetAuditsDueCountApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetAuditsDueCountApiRequest> newCommandBuilder() =>
+      ApiCommand<GetAuditsDueCountApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetAuditsDueCountApiResponse> newResultBuilder() =>
+      ApiResult<GetAuditsDueCountApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetAuditsDueCountApiRequestBuilder newCommandPayloadBuilder() =>
+      GetAuditsDueCountApiRequest().toBuilder();
+
+  @override
+  GetAuditsDueCountApiResponseBuilder newResultPayloadBuilder() =>
+      GetAuditsDueCountApiResponse().toBuilder();
+
+  @override
+  Serializer<GetAuditsDueCountApiRequest> get commandPayloadSerializer =>
+      GetAuditsDueCountApiRequest.serializer;
+
+  @override
+  Serializer<GetAuditsDueCountApiResponse> get resultPayloadSerializer =>
+      GetAuditsDueCountApiResponse.serializer;
 }

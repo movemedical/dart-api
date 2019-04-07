@@ -160,4 +160,31 @@ class _$GetAeOrgUnitLinkApi extends GetAeOrgUnitLinkApi {
         FullType(ApiCommand, [FullType(GetAeOrgUnitLinkApiRequest)]),
         FullType(ApiResult, [FullType(GetAeOrgUnitLinkApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetAeOrgUnitLinkApiRequest> newCommandBuilder() =>
+      ApiCommand<GetAeOrgUnitLinkApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetAeOrgUnitLinkApiResponse> newResultBuilder() =>
+      ApiResult<GetAeOrgUnitLinkApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetAeOrgUnitLinkApiRequestBuilder newCommandPayloadBuilder() =>
+      GetAeOrgUnitLinkApiRequest().toBuilder();
+
+  @override
+  GetAeOrgUnitLinkApiResponseBuilder newResultPayloadBuilder() =>
+      GetAeOrgUnitLinkApiResponse().toBuilder();
+
+  @override
+  Serializer<GetAeOrgUnitLinkApiRequest> get commandPayloadSerializer =>
+      GetAeOrgUnitLinkApiRequest.serializer;
+
+  @override
+  Serializer<GetAeOrgUnitLinkApiResponse> get resultPayloadSerializer =>
+      GetAeOrgUnitLinkApiResponse.serializer;
 }

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/people/hcr/delete_hcr_mat
 
 part 'delete_hcr_matrix_api.g.dart';
 
-abstract class DeleteHcrMatrixApi extends ApiDispatcher<DeleteHcrMatrixApiRequest, Null, DeleteHcrMatrixApi> {
+abstract class DeleteHcrMatrixApi extends ApiDispatcher<DeleteHcrMatrixApiRequest,
+DeleteHcrMatrixApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteHcrMatrixApi> {
   @override
   String get path => 'v1/directory/people/hcr/hcr_matrix/delete';
-  
-  @override
-  Serializer<DeleteHcrMatrixApiRequest> get requestSerializer => DeleteHcrMatrixApiRequest.serializer;
   
   DeleteHcrMatrixApi._();
   

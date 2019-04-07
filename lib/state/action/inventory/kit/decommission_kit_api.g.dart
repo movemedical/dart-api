@@ -10,90 +10,92 @@ part of 'decommission_kit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>,
+        ApiResult<Empty>>,
     DecommissionKitApi> DecommissionKitApiOptions();
 
 class _$DecommissionKitApi extends DecommissionKitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       DecommissionKitApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DecommissionKitApi,
           Command<ApiCommand<DecommissionKitApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>,
-          DecommissionKitApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
+          DecommissionKitApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, CommandProgress>> $progress;
 
   _$DecommissionKitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DecommissionKitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DecommissionKitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DecommissionKitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     DecommissionKitApi,
                     Command<ApiCommand<DecommissionKitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>,
-                DecommissionKitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<DecommissionKitApiRequest>,
+                    ApiResult<Empty>,
+                    DecommissionKitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DecommissionKitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DecommissionKitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DecommissionKitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -102,14 +104,14 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       _$DecommissionKitApi._(options());
 
   @override
-  CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DecommissionKitApiRequest>, ApiResult<Null>>();
+          ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -132,6 +134,30 @@ class _$DecommissionKitApi extends DecommissionKitApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DecommissionKitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<DecommissionKitApiRequest> newCommandBuilder() =>
+      ApiCommand<DecommissionKitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  DecommissionKitApiRequestBuilder newCommandPayloadBuilder() =>
+      DecommissionKitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<DecommissionKitApiRequest> get commandPayloadSerializer =>
+      DecommissionKitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

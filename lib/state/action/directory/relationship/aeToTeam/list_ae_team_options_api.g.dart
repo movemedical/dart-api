@@ -160,4 +160,31 @@ class _$ListAeTeamOptionsApi extends ListAeTeamOptionsApi {
         FullType(ApiCommand, [FullType(ListAeTeamOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListAeTeamOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAeTeamOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAeTeamOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAeTeamOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListAeTeamOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAeTeamOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAeTeamOptionsApiRequest().toBuilder();
+
+  @override
+  ListAeTeamOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListAeTeamOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAeTeamOptionsApiRequest> get commandPayloadSerializer =>
+      ListAeTeamOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListAeTeamOptionsApiResponse> get resultPayloadSerializer =>
+      ListAeTeamOptionsApiResponse.serializer;
 }

@@ -160,4 +160,31 @@ class _$GetAuditHistoryApi extends GetAuditHistoryApi {
         FullType(ApiCommand, [FullType(GetAuditHistoryApiRequest)]),
         FullType(ApiResult, [FullType(GetAuditHistoryApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetAuditHistoryApiRequest> newCommandBuilder() =>
+      ApiCommand<GetAuditHistoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetAuditHistoryApiResponse> newResultBuilder() =>
+      ApiResult<GetAuditHistoryApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetAuditHistoryApiRequestBuilder newCommandPayloadBuilder() =>
+      GetAuditHistoryApiRequest().toBuilder();
+
+  @override
+  GetAuditHistoryApiResponseBuilder newResultPayloadBuilder() =>
+      GetAuditHistoryApiResponse().toBuilder();
+
+  @override
+  Serializer<GetAuditHistoryApiRequest> get commandPayloadSerializer =>
+      GetAuditHistoryApiRequest.serializer;
+
+  @override
+  Serializer<GetAuditHistoryApiResponse> get resultPayloadSerializer =>
+      GetAuditHistoryApiResponse.serializer;
 }

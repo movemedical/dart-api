@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/user/list_sso_api_response.dart';
 
 part 'list_sso_api.g.dart';
 
-abstract class ListSSOApi extends ApiDispatcher<ListSSOApiRequest, ListSSOApiResponse, ListSSOApi> {
+abstract class ListSSOApi extends ApiDispatcher<ListSSOApiRequest,
+ListSSOApiRequestBuilder,
+ListSSOApiResponse,
+ListSSOApiResponseBuilder,
+ListSSOApi> {
   @override
   String get path => 'v1/user/list_sso';
-  
-  @override
-  Serializer<ListSSOApiRequest> get requestSerializer => ListSSOApiRequest.serializer;
-  
-  @override
-  Serializer<ListSSOApiResponse> get responseSerializer => ListSSOApiResponse.serializer;
   
   ListSSOApi._();
   

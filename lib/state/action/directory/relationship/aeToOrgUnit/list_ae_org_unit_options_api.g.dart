@@ -160,4 +160,31 @@ class _$ListAeOrgUnitOptionsApi extends ListAeOrgUnitOptionsApi {
         FullType(ApiCommand, [FullType(ListAeOrgUnitOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListAeOrgUnitOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAeOrgUnitOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAeOrgUnitOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAeOrgUnitOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListAeOrgUnitOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAeOrgUnitOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAeOrgUnitOptionsApiRequest().toBuilder();
+
+  @override
+  ListAeOrgUnitOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListAeOrgUnitOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAeOrgUnitOptionsApiRequest> get commandPayloadSerializer =>
+      ListAeOrgUnitOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListAeOrgUnitOptionsApiResponse> get resultPayloadSerializer =>
+      ListAeOrgUnitOptionsApiResponse.serializer;
 }

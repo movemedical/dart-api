@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/people/hcr/get_hcr_api_re
 
 part 'get_hcr_api.g.dart';
 
-abstract class GetHcrApi extends ApiDispatcher<GetHcrApiRequest, GetHcrApiResponse, GetHcrApi> {
+abstract class GetHcrApi extends ApiDispatcher<GetHcrApiRequest,
+GetHcrApiRequestBuilder,
+GetHcrApiResponse,
+GetHcrApiResponseBuilder,
+GetHcrApi> {
   @override
   String get path => 'v1/directory/people/hcr/get';
-  
-  @override
-  Serializer<GetHcrApiRequest> get requestSerializer => GetHcrApiRequest.serializer;
-  
-  @override
-  Serializer<GetHcrApiResponse> get responseSerializer => GetHcrApiResponse.serializer;
   
   GetHcrApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/messaging/conversations/archive_con
 
 part 'archive_conversations_api.g.dart';
 
-abstract class ArchiveConversationsApi extends ApiDispatcher<ArchiveConversationsApiRequest, Null, ArchiveConversationsApi> {
+abstract class ArchiveConversationsApi extends ApiDispatcher<ArchiveConversationsApiRequest,
+ArchiveConversationsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ArchiveConversationsApi> {
   @override
   String get path => 'v1/messaging/conversations/archive';
-  
-  @override
-  Serializer<ArchiveConversationsApiRequest> get requestSerializer => ArchiveConversationsApiRequest.serializer;
   
   ArchiveConversationsApi._();
   

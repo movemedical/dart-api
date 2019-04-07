@@ -159,4 +159,31 @@ class _$GetItemPricingApi extends GetItemPricingApi {
         FullType(ApiCommand, [FullType(GetItemPricingApiRequest)]),
         FullType(ApiResult, [FullType(GetItemPricingApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetItemPricingApiRequest> newCommandBuilder() =>
+      ApiCommand<GetItemPricingApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetItemPricingApiResponse> newResultBuilder() =>
+      ApiResult<GetItemPricingApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetItemPricingApiRequestBuilder newCommandPayloadBuilder() =>
+      GetItemPricingApiRequest().toBuilder();
+
+  @override
+  GetItemPricingApiResponseBuilder newResultPayloadBuilder() =>
+      GetItemPricingApiResponse().toBuilder();
+
+  @override
+  Serializer<GetItemPricingApiRequest> get commandPayloadSerializer =>
+      GetItemPricingApiRequest.serializer;
+
+  @override
+  Serializer<GetItemPricingApiResponse> get resultPayloadSerializer =>
+      GetItemPricingApiResponse.serializer;
 }

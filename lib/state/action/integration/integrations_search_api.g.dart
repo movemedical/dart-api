@@ -160,4 +160,31 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
         FullType(ApiCommand, [FullType(IntegrationsSearchApiRequest)]),
         FullType(ApiResult, [FullType(IntegrationsSearchApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<IntegrationsSearchApiRequest> newCommandBuilder() =>
+      ApiCommand<IntegrationsSearchApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<IntegrationsSearchApiResponse> newResultBuilder() =>
+      ApiResult<IntegrationsSearchApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  IntegrationsSearchApiRequestBuilder newCommandPayloadBuilder() =>
+      IntegrationsSearchApiRequest().toBuilder();
+
+  @override
+  IntegrationsSearchApiResponseBuilder newResultPayloadBuilder() =>
+      IntegrationsSearchApiResponse().toBuilder();
+
+  @override
+  Serializer<IntegrationsSearchApiRequest> get commandPayloadSerializer =>
+      IntegrationsSearchApiRequest.serializer;
+
+  @override
+  Serializer<IntegrationsSearchApiResponse> get resultPayloadSerializer =>
+      IntegrationsSearchApiResponse.serializer;
 }

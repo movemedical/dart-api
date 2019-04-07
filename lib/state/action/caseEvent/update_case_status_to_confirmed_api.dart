@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/update_case_status_to_con
 
 part 'update_case_status_to_confirmed_api.g.dart';
 
-abstract class UpdateCaseStatusToConfirmedApi extends ApiDispatcher<UpdateCaseStatusToConfirmedApiRequest, Null, UpdateCaseStatusToConfirmedApi> {
+abstract class UpdateCaseStatusToConfirmedApi extends ApiDispatcher<UpdateCaseStatusToConfirmedApiRequest,
+UpdateCaseStatusToConfirmedApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateCaseStatusToConfirmedApi> {
   @override
   String get path => 'v1/case_event/status/update_to_confirmed';
-  
-  @override
-  Serializer<UpdateCaseStatusToConfirmedApiRequest> get requestSerializer => UpdateCaseStatusToConfirmedApiRequest.serializer;
   
   UpdateCaseStatusToConfirmedApi._();
   

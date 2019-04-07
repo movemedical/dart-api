@@ -160,4 +160,31 @@ class _$ListBillToAddressesApi extends ListBillToAddressesApi {
         FullType(ApiCommand, [FullType(ListBillToAddressesApiRequest)]),
         FullType(ApiResult, [FullType(ListBillToAddressesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListBillToAddressesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListBillToAddressesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListBillToAddressesApiResponse> newResultBuilder() =>
+      ApiResult<ListBillToAddressesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListBillToAddressesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListBillToAddressesApiRequest().toBuilder();
+
+  @override
+  ListBillToAddressesApiResponseBuilder newResultPayloadBuilder() =>
+      ListBillToAddressesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListBillToAddressesApiRequest> get commandPayloadSerializer =>
+      ListBillToAddressesApiRequest.serializer;
+
+  @override
+  Serializer<ListBillToAddressesApiResponse> get resultPayloadSerializer =>
+      ListBillToAddressesApiResponse.serializer;
 }

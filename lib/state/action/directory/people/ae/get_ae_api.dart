@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/people/ae/get_ae_api_resp
 
 part 'get_ae_api.g.dart';
 
-abstract class GetAeApi extends ApiDispatcher<GetAeApiRequest, GetAeApiResponse, GetAeApi> {
+abstract class GetAeApi extends ApiDispatcher<GetAeApiRequest,
+GetAeApiRequestBuilder,
+GetAeApiResponse,
+GetAeApiResponseBuilder,
+GetAeApi> {
   @override
   String get path => 'v1/directory/people/ae/get';
-  
-  @override
-  Serializer<GetAeApiRequest> get requestSerializer => GetAeApiRequest.serializer;
-  
-  @override
-  Serializer<GetAeApiResponse> get responseSerializer => GetAeApiResponse.serializer;
   
   GetAeApi._();
   

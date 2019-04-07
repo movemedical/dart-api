@@ -160,4 +160,31 @@ class _$ListInventoryTypesApi extends ListInventoryTypesApi {
         FullType(ApiCommand, [FullType(ListInventoryTypesApiRequest)]),
         FullType(ApiResult, [FullType(ListInventoryTypesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListInventoryTypesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListInventoryTypesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListInventoryTypesApiResponse> newResultBuilder() =>
+      ApiResult<ListInventoryTypesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListInventoryTypesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListInventoryTypesApiRequest().toBuilder();
+
+  @override
+  ListInventoryTypesApiResponseBuilder newResultPayloadBuilder() =>
+      ListInventoryTypesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListInventoryTypesApiRequest> get commandPayloadSerializer =>
+      ListInventoryTypesApiRequest.serializer;
+
+  @override
+  Serializer<ListInventoryTypesApiResponse> get resultPayloadSerializer =>
+      ListInventoryTypesApiResponse.serializer;
 }

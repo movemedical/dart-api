@@ -10,94 +10,99 @@ part of 'add_org_unit_to_facility_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AddOrgUnitToFacilityApi> AddOrgUnitToFacilityApiOptions();
 
 class _$AddOrgUnitToFacilityApi extends AddOrgUnitToFacilityApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AddOrgUnitToFacilityApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>, AddOrgUnitToFacilityApi, String>> $clear;
+          ApiResult<Empty>, AddOrgUnitToFacilityApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>, AddOrgUnitToFacilityApi, String>> $cancel;
+          ApiResult<Empty>, AddOrgUnitToFacilityApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddOrgUnitToFacilityApi,
           Command<ApiCommand<AddOrgUnitToFacilityApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddOrgUnitToFacilityApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>, AddOrgUnitToFacilityApi, String>> $detach;
+          ApiResult<Empty>, AddOrgUnitToFacilityApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>, AddOrgUnitToFacilityApi, String>> $attach;
+          ApiResult<Empty>, AddOrgUnitToFacilityApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>, AddOrgUnitToFacilityApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<AddOrgUnitToFacilityApiRequest>,
+          ApiResult<Empty>,
+          AddOrgUnitToFacilityApi,
+          CommandProgress>> $progress;
 
   _$AddOrgUnitToFacilityApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddOrgUnitToFacilityApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddOrgUnitToFacilityApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddOrgUnitToFacilityApi,
                     Command<ApiCommand<AddOrgUnitToFacilityApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>,
-                AddOrgUnitToFacilityApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddOrgUnitToFacilityApiRequest>,
+                    ApiResult<Empty>,
+                    AddOrgUnitToFacilityApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddOrgUnitToFacilityApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddOrgUnitToFacilityApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddOrgUnitToFacilityApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -106,15 +111,15 @@ class _$AddOrgUnitToFacilityApi extends AddOrgUnitToFacilityApi {
       _$AddOrgUnitToFacilityApi._(options());
 
   @override
-  CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddOrgUnitToFacilityApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Null>>();
+          ApiCommand<AddOrgUnitToFacilityApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -137,6 +142,30 @@ class _$AddOrgUnitToFacilityApi extends AddOrgUnitToFacilityApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddOrgUnitToFacilityApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddOrgUnitToFacilityApiRequest> newCommandBuilder() =>
+      ApiCommand<AddOrgUnitToFacilityApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddOrgUnitToFacilityApiRequestBuilder newCommandPayloadBuilder() =>
+      AddOrgUnitToFacilityApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddOrgUnitToFacilityApiRequest> get commandPayloadSerializer =>
+      AddOrgUnitToFacilityApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

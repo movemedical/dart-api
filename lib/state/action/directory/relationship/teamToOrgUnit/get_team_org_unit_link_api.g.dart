@@ -160,4 +160,31 @@ class _$GetTeamOrgUnitLinkApi extends GetTeamOrgUnitLinkApi {
         FullType(ApiCommand, [FullType(GetTeamOrgUnitLinkApiRequest)]),
         FullType(ApiResult, [FullType(GetTeamOrgUnitLinkApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetTeamOrgUnitLinkApiRequest> newCommandBuilder() =>
+      ApiCommand<GetTeamOrgUnitLinkApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetTeamOrgUnitLinkApiResponse> newResultBuilder() =>
+      ApiResult<GetTeamOrgUnitLinkApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetTeamOrgUnitLinkApiRequestBuilder newCommandPayloadBuilder() =>
+      GetTeamOrgUnitLinkApiRequest().toBuilder();
+
+  @override
+  GetTeamOrgUnitLinkApiResponseBuilder newResultPayloadBuilder() =>
+      GetTeamOrgUnitLinkApiResponse().toBuilder();
+
+  @override
+  Serializer<GetTeamOrgUnitLinkApiRequest> get commandPayloadSerializer =>
+      GetTeamOrgUnitLinkApiRequest.serializer;
+
+  @override
+  Serializer<GetTeamOrgUnitLinkApiResponse> get resultPayloadSerializer =>
+      GetTeamOrgUnitLinkApiResponse.serializer;
 }

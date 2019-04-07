@@ -159,4 +159,31 @@ class _$SearchHcrTeamsApi extends SearchHcrTeamsApi {
         FullType(ApiCommand, [FullType(SearchHcrTeamsApiRequest)]),
         FullType(ApiResult, [FullType(SearchHcrTeamsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchHcrTeamsApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchHcrTeamsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchHcrTeamsApiResponse> newResultBuilder() =>
+      ApiResult<SearchHcrTeamsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchHcrTeamsApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchHcrTeamsApiRequest().toBuilder();
+
+  @override
+  SearchHcrTeamsApiResponseBuilder newResultPayloadBuilder() =>
+      SearchHcrTeamsApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchHcrTeamsApiRequest> get commandPayloadSerializer =>
+      SearchHcrTeamsApiRequest.serializer;
+
+  @override
+  Serializer<SearchHcrTeamsApiResponse> get resultPayloadSerializer =>
+      SearchHcrTeamsApiResponse.serializer;
 }

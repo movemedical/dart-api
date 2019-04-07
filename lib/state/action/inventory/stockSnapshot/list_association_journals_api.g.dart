@@ -164,4 +164,31 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
         FullType(ApiCommand, [FullType(ListAssociationJournalsApiRequest)]),
         FullType(ApiResult, [FullType(ListAssociationJournalsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAssociationJournalsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAssociationJournalsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAssociationJournalsApiResponse> newResultBuilder() =>
+      ApiResult<ListAssociationJournalsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAssociationJournalsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAssociationJournalsApiRequest().toBuilder();
+
+  @override
+  ListAssociationJournalsApiResponseBuilder newResultPayloadBuilder() =>
+      ListAssociationJournalsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAssociationJournalsApiRequest> get commandPayloadSerializer =>
+      ListAssociationJournalsApiRequest.serializer;
+
+  @override
+  Serializer<ListAssociationJournalsApiResponse> get resultPayloadSerializer =>
+      ListAssociationJournalsApiResponse.serializer;
 }

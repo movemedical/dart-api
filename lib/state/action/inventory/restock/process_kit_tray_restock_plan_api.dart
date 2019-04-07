@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/restock/process_kit_tray_
 
 part 'process_kit_tray_restock_plan_api.g.dart';
 
-abstract class ProcessKitTrayRestockPlanApi extends ApiDispatcher<ProcessKitTrayRestockPlanApiRequest, ProcessKitTrayRestockPlanApiResponse, ProcessKitTrayRestockPlanApi> {
+abstract class ProcessKitTrayRestockPlanApi extends ApiDispatcher<ProcessKitTrayRestockPlanApiRequest,
+ProcessKitTrayRestockPlanApiRequestBuilder,
+ProcessKitTrayRestockPlanApiResponse,
+ProcessKitTrayRestockPlanApiResponseBuilder,
+ProcessKitTrayRestockPlanApi> {
   @override
   String get path => 'v1/inventory/restock/process_kit_tray_restock';
-  
-  @override
-  Serializer<ProcessKitTrayRestockPlanApiRequest> get requestSerializer => ProcessKitTrayRestockPlanApiRequest.serializer;
-  
-  @override
-  Serializer<ProcessKitTrayRestockPlanApiResponse> get responseSerializer => ProcessKitTrayRestockPlanApiResponse.serializer;
   
   ProcessKitTrayRestockPlanApi._();
   

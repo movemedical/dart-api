@@ -10,77 +10,91 @@ part of 'complete_picks_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>,
     CompletePicksApi> CompletePicksApiOptions();
 
 class _$CompletePicksApi extends CompletePicksApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<CompletePicksApiRequest>,
+          ApiResult<Empty>>,
       CompletePicksApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CompletePicksApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CompletePicksApi,
           Command<ApiCommand<CompletePicksApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
-          CompletePicksApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
+          CompletePicksApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, CommandProgress>> $progress;
 
   _$CompletePicksApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CompletePicksApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
-                CompletePicksApi, String>>('\$clear', (a) => a?.$clear),
+            CommandPayload<
+                ApiCommand<CompletePicksApiRequest>,
+                ApiResult<Empty>,
+                CompletePicksApi,
+                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
-                CompletePicksApi, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<CompletePicksApiRequest>,
+                ApiResult<Empty>,
+                CompletePicksApi,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CompletePicksApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CompletePicksApi,
                     Command<ApiCommand<CompletePicksApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
+                CommandPayload<
+                    ApiCommand<CompletePicksApiRequest>,
+                    ApiResult<Empty>,
+                    CompletePicksApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
+        $detach = $options.action<
             CommandPayload<
                 ApiCommand<CompletePicksApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CompletePicksApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
-                CompletePicksApi, String>>('\$detach', (a) => a?.$detach),
+                String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>,
-                CompletePicksApi, String>>('\$attach', (a) => a?.$attach),
+            CommandPayload<
+                ApiCommand<CompletePicksApiRequest>,
+                ApiResult<Empty>,
+                CompletePicksApi,
+                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CompletePicksApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CompletePicksApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -89,14 +103,14 @@ class _$CompletePicksApi extends CompletePicksApi {
       _$CompletePicksApi._(options());
 
   @override
-  CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CompletePicksApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<CompletePicksApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -119,6 +133,30 @@ class _$CompletePicksApi extends CompletePicksApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CompletePicksApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CompletePicksApiRequest> newCommandBuilder() =>
+      ApiCommand<CompletePicksApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CompletePicksApiRequestBuilder newCommandPayloadBuilder() =>
+      CompletePicksApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CompletePicksApiRequest> get commandPayloadSerializer =>
+      CompletePicksApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

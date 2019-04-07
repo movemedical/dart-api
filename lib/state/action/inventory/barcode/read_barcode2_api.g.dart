@@ -147,4 +147,31 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
         FullType(ApiCommand, [FullType(ReadBarcode2ApiRequest)]),
         FullType(ApiResult, [FullType(ReadBarcode2ApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ReadBarcode2ApiRequest> newCommandBuilder() =>
+      ApiCommand<ReadBarcode2ApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ReadBarcode2ApiResponse> newResultBuilder() =>
+      ApiResult<ReadBarcode2ApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ReadBarcode2ApiRequestBuilder newCommandPayloadBuilder() =>
+      ReadBarcode2ApiRequest().toBuilder();
+
+  @override
+  ReadBarcode2ApiResponseBuilder newResultPayloadBuilder() =>
+      ReadBarcode2ApiResponse().toBuilder();
+
+  @override
+  Serializer<ReadBarcode2ApiRequest> get commandPayloadSerializer =>
+      ReadBarcode2ApiRequest.serializer;
+
+  @override
+  Serializer<ReadBarcode2ApiResponse> get resultPayloadSerializer =>
+      ReadBarcode2ApiResponse.serializer;
 }

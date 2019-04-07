@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/teamToOrgUni
 
 part 'save_team_to_org_unit_api.g.dart';
 
-abstract class SaveTeamToOrgUnitApi extends ApiDispatcher<SaveTeamToOrgUnitApiRequest, Null, SaveTeamToOrgUnitApi> {
+abstract class SaveTeamToOrgUnitApi extends ApiDispatcher<SaveTeamToOrgUnitApiRequest,
+SaveTeamToOrgUnitApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SaveTeamToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/team_to_org_unit/save';
-  
-  @override
-  Serializer<SaveTeamToOrgUnitApiRequest> get requestSerializer => SaveTeamToOrgUnitApiRequest.serializer;
   
   SaveTeamToOrgUnitApi._();
   

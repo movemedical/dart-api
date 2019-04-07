@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/admin/setup_system_api_response.dar
 
 part 'setup_system_api.g.dart';
 
-abstract class SetupSystemApi extends ApiDispatcher<SetupSystemApiRequest, SetupSystemApiResponse, SetupSystemApi> {
+abstract class SetupSystemApi extends ApiDispatcher<SetupSystemApiRequest,
+SetupSystemApiRequestBuilder,
+SetupSystemApiResponse,
+SetupSystemApiResponseBuilder,
+SetupSystemApi> {
   @override
   String get path => 'v1/system/setup/base';
-  
-  @override
-  Serializer<SetupSystemApiRequest> get requestSerializer => SetupSystemApiRequest.serializer;
-  
-  @override
-  Serializer<SetupSystemApiResponse> get responseSerializer => SetupSystemApiResponse.serializer;
   
   SetupSystemApi._();
   

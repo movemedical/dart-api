@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/messaging/conversations/update_conv
 
 part 'update_conversation_api.g.dart';
 
-abstract class UpdateConversationApi extends ApiDispatcher<UpdateConversationApiRequest, Null, UpdateConversationApi> {
+abstract class UpdateConversationApi extends ApiDispatcher<UpdateConversationApiRequest,
+UpdateConversationApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateConversationApi> {
   @override
   String get path => 'v1/messaging/conversations/update_conversation';
-  
-  @override
-  Serializer<UpdateConversationApiRequest> get requestSerializer => UpdateConversationApiRequest.serializer;
   
   UpdateConversationApi._();
   

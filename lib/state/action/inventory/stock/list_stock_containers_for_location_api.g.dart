@@ -170,4 +170,35 @@ class _$ListStockContainersForLocationApi
         FullType(
             ApiResult, [FullType(ListStockContainersForLocationApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListStockContainersForLocationApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListStockContainersForLocationApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListStockContainersForLocationApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListStockContainersForLocationApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListStockContainersForLocationApiRequestBuilder newCommandPayloadBuilder() =>
+      ListStockContainersForLocationApiRequest().toBuilder();
+
+  @override
+  ListStockContainersForLocationApiResponseBuilder newResultPayloadBuilder() =>
+      ListStockContainersForLocationApiResponse().toBuilder();
+
+  @override
+  Serializer<ListStockContainersForLocationApiRequest>
+      get commandPayloadSerializer =>
+          ListStockContainersForLocationApiRequest.serializer;
+
+  @override
+  Serializer<ListStockContainersForLocationApiResponse>
+      get resultPayloadSerializer =>
+          ListStockContainersForLocationApiResponse.serializer;
 }

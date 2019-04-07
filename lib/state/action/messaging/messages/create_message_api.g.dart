@@ -159,4 +159,31 @@ class _$CreateMessageApi extends CreateMessageApi {
         FullType(ApiCommand, [FullType(CreateMessageApiRequest)]),
         FullType(ApiResult, [FullType(CreateMessageApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateMessageApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateMessageApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateMessageApiResponse> newResultBuilder() =>
+      ApiResult<CreateMessageApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateMessageApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateMessageApiRequest().toBuilder();
+
+  @override
+  CreateMessageApiResponseBuilder newResultPayloadBuilder() =>
+      CreateMessageApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateMessageApiRequest> get commandPayloadSerializer =>
+      CreateMessageApiRequest.serializer;
+
+  @override
+  Serializer<CreateMessageApiResponse> get resultPayloadSerializer =>
+      CreateMessageApiResponse.serializer;
 }

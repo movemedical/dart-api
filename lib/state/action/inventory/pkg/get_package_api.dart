@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/pkg/get_package_api_respo
 
 part 'get_package_api.g.dart';
 
-abstract class GetPackageApi extends ApiDispatcher<GetPackageApiRequest, GetPackageApiResponse, GetPackageApi> {
+abstract class GetPackageApi extends ApiDispatcher<GetPackageApiRequest,
+GetPackageApiRequestBuilder,
+GetPackageApiResponse,
+GetPackageApiResponseBuilder,
+GetPackageApi> {
   @override
   String get path => 'v1/inventory/pkg/get';
-  
-  @override
-  Serializer<GetPackageApiRequest> get requestSerializer => GetPackageApiRequest.serializer;
-  
-  @override
-  Serializer<GetPackageApiResponse> get responseSerializer => GetPackageApiResponse.serializer;
   
   GetPackageApi._();
   

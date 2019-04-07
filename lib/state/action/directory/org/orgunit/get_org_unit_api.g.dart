@@ -147,4 +147,31 @@ class _$GetOrgUnitApi extends GetOrgUnitApi {
         FullType(ApiCommand, [FullType(GetOrgUnitApiRequest)]),
         FullType(ApiResult, [FullType(GetOrgUnitApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetOrgUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<GetOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetOrgUnitApiResponse> newResultBuilder() =>
+      ApiResult<GetOrgUnitApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      GetOrgUnitApiRequest().toBuilder();
+
+  @override
+  GetOrgUnitApiResponseBuilder newResultPayloadBuilder() =>
+      GetOrgUnitApiResponse().toBuilder();
+
+  @override
+  Serializer<GetOrgUnitApiRequest> get commandPayloadSerializer =>
+      GetOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<GetOrgUnitApiResponse> get resultPayloadSerializer =>
+      GetOrgUnitApiResponse.serializer;
 }

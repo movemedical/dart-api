@@ -11,101 +11,102 @@ part of 'create_procedure_to_item_category_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CreateProcedureToItemCategoryApi> CreateProcedureToItemCategoryApiOptions();
 
 class _$CreateProcedureToItemCategoryApi
     extends CreateProcedureToItemCategoryApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CreateProcedureToItemCategoryApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>, CreateProcedureToItemCategoryApi, String>> $clear;
+          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>, CreateProcedureToItemCategoryApi, String>> $cancel;
+          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               CreateProcedureToItemCategoryApi,
               Command<ApiCommand<CreateProcedureToItemCategoryApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CreateProcedureToItemCategoryApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>, CreateProcedureToItemCategoryApi, String>> $detach;
+          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>, CreateProcedureToItemCategoryApi, String>> $attach;
+          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CreateProcedureToItemCategoryApi,
           CommandProgress>> $progress;
 
   _$CreateProcedureToItemCategoryApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToItemCategoryApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToItemCategoryApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CreateProcedureToItemCategoryApi,
                     Command<
                         ApiCommand<CreateProcedureToItemCategoryApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>,
-                CreateProcedureToItemCategoryApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CreateProcedureToItemCategoryApiRequest>,
+                    ApiResult<Empty>,
+                    CreateProcedureToItemCategoryApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToItemCategoryApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToItemCategoryApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToItemCategoryApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -116,17 +117,17 @@ class _$CreateProcedureToItemCategoryApi
 
   @override
   CommandState<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -150,6 +151,32 @@ class _$CreateProcedureToItemCategoryApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(CreateProcedureToItemCategoryApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateProcedureToItemCategoryApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<CreateProcedureToItemCategoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateProcedureToItemCategoryApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateProcedureToItemCategoryApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CreateProcedureToItemCategoryApiRequest>
+      get commandPayloadSerializer =>
+          CreateProcedureToItemCategoryApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

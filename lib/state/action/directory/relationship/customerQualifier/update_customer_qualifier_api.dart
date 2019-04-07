@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/customerQual
 
 part 'update_customer_qualifier_api.g.dart';
 
-abstract class UpdateCustomerQualifierApi extends ApiDispatcher<UpdateCustomerQualifierApiRequest, Null, UpdateCustomerQualifierApi> {
+abstract class UpdateCustomerQualifierApi extends ApiDispatcher<UpdateCustomerQualifierApiRequest,
+UpdateCustomerQualifierApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateCustomerQualifierApi> {
   @override
   String get path => 'v1/directory/relationship/customer_qualifier/update';
-  
-  @override
-  Serializer<UpdateCustomerQualifierApiRequest> get requestSerializer => UpdateCustomerQualifierApiRequest.serializer;
   
   UpdateCustomerQualifierApi._();
   

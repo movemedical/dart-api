@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/procedureToB
 
 part 'list_biz_unit_procedure_links_api.g.dart';
 
-abstract class ListBizUnitProcedureLinksApi extends ApiDispatcher<ListBizUnitProcedureLinksApiRequest, ListBizUnitProcedureLinksApiResponse, ListBizUnitProcedureLinksApi> {
+abstract class ListBizUnitProcedureLinksApi extends ApiDispatcher<ListBizUnitProcedureLinksApiRequest,
+ListBizUnitProcedureLinksApiRequestBuilder,
+ListBizUnitProcedureLinksApiResponse,
+ListBizUnitProcedureLinksApiResponseBuilder,
+ListBizUnitProcedureLinksApi> {
   @override
   String get path => 'v1/directory/relationship/procedure_to_biz_unit/list_procedure_links';
-  
-  @override
-  Serializer<ListBizUnitProcedureLinksApiRequest> get requestSerializer => ListBizUnitProcedureLinksApiRequest.serializer;
-  
-  @override
-  Serializer<ListBizUnitProcedureLinksApiResponse> get responseSerializer => ListBizUnitProcedureLinksApiResponse.serializer;
   
   ListBizUnitProcedureLinksApi._();
   

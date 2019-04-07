@@ -147,4 +147,31 @@ class _$FindPatientApi extends FindPatientApi {
         FullType(ApiCommand, [FullType(FindPatientApiRequest)]),
         FullType(ApiResult, [FullType(FindPatientApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<FindPatientApiRequest> newCommandBuilder() =>
+      ApiCommand<FindPatientApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<FindPatientApiResponse> newResultBuilder() =>
+      ApiResult<FindPatientApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  FindPatientApiRequestBuilder newCommandPayloadBuilder() =>
+      FindPatientApiRequest().toBuilder();
+
+  @override
+  FindPatientApiResponseBuilder newResultPayloadBuilder() =>
+      FindPatientApiResponse().toBuilder();
+
+  @override
+  Serializer<FindPatientApiRequest> get commandPayloadSerializer =>
+      FindPatientApiRequest.serializer;
+
+  @override
+  Serializer<FindPatientApiResponse> get resultPayloadSerializer =>
+      FindPatientApiResponse.serializer;
 }

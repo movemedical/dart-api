@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/messaging/conversations/mark_conver
 
 part 'mark_conversations_read_unread_api.g.dart';
 
-abstract class MarkConversationsReadUnreadApi extends ApiDispatcher<MarkConversationsReadUnreadApiRequest, Null, MarkConversationsReadUnreadApi> {
+abstract class MarkConversationsReadUnreadApi extends ApiDispatcher<MarkConversationsReadUnreadApiRequest,
+MarkConversationsReadUnreadApiRequestBuilder,
+Empty,
+EmptyBuilder,
+MarkConversationsReadUnreadApi> {
   @override
   String get path => 'v1/messaging/conversations/mark_read_unread';
-  
-  @override
-  Serializer<MarkConversationsReadUnreadApiRequest> get requestSerializer => MarkConversationsReadUnreadApiRequest.serializer;
   
   MarkConversationsReadUnreadApi._();
   

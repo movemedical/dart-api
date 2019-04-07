@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/address/shipTo/update_shi
 
 part 'update_ship_to_address_api.g.dart';
 
-abstract class UpdateShipToAddressApi extends ApiDispatcher<UpdateShipToAddressApiRequest, Null, UpdateShipToAddressApi> {
+abstract class UpdateShipToAddressApi extends ApiDispatcher<UpdateShipToAddressApiRequest,
+UpdateShipToAddressApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateShipToAddressApi> {
   @override
   String get path => 'v1/directory/address/ship_to/update';
-  
-  @override
-  Serializer<UpdateShipToAddressApiRequest> get requestSerializer => UpdateShipToAddressApiRequest.serializer;
   
   UpdateShipToAddressApi._();
   

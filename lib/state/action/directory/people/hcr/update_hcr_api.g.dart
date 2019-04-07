@@ -10,70 +10,74 @@ part of 'update_hcr_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>,
     UpdateHcrApi> UpdateHcrApiOptions();
 
 class _$UpdateHcrApi extends UpdateHcrApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>,
       UpdateHcrApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>> $replace;
+      CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, Command<ApiCommand<UpdateHcrApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
-          UpdateHcrApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
+          UpdateHcrApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, CommandProgress>> $progress;
 
   _$UpdateHcrApi._(this.$options)
       : $replace = $options.action<
-                CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>>(
-            '\$replace', (a) => a?.$replace),
+            CommandState<ApiCommand<UpdateHcrApiRequest>,
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
                 UpdateHcrApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
                 UpdateHcrApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
-                CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
-                    UpdateHcrApi, Command<ApiCommand<UpdateHcrApiRequest>>>>(
+                CommandPayload<
+                    ApiCommand<UpdateHcrApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateHcrApi,
+                    Command<ApiCommand<UpdateHcrApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateHcrApiRequest>,
-                ApiResult<Null>,
-                UpdateHcrApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateHcrApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateHcrApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
                 UpdateHcrApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
                 UpdateHcrApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateHcrApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateHcrApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -82,13 +86,14 @@ class _$UpdateHcrApi extends UpdateHcrApi {
       _$UpdateHcrApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>> get $initial =>
-      CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>();
+  CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>
+      get $initial =>
+          CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<UpdateHcrApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -111,6 +116,30 @@ class _$UpdateHcrApi extends UpdateHcrApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateHcrApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateHcrApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateHcrApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateHcrApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateHcrApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateHcrApiRequest> get commandPayloadSerializer =>
+      UpdateHcrApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

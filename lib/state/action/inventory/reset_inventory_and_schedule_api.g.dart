@@ -11,98 +11,99 @@ part of 'reset_inventory_and_schedule_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     ResetInventoryAndScheduleApi> ResetInventoryAndScheduleApiOptions();
 
 class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       ResetInventoryAndScheduleApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>, ResetInventoryAndScheduleApi, String>> $clear;
+          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>, ResetInventoryAndScheduleApi, String>> $cancel;
+          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ResetInventoryAndScheduleApi,
           Command<ApiCommand<ResetInventoryAndScheduleApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ResetInventoryAndScheduleApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>, ResetInventoryAndScheduleApi, String>> $detach;
+          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>, ResetInventoryAndScheduleApi, String>> $attach;
+          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ResetInventoryAndScheduleApi,
           CommandProgress>> $progress;
 
   _$ResetInventoryAndScheduleApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetInventoryAndScheduleApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetInventoryAndScheduleApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     ResetInventoryAndScheduleApi,
                     Command<ApiCommand<ResetInventoryAndScheduleApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>,
-                ResetInventoryAndScheduleApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<ResetInventoryAndScheduleApiRequest>,
+                    ApiResult<Empty>,
+                    ResetInventoryAndScheduleApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetInventoryAndScheduleApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetInventoryAndScheduleApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ResetInventoryAndScheduleApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
       _$ResetInventoryAndScheduleApi._(options());
 
   @override
-  CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<ResetInventoryAndScheduleApiRequest>, ApiResult<Null>>();
+          ApiCommand<ResetInventoryAndScheduleApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ResetInventoryAndScheduleApiRequest>, ApiResult<Null>>();
+          ApiCommand<ResetInventoryAndScheduleApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ResetInventoryAndScheduleApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<ResetInventoryAndScheduleApiRequest> newCommandBuilder() =>
+      ApiCommand<ResetInventoryAndScheduleApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ResetInventoryAndScheduleApiRequestBuilder newCommandPayloadBuilder() =>
+      ResetInventoryAndScheduleApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<ResetInventoryAndScheduleApiRequest>
+      get commandPayloadSerializer =>
+          ResetInventoryAndScheduleApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

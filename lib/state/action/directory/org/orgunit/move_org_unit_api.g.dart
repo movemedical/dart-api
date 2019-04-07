@@ -10,74 +10,75 @@ part of 'move_org_unit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>,
     MoveOrgUnitApi> MoveOrgUnitApiOptions();
 
 class _$MoveOrgUnitApi extends MoveOrgUnitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>,
       MoveOrgUnitApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
           MoveOrgUnitApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
           MoveOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
           MoveOrgUnitApi, Command<ApiCommand<MoveOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
-          MoveOrgUnitApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
+          MoveOrgUnitApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
           MoveOrgUnitApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
           MoveOrgUnitApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
           MoveOrgUnitApi, CommandProgress>> $progress;
 
   _$MoveOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<MoveOrgUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
                 MoveOrgUnitApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
                 MoveOrgUnitApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<MoveOrgUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     MoveOrgUnitApi,
                     Command<ApiCommand<MoveOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<MoveOrgUnitApiRequest>,
-                ApiResult<Null>,
-                MoveOrgUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<MoveOrgUnitApiRequest>,
+                    ApiResult<Empty>,
+                    MoveOrgUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
                 MoveOrgUnitApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>,
                 MoveOrgUnitApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MoveOrgUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MoveOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,14 +87,14 @@ class _$MoveOrgUnitApi extends MoveOrgUnitApi {
       _$MoveOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<MoveOrgUnitApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -116,6 +117,30 @@ class _$MoveOrgUnitApi extends MoveOrgUnitApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(MoveOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<MoveOrgUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<MoveOrgUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  MoveOrgUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      MoveOrgUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<MoveOrgUnitApiRequest> get commandPayloadSerializer =>
+      MoveOrgUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

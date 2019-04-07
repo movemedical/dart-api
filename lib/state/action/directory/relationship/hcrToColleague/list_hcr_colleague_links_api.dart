@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/hcrToColleag
 
 part 'list_hcr_colleague_links_api.g.dart';
 
-abstract class ListHcrColleagueLinksApi extends ApiDispatcher<ListHcrColleagueLinksApiRequest, ListHcrColleagueLinksApiResponse, ListHcrColleagueLinksApi> {
+abstract class ListHcrColleagueLinksApi extends ApiDispatcher<ListHcrColleagueLinksApiRequest,
+ListHcrColleagueLinksApiRequestBuilder,
+ListHcrColleagueLinksApiResponse,
+ListHcrColleagueLinksApiResponseBuilder,
+ListHcrColleagueLinksApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_colleague/list_colleagues';
-  
-  @override
-  Serializer<ListHcrColleagueLinksApiRequest> get requestSerializer => ListHcrColleagueLinksApiRequest.serializer;
-  
-  @override
-  Serializer<ListHcrColleagueLinksApiResponse> get responseSerializer => ListHcrColleagueLinksApiResponse.serializer;
   
   ListHcrColleagueLinksApi._();
   

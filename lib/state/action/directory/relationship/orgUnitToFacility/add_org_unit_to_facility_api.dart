@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/relationship/orgUnitToFac
 
 part 'add_org_unit_to_facility_api.g.dart';
 
-abstract class AddOrgUnitToFacilityApi extends ApiDispatcher<AddOrgUnitToFacilityApiRequest, Null, AddOrgUnitToFacilityApi> {
+abstract class AddOrgUnitToFacilityApi extends ApiDispatcher<AddOrgUnitToFacilityApiRequest,
+AddOrgUnitToFacilityApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AddOrgUnitToFacilityApi> {
   @override
   String get path => 'v1/directory/relationship/org_unit_to_facility/add';
-  
-  @override
-  Serializer<AddOrgUnitToFacilityApiRequest> get requestSerializer => AddOrgUnitToFacilityApiRequest.serializer;
   
   AddOrgUnitToFacilityApi._();
   

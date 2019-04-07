@@ -11,98 +11,99 @@ part of 'update_case_status_to_ready_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateCaseStatusToReadyApi> UpdateCaseStatusToReadyApiOptions();
 
 class _$UpdateCaseStatusToReadyApi extends UpdateCaseStatusToReadyApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateCaseStatusToReadyApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToReadyApi, String>> $clear;
+          ApiResult<Empty>, UpdateCaseStatusToReadyApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToReadyApi, String>> $cancel;
+          ApiResult<Empty>, UpdateCaseStatusToReadyApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseStatusToReadyApi,
           Command<ApiCommand<UpdateCaseStatusToReadyApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseStatusToReadyApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToReadyApi, String>> $detach;
+          ApiResult<Empty>, UpdateCaseStatusToReadyApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>, UpdateCaseStatusToReadyApi, String>> $attach;
+          ApiResult<Empty>, UpdateCaseStatusToReadyApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateCaseStatusToReadyApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseStatusToReadyApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToReadyApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToReadyApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateCaseStatusToReadyApi,
                     Command<ApiCommand<UpdateCaseStatusToReadyApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>,
-                UpdateCaseStatusToReadyApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateCaseStatusToReadyApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateCaseStatusToReadyApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToReadyApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToReadyApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateCaseStatusToReadyApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$UpdateCaseStatusToReadyApi extends UpdateCaseStatusToReadyApi {
       _$UpdateCaseStatusToReadyApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateCaseStatusToReadyApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdateCaseStatusToReadyApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<UpdateCaseStatusToReadyApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateCaseStatusToReadyApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseStatusToReadyApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCaseStatusToReadyApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateCaseStatusToReadyApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$UpdateCaseStatusToReadyApi extends UpdateCaseStatusToReadyApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseStatusToReadyApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateCaseStatusToReadyApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateCaseStatusToReadyApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateCaseStatusToReadyApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateCaseStatusToReadyApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateCaseStatusToReadyApiRequest> get commandPayloadSerializer =>
+      UpdateCaseStatusToReadyApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

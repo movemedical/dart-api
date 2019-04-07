@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/doc/custom/custom_order_doc_api_
 
 part 'custom_order_doc_api.g.dart';
 
-abstract class CustomOrderDocApi extends ApiDispatcher<CustomOrderDocApiRequest, CustomOrderDocApiResponse, CustomOrderDocApi> {
+abstract class CustomOrderDocApi extends ApiDispatcher<CustomOrderDocApiRequest,
+CustomOrderDocApiRequestBuilder,
+CustomOrderDocApiResponse,
+CustomOrderDocApiResponseBuilder,
+CustomOrderDocApi> {
   @override
   String get path => 'v1/doc/custom/custom_order_doc';
-  
-  @override
-  Serializer<CustomOrderDocApiRequest> get requestSerializer => CustomOrderDocApiRequest.serializer;
-  
-  @override
-  Serializer<CustomOrderDocApiResponse> get responseSerializer => CustomOrderDocApiResponse.serializer;
   
   CustomOrderDocApi._();
   

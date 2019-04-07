@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/catalog/list_item_categories_linked
 
 part 'list_item_categories_linked_to_item_api.g.dart';
 
-abstract class ListItemCategoriesLinkedToItemApi extends ApiDispatcher<ListItemCategoriesLinkedToItemApiRequest, ListItemCategoriesLinkedToItemApiResponse, ListItemCategoriesLinkedToItemApi> {
+abstract class ListItemCategoriesLinkedToItemApi extends ApiDispatcher<ListItemCategoriesLinkedToItemApiRequest,
+ListItemCategoriesLinkedToItemApiRequestBuilder,
+ListItemCategoriesLinkedToItemApiResponse,
+ListItemCategoriesLinkedToItemApiResponseBuilder,
+ListItemCategoriesLinkedToItemApi> {
   @override
   String get path => 'v1/catalog/list_item_categories_linked_to_item';
-  
-  @override
-  Serializer<ListItemCategoriesLinkedToItemApiRequest> get requestSerializer => ListItemCategoriesLinkedToItemApiRequest.serializer;
-  
-  @override
-  Serializer<ListItemCategoriesLinkedToItemApiResponse> get responseSerializer => ListItemCategoriesLinkedToItemApiResponse.serializer;
   
   ListItemCategoriesLinkedToItemApi._();
   

@@ -10,91 +10,92 @@ part of 'delete_sub_procedure_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<DeleteSubProcedureApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     DeleteSubProcedureApi> DeleteSubProcedureApiOptions();
 
 class _$DeleteSubProcedureApi extends DeleteSubProcedureApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<DeleteSubProcedureApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       DeleteSubProcedureApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeleteSubProcedureApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>,
           DeleteSubProcedureApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>,
           DeleteSubProcedureApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteSubProcedureApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DeleteSubProcedureApi,
           Command<ApiCommand<DeleteSubProcedureApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>,
-          DeleteSubProcedureApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>,
+          DeleteSubProcedureApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>,
           DeleteSubProcedureApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>,
           DeleteSubProcedureApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>,
           DeleteSubProcedureApi, CommandProgress>> $progress;
 
   _$DeleteSubProcedureApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteSubProcedureApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteSubProcedureApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteSubProcedureApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     DeleteSubProcedureApi,
                     Command<ApiCommand<DeleteSubProcedureApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>,
-                DeleteSubProcedureApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<DeleteSubProcedureApiRequest>,
+                    ApiResult<Empty>,
+                    DeleteSubProcedureApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteSubProcedureApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteSubProcedureApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteSubProcedureApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,15 @@ class _$DeleteSubProcedureApi extends DeleteSubProcedureApi {
       _$DeleteSubProcedureApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<DeleteSubProcedureApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<DeleteSubProcedureApiRequest>,
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Null>>();
+          ApiCommand<DeleteSubProcedureApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +135,30 @@ class _$DeleteSubProcedureApi extends DeleteSubProcedureApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteSubProcedureApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<DeleteSubProcedureApiRequest> newCommandBuilder() =>
+      ApiCommand<DeleteSubProcedureApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  DeleteSubProcedureApiRequestBuilder newCommandPayloadBuilder() =>
+      DeleteSubProcedureApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<DeleteSubProcedureApiRequest> get commandPayloadSerializer =>
+      DeleteSubProcedureApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

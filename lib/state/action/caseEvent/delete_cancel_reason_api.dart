@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/delete_cancel_reason_api_
 
 part 'delete_cancel_reason_api.g.dart';
 
-abstract class DeleteCancelReasonApi extends ApiDispatcher<DeleteCancelReasonApiRequest, Null, DeleteCancelReasonApi> {
+abstract class DeleteCancelReasonApi extends ApiDispatcher<DeleteCancelReasonApiRequest,
+DeleteCancelReasonApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteCancelReasonApi> {
   @override
   String get path => 'v1/case_event/cancel_reason/delete';
-  
-  @override
-  Serializer<DeleteCancelReasonApiRequest> get requestSerializer => DeleteCancelReasonApiRequest.serializer;
   
   DeleteCancelReasonApi._();
   

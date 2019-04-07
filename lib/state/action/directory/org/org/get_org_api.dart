@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/org/get_org_api_respo
 
 part 'get_org_api.g.dart';
 
-abstract class GetOrgApi extends ApiDispatcher<GetOrgApiRequest, GetOrgApiResponse, GetOrgApi> {
+abstract class GetOrgApi extends ApiDispatcher<GetOrgApiRequest,
+GetOrgApiRequestBuilder,
+GetOrgApiResponse,
+GetOrgApiResponseBuilder,
+GetOrgApi> {
   @override
   String get path => 'v1/directory/org/org/get';
-  
-  @override
-  Serializer<GetOrgApiRequest> get requestSerializer => GetOrgApiRequest.serializer;
-  
-  @override
-  Serializer<GetOrgApiResponse> get responseSerializer => GetOrgApiResponse.serializer;
   
   GetOrgApi._();
   

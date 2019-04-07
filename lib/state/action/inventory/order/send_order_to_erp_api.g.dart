@@ -159,4 +159,31 @@ class _$SendOrderToErpApi extends SendOrderToErpApi {
         FullType(ApiCommand, [FullType(SendOrderToErpApiRequest)]),
         FullType(ApiResult, [FullType(SendOrderToErpApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SendOrderToErpApiRequest> newCommandBuilder() =>
+      ApiCommand<SendOrderToErpApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SendOrderToErpApiResponse> newResultBuilder() =>
+      ApiResult<SendOrderToErpApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SendOrderToErpApiRequestBuilder newCommandPayloadBuilder() =>
+      SendOrderToErpApiRequest().toBuilder();
+
+  @override
+  SendOrderToErpApiResponseBuilder newResultPayloadBuilder() =>
+      SendOrderToErpApiResponse().toBuilder();
+
+  @override
+  Serializer<SendOrderToErpApiRequest> get commandPayloadSerializer =>
+      SendOrderToErpApiRequest.serializer;
+
+  @override
+  Serializer<SendOrderToErpApiResponse> get resultPayloadSerializer =>
+      SendOrderToErpApiResponse.serializer;
 }

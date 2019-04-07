@@ -147,4 +147,31 @@ class _$CreateItemApi extends CreateItemApi {
         FullType(ApiCommand, [FullType(CreateItemApiRequest)]),
         FullType(ApiResult, [FullType(CreateItemApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateItemApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateItemApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateItemApiResponse> newResultBuilder() =>
+      ApiResult<CreateItemApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateItemApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateItemApiRequest().toBuilder();
+
+  @override
+  CreateItemApiResponseBuilder newResultPayloadBuilder() =>
+      CreateItemApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateItemApiRequest> get commandPayloadSerializer =>
+      CreateItemApiRequest.serializer;
+
+  @override
+  Serializer<CreateItemApiResponse> get resultPayloadSerializer =>
+      CreateItemApiResponse.serializer;
 }

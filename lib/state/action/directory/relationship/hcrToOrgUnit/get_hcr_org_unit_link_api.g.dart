@@ -160,4 +160,31 @@ class _$GetHcrOrgUnitLinkApi extends GetHcrOrgUnitLinkApi {
         FullType(ApiCommand, [FullType(GetHcrOrgUnitLinkApiRequest)]),
         FullType(ApiResult, [FullType(GetHcrOrgUnitLinkApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetHcrOrgUnitLinkApiRequest> newCommandBuilder() =>
+      ApiCommand<GetHcrOrgUnitLinkApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetHcrOrgUnitLinkApiResponse> newResultBuilder() =>
+      ApiResult<GetHcrOrgUnitLinkApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetHcrOrgUnitLinkApiRequestBuilder newCommandPayloadBuilder() =>
+      GetHcrOrgUnitLinkApiRequest().toBuilder();
+
+  @override
+  GetHcrOrgUnitLinkApiResponseBuilder newResultPayloadBuilder() =>
+      GetHcrOrgUnitLinkApiResponse().toBuilder();
+
+  @override
+  Serializer<GetHcrOrgUnitLinkApiRequest> get commandPayloadSerializer =>
+      GetHcrOrgUnitLinkApiRequest.serializer;
+
+  @override
+  Serializer<GetHcrOrgUnitLinkApiResponse> get resultPayloadSerializer =>
+      GetHcrOrgUnitLinkApiResponse.serializer;
 }

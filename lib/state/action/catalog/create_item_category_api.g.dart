@@ -160,4 +160,31 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
         FullType(ApiCommand, [FullType(CreateItemCategoryApiRequest)]),
         FullType(ApiResult, [FullType(CreateItemCategoryApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateItemCategoryApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateItemCategoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateItemCategoryApiResponse> newResultBuilder() =>
+      ApiResult<CreateItemCategoryApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateItemCategoryApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateItemCategoryApiRequest().toBuilder();
+
+  @override
+  CreateItemCategoryApiResponseBuilder newResultPayloadBuilder() =>
+      CreateItemCategoryApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateItemCategoryApiRequest> get commandPayloadSerializer =>
+      CreateItemCategoryApiRequest.serializer;
+
+  @override
+  Serializer<CreateItemCategoryApiResponse> get resultPayloadSerializer =>
+      CreateItemCategoryApiResponse.serializer;
 }

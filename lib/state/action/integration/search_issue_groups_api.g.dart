@@ -160,4 +160,31 @@ class _$SearchIssueGroupsApi extends SearchIssueGroupsApi {
         FullType(ApiCommand, [FullType(SearchIssueGroupsApiRequest)]),
         FullType(ApiResult, [FullType(SearchIssueGroupsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SearchIssueGroupsApiRequest> newCommandBuilder() =>
+      ApiCommand<SearchIssueGroupsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SearchIssueGroupsApiResponse> newResultBuilder() =>
+      ApiResult<SearchIssueGroupsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SearchIssueGroupsApiRequestBuilder newCommandPayloadBuilder() =>
+      SearchIssueGroupsApiRequest().toBuilder();
+
+  @override
+  SearchIssueGroupsApiResponseBuilder newResultPayloadBuilder() =>
+      SearchIssueGroupsApiResponse().toBuilder();
+
+  @override
+  Serializer<SearchIssueGroupsApiRequest> get commandPayloadSerializer =>
+      SearchIssueGroupsApiRequest.serializer;
+
+  @override
+  Serializer<SearchIssueGroupsApiResponse> get resultPayloadSerializer =>
+      SearchIssueGroupsApiResponse.serializer;
 }

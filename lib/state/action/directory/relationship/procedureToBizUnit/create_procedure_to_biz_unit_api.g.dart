@@ -11,98 +11,99 @@ part of 'create_procedure_to_biz_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CreateProcedureToBizUnitApi> CreateProcedureToBizUnitApiOptions();
 
 class _$CreateProcedureToBizUnitApi extends CreateProcedureToBizUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CreateProcedureToBizUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>, CreateProcedureToBizUnitApi, String>> $clear;
+          ApiResult<Empty>, CreateProcedureToBizUnitApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>, CreateProcedureToBizUnitApi, String>> $cancel;
+          ApiResult<Empty>, CreateProcedureToBizUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CreateProcedureToBizUnitApi,
           Command<ApiCommand<CreateProcedureToBizUnitApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CreateProcedureToBizUnitApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>, CreateProcedureToBizUnitApi, String>> $detach;
+          ApiResult<Empty>, CreateProcedureToBizUnitApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>, CreateProcedureToBizUnitApi, String>> $attach;
+          ApiResult<Empty>, CreateProcedureToBizUnitApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CreateProcedureToBizUnitApi,
           CommandProgress>> $progress;
 
   _$CreateProcedureToBizUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToBizUnitApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToBizUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CreateProcedureToBizUnitApi,
                     Command<ApiCommand<CreateProcedureToBizUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>,
-                CreateProcedureToBizUnitApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CreateProcedureToBizUnitApiRequest>,
+                    ApiResult<Empty>,
+                    CreateProcedureToBizUnitApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToBizUnitApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToBizUnitApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToBizUnitApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CreateProcedureToBizUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$CreateProcedureToBizUnitApi extends CreateProcedureToBizUnitApi {
       _$CreateProcedureToBizUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Null>>();
+          ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateProcedureToBizUnitApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Null>>();
+          ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$CreateProcedureToBizUnitApi extends CreateProcedureToBizUnitApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateProcedureToBizUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateProcedureToBizUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateProcedureToBizUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateProcedureToBizUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateProcedureToBizUnitApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CreateProcedureToBizUnitApiRequest> get commandPayloadSerializer =>
+      CreateProcedureToBizUnitApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

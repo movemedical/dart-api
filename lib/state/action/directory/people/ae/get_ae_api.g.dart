@@ -132,4 +132,31 @@ class _$GetAeApi extends GetAeApi {
         FullType(ApiCommand, [FullType(GetAeApiRequest)]),
         FullType(ApiResult, [FullType(GetAeApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetAeApiRequest> newCommandBuilder() =>
+      ApiCommand<GetAeApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetAeApiResponse> newResultBuilder() =>
+      ApiResult<GetAeApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetAeApiRequestBuilder newCommandPayloadBuilder() =>
+      GetAeApiRequest().toBuilder();
+
+  @override
+  GetAeApiResponseBuilder newResultPayloadBuilder() =>
+      GetAeApiResponse().toBuilder();
+
+  @override
+  Serializer<GetAeApiRequest> get commandPayloadSerializer =>
+      GetAeApiRequest.serializer;
+
+  @override
+  Serializer<GetAeApiResponse> get resultPayloadSerializer =>
+      GetAeApiResponse.serializer;
 }

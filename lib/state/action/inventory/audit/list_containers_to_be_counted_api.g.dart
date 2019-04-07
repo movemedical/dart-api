@@ -164,4 +164,33 @@ class _$ListContainersToBeCountedApi extends ListContainersToBeCountedApi {
         FullType(ApiCommand, [FullType(ListContainersToBeCountedApiRequest)]),
         FullType(ApiResult, [FullType(ListContainersToBeCountedApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListContainersToBeCountedApiRequest> newCommandBuilder() =>
+      ApiCommand<ListContainersToBeCountedApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListContainersToBeCountedApiResponse> newResultBuilder() =>
+      ApiResult<ListContainersToBeCountedApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListContainersToBeCountedApiRequestBuilder newCommandPayloadBuilder() =>
+      ListContainersToBeCountedApiRequest().toBuilder();
+
+  @override
+  ListContainersToBeCountedApiResponseBuilder newResultPayloadBuilder() =>
+      ListContainersToBeCountedApiResponse().toBuilder();
+
+  @override
+  Serializer<ListContainersToBeCountedApiRequest>
+      get commandPayloadSerializer =>
+          ListContainersToBeCountedApiRequest.serializer;
+
+  @override
+  Serializer<ListContainersToBeCountedApiResponse>
+      get resultPayloadSerializer =>
+          ListContainersToBeCountedApiResponse.serializer;
 }

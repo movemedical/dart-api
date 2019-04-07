@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/search_issue_groups_api
 
 part 'search_issue_groups_api.g.dart';
 
-abstract class SearchIssueGroupsApi extends ApiDispatcher<SearchIssueGroupsApiRequest, SearchIssueGroupsApiResponse, SearchIssueGroupsApi> {
+abstract class SearchIssueGroupsApi extends ApiDispatcher<SearchIssueGroupsApiRequest,
+SearchIssueGroupsApiRequestBuilder,
+SearchIssueGroupsApiResponse,
+SearchIssueGroupsApiResponseBuilder,
+SearchIssueGroupsApi> {
   @override
   String get path => 'v1/integration/search_issue_groups';
-  
-  @override
-  Serializer<SearchIssueGroupsApiRequest> get requestSerializer => SearchIssueGroupsApiRequest.serializer;
-  
-  @override
-  Serializer<SearchIssueGroupsApiResponse> get responseSerializer => SearchIssueGroupsApiResponse.serializer;
   
   SearchIssueGroupsApi._();
   

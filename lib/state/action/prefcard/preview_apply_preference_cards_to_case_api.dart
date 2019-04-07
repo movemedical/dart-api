@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/prefcard/preview_apply_preference_c
 
 part 'preview_apply_preference_cards_to_case_api.g.dart';
 
-abstract class PreviewApplyPreferenceCardsToCaseApi extends ApiDispatcher<PreviewApplyPreferenceCardsToCaseApiRequest, PreviewApplyPreferenceCardsToCaseApiResponse, PreviewApplyPreferenceCardsToCaseApi> {
+abstract class PreviewApplyPreferenceCardsToCaseApi extends ApiDispatcher<PreviewApplyPreferenceCardsToCaseApiRequest,
+PreviewApplyPreferenceCardsToCaseApiRequestBuilder,
+PreviewApplyPreferenceCardsToCaseApiResponse,
+PreviewApplyPreferenceCardsToCaseApiResponseBuilder,
+PreviewApplyPreferenceCardsToCaseApi> {
   @override
   String get path => 'v1/prefcard/apply_to_case';
-  
-  @override
-  Serializer<PreviewApplyPreferenceCardsToCaseApiRequest> get requestSerializer => PreviewApplyPreferenceCardsToCaseApiRequest.serializer;
-  
-  @override
-  Serializer<PreviewApplyPreferenceCardsToCaseApiResponse> get responseSerializer => PreviewApplyPreferenceCardsToCaseApiResponse.serializer;
   
   PreviewApplyPreferenceCardsToCaseApi._();
   

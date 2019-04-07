@@ -162,4 +162,31 @@ class _$PrepareAuditFileUploadApi extends PrepareAuditFileUploadApi {
         FullType(ApiCommand, [FullType(PrepareAuditFileUploadApiRequest)]),
         FullType(ApiResult, [FullType(PrepareAuditFileUploadApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PrepareAuditFileUploadApiRequest> newCommandBuilder() =>
+      ApiCommand<PrepareAuditFileUploadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PrepareAuditFileUploadApiResponse> newResultBuilder() =>
+      ApiResult<PrepareAuditFileUploadApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PrepareAuditFileUploadApiRequestBuilder newCommandPayloadBuilder() =>
+      PrepareAuditFileUploadApiRequest().toBuilder();
+
+  @override
+  PrepareAuditFileUploadApiResponseBuilder newResultPayloadBuilder() =>
+      PrepareAuditFileUploadApiResponse().toBuilder();
+
+  @override
+  Serializer<PrepareAuditFileUploadApiRequest> get commandPayloadSerializer =>
+      PrepareAuditFileUploadApiRequest.serializer;
+
+  @override
+  Serializer<PrepareAuditFileUploadApiResponse> get resultPayloadSerializer =>
+      PrepareAuditFileUploadApiResponse.serializer;
 }

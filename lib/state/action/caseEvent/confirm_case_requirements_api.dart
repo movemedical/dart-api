@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/confirm_case_requirements
 
 part 'confirm_case_requirements_api.g.dart';
 
-abstract class ConfirmCaseRequirementsApi extends ApiDispatcher<ConfirmCaseRequirementsApiRequest, Null, ConfirmCaseRequirementsApi> {
+abstract class ConfirmCaseRequirementsApi extends ApiDispatcher<ConfirmCaseRequirementsApiRequest,
+ConfirmCaseRequirementsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ConfirmCaseRequirementsApi> {
   @override
   String get path => 'v1/case_event/requirement/confirm';
-  
-  @override
-  Serializer<ConfirmCaseRequirementsApiRequest> get requestSerializer => ConfirmCaseRequirementsApiRequest.serializer;
   
   ConfirmCaseRequirementsApi._();
   

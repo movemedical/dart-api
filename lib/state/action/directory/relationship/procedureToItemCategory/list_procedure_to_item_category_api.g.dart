@@ -165,4 +165,34 @@ class _$ListProcedureToItemCategoryApi extends ListProcedureToItemCategoryApi {
         FullType(ApiCommand, [FullType(ListProcedureToItemCategoryApiRequest)]),
         FullType(ApiResult, [FullType(ListProcedureToItemCategoryApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListProcedureToItemCategoryApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListProcedureToItemCategoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListProcedureToItemCategoryApiResponse> newResultBuilder() =>
+      ApiResult<ListProcedureToItemCategoryApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListProcedureToItemCategoryApiRequestBuilder newCommandPayloadBuilder() =>
+      ListProcedureToItemCategoryApiRequest().toBuilder();
+
+  @override
+  ListProcedureToItemCategoryApiResponseBuilder newResultPayloadBuilder() =>
+      ListProcedureToItemCategoryApiResponse().toBuilder();
+
+  @override
+  Serializer<ListProcedureToItemCategoryApiRequest>
+      get commandPayloadSerializer =>
+          ListProcedureToItemCategoryApiRequest.serializer;
+
+  @override
+  Serializer<ListProcedureToItemCategoryApiResponse>
+      get resultPayloadSerializer =>
+          ListProcedureToItemCategoryApiResponse.serializer;
 }

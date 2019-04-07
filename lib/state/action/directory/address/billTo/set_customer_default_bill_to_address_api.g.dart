@@ -11,102 +11,112 @@ part of 'set_customer_default_bill_to_address_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     SetCustomerDefaultBillToAddressApi> SetCustomerDefaultBillToAddressApiOptions();
 
 class _$SetCustomerDefaultBillToAddressApi
     extends SetCustomerDefaultBillToAddressApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       SetCustomerDefaultBillToAddressApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>, SetCustomerDefaultBillToAddressApi, String>> $clear;
+          ApiResult<Empty>, SetCustomerDefaultBillToAddressApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>, SetCustomerDefaultBillToAddressApi, String>> $cancel;
+      CommandPayload<
+          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
+          ApiResult<Empty>,
+          SetCustomerDefaultBillToAddressApi,
+          String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               SetCustomerDefaultBillToAddressApi,
               Command<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           SetCustomerDefaultBillToAddressApi,
-          CommandResult<ApiResult<Null>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>, SetCustomerDefaultBillToAddressApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>, SetCustomerDefaultBillToAddressApi, String>> $attach;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
+          SetCustomerDefaultBillToAddressApi,
+          String>> $detach;
+  final ActionDispatcher<
+      CommandPayload<
+          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
+          ApiResult<Empty>,
+          SetCustomerDefaultBillToAddressApi,
+          String>> $attach;
+  final ActionDispatcher<
+      CommandPayload<
+          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
+          ApiResult<Empty>,
           SetCustomerDefaultBillToAddressApi,
           CommandProgress>> $progress;
 
   _$SetCustomerDefaultBillToAddressApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SetCustomerDefaultBillToAddressApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SetCustomerDefaultBillToAddressApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     SetCustomerDefaultBillToAddressApi,
                     Command<
                         ApiCommand<
                             SetCustomerDefaultBillToAddressApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>,
-                SetCustomerDefaultBillToAddressApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
+                    ApiResult<Empty>,
+                    SetCustomerDefaultBillToAddressApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SetCustomerDefaultBillToAddressApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SetCustomerDefaultBillToAddressApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 SetCustomerDefaultBillToAddressApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -117,17 +127,17 @@ class _$SetCustomerDefaultBillToAddressApi
 
   @override
   CommandState<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<SetCustomerDefaultBillToAddressApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -151,6 +161,32 @@ class _$SetCustomerDefaultBillToAddressApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(SetCustomerDefaultBillToAddressApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<SetCustomerDefaultBillToAddressApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<SetCustomerDefaultBillToAddressApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SetCustomerDefaultBillToAddressApiRequestBuilder newCommandPayloadBuilder() =>
+      SetCustomerDefaultBillToAddressApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<SetCustomerDefaultBillToAddressApiRequest>
+      get commandPayloadSerializer =>
+          SetCustomerDefaultBillToAddressApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

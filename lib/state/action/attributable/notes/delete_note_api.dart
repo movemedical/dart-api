@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/attributable/notes/delete_note_api_
 
 part 'delete_note_api.g.dart';
 
-abstract class DeleteNoteApi extends ApiDispatcher<DeleteNoteApiRequest, Null, DeleteNoteApi> {
+abstract class DeleteNoteApi extends ApiDispatcher<DeleteNoteApiRequest,
+DeleteNoteApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteNoteApi> {
   @override
   String get path => 'v1/attributable/notes/delete_note';
-  
-  @override
-  Serializer<DeleteNoteApiRequest> get requestSerializer => DeleteNoteApiRequest.serializer;
   
   DeleteNoteApi._();
   

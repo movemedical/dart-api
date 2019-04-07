@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/list_issue_groups_api_r
 
 part 'list_issue_groups_api.g.dart';
 
-abstract class ListIssueGroupsApi extends ApiDispatcher<ListIssueGroupsApiRequest, ListIssueGroupsApiResponse, ListIssueGroupsApi> {
+abstract class ListIssueGroupsApi extends ApiDispatcher<ListIssueGroupsApiRequest,
+ListIssueGroupsApiRequestBuilder,
+ListIssueGroupsApiResponse,
+ListIssueGroupsApiResponseBuilder,
+ListIssueGroupsApi> {
   @override
   String get path => 'v1/integration/list_issue_groups';
-  
-  @override
-  Serializer<ListIssueGroupsApiRequest> get requestSerializer => ListIssueGroupsApiRequest.serializer;
-  
-  @override
-  Serializer<ListIssueGroupsApiResponse> get responseSerializer => ListIssueGroupsApiResponse.serializer;
   
   ListIssueGroupsApi._();
   

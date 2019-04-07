@@ -147,4 +147,31 @@ class _$CreatePickApi extends CreatePickApi {
         FullType(ApiCommand, [FullType(CreatePickApiRequest)]),
         FullType(ApiResult, [FullType(CreatePickApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreatePickApiRequest> newCommandBuilder() =>
+      ApiCommand<CreatePickApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreatePickApiResponse> newResultBuilder() =>
+      ApiResult<CreatePickApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreatePickApiRequestBuilder newCommandPayloadBuilder() =>
+      CreatePickApiRequest().toBuilder();
+
+  @override
+  CreatePickApiResponseBuilder newResultPayloadBuilder() =>
+      CreatePickApiResponse().toBuilder();
+
+  @override
+  Serializer<CreatePickApiRequest> get commandPayloadSerializer =>
+      CreatePickApiRequest.serializer;
+
+  @override
+  Serializer<CreatePickApiResponse> get resultPayloadSerializer =>
+      CreatePickApiResponse.serializer;
 }

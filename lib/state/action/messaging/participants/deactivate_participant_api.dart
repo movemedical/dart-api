@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/messaging/participants/deactivate_p
 
 part 'deactivate_participant_api.g.dart';
 
-abstract class DeactivateParticipantApi extends ApiDispatcher<DeactivateParticipantApiRequest, Null, DeactivateParticipantApi> {
+abstract class DeactivateParticipantApi extends ApiDispatcher<DeactivateParticipantApiRequest,
+DeactivateParticipantApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeactivateParticipantApi> {
   @override
   String get path => 'v1/messaging/participants/deactivate';
-  
-  @override
-  Serializer<DeactivateParticipantApiRequest> get requestSerializer => DeactivateParticipantApiRequest.serializer;
   
   DeactivateParticipantApi._();
   

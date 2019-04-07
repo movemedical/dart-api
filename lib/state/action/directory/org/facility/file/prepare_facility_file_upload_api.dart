@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/facility/file/prepare
 
 part 'prepare_facility_file_upload_api.g.dart';
 
-abstract class PrepareFacilityFileUploadApi extends ApiDispatcher<PrepareFacilityFileUploadApiRequest, PrepareFacilityFileUploadApiResponse, PrepareFacilityFileUploadApi> {
+abstract class PrepareFacilityFileUploadApi extends ApiDispatcher<PrepareFacilityFileUploadApiRequest,
+PrepareFacilityFileUploadApiRequestBuilder,
+PrepareFacilityFileUploadApiResponse,
+PrepareFacilityFileUploadApiResponseBuilder,
+PrepareFacilityFileUploadApi> {
   @override
   String get path => 'v1/inventory/org/facility/file/prepare_upload';
-  
-  @override
-  Serializer<PrepareFacilityFileUploadApiRequest> get requestSerializer => PrepareFacilityFileUploadApiRequest.serializer;
-  
-  @override
-  Serializer<PrepareFacilityFileUploadApiResponse> get responseSerializer => PrepareFacilityFileUploadApiResponse.serializer;
   
   PrepareFacilityFileUploadApi._();
   

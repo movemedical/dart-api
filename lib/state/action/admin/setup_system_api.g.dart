@@ -147,4 +147,31 @@ class _$SetupSystemApi extends SetupSystemApi {
         FullType(ApiCommand, [FullType(SetupSystemApiRequest)]),
         FullType(ApiResult, [FullType(SetupSystemApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<SetupSystemApiRequest> newCommandBuilder() =>
+      ApiCommand<SetupSystemApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<SetupSystemApiResponse> newResultBuilder() =>
+      ApiResult<SetupSystemApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  SetupSystemApiRequestBuilder newCommandPayloadBuilder() =>
+      SetupSystemApiRequest().toBuilder();
+
+  @override
+  SetupSystemApiResponseBuilder newResultPayloadBuilder() =>
+      SetupSystemApiResponse().toBuilder();
+
+  @override
+  Serializer<SetupSystemApiRequest> get commandPayloadSerializer =>
+      SetupSystemApiRequest.serializer;
+
+  @override
+  Serializer<SetupSystemApiResponse> get resultPayloadSerializer =>
+      SetupSystemApiResponse.serializer;
 }

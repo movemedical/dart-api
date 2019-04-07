@@ -176,4 +176,39 @@ class _$ListSurgeonPhysiciansForSchedulingApi
         FullType(ApiResult,
             [FullType(ListSurgeonPhysiciansForSchedulingApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListSurgeonPhysiciansForSchedulingApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListSurgeonPhysiciansForSchedulingApiRequest>()
+              .toBuilder();
+
+  @override
+  ApiResultBuilder<ListSurgeonPhysiciansForSchedulingApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListSurgeonPhysiciansForSchedulingApiResponse>()
+              .toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListSurgeonPhysiciansForSchedulingApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          ListSurgeonPhysiciansForSchedulingApiRequest().toBuilder();
+
+  @override
+  ListSurgeonPhysiciansForSchedulingApiResponseBuilder
+      newResultPayloadBuilder() =>
+          ListSurgeonPhysiciansForSchedulingApiResponse().toBuilder();
+
+  @override
+  Serializer<ListSurgeonPhysiciansForSchedulingApiRequest>
+      get commandPayloadSerializer =>
+          ListSurgeonPhysiciansForSchedulingApiRequest.serializer;
+
+  @override
+  Serializer<ListSurgeonPhysiciansForSchedulingApiResponse>
+      get resultPayloadSerializer =>
+          ListSurgeonPhysiciansForSchedulingApiResponse.serializer;
 }

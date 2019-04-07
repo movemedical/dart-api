@@ -160,4 +160,31 @@ class _$CreateCaseEventApi extends CreateCaseEventApi {
         FullType(ApiCommand, [FullType(CreateCaseEventApiRequest)]),
         FullType(ApiResult, [FullType(CreateCaseEventApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateCaseEventApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateCaseEventApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateCaseEventApiResponse> newResultBuilder() =>
+      ApiResult<CreateCaseEventApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateCaseEventApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateCaseEventApiRequest().toBuilder();
+
+  @override
+  CreateCaseEventApiResponseBuilder newResultPayloadBuilder() =>
+      CreateCaseEventApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateCaseEventApiRequest> get commandPayloadSerializer =>
+      CreateCaseEventApiRequest.serializer;
+
+  @override
+  Serializer<CreateCaseEventApiResponse> get resultPayloadSerializer =>
+      CreateCaseEventApiResponse.serializer;
 }

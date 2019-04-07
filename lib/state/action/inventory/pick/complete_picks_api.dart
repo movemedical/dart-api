@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pick/complete_picks_api_r
 
 part 'complete_picks_api.g.dart';
 
-abstract class CompletePicksApi extends ApiDispatcher<CompletePicksApiRequest, Null, CompletePicksApi> {
+abstract class CompletePicksApi extends ApiDispatcher<CompletePicksApiRequest,
+CompletePicksApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CompletePicksApi> {
   @override
   String get path => 'v1/inventory/pick/completeMultiple';
-  
-  @override
-  Serializer<CompletePicksApiRequest> get requestSerializer => CompletePicksApiRequest.serializer;
   
   CompletePicksApi._();
   

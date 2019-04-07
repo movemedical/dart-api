@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/order/load_sales_order_li
 
 part 'load_sales_order_line_pricing_api.g.dart';
 
-abstract class LoadSalesOrderLinePricingApi extends ApiDispatcher<LoadSalesOrderLinePricingApiRequest, Null, LoadSalesOrderLinePricingApi> {
+abstract class LoadSalesOrderLinePricingApi extends ApiDispatcher<LoadSalesOrderLinePricingApiRequest,
+LoadSalesOrderLinePricingApiRequestBuilder,
+Empty,
+EmptyBuilder,
+LoadSalesOrderLinePricingApi> {
   @override
   String get path => 'v1/inventory/order/load_sales_order_line_pricing';
-  
-  @override
-  Serializer<LoadSalesOrderLinePricingApiRequest> get requestSerializer => LoadSalesOrderLinePricingApiRequest.serializer;
   
   LoadSalesOrderLinePricingApi._();
   

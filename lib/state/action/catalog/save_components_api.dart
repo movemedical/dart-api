@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/catalog/save_components_api_request
 
 part 'save_components_api.g.dart';
 
-abstract class SaveComponentsApi extends ApiDispatcher<SaveComponentsApiRequest, Null, SaveComponentsApi> {
+abstract class SaveComponentsApi extends ApiDispatcher<SaveComponentsApiRequest,
+SaveComponentsApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SaveComponentsApi> {
   @override
   String get path => 'v1/catalog/save_components';
-  
-  @override
-  Serializer<SaveComponentsApiRequest> get requestSerializer => SaveComponentsApiRequest.serializer;
   
   SaveComponentsApi._();
   

@@ -147,4 +147,31 @@ class _$GetPackageApi extends GetPackageApi {
         FullType(ApiCommand, [FullType(GetPackageApiRequest)]),
         FullType(ApiResult, [FullType(GetPackageApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetPackageApiRequest> newCommandBuilder() =>
+      ApiCommand<GetPackageApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetPackageApiResponse> newResultBuilder() =>
+      ApiResult<GetPackageApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetPackageApiRequestBuilder newCommandPayloadBuilder() =>
+      GetPackageApiRequest().toBuilder();
+
+  @override
+  GetPackageApiResponseBuilder newResultPayloadBuilder() =>
+      GetPackageApiResponse().toBuilder();
+
+  @override
+  Serializer<GetPackageApiRequest> get commandPayloadSerializer =>
+      GetPackageApiRequest.serializer;
+
+  @override
+  Serializer<GetPackageApiResponse> get resultPayloadSerializer =>
+      GetPackageApiResponse.serializer;
 }

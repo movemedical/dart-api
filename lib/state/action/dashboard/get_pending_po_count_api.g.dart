@@ -160,4 +160,31 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
         FullType(ApiCommand, [FullType(GetPendingPoCountApiRequest)]),
         FullType(ApiResult, [FullType(GetPendingPoCountApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetPendingPoCountApiRequest> newCommandBuilder() =>
+      ApiCommand<GetPendingPoCountApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetPendingPoCountApiResponse> newResultBuilder() =>
+      ApiResult<GetPendingPoCountApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetPendingPoCountApiRequestBuilder newCommandPayloadBuilder() =>
+      GetPendingPoCountApiRequest().toBuilder();
+
+  @override
+  GetPendingPoCountApiResponseBuilder newResultPayloadBuilder() =>
+      GetPendingPoCountApiResponse().toBuilder();
+
+  @override
+  Serializer<GetPendingPoCountApiRequest> get commandPayloadSerializer =>
+      GetPendingPoCountApiRequest.serializer;
+
+  @override
+  Serializer<GetPendingPoCountApiResponse> get resultPayloadSerializer =>
+      GetPendingPoCountApiResponse.serializer;
 }

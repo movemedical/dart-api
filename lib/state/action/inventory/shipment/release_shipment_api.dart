@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/shipment/release_shipment
 
 part 'release_shipment_api.g.dart';
 
-abstract class ReleaseShipmentApi extends ApiDispatcher<ReleaseShipmentApiRequest, Null, ReleaseShipmentApi> {
+abstract class ReleaseShipmentApi extends ApiDispatcher<ReleaseShipmentApiRequest,
+ReleaseShipmentApiRequestBuilder,
+Empty,
+EmptyBuilder,
+ReleaseShipmentApi> {
   @override
   String get path => 'v1/inventory/shipment/release';
-  
-  @override
-  Serializer<ReleaseShipmentApiRequest> get requestSerializer => ReleaseShipmentApiRequest.serializer;
   
   ReleaseShipmentApi._();
   

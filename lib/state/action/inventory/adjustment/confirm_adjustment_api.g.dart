@@ -10,91 +10,92 @@ part of 'confirm_adjustment_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<ConfirmAdjustmentApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     ConfirmAdjustmentApi> ConfirmAdjustmentApiOptions();
 
 class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<ConfirmAdjustmentApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       ConfirmAdjustmentApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ConfirmAdjustmentApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmAdjustmentApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           ConfirmAdjustmentApi,
           Command<ApiCommand<ConfirmAdjustmentApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>,
-          ConfirmAdjustmentApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
+          ConfirmAdjustmentApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, CommandProgress>> $progress;
 
   _$ConfirmAdjustmentApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmAdjustmentApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmAdjustmentApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ConfirmAdjustmentApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     ConfirmAdjustmentApi,
                     Command<ApiCommand<ConfirmAdjustmentApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>,
-                ConfirmAdjustmentApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<ConfirmAdjustmentApiRequest>,
+                    ApiResult<Empty>,
+                    ConfirmAdjustmentApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmAdjustmentApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmAdjustmentApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 ConfirmAdjustmentApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
       _$ConfirmAdjustmentApi._(options());
 
   @override
-  CommandState<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<ConfirmAdjustmentApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Null>>();
+          ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ConfirmAdjustmentApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<ConfirmAdjustmentApiRequest> newCommandBuilder() =>
+      ApiCommand<ConfirmAdjustmentApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ConfirmAdjustmentApiRequestBuilder newCommandPayloadBuilder() =>
+      ConfirmAdjustmentApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<ConfirmAdjustmentApiRequest> get commandPayloadSerializer =>
+      ConfirmAdjustmentApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

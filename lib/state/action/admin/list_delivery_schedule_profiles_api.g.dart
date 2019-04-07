@@ -168,4 +168,35 @@ class _$ListDeliveryScheduleProfilesApi
             ApiCommand, [FullType(ListDeliveryScheduleProfilesApiRequest)]),
         FullType(ApiResult, [FullType(ListDeliveryScheduleProfilesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListDeliveryScheduleProfilesApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListDeliveryScheduleProfilesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListDeliveryScheduleProfilesApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListDeliveryScheduleProfilesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListDeliveryScheduleProfilesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListDeliveryScheduleProfilesApiRequest().toBuilder();
+
+  @override
+  ListDeliveryScheduleProfilesApiResponseBuilder newResultPayloadBuilder() =>
+      ListDeliveryScheduleProfilesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListDeliveryScheduleProfilesApiRequest>
+      get commandPayloadSerializer =>
+          ListDeliveryScheduleProfilesApiRequest.serializer;
+
+  @override
+  Serializer<ListDeliveryScheduleProfilesApiResponse>
+      get resultPayloadSerializer =>
+          ListDeliveryScheduleProfilesApiResponse.serializer;
 }

@@ -146,4 +146,31 @@ class _$GetStockApi extends GetStockApi {
         FullType(ApiCommand, [FullType(GetStockApiRequest)]),
         FullType(ApiResult, [FullType(GetStockApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetStockApiRequest> newCommandBuilder() =>
+      ApiCommand<GetStockApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetStockApiResponse> newResultBuilder() =>
+      ApiResult<GetStockApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetStockApiRequestBuilder newCommandPayloadBuilder() =>
+      GetStockApiRequest().toBuilder();
+
+  @override
+  GetStockApiResponseBuilder newResultPayloadBuilder() =>
+      GetStockApiResponse().toBuilder();
+
+  @override
+  Serializer<GetStockApiRequest> get commandPayloadSerializer =>
+      GetStockApiRequest.serializer;
+
+  @override
+  Serializer<GetStockApiResponse> get resultPayloadSerializer =>
+      GetStockApiResponse.serializer;
 }

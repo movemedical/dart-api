@@ -160,4 +160,31 @@ class _$ListHcrTeamOptionsApi extends ListHcrTeamOptionsApi {
         FullType(ApiCommand, [FullType(ListHcrTeamOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListHcrTeamOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHcrTeamOptionsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHcrTeamOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHcrTeamOptionsApiResponse> newResultBuilder() =>
+      ApiResult<ListHcrTeamOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHcrTeamOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHcrTeamOptionsApiRequest().toBuilder();
+
+  @override
+  ListHcrTeamOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListHcrTeamOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHcrTeamOptionsApiRequest> get commandPayloadSerializer =>
+      ListHcrTeamOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListHcrTeamOptionsApiResponse> get resultPayloadSerializer =>
+      ListHcrTeamOptionsApiResponse.serializer;
 }

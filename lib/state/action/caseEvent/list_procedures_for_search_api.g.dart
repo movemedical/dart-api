@@ -164,4 +164,31 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
         FullType(ApiCommand, [FullType(ListProceduresForSearchApiRequest)]),
         FullType(ApiResult, [FullType(ListProceduresForSearchApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListProceduresForSearchApiRequest> newCommandBuilder() =>
+      ApiCommand<ListProceduresForSearchApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListProceduresForSearchApiResponse> newResultBuilder() =>
+      ApiResult<ListProceduresForSearchApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListProceduresForSearchApiRequestBuilder newCommandPayloadBuilder() =>
+      ListProceduresForSearchApiRequest().toBuilder();
+
+  @override
+  ListProceduresForSearchApiResponseBuilder newResultPayloadBuilder() =>
+      ListProceduresForSearchApiResponse().toBuilder();
+
+  @override
+  Serializer<ListProceduresForSearchApiRequest> get commandPayloadSerializer =>
+      ListProceduresForSearchApiRequest.serializer;
+
+  @override
+  Serializer<ListProceduresForSearchApiResponse> get resultPayloadSerializer =>
+      ListProceduresForSearchApiResponse.serializer;
 }

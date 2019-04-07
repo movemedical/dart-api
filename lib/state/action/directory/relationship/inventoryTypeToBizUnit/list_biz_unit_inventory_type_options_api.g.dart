@@ -172,4 +172,35 @@ class _$ListBizUnitInventoryTypeOptionsApi
         FullType(
             ApiResult, [FullType(ListBizUnitInventoryTypeOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListBizUnitInventoryTypeOptionsApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListBizUnitInventoryTypeOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListBizUnitInventoryTypeOptionsApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListBizUnitInventoryTypeOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListBizUnitInventoryTypeOptionsApiRequest().toBuilder();
+
+  @override
+  ListBizUnitInventoryTypeOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListBizUnitInventoryTypeOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListBizUnitInventoryTypeOptionsApiRequest>
+      get commandPayloadSerializer =>
+          ListBizUnitInventoryTypeOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListBizUnitInventoryTypeOptionsApiResponse>
+      get resultPayloadSerializer =>
+          ListBizUnitInventoryTypeOptionsApiResponse.serializer;
 }

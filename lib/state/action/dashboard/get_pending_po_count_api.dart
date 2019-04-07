@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/dashboard/get_pending_po_count_api_
 
 part 'get_pending_po_count_api.g.dart';
 
-abstract class GetPendingPoCountApi extends ApiDispatcher<GetPendingPoCountApiRequest, GetPendingPoCountApiResponse, GetPendingPoCountApi> {
+abstract class GetPendingPoCountApi extends ApiDispatcher<GetPendingPoCountApiRequest,
+GetPendingPoCountApiRequestBuilder,
+GetPendingPoCountApiResponse,
+GetPendingPoCountApiResponseBuilder,
+GetPendingPoCountApi> {
   @override
   String get path => 'v1/dashboard/get_pending_po_count';
-  
-  @override
-  Serializer<GetPendingPoCountApiRequest> get requestSerializer => GetPendingPoCountApiRequest.serializer;
-  
-  @override
-  Serializer<GetPendingPoCountApiResponse> get responseSerializer => GetPendingPoCountApiResponse.serializer;
   
   GetPendingPoCountApi._();
   

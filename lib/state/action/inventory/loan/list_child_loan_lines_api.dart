@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/loan/list_child_loan_line
 
 part 'list_child_loan_lines_api.g.dart';
 
-abstract class ListChildLoanLinesApi extends ApiDispatcher<ListChildLoanLinesApiRequest, ListChildLoanLinesApiResponse, ListChildLoanLinesApi> {
+abstract class ListChildLoanLinesApi extends ApiDispatcher<ListChildLoanLinesApiRequest,
+ListChildLoanLinesApiRequestBuilder,
+ListChildLoanLinesApiResponse,
+ListChildLoanLinesApiResponseBuilder,
+ListChildLoanLinesApi> {
   @override
   String get path => 'v1/inventory/loan/list_child_lines';
-  
-  @override
-  Serializer<ListChildLoanLinesApiRequest> get requestSerializer => ListChildLoanLinesApiRequest.serializer;
-  
-  @override
-  Serializer<ListChildLoanLinesApiResponse> get responseSerializer => ListChildLoanLinesApiResponse.serializer;
   
   ListChildLoanLinesApi._();
   

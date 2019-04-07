@@ -147,4 +147,31 @@ class _$CreateTeamApi extends CreateTeamApi {
         FullType(ApiCommand, [FullType(CreateTeamApiRequest)]),
         FullType(ApiResult, [FullType(CreateTeamApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateTeamApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateTeamApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateTeamApiResponse> newResultBuilder() =>
+      ApiResult<CreateTeamApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateTeamApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateTeamApiRequest().toBuilder();
+
+  @override
+  CreateTeamApiResponseBuilder newResultPayloadBuilder() =>
+      CreateTeamApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateTeamApiRequest> get commandPayloadSerializer =>
+      CreateTeamApiRequest.serializer;
+
+  @override
+  Serializer<CreateTeamApiResponse> get resultPayloadSerializer =>
+      CreateTeamApiResponse.serializer;
 }

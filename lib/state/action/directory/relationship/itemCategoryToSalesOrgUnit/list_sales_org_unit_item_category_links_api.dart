@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/itemCategory
 
 part 'list_sales_org_unit_item_category_links_api.g.dart';
 
-abstract class ListSalesOrgUnitItemCategoryLinksApi extends ApiDispatcher<ListSalesOrgUnitItemCategoryLinksApiRequest, ListSalesOrgUnitItemCategoryLinksApiResponse, ListSalesOrgUnitItemCategoryLinksApi> {
+abstract class ListSalesOrgUnitItemCategoryLinksApi extends ApiDispatcher<ListSalesOrgUnitItemCategoryLinksApiRequest,
+ListSalesOrgUnitItemCategoryLinksApiRequestBuilder,
+ListSalesOrgUnitItemCategoryLinksApiResponse,
+ListSalesOrgUnitItemCategoryLinksApiResponseBuilder,
+ListSalesOrgUnitItemCategoryLinksApi> {
   @override
   String get path => 'v1/directory/relationship/item_category_to_sales_org_unit/list_links';
-  
-  @override
-  Serializer<ListSalesOrgUnitItemCategoryLinksApiRequest> get requestSerializer => ListSalesOrgUnitItemCategoryLinksApiRequest.serializer;
-  
-  @override
-  Serializer<ListSalesOrgUnitItemCategoryLinksApiResponse> get responseSerializer => ListSalesOrgUnitItemCategoryLinksApiResponse.serializer;
   
   ListSalesOrgUnitItemCategoryLinksApi._();
   

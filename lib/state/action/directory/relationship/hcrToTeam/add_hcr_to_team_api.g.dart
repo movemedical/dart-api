@@ -10,77 +10,78 @@ part of 'add_hcr_to_team_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>,
-    CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>,
     AddHcrToTeamApi> AddHcrToTeamApiOptions();
 
 class _$AddHcrToTeamApi extends AddHcrToTeamApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>,
-      CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>,
+      CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>,
       AddHcrToTeamApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>>
+          CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddHcrToTeamApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AddHcrToTeamApi,
           Command<ApiCommand<AddHcrToTeamApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
-          AddHcrToTeamApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
+          AddHcrToTeamApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, CommandProgress>> $progress;
 
   _$AddHcrToTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddHcrToTeamApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
                 AddHcrToTeamApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
                 AddHcrToTeamApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddHcrToTeamApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AddHcrToTeamApi,
                     Command<ApiCommand<AddHcrToTeamApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToTeamApiRequest>,
-                ApiResult<Null>,
-                AddHcrToTeamApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AddHcrToTeamApiRequest>,
+                    ApiResult<Empty>,
+                    AddHcrToTeamApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
                 AddHcrToTeamApi, String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>,
+            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
                 AddHcrToTeamApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToTeamApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AddHcrToTeamApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -89,14 +90,14 @@ class _$AddHcrToTeamApi extends AddHcrToTeamApi {
       _$AddHcrToTeamApi._(options());
 
   @override
-  CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>
       get $initial =>
-          CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>();
+          CommandState<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<AddHcrToTeamApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -119,6 +120,30 @@ class _$AddHcrToTeamApi extends AddHcrToTeamApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddHcrToTeamApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AddHcrToTeamApiRequest> newCommandBuilder() =>
+      ApiCommand<AddHcrToTeamApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AddHcrToTeamApiRequestBuilder newCommandPayloadBuilder() =>
+      AddHcrToTeamApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AddHcrToTeamApiRequest> get commandPayloadSerializer =>
+      AddHcrToTeamApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

@@ -159,4 +159,31 @@ class _$CreateBizUnitApi extends CreateBizUnitApi {
         FullType(ApiCommand, [FullType(CreateBizUnitApiRequest)]),
         FullType(ApiResult, [FullType(CreateBizUnitApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateBizUnitApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateBizUnitApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateBizUnitApiResponse> newResultBuilder() =>
+      ApiResult<CreateBizUnitApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateBizUnitApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateBizUnitApiRequest().toBuilder();
+
+  @override
+  CreateBizUnitApiResponseBuilder newResultPayloadBuilder() =>
+      CreateBizUnitApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateBizUnitApiRequest> get commandPayloadSerializer =>
+      CreateBizUnitApiRequest.serializer;
+
+  @override
+  Serializer<CreateBizUnitApiResponse> get resultPayloadSerializer =>
+      CreateBizUnitApiResponse.serializer;
 }

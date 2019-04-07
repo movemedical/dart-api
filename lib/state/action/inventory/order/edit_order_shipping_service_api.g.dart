@@ -11,98 +11,99 @@ part of 'edit_order_shipping_service_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<EditOrderShippingServiceApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<EditOrderShippingServiceApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     EditOrderShippingServiceApi> EditOrderShippingServiceApiOptions();
 
 class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       EditOrderShippingServiceApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>, EditOrderShippingServiceApi, String>> $clear;
+          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>, EditOrderShippingServiceApi, String>> $cancel;
+          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           EditOrderShippingServiceApi,
           Command<ApiCommand<EditOrderShippingServiceApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           EditOrderShippingServiceApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>, EditOrderShippingServiceApi, String>> $detach;
+          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>, EditOrderShippingServiceApi, String>> $attach;
+          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           EditOrderShippingServiceApi,
           CommandProgress>> $progress;
 
   _$EditOrderShippingServiceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EditOrderShippingServiceApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EditOrderShippingServiceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<EditOrderShippingServiceApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     EditOrderShippingServiceApi,
                     Command<ApiCommand<EditOrderShippingServiceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>,
-                EditOrderShippingServiceApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<EditOrderShippingServiceApiRequest>,
+                    ApiResult<Empty>,
+                    EditOrderShippingServiceApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EditOrderShippingServiceApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EditOrderShippingServiceApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EditOrderShippingServiceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
       _$EditOrderShippingServiceApi._(options());
 
   @override
-  CommandState<ApiCommand<EditOrderShippingServiceApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<EditOrderShippingServiceApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<EditOrderShippingServiceApiRequest>, ApiResult<Null>>();
+          ApiCommand<EditOrderShippingServiceApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<EditOrderShippingServiceApiRequest>, ApiResult<Null>>();
+          ApiCommand<EditOrderShippingServiceApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EditOrderShippingServiceApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<EditOrderShippingServiceApiRequest> newCommandBuilder() =>
+      ApiCommand<EditOrderShippingServiceApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  EditOrderShippingServiceApiRequestBuilder newCommandPayloadBuilder() =>
+      EditOrderShippingServiceApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<EditOrderShippingServiceApiRequest> get commandPayloadSerializer =>
+      EditOrderShippingServiceApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

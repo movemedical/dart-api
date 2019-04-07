@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/pick/get_pick_processing_
 
 part 'get_pick_processing_data_api.g.dart';
 
-abstract class GetPickProcessingDataApi extends ApiDispatcher<GetPickProcessingDataApiRequest, GetPickProcessingDataApiResponse, GetPickProcessingDataApi> {
+abstract class GetPickProcessingDataApi extends ApiDispatcher<GetPickProcessingDataApiRequest,
+GetPickProcessingDataApiRequestBuilder,
+GetPickProcessingDataApiResponse,
+GetPickProcessingDataApiResponseBuilder,
+GetPickProcessingDataApi> {
   @override
   String get path => 'v1/inventory/pick/getProcessingData';
-  
-  @override
-  Serializer<GetPickProcessingDataApiRequest> get requestSerializer => GetPickProcessingDataApiRequest.serializer;
-  
-  @override
-  Serializer<GetPickProcessingDataApiResponse> get responseSerializer => GetPickProcessingDataApiResponse.serializer;
   
   GetPickProcessingDataApi._();
   

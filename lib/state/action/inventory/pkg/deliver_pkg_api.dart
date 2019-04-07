@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pkg/deliver_pkg_api_reque
 
 part 'deliver_pkg_api.g.dart';
 
-abstract class DeliverPkgApi extends ApiDispatcher<DeliverPkgApiRequest, Null, DeliverPkgApi> {
+abstract class DeliverPkgApi extends ApiDispatcher<DeliverPkgApiRequest,
+DeliverPkgApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeliverPkgApi> {
   @override
   String get path => 'v1/inventory/pkg/deliver';
-  
-  @override
-  Serializer<DeliverPkgApiRequest> get requestSerializer => DeliverPkgApiRequest.serializer;
   
   DeliverPkgApi._();
   

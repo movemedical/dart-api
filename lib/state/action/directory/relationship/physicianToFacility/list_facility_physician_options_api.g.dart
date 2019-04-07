@@ -168,4 +168,35 @@ class _$ListFacilityPhysicianOptionsApi
             ApiCommand, [FullType(ListFacilityPhysicianOptionsApiRequest)]),
         FullType(ApiResult, [FullType(ListFacilityPhysicianOptionsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListFacilityPhysicianOptionsApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListFacilityPhysicianOptionsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListFacilityPhysicianOptionsApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListFacilityPhysicianOptionsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListFacilityPhysicianOptionsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListFacilityPhysicianOptionsApiRequest().toBuilder();
+
+  @override
+  ListFacilityPhysicianOptionsApiResponseBuilder newResultPayloadBuilder() =>
+      ListFacilityPhysicianOptionsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListFacilityPhysicianOptionsApiRequest>
+      get commandPayloadSerializer =>
+          ListFacilityPhysicianOptionsApiRequest.serializer;
+
+  @override
+  Serializer<ListFacilityPhysicianOptionsApiResponse>
+      get resultPayloadSerializer =>
+          ListFacilityPhysicianOptionsApiResponse.serializer;
 }

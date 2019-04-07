@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/catalog/edit_item_api_request.dart'
 
 part 'edit_item_api.g.dart';
 
-abstract class EditItemApi extends ApiDispatcher<EditItemApiRequest, Null, EditItemApi> {
+abstract class EditItemApi extends ApiDispatcher<EditItemApiRequest,
+EditItemApiRequestBuilder,
+Empty,
+EmptyBuilder,
+EditItemApi> {
   @override
   String get path => 'v1/catalog/edit_item';
-  
-  @override
-  Serializer<EditItemApiRequest> get requestSerializer => EditItemApiRequest.serializer;
   
   EditItemApi._();
   

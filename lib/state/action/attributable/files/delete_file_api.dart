@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/attributable/files/delete_file_api_
 
 part 'delete_file_api.g.dart';
 
-abstract class DeleteFileApi extends ApiDispatcher<DeleteFileApiRequest, Null, DeleteFileApi> {
+abstract class DeleteFileApi extends ApiDispatcher<DeleteFileApiRequest,
+DeleteFileApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteFileApi> {
   @override
   String get path => 'v1/attributable/files/delete';
-  
-  @override
-  Serializer<DeleteFileApiRequest> get requestSerializer => DeleteFileApiRequest.serializer;
   
   DeleteFileApi._();
   

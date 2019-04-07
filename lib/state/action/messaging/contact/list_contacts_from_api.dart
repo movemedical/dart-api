@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/messaging/contact/list_contacts_fro
 
 part 'list_contacts_from_api.g.dart';
 
-abstract class ListContactsFromApi extends ApiDispatcher<ListContactsFromApiRequest, ListContactsFromApiResponse, ListContactsFromApi> {
+abstract class ListContactsFromApi extends ApiDispatcher<ListContactsFromApiRequest,
+ListContactsFromApiRequestBuilder,
+ListContactsFromApiResponse,
+ListContactsFromApiResponseBuilder,
+ListContactsFromApi> {
   @override
   String get path => 'v1/messaging/contact/list_from';
-  
-  @override
-  Serializer<ListContactsFromApiRequest> get requestSerializer => ListContactsFromApiRequest.serializer;
-  
-  @override
-  Serializer<ListContactsFromApiResponse> get responseSerializer => ListContactsFromApiResponse.serializer;
   
   ListContactsFromApi._();
   

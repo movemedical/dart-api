@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_sub_procedures_api_r
 
 part 'list_sub_procedures_api.g.dart';
 
-abstract class ListSubProceduresApi extends ApiDispatcher<ListSubProceduresApiRequest, ListSubProceduresApiResponse, ListSubProceduresApi> {
+abstract class ListSubProceduresApi extends ApiDispatcher<ListSubProceduresApiRequest,
+ListSubProceduresApiRequestBuilder,
+ListSubProceduresApiResponse,
+ListSubProceduresApiResponseBuilder,
+ListSubProceduresApi> {
   @override
   String get path => 'v1/case_event/list_sub_procedures';
-  
-  @override
-  Serializer<ListSubProceduresApiRequest> get requestSerializer => ListSubProceduresApiRequest.serializer;
-  
-  @override
-  Serializer<ListSubProceduresApiResponse> get responseSerializer => ListSubProceduresApiResponse.serializer;
   
   ListSubProceduresApi._();
   

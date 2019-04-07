@@ -160,4 +160,31 @@ class _$ListUpcomingCasesApi extends ListUpcomingCasesApi {
         FullType(ApiCommand, [FullType(ListUpcomingCasesApiRequest)]),
         FullType(ApiResult, [FullType(ListUpcomingCasesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListUpcomingCasesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListUpcomingCasesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListUpcomingCasesApiResponse> newResultBuilder() =>
+      ApiResult<ListUpcomingCasesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListUpcomingCasesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListUpcomingCasesApiRequest().toBuilder();
+
+  @override
+  ListUpcomingCasesApiResponseBuilder newResultPayloadBuilder() =>
+      ListUpcomingCasesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListUpcomingCasesApiRequest> get commandPayloadSerializer =>
+      ListUpcomingCasesApiRequest.serializer;
+
+  @override
+  Serializer<ListUpcomingCasesApiResponse> get resultPayloadSerializer =>
+      ListUpcomingCasesApiResponse.serializer;
 }

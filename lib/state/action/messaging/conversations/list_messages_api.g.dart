@@ -147,4 +147,31 @@ class _$ListMessagesApi extends ListMessagesApi {
         FullType(ApiCommand, [FullType(ListMessagesApiRequest)]),
         FullType(ApiResult, [FullType(ListMessagesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListMessagesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListMessagesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListMessagesApiResponse> newResultBuilder() =>
+      ApiResult<ListMessagesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListMessagesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListMessagesApiRequest().toBuilder();
+
+  @override
+  ListMessagesApiResponseBuilder newResultPayloadBuilder() =>
+      ListMessagesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListMessagesApiRequest> get commandPayloadSerializer =>
+      ListMessagesApiRequest.serializer;
+
+  @override
+  Serializer<ListMessagesApiResponse> get resultPayloadSerializer =>
+      ListMessagesApiResponse.serializer;
 }

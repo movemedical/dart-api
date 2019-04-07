@@ -159,4 +159,31 @@ class _$ListAssigneesApi extends ListAssigneesApi {
         FullType(ApiCommand, [FullType(ListAssigneesApiRequest)]),
         FullType(ApiResult, [FullType(ListAssigneesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAssigneesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAssigneesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAssigneesApiResponse> newResultBuilder() =>
+      ApiResult<ListAssigneesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAssigneesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAssigneesApiRequest().toBuilder();
+
+  @override
+  ListAssigneesApiResponseBuilder newResultPayloadBuilder() =>
+      ListAssigneesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAssigneesApiRequest> get commandPayloadSerializer =>
+      ListAssigneesApiRequest.serializer;
+
+  @override
+  Serializer<ListAssigneesApiResponse> get resultPayloadSerializer =>
+      ListAssigneesApiResponse.serializer;
 }

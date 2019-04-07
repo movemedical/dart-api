@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/pick/create_picks_api_req
 
 part 'create_picks_api.g.dart';
 
-abstract class CreatePicksApi extends ApiDispatcher<CreatePicksApiRequest, Null, CreatePicksApi> {
+abstract class CreatePicksApi extends ApiDispatcher<CreatePicksApiRequest,
+CreatePicksApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreatePicksApi> {
   @override
   String get path => 'v1/inventory/pick/createMultiple';
-  
-  @override
-  Serializer<CreatePicksApiRequest> get requestSerializer => CreatePicksApiRequest.serializer;
   
   CreatePicksApi._();
   

@@ -162,4 +162,31 @@ class _$UpdateSalesOrderHeaderApi extends UpdateSalesOrderHeaderApi {
         FullType(ApiCommand, [FullType(UpdateSalesOrderHeaderApiRequest)]),
         FullType(ApiResult, [FullType(UpdateSalesOrderHeaderApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateSalesOrderHeaderApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateSalesOrderHeaderApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<UpdateSalesOrderHeaderApiResponse> newResultBuilder() =>
+      ApiResult<UpdateSalesOrderHeaderApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateSalesOrderHeaderApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateSalesOrderHeaderApiRequest().toBuilder();
+
+  @override
+  UpdateSalesOrderHeaderApiResponseBuilder newResultPayloadBuilder() =>
+      UpdateSalesOrderHeaderApiResponse().toBuilder();
+
+  @override
+  Serializer<UpdateSalesOrderHeaderApiRequest> get commandPayloadSerializer =>
+      UpdateSalesOrderHeaderApiRequest.serializer;
+
+  @override
+  Serializer<UpdateSalesOrderHeaderApiResponse> get resultPayloadSerializer =>
+      UpdateSalesOrderHeaderApiResponse.serializer;
 }

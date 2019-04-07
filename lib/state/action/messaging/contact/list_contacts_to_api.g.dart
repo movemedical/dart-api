@@ -159,4 +159,31 @@ class _$ListContactsToApi extends ListContactsToApi {
         FullType(ApiCommand, [FullType(ListContactsToApiRequest)]),
         FullType(ApiResult, [FullType(ListContactsToApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListContactsToApiRequest> newCommandBuilder() =>
+      ApiCommand<ListContactsToApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListContactsToApiResponse> newResultBuilder() =>
+      ApiResult<ListContactsToApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListContactsToApiRequestBuilder newCommandPayloadBuilder() =>
+      ListContactsToApiRequest().toBuilder();
+
+  @override
+  ListContactsToApiResponseBuilder newResultPayloadBuilder() =>
+      ListContactsToApiResponse().toBuilder();
+
+  @override
+  Serializer<ListContactsToApiRequest> get commandPayloadSerializer =>
+      ListContactsToApiRequest.serializer;
+
+  @override
+  Serializer<ListContactsToApiResponse> get resultPayloadSerializer =>
+      ListContactsToApiResponse.serializer;
 }

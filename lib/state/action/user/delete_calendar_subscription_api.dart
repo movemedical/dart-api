@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/user/delete_calendar_subscription_a
 
 part 'delete_calendar_subscription_api.g.dart';
 
-abstract class DeleteCalendarSubscriptionApi extends ApiDispatcher<DeleteCalendarSubscriptionApiRequest, Null, DeleteCalendarSubscriptionApi> {
+abstract class DeleteCalendarSubscriptionApi extends ApiDispatcher<DeleteCalendarSubscriptionApiRequest,
+DeleteCalendarSubscriptionApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteCalendarSubscriptionApi> {
   @override
   String get path => 'user/calendar/delete_subscription';
-  
-  @override
-  Serializer<DeleteCalendarSubscriptionApiRequest> get requestSerializer => DeleteCalendarSubscriptionApiRequest.serializer;
   
   DeleteCalendarSubscriptionApi._();
   

@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/doc/kitmanifest/request_kit_mani
 
 part 'request_kit_manifest_doc_api.g.dart';
 
-abstract class RequestKitManifestDocApi extends ApiDispatcher<RequestKitManifestDocApiRequest, Null, RequestKitManifestDocApi> {
+abstract class RequestKitManifestDocApi extends ApiDispatcher<RequestKitManifestDocApiRequest,
+RequestKitManifestDocApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestKitManifestDocApi> {
   @override
   String get path => 'v1/doc/kitmanifest';
-  
-  @override
-  Serializer<RequestKitManifestDocApiRequest> get requestSerializer => RequestKitManifestDocApiRequest.serializer;
   
   RequestKitManifestDocApi._();
   

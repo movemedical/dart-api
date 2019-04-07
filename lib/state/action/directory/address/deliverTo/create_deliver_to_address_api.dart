@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/address/deliverTo/create_
 
 part 'create_deliver_to_address_api.g.dart';
 
-abstract class CreateDeliverToAddressApi extends ApiDispatcher<CreateDeliverToAddressApiRequest, Null, CreateDeliverToAddressApi> {
+abstract class CreateDeliverToAddressApi extends ApiDispatcher<CreateDeliverToAddressApiRequest,
+CreateDeliverToAddressApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CreateDeliverToAddressApi> {
   @override
   String get path => 'v1/directory/address/deliver_to/create';
-  
-  @override
-  Serializer<CreateDeliverToAddressApiRequest> get requestSerializer => CreateDeliverToAddressApiRequest.serializer;
   
   CreateDeliverToAddressApi._();
   

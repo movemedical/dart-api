@@ -146,4 +146,31 @@ class _$MoveStockApi extends MoveStockApi {
         FullType(ApiCommand, [FullType(MoveStockApiRequest)]),
         FullType(ApiResult, [FullType(MoveStockApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<MoveStockApiRequest> newCommandBuilder() =>
+      ApiCommand<MoveStockApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<MoveStockApiResponse> newResultBuilder() =>
+      ApiResult<MoveStockApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  MoveStockApiRequestBuilder newCommandPayloadBuilder() =>
+      MoveStockApiRequest().toBuilder();
+
+  @override
+  MoveStockApiResponseBuilder newResultPayloadBuilder() =>
+      MoveStockApiResponse().toBuilder();
+
+  @override
+  Serializer<MoveStockApiRequest> get commandPayloadSerializer =>
+      MoveStockApiRequest.serializer;
+
+  @override
+  Serializer<MoveStockApiResponse> get resultPayloadSerializer =>
+      MoveStockApiResponse.serializer;
 }

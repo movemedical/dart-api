@@ -144,4 +144,31 @@ class _$GetTeamApi extends GetTeamApi {
         FullType(ApiCommand, [FullType(GetTeamApiRequest)]),
         FullType(ApiResult, [FullType(GetTeamApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetTeamApiRequest> newCommandBuilder() =>
+      ApiCommand<GetTeamApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetTeamApiResponse> newResultBuilder() =>
+      ApiResult<GetTeamApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetTeamApiRequestBuilder newCommandPayloadBuilder() =>
+      GetTeamApiRequest().toBuilder();
+
+  @override
+  GetTeamApiResponseBuilder newResultPayloadBuilder() =>
+      GetTeamApiResponse().toBuilder();
+
+  @override
+  Serializer<GetTeamApiRequest> get commandPayloadSerializer =>
+      GetTeamApiRequest.serializer;
+
+  @override
+  Serializer<GetTeamApiResponse> get resultPayloadSerializer =>
+      GetTeamApiResponse.serializer;
 }

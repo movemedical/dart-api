@@ -161,4 +161,31 @@ class _$ListContainerJournalsApi extends ListContainerJournalsApi {
         FullType(ApiCommand, [FullType(ListContainerJournalsApiRequest)]),
         FullType(ApiResult, [FullType(ListContainerJournalsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListContainerJournalsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListContainerJournalsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListContainerJournalsApiResponse> newResultBuilder() =>
+      ApiResult<ListContainerJournalsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListContainerJournalsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListContainerJournalsApiRequest().toBuilder();
+
+  @override
+  ListContainerJournalsApiResponseBuilder newResultPayloadBuilder() =>
+      ListContainerJournalsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListContainerJournalsApiRequest> get commandPayloadSerializer =>
+      ListContainerJournalsApiRequest.serializer;
+
+  @override
+  Serializer<ListContainerJournalsApiResponse> get resultPayloadSerializer =>
+      ListContainerJournalsApiResponse.serializer;
 }

@@ -11,98 +11,99 @@ part of 'request_case_list_export_doc_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestCaseListExportDocApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RequestCaseListExportDocApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RequestCaseListExportDocApi> RequestCaseListExportDocApiOptions();
 
 class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RequestCaseListExportDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>, RequestCaseListExportDocApi, String>> $clear;
+          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>, RequestCaseListExportDocApi, String>> $cancel;
+          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestCaseListExportDocApi,
           Command<ApiCommand<RequestCaseListExportDocApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestCaseListExportDocApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>, RequestCaseListExportDocApi, String>> $detach;
+          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>, RequestCaseListExportDocApi, String>> $attach;
+          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestCaseListExportDocApi,
           CommandProgress>> $progress;
 
   _$RequestCaseListExportDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestCaseListExportDocApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestCaseListExportDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestCaseListExportDocApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RequestCaseListExportDocApi,
                     Command<ApiCommand<RequestCaseListExportDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>,
-                RequestCaseListExportDocApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RequestCaseListExportDocApiRequest>,
+                    ApiResult<Empty>,
+                    RequestCaseListExportDocApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestCaseListExportDocApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestCaseListExportDocApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestCaseListExportDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,15 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
       _$RequestCaseListExportDocApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Null>>();
+          ApiCommand<RequestCaseListExportDocApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +144,30 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestCaseListExportDocApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestCaseListExportDocApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestCaseListExportDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestCaseListExportDocApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestCaseListExportDocApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RequestCaseListExportDocApiRequest> get commandPayloadSerializer =>
+      RequestCaseListExportDocApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

@@ -44,7 +44,7 @@ void main() {
 
   test('ApiService login', () async {
     final store = createStore((a) => a.$initialBuilder
-      ..url = 'https://integra-qa.movemedical.com'
+      ..url = 'https://dev.movemedical.com'
       ..appVersion = 'Move Dart - 1.0.0');
     final api = store.service<ApiService>();
 
@@ -54,10 +54,11 @@ void main() {
 
     final future = store.execute(
         store.actions.loginCommand,
-        store.actions.loginCommand.create(LoginRequest((b) => b
-          ..session = ''
-          ..email = 'admin@integralife.com'
-          ..password = 'pw4Integra!')));
+        store.actions.loginCommand.create(
+            request: LoginRequest((b) => b
+              ..session = ''
+              ..email = 'admin@movemedical.com'
+              ..password = 'move')));
 
     final result = await future;
     print(result);

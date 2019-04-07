@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/zone/list_zones_api_respo
 
 part 'list_zones_api.g.dart';
 
-abstract class ListZonesApi extends ApiDispatcher<ListZonesApiRequest, ListZonesApiResponse, ListZonesApi> {
+abstract class ListZonesApi extends ApiDispatcher<ListZonesApiRequest,
+ListZonesApiRequestBuilder,
+ListZonesApiResponse,
+ListZonesApiResponseBuilder,
+ListZonesApi> {
   @override
   String get path => 'v1/inventory/zone/list';
-  
-  @override
-  Serializer<ListZonesApiRequest> get requestSerializer => ListZonesApiRequest.serializer;
-  
-  @override
-  Serializer<ListZonesApiResponse> get responseSerializer => ListZonesApiResponse.serializer;
   
   ListZonesApi._();
   

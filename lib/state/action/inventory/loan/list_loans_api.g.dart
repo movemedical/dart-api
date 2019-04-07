@@ -146,4 +146,31 @@ class _$ListLoansApi extends ListLoansApi {
         FullType(ApiCommand, [FullType(ListLoansApiRequest)]),
         FullType(ApiResult, [FullType(ListLoansApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListLoansApiRequest> newCommandBuilder() =>
+      ApiCommand<ListLoansApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListLoansApiResponse> newResultBuilder() =>
+      ApiResult<ListLoansApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListLoansApiRequestBuilder newCommandPayloadBuilder() =>
+      ListLoansApiRequest().toBuilder();
+
+  @override
+  ListLoansApiResponseBuilder newResultPayloadBuilder() =>
+      ListLoansApiResponse().toBuilder();
+
+  @override
+  Serializer<ListLoansApiRequest> get commandPayloadSerializer =>
+      ListLoansApiRequest.serializer;
+
+  @override
+  Serializer<ListLoansApiResponse> get resultPayloadSerializer =>
+      ListLoansApiResponse.serializer;
 }

@@ -162,4 +162,31 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
         FullType(ApiCommand, [FullType(ListCustomerQualifiersApiRequest)]),
         FullType(ApiResult, [FullType(ListCustomerQualifiersApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListCustomerQualifiersApiRequest> newCommandBuilder() =>
+      ApiCommand<ListCustomerQualifiersApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListCustomerQualifiersApiResponse> newResultBuilder() =>
+      ApiResult<ListCustomerQualifiersApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListCustomerQualifiersApiRequestBuilder newCommandPayloadBuilder() =>
+      ListCustomerQualifiersApiRequest().toBuilder();
+
+  @override
+  ListCustomerQualifiersApiResponseBuilder newResultPayloadBuilder() =>
+      ListCustomerQualifiersApiResponse().toBuilder();
+
+  @override
+  Serializer<ListCustomerQualifiersApiRequest> get commandPayloadSerializer =>
+      ListCustomerQualifiersApiRequest.serializer;
+
+  @override
+  Serializer<ListCustomerQualifiersApiResponse> get resultPayloadSerializer =>
+      ListCustomerQualifiersApiResponse.serializer;
 }

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/order/send_order_to_erp_a
 
 part 'send_order_to_erp_api.g.dart';
 
-abstract class SendOrderToErpApi extends ApiDispatcher<SendOrderToErpApiRequest, SendOrderToErpApiResponse, SendOrderToErpApi> {
+abstract class SendOrderToErpApi extends ApiDispatcher<SendOrderToErpApiRequest,
+SendOrderToErpApiRequestBuilder,
+SendOrderToErpApiResponse,
+SendOrderToErpApiResponseBuilder,
+SendOrderToErpApi> {
   @override
   String get path => 'v1/inventory/order/send_to_erp';
-  
-  @override
-  Serializer<SendOrderToErpApiRequest> get requestSerializer => SendOrderToErpApiRequest.serializer;
-  
-  @override
-  Serializer<SendOrderToErpApiResponse> get responseSerializer => SendOrderToErpApiResponse.serializer;
   
   SendOrderToErpApi._();
   

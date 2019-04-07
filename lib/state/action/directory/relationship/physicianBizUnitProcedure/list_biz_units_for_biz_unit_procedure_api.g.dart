@@ -172,4 +172,35 @@ class _$ListBizUnitsForBizUnitProcedureApi
         FullType(
             ApiResult, [FullType(ListBizUnitsForBizUnitProcedureApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListBizUnitsForBizUnitProcedureApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListBizUnitsForBizUnitProcedureApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListBizUnitsForBizUnitProcedureApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListBizUnitsForBizUnitProcedureApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListBizUnitsForBizUnitProcedureApiRequestBuilder newCommandPayloadBuilder() =>
+      ListBizUnitsForBizUnitProcedureApiRequest().toBuilder();
+
+  @override
+  ListBizUnitsForBizUnitProcedureApiResponseBuilder newResultPayloadBuilder() =>
+      ListBizUnitsForBizUnitProcedureApiResponse().toBuilder();
+
+  @override
+  Serializer<ListBizUnitsForBizUnitProcedureApiRequest>
+      get commandPayloadSerializer =>
+          ListBizUnitsForBizUnitProcedureApiRequest.serializer;
+
+  @override
+  Serializer<ListBizUnitsForBizUnitProcedureApiResponse>
+      get resultPayloadSerializer =>
+          ListBizUnitsForBizUnitProcedureApiResponse.serializer;
 }

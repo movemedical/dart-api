@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/usage/list_stock_for_usag
 
 part 'list_stock_for_usage_api.g.dart';
 
-abstract class ListStockForUsageApi extends ApiDispatcher<ListStockForUsageApiRequest, ListStockForUsageApiResponse, ListStockForUsageApi> {
+abstract class ListStockForUsageApi extends ApiDispatcher<ListStockForUsageApiRequest,
+ListStockForUsageApiRequestBuilder,
+ListStockForUsageApiResponse,
+ListStockForUsageApiResponseBuilder,
+ListStockForUsageApi> {
   @override
   String get path => 'v1/case_event/usage/list_stock';
-  
-  @override
-  Serializer<ListStockForUsageApiRequest> get requestSerializer => ListStockForUsageApiRequest.serializer;
-  
-  @override
-  Serializer<ListStockForUsageApiResponse> get responseSerializer => ListStockForUsageApiResponse.serializer;
   
   ListStockForUsageApi._();
   

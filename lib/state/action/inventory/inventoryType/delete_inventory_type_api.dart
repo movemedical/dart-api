@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/inventoryType/delete_inve
 
 part 'delete_inventory_type_api.g.dart';
 
-abstract class DeleteInventoryTypeApi extends ApiDispatcher<DeleteInventoryTypeApiRequest, Null, DeleteInventoryTypeApi> {
+abstract class DeleteInventoryTypeApi extends ApiDispatcher<DeleteInventoryTypeApiRequest,
+DeleteInventoryTypeApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DeleteInventoryTypeApi> {
   @override
   String get path => 'v1/inventory/inventory_type/delete';
-  
-  @override
-  Serializer<DeleteInventoryTypeApiRequest> get requestSerializer => DeleteInventoryTypeApiRequest.serializer;
   
   DeleteInventoryTypeApi._();
   

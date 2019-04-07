@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/user/presence/refresh_presence_api_
 
 part 'refresh_presence_api.g.dart';
 
-abstract class RefreshPresenceApi extends ApiDispatcher<RefreshPresenceApiRequest, Null, RefreshPresenceApi> {
+abstract class RefreshPresenceApi extends ApiDispatcher<RefreshPresenceApiRequest,
+RefreshPresenceApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RefreshPresenceApi> {
   @override
   String get path => 'v1/user/presence/refresh';
-  
-  @override
-  Serializer<RefreshPresenceApiRequest> get requestSerializer => RefreshPresenceApiRequest.serializer;
   
   RefreshPresenceApi._();
   

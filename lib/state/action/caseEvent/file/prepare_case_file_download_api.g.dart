@@ -164,4 +164,31 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
         FullType(ApiCommand, [FullType(PrepareCaseFileDownloadApiRequest)]),
         FullType(ApiResult, [FullType(PrepareCaseFileDownloadApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PrepareCaseFileDownloadApiRequest> newCommandBuilder() =>
+      ApiCommand<PrepareCaseFileDownloadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PrepareCaseFileDownloadApiResponse> newResultBuilder() =>
+      ApiResult<PrepareCaseFileDownloadApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PrepareCaseFileDownloadApiRequestBuilder newCommandPayloadBuilder() =>
+      PrepareCaseFileDownloadApiRequest().toBuilder();
+
+  @override
+  PrepareCaseFileDownloadApiResponseBuilder newResultPayloadBuilder() =>
+      PrepareCaseFileDownloadApiResponse().toBuilder();
+
+  @override
+  Serializer<PrepareCaseFileDownloadApiRequest> get commandPayloadSerializer =>
+      PrepareCaseFileDownloadApiRequest.serializer;
+
+  @override
+  Serializer<PrepareCaseFileDownloadApiResponse> get resultPayloadSerializer =>
+      PrepareCaseFileDownloadApiResponse.serializer;
 }

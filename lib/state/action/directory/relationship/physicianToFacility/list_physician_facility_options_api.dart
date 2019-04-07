@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/physicianToF
 
 part 'list_physician_facility_options_api.g.dart';
 
-abstract class ListPhysicianFacilityOptionsApi extends ApiDispatcher<ListPhysicianFacilityOptionsApiRequest, ListPhysicianFacilityOptionsApiResponse, ListPhysicianFacilityOptionsApi> {
+abstract class ListPhysicianFacilityOptionsApi extends ApiDispatcher<ListPhysicianFacilityOptionsApiRequest,
+ListPhysicianFacilityOptionsApiRequestBuilder,
+ListPhysicianFacilityOptionsApiResponse,
+ListPhysicianFacilityOptionsApiResponseBuilder,
+ListPhysicianFacilityOptionsApi> {
   @override
   String get path => 'v1/directory/relationship/physician_to_facility/list_facility_options';
-  
-  @override
-  Serializer<ListPhysicianFacilityOptionsApiRequest> get requestSerializer => ListPhysicianFacilityOptionsApiRequest.serializer;
-  
-  @override
-  Serializer<ListPhysicianFacilityOptionsApiResponse> get responseSerializer => ListPhysicianFacilityOptionsApiResponse.serializer;
   
   ListPhysicianFacilityOptionsApi._();
   

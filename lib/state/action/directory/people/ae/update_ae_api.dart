@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/directory/people/ae/update_ae_api_r
 
 part 'update_ae_api.g.dart';
 
-abstract class UpdateAeApi extends ApiDispatcher<UpdateAeApiRequest, Null, UpdateAeApi> {
+abstract class UpdateAeApi extends ApiDispatcher<UpdateAeApiRequest,
+UpdateAeApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateAeApi> {
   @override
   String get path => 'v1/directory/people/ae/update';
-  
-  @override
-  Serializer<UpdateAeApiRequest> get requestSerializer => UpdateAeApiRequest.serializer;
   
   UpdateAeApi._();
   

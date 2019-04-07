@@ -147,4 +147,31 @@ class _$ListSerialsApi extends ListSerialsApi {
         FullType(ApiCommand, [FullType(ListSerialsApiRequest)]),
         FullType(ApiResult, [FullType(ListSerialsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListSerialsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListSerialsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListSerialsApiResponse> newResultBuilder() =>
+      ApiResult<ListSerialsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListSerialsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListSerialsApiRequest().toBuilder();
+
+  @override
+  ListSerialsApiResponseBuilder newResultPayloadBuilder() =>
+      ListSerialsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListSerialsApiRequest> get commandPayloadSerializer =>
+      ListSerialsApiRequest.serializer;
+
+  @override
+  Serializer<ListSerialsApiResponse> get resultPayloadSerializer =>
+      ListSerialsApiResponse.serializer;
 }

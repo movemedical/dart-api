@@ -10,94 +10,99 @@ part of 'register_mobile_device_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RegisterMobileDeviceApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RegisterMobileDeviceApi> RegisterMobileDeviceApiOptions();
 
 class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RegisterMobileDeviceApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>, RegisterMobileDeviceApi, String>> $clear;
+          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>, RegisterMobileDeviceApi, String>> $cancel;
+          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RegisterMobileDeviceApi,
           Command<ApiCommand<RegisterMobileDeviceApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RegisterMobileDeviceApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>, RegisterMobileDeviceApi, String>> $detach;
+          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>, RegisterMobileDeviceApi, String>> $attach;
+          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>, RegisterMobileDeviceApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<RegisterMobileDeviceApiRequest>,
+          ApiResult<Empty>,
+          RegisterMobileDeviceApi,
+          CommandProgress>> $progress;
 
   _$RegisterMobileDeviceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegisterMobileDeviceApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegisterMobileDeviceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RegisterMobileDeviceApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RegisterMobileDeviceApi,
                     Command<ApiCommand<RegisterMobileDeviceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>,
-                RegisterMobileDeviceApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RegisterMobileDeviceApiRequest>,
+                    ApiResult<Empty>,
+                    RegisterMobileDeviceApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegisterMobileDeviceApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegisterMobileDeviceApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegisterMobileDeviceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -106,15 +111,15 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
       _$RegisterMobileDeviceApi._(options());
 
   @override
-  CommandState<ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Null>>();
+          ApiCommand<RegisterMobileDeviceApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -137,6 +142,30 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RegisterMobileDeviceApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RegisterMobileDeviceApiRequest> newCommandBuilder() =>
+      ApiCommand<RegisterMobileDeviceApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RegisterMobileDeviceApiRequestBuilder newCommandPayloadBuilder() =>
+      RegisterMobileDeviceApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RegisterMobileDeviceApiRequest> get commandPayloadSerializer =>
+      RegisterMobileDeviceApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

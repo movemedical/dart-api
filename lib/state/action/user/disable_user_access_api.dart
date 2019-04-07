@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/user/disable_user_access_api_reques
 
 part 'disable_user_access_api.g.dart';
 
-abstract class DisableUserAccessApi extends ApiDispatcher<DisableUserAccessApiRequest, Null, DisableUserAccessApi> {
+abstract class DisableUserAccessApi extends ApiDispatcher<DisableUserAccessApiRequest,
+DisableUserAccessApiRequestBuilder,
+Empty,
+EmptyBuilder,
+DisableUserAccessApi> {
   @override
   String get path => 'v1/user/disable_user_access';
-  
-  @override
-  Serializer<DisableUserAccessApiRequest> get requestSerializer => DisableUserAccessApiRequest.serializer;
   
   DisableUserAccessApi._();
   

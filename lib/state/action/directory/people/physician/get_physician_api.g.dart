@@ -147,4 +147,31 @@ class _$GetPhysicianApi extends GetPhysicianApi {
         FullType(ApiCommand, [FullType(GetPhysicianApiRequest)]),
         FullType(ApiResult, [FullType(GetPhysicianApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetPhysicianApiRequest> newCommandBuilder() =>
+      ApiCommand<GetPhysicianApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetPhysicianApiResponse> newResultBuilder() =>
+      ApiResult<GetPhysicianApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetPhysicianApiRequestBuilder newCommandPayloadBuilder() =>
+      GetPhysicianApiRequest().toBuilder();
+
+  @override
+  GetPhysicianApiResponseBuilder newResultPayloadBuilder() =>
+      GetPhysicianApiResponse().toBuilder();
+
+  @override
+  Serializer<GetPhysicianApiRequest> get commandPayloadSerializer =>
+      GetPhysicianApiRequest.serializer;
+
+  @override
+  Serializer<GetPhysicianApiResponse> get resultPayloadSerializer =>
+      GetPhysicianApiResponse.serializer;
 }

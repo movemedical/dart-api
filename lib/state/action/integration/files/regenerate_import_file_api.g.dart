@@ -10,94 +10,99 @@ part of 'regenerate_import_file_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RegenerateImportFileApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RegenerateImportFileApi> RegenerateImportFileApiOptions();
 
 class _$RegenerateImportFileApi extends RegenerateImportFileApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<RegenerateImportFileApiRequest>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RegenerateImportFileApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>, RegenerateImportFileApi, String>> $clear;
+          ApiResult<Empty>, RegenerateImportFileApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>, RegenerateImportFileApi, String>> $cancel;
+          ApiResult<Empty>, RegenerateImportFileApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RegenerateImportFileApi,
           Command<ApiCommand<RegenerateImportFileApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RegenerateImportFileApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>, RegenerateImportFileApi, String>> $detach;
+          ApiResult<Empty>, RegenerateImportFileApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>, RegenerateImportFileApi, String>> $attach;
+          ApiResult<Empty>, RegenerateImportFileApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>, RegenerateImportFileApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<RegenerateImportFileApiRequest>,
+          ApiResult<Empty>,
+          RegenerateImportFileApi,
+          CommandProgress>> $progress;
 
   _$RegenerateImportFileApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegenerateImportFileApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegenerateImportFileApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RegenerateImportFileApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RegenerateImportFileApi,
                     Command<ApiCommand<RegenerateImportFileApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>,
-                RegenerateImportFileApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RegenerateImportFileApiRequest>,
+                    ApiResult<Empty>,
+                    RegenerateImportFileApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegenerateImportFileApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegenerateImportFileApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RegenerateImportFileApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RegenerateImportFileApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -106,15 +111,15 @@ class _$RegenerateImportFileApi extends RegenerateImportFileApi {
       _$RegenerateImportFileApi._(options());
 
   @override
-  CommandState<ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RegenerateImportFileApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Null>>();
+          ApiCommand<RegenerateImportFileApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -137,6 +142,30 @@ class _$RegenerateImportFileApi extends RegenerateImportFileApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RegenerateImportFileApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RegenerateImportFileApiRequest> newCommandBuilder() =>
+      ApiCommand<RegenerateImportFileApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RegenerateImportFileApiRequestBuilder newCommandPayloadBuilder() =>
+      RegenerateImportFileApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RegenerateImportFileApiRequest> get commandPayloadSerializer =>
+      RegenerateImportFileApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

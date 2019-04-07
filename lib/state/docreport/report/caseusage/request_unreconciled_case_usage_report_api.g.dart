@@ -11,41 +11,41 @@ part of 'request_unreconciled_case_usage_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<
         ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RequestUnreconciledCaseUsageReportApi> RequestUnreconciledCaseUsageReportApiOptions();
 
 class _$RequestUnreconciledCaseUsageReportApi
     extends RequestUnreconciledCaseUsageReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RequestUnreconciledCaseUsageReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
           String>> $clear;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               RequestUnreconciledCaseUsageReportApi,
               Command<
                   ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>>>>
@@ -53,25 +53,25 @@ class _$RequestUnreconciledCaseUsageReportApi
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
           String>> $detach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
           String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
           CommandProgress>> $progress;
 
@@ -79,50 +79,51 @@ class _$RequestUnreconciledCaseUsageReportApi
       : $replace = $options.action<
             CommandState<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnreconciledCaseUsageReportApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnreconciledCaseUsageReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RequestUnreconciledCaseUsageReportApi,
                     Command<
                         ApiCommand<
                             RequestUnreconciledCaseUsageReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>,
-                RequestUnreconciledCaseUsageReportApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
+                    ApiResult<Empty>,
+                    RequestUnreconciledCaseUsageReportApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnreconciledCaseUsageReportApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnreconciledCaseUsageReportApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RequestUnreconciledCaseUsageReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -133,17 +134,17 @@ class _$RequestUnreconciledCaseUsageReportApi
 
   @override
   CommandState<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -167,6 +168,34 @@ class _$RequestUnreconciledCaseUsageReportApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand,
             [FullType(RequestUnreconciledCaseUsageReportApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestUnreconciledCaseUsageReportApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>()
+              .toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestUnreconciledCaseUsageReportApiRequestBuilder
+      newCommandPayloadBuilder() =>
+          RequestUnreconciledCaseUsageReportApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RequestUnreconciledCaseUsageReportApiRequest>
+      get commandPayloadSerializer =>
+          RequestUnreconciledCaseUsageReportApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

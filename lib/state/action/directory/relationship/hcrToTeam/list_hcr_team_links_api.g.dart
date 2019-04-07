@@ -160,4 +160,31 @@ class _$ListHcrTeamLinksApi extends ListHcrTeamLinksApi {
         FullType(ApiCommand, [FullType(ListHcrTeamLinksApiRequest)]),
         FullType(ApiResult, [FullType(ListHcrTeamLinksApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHcrTeamLinksApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHcrTeamLinksApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHcrTeamLinksApiResponse> newResultBuilder() =>
+      ApiResult<ListHcrTeamLinksApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHcrTeamLinksApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHcrTeamLinksApiRequest().toBuilder();
+
+  @override
+  ListHcrTeamLinksApiResponseBuilder newResultPayloadBuilder() =>
+      ListHcrTeamLinksApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHcrTeamLinksApiRequest> get commandPayloadSerializer =>
+      ListHcrTeamLinksApiRequest.serializer;
+
+  @override
+  Serializer<ListHcrTeamLinksApiResponse> get resultPayloadSerializer =>
+      ListHcrTeamLinksApiResponse.serializer;
 }

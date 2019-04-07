@@ -160,4 +160,31 @@ class _$ListItemCategoriesApi extends ListItemCategoriesApi {
         FullType(ApiCommand, [FullType(ListItemCategoriesApiRequest)]),
         FullType(ApiResult, [FullType(ListItemCategoriesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListItemCategoriesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListItemCategoriesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListItemCategoriesApiResponse> newResultBuilder() =>
+      ApiResult<ListItemCategoriesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListItemCategoriesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListItemCategoriesApiRequest().toBuilder();
+
+  @override
+  ListItemCategoriesApiResponseBuilder newResultPayloadBuilder() =>
+      ListItemCategoriesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListItemCategoriesApiRequest> get commandPayloadSerializer =>
+      ListItemCategoriesApiRequest.serializer;
+
+  @override
+  Serializer<ListItemCategoriesApiResponse> get resultPayloadSerializer =>
+      ListItemCategoriesApiResponse.serializer;
 }

@@ -160,4 +160,31 @@ class _$ListAeTeamLinksApi extends ListAeTeamLinksApi {
         FullType(ApiCommand, [FullType(ListAeTeamLinksApiRequest)]),
         FullType(ApiResult, [FullType(ListAeTeamLinksApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAeTeamLinksApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAeTeamLinksApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAeTeamLinksApiResponse> newResultBuilder() =>
+      ApiResult<ListAeTeamLinksApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAeTeamLinksApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAeTeamLinksApiRequest().toBuilder();
+
+  @override
+  ListAeTeamLinksApiResponseBuilder newResultPayloadBuilder() =>
+      ListAeTeamLinksApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAeTeamLinksApiRequest> get commandPayloadSerializer =>
+      ListAeTeamLinksApiRequest.serializer;
+
+  @override
+  Serializer<ListAeTeamLinksApiResponse> get resultPayloadSerializer =>
+      ListAeTeamLinksApiResponse.serializer;
 }

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/export/stockexport/request_stock
 
 part 'request_stock_export_doc_api.g.dart';
 
-abstract class RequestStockExportDocApi extends ApiDispatcher<RequestStockExportDocApiRequest, RequestStockExportDocApiResponse, RequestStockExportDocApi> {
+abstract class RequestStockExportDocApi extends ApiDispatcher<RequestStockExportDocApiRequest,
+RequestStockExportDocApiRequestBuilder,
+RequestStockExportDocApiResponse,
+RequestStockExportDocApiResponseBuilder,
+RequestStockExportDocApi> {
   @override
   String get path => 'v1/docreport/export/stock';
-  
-  @override
-  Serializer<RequestStockExportDocApiRequest> get requestSerializer => RequestStockExportDocApiRequest.serializer;
-  
-  @override
-  Serializer<RequestStockExportDocApiResponse> get responseSerializer => RequestStockExportDocApiResponse.serializer;
   
   RequestStockExportDocApi._();
   

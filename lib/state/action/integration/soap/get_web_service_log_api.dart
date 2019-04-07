@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/soap/get_web_service_lo
 
 part 'get_web_service_log_api.g.dart';
 
-abstract class GetWebServiceLogApi extends ApiDispatcher<GetWebServiceLogApiRequest, GetWebServiceLogApiResponse, GetWebServiceLogApi> {
+abstract class GetWebServiceLogApi extends ApiDispatcher<GetWebServiceLogApiRequest,
+GetWebServiceLogApiRequestBuilder,
+GetWebServiceLogApiResponse,
+GetWebServiceLogApiResponseBuilder,
+GetWebServiceLogApi> {
   @override
   String get path => 'v1/integration/webservice/get_log';
-  
-  @override
-  Serializer<GetWebServiceLogApiRequest> get requestSerializer => GetWebServiceLogApiRequest.serializer;
-  
-  @override
-  Serializer<GetWebServiceLogApiResponse> get responseSerializer => GetWebServiceLogApiResponse.serializer;
   
   GetWebServiceLogApi._();
   

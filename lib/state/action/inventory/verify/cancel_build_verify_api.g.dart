@@ -10,91 +10,92 @@ part of 'cancel_build_verify_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<CancelBuildVerifyApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CancelBuildVerifyApi> CancelBuildVerifyApiOptions();
 
 class _$CancelBuildVerifyApi extends CancelBuildVerifyApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<CancelBuildVerifyApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CancelBuildVerifyApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CancelBuildVerifyApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>,
           CancelBuildVerifyApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>,
           CancelBuildVerifyApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CancelBuildVerifyApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           CancelBuildVerifyApi,
           Command<ApiCommand<CancelBuildVerifyApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>,
-          CancelBuildVerifyApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>,
+          CancelBuildVerifyApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>,
           CancelBuildVerifyApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>,
           CancelBuildVerifyApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>,
           CancelBuildVerifyApi, CommandProgress>> $progress;
 
   _$CancelBuildVerifyApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CancelBuildVerifyApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CancelBuildVerifyApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CancelBuildVerifyApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     CancelBuildVerifyApi,
                     Command<ApiCommand<CancelBuildVerifyApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>,
-                CancelBuildVerifyApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<CancelBuildVerifyApiRequest>,
+                    ApiResult<Empty>,
+                    CancelBuildVerifyApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CancelBuildVerifyApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CancelBuildVerifyApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CancelBuildVerifyApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 CancelBuildVerifyApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$CancelBuildVerifyApi extends CancelBuildVerifyApi {
       _$CancelBuildVerifyApi._(options());
 
   @override
-  CommandState<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<CancelBuildVerifyApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Null>>();
+          ApiCommand<CancelBuildVerifyApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$CancelBuildVerifyApi extends CancelBuildVerifyApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CancelBuildVerifyApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<CancelBuildVerifyApiRequest> newCommandBuilder() =>
+      ApiCommand<CancelBuildVerifyApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CancelBuildVerifyApiRequestBuilder newCommandPayloadBuilder() =>
+      CancelBuildVerifyApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<CancelBuildVerifyApiRequest> get commandPayloadSerializer =>
+      CancelBuildVerifyApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

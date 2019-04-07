@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/barcode/read_barcode_api_
 
 part 'read_barcode_api.g.dart';
 
-abstract class ReadBarcodeApi extends ApiDispatcher<ReadBarcodeApiRequest, ReadBarcodeApiResponse, ReadBarcodeApi> {
+abstract class ReadBarcodeApi extends ApiDispatcher<ReadBarcodeApiRequest,
+ReadBarcodeApiRequestBuilder,
+ReadBarcodeApiResponse,
+ReadBarcodeApiResponseBuilder,
+ReadBarcodeApi> {
   @override
   String get path => 'v1/inventory/barcode/read';
-  
-  @override
-  Serializer<ReadBarcodeApiRequest> get requestSerializer => ReadBarcodeApiRequest.serializer;
-  
-  @override
-  Serializer<ReadBarcodeApiResponse> get responseSerializer => ReadBarcodeApiResponse.serializer;
   
   ReadBarcodeApi._();
   

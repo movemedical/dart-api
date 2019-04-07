@@ -160,4 +160,31 @@ class _$ListHoldReasonsApi extends ListHoldReasonsApi {
         FullType(ApiCommand, [FullType(ListHoldReasonsApiRequest)]),
         FullType(ApiResult, [FullType(ListHoldReasonsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListHoldReasonsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListHoldReasonsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListHoldReasonsApiResponse> newResultBuilder() =>
+      ApiResult<ListHoldReasonsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListHoldReasonsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListHoldReasonsApiRequest().toBuilder();
+
+  @override
+  ListHoldReasonsApiResponseBuilder newResultPayloadBuilder() =>
+      ListHoldReasonsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListHoldReasonsApiRequest> get commandPayloadSerializer =>
+      ListHoldReasonsApiRequest.serializer;
+
+  @override
+  Serializer<ListHoldReasonsApiResponse> get resultPayloadSerializer =>
+      ListHoldReasonsApiResponse.serializer;
 }

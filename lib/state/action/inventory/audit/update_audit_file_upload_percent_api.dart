@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/update_audit_file_u
 
 part 'update_audit_file_upload_percent_api.g.dart';
 
-abstract class UpdateAuditFileUploadPercentApi extends ApiDispatcher<UpdateAuditFileUploadPercentApiRequest, Null, UpdateAuditFileUploadPercentApi> {
+abstract class UpdateAuditFileUploadPercentApi extends ApiDispatcher<UpdateAuditFileUploadPercentApiRequest,
+UpdateAuditFileUploadPercentApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateAuditFileUploadPercentApi> {
   @override
   String get path => 'v1/inventory/audit/update_file_upload_percent';
-  
-  @override
-  Serializer<UpdateAuditFileUploadPercentApiRequest> get requestSerializer => UpdateAuditFileUploadPercentApiRequest.serializer;
   
   UpdateAuditFileUploadPercentApi._();
   

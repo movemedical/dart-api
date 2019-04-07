@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/create_case_event_api_res
 
 part 'create_case_event_api.g.dart';
 
-abstract class CreateCaseEventApi extends ApiDispatcher<CreateCaseEventApiRequest, CreateCaseEventApiResponse, CreateCaseEventApi> {
+abstract class CreateCaseEventApi extends ApiDispatcher<CreateCaseEventApiRequest,
+CreateCaseEventApiRequestBuilder,
+CreateCaseEventApiResponse,
+CreateCaseEventApiResponseBuilder,
+CreateCaseEventApi> {
   @override
   String get path => 'v1/case_event/create';
-  
-  @override
-  Serializer<CreateCaseEventApiRequest> get requestSerializer => CreateCaseEventApiRequest.serializer;
-  
-  @override
-  Serializer<CreateCaseEventApiResponse> get responseSerializer => CreateCaseEventApiResponse.serializer;
   
   CreateCaseEventApi._();
   

@@ -162,4 +162,31 @@ class _$RequestStockBarcodeDocApi extends RequestStockBarcodeDocApi {
         FullType(ApiCommand, [FullType(RequestStockBarcodeDocApiRequest)]),
         FullType(ApiResult, [FullType(RequestStockBarcodeDocApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<RequestStockBarcodeDocApiRequest> newCommandBuilder() =>
+      ApiCommand<RequestStockBarcodeDocApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<RequestStockBarcodeDocApiResponse> newResultBuilder() =>
+      ApiResult<RequestStockBarcodeDocApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RequestStockBarcodeDocApiRequestBuilder newCommandPayloadBuilder() =>
+      RequestStockBarcodeDocApiRequest().toBuilder();
+
+  @override
+  RequestStockBarcodeDocApiResponseBuilder newResultPayloadBuilder() =>
+      RequestStockBarcodeDocApiResponse().toBuilder();
+
+  @override
+  Serializer<RequestStockBarcodeDocApiRequest> get commandPayloadSerializer =>
+      RequestStockBarcodeDocApiRequest.serializer;
+
+  @override
+  Serializer<RequestStockBarcodeDocApiResponse> get resultPayloadSerializer =>
+      RequestStockBarcodeDocApiResponse.serializer;
 }

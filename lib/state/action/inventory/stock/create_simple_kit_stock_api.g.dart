@@ -160,4 +160,31 @@ class _$CreateSimpleKitStockApi extends CreateSimpleKitStockApi {
         FullType(ApiCommand, [FullType(CreateSimpleKitStockApiRequest)]),
         FullType(ApiResult, [FullType(CreateSimpleKitStockApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateSimpleKitStockApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateSimpleKitStockApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateSimpleKitStockApiResponse> newResultBuilder() =>
+      ApiResult<CreateSimpleKitStockApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateSimpleKitStockApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateSimpleKitStockApiRequest().toBuilder();
+
+  @override
+  CreateSimpleKitStockApiResponseBuilder newResultPayloadBuilder() =>
+      CreateSimpleKitStockApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateSimpleKitStockApiRequest> get commandPayloadSerializer =>
+      CreateSimpleKitStockApiRequest.serializer;
+
+  @override
+  Serializer<CreateSimpleKitStockApiResponse> get resultPayloadSerializer =>
+      CreateSimpleKitStockApiResponse.serializer;
 }

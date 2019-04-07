@@ -160,4 +160,31 @@ class _$CreateConversationApi extends CreateConversationApi {
         FullType(ApiCommand, [FullType(CreateConversationApiRequest)]),
         FullType(ApiResult, [FullType(CreateConversationApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateConversationApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateConversationApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateConversationApiResponse> newResultBuilder() =>
+      ApiResult<CreateConversationApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateConversationApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateConversationApiRequest().toBuilder();
+
+  @override
+  CreateConversationApiResponseBuilder newResultPayloadBuilder() =>
+      CreateConversationApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateConversationApiRequest> get commandPayloadSerializer =>
+      CreateConversationApiRequest.serializer;
+
+  @override
+  Serializer<CreateConversationApiResponse> get resultPayloadSerializer =>
+      CreateConversationApiResponse.serializer;
 }

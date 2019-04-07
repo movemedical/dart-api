@@ -10,91 +10,92 @@ part of 'update_sub_procedure_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdateSubProcedureApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdateSubProcedureApi> UpdateSubProcedureApiOptions();
 
 class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdateSubProcedureApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdateSubProcedureApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateSubProcedureApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateSubProcedureApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdateSubProcedureApi,
           Command<ApiCommand<UpdateSubProcedureApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>,
-          UpdateSubProcedureApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
+          UpdateSubProcedureApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, CommandProgress>> $progress;
 
   _$UpdateSubProcedureApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateSubProcedureApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateSubProcedureApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateSubProcedureApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdateSubProcedureApi,
                     Command<ApiCommand<UpdateSubProcedureApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>,
-                UpdateSubProcedureApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdateSubProcedureApiRequest>,
+                    ApiResult<Empty>,
+                    UpdateSubProcedureApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateSubProcedureApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateSubProcedureApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdateSubProcedureApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,15 @@ class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
       _$UpdateSubProcedureApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<UpdateSubProcedureApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<UpdateSubProcedureApiRequest>,
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +135,30 @@ class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateSubProcedureApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdateSubProcedureApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdateSubProcedureApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdateSubProcedureApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdateSubProcedureApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdateSubProcedureApiRequest> get commandPayloadSerializer =>
+      UpdateSubProcedureApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

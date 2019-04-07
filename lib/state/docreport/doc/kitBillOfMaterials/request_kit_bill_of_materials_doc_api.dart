@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/doc/kitBillOfMaterials/request_k
 
 part 'request_kit_bill_of_materials_doc_api.g.dart';
 
-abstract class RequestKitBillOfMaterialsDocApi extends ApiDispatcher<RequestKitBillOfMaterialsDocApiRequest, Null, RequestKitBillOfMaterialsDocApi> {
+abstract class RequestKitBillOfMaterialsDocApi extends ApiDispatcher<RequestKitBillOfMaterialsDocApiRequest,
+RequestKitBillOfMaterialsDocApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestKitBillOfMaterialsDocApi> {
   @override
   String get path => 'v1/doc/kitBillOfMaterials';
-  
-  @override
-  Serializer<RequestKitBillOfMaterialsDocApiRequest> get requestSerializer => RequestKitBillOfMaterialsDocApiRequest.serializer;
   
   RequestKitBillOfMaterialsDocApi._();
   

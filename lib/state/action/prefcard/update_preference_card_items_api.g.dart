@@ -11,98 +11,99 @@ part of 'update_preference_card_items_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     UpdatePreferenceCardItemsApi> UpdatePreferenceCardItemsApiOptions();
 
 class _$UpdatePreferenceCardItemsApi extends UpdatePreferenceCardItemsApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       UpdatePreferenceCardItemsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>, UpdatePreferenceCardItemsApi, String>> $clear;
+          ApiResult<Empty>, UpdatePreferenceCardItemsApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>, UpdatePreferenceCardItemsApi, String>> $cancel;
+          ApiResult<Empty>, UpdatePreferenceCardItemsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdatePreferenceCardItemsApi,
           Command<ApiCommand<UpdatePreferenceCardItemsApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdatePreferenceCardItemsApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>, UpdatePreferenceCardItemsApi, String>> $detach;
+          ApiResult<Empty>, UpdatePreferenceCardItemsApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>, UpdatePreferenceCardItemsApi, String>> $attach;
+          ApiResult<Empty>, UpdatePreferenceCardItemsApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           UpdatePreferenceCardItemsApi,
           CommandProgress>> $progress;
 
   _$UpdatePreferenceCardItemsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdatePreferenceCardItemsApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdatePreferenceCardItemsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     UpdatePreferenceCardItemsApi,
                     Command<ApiCommand<UpdatePreferenceCardItemsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>,
-                UpdatePreferenceCardItemsApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<UpdatePreferenceCardItemsApiRequest>,
+                    ApiResult<Empty>,
+                    UpdatePreferenceCardItemsApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdatePreferenceCardItemsApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdatePreferenceCardItemsApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 UpdatePreferenceCardItemsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$UpdatePreferenceCardItemsApi extends UpdatePreferenceCardItemsApi {
       _$UpdatePreferenceCardItemsApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdatePreferenceCardItemsApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<UpdatePreferenceCardItemsApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdatePreferenceCardItemsApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdatePreferenceCardItemsApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdatePreferenceCardItemsApiRequest>, ApiResult<Null>>();
+          ApiCommand<UpdatePreferenceCardItemsApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$UpdatePreferenceCardItemsApi extends UpdatePreferenceCardItemsApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdatePreferenceCardItemsApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<UpdatePreferenceCardItemsApiRequest> newCommandBuilder() =>
+      ApiCommand<UpdatePreferenceCardItemsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  UpdatePreferenceCardItemsApiRequestBuilder newCommandPayloadBuilder() =>
+      UpdatePreferenceCardItemsApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<UpdatePreferenceCardItemsApiRequest>
+      get commandPayloadSerializer =>
+          UpdatePreferenceCardItemsApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

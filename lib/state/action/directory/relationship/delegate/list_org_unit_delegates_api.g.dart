@@ -160,4 +160,31 @@ class _$ListOrgUnitDelegatesApi extends ListOrgUnitDelegatesApi {
         FullType(ApiCommand, [FullType(ListOrgUnitDelegatesApiRequest)]),
         FullType(ApiResult, [FullType(ListOrgUnitDelegatesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListOrgUnitDelegatesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListOrgUnitDelegatesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListOrgUnitDelegatesApiResponse> newResultBuilder() =>
+      ApiResult<ListOrgUnitDelegatesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListOrgUnitDelegatesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListOrgUnitDelegatesApiRequest().toBuilder();
+
+  @override
+  ListOrgUnitDelegatesApiResponseBuilder newResultPayloadBuilder() =>
+      ListOrgUnitDelegatesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListOrgUnitDelegatesApiRequest> get commandPayloadSerializer =>
+      ListOrgUnitDelegatesApiRequest.serializer;
+
+  @override
+  Serializer<ListOrgUnitDelegatesApiResponse> get resultPayloadSerializer =>
+      ListOrgUnitDelegatesApiResponse.serializer;
 }

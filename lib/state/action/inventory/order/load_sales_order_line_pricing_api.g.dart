@@ -11,98 +11,99 @@ part of 'load_sales_order_line_pricing_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     LoadSalesOrderLinePricingApi> LoadSalesOrderLinePricingApiOptions();
 
 class _$LoadSalesOrderLinePricingApi extends LoadSalesOrderLinePricingApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       LoadSalesOrderLinePricingApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>, LoadSalesOrderLinePricingApi, String>> $clear;
+          ApiResult<Empty>, LoadSalesOrderLinePricingApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>, LoadSalesOrderLinePricingApi, String>> $cancel;
+          ApiResult<Empty>, LoadSalesOrderLinePricingApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           LoadSalesOrderLinePricingApi,
           Command<ApiCommand<LoadSalesOrderLinePricingApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           LoadSalesOrderLinePricingApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>, LoadSalesOrderLinePricingApi, String>> $detach;
+          ApiResult<Empty>, LoadSalesOrderLinePricingApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>, LoadSalesOrderLinePricingApi, String>> $attach;
+          ApiResult<Empty>, LoadSalesOrderLinePricingApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           LoadSalesOrderLinePricingApi,
           CommandProgress>> $progress;
 
   _$LoadSalesOrderLinePricingApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 LoadSalesOrderLinePricingApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 LoadSalesOrderLinePricingApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     LoadSalesOrderLinePricingApi,
                     Command<ApiCommand<LoadSalesOrderLinePricingApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>,
-                LoadSalesOrderLinePricingApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<LoadSalesOrderLinePricingApiRequest>,
+                    ApiResult<Empty>,
+                    LoadSalesOrderLinePricingApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 LoadSalesOrderLinePricingApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 LoadSalesOrderLinePricingApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 LoadSalesOrderLinePricingApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$LoadSalesOrderLinePricingApi extends LoadSalesOrderLinePricingApi {
       _$LoadSalesOrderLinePricingApi._(options());
 
   @override
-  CommandState<ApiCommand<LoadSalesOrderLinePricingApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<LoadSalesOrderLinePricingApiRequest>, ApiResult<Null>>();
+          ApiCommand<LoadSalesOrderLinePricingApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<LoadSalesOrderLinePricingApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<LoadSalesOrderLinePricingApiRequest>, ApiResult<Null>>();
+          ApiCommand<LoadSalesOrderLinePricingApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$LoadSalesOrderLinePricingApi extends LoadSalesOrderLinePricingApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(LoadSalesOrderLinePricingApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<LoadSalesOrderLinePricingApiRequest> newCommandBuilder() =>
+      ApiCommand<LoadSalesOrderLinePricingApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  LoadSalesOrderLinePricingApiRequestBuilder newCommandPayloadBuilder() =>
+      LoadSalesOrderLinePricingApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<LoadSalesOrderLinePricingApiRequest>
+      get commandPayloadSerializer =>
+          LoadSalesOrderLinePricingApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

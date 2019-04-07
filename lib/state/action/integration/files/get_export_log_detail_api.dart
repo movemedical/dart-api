@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/integration/files/get_export_log_de
 
 part 'get_export_log_detail_api.g.dart';
 
-abstract class GetExportLogDetailApi extends ApiDispatcher<GetExportLogDetailApiRequest, GetExportLogDetailApiResponse, GetExportLogDetailApi> {
+abstract class GetExportLogDetailApi extends ApiDispatcher<GetExportLogDetailApiRequest,
+GetExportLogDetailApiRequestBuilder,
+GetExportLogDetailApiResponse,
+GetExportLogDetailApiResponseBuilder,
+GetExportLogDetailApi> {
   @override
   String get path => 'v1/integration/files/get_export_log_details';
-  
-  @override
-  Serializer<GetExportLogDetailApiRequest> get requestSerializer => GetExportLogDetailApiRequest.serializer;
-  
-  @override
-  Serializer<GetExportLogDetailApiResponse> get responseSerializer => GetExportLogDetailApiResponse.serializer;
   
   GetExportLogDetailApi._();
   

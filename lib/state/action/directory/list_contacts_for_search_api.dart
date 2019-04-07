@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/list_contacts_for_search_
 
 part 'list_contacts_for_search_api.g.dart';
 
-abstract class ListContactsForSearchApi extends ApiDispatcher<ListContactsForSearchApiRequest, ListContactsForSearchApiResponse, ListContactsForSearchApi> {
+abstract class ListContactsForSearchApi extends ApiDispatcher<ListContactsForSearchApiRequest,
+ListContactsForSearchApiRequestBuilder,
+ListContactsForSearchApiResponse,
+ListContactsForSearchApiResponseBuilder,
+ListContactsForSearchApi> {
   @override
   String get path => 'v1/directory/search/list_contacts';
-  
-  @override
-  Serializer<ListContactsForSearchApiRequest> get requestSerializer => ListContactsForSearchApiRequest.serializer;
-  
-  @override
-  Serializer<ListContactsForSearchApiResponse> get responseSerializer => ListContactsForSearchApiResponse.serializer;
   
   ListContactsForSearchApi._();
   

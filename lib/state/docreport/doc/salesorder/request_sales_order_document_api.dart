@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/docreport/doc/salesorder/request_sales_ord
 
 part 'request_sales_order_document_api.g.dart';
 
-abstract class RequestSalesOrderDocumentApi extends ApiDispatcher<RequestSalesOrderDocumentApiRequest, Null, RequestSalesOrderDocumentApi> {
+abstract class RequestSalesOrderDocumentApi extends ApiDispatcher<RequestSalesOrderDocumentApiRequest,
+RequestSalesOrderDocumentApiRequestBuilder,
+Empty,
+EmptyBuilder,
+RequestSalesOrderDocumentApi> {
   @override
   String get path => 'v1/doc/salesorder';
-  
-  @override
-  Serializer<RequestSalesOrderDocumentApiRequest> get requestSerializer => RequestSalesOrderDocumentApiRequest.serializer;
   
   RequestSalesOrderDocumentApi._();
   

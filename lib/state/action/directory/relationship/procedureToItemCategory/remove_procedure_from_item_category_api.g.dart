@@ -11,102 +11,112 @@ part of 'remove_procedure_from_item_category_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RemoveProcedureFromItemCategoryApi> RemoveProcedureFromItemCategoryApiOptions();
 
 class _$RemoveProcedureFromItemCategoryApi
     extends RemoveProcedureFromItemCategoryApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemoveProcedureFromItemCategoryApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromItemCategoryApi, String>> $clear;
+          ApiResult<Empty>, RemoveProcedureFromItemCategoryApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromItemCategoryApi, String>> $cancel;
+      CommandPayload<
+          ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
+          ApiResult<Empty>,
+          RemoveProcedureFromItemCategoryApi,
+          String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-              ApiResult<Null>,
+              ApiResult<Empty>,
               RemoveProcedureFromItemCategoryApi,
               Command<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemoveProcedureFromItemCategoryApi,
-          CommandResult<ApiResult<Null>>>> $result;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromItemCategoryApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>, RemoveProcedureFromItemCategoryApi, String>> $attach;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
+          RemoveProcedureFromItemCategoryApi,
+          String>> $detach;
+  final ActionDispatcher<
+      CommandPayload<
+          ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
+          ApiResult<Empty>,
+          RemoveProcedureFromItemCategoryApi,
+          String>> $attach;
+  final ActionDispatcher<
+      CommandPayload<
+          ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
+          ApiResult<Empty>,
           RemoveProcedureFromItemCategoryApi,
           CommandProgress>> $progress;
 
   _$RemoveProcedureFromItemCategoryApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromItemCategoryApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromItemCategoryApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemoveProcedureFromItemCategoryApi,
                     Command<
                         ApiCommand<
                             RemoveProcedureFromItemCategoryApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>,
-                RemoveProcedureFromItemCategoryApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
+                    ApiResult<Empty>,
+                    RemoveProcedureFromItemCategoryApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromItemCategoryApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromItemCategoryApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemoveProcedureFromItemCategoryApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -117,17 +127,17 @@ class _$RemoveProcedureFromItemCategoryApi
 
   @override
   CommandState<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
           ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RemoveProcedureFromItemCategoryApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -151,6 +161,32 @@ class _$RemoveProcedureFromItemCategoryApi
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(RemoveProcedureFromItemCategoryApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemoveProcedureFromItemCategoryApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<RemoveProcedureFromItemCategoryApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemoveProcedureFromItemCategoryApiRequestBuilder newCommandPayloadBuilder() =>
+      RemoveProcedureFromItemCategoryApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemoveProcedureFromItemCategoryApiRequest>
+      get commandPayloadSerializer =>
+          RemoveProcedureFromItemCategoryApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

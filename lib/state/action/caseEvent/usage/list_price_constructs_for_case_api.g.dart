@@ -164,4 +164,33 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
         FullType(ApiCommand, [FullType(ListPriceConstructsForCaseApiRequest)]),
         FullType(ApiResult, [FullType(ListPriceConstructsForCaseApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListPriceConstructsForCaseApiRequest> newCommandBuilder() =>
+      ApiCommand<ListPriceConstructsForCaseApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListPriceConstructsForCaseApiResponse> newResultBuilder() =>
+      ApiResult<ListPriceConstructsForCaseApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListPriceConstructsForCaseApiRequestBuilder newCommandPayloadBuilder() =>
+      ListPriceConstructsForCaseApiRequest().toBuilder();
+
+  @override
+  ListPriceConstructsForCaseApiResponseBuilder newResultPayloadBuilder() =>
+      ListPriceConstructsForCaseApiResponse().toBuilder();
+
+  @override
+  Serializer<ListPriceConstructsForCaseApiRequest>
+      get commandPayloadSerializer =>
+          ListPriceConstructsForCaseApiRequest.serializer;
+
+  @override
+  Serializer<ListPriceConstructsForCaseApiResponse>
+      get resultPayloadSerializer =>
+          ListPriceConstructsForCaseApiResponse.serializer;
 }

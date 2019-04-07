@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/verify/cancel_build_verif
 
 part 'cancel_build_verify_api.g.dart';
 
-abstract class CancelBuildVerifyApi extends ApiDispatcher<CancelBuildVerifyApiRequest, Null, CancelBuildVerifyApi> {
+abstract class CancelBuildVerifyApi extends ApiDispatcher<CancelBuildVerifyApiRequest,
+CancelBuildVerifyApiRequestBuilder,
+Empty,
+EmptyBuilder,
+CancelBuildVerifyApi> {
   @override
   String get path => 'v1/inventory/verify/cancel';
-  
-  @override
-  Serializer<CancelBuildVerifyApiRequest> get requestSerializer => CancelBuildVerifyApiRequest.serializer;
   
   CancelBuildVerifyApi._();
   

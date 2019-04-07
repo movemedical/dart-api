@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/inventory/audit/submit_audit_api_re
 
 part 'submit_audit_api.g.dart';
 
-abstract class SubmitAuditApi extends ApiDispatcher<SubmitAuditApiRequest, Null, SubmitAuditApi> {
+abstract class SubmitAuditApi extends ApiDispatcher<SubmitAuditApiRequest,
+SubmitAuditApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SubmitAuditApi> {
   @override
   String get path => 'v1/inventory/audit/submit';
-  
-  @override
-  Serializer<SubmitAuditApiRequest> get requestSerializer => SubmitAuditApiRequest.serializer;
   
   SubmitAuditApi._();
   

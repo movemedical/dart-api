@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/procedure/sub/create_sub_
 
 part 'create_sub_procedure_api.g.dart';
 
-abstract class CreateSubProcedureApi extends ApiDispatcher<CreateSubProcedureApiRequest, CreateSubProcedureApiResponse, CreateSubProcedureApi> {
+abstract class CreateSubProcedureApi extends ApiDispatcher<CreateSubProcedureApiRequest,
+CreateSubProcedureApiRequestBuilder,
+CreateSubProcedureApiResponse,
+CreateSubProcedureApiResponseBuilder,
+CreateSubProcedureApi> {
   @override
   String get path => 'v1/case_event/procedure/sub/create';
-  
-  @override
-  Serializer<CreateSubProcedureApiRequest> get requestSerializer => CreateSubProcedureApiRequest.serializer;
-  
-  @override
-  Serializer<CreateSubProcedureApiResponse> get responseSerializer => CreateSubProcedureApiResponse.serializer;
   
   CreateSubProcedureApi._();
   

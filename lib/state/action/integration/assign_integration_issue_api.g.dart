@@ -10,98 +10,100 @@ part of 'assign_integration_issue_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<AssignIntegrationIssueApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     AssignIntegrationIssueApi> AssignIntegrationIssueApiOptions();
 
 class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       AssignIntegrationIssueApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>, AssignIntegrationIssueApi, String>> $clear;
+          ApiResult<Empty>, AssignIntegrationIssueApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>, AssignIntegrationIssueApi, String>> $cancel;
+          ApiResult<Empty>, AssignIntegrationIssueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AssignIntegrationIssueApi,
           Command<ApiCommand<AssignIntegrationIssueApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AssignIntegrationIssueApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>, AssignIntegrationIssueApi, String>> $detach;
+          ApiResult<Empty>, AssignIntegrationIssueApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>, AssignIntegrationIssueApi, String>> $attach;
+          ApiResult<Empty>, AssignIntegrationIssueApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           AssignIntegrationIssueApi,
           CommandProgress>> $progress;
 
   _$AssignIntegrationIssueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AssignIntegrationIssueApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AssignIntegrationIssueApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AssignIntegrationIssueApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     AssignIntegrationIssueApi,
                     Command<ApiCommand<AssignIntegrationIssueApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>,
-                AssignIntegrationIssueApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<AssignIntegrationIssueApiRequest>,
+                    ApiResult<Empty>,
+                    AssignIntegrationIssueApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AssignIntegrationIssueApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AssignIntegrationIssueApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 AssignIntegrationIssueApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -111,15 +113,15 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
       _$AssignIntegrationIssueApi._(options());
 
   @override
-  CommandState<ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Null>>();
+          ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -142,6 +144,30 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AssignIntegrationIssueApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<AssignIntegrationIssueApiRequest> newCommandBuilder() =>
+      ApiCommand<AssignIntegrationIssueApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  AssignIntegrationIssueApiRequestBuilder newCommandPayloadBuilder() =>
+      AssignIntegrationIssueApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<AssignIntegrationIssueApiRequest> get commandPayloadSerializer =>
+      AssignIntegrationIssueApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

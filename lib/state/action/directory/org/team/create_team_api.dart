@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/org/team/create_team_api_
 
 part 'create_team_api.g.dart';
 
-abstract class CreateTeamApi extends ApiDispatcher<CreateTeamApiRequest, CreateTeamApiResponse, CreateTeamApi> {
+abstract class CreateTeamApi extends ApiDispatcher<CreateTeamApiRequest,
+CreateTeamApiRequestBuilder,
+CreateTeamApiResponse,
+CreateTeamApiResponseBuilder,
+CreateTeamApi> {
   @override
   String get path => 'v1/directory/org/team/create';
-  
-  @override
-  Serializer<CreateTeamApiRequest> get requestSerializer => CreateTeamApiRequest.serializer;
-  
-  @override
-  Serializer<CreateTeamApiResponse> get responseSerializer => CreateTeamApiResponse.serializer;
   
   CreateTeamApi._();
   

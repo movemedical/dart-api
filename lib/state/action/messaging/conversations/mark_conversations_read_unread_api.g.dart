@@ -11,99 +11,100 @@ part of 'mark_conversations_read_unread_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     MarkConversationsReadUnreadApi> MarkConversationsReadUnreadApiOptions();
 
 class _$MarkConversationsReadUnreadApi extends MarkConversationsReadUnreadApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       MarkConversationsReadUnreadApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>, MarkConversationsReadUnreadApi, String>> $clear;
+          ApiResult<Empty>, MarkConversationsReadUnreadApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>, MarkConversationsReadUnreadApi, String>> $cancel;
+          ApiResult<Empty>, MarkConversationsReadUnreadApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           MarkConversationsReadUnreadApi,
           Command<ApiCommand<MarkConversationsReadUnreadApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           MarkConversationsReadUnreadApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>, MarkConversationsReadUnreadApi, String>> $detach;
+          ApiResult<Empty>, MarkConversationsReadUnreadApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>, MarkConversationsReadUnreadApi, String>> $attach;
+          ApiResult<Empty>, MarkConversationsReadUnreadApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           MarkConversationsReadUnreadApi,
           CommandProgress>> $progress;
 
   _$MarkConversationsReadUnreadApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkConversationsReadUnreadApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkConversationsReadUnreadApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     MarkConversationsReadUnreadApi,
                     Command<
                         ApiCommand<MarkConversationsReadUnreadApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>,
-                MarkConversationsReadUnreadApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<MarkConversationsReadUnreadApiRequest>,
+                    ApiResult<Empty>,
+                    MarkConversationsReadUnreadApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkConversationsReadUnreadApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkConversationsReadUnreadApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MarkConversationsReadUnreadApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 MarkConversationsReadUnreadApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -114,15 +115,17 @@ class _$MarkConversationsReadUnreadApi extends MarkConversationsReadUnreadApi {
 
   @override
   CommandState<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<MarkConversationsReadUnreadApiRequest>, ApiResult<Null>>();
+          ApiCommand<MarkConversationsReadUnreadApiRequest>,
+          ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<MarkConversationsReadUnreadApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<MarkConversationsReadUnreadApiRequest>, ApiResult<Null>>();
+          ApiCommand<MarkConversationsReadUnreadApiRequest>,
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -145,6 +148,32 @@ class _$MarkConversationsReadUnreadApi extends MarkConversationsReadUnreadApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(MarkConversationsReadUnreadApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<MarkConversationsReadUnreadApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<MarkConversationsReadUnreadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  MarkConversationsReadUnreadApiRequestBuilder newCommandPayloadBuilder() =>
+      MarkConversationsReadUnreadApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<MarkConversationsReadUnreadApiRequest>
+      get commandPayloadSerializer =>
+          MarkConversationsReadUnreadApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

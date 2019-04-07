@@ -147,4 +147,31 @@ class _$CreateAuditApi extends CreateAuditApi {
         FullType(ApiCommand, [FullType(CreateAuditApiRequest)]),
         FullType(ApiResult, [FullType(CreateAuditApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateAuditApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateAuditApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateAuditApiResponse> newResultBuilder() =>
+      ApiResult<CreateAuditApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateAuditApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateAuditApiRequest().toBuilder();
+
+  @override
+  CreateAuditApiResponseBuilder newResultPayloadBuilder() =>
+      CreateAuditApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateAuditApiRequest> get commandPayloadSerializer =>
+      CreateAuditApiRequest.serializer;
+
+  @override
+  Serializer<CreateAuditApiResponse> get resultPayloadSerializer =>
+      CreateAuditApiResponse.serializer;
 }

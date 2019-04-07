@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/stock/get_kit_stock_api_r
 
 part 'get_kit_stock_api.g.dart';
 
-abstract class GetKitStockApi extends ApiDispatcher<GetKitStockApiRequest, GetKitStockApiResponse, GetKitStockApi> {
+abstract class GetKitStockApi extends ApiDispatcher<GetKitStockApiRequest,
+GetKitStockApiRequestBuilder,
+GetKitStockApiResponse,
+GetKitStockApiResponseBuilder,
+GetKitStockApi> {
   @override
   String get path => 'v1/inventory/stock/get_kit_stock';
-  
-  @override
-  Serializer<GetKitStockApiRequest> get requestSerializer => GetKitStockApiRequest.serializer;
-  
-  @override
-  Serializer<GetKitStockApiResponse> get responseSerializer => GetKitStockApiResponse.serializer;
   
   GetKitStockApi._();
   

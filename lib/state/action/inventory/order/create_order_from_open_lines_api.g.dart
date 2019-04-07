@@ -164,4 +164,31 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
         FullType(ApiCommand, [FullType(CreateOrderFromOpenLinesApiRequest)]),
         FullType(ApiResult, [FullType(CreateOrderFromOpenLinesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<CreateOrderFromOpenLinesApiRequest> newCommandBuilder() =>
+      ApiCommand<CreateOrderFromOpenLinesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<CreateOrderFromOpenLinesApiResponse> newResultBuilder() =>
+      ApiResult<CreateOrderFromOpenLinesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  CreateOrderFromOpenLinesApiRequestBuilder newCommandPayloadBuilder() =>
+      CreateOrderFromOpenLinesApiRequest().toBuilder();
+
+  @override
+  CreateOrderFromOpenLinesApiResponseBuilder newResultPayloadBuilder() =>
+      CreateOrderFromOpenLinesApiResponse().toBuilder();
+
+  @override
+  Serializer<CreateOrderFromOpenLinesApiRequest> get commandPayloadSerializer =>
+      CreateOrderFromOpenLinesApiRequest.serializer;
+
+  @override
+  Serializer<CreateOrderFromOpenLinesApiResponse> get resultPayloadSerializer =>
+      CreateOrderFromOpenLinesApiResponse.serializer;
 }

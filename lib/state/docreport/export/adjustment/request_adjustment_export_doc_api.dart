@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/docreport/export/adjustment/request_adjust
 
 part 'request_adjustment_export_doc_api.g.dart';
 
-abstract class RequestAdjustmentExportDocApi extends ApiDispatcher<RequestAdjustmentExportDocApiRequest, RequestAdjustmentExportDocApiResponse, RequestAdjustmentExportDocApi> {
+abstract class RequestAdjustmentExportDocApi extends ApiDispatcher<RequestAdjustmentExportDocApiRequest,
+RequestAdjustmentExportDocApiRequestBuilder,
+RequestAdjustmentExportDocApiResponse,
+RequestAdjustmentExportDocApiResponseBuilder,
+RequestAdjustmentExportDocApi> {
   @override
   String get path => 'v1/docreport/export/adjustmentsExport';
-  
-  @override
-  Serializer<RequestAdjustmentExportDocApiRequest> get requestSerializer => RequestAdjustmentExportDocApiRequest.serializer;
-  
-  @override
-  Serializer<RequestAdjustmentExportDocApiResponse> get responseSerializer => RequestAdjustmentExportDocApiResponse.serializer;
   
   RequestAdjustmentExportDocApi._();
   

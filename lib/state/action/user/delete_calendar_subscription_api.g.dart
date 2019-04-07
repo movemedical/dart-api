@@ -11,98 +11,99 @@ part of 'delete_calendar_subscription_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     DeleteCalendarSubscriptionApi> DeleteCalendarSubscriptionApiOptions();
 
 class _$DeleteCalendarSubscriptionApi extends DeleteCalendarSubscriptionApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       DeleteCalendarSubscriptionApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>, DeleteCalendarSubscriptionApi, String>> $clear;
+          ApiResult<Empty>, DeleteCalendarSubscriptionApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>, DeleteCalendarSubscriptionApi, String>> $cancel;
+          ApiResult<Empty>, DeleteCalendarSubscriptionApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DeleteCalendarSubscriptionApi,
           Command<ApiCommand<DeleteCalendarSubscriptionApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DeleteCalendarSubscriptionApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>, DeleteCalendarSubscriptionApi, String>> $detach;
+          ApiResult<Empty>, DeleteCalendarSubscriptionApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>, DeleteCalendarSubscriptionApi, String>> $attach;
+          ApiResult<Empty>, DeleteCalendarSubscriptionApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           DeleteCalendarSubscriptionApi,
           CommandProgress>> $progress;
 
   _$DeleteCalendarSubscriptionApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteCalendarSubscriptionApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteCalendarSubscriptionApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     DeleteCalendarSubscriptionApi,
                     Command<ApiCommand<DeleteCalendarSubscriptionApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>,
-                DeleteCalendarSubscriptionApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<DeleteCalendarSubscriptionApiRequest>,
+                    ApiResult<Empty>,
+                    DeleteCalendarSubscriptionApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteCalendarSubscriptionApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteCalendarSubscriptionApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 DeleteCalendarSubscriptionApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -113,15 +114,15 @@ class _$DeleteCalendarSubscriptionApi extends DeleteCalendarSubscriptionApi {
 
   @override
   CommandState<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<DeleteCalendarSubscriptionApiRequest>, ApiResult<Null>>();
+          ApiCommand<DeleteCalendarSubscriptionApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<DeleteCalendarSubscriptionApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteCalendarSubscriptionApiRequest>, ApiResult<Null>>();
+          ApiCommand<DeleteCalendarSubscriptionApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -144,6 +145,31 @@ class _$DeleteCalendarSubscriptionApi extends DeleteCalendarSubscriptionApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteCalendarSubscriptionApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<DeleteCalendarSubscriptionApiRequest> newCommandBuilder() =>
+      ApiCommand<DeleteCalendarSubscriptionApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  DeleteCalendarSubscriptionApiRequestBuilder newCommandPayloadBuilder() =>
+      DeleteCalendarSubscriptionApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<DeleteCalendarSubscriptionApiRequest>
+      get commandPayloadSerializer =>
+          DeleteCalendarSubscriptionApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

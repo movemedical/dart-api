@@ -164,4 +164,31 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
         FullType(ApiCommand, [FullType(ListInvTypesToBeCountedApiRequest)]),
         FullType(ApiResult, [FullType(ListInvTypesToBeCountedApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListInvTypesToBeCountedApiRequest> newCommandBuilder() =>
+      ApiCommand<ListInvTypesToBeCountedApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListInvTypesToBeCountedApiResponse> newResultBuilder() =>
+      ApiResult<ListInvTypesToBeCountedApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListInvTypesToBeCountedApiRequestBuilder newCommandPayloadBuilder() =>
+      ListInvTypesToBeCountedApiRequest().toBuilder();
+
+  @override
+  ListInvTypesToBeCountedApiResponseBuilder newResultPayloadBuilder() =>
+      ListInvTypesToBeCountedApiResponse().toBuilder();
+
+  @override
+  Serializer<ListInvTypesToBeCountedApiRequest> get commandPayloadSerializer =>
+      ListInvTypesToBeCountedApiRequest.serializer;
+
+  @override
+  Serializer<ListInvTypesToBeCountedApiResponse> get resultPayloadSerializer =>
+      ListInvTypesToBeCountedApiResponse.serializer;
 }

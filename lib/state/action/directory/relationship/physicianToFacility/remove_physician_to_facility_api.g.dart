@@ -11,98 +11,99 @@ part of 'remove_physician_to_facility_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     RemovePhysicianToFacilityApi> RemovePhysicianToFacilityApiOptions();
 
 class _$RemovePhysicianToFacilityApi extends RemovePhysicianToFacilityApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       RemovePhysicianToFacilityApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>>> $replace;
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>, RemovePhysicianToFacilityApi, String>> $clear;
+          ApiResult<Empty>, RemovePhysicianToFacilityApi, String>> $clear;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>, RemovePhysicianToFacilityApi, String>> $cancel;
+          ApiResult<Empty>, RemovePhysicianToFacilityApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemovePhysicianToFacilityApi,
           Command<ApiCommand<RemovePhysicianToFacilityApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemovePhysicianToFacilityApi,
-          CommandResult<ApiResult<Null>>>> $result;
+          CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>, RemovePhysicianToFacilityApi, String>> $detach;
+          ApiResult<Empty>, RemovePhysicianToFacilityApi, String>> $detach;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>, RemovePhysicianToFacilityApi, String>> $attach;
+          ApiResult<Empty>, RemovePhysicianToFacilityApi, String>> $attach;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           RemovePhysicianToFacilityApi,
           CommandProgress>> $progress;
 
   _$RemovePhysicianToFacilityApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemovePhysicianToFacilityApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemovePhysicianToFacilityApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     RemovePhysicianToFacilityApi,
                     Command<ApiCommand<RemovePhysicianToFacilityApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>,
-                RemovePhysicianToFacilityApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<RemovePhysicianToFacilityApiRequest>,
+                    ApiResult<Empty>,
+                    RemovePhysicianToFacilityApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemovePhysicianToFacilityApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemovePhysicianToFacilityApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemovePhysicianToFacilityApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 RemovePhysicianToFacilityApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -112,15 +113,16 @@ class _$RemovePhysicianToFacilityApi extends RemovePhysicianToFacilityApi {
       _$RemovePhysicianToFacilityApi._(options());
 
   @override
-  CommandState<ApiCommand<RemovePhysicianToFacilityApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<RemovePhysicianToFacilityApiRequest>,
+          ApiResult<Empty>>
       get $initial => CommandState<
-          ApiCommand<RemovePhysicianToFacilityApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemovePhysicianToFacilityApiRequest>, ApiResult<Empty>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemovePhysicianToFacilityApiRequest>,
-          ApiResult<Null>>
+          ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemovePhysicianToFacilityApiRequest>, ApiResult<Null>>();
+          ApiCommand<RemovePhysicianToFacilityApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -143,6 +145,31 @@ class _$RemovePhysicianToFacilityApi extends RemovePhysicianToFacilityApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemovePhysicianToFacilityApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<RemovePhysicianToFacilityApiRequest> newCommandBuilder() =>
+      ApiCommand<RemovePhysicianToFacilityApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  RemovePhysicianToFacilityApiRequestBuilder newCommandPayloadBuilder() =>
+      RemovePhysicianToFacilityApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<RemovePhysicianToFacilityApiRequest>
+      get commandPayloadSerializer =>
+          RemovePhysicianToFacilityApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

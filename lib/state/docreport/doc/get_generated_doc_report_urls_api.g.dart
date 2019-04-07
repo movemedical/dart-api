@@ -164,4 +164,33 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
         FullType(ApiCommand, [FullType(GetGeneratedDocReportUrlsApiRequest)]),
         FullType(ApiResult, [FullType(GetGeneratedDocReportUrlsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetGeneratedDocReportUrlsApiRequest> newCommandBuilder() =>
+      ApiCommand<GetGeneratedDocReportUrlsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetGeneratedDocReportUrlsApiResponse> newResultBuilder() =>
+      ApiResult<GetGeneratedDocReportUrlsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetGeneratedDocReportUrlsApiRequestBuilder newCommandPayloadBuilder() =>
+      GetGeneratedDocReportUrlsApiRequest().toBuilder();
+
+  @override
+  GetGeneratedDocReportUrlsApiResponseBuilder newResultPayloadBuilder() =>
+      GetGeneratedDocReportUrlsApiResponse().toBuilder();
+
+  @override
+  Serializer<GetGeneratedDocReportUrlsApiRequest>
+      get commandPayloadSerializer =>
+          GetGeneratedDocReportUrlsApiRequest.serializer;
+
+  @override
+  Serializer<GetGeneratedDocReportUrlsApiResponse>
+      get resultPayloadSerializer =>
+          GetGeneratedDocReportUrlsApiResponse.serializer;
 }

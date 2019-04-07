@@ -164,4 +164,31 @@ class _$PrepareShipmntFileUploadApi extends PrepareShipmntFileUploadApi {
         FullType(ApiCommand, [FullType(PrepareShipmntFileUploadApiRequest)]),
         FullType(ApiResult, [FullType(PrepareShipmntFileUploadApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<PrepareShipmntFileUploadApiRequest> newCommandBuilder() =>
+      ApiCommand<PrepareShipmntFileUploadApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<PrepareShipmntFileUploadApiResponse> newResultBuilder() =>
+      ApiResult<PrepareShipmntFileUploadApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  PrepareShipmntFileUploadApiRequestBuilder newCommandPayloadBuilder() =>
+      PrepareShipmntFileUploadApiRequest().toBuilder();
+
+  @override
+  PrepareShipmntFileUploadApiResponseBuilder newResultPayloadBuilder() =>
+      PrepareShipmntFileUploadApiResponse().toBuilder();
+
+  @override
+  Serializer<PrepareShipmntFileUploadApiRequest> get commandPayloadSerializer =>
+      PrepareShipmntFileUploadApiRequest.serializer;
+
+  @override
+  Serializer<PrepareShipmntFileUploadApiResponse> get resultPayloadSerializer =>
+      PrepareShipmntFileUploadApiResponse.serializer;
 }

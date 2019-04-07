@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/directory/relationship/delegate/lis
 
 part 'list_facility_delegates_api.g.dart';
 
-abstract class ListFacilityDelegatesApi extends ApiDispatcher<ListFacilityDelegatesApiRequest, ListFacilityDelegatesApiResponse, ListFacilityDelegatesApi> {
+abstract class ListFacilityDelegatesApi extends ApiDispatcher<ListFacilityDelegatesApiRequest,
+ListFacilityDelegatesApiRequestBuilder,
+ListFacilityDelegatesApiResponse,
+ListFacilityDelegatesApiResponseBuilder,
+ListFacilityDelegatesApi> {
   @override
   String get path => 'v1/directory/relationship/delegate/list_facility_delegates';
-  
-  @override
-  Serializer<ListFacilityDelegatesApiRequest> get requestSerializer => ListFacilityDelegatesApiRequest.serializer;
-  
-  @override
-  Serializer<ListFacilityDelegatesApiResponse> get responseSerializer => ListFacilityDelegatesApiResponse.serializer;
   
   ListFacilityDelegatesApi._();
   

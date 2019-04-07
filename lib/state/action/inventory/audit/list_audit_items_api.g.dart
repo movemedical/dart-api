@@ -159,4 +159,31 @@ class _$ListAuditItemsApi extends ListAuditItemsApi {
         FullType(ApiCommand, [FullType(ListAuditItemsApiRequest)]),
         FullType(ApiResult, [FullType(ListAuditItemsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListAuditItemsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListAuditItemsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListAuditItemsApiResponse> newResultBuilder() =>
+      ApiResult<ListAuditItemsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListAuditItemsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListAuditItemsApiRequest().toBuilder();
+
+  @override
+  ListAuditItemsApiResponseBuilder newResultPayloadBuilder() =>
+      ListAuditItemsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListAuditItemsApiRequest> get commandPayloadSerializer =>
+      ListAuditItemsApiRequest.serializer;
+
+  @override
+  Serializer<ListAuditItemsApiResponse> get resultPayloadSerializer =>
+      ListAuditItemsApiResponse.serializer;
 }

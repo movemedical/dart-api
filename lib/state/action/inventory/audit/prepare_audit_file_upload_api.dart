@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/inventory/audit/prepare_audit_file_
 
 part 'prepare_audit_file_upload_api.g.dart';
 
-abstract class PrepareAuditFileUploadApi extends ApiDispatcher<PrepareAuditFileUploadApiRequest, PrepareAuditFileUploadApiResponse, PrepareAuditFileUploadApi> {
+abstract class PrepareAuditFileUploadApi extends ApiDispatcher<PrepareAuditFileUploadApiRequest,
+PrepareAuditFileUploadApiRequestBuilder,
+PrepareAuditFileUploadApiResponse,
+PrepareAuditFileUploadApiResponseBuilder,
+PrepareAuditFileUploadApi> {
   @override
   String get path => 'v1/inventory/audit/file/prepare_upload';
-  
-  @override
-  Serializer<PrepareAuditFileUploadApiRequest> get requestSerializer => PrepareAuditFileUploadApiRequest.serializer;
-  
-  @override
-  Serializer<PrepareAuditFileUploadApiResponse> get responseSerializer => PrepareAuditFileUploadApiResponse.serializer;
   
   PrepareAuditFileUploadApi._();
   

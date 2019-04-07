@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/catalog/update_item_category_api_re
 
 part 'update_item_category_api.g.dart';
 
-abstract class UpdateItemCategoryApi extends ApiDispatcher<UpdateItemCategoryApiRequest, Null, UpdateItemCategoryApi> {
+abstract class UpdateItemCategoryApi extends ApiDispatcher<UpdateItemCategoryApiRequest,
+UpdateItemCategoryApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateItemCategoryApi> {
   @override
   String get path => 'v1/catalog/item_category/update';
-  
-  @override
-  Serializer<UpdateItemCategoryApiRequest> get requestSerializer => UpdateItemCategoryApiRequest.serializer;
   
   UpdateItemCategoryApi._();
   

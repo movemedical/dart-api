@@ -160,4 +160,31 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
         FullType(ApiCommand, [FullType(GetIntegrationIssueApiRequest)]),
         FullType(ApiResult, [FullType(GetIntegrationIssueApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<GetIntegrationIssueApiRequest> newCommandBuilder() =>
+      ApiCommand<GetIntegrationIssueApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<GetIntegrationIssueApiResponse> newResultBuilder() =>
+      ApiResult<GetIntegrationIssueApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  GetIntegrationIssueApiRequestBuilder newCommandPayloadBuilder() =>
+      GetIntegrationIssueApiRequest().toBuilder();
+
+  @override
+  GetIntegrationIssueApiResponseBuilder newResultPayloadBuilder() =>
+      GetIntegrationIssueApiResponse().toBuilder();
+
+  @override
+  Serializer<GetIntegrationIssueApiRequest> get commandPayloadSerializer =>
+      GetIntegrationIssueApiRequest.serializer;
+
+  @override
+  Serializer<GetIntegrationIssueApiResponse> get resultPayloadSerializer =>
+      GetIntegrationIssueApiResponse.serializer;
 }

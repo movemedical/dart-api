@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/catalog/save_item_category_links_ap
 
 part 'save_item_category_links_api.g.dart';
 
-abstract class SaveItemCategoryLinksApi extends ApiDispatcher<SaveItemCategoryLinksApiRequest, Null, SaveItemCategoryLinksApi> {
+abstract class SaveItemCategoryLinksApi extends ApiDispatcher<SaveItemCategoryLinksApiRequest,
+SaveItemCategoryLinksApiRequestBuilder,
+Empty,
+EmptyBuilder,
+SaveItemCategoryLinksApi> {
   @override
   String get path => 'v1/catalog/save_item_category_links';
-  
-  @override
-  Serializer<SaveItemCategoryLinksApiRequest> get requestSerializer => SaveItemCategoryLinksApiRequest.serializer;
   
   SaveItemCategoryLinksApi._();
   

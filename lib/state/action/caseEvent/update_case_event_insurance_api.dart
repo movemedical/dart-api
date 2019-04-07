@@ -7,12 +7,13 @@ export 'package:movemedical_api/model/action/caseEvent/update_case_event_insuran
 
 part 'update_case_event_insurance_api.g.dart';
 
-abstract class UpdateCaseEventInsuranceApi extends ApiDispatcher<UpdateCaseEventInsuranceApiRequest, Null, UpdateCaseEventInsuranceApi> {
+abstract class UpdateCaseEventInsuranceApi extends ApiDispatcher<UpdateCaseEventInsuranceApiRequest,
+UpdateCaseEventInsuranceApiRequestBuilder,
+Empty,
+EmptyBuilder,
+UpdateCaseEventInsuranceApi> {
   @override
   String get path => 'v1/case_event/update_insurance';
-  
-  @override
-  Serializer<UpdateCaseEventInsuranceApiRequest> get requestSerializer => UpdateCaseEventInsuranceApiRequest.serializer;
   
   UpdateCaseEventInsuranceApi._();
   

@@ -160,4 +160,31 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
         FullType(ApiCommand, [FullType(ListPackageTrackingApiRequest)]),
         FullType(ApiResult, [FullType(ListPackageTrackingApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListPackageTrackingApiRequest> newCommandBuilder() =>
+      ApiCommand<ListPackageTrackingApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListPackageTrackingApiResponse> newResultBuilder() =>
+      ApiResult<ListPackageTrackingApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListPackageTrackingApiRequestBuilder newCommandPayloadBuilder() =>
+      ListPackageTrackingApiRequest().toBuilder();
+
+  @override
+  ListPackageTrackingApiResponseBuilder newResultPayloadBuilder() =>
+      ListPackageTrackingApiResponse().toBuilder();
+
+  @override
+  Serializer<ListPackageTrackingApiRequest> get commandPayloadSerializer =>
+      ListPackageTrackingApiRequest.serializer;
+
+  @override
+  Serializer<ListPackageTrackingApiResponse> get resultPayloadSerializer =>
+      ListPackageTrackingApiResponse.serializer;
 }

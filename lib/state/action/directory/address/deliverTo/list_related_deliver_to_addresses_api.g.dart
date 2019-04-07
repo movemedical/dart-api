@@ -170,4 +170,35 @@ class _$ListRelatedDeliverToAddressesApi
         FullType(
             ApiResult, [FullType(ListRelatedDeliverToAddressesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListRelatedDeliverToAddressesApiRequest>
+      newCommandBuilder() =>
+          ApiCommand<ListRelatedDeliverToAddressesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListRelatedDeliverToAddressesApiResponse>
+      newResultBuilder() =>
+          ApiResult<ListRelatedDeliverToAddressesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListRelatedDeliverToAddressesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListRelatedDeliverToAddressesApiRequest().toBuilder();
+
+  @override
+  ListRelatedDeliverToAddressesApiResponseBuilder newResultPayloadBuilder() =>
+      ListRelatedDeliverToAddressesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListRelatedDeliverToAddressesApiRequest>
+      get commandPayloadSerializer =>
+          ListRelatedDeliverToAddressesApiRequest.serializer;
+
+  @override
+  Serializer<ListRelatedDeliverToAddressesApiResponse>
+      get resultPayloadSerializer =>
+          ListRelatedDeliverToAddressesApiResponse.serializer;
 }

@@ -9,15 +9,13 @@ export 'package:movemedical_api/model/action/caseEvent/list_procedures_for_sched
 
 part 'list_procedures_for_scheduling_api.g.dart';
 
-abstract class ListProceduresForSchedulingApi extends ApiDispatcher<ListProceduresForSchedulingApiRequest, ListProceduresForSchedulingApiResponse, ListProceduresForSchedulingApi> {
+abstract class ListProceduresForSchedulingApi extends ApiDispatcher<ListProceduresForSchedulingApiRequest,
+ListProceduresForSchedulingApiRequestBuilder,
+ListProceduresForSchedulingApiResponse,
+ListProceduresForSchedulingApiResponseBuilder,
+ListProceduresForSchedulingApi> {
   @override
   String get path => 'v1/case_event/list_procedures_for_scheduling';
-  
-  @override
-  Serializer<ListProceduresForSchedulingApiRequest> get requestSerializer => ListProceduresForSchedulingApiRequest.serializer;
-  
-  @override
-  Serializer<ListProceduresForSchedulingApiResponse> get responseSerializer => ListProceduresForSchedulingApiResponse.serializer;
   
   ListProceduresForSchedulingApi._();
   

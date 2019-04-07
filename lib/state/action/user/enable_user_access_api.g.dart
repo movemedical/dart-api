@@ -10,91 +10,92 @@ part of 'enable_user_access_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>>,
+    CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>>,
     CommandStateBuilder<ApiCommand<EnableUserAccessApiRequest>,
-        ApiResult<Null>>,
+        ApiResult<Empty>>,
     EnableUserAccessApi> EnableUserAccessApiOptions();
 
 class _$EnableUserAccessApi extends EnableUserAccessApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>>,
+      CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<EnableUserAccessApiRequest>,
-          ApiResult<Null>>,
+          ApiResult<Empty>>,
       EnableUserAccessApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>>>
-      $replace;
+      CommandState<ApiCommand<EnableUserAccessApiRequest>,
+          ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>,
           EnableUserAccessApi, String>> $clear;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>,
           EnableUserAccessApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EnableUserAccessApiRequest>,
-          ApiResult<Null>,
+          ApiResult<Empty>,
           EnableUserAccessApi,
           Command<ApiCommand<EnableUserAccessApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>,
-          EnableUserAccessApi, CommandResult<ApiResult<Null>>>> $result;
+      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>,
+          EnableUserAccessApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>,
           EnableUserAccessApi, String>> $detach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>,
           EnableUserAccessApi, String>> $attach;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>,
+      CommandPayload<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>,
           EnableUserAccessApi, CommandProgress>> $progress;
 
   _$EnableUserAccessApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $clear = $options.action<
             CommandPayload<
                 ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EnableUserAccessApi,
                 String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EnableUserAccessApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<EnableUserAccessApiRequest>,
-                    ApiResult<Null>,
+                    ApiResult<Empty>,
                     EnableUserAccessApi,
                     Command<ApiCommand<EnableUserAccessApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-            CommandPayload<
-                ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>,
-                EnableUserAccessApi,
-                CommandResult<ApiResult<Null>>>>('\$result', (a) => a?.$result),
+                CommandPayload<
+                    ApiCommand<EnableUserAccessApiRequest>,
+                    ApiResult<Empty>,
+                    EnableUserAccessApi,
+                    CommandResult<ApiResult<Empty>>>>(
+            '\$result', (a) => a?.$result),
         $detach = $options.action<
             CommandPayload<
                 ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EnableUserAccessApi,
                 String>>('\$detach', (a) => a?.$detach),
         $attach = $options.action<
             CommandPayload<
                 ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EnableUserAccessApi,
                 String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EnableUserAccessApiRequest>,
-                ApiResult<Null>,
+                ApiResult<Empty>,
                 EnableUserAccessApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -103,14 +104,14 @@ class _$EnableUserAccessApi extends EnableUserAccessApi {
       _$EnableUserAccessApi._(options());
 
   @override
-  CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>>
+  CommandState<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>>
       get $initial => CommandState<ApiCommand<EnableUserAccessApiRequest>,
-          ApiResult<Null>>();
+          ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>>
+  CommandStateBuilder<ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<EnableUserAccessApiRequest>, ApiResult<Null>>();
+          ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -133,6 +134,30 @@ class _$EnableUserAccessApi extends EnableUserAccessApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EnableUserAccessApiRequest)]),
-        FullType(ApiResult, [FullType(Null)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
+
+  @override
+  ApiCommandBuilder<EnableUserAccessApiRequest> newCommandBuilder() =>
+      ApiCommand<EnableUserAccessApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  EnableUserAccessApiRequestBuilder newCommandPayloadBuilder() =>
+      EnableUserAccessApiRequest().toBuilder();
+
+  @override
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+
+  @override
+  Serializer<EnableUserAccessApiRequest> get commandPayloadSerializer =>
+      EnableUserAccessApiRequest.serializer;
+
+  @override
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

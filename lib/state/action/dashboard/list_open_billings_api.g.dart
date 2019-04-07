@@ -160,4 +160,31 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
         FullType(ApiCommand, [FullType(ListOpenBillingsApiRequest)]),
         FullType(ApiResult, [FullType(ListOpenBillingsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListOpenBillingsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListOpenBillingsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListOpenBillingsApiResponse> newResultBuilder() =>
+      ApiResult<ListOpenBillingsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListOpenBillingsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListOpenBillingsApiRequest().toBuilder();
+
+  @override
+  ListOpenBillingsApiResponseBuilder newResultPayloadBuilder() =>
+      ListOpenBillingsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListOpenBillingsApiRequest> get commandPayloadSerializer =>
+      ListOpenBillingsApiRequest.serializer;
+
+  @override
+  Serializer<ListOpenBillingsApiResponse> get resultPayloadSerializer =>
+      ListOpenBillingsApiResponse.serializer;
 }

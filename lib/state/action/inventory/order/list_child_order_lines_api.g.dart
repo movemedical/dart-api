@@ -160,4 +160,31 @@ class _$ListChildOrderLinesApi extends ListChildOrderLinesApi {
         FullType(ApiCommand, [FullType(ListChildOrderLinesApiRequest)]),
         FullType(ApiResult, [FullType(ListChildOrderLinesApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListChildOrderLinesApiRequest> newCommandBuilder() =>
+      ApiCommand<ListChildOrderLinesApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListChildOrderLinesApiResponse> newResultBuilder() =>
+      ApiResult<ListChildOrderLinesApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListChildOrderLinesApiRequestBuilder newCommandPayloadBuilder() =>
+      ListChildOrderLinesApiRequest().toBuilder();
+
+  @override
+  ListChildOrderLinesApiResponseBuilder newResultPayloadBuilder() =>
+      ListChildOrderLinesApiResponse().toBuilder();
+
+  @override
+  Serializer<ListChildOrderLinesApiRequest> get commandPayloadSerializer =>
+      ListChildOrderLinesApiRequest.serializer;
+
+  @override
+  Serializer<ListChildOrderLinesApiResponse> get resultPayloadSerializer =>
+      ListChildOrderLinesApiResponse.serializer;
 }

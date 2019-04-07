@@ -164,4 +164,33 @@ class _$ListBizUnitLinkedOrgUnitsApi extends ListBizUnitLinkedOrgUnitsApi {
         FullType(ApiCommand, [FullType(ListBizUnitLinkedOrgUnitsApiRequest)]),
         FullType(ApiResult, [FullType(ListBizUnitLinkedOrgUnitsApiResponse)])
       ]);
+
+  @override
+  ApiCommandBuilder<ListBizUnitLinkedOrgUnitsApiRequest> newCommandBuilder() =>
+      ApiCommand<ListBizUnitLinkedOrgUnitsApiRequest>().toBuilder();
+
+  @override
+  ApiResultBuilder<ListBizUnitLinkedOrgUnitsApiResponse> newResultBuilder() =>
+      ApiResult<ListBizUnitLinkedOrgUnitsApiResponse>().toBuilder();
+
+  @override
+  Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
+
+  @override
+  ListBizUnitLinkedOrgUnitsApiRequestBuilder newCommandPayloadBuilder() =>
+      ListBizUnitLinkedOrgUnitsApiRequest().toBuilder();
+
+  @override
+  ListBizUnitLinkedOrgUnitsApiResponseBuilder newResultPayloadBuilder() =>
+      ListBizUnitLinkedOrgUnitsApiResponse().toBuilder();
+
+  @override
+  Serializer<ListBizUnitLinkedOrgUnitsApiRequest>
+      get commandPayloadSerializer =>
+          ListBizUnitLinkedOrgUnitsApiRequest.serializer;
+
+  @override
+  Serializer<ListBizUnitLinkedOrgUnitsApiResponse>
+      get resultPayloadSerializer =>
+          ListBizUnitLinkedOrgUnitsApiResponse.serializer;
 }
