@@ -32,12 +32,6 @@ class _$LoadTestActionApi extends LoadTestActionApi {
           ApiCommand<LoadTestActionApiRequest>,
           ApiResult<LoadTestActionApiResponse>,
           LoadTestActionApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<LoadTestActionApiRequest>,
-          ApiResult<LoadTestActionApiResponse>,
-          LoadTestActionApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$LoadTestActionApi extends LoadTestActionApi {
           ApiCommand<LoadTestActionApiRequest>,
           ApiResult<LoadTestActionApiResponse>,
           LoadTestActionApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<LoadTestActionApiRequest>,
-          ApiResult<LoadTestActionApiResponse>,
-          LoadTestActionApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<LoadTestActionApiRequest>,
-          ApiResult<LoadTestActionApiResponse>,
-          LoadTestActionApi,
           CommandProgress>> $progress;
 
   _$LoadTestActionApi._(this.$options)
@@ -75,12 +57,6 @@ class _$LoadTestActionApi extends LoadTestActionApi {
                 CommandState<ApiCommand<LoadTestActionApiRequest>,
                     ApiResult<LoadTestActionApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<LoadTestActionApiRequest>,
-                ApiResult<LoadTestActionApiResponse>,
-                LoadTestActionApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<LoadTestActionApiRequest>,
@@ -101,18 +77,6 @@ class _$LoadTestActionApi extends LoadTestActionApi {
                     LoadTestActionApi,
                     CommandResult<ApiResult<LoadTestActionApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<LoadTestActionApiRequest>,
-                ApiResult<LoadTestActionApiResponse>,
-                LoadTestActionApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<LoadTestActionApiRequest>,
-                ApiResult<LoadTestActionApiResponse>,
-                LoadTestActionApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<LoadTestActionApiRequest>,
@@ -141,12 +105,9 @@ class _$LoadTestActionApi extends LoadTestActionApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -28,9 +28,6 @@ class _$GetTeamApi extends GetTeamApi {
           ApiResult<GetTeamApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetTeamApiRequest>,
-          ApiResult<GetTeamApiResponse>, GetTeamApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetTeamApiRequest>,
           ApiResult<GetTeamApiResponse>, GetTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$GetTeamApi extends GetTeamApi {
           GetTeamApi,
           CommandResult<ApiResult<GetTeamApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<GetTeamApiRequest>,
-          ApiResult<GetTeamApiResponse>, GetTeamApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetTeamApiRequest>,
-          ApiResult<GetTeamApiResponse>, GetTeamApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<GetTeamApiRequest>,
           ApiResult<GetTeamApiResponse>,
@@ -62,12 +53,6 @@ class _$GetTeamApi extends GetTeamApi {
                 CommandState<ApiCommand<GetTeamApiRequest>,
                     ApiResult<GetTeamApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetTeamApiRequest>,
-                ApiResult<GetTeamApiResponse>,
-                GetTeamApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetTeamApiRequest>,
@@ -88,18 +73,6 @@ class _$GetTeamApi extends GetTeamApi {
                     GetTeamApi,
                     CommandResult<ApiResult<GetTeamApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetTeamApiRequest>,
-                ApiResult<GetTeamApiResponse>,
-                GetTeamApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetTeamApiRequest>,
-                ApiResult<GetTeamApiResponse>,
-                GetTeamApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetTeamApiRequest>,
@@ -126,12 +99,9 @@ class _$GetTeamApi extends GetTeamApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

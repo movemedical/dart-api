@@ -29,9 +29,6 @@ class _$GlobalSearchApi extends GlobalSearchApi {
           ApiResult<GlobalSearchApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>, GlobalSearchApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>, GlobalSearchApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$GlobalSearchApi extends GlobalSearchApi {
           GlobalSearchApi,
           CommandResult<ApiResult<GlobalSearchApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>, GlobalSearchApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GlobalSearchApiRequest>,
-          ApiResult<GlobalSearchApiResponse>, GlobalSearchApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<GlobalSearchApiRequest>,
           ApiResult<GlobalSearchApiResponse>,
@@ -63,12 +54,6 @@ class _$GlobalSearchApi extends GlobalSearchApi {
                 CommandState<ApiCommand<GlobalSearchApiRequest>,
                     ApiResult<GlobalSearchApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GlobalSearchApiRequest>,
-                ApiResult<GlobalSearchApiResponse>,
-                GlobalSearchApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GlobalSearchApiRequest>,
@@ -89,18 +74,6 @@ class _$GlobalSearchApi extends GlobalSearchApi {
                     GlobalSearchApi,
                     CommandResult<ApiResult<GlobalSearchApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GlobalSearchApiRequest>,
-                ApiResult<GlobalSearchApiResponse>,
-                GlobalSearchApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GlobalSearchApiRequest>,
-                ApiResult<GlobalSearchApiResponse>,
-                GlobalSearchApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GlobalSearchApiRequest>,
@@ -129,12 +102,9 @@ class _$GlobalSearchApi extends GlobalSearchApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

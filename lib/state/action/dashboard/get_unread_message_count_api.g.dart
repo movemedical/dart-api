@@ -32,12 +32,6 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
           ApiCommand<GetUnreadMessageCountApiRequest>,
           ApiResult<GetUnreadMessageCountApiResponse>,
           GetUnreadMessageCountApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUnreadMessageCountApiRequest>,
-          ApiResult<GetUnreadMessageCountApiResponse>,
-          GetUnreadMessageCountApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
           ApiCommand<GetUnreadMessageCountApiRequest>,
           ApiResult<GetUnreadMessageCountApiResponse>,
           GetUnreadMessageCountApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUnreadMessageCountApiRequest>,
-          ApiResult<GetUnreadMessageCountApiResponse>,
-          GetUnreadMessageCountApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUnreadMessageCountApiRequest>,
-          ApiResult<GetUnreadMessageCountApiResponse>,
-          GetUnreadMessageCountApi,
           CommandProgress>> $progress;
 
   _$GetUnreadMessageCountApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
                 CommandState<ApiCommand<GetUnreadMessageCountApiRequest>,
                     ApiResult<GetUnreadMessageCountApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetUnreadMessageCountApiRequest>,
-                ApiResult<GetUnreadMessageCountApiResponse>,
-                GetUnreadMessageCountApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetUnreadMessageCountApiRequest>,
@@ -102,18 +78,6 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
                     CommandResult<
                         ApiResult<GetUnreadMessageCountApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetUnreadMessageCountApiRequest>,
-                ApiResult<GetUnreadMessageCountApiResponse>,
-                GetUnreadMessageCountApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetUnreadMessageCountApiRequest>,
-                ApiResult<GetUnreadMessageCountApiResponse>,
-                GetUnreadMessageCountApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetUnreadMessageCountApiRequest>,
@@ -143,12 +107,9 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

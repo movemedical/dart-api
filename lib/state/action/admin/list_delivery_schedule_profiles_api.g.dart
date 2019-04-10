@@ -33,12 +33,6 @@ class _$ListDeliveryScheduleProfilesApi
           ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
           ApiResult<ListDeliveryScheduleProfilesApiResponse>,
           ListDeliveryScheduleProfilesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
-          ApiResult<ListDeliveryScheduleProfilesApiResponse>,
-          ListDeliveryScheduleProfilesApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -59,18 +53,6 @@ class _$ListDeliveryScheduleProfilesApi
           ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
           ApiResult<ListDeliveryScheduleProfilesApiResponse>,
           ListDeliveryScheduleProfilesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
-          ApiResult<ListDeliveryScheduleProfilesApiResponse>,
-          ListDeliveryScheduleProfilesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
-          ApiResult<ListDeliveryScheduleProfilesApiResponse>,
-          ListDeliveryScheduleProfilesApi,
           CommandProgress>> $progress;
 
   _$ListDeliveryScheduleProfilesApi._(this.$options)
@@ -78,12 +60,6 @@ class _$ListDeliveryScheduleProfilesApi
                 CommandState<ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
                     ApiResult<ListDeliveryScheduleProfilesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
-                ApiResult<ListDeliveryScheduleProfilesApiResponse>,
-                ListDeliveryScheduleProfilesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
@@ -106,18 +82,6 @@ class _$ListDeliveryScheduleProfilesApi
                     CommandResult<
                         ApiResult<ListDeliveryScheduleProfilesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
-                ApiResult<ListDeliveryScheduleProfilesApiResponse>,
-                ListDeliveryScheduleProfilesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
-                ApiResult<ListDeliveryScheduleProfilesApiResponse>,
-                ListDeliveryScheduleProfilesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListDeliveryScheduleProfilesApiRequest>,
@@ -149,12 +113,9 @@ class _$ListDeliveryScheduleProfilesApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

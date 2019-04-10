@@ -32,12 +32,6 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
           ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>,
           ListShipToAddressesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
           ApiCommand<ListShipToAddressesApiRequest>,
           ApiResult<ListShipToAddressesApiResponse>,
           ListShipToAddressesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipToAddressesApiRequest>,
-          ApiResult<ListShipToAddressesApiResponse>,
-          ListShipToAddressesApi,
           CommandProgress>> $progress;
 
   _$ListShipToAddressesApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
                 CommandState<ApiCommand<ListShipToAddressesApiRequest>,
                     ApiResult<ListShipToAddressesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipToAddressesApiRequest>,
-                ApiResult<ListShipToAddressesApiResponse>,
-                ListShipToAddressesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListShipToAddressesApiRequest>,
@@ -101,18 +77,6 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
                     ListShipToAddressesApi,
                     CommandResult<ApiResult<ListShipToAddressesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipToAddressesApiRequest>,
-                ApiResult<ListShipToAddressesApiResponse>,
-                ListShipToAddressesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipToAddressesApiRequest>,
-                ApiResult<ListShipToAddressesApiResponse>,
-                ListShipToAddressesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListShipToAddressesApiRequest>,
@@ -142,12 +106,9 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

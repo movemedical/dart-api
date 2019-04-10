@@ -32,12 +32,6 @@ class _$ListComponentsApi extends ListComponentsApi {
           ApiCommand<ListComponentsApiRequest>,
           ApiResult<ListComponentsApiResponse>,
           ListComponentsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListComponentsApiRequest>,
-          ApiResult<ListComponentsApiResponse>,
-          ListComponentsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListComponentsApi extends ListComponentsApi {
           ApiCommand<ListComponentsApiRequest>,
           ApiResult<ListComponentsApiResponse>,
           ListComponentsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListComponentsApiRequest>,
-          ApiResult<ListComponentsApiResponse>,
-          ListComponentsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListComponentsApiRequest>,
-          ApiResult<ListComponentsApiResponse>,
-          ListComponentsApi,
           CommandProgress>> $progress;
 
   _$ListComponentsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListComponentsApi extends ListComponentsApi {
                 CommandState<ApiCommand<ListComponentsApiRequest>,
                     ApiResult<ListComponentsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListComponentsApiRequest>,
-                ApiResult<ListComponentsApiResponse>,
-                ListComponentsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListComponentsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListComponentsApi extends ListComponentsApi {
                     ListComponentsApi,
                     CommandResult<ApiResult<ListComponentsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListComponentsApiRequest>,
-                ApiResult<ListComponentsApiResponse>,
-                ListComponentsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListComponentsApiRequest>,
-                ApiResult<ListComponentsApiResponse>,
-                ListComponentsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListComponentsApiRequest>,
@@ -141,12 +105,9 @@ class _$ListComponentsApi extends ListComponentsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

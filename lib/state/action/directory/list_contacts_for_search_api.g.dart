@@ -32,12 +32,6 @@ class _$ListContactsForSearchApi extends ListContactsForSearchApi {
           ApiCommand<ListContactsForSearchApiRequest>,
           ApiResult<ListContactsForSearchApiResponse>,
           ListContactsForSearchApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListContactsForSearchApiRequest>,
-          ApiResult<ListContactsForSearchApiResponse>,
-          ListContactsForSearchApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListContactsForSearchApi extends ListContactsForSearchApi {
           ApiCommand<ListContactsForSearchApiRequest>,
           ApiResult<ListContactsForSearchApiResponse>,
           ListContactsForSearchApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListContactsForSearchApiRequest>,
-          ApiResult<ListContactsForSearchApiResponse>,
-          ListContactsForSearchApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListContactsForSearchApiRequest>,
-          ApiResult<ListContactsForSearchApiResponse>,
-          ListContactsForSearchApi,
           CommandProgress>> $progress;
 
   _$ListContactsForSearchApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListContactsForSearchApi extends ListContactsForSearchApi {
                 CommandState<ApiCommand<ListContactsForSearchApiRequest>,
                     ApiResult<ListContactsForSearchApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListContactsForSearchApiRequest>,
-                ApiResult<ListContactsForSearchApiResponse>,
-                ListContactsForSearchApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListContactsForSearchApiRequest>,
@@ -102,18 +78,6 @@ class _$ListContactsForSearchApi extends ListContactsForSearchApi {
                     CommandResult<
                         ApiResult<ListContactsForSearchApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListContactsForSearchApiRequest>,
-                ApiResult<ListContactsForSearchApiResponse>,
-                ListContactsForSearchApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListContactsForSearchApiRequest>,
-                ApiResult<ListContactsForSearchApiResponse>,
-                ListContactsForSearchApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListContactsForSearchApiRequest>,
@@ -143,12 +107,9 @@ class _$ListContactsForSearchApi extends ListContactsForSearchApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

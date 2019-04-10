@@ -32,12 +32,6 @@ class _$ListStockSummaryApi extends ListStockSummaryApi {
           ApiCommand<ListStockSummaryApiRequest>,
           ApiResult<ListStockSummaryApiResponse>,
           ListStockSummaryApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSummaryApiRequest>,
-          ApiResult<ListStockSummaryApiResponse>,
-          ListStockSummaryApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListStockSummaryApi extends ListStockSummaryApi {
           ApiCommand<ListStockSummaryApiRequest>,
           ApiResult<ListStockSummaryApiResponse>,
           ListStockSummaryApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSummaryApiRequest>,
-          ApiResult<ListStockSummaryApiResponse>,
-          ListStockSummaryApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockSummaryApiRequest>,
-          ApiResult<ListStockSummaryApiResponse>,
-          ListStockSummaryApi,
           CommandProgress>> $progress;
 
   _$ListStockSummaryApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListStockSummaryApi extends ListStockSummaryApi {
                 CommandState<ApiCommand<ListStockSummaryApiRequest>,
                     ApiResult<ListStockSummaryApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockSummaryApiRequest>,
-                ApiResult<ListStockSummaryApiResponse>,
-                ListStockSummaryApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListStockSummaryApiRequest>,
@@ -101,18 +77,6 @@ class _$ListStockSummaryApi extends ListStockSummaryApi {
                     ListStockSummaryApi,
                     CommandResult<ApiResult<ListStockSummaryApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockSummaryApiRequest>,
-                ApiResult<ListStockSummaryApiResponse>,
-                ListStockSummaryApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockSummaryApiRequest>,
-                ApiResult<ListStockSummaryApiResponse>,
-                ListStockSummaryApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListStockSummaryApiRequest>,
@@ -142,12 +106,9 @@ class _$ListStockSummaryApi extends ListStockSummaryApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

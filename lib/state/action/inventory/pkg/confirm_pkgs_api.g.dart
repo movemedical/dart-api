@@ -25,9 +25,6 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
-          ConfirmPkgsApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
           ConfirmPkgsApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
-          ConfirmPkgsApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
-          ConfirmPkgsApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
           ConfirmPkgsApi, CommandProgress>> $progress;
 
   _$ConfirmPkgsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmPkgsApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
-                ConfirmPkgsApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
                 ConfirmPkgsApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
                     ConfirmPkgsApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
-                ConfirmPkgsApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<ConfirmPkgsApiRequest>, ApiResult<Empty>,
-                ConfirmPkgsApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmPkgsApiRequest>,
@@ -101,12 +83,9 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

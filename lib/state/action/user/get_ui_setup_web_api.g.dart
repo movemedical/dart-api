@@ -32,12 +32,6 @@ class _$GetUiSetupWebApi extends GetUiSetupWebApi {
           ApiCommand<GetUiSetupWebApiRequest>,
           ApiResult<GetUiSetupWebApiResponse>,
           GetUiSetupWebApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupWebApiRequest>,
-          ApiResult<GetUiSetupWebApiResponse>,
-          GetUiSetupWebApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetUiSetupWebApi extends GetUiSetupWebApi {
           ApiCommand<GetUiSetupWebApiRequest>,
           ApiResult<GetUiSetupWebApiResponse>,
           GetUiSetupWebApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupWebApiRequest>,
-          ApiResult<GetUiSetupWebApiResponse>,
-          GetUiSetupWebApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetUiSetupWebApiRequest>,
-          ApiResult<GetUiSetupWebApiResponse>,
-          GetUiSetupWebApi,
           CommandProgress>> $progress;
 
   _$GetUiSetupWebApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetUiSetupWebApi extends GetUiSetupWebApi {
                 CommandState<ApiCommand<GetUiSetupWebApiRequest>,
                     ApiResult<GetUiSetupWebApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupWebApiRequest>,
-                ApiResult<GetUiSetupWebApiResponse>,
-                GetUiSetupWebApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetUiSetupWebApiRequest>,
@@ -101,18 +77,6 @@ class _$GetUiSetupWebApi extends GetUiSetupWebApi {
                     GetUiSetupWebApi,
                     CommandResult<ApiResult<GetUiSetupWebApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupWebApiRequest>,
-                ApiResult<GetUiSetupWebApiResponse>,
-                GetUiSetupWebApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetUiSetupWebApiRequest>,
-                ApiResult<GetUiSetupWebApiResponse>,
-                GetUiSetupWebApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetUiSetupWebApiRequest>,
@@ -141,12 +105,9 @@ class _$GetUiSetupWebApi extends GetUiSetupWebApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

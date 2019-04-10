@@ -25,9 +25,6 @@ class _$AddHcrToTeamApi extends AddHcrToTeamApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
-          AddHcrToTeamApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -40,21 +37,12 @@ class _$AddHcrToTeamApi extends AddHcrToTeamApi {
           AddHcrToTeamApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
-          AddHcrToTeamApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
-          AddHcrToTeamApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
           AddHcrToTeamApi, CommandProgress>> $progress;
 
   _$AddHcrToTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddHcrToTeamApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
-                AddHcrToTeamApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
                 AddHcrToTeamApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -72,12 +60,6 @@ class _$AddHcrToTeamApi extends AddHcrToTeamApi {
                     AddHcrToTeamApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
-                AddHcrToTeamApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<AddHcrToTeamApiRequest>, ApiResult<Empty>,
-                AddHcrToTeamApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToTeamApiRequest>,
@@ -104,12 +86,9 @@ class _$AddHcrToTeamApi extends AddHcrToTeamApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

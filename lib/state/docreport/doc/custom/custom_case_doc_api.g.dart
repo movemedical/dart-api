@@ -32,12 +32,6 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
           ApiCommand<CustomCaseDocApiRequest>,
           ApiResult<CustomCaseDocApiResponse>,
           CustomCaseDocApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
-          CustomCaseDocApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
           ApiCommand<CustomCaseDocApiRequest>,
           ApiResult<CustomCaseDocApiResponse>,
           CustomCaseDocApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
-          CustomCaseDocApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
-          CustomCaseDocApi,
           CommandProgress>> $progress;
 
   _$CustomCaseDocApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
                 CommandState<ApiCommand<CustomCaseDocApiRequest>,
                     ApiResult<CustomCaseDocApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<CustomCaseDocApiResponse>,
-                CustomCaseDocApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CustomCaseDocApiRequest>,
@@ -101,18 +77,6 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
                     CustomCaseDocApi,
                     CommandResult<ApiResult<CustomCaseDocApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<CustomCaseDocApiResponse>,
-                CustomCaseDocApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<CustomCaseDocApiResponse>,
-                CustomCaseDocApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CustomCaseDocApiRequest>,
@@ -141,12 +105,9 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

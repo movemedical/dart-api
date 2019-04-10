@@ -32,12 +32,6 @@ class _$ListNotificationsApi extends ListNotificationsApi {
           ApiCommand<ListNotificationsApiRequest>,
           ApiResult<ListNotificationsApiResponse>,
           ListNotificationsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListNotificationsApiRequest>,
-          ApiResult<ListNotificationsApiResponse>,
-          ListNotificationsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListNotificationsApi extends ListNotificationsApi {
           ApiCommand<ListNotificationsApiRequest>,
           ApiResult<ListNotificationsApiResponse>,
           ListNotificationsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListNotificationsApiRequest>,
-          ApiResult<ListNotificationsApiResponse>,
-          ListNotificationsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListNotificationsApiRequest>,
-          ApiResult<ListNotificationsApiResponse>,
-          ListNotificationsApi,
           CommandProgress>> $progress;
 
   _$ListNotificationsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListNotificationsApi extends ListNotificationsApi {
                 CommandState<ApiCommand<ListNotificationsApiRequest>,
                     ApiResult<ListNotificationsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListNotificationsApiRequest>,
-                ApiResult<ListNotificationsApiResponse>,
-                ListNotificationsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListNotificationsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListNotificationsApi extends ListNotificationsApi {
                     ListNotificationsApi,
                     CommandResult<ApiResult<ListNotificationsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListNotificationsApiRequest>,
-                ApiResult<ListNotificationsApiResponse>,
-                ListNotificationsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListNotificationsApiRequest>,
-                ApiResult<ListNotificationsApiResponse>,
-                ListNotificationsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListNotificationsApiRequest>,
@@ -142,12 +106,9 @@ class _$ListNotificationsApi extends ListNotificationsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

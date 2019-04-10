@@ -32,12 +32,6 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
           ApiCommand<CustomOrderDocApiRequest>,
           ApiResult<CustomOrderDocApiResponse>,
           CustomOrderDocApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomOrderDocApiRequest>,
-          ApiResult<CustomOrderDocApiResponse>,
-          CustomOrderDocApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
           ApiCommand<CustomOrderDocApiRequest>,
           ApiResult<CustomOrderDocApiResponse>,
           CustomOrderDocApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomOrderDocApiRequest>,
-          ApiResult<CustomOrderDocApiResponse>,
-          CustomOrderDocApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomOrderDocApiRequest>,
-          ApiResult<CustomOrderDocApiResponse>,
-          CustomOrderDocApi,
           CommandProgress>> $progress;
 
   _$CustomOrderDocApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
                 CommandState<ApiCommand<CustomOrderDocApiRequest>,
                     ApiResult<CustomOrderDocApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CustomOrderDocApiRequest>,
-                ApiResult<CustomOrderDocApiResponse>,
-                CustomOrderDocApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CustomOrderDocApiRequest>,
@@ -101,18 +77,6 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
                     CustomOrderDocApi,
                     CommandResult<ApiResult<CustomOrderDocApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CustomOrderDocApiRequest>,
-                ApiResult<CustomOrderDocApiResponse>,
-                CustomOrderDocApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CustomOrderDocApiRequest>,
-                ApiResult<CustomOrderDocApiResponse>,
-                CustomOrderDocApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CustomOrderDocApiRequest>,
@@ -141,12 +105,9 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

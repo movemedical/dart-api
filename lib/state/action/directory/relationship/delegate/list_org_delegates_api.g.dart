@@ -32,12 +32,6 @@ class _$ListOrgDelegatesApi extends ListOrgDelegatesApi {
           ApiCommand<ListOrgDelegatesApiRequest>,
           ApiResult<ListOrgDelegatesApiResponse>,
           ListOrgDelegatesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgDelegatesApiRequest>,
-          ApiResult<ListOrgDelegatesApiResponse>,
-          ListOrgDelegatesApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListOrgDelegatesApi extends ListOrgDelegatesApi {
           ApiCommand<ListOrgDelegatesApiRequest>,
           ApiResult<ListOrgDelegatesApiResponse>,
           ListOrgDelegatesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgDelegatesApiRequest>,
-          ApiResult<ListOrgDelegatesApiResponse>,
-          ListOrgDelegatesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgDelegatesApiRequest>,
-          ApiResult<ListOrgDelegatesApiResponse>,
-          ListOrgDelegatesApi,
           CommandProgress>> $progress;
 
   _$ListOrgDelegatesApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListOrgDelegatesApi extends ListOrgDelegatesApi {
                 CommandState<ApiCommand<ListOrgDelegatesApiRequest>,
                     ApiResult<ListOrgDelegatesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgDelegatesApiRequest>,
-                ApiResult<ListOrgDelegatesApiResponse>,
-                ListOrgDelegatesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListOrgDelegatesApiRequest>,
@@ -101,18 +77,6 @@ class _$ListOrgDelegatesApi extends ListOrgDelegatesApi {
                     ListOrgDelegatesApi,
                     CommandResult<ApiResult<ListOrgDelegatesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgDelegatesApiRequest>,
-                ApiResult<ListOrgDelegatesApiResponse>,
-                ListOrgDelegatesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgDelegatesApiRequest>,
-                ApiResult<ListOrgDelegatesApiResponse>,
-                ListOrgDelegatesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListOrgDelegatesApiRequest>,
@@ -142,12 +106,9 @@ class _$ListOrgDelegatesApi extends ListOrgDelegatesApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

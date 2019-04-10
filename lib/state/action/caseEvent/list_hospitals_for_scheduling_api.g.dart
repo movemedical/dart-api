@@ -32,12 +32,6 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
           ApiCommand<ListHospitalsForSchedulingApiRequest>,
           ApiResult<ListHospitalsForSchedulingApiResponse>,
           ListHospitalsForSchedulingApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHospitalsForSchedulingApiRequest>,
-          ApiResult<ListHospitalsForSchedulingApiResponse>,
-          ListHospitalsForSchedulingApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
           ApiCommand<ListHospitalsForSchedulingApiRequest>,
           ApiResult<ListHospitalsForSchedulingApiResponse>,
           ListHospitalsForSchedulingApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHospitalsForSchedulingApiRequest>,
-          ApiResult<ListHospitalsForSchedulingApiResponse>,
-          ListHospitalsForSchedulingApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHospitalsForSchedulingApiRequest>,
-          ApiResult<ListHospitalsForSchedulingApiResponse>,
-          ListHospitalsForSchedulingApi,
           CommandProgress>> $progress;
 
   _$ListHospitalsForSchedulingApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
                 CommandState<ApiCommand<ListHospitalsForSchedulingApiRequest>,
                     ApiResult<ListHospitalsForSchedulingApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListHospitalsForSchedulingApiRequest>,
-                ApiResult<ListHospitalsForSchedulingApiResponse>,
-                ListHospitalsForSchedulingApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListHospitalsForSchedulingApiRequest>,
@@ -103,18 +79,6 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
                     CommandResult<
                         ApiResult<ListHospitalsForSchedulingApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHospitalsForSchedulingApiRequest>,
-                ApiResult<ListHospitalsForSchedulingApiResponse>,
-                ListHospitalsForSchedulingApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHospitalsForSchedulingApiRequest>,
-                ApiResult<ListHospitalsForSchedulingApiResponse>,
-                ListHospitalsForSchedulingApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListHospitalsForSchedulingApiRequest>,
@@ -146,12 +110,9 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

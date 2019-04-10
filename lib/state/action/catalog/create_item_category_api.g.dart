@@ -32,12 +32,6 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
           ApiCommand<CreateItemCategoryApiRequest>,
           ApiResult<CreateItemCategoryApiResponse>,
           CreateItemCategoryApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateItemCategoryApiRequest>,
-          ApiResult<CreateItemCategoryApiResponse>,
-          CreateItemCategoryApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
           ApiCommand<CreateItemCategoryApiRequest>,
           ApiResult<CreateItemCategoryApiResponse>,
           CreateItemCategoryApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateItemCategoryApiRequest>,
-          ApiResult<CreateItemCategoryApiResponse>,
-          CreateItemCategoryApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateItemCategoryApiRequest>,
-          ApiResult<CreateItemCategoryApiResponse>,
-          CreateItemCategoryApi,
           CommandProgress>> $progress;
 
   _$CreateItemCategoryApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
                 CommandState<ApiCommand<CreateItemCategoryApiRequest>,
                     ApiResult<CreateItemCategoryApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateItemCategoryApiRequest>,
-                ApiResult<CreateItemCategoryApiResponse>,
-                CreateItemCategoryApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateItemCategoryApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
                     CreateItemCategoryApi,
                     CommandResult<ApiResult<CreateItemCategoryApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateItemCategoryApiRequest>,
-                ApiResult<CreateItemCategoryApiResponse>,
-                CreateItemCategoryApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateItemCategoryApiRequest>,
-                ApiResult<CreateItemCategoryApiResponse>,
-                CreateItemCategoryApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateItemCategoryApiRequest>,
@@ -142,12 +106,9 @@ class _$CreateItemCategoryApi extends CreateItemCategoryApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

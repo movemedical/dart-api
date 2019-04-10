@@ -29,9 +29,6 @@ class _$FindPatientApi extends FindPatientApi {
           ApiResult<FindPatientApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>, FindPatientApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>, FindPatientApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$FindPatientApi extends FindPatientApi {
           FindPatientApi,
           CommandResult<ApiResult<FindPatientApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>, FindPatientApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FindPatientApiRequest>,
-          ApiResult<FindPatientApiResponse>, FindPatientApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<FindPatientApiRequest>,
           ApiResult<FindPatientApiResponse>,
@@ -63,12 +54,6 @@ class _$FindPatientApi extends FindPatientApi {
                 CommandState<ApiCommand<FindPatientApiRequest>,
                     ApiResult<FindPatientApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<FindPatientApiRequest>,
-                ApiResult<FindPatientApiResponse>,
-                FindPatientApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<FindPatientApiRequest>,
@@ -89,18 +74,6 @@ class _$FindPatientApi extends FindPatientApi {
                     FindPatientApi,
                     CommandResult<ApiResult<FindPatientApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<FindPatientApiRequest>,
-                ApiResult<FindPatientApiResponse>,
-                FindPatientApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<FindPatientApiRequest>,
-                ApiResult<FindPatientApiResponse>,
-                FindPatientApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<FindPatientApiRequest>,
@@ -129,12 +102,9 @@ class _$FindPatientApi extends FindPatientApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

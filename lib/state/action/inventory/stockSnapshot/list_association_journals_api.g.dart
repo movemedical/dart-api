@@ -32,12 +32,6 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
           ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>,
           ListAssociationJournalsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>,
-          ListAssociationJournalsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
           ApiCommand<ListAssociationJournalsApiRequest>,
           ApiResult<ListAssociationJournalsApiResponse>,
           ListAssociationJournalsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>,
-          ListAssociationJournalsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAssociationJournalsApiRequest>,
-          ApiResult<ListAssociationJournalsApiResponse>,
-          ListAssociationJournalsApi,
           CommandProgress>> $progress;
 
   _$ListAssociationJournalsApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
                 CommandState<ApiCommand<ListAssociationJournalsApiRequest>,
                     ApiResult<ListAssociationJournalsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListAssociationJournalsApiRequest>,
-                ApiResult<ListAssociationJournalsApiResponse>,
-                ListAssociationJournalsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListAssociationJournalsApiRequest>,
@@ -103,18 +79,6 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
                     CommandResult<
                         ApiResult<ListAssociationJournalsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAssociationJournalsApiRequest>,
-                ApiResult<ListAssociationJournalsApiResponse>,
-                ListAssociationJournalsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAssociationJournalsApiRequest>,
-                ApiResult<ListAssociationJournalsApiResponse>,
-                ListAssociationJournalsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListAssociationJournalsApiRequest>,
@@ -146,12 +110,9 @@ class _$ListAssociationJournalsApi extends ListAssociationJournalsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

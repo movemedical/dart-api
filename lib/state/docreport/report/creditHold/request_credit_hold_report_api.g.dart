@@ -32,12 +32,6 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
           ApiCommand<RequestCreditHoldReportApiRequest>,
           ApiResult<RequestCreditHoldReportApiResponse>,
           RequestCreditHoldReportApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestCreditHoldReportApiRequest>,
-          ApiResult<RequestCreditHoldReportApiResponse>,
-          RequestCreditHoldReportApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
           ApiCommand<RequestCreditHoldReportApiRequest>,
           ApiResult<RequestCreditHoldReportApiResponse>,
           RequestCreditHoldReportApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestCreditHoldReportApiRequest>,
-          ApiResult<RequestCreditHoldReportApiResponse>,
-          RequestCreditHoldReportApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestCreditHoldReportApiRequest>,
-          ApiResult<RequestCreditHoldReportApiResponse>,
-          RequestCreditHoldReportApi,
           CommandProgress>> $progress;
 
   _$RequestCreditHoldReportApi._(this.$options)
@@ -76,12 +58,6 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
                 CommandState<ApiCommand<RequestCreditHoldReportApiRequest>,
                     ApiResult<RequestCreditHoldReportApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCreditHoldReportApiRequest>,
-                ApiResult<RequestCreditHoldReportApiResponse>,
-                RequestCreditHoldReportApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestCreditHoldReportApiRequest>,
@@ -103,18 +79,6 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
                     CommandResult<
                         ApiResult<RequestCreditHoldReportApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCreditHoldReportApiRequest>,
-                ApiResult<RequestCreditHoldReportApiResponse>,
-                RequestCreditHoldReportApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCreditHoldReportApiRequest>,
-                ApiResult<RequestCreditHoldReportApiResponse>,
-                RequestCreditHoldReportApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestCreditHoldReportApiRequest>,
@@ -146,12 +110,9 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

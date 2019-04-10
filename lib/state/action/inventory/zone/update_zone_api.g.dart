@@ -25,9 +25,6 @@ class _$UpdateZoneApi extends UpdateZoneApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
-          UpdateZoneApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
           UpdateZoneApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$UpdateZoneApi extends UpdateZoneApi {
           UpdateZoneApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
-          UpdateZoneApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
-          UpdateZoneApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
           UpdateZoneApi, CommandProgress>> $progress;
 
   _$UpdateZoneApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateZoneApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
-                UpdateZoneApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
                 UpdateZoneApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$UpdateZoneApi extends UpdateZoneApi {
                     UpdateZoneApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
-                UpdateZoneApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<UpdateZoneApiRequest>, ApiResult<Empty>,
-                UpdateZoneApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateZoneApiRequest>,
@@ -101,12 +83,9 @@ class _$UpdateZoneApi extends UpdateZoneApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

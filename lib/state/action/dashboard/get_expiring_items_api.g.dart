@@ -32,12 +32,6 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
           ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>,
           GetExpiringItemsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
           ApiCommand<GetExpiringItemsApiRequest>,
           ApiResult<GetExpiringItemsApiResponse>,
           GetExpiringItemsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetExpiringItemsApiRequest>,
-          ApiResult<GetExpiringItemsApiResponse>,
-          GetExpiringItemsApi,
           CommandProgress>> $progress;
 
   _$GetExpiringItemsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
                 CommandState<ApiCommand<GetExpiringItemsApiRequest>,
                     ApiResult<GetExpiringItemsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetExpiringItemsApiRequest>,
-                ApiResult<GetExpiringItemsApiResponse>,
-                GetExpiringItemsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetExpiringItemsApiRequest>,
@@ -101,18 +77,6 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
                     GetExpiringItemsApi,
                     CommandResult<ApiResult<GetExpiringItemsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetExpiringItemsApiRequest>,
-                ApiResult<GetExpiringItemsApiResponse>,
-                GetExpiringItemsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetExpiringItemsApiRequest>,
-                ApiResult<GetExpiringItemsApiResponse>,
-                GetExpiringItemsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetExpiringItemsApiRequest>,
@@ -142,12 +106,9 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

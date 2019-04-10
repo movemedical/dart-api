@@ -32,12 +32,6 @@ class _$CreateCaseTypeApi extends CreateCaseTypeApi {
           ApiCommand<CreateCaseTypeApiRequest>,
           ApiResult<CreateCaseTypeApiResponse>,
           CreateCaseTypeApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCaseTypeApiRequest>,
-          ApiResult<CreateCaseTypeApiResponse>,
-          CreateCaseTypeApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateCaseTypeApi extends CreateCaseTypeApi {
           ApiCommand<CreateCaseTypeApiRequest>,
           ApiResult<CreateCaseTypeApiResponse>,
           CreateCaseTypeApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCaseTypeApiRequest>,
-          ApiResult<CreateCaseTypeApiResponse>,
-          CreateCaseTypeApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCaseTypeApiRequest>,
-          ApiResult<CreateCaseTypeApiResponse>,
-          CreateCaseTypeApi,
           CommandProgress>> $progress;
 
   _$CreateCaseTypeApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateCaseTypeApi extends CreateCaseTypeApi {
                 CommandState<ApiCommand<CreateCaseTypeApiRequest>,
                     ApiResult<CreateCaseTypeApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCaseTypeApiRequest>,
-                ApiResult<CreateCaseTypeApiResponse>,
-                CreateCaseTypeApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateCaseTypeApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateCaseTypeApi extends CreateCaseTypeApi {
                     CreateCaseTypeApi,
                     CommandResult<ApiResult<CreateCaseTypeApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCaseTypeApiRequest>,
-                ApiResult<CreateCaseTypeApiResponse>,
-                CreateCaseTypeApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCaseTypeApiRequest>,
-                ApiResult<CreateCaseTypeApiResponse>,
-                CreateCaseTypeApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateCaseTypeApiRequest>,
@@ -141,12 +105,9 @@ class _$CreateCaseTypeApi extends CreateCaseTypeApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

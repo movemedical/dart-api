@@ -32,12 +32,6 @@ class _$PreparePackageFileUploadApi extends PreparePackageFileUploadApi {
           ApiCommand<PreparePackageFileUploadApiRequest>,
           ApiResult<PreparePackageFileUploadApiResponse>,
           PreparePackageFileUploadApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PreparePackageFileUploadApiRequest>,
-          ApiResult<PreparePackageFileUploadApiResponse>,
-          PreparePackageFileUploadApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$PreparePackageFileUploadApi extends PreparePackageFileUploadApi {
           ApiCommand<PreparePackageFileUploadApiRequest>,
           ApiResult<PreparePackageFileUploadApiResponse>,
           PreparePackageFileUploadApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PreparePackageFileUploadApiRequest>,
-          ApiResult<PreparePackageFileUploadApiResponse>,
-          PreparePackageFileUploadApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PreparePackageFileUploadApiRequest>,
-          ApiResult<PreparePackageFileUploadApiResponse>,
-          PreparePackageFileUploadApi,
           CommandProgress>> $progress;
 
   _$PreparePackageFileUploadApi._(this.$options)
@@ -76,12 +58,6 @@ class _$PreparePackageFileUploadApi extends PreparePackageFileUploadApi {
                 CommandState<ApiCommand<PreparePackageFileUploadApiRequest>,
                     ApiResult<PreparePackageFileUploadApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<PreparePackageFileUploadApiRequest>,
-                ApiResult<PreparePackageFileUploadApiResponse>,
-                PreparePackageFileUploadApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<PreparePackageFileUploadApiRequest>,
@@ -103,18 +79,6 @@ class _$PreparePackageFileUploadApi extends PreparePackageFileUploadApi {
                     CommandResult<
                         ApiResult<PreparePackageFileUploadApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<PreparePackageFileUploadApiRequest>,
-                ApiResult<PreparePackageFileUploadApiResponse>,
-                PreparePackageFileUploadApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<PreparePackageFileUploadApiRequest>,
-                ApiResult<PreparePackageFileUploadApiResponse>,
-                PreparePackageFileUploadApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<PreparePackageFileUploadApiRequest>,
@@ -146,12 +110,9 @@ class _$PreparePackageFileUploadApi extends PreparePackageFileUploadApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

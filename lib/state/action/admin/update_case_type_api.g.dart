@@ -26,9 +26,6 @@ class _$UpdateCaseTypeApi extends UpdateCaseTypeApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseTypeApiRequest>, ApiResult<Empty>,
-          UpdateCaseTypeApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseTypeApiRequest>, ApiResult<Empty>,
           UpdateCaseTypeApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -41,24 +38,12 @@ class _$UpdateCaseTypeApi extends UpdateCaseTypeApi {
           UpdateCaseTypeApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseTypeApiRequest>, ApiResult<Empty>,
-          UpdateCaseTypeApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseTypeApiRequest>, ApiResult<Empty>,
-          UpdateCaseTypeApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseTypeApiRequest>, ApiResult<Empty>,
           UpdateCaseTypeApi, CommandProgress>> $progress;
 
   _$UpdateCaseTypeApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseTypeApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseTypeApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseTypeApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseTypeApiRequest>,
@@ -79,18 +64,6 @@ class _$UpdateCaseTypeApi extends UpdateCaseTypeApi {
                     UpdateCaseTypeApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseTypeApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseTypeApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseTypeApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseTypeApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseTypeApiRequest>,
@@ -117,12 +90,9 @@ class _$UpdateCaseTypeApi extends UpdateCaseTypeApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -28,9 +28,6 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>, SaveItemCategoryLinksApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveItemCategoryLinksApiRequest>,
           ApiResult<Empty>, SaveItemCategoryLinksApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
           SaveItemCategoryLinksApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>, SaveItemCategoryLinksApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>, SaveItemCategoryLinksApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveItemCategoryLinksApiRequest>,
           ApiResult<Empty>,
@@ -61,12 +52,6 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
       : $replace = $options.action<
             CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Empty>,
-                SaveItemCategoryLinksApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveItemCategoryLinksApiRequest>,
@@ -87,18 +72,6 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
                     SaveItemCategoryLinksApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Empty>,
-                SaveItemCategoryLinksApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Empty>,
-                SaveItemCategoryLinksApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveItemCategoryLinksApiRequest>,
@@ -126,12 +99,9 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

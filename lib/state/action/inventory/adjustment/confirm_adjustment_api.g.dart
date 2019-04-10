@@ -27,9 +27,6 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
-          ConfirmAdjustmentApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
           ConfirmAdjustmentApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
-          ConfirmAdjustmentApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
-          ConfirmAdjustmentApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmAdjustmentApiRequest>, ApiResult<Empty>,
           ConfirmAdjustmentApi, CommandProgress>> $progress;
 
   _$ConfirmAdjustmentApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmAdjustmentApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Empty>,
-                ConfirmAdjustmentApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
@@ -80,18 +65,6 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
                     ConfirmAdjustmentApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Empty>,
-                ConfirmAdjustmentApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmAdjustmentApiRequest>,
-                ApiResult<Empty>,
-                ConfirmAdjustmentApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmAdjustmentApiRequest>,
@@ -118,12 +91,9 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

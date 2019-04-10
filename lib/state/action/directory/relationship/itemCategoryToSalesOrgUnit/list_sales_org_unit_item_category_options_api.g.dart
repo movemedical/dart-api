@@ -35,12 +35,6 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
           ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
           ListSalesOrgUnitItemCategoryOptionsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-          ListSalesOrgUnitItemCategoryOptionsApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -63,18 +57,6 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
           ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
           ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
           ListSalesOrgUnitItemCategoryOptionsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-          ListSalesOrgUnitItemCategoryOptionsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-          ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-          ListSalesOrgUnitItemCategoryOptionsApi,
           CommandProgress>> $progress;
 
   _$ListSalesOrgUnitItemCategoryOptionsApi._(this.$options)
@@ -83,12 +65,6 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
                     ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
                     ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                ListSalesOrgUnitItemCategoryOptionsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
@@ -113,18 +89,6 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
                         ApiResult<
                             ListSalesOrgUnitItemCategoryOptionsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                ListSalesOrgUnitItemCategoryOptionsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
-                ApiResult<ListSalesOrgUnitItemCategoryOptionsApiResponse>,
-                ListSalesOrgUnitItemCategoryOptionsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListSalesOrgUnitItemCategoryOptionsApiRequest>,
@@ -156,12 +120,9 @@ class _$ListSalesOrgUnitItemCategoryOptionsApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

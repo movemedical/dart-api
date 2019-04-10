@@ -32,12 +32,6 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
           ApiCommand<CreateShippingServiceApiRequest>,
           ApiResult<CreateShippingServiceApiResponse>,
           CreateShippingServiceApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateShippingServiceApiRequest>,
-          ApiResult<CreateShippingServiceApiResponse>,
-          CreateShippingServiceApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
           ApiCommand<CreateShippingServiceApiRequest>,
           ApiResult<CreateShippingServiceApiResponse>,
           CreateShippingServiceApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateShippingServiceApiRequest>,
-          ApiResult<CreateShippingServiceApiResponse>,
-          CreateShippingServiceApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateShippingServiceApiRequest>,
-          ApiResult<CreateShippingServiceApiResponse>,
-          CreateShippingServiceApi,
           CommandProgress>> $progress;
 
   _$CreateShippingServiceApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
                 CommandState<ApiCommand<CreateShippingServiceApiRequest>,
                     ApiResult<CreateShippingServiceApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateShippingServiceApiRequest>,
-                ApiResult<CreateShippingServiceApiResponse>,
-                CreateShippingServiceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateShippingServiceApiRequest>,
@@ -102,18 +78,6 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
                     CommandResult<
                         ApiResult<CreateShippingServiceApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateShippingServiceApiRequest>,
-                ApiResult<CreateShippingServiceApiResponse>,
-                CreateShippingServiceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateShippingServiceApiRequest>,
-                ApiResult<CreateShippingServiceApiResponse>,
-                CreateShippingServiceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateShippingServiceApiRequest>,
@@ -143,12 +107,9 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

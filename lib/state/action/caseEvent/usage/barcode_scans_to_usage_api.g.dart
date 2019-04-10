@@ -32,12 +32,6 @@ class _$BarcodeScansToUsageApi extends BarcodeScansToUsageApi {
           ApiCommand<BarcodeScansToUsageApiRequest>,
           ApiResult<BarcodeScansToUsageApiResponse>,
           BarcodeScansToUsageApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToUsageApiRequest>,
-          ApiResult<BarcodeScansToUsageApiResponse>,
-          BarcodeScansToUsageApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$BarcodeScansToUsageApi extends BarcodeScansToUsageApi {
           ApiCommand<BarcodeScansToUsageApiRequest>,
           ApiResult<BarcodeScansToUsageApiResponse>,
           BarcodeScansToUsageApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToUsageApiRequest>,
-          ApiResult<BarcodeScansToUsageApiResponse>,
-          BarcodeScansToUsageApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BarcodeScansToUsageApiRequest>,
-          ApiResult<BarcodeScansToUsageApiResponse>,
-          BarcodeScansToUsageApi,
           CommandProgress>> $progress;
 
   _$BarcodeScansToUsageApi._(this.$options)
@@ -75,12 +57,6 @@ class _$BarcodeScansToUsageApi extends BarcodeScansToUsageApi {
                 CommandState<ApiCommand<BarcodeScansToUsageApiRequest>,
                     ApiResult<BarcodeScansToUsageApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<BarcodeScansToUsageApiRequest>,
-                ApiResult<BarcodeScansToUsageApiResponse>,
-                BarcodeScansToUsageApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<BarcodeScansToUsageApiRequest>,
@@ -101,18 +77,6 @@ class _$BarcodeScansToUsageApi extends BarcodeScansToUsageApi {
                     BarcodeScansToUsageApi,
                     CommandResult<ApiResult<BarcodeScansToUsageApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<BarcodeScansToUsageApiRequest>,
-                ApiResult<BarcodeScansToUsageApiResponse>,
-                BarcodeScansToUsageApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<BarcodeScansToUsageApiRequest>,
-                ApiResult<BarcodeScansToUsageApiResponse>,
-                BarcodeScansToUsageApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<BarcodeScansToUsageApiRequest>,
@@ -142,12 +106,9 @@ class _$BarcodeScansToUsageApi extends BarcodeScansToUsageApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

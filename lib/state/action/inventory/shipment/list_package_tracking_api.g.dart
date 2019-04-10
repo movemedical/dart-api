@@ -32,12 +32,6 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
           ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>,
           ListPackageTrackingApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
           ApiCommand<ListPackageTrackingApiRequest>,
           ApiResult<ListPackageTrackingApiResponse>,
           ListPackageTrackingApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPackageTrackingApiRequest>,
-          ApiResult<ListPackageTrackingApiResponse>,
-          ListPackageTrackingApi,
           CommandProgress>> $progress;
 
   _$ListPackageTrackingApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
                 CommandState<ApiCommand<ListPackageTrackingApiRequest>,
                     ApiResult<ListPackageTrackingApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackageTrackingApiRequest>,
-                ApiResult<ListPackageTrackingApiResponse>,
-                ListPackageTrackingApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListPackageTrackingApiRequest>,
@@ -101,18 +77,6 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
                     ListPackageTrackingApi,
                     CommandResult<ApiResult<ListPackageTrackingApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackageTrackingApiRequest>,
-                ApiResult<ListPackageTrackingApiResponse>,
-                ListPackageTrackingApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListPackageTrackingApiRequest>,
-                ApiResult<ListPackageTrackingApiResponse>,
-                ListPackageTrackingApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListPackageTrackingApiRequest>,
@@ -142,12 +106,9 @@ class _$ListPackageTrackingApi extends ListPackageTrackingApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

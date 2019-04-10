@@ -27,9 +27,6 @@ class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
-          UpdateItemCategoryApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
           UpdateItemCategoryApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
-          UpdateItemCategoryApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
-          UpdateItemCategoryApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateItemCategoryApiRequest>, ApiResult<Empty>,
           UpdateItemCategoryApi, CommandProgress>> $progress;
 
   _$UpdateItemCategoryApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateItemCategoryApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Empty>,
-                UpdateItemCategoryApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
@@ -80,18 +65,6 @@ class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
                     UpdateItemCategoryApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Empty>,
-                UpdateItemCategoryApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateItemCategoryApiRequest>,
-                ApiResult<Empty>,
-                UpdateItemCategoryApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateItemCategoryApiRequest>,
@@ -119,12 +92,9 @@ class _$UpdateItemCategoryApi extends UpdateItemCategoryApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

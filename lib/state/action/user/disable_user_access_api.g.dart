@@ -27,9 +27,6 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
-          DisableUserAccessApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
           DisableUserAccessApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
           DisableUserAccessApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
-          DisableUserAccessApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
-          DisableUserAccessApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
           DisableUserAccessApi, CommandProgress>> $progress;
 
   _$DisableUserAccessApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DisableUserAccessApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<DisableUserAccessApiRequest>,
-                ApiResult<Empty>,
-                DisableUserAccessApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DisableUserAccessApiRequest>,
@@ -80,18 +65,6 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
                     DisableUserAccessApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<DisableUserAccessApiRequest>,
-                ApiResult<Empty>,
-                DisableUserAccessApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<DisableUserAccessApiRequest>,
-                ApiResult<Empty>,
-                DisableUserAccessApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DisableUserAccessApiRequest>,
@@ -118,12 +91,9 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

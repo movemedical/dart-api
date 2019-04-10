@@ -32,12 +32,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
           ApiCommand<GetPendingPoCountApiRequest>,
           ApiResult<GetPendingPoCountApiResponse>,
           GetPendingPoCountApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPendingPoCountApiRequest>,
-          ApiResult<GetPendingPoCountApiResponse>,
-          GetPendingPoCountApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
           ApiCommand<GetPendingPoCountApiRequest>,
           ApiResult<GetPendingPoCountApiResponse>,
           GetPendingPoCountApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPendingPoCountApiRequest>,
-          ApiResult<GetPendingPoCountApiResponse>,
-          GetPendingPoCountApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPendingPoCountApiRequest>,
-          ApiResult<GetPendingPoCountApiResponse>,
-          GetPendingPoCountApi,
           CommandProgress>> $progress;
 
   _$GetPendingPoCountApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
                 CommandState<ApiCommand<GetPendingPoCountApiRequest>,
                     ApiResult<GetPendingPoCountApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetPendingPoCountApiRequest>,
-                ApiResult<GetPendingPoCountApiResponse>,
-                GetPendingPoCountApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetPendingPoCountApiRequest>,
@@ -101,18 +77,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
                     GetPendingPoCountApi,
                     CommandResult<ApiResult<GetPendingPoCountApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetPendingPoCountApiRequest>,
-                ApiResult<GetPendingPoCountApiResponse>,
-                GetPendingPoCountApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetPendingPoCountApiRequest>,
-                ApiResult<GetPendingPoCountApiResponse>,
-                GetPendingPoCountApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetPendingPoCountApiRequest>,
@@ -142,12 +106,9 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

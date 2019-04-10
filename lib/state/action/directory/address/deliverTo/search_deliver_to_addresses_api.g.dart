@@ -32,12 +32,6 @@ class _$SearchDeliverToAddressesApi extends SearchDeliverToAddressesApi {
           ApiCommand<SearchDeliverToAddressesApiRequest>,
           ApiResult<SearchDeliverToAddressesApiResponse>,
           SearchDeliverToAddressesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchDeliverToAddressesApiRequest>,
-          ApiResult<SearchDeliverToAddressesApiResponse>,
-          SearchDeliverToAddressesApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$SearchDeliverToAddressesApi extends SearchDeliverToAddressesApi {
           ApiCommand<SearchDeliverToAddressesApiRequest>,
           ApiResult<SearchDeliverToAddressesApiResponse>,
           SearchDeliverToAddressesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchDeliverToAddressesApiRequest>,
-          ApiResult<SearchDeliverToAddressesApiResponse>,
-          SearchDeliverToAddressesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchDeliverToAddressesApiRequest>,
-          ApiResult<SearchDeliverToAddressesApiResponse>,
-          SearchDeliverToAddressesApi,
           CommandProgress>> $progress;
 
   _$SearchDeliverToAddressesApi._(this.$options)
@@ -76,12 +58,6 @@ class _$SearchDeliverToAddressesApi extends SearchDeliverToAddressesApi {
                 CommandState<ApiCommand<SearchDeliverToAddressesApiRequest>,
                     ApiResult<SearchDeliverToAddressesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<SearchDeliverToAddressesApiRequest>,
-                ApiResult<SearchDeliverToAddressesApiResponse>,
-                SearchDeliverToAddressesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SearchDeliverToAddressesApiRequest>,
@@ -103,18 +79,6 @@ class _$SearchDeliverToAddressesApi extends SearchDeliverToAddressesApi {
                     CommandResult<
                         ApiResult<SearchDeliverToAddressesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<SearchDeliverToAddressesApiRequest>,
-                ApiResult<SearchDeliverToAddressesApiResponse>,
-                SearchDeliverToAddressesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<SearchDeliverToAddressesApiRequest>,
-                ApiResult<SearchDeliverToAddressesApiResponse>,
-                SearchDeliverToAddressesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SearchDeliverToAddressesApiRequest>,
@@ -146,12 +110,9 @@ class _$SearchDeliverToAddressesApi extends SearchDeliverToAddressesApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

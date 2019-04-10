@@ -27,9 +27,6 @@ class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
-          UpdateSubProcedureApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
           UpdateSubProcedureApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
-          UpdateSubProcedureApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
-          UpdateSubProcedureApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateSubProcedureApiRequest>, ApiResult<Empty>,
           UpdateSubProcedureApi, CommandProgress>> $progress;
 
   _$UpdateSubProcedureApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateSubProcedureApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Empty>,
-                UpdateSubProcedureApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
@@ -80,18 +65,6 @@ class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
                     UpdateSubProcedureApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Empty>,
-                UpdateSubProcedureApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateSubProcedureApiRequest>,
-                ApiResult<Empty>,
-                UpdateSubProcedureApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSubProcedureApiRequest>,
@@ -119,12 +92,9 @@ class _$UpdateSubProcedureApi extends UpdateSubProcedureApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

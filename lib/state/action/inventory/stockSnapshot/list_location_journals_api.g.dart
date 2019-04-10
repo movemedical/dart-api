@@ -32,12 +32,6 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
           ApiCommand<ListLocationJournalsApiRequest>,
           ApiResult<ListLocationJournalsApiResponse>,
           ListLocationJournalsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListLocationJournalsApiRequest>,
-          ApiResult<ListLocationJournalsApiResponse>,
-          ListLocationJournalsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
           ApiCommand<ListLocationJournalsApiRequest>,
           ApiResult<ListLocationJournalsApiResponse>,
           ListLocationJournalsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListLocationJournalsApiRequest>,
-          ApiResult<ListLocationJournalsApiResponse>,
-          ListLocationJournalsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListLocationJournalsApiRequest>,
-          ApiResult<ListLocationJournalsApiResponse>,
-          ListLocationJournalsApi,
           CommandProgress>> $progress;
 
   _$ListLocationJournalsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
                 CommandState<ApiCommand<ListLocationJournalsApiRequest>,
                     ApiResult<ListLocationJournalsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListLocationJournalsApiRequest>,
-                ApiResult<ListLocationJournalsApiResponse>,
-                ListLocationJournalsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListLocationJournalsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
                     ListLocationJournalsApi,
                     CommandResult<ApiResult<ListLocationJournalsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListLocationJournalsApiRequest>,
-                ApiResult<ListLocationJournalsApiResponse>,
-                ListLocationJournalsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListLocationJournalsApiRequest>,
-                ApiResult<ListLocationJournalsApiResponse>,
-                ListLocationJournalsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListLocationJournalsApiRequest>,
@@ -142,12 +106,9 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -30,9 +30,6 @@ class _$CreateProcedureToItemCategoryApi
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
           ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -48,12 +45,6 @@ class _$CreateProcedureToItemCategoryApi
           CreateProcedureToItemCategoryApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-          ApiResult<Empty>, CreateProcedureToItemCategoryApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateProcedureToItemCategoryApiRequest>,
           ApiResult<Empty>,
@@ -64,12 +55,6 @@ class _$CreateProcedureToItemCategoryApi
       : $replace = $options.action<
             CommandState<ApiCommand<CreateProcedureToItemCategoryApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Empty>,
-                CreateProcedureToItemCategoryApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
@@ -91,18 +76,6 @@ class _$CreateProcedureToItemCategoryApi
                     CreateProcedureToItemCategoryApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Empty>,
-                CreateProcedureToItemCategoryApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateProcedureToItemCategoryApiRequest>,
-                ApiResult<Empty>,
-                CreateProcedureToItemCategoryApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateProcedureToItemCategoryApiRequest>,
@@ -134,12 +107,9 @@ class _$CreateProcedureToItemCategoryApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

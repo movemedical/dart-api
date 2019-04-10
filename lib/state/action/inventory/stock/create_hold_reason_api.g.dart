@@ -32,12 +32,6 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
           ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>,
           CreateHoldReasonApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
           ApiCommand<CreateHoldReasonApiRequest>,
           ApiResult<CreateHoldReasonApiResponse>,
           CreateHoldReasonApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateHoldReasonApiRequest>,
-          ApiResult<CreateHoldReasonApiResponse>,
-          CreateHoldReasonApi,
           CommandProgress>> $progress;
 
   _$CreateHoldReasonApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
                 CommandState<ApiCommand<CreateHoldReasonApiRequest>,
                     ApiResult<CreateHoldReasonApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateHoldReasonApiRequest>,
-                ApiResult<CreateHoldReasonApiResponse>,
-                CreateHoldReasonApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateHoldReasonApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
                     CreateHoldReasonApi,
                     CommandResult<ApiResult<CreateHoldReasonApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateHoldReasonApiRequest>,
-                ApiResult<CreateHoldReasonApiResponse>,
-                CreateHoldReasonApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateHoldReasonApiRequest>,
-                ApiResult<CreateHoldReasonApiResponse>,
-                CreateHoldReasonApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateHoldReasonApiRequest>,
@@ -142,12 +106,9 @@ class _$CreateHoldReasonApi extends CreateHoldReasonApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

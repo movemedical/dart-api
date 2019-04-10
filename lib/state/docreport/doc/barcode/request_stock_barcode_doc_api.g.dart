@@ -32,12 +32,6 @@ class _$RequestStockBarcodeDocApi extends RequestStockBarcodeDocApi {
           ApiCommand<RequestStockBarcodeDocApiRequest>,
           ApiResult<RequestStockBarcodeDocApiResponse>,
           RequestStockBarcodeDocApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockBarcodeDocApiRequest>,
-          ApiResult<RequestStockBarcodeDocApiResponse>,
-          RequestStockBarcodeDocApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$RequestStockBarcodeDocApi extends RequestStockBarcodeDocApi {
           ApiCommand<RequestStockBarcodeDocApiRequest>,
           ApiResult<RequestStockBarcodeDocApiResponse>,
           RequestStockBarcodeDocApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockBarcodeDocApiRequest>,
-          ApiResult<RequestStockBarcodeDocApiResponse>,
-          RequestStockBarcodeDocApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestStockBarcodeDocApiRequest>,
-          ApiResult<RequestStockBarcodeDocApiResponse>,
-          RequestStockBarcodeDocApi,
           CommandProgress>> $progress;
 
   _$RequestStockBarcodeDocApi._(this.$options)
@@ -75,12 +57,6 @@ class _$RequestStockBarcodeDocApi extends RequestStockBarcodeDocApi {
                 CommandState<ApiCommand<RequestStockBarcodeDocApiRequest>,
                     ApiResult<RequestStockBarcodeDocApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockBarcodeDocApiRequest>,
-                ApiResult<RequestStockBarcodeDocApiResponse>,
-                RequestStockBarcodeDocApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockBarcodeDocApiRequest>,
@@ -102,18 +78,6 @@ class _$RequestStockBarcodeDocApi extends RequestStockBarcodeDocApi {
                     CommandResult<
                         ApiResult<RequestStockBarcodeDocApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockBarcodeDocApiRequest>,
-                ApiResult<RequestStockBarcodeDocApiResponse>,
-                RequestStockBarcodeDocApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestStockBarcodeDocApiRequest>,
-                ApiResult<RequestStockBarcodeDocApiResponse>,
-                RequestStockBarcodeDocApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestStockBarcodeDocApiRequest>,
@@ -144,12 +108,9 @@ class _$RequestStockBarcodeDocApi extends RequestStockBarcodeDocApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

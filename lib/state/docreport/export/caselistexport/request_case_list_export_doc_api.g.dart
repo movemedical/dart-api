@@ -29,9 +29,6 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
           ApiResult<Empty>, RequestCaseListExportDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
           RequestCaseListExportDocApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestCaseListExportDocApiRequest>,
-          ApiResult<Empty>, RequestCaseListExportDocApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestCaseListExportDocApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
       : $replace = $options.action<
             CommandState<ApiCommand<RequestCaseListExportDocApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Empty>,
-                RequestCaseListExportDocApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
@@ -88,18 +73,6 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
                     RequestCaseListExportDocApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Empty>,
-                RequestCaseListExportDocApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestCaseListExportDocApiRequest>,
-                ApiResult<Empty>,
-                RequestCaseListExportDocApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestCaseListExportDocApiRequest>,
@@ -128,12 +101,9 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

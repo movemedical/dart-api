@@ -32,12 +32,6 @@ class _$ListContactsFromApi extends ListContactsFromApi {
           ApiCommand<ListContactsFromApiRequest>,
           ApiResult<ListContactsFromApiResponse>,
           ListContactsFromApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListContactsFromApiRequest>,
-          ApiResult<ListContactsFromApiResponse>,
-          ListContactsFromApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListContactsFromApi extends ListContactsFromApi {
           ApiCommand<ListContactsFromApiRequest>,
           ApiResult<ListContactsFromApiResponse>,
           ListContactsFromApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListContactsFromApiRequest>,
-          ApiResult<ListContactsFromApiResponse>,
-          ListContactsFromApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListContactsFromApiRequest>,
-          ApiResult<ListContactsFromApiResponse>,
-          ListContactsFromApi,
           CommandProgress>> $progress;
 
   _$ListContactsFromApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListContactsFromApi extends ListContactsFromApi {
                 CommandState<ApiCommand<ListContactsFromApiRequest>,
                     ApiResult<ListContactsFromApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListContactsFromApiRequest>,
-                ApiResult<ListContactsFromApiResponse>,
-                ListContactsFromApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListContactsFromApiRequest>,
@@ -101,18 +77,6 @@ class _$ListContactsFromApi extends ListContactsFromApi {
                     ListContactsFromApi,
                     CommandResult<ApiResult<ListContactsFromApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListContactsFromApiRequest>,
-                ApiResult<ListContactsFromApiResponse>,
-                ListContactsFromApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListContactsFromApiRequest>,
-                ApiResult<ListContactsFromApiResponse>,
-                ListContactsFromApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListContactsFromApiRequest>,
@@ -142,12 +106,9 @@ class _$ListContactsFromApi extends ListContactsFromApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

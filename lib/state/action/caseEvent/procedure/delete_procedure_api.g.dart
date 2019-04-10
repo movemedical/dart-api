@@ -27,9 +27,6 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
-          DeleteProcedureApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
           DeleteProcedureApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
           DeleteProcedureApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
-          DeleteProcedureApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
-          DeleteProcedureApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
           DeleteProcedureApi, CommandProgress>> $progress;
 
   _$DeleteProcedureApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteProcedureApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteProcedureApiRequest>,
-                ApiResult<Empty>,
-                DeleteProcedureApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteProcedureApiRequest>,
@@ -80,18 +65,6 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
                     DeleteProcedureApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteProcedureApiRequest>,
-                ApiResult<Empty>,
-                DeleteProcedureApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteProcedureApiRequest>,
-                ApiResult<Empty>,
-                DeleteProcedureApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteProcedureApiRequest>,
@@ -118,12 +91,9 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

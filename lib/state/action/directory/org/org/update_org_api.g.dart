@@ -24,9 +24,6 @@ class _$UpdateOrgApi extends UpdateOrgApi {
       CommandState<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
-          UpdateOrgApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
           UpdateOrgApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
@@ -36,21 +33,12 @@ class _$UpdateOrgApi extends UpdateOrgApi {
           UpdateOrgApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
-          UpdateOrgApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
-          UpdateOrgApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
           UpdateOrgApi, CommandProgress>> $progress;
 
   _$UpdateOrgApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateOrgApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
-                UpdateOrgApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
                 UpdateOrgApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -68,12 +56,6 @@ class _$UpdateOrgApi extends UpdateOrgApi {
                     UpdateOrgApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
-                UpdateOrgApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<UpdateOrgApiRequest>, ApiResult<Empty>,
-                UpdateOrgApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrgApiRequest>,
@@ -100,12 +82,9 @@ class _$UpdateOrgApi extends UpdateOrgApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -25,9 +25,6 @@ class _$DeliverPkgApi extends DeliverPkgApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
-          DeliverPkgApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$DeliverPkgApi extends DeliverPkgApi {
           DeliverPkgApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
-          DeliverPkgApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
-          DeliverPkgApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
           DeliverPkgApi, CommandProgress>> $progress;
 
   _$DeliverPkgApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeliverPkgApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
-                DeliverPkgApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
                 DeliverPkgApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$DeliverPkgApi extends DeliverPkgApi {
                     DeliverPkgApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
-                DeliverPkgApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<DeliverPkgApiRequest>, ApiResult<Empty>,
-                DeliverPkgApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeliverPkgApiRequest>,
@@ -101,12 +83,9 @@ class _$DeliverPkgApi extends DeliverPkgApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

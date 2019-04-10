@@ -32,12 +32,6 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
           ApiCommand<ListCustomerQualifiersApiRequest>,
           ApiResult<ListCustomerQualifiersApiResponse>,
           ListCustomerQualifiersApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListCustomerQualifiersApiRequest>,
-          ApiResult<ListCustomerQualifiersApiResponse>,
-          ListCustomerQualifiersApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
           ApiCommand<ListCustomerQualifiersApiRequest>,
           ApiResult<ListCustomerQualifiersApiResponse>,
           ListCustomerQualifiersApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListCustomerQualifiersApiRequest>,
-          ApiResult<ListCustomerQualifiersApiResponse>,
-          ListCustomerQualifiersApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListCustomerQualifiersApiRequest>,
-          ApiResult<ListCustomerQualifiersApiResponse>,
-          ListCustomerQualifiersApi,
           CommandProgress>> $progress;
 
   _$ListCustomerQualifiersApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
                 CommandState<ApiCommand<ListCustomerQualifiersApiRequest>,
                     ApiResult<ListCustomerQualifiersApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListCustomerQualifiersApiRequest>,
-                ApiResult<ListCustomerQualifiersApiResponse>,
-                ListCustomerQualifiersApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListCustomerQualifiersApiRequest>,
@@ -102,18 +78,6 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
                     CommandResult<
                         ApiResult<ListCustomerQualifiersApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListCustomerQualifiersApiRequest>,
-                ApiResult<ListCustomerQualifiersApiResponse>,
-                ListCustomerQualifiersApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListCustomerQualifiersApiRequest>,
-                ApiResult<ListCustomerQualifiersApiResponse>,
-                ListCustomerQualifiersApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListCustomerQualifiersApiRequest>,
@@ -144,12 +108,9 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

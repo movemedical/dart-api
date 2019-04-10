@@ -27,9 +27,6 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
-          AddUserNavHistoryApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
           AddUserNavHistoryApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
-          AddUserNavHistoryApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
-          AddUserNavHistoryApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddUserNavHistoryApiRequest>, ApiResult<Empty>,
           AddUserNavHistoryApi, CommandProgress>> $progress;
 
   _$AddUserNavHistoryApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddUserNavHistoryApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Empty>,
-                AddUserNavHistoryApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
@@ -80,18 +65,6 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
                     AddUserNavHistoryApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Empty>,
-                AddUserNavHistoryApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AddUserNavHistoryApiRequest>,
-                ApiResult<Empty>,
-                AddUserNavHistoryApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddUserNavHistoryApiRequest>,
@@ -118,12 +91,9 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

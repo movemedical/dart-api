@@ -32,12 +32,6 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
           ApiCommand<ListHCRForFacilityApiRequest>,
           ApiResult<ListHCRForFacilityApiResponse>,
           ListHCRForFacilityApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHCRForFacilityApiRequest>,
-          ApiResult<ListHCRForFacilityApiResponse>,
-          ListHCRForFacilityApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
           ApiCommand<ListHCRForFacilityApiRequest>,
           ApiResult<ListHCRForFacilityApiResponse>,
           ListHCRForFacilityApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHCRForFacilityApiRequest>,
-          ApiResult<ListHCRForFacilityApiResponse>,
-          ListHCRForFacilityApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHCRForFacilityApiRequest>,
-          ApiResult<ListHCRForFacilityApiResponse>,
-          ListHCRForFacilityApi,
           CommandProgress>> $progress;
 
   _$ListHCRForFacilityApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
                 CommandState<ApiCommand<ListHCRForFacilityApiRequest>,
                     ApiResult<ListHCRForFacilityApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListHCRForFacilityApiRequest>,
-                ApiResult<ListHCRForFacilityApiResponse>,
-                ListHCRForFacilityApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListHCRForFacilityApiRequest>,
@@ -101,18 +77,6 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
                     ListHCRForFacilityApi,
                     CommandResult<ApiResult<ListHCRForFacilityApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHCRForFacilityApiRequest>,
-                ApiResult<ListHCRForFacilityApiResponse>,
-                ListHCRForFacilityApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHCRForFacilityApiRequest>,
-                ApiResult<ListHCRForFacilityApiResponse>,
-                ListHCRForFacilityApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListHCRForFacilityApiRequest>,
@@ -142,12 +106,9 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

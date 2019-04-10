@@ -29,9 +29,6 @@ class _$GetCustomerApi extends GetCustomerApi {
           ApiResult<GetCustomerApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>, GetCustomerApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>, GetCustomerApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$GetCustomerApi extends GetCustomerApi {
           GetCustomerApi,
           CommandResult<ApiResult<GetCustomerApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>, GetCustomerApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetCustomerApiRequest>,
-          ApiResult<GetCustomerApiResponse>, GetCustomerApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<GetCustomerApiRequest>,
           ApiResult<GetCustomerApiResponse>,
@@ -63,12 +54,6 @@ class _$GetCustomerApi extends GetCustomerApi {
                 CommandState<ApiCommand<GetCustomerApiRequest>,
                     ApiResult<GetCustomerApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetCustomerApiRequest>,
-                ApiResult<GetCustomerApiResponse>,
-                GetCustomerApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetCustomerApiRequest>,
@@ -89,18 +74,6 @@ class _$GetCustomerApi extends GetCustomerApi {
                     GetCustomerApi,
                     CommandResult<ApiResult<GetCustomerApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetCustomerApiRequest>,
-                ApiResult<GetCustomerApiResponse>,
-                GetCustomerApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetCustomerApiRequest>,
-                ApiResult<GetCustomerApiResponse>,
-                GetCustomerApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetCustomerApiRequest>,
@@ -129,12 +102,9 @@ class _$GetCustomerApi extends GetCustomerApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
           ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>,
           GetIntegrationIssueApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
           ApiCommand<GetIntegrationIssueApiRequest>,
           ApiResult<GetIntegrationIssueApiResponse>,
           GetIntegrationIssueApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetIntegrationIssueApiRequest>,
-          ApiResult<GetIntegrationIssueApiResponse>,
-          GetIntegrationIssueApi,
           CommandProgress>> $progress;
 
   _$GetIntegrationIssueApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
                 CommandState<ApiCommand<GetIntegrationIssueApiRequest>,
                     ApiResult<GetIntegrationIssueApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetIntegrationIssueApiRequest>,
-                ApiResult<GetIntegrationIssueApiResponse>,
-                GetIntegrationIssueApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetIntegrationIssueApiRequest>,
@@ -101,18 +77,6 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
                     GetIntegrationIssueApi,
                     CommandResult<ApiResult<GetIntegrationIssueApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetIntegrationIssueApiRequest>,
-                ApiResult<GetIntegrationIssueApiResponse>,
-                GetIntegrationIssueApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetIntegrationIssueApiRequest>,
-                ApiResult<GetIntegrationIssueApiResponse>,
-                GetIntegrationIssueApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetIntegrationIssueApiRequest>,
@@ -142,12 +106,9 @@ class _$GetIntegrationIssueApi extends GetIntegrationIssueApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

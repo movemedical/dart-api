@@ -24,9 +24,6 @@ class _$EditAuditApi extends EditAuditApi {
       CommandState<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
-          EditAuditApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
@@ -36,21 +33,12 @@ class _$EditAuditApi extends EditAuditApi {
           EditAuditApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
-          EditAuditApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
-          EditAuditApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
           EditAuditApi, CommandProgress>> $progress;
 
   _$EditAuditApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<EditAuditApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
-                EditAuditApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
                 EditAuditApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -68,12 +56,6 @@ class _$EditAuditApi extends EditAuditApi {
                     EditAuditApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
-                EditAuditApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<EditAuditApiRequest>, ApiResult<Empty>,
-                EditAuditApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EditAuditApiRequest>,
@@ -100,12 +82,9 @@ class _$EditAuditApi extends EditAuditApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

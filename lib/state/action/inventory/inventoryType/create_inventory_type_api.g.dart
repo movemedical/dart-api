@@ -32,12 +32,6 @@ class _$CreateInventoryTypeApi extends CreateInventoryTypeApi {
           ApiCommand<CreateInventoryTypeApiRequest>,
           ApiResult<CreateInventoryTypeApiResponse>,
           CreateInventoryTypeApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateInventoryTypeApiRequest>,
-          ApiResult<CreateInventoryTypeApiResponse>,
-          CreateInventoryTypeApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateInventoryTypeApi extends CreateInventoryTypeApi {
           ApiCommand<CreateInventoryTypeApiRequest>,
           ApiResult<CreateInventoryTypeApiResponse>,
           CreateInventoryTypeApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateInventoryTypeApiRequest>,
-          ApiResult<CreateInventoryTypeApiResponse>,
-          CreateInventoryTypeApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateInventoryTypeApiRequest>,
-          ApiResult<CreateInventoryTypeApiResponse>,
-          CreateInventoryTypeApi,
           CommandProgress>> $progress;
 
   _$CreateInventoryTypeApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateInventoryTypeApi extends CreateInventoryTypeApi {
                 CommandState<ApiCommand<CreateInventoryTypeApiRequest>,
                     ApiResult<CreateInventoryTypeApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateInventoryTypeApiRequest>,
-                ApiResult<CreateInventoryTypeApiResponse>,
-                CreateInventoryTypeApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateInventoryTypeApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateInventoryTypeApi extends CreateInventoryTypeApi {
                     CreateInventoryTypeApi,
                     CommandResult<ApiResult<CreateInventoryTypeApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateInventoryTypeApiRequest>,
-                ApiResult<CreateInventoryTypeApiResponse>,
-                CreateInventoryTypeApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateInventoryTypeApiRequest>,
-                ApiResult<CreateInventoryTypeApiResponse>,
-                CreateInventoryTypeApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateInventoryTypeApiRequest>,
@@ -142,12 +106,9 @@ class _$CreateInventoryTypeApi extends CreateInventoryTypeApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

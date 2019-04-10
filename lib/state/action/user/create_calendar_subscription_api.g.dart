@@ -32,12 +32,6 @@ class _$CreateCalendarSubscriptionApi extends CreateCalendarSubscriptionApi {
           ApiCommand<CreateCalendarSubscriptionApiRequest>,
           ApiResult<CreateCalendarSubscriptionApiResponse>,
           CreateCalendarSubscriptionApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCalendarSubscriptionApiRequest>,
-          ApiResult<CreateCalendarSubscriptionApiResponse>,
-          CreateCalendarSubscriptionApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$CreateCalendarSubscriptionApi extends CreateCalendarSubscriptionApi {
           ApiCommand<CreateCalendarSubscriptionApiRequest>,
           ApiResult<CreateCalendarSubscriptionApiResponse>,
           CreateCalendarSubscriptionApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCalendarSubscriptionApiRequest>,
-          ApiResult<CreateCalendarSubscriptionApiResponse>,
-          CreateCalendarSubscriptionApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCalendarSubscriptionApiRequest>,
-          ApiResult<CreateCalendarSubscriptionApiResponse>,
-          CreateCalendarSubscriptionApi,
           CommandProgress>> $progress;
 
   _$CreateCalendarSubscriptionApi._(this.$options)
@@ -76,12 +58,6 @@ class _$CreateCalendarSubscriptionApi extends CreateCalendarSubscriptionApi {
                 CommandState<ApiCommand<CreateCalendarSubscriptionApiRequest>,
                     ApiResult<CreateCalendarSubscriptionApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCalendarSubscriptionApiRequest>,
-                ApiResult<CreateCalendarSubscriptionApiResponse>,
-                CreateCalendarSubscriptionApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateCalendarSubscriptionApiRequest>,
@@ -103,18 +79,6 @@ class _$CreateCalendarSubscriptionApi extends CreateCalendarSubscriptionApi {
                     CommandResult<
                         ApiResult<CreateCalendarSubscriptionApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCalendarSubscriptionApiRequest>,
-                ApiResult<CreateCalendarSubscriptionApiResponse>,
-                CreateCalendarSubscriptionApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCalendarSubscriptionApiRequest>,
-                ApiResult<CreateCalendarSubscriptionApiResponse>,
-                CreateCalendarSubscriptionApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateCalendarSubscriptionApiRequest>,
@@ -146,12 +110,9 @@ class _$CreateCalendarSubscriptionApi extends CreateCalendarSubscriptionApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

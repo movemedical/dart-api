@@ -30,9 +30,6 @@ class _$UpdateDeliveryScheduleProfileApi
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Empty>, UpdateDeliveryScheduleProfileApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Empty>, UpdateDeliveryScheduleProfileApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -48,12 +45,6 @@ class _$UpdateDeliveryScheduleProfileApi
           UpdateDeliveryScheduleProfileApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Empty>, UpdateDeliveryScheduleProfileApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-          ApiResult<Empty>, UpdateDeliveryScheduleProfileApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
           ApiResult<Empty>,
@@ -64,12 +55,6 @@ class _$UpdateDeliveryScheduleProfileApi
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                ApiResult<Empty>,
-                UpdateDeliveryScheduleProfileApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
@@ -91,18 +76,6 @@ class _$UpdateDeliveryScheduleProfileApi
                     UpdateDeliveryScheduleProfileApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                ApiResult<Empty>,
-                UpdateDeliveryScheduleProfileApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
-                ApiResult<Empty>,
-                UpdateDeliveryScheduleProfileApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateDeliveryScheduleProfileApiRequest>,
@@ -134,12 +107,9 @@ class _$UpdateDeliveryScheduleProfileApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

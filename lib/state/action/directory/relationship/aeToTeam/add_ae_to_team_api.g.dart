@@ -25,9 +25,6 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-          AddAeToTeamApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
           AddAeToTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
           AddAeToTeamApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-          AddAeToTeamApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-          AddAeToTeamApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
           AddAeToTeamApi, CommandProgress>> $progress;
 
   _$AddAeToTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddAeToTeamApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-                AddAeToTeamApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
                 AddAeToTeamApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
                     AddAeToTeamApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-                AddAeToTeamApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-                AddAeToTeamApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddAeToTeamApiRequest>,
@@ -101,12 +83,9 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

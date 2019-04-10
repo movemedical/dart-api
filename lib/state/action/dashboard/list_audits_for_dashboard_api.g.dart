@@ -32,12 +32,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
           ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>,
           ListAuditsForDashboardApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
           ApiCommand<ListAuditsForDashboardApiRequest>,
           ApiResult<ListAuditsForDashboardApiResponse>,
           ListAuditsForDashboardApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAuditsForDashboardApiRequest>,
-          ApiResult<ListAuditsForDashboardApiResponse>,
-          ListAuditsForDashboardApi,
           CommandProgress>> $progress;
 
   _$ListAuditsForDashboardApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
                 CommandState<ApiCommand<ListAuditsForDashboardApiRequest>,
                     ApiResult<ListAuditsForDashboardApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditsForDashboardApiRequest>,
-                ApiResult<ListAuditsForDashboardApiResponse>,
-                ListAuditsForDashboardApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListAuditsForDashboardApiRequest>,
@@ -102,18 +78,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
                     CommandResult<
                         ApiResult<ListAuditsForDashboardApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditsForDashboardApiRequest>,
-                ApiResult<ListAuditsForDashboardApiResponse>,
-                ListAuditsForDashboardApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAuditsForDashboardApiRequest>,
-                ApiResult<ListAuditsForDashboardApiResponse>,
-                ListAuditsForDashboardApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListAuditsForDashboardApiRequest>,
@@ -144,12 +108,9 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

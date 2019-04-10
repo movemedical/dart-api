@@ -29,9 +29,6 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>, MoveCaseEventBackToPlanningApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Empty>, MoveCaseEventBackToPlanningApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
           MoveCaseEventBackToPlanningApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>, MoveCaseEventBackToPlanningApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>, MoveCaseEventBackToPlanningApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
       : $replace = $options.action<
             CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Empty>,
-                MoveCaseEventBackToPlanningApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
@@ -89,18 +74,6 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
                     MoveCaseEventBackToPlanningApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Empty>,
-                MoveCaseEventBackToPlanningApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Empty>,
-                MoveCaseEventBackToPlanningApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
@@ -132,12 +105,9 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

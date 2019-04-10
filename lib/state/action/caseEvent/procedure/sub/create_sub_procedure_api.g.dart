@@ -32,12 +32,6 @@ class _$CreateSubProcedureApi extends CreateSubProcedureApi {
           ApiCommand<CreateSubProcedureApiRequest>,
           ApiResult<CreateSubProcedureApiResponse>,
           CreateSubProcedureApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSubProcedureApiRequest>,
-          ApiResult<CreateSubProcedureApiResponse>,
-          CreateSubProcedureApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateSubProcedureApi extends CreateSubProcedureApi {
           ApiCommand<CreateSubProcedureApiRequest>,
           ApiResult<CreateSubProcedureApiResponse>,
           CreateSubProcedureApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSubProcedureApiRequest>,
-          ApiResult<CreateSubProcedureApiResponse>,
-          CreateSubProcedureApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateSubProcedureApiRequest>,
-          ApiResult<CreateSubProcedureApiResponse>,
-          CreateSubProcedureApi,
           CommandProgress>> $progress;
 
   _$CreateSubProcedureApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateSubProcedureApi extends CreateSubProcedureApi {
                 CommandState<ApiCommand<CreateSubProcedureApiRequest>,
                     ApiResult<CreateSubProcedureApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateSubProcedureApiRequest>,
-                ApiResult<CreateSubProcedureApiResponse>,
-                CreateSubProcedureApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateSubProcedureApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateSubProcedureApi extends CreateSubProcedureApi {
                     CreateSubProcedureApi,
                     CommandResult<ApiResult<CreateSubProcedureApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateSubProcedureApiRequest>,
-                ApiResult<CreateSubProcedureApiResponse>,
-                CreateSubProcedureApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateSubProcedureApiRequest>,
-                ApiResult<CreateSubProcedureApiResponse>,
-                CreateSubProcedureApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateSubProcedureApiRequest>,
@@ -142,12 +106,9 @@ class _$CreateSubProcedureApi extends CreateSubProcedureApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

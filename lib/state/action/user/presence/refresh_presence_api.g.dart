@@ -27,9 +27,6 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
-          RefreshPresenceApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
           RefreshPresenceApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
-          RefreshPresenceApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
-          RefreshPresenceApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
           RefreshPresenceApi, CommandProgress>> $progress;
 
   _$RefreshPresenceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RefreshPresenceApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Empty>,
-                RefreshPresenceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
@@ -80,18 +65,6 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
                     RefreshPresenceApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Empty>,
-                RefreshPresenceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Empty>,
-                RefreshPresenceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
@@ -118,12 +91,9 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

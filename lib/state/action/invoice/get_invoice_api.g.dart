@@ -29,9 +29,6 @@ class _$GetInvoiceApi extends GetInvoiceApi {
           ApiResult<GetInvoiceApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetInvoiceApiRequest>,
-          ApiResult<GetInvoiceApiResponse>, GetInvoiceApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetInvoiceApiRequest>,
           ApiResult<GetInvoiceApiResponse>, GetInvoiceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$GetInvoiceApi extends GetInvoiceApi {
           GetInvoiceApi,
           CommandResult<ApiResult<GetInvoiceApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<GetInvoiceApiRequest>,
-          ApiResult<GetInvoiceApiResponse>, GetInvoiceApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetInvoiceApiRequest>,
-          ApiResult<GetInvoiceApiResponse>, GetInvoiceApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<GetInvoiceApiRequest>,
           ApiResult<GetInvoiceApiResponse>,
@@ -63,12 +54,6 @@ class _$GetInvoiceApi extends GetInvoiceApi {
                 CommandState<ApiCommand<GetInvoiceApiRequest>,
                     ApiResult<GetInvoiceApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetInvoiceApiRequest>,
-                ApiResult<GetInvoiceApiResponse>,
-                GetInvoiceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetInvoiceApiRequest>,
@@ -89,18 +74,6 @@ class _$GetInvoiceApi extends GetInvoiceApi {
                     GetInvoiceApi,
                     CommandResult<ApiResult<GetInvoiceApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetInvoiceApiRequest>,
-                ApiResult<GetInvoiceApiResponse>,
-                GetInvoiceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetInvoiceApiRequest>,
-                ApiResult<GetInvoiceApiResponse>,
-                GetInvoiceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetInvoiceApiRequest>,
@@ -129,12 +102,9 @@ class _$GetInvoiceApi extends GetInvoiceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

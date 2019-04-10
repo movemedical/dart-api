@@ -33,12 +33,6 @@ class _$ListBizUnitInventoryTypeLinksApi
           ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
           ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
           ListBizUnitInventoryTypeLinksApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
-          ListBizUnitInventoryTypeLinksApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -59,18 +53,6 @@ class _$ListBizUnitInventoryTypeLinksApi
           ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
           ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
           ListBizUnitInventoryTypeLinksApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
-          ListBizUnitInventoryTypeLinksApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
-          ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
-          ListBizUnitInventoryTypeLinksApi,
           CommandProgress>> $progress;
 
   _$ListBizUnitInventoryTypeLinksApi._(this.$options)
@@ -79,12 +61,6 @@ class _$ListBizUnitInventoryTypeLinksApi
                     ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
                     ApiResult<ListBizUnitInventoryTypeLinksApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
-                ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
-                ListBizUnitInventoryTypeLinksApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
@@ -107,18 +83,6 @@ class _$ListBizUnitInventoryTypeLinksApi
                     CommandResult<
                         ApiResult<ListBizUnitInventoryTypeLinksApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
-                ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
-                ListBizUnitInventoryTypeLinksApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
-                ApiResult<ListBizUnitInventoryTypeLinksApiResponse>,
-                ListBizUnitInventoryTypeLinksApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListBizUnitInventoryTypeLinksApiRequest>,
@@ -150,12 +114,9 @@ class _$ListBizUnitInventoryTypeLinksApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

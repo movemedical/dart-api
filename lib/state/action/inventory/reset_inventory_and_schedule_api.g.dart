@@ -29,9 +29,6 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
           ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
           ResetInventoryAndScheduleApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetInventoryAndScheduleApiRequest>,
-          ApiResult<Empty>, ResetInventoryAndScheduleApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ResetInventoryAndScheduleApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
       : $replace = $options.action<
             CommandState<ApiCommand<ResetInventoryAndScheduleApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Empty>,
-                ResetInventoryAndScheduleApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
@@ -88,18 +73,6 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
                     ResetInventoryAndScheduleApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Empty>,
-                ResetInventoryAndScheduleApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ResetInventoryAndScheduleApiRequest>,
-                ApiResult<Empty>,
-                ResetInventoryAndScheduleApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ResetInventoryAndScheduleApiRequest>,
@@ -129,12 +102,9 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

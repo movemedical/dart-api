@@ -32,12 +32,6 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
           ApiCommand<GetAuditsDueCountApiRequest>,
           ApiResult<GetAuditsDueCountApiResponse>,
           GetAuditsDueCountApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAuditsDueCountApiRequest>,
-          ApiResult<GetAuditsDueCountApiResponse>,
-          GetAuditsDueCountApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
           ApiCommand<GetAuditsDueCountApiRequest>,
           ApiResult<GetAuditsDueCountApiResponse>,
           GetAuditsDueCountApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAuditsDueCountApiRequest>,
-          ApiResult<GetAuditsDueCountApiResponse>,
-          GetAuditsDueCountApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAuditsDueCountApiRequest>,
-          ApiResult<GetAuditsDueCountApiResponse>,
-          GetAuditsDueCountApi,
           CommandProgress>> $progress;
 
   _$GetAuditsDueCountApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
                 CommandState<ApiCommand<GetAuditsDueCountApiRequest>,
                     ApiResult<GetAuditsDueCountApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetAuditsDueCountApiRequest>,
-                ApiResult<GetAuditsDueCountApiResponse>,
-                GetAuditsDueCountApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetAuditsDueCountApiRequest>,
@@ -101,18 +77,6 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
                     GetAuditsDueCountApi,
                     CommandResult<ApiResult<GetAuditsDueCountApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetAuditsDueCountApiRequest>,
-                ApiResult<GetAuditsDueCountApiResponse>,
-                GetAuditsDueCountApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetAuditsDueCountApiRequest>,
-                ApiResult<GetAuditsDueCountApiResponse>,
-                GetAuditsDueCountApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetAuditsDueCountApiRequest>,
@@ -142,12 +106,9 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

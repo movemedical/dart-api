@@ -32,12 +32,6 @@ class _$ListHCRForOrgUnitApi extends ListHCRForOrgUnitApi {
           ApiCommand<ListHCRForOrgUnitApiRequest>,
           ApiResult<ListHCRForOrgUnitApiResponse>,
           ListHCRForOrgUnitApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHCRForOrgUnitApiRequest>,
-          ApiResult<ListHCRForOrgUnitApiResponse>,
-          ListHCRForOrgUnitApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListHCRForOrgUnitApi extends ListHCRForOrgUnitApi {
           ApiCommand<ListHCRForOrgUnitApiRequest>,
           ApiResult<ListHCRForOrgUnitApiResponse>,
           ListHCRForOrgUnitApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHCRForOrgUnitApiRequest>,
-          ApiResult<ListHCRForOrgUnitApiResponse>,
-          ListHCRForOrgUnitApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHCRForOrgUnitApiRequest>,
-          ApiResult<ListHCRForOrgUnitApiResponse>,
-          ListHCRForOrgUnitApi,
           CommandProgress>> $progress;
 
   _$ListHCRForOrgUnitApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListHCRForOrgUnitApi extends ListHCRForOrgUnitApi {
                 CommandState<ApiCommand<ListHCRForOrgUnitApiRequest>,
                     ApiResult<ListHCRForOrgUnitApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListHCRForOrgUnitApiRequest>,
-                ApiResult<ListHCRForOrgUnitApiResponse>,
-                ListHCRForOrgUnitApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListHCRForOrgUnitApiRequest>,
@@ -101,18 +77,6 @@ class _$ListHCRForOrgUnitApi extends ListHCRForOrgUnitApi {
                     ListHCRForOrgUnitApi,
                     CommandResult<ApiResult<ListHCRForOrgUnitApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHCRForOrgUnitApiRequest>,
-                ApiResult<ListHCRForOrgUnitApiResponse>,
-                ListHCRForOrgUnitApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHCRForOrgUnitApiRequest>,
-                ApiResult<ListHCRForOrgUnitApiResponse>,
-                ListHCRForOrgUnitApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListHCRForOrgUnitApiRequest>,
@@ -142,12 +106,9 @@ class _$ListHCRForOrgUnitApi extends ListHCRForOrgUnitApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

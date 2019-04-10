@@ -29,9 +29,6 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>, ReprocessIntegrationIssueApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Empty>, ReprocessIntegrationIssueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
           ReprocessIntegrationIssueApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>, ReprocessIntegrationIssueApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>, ReprocessIntegrationIssueApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReprocessIntegrationIssueApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
       : $replace = $options.action<
             CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
-                ReprocessIntegrationIssueApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ReprocessIntegrationIssueApiRequest>,
@@ -88,18 +73,6 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
                     ReprocessIntegrationIssueApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
-                ReprocessIntegrationIssueApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
-                ReprocessIntegrationIssueApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ReprocessIntegrationIssueApiRequest>,
@@ -129,12 +102,9 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$AuditOuputFormApi extends AuditOuputFormApi {
           ApiCommand<AuditOuputFormApiRequest>,
           ApiResult<AuditOuputFormApiResponse>,
           AuditOuputFormApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AuditOuputFormApiRequest>,
-          ApiResult<AuditOuputFormApiResponse>,
-          AuditOuputFormApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$AuditOuputFormApi extends AuditOuputFormApi {
           ApiCommand<AuditOuputFormApiRequest>,
           ApiResult<AuditOuputFormApiResponse>,
           AuditOuputFormApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AuditOuputFormApiRequest>,
-          ApiResult<AuditOuputFormApiResponse>,
-          AuditOuputFormApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<AuditOuputFormApiRequest>,
-          ApiResult<AuditOuputFormApiResponse>,
-          AuditOuputFormApi,
           CommandProgress>> $progress;
 
   _$AuditOuputFormApi._(this.$options)
@@ -75,12 +57,6 @@ class _$AuditOuputFormApi extends AuditOuputFormApi {
                 CommandState<ApiCommand<AuditOuputFormApiRequest>,
                     ApiResult<AuditOuputFormApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AuditOuputFormApiRequest>,
-                ApiResult<AuditOuputFormApiResponse>,
-                AuditOuputFormApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AuditOuputFormApiRequest>,
@@ -101,18 +77,6 @@ class _$AuditOuputFormApi extends AuditOuputFormApi {
                     AuditOuputFormApi,
                     CommandResult<ApiResult<AuditOuputFormApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AuditOuputFormApiRequest>,
-                ApiResult<AuditOuputFormApiResponse>,
-                AuditOuputFormApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AuditOuputFormApiRequest>,
-                ApiResult<AuditOuputFormApiResponse>,
-                AuditOuputFormApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AuditOuputFormApiRequest>,
@@ -141,12 +105,9 @@ class _$AuditOuputFormApi extends AuditOuputFormApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

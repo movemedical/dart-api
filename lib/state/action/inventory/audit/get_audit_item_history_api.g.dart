@@ -32,12 +32,6 @@ class _$GetAuditItemHistoryApi extends GetAuditItemHistoryApi {
           ApiCommand<GetAuditItemHistoryApiRequest>,
           ApiResult<GetAuditItemHistoryApiResponse>,
           GetAuditItemHistoryApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAuditItemHistoryApiRequest>,
-          ApiResult<GetAuditItemHistoryApiResponse>,
-          GetAuditItemHistoryApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetAuditItemHistoryApi extends GetAuditItemHistoryApi {
           ApiCommand<GetAuditItemHistoryApiRequest>,
           ApiResult<GetAuditItemHistoryApiResponse>,
           GetAuditItemHistoryApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAuditItemHistoryApiRequest>,
-          ApiResult<GetAuditItemHistoryApiResponse>,
-          GetAuditItemHistoryApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAuditItemHistoryApiRequest>,
-          ApiResult<GetAuditItemHistoryApiResponse>,
-          GetAuditItemHistoryApi,
           CommandProgress>> $progress;
 
   _$GetAuditItemHistoryApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetAuditItemHistoryApi extends GetAuditItemHistoryApi {
                 CommandState<ApiCommand<GetAuditItemHistoryApiRequest>,
                     ApiResult<GetAuditItemHistoryApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetAuditItemHistoryApiRequest>,
-                ApiResult<GetAuditItemHistoryApiResponse>,
-                GetAuditItemHistoryApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetAuditItemHistoryApiRequest>,
@@ -101,18 +77,6 @@ class _$GetAuditItemHistoryApi extends GetAuditItemHistoryApi {
                     GetAuditItemHistoryApi,
                     CommandResult<ApiResult<GetAuditItemHistoryApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetAuditItemHistoryApiRequest>,
-                ApiResult<GetAuditItemHistoryApiResponse>,
-                GetAuditItemHistoryApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetAuditItemHistoryApiRequest>,
-                ApiResult<GetAuditItemHistoryApiResponse>,
-                GetAuditItemHistoryApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetAuditItemHistoryApiRequest>,
@@ -142,12 +106,9 @@ class _$GetAuditItemHistoryApi extends GetAuditItemHistoryApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

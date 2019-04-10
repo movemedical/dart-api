@@ -32,12 +32,6 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
           ApiCommand<PrepareAuditFileDownloadApiRequest>,
           ApiResult<PrepareAuditFileDownloadApiResponse>,
           PrepareAuditFileDownloadApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareAuditFileDownloadApiRequest>,
-          ApiResult<PrepareAuditFileDownloadApiResponse>,
-          PrepareAuditFileDownloadApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
           ApiCommand<PrepareAuditFileDownloadApiRequest>,
           ApiResult<PrepareAuditFileDownloadApiResponse>,
           PrepareAuditFileDownloadApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareAuditFileDownloadApiRequest>,
-          ApiResult<PrepareAuditFileDownloadApiResponse>,
-          PrepareAuditFileDownloadApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareAuditFileDownloadApiRequest>,
-          ApiResult<PrepareAuditFileDownloadApiResponse>,
-          PrepareAuditFileDownloadApi,
           CommandProgress>> $progress;
 
   _$PrepareAuditFileDownloadApi._(this.$options)
@@ -76,12 +58,6 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
                 CommandState<ApiCommand<PrepareAuditFileDownloadApiRequest>,
                     ApiResult<PrepareAuditFileDownloadApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareAuditFileDownloadApiRequest>,
-                ApiResult<PrepareAuditFileDownloadApiResponse>,
-                PrepareAuditFileDownloadApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<PrepareAuditFileDownloadApiRequest>,
@@ -103,18 +79,6 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
                     CommandResult<
                         ApiResult<PrepareAuditFileDownloadApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareAuditFileDownloadApiRequest>,
-                ApiResult<PrepareAuditFileDownloadApiResponse>,
-                PrepareAuditFileDownloadApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareAuditFileDownloadApiRequest>,
-                ApiResult<PrepareAuditFileDownloadApiResponse>,
-                PrepareAuditFileDownloadApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<PrepareAuditFileDownloadApiRequest>,
@@ -146,12 +110,9 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

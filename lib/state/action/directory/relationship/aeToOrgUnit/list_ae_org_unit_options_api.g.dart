@@ -32,12 +32,6 @@ class _$ListAeOrgUnitOptionsApi extends ListAeOrgUnitOptionsApi {
           ApiCommand<ListAeOrgUnitOptionsApiRequest>,
           ApiResult<ListAeOrgUnitOptionsApiResponse>,
           ListAeOrgUnitOptionsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAeOrgUnitOptionsApiRequest>,
-          ApiResult<ListAeOrgUnitOptionsApiResponse>,
-          ListAeOrgUnitOptionsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListAeOrgUnitOptionsApi extends ListAeOrgUnitOptionsApi {
           ApiCommand<ListAeOrgUnitOptionsApiRequest>,
           ApiResult<ListAeOrgUnitOptionsApiResponse>,
           ListAeOrgUnitOptionsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAeOrgUnitOptionsApiRequest>,
-          ApiResult<ListAeOrgUnitOptionsApiResponse>,
-          ListAeOrgUnitOptionsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAeOrgUnitOptionsApiRequest>,
-          ApiResult<ListAeOrgUnitOptionsApiResponse>,
-          ListAeOrgUnitOptionsApi,
           CommandProgress>> $progress;
 
   _$ListAeOrgUnitOptionsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListAeOrgUnitOptionsApi extends ListAeOrgUnitOptionsApi {
                 CommandState<ApiCommand<ListAeOrgUnitOptionsApiRequest>,
                     ApiResult<ListAeOrgUnitOptionsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListAeOrgUnitOptionsApiRequest>,
-                ApiResult<ListAeOrgUnitOptionsApiResponse>,
-                ListAeOrgUnitOptionsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListAeOrgUnitOptionsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListAeOrgUnitOptionsApi extends ListAeOrgUnitOptionsApi {
                     ListAeOrgUnitOptionsApi,
                     CommandResult<ApiResult<ListAeOrgUnitOptionsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAeOrgUnitOptionsApiRequest>,
-                ApiResult<ListAeOrgUnitOptionsApiResponse>,
-                ListAeOrgUnitOptionsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAeOrgUnitOptionsApiRequest>,
-                ApiResult<ListAeOrgUnitOptionsApiResponse>,
-                ListAeOrgUnitOptionsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListAeOrgUnitOptionsApiRequest>,
@@ -142,12 +106,9 @@ class _$ListAeOrgUnitOptionsApi extends ListAeOrgUnitOptionsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

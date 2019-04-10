@@ -32,12 +32,6 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
           ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>,
           SearchExpirationLevelsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
           ApiCommand<SearchExpirationLevelsApiRequest>,
           ApiResult<SearchExpirationLevelsApiResponse>,
           SearchExpirationLevelsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SearchExpirationLevelsApiRequest>,
-          ApiResult<SearchExpirationLevelsApiResponse>,
-          SearchExpirationLevelsApi,
           CommandProgress>> $progress;
 
   _$SearchExpirationLevelsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
                 CommandState<ApiCommand<SearchExpirationLevelsApiRequest>,
                     ApiResult<SearchExpirationLevelsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<SearchExpirationLevelsApiRequest>,
-                ApiResult<SearchExpirationLevelsApiResponse>,
-                SearchExpirationLevelsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SearchExpirationLevelsApiRequest>,
@@ -102,18 +78,6 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
                     CommandResult<
                         ApiResult<SearchExpirationLevelsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<SearchExpirationLevelsApiRequest>,
-                ApiResult<SearchExpirationLevelsApiResponse>,
-                SearchExpirationLevelsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<SearchExpirationLevelsApiRequest>,
-                ApiResult<SearchExpirationLevelsApiResponse>,
-                SearchExpirationLevelsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SearchExpirationLevelsApiRequest>,
@@ -144,12 +108,9 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

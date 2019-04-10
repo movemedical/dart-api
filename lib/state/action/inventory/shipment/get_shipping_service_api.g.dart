@@ -32,12 +32,6 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
           ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>,
           GetShippingServiceApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
           ApiCommand<GetShippingServiceApiRequest>,
           ApiResult<GetShippingServiceApiResponse>,
           GetShippingServiceApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetShippingServiceApiRequest>,
-          ApiResult<GetShippingServiceApiResponse>,
-          GetShippingServiceApi,
           CommandProgress>> $progress;
 
   _$GetShippingServiceApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
                 CommandState<ApiCommand<GetShippingServiceApiRequest>,
                     ApiResult<GetShippingServiceApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetShippingServiceApiRequest>,
-                ApiResult<GetShippingServiceApiResponse>,
-                GetShippingServiceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetShippingServiceApiRequest>,
@@ -101,18 +77,6 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
                     GetShippingServiceApi,
                     CommandResult<ApiResult<GetShippingServiceApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetShippingServiceApiRequest>,
-                ApiResult<GetShippingServiceApiResponse>,
-                GetShippingServiceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetShippingServiceApiRequest>,
-                ApiResult<GetShippingServiceApiResponse>,
-                GetShippingServiceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetShippingServiceApiRequest>,
@@ -142,12 +106,9 @@ class _$GetShippingServiceApi extends GetShippingServiceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

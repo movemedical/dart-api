@@ -33,12 +33,6 @@ class _$PrepareIntegrationFileDownloadApi
           ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>,
           PrepareIntegrationFileDownloadApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-          PrepareIntegrationFileDownloadApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -59,18 +53,6 @@ class _$PrepareIntegrationFileDownloadApi
           ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
           ApiResult<PrepareIntegrationFileDownloadApiResponse>,
           PrepareIntegrationFileDownloadApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-          PrepareIntegrationFileDownloadApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-          ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-          PrepareIntegrationFileDownloadApi,
           CommandProgress>> $progress;
 
   _$PrepareIntegrationFileDownloadApi._(this.$options)
@@ -79,12 +61,6 @@ class _$PrepareIntegrationFileDownloadApi
                     ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
                     ApiResult<PrepareIntegrationFileDownloadApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                PrepareIntegrationFileDownloadApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
@@ -107,18 +83,6 @@ class _$PrepareIntegrationFileDownloadApi
                     CommandResult<
                         ApiResult<PrepareIntegrationFileDownloadApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                PrepareIntegrationFileDownloadApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
-                ApiResult<PrepareIntegrationFileDownloadApiResponse>,
-                PrepareIntegrationFileDownloadApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<PrepareIntegrationFileDownloadApiRequest>,
@@ -150,12 +114,9 @@ class _$PrepareIntegrationFileDownloadApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
           ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>,
           GetImportLogFileDetailApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
           ApiCommand<GetImportLogFileDetailApiRequest>,
           ApiResult<GetImportLogFileDetailApiResponse>,
           GetImportLogFileDetailApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogFileDetailApiRequest>,
-          ApiResult<GetImportLogFileDetailApiResponse>,
-          GetImportLogFileDetailApi,
           CommandProgress>> $progress;
 
   _$GetImportLogFileDetailApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
                 CommandState<ApiCommand<GetImportLogFileDetailApiRequest>,
                     ApiResult<GetImportLogFileDetailApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogFileDetailApiRequest>,
-                ApiResult<GetImportLogFileDetailApiResponse>,
-                GetImportLogFileDetailApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetImportLogFileDetailApiRequest>,
@@ -102,18 +78,6 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
                     CommandResult<
                         ApiResult<GetImportLogFileDetailApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogFileDetailApiRequest>,
-                ApiResult<GetImportLogFileDetailApiResponse>,
-                GetImportLogFileDetailApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogFileDetailApiRequest>,
-                ApiResult<GetImportLogFileDetailApiResponse>,
-                GetImportLogFileDetailApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetImportLogFileDetailApiRequest>,
@@ -144,12 +108,9 @@ class _$GetImportLogFileDetailApi extends GetImportLogFileDetailApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

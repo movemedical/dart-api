@@ -29,9 +29,6 @@ class _$SetCustomerDefaultShipToAddressApi
       CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>, SetCustomerDefaultShipToAddressApi, String>> $clear;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
           ApiResult<Empty>,
@@ -55,30 +52,12 @@ class _$SetCustomerDefaultShipToAddressApi
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
           ApiResult<Empty>,
           SetCustomerDefaultShipToAddressApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>,
-          SetCustomerDefaultShipToAddressApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>,
-          SetCustomerDefaultShipToAddressApi,
           CommandProgress>> $progress;
 
   _$SetCustomerDefaultShipToAddressApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                ApiResult<Empty>,
-                SetCustomerDefaultShipToAddressApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
@@ -101,18 +80,6 @@ class _$SetCustomerDefaultShipToAddressApi
                     SetCustomerDefaultShipToAddressApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                ApiResult<Empty>,
-                SetCustomerDefaultShipToAddressApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                ApiResult<Empty>,
-                SetCustomerDefaultShipToAddressApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
@@ -144,12 +111,9 @@ class _$SetCustomerDefaultShipToAddressApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

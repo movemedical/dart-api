@@ -28,9 +28,6 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>, RequestUnbilledReportApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
           ApiResult<Empty>, RequestUnbilledReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
           RequestUnbilledReportApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>, RequestUnbilledReportApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>, RequestUnbilledReportApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
           ApiResult<Empty>,
@@ -61,12 +52,6 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
       : $replace = $options.action<
             CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Empty>,
-                RequestUnbilledReportApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
@@ -87,18 +72,6 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
                     RequestUnbilledReportApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Empty>,
-                RequestUnbilledReportApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Empty>,
-                RequestUnbilledReportApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
@@ -126,12 +99,9 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

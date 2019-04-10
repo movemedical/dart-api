@@ -29,9 +29,6 @@ class _$ListSerialsApi extends ListSerialsApi {
           ApiResult<ListSerialsApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ListSerialsApiRequest>,
-          ApiResult<ListSerialsApiResponse>, ListSerialsApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSerialsApiRequest>,
           ApiResult<ListSerialsApiResponse>, ListSerialsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$ListSerialsApi extends ListSerialsApi {
           ListSerialsApi,
           CommandResult<ApiResult<ListSerialsApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSerialsApiRequest>,
-          ApiResult<ListSerialsApiResponse>, ListSerialsApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSerialsApiRequest>,
-          ApiResult<ListSerialsApiResponse>, ListSerialsApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ListSerialsApiRequest>,
           ApiResult<ListSerialsApiResponse>,
@@ -63,12 +54,6 @@ class _$ListSerialsApi extends ListSerialsApi {
                 CommandState<ApiCommand<ListSerialsApiRequest>,
                     ApiResult<ListSerialsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListSerialsApiRequest>,
-                ApiResult<ListSerialsApiResponse>,
-                ListSerialsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListSerialsApiRequest>,
@@ -89,18 +74,6 @@ class _$ListSerialsApi extends ListSerialsApi {
                     ListSerialsApi,
                     CommandResult<ApiResult<ListSerialsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListSerialsApiRequest>,
-                ApiResult<ListSerialsApiResponse>,
-                ListSerialsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListSerialsApiRequest>,
-                ApiResult<ListSerialsApiResponse>,
-                ListSerialsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListSerialsApiRequest>,
@@ -129,12 +102,9 @@ class _$ListSerialsApi extends ListSerialsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

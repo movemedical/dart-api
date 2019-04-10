@@ -30,9 +30,6 @@ class _$RequestKitBillOfMaterialsDocApi
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>, RequestKitBillOfMaterialsDocApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
           ApiResult<Empty>, RequestKitBillOfMaterialsDocApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -48,12 +45,6 @@ class _$RequestKitBillOfMaterialsDocApi
           RequestKitBillOfMaterialsDocApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>, RequestKitBillOfMaterialsDocApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>, RequestKitBillOfMaterialsDocApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
           ApiResult<Empty>,
@@ -64,12 +55,6 @@ class _$RequestKitBillOfMaterialsDocApi
       : $replace = $options.action<
             CommandState<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                ApiResult<Empty>,
-                RequestKitBillOfMaterialsDocApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
@@ -91,18 +76,6 @@ class _$RequestKitBillOfMaterialsDocApi
                     RequestKitBillOfMaterialsDocApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                ApiResult<Empty>,
-                RequestKitBillOfMaterialsDocApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                ApiResult<Empty>,
-                RequestKitBillOfMaterialsDocApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
@@ -134,12 +107,9 @@ class _$RequestKitBillOfMaterialsDocApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -29,9 +29,6 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>, MoveStockWithinLocationApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveStockWithinLocationApiRequest>,
           ApiResult<Empty>, MoveStockWithinLocationApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
           MoveStockWithinLocationApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>, MoveStockWithinLocationApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>, MoveStockWithinLocationApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveStockWithinLocationApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
       : $replace = $options.action<
             CommandState<ApiCommand<MoveStockWithinLocationApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<MoveStockWithinLocationApiRequest>,
-                ApiResult<Empty>,
-                MoveStockWithinLocationApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MoveStockWithinLocationApiRequest>,
@@ -88,18 +73,6 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
                     MoveStockWithinLocationApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<MoveStockWithinLocationApiRequest>,
-                ApiResult<Empty>,
-                MoveStockWithinLocationApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<MoveStockWithinLocationApiRequest>,
-                ApiResult<Empty>,
-                MoveStockWithinLocationApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MoveStockWithinLocationApiRequest>,
@@ -128,12 +101,9 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$ListBizUnitDelegatesApi extends ListBizUnitDelegatesApi {
           ApiCommand<ListBizUnitDelegatesApiRequest>,
           ApiResult<ListBizUnitDelegatesApiResponse>,
           ListBizUnitDelegatesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitDelegatesApiRequest>,
-          ApiResult<ListBizUnitDelegatesApiResponse>,
-          ListBizUnitDelegatesApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListBizUnitDelegatesApi extends ListBizUnitDelegatesApi {
           ApiCommand<ListBizUnitDelegatesApiRequest>,
           ApiResult<ListBizUnitDelegatesApiResponse>,
           ListBizUnitDelegatesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitDelegatesApiRequest>,
-          ApiResult<ListBizUnitDelegatesApiResponse>,
-          ListBizUnitDelegatesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListBizUnitDelegatesApiRequest>,
-          ApiResult<ListBizUnitDelegatesApiResponse>,
-          ListBizUnitDelegatesApi,
           CommandProgress>> $progress;
 
   _$ListBizUnitDelegatesApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListBizUnitDelegatesApi extends ListBizUnitDelegatesApi {
                 CommandState<ApiCommand<ListBizUnitDelegatesApiRequest>,
                     ApiResult<ListBizUnitDelegatesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitDelegatesApiRequest>,
-                ApiResult<ListBizUnitDelegatesApiResponse>,
-                ListBizUnitDelegatesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListBizUnitDelegatesApiRequest>,
@@ -101,18 +77,6 @@ class _$ListBizUnitDelegatesApi extends ListBizUnitDelegatesApi {
                     ListBizUnitDelegatesApi,
                     CommandResult<ApiResult<ListBizUnitDelegatesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitDelegatesApiRequest>,
-                ApiResult<ListBizUnitDelegatesApiResponse>,
-                ListBizUnitDelegatesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListBizUnitDelegatesApiRequest>,
-                ApiResult<ListBizUnitDelegatesApiResponse>,
-                ListBizUnitDelegatesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListBizUnitDelegatesApiRequest>,
@@ -142,12 +106,9 @@ class _$ListBizUnitDelegatesApi extends ListBizUnitDelegatesApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

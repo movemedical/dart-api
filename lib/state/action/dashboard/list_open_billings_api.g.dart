@@ -32,12 +32,6 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
           ApiCommand<ListOpenBillingsApiRequest>,
           ApiResult<ListOpenBillingsApiResponse>,
           ListOpenBillingsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOpenBillingsApiRequest>,
-          ApiResult<ListOpenBillingsApiResponse>,
-          ListOpenBillingsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
           ApiCommand<ListOpenBillingsApiRequest>,
           ApiResult<ListOpenBillingsApiResponse>,
           ListOpenBillingsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOpenBillingsApiRequest>,
-          ApiResult<ListOpenBillingsApiResponse>,
-          ListOpenBillingsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOpenBillingsApiRequest>,
-          ApiResult<ListOpenBillingsApiResponse>,
-          ListOpenBillingsApi,
           CommandProgress>> $progress;
 
   _$ListOpenBillingsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
                 CommandState<ApiCommand<ListOpenBillingsApiRequest>,
                     ApiResult<ListOpenBillingsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListOpenBillingsApiRequest>,
-                ApiResult<ListOpenBillingsApiResponse>,
-                ListOpenBillingsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListOpenBillingsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
                     ListOpenBillingsApi,
                     CommandResult<ApiResult<ListOpenBillingsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListOpenBillingsApiRequest>,
-                ApiResult<ListOpenBillingsApiResponse>,
-                ListOpenBillingsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListOpenBillingsApiRequest>,
-                ApiResult<ListOpenBillingsApiResponse>,
-                ListOpenBillingsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListOpenBillingsApiRequest>,
@@ -142,12 +106,9 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

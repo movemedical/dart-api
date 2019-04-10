@@ -32,12 +32,6 @@ class _$CreateCancelReasonApi extends CreateCancelReasonApi {
           ApiCommand<CreateCancelReasonApiRequest>,
           ApiResult<CreateCancelReasonApiResponse>,
           CreateCancelReasonApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCancelReasonApiRequest>,
-          ApiResult<CreateCancelReasonApiResponse>,
-          CreateCancelReasonApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateCancelReasonApi extends CreateCancelReasonApi {
           ApiCommand<CreateCancelReasonApiRequest>,
           ApiResult<CreateCancelReasonApiResponse>,
           CreateCancelReasonApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCancelReasonApiRequest>,
-          ApiResult<CreateCancelReasonApiResponse>,
-          CreateCancelReasonApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateCancelReasonApiRequest>,
-          ApiResult<CreateCancelReasonApiResponse>,
-          CreateCancelReasonApi,
           CommandProgress>> $progress;
 
   _$CreateCancelReasonApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateCancelReasonApi extends CreateCancelReasonApi {
                 CommandState<ApiCommand<CreateCancelReasonApiRequest>,
                     ApiResult<CreateCancelReasonApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCancelReasonApiRequest>,
-                ApiResult<CreateCancelReasonApiResponse>,
-                CreateCancelReasonApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateCancelReasonApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateCancelReasonApi extends CreateCancelReasonApi {
                     CreateCancelReasonApi,
                     CommandResult<ApiResult<CreateCancelReasonApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCancelReasonApiRequest>,
-                ApiResult<CreateCancelReasonApiResponse>,
-                CreateCancelReasonApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateCancelReasonApiRequest>,
-                ApiResult<CreateCancelReasonApiResponse>,
-                CreateCancelReasonApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateCancelReasonApiRequest>,
@@ -142,12 +106,9 @@ class _$CreateCancelReasonApi extends CreateCancelReasonApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

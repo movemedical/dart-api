@@ -32,12 +32,6 @@ class _$RequestPackingListApi extends RequestPackingListApi {
           ApiCommand<RequestPackingListApiRequest>,
           ApiResult<RequestPackingListApiResponse>,
           RequestPackingListApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestPackingListApiRequest>,
-          ApiResult<RequestPackingListApiResponse>,
-          RequestPackingListApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$RequestPackingListApi extends RequestPackingListApi {
           ApiCommand<RequestPackingListApiRequest>,
           ApiResult<RequestPackingListApiResponse>,
           RequestPackingListApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestPackingListApiRequest>,
-          ApiResult<RequestPackingListApiResponse>,
-          RequestPackingListApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestPackingListApiRequest>,
-          ApiResult<RequestPackingListApiResponse>,
-          RequestPackingListApi,
           CommandProgress>> $progress;
 
   _$RequestPackingListApi._(this.$options)
@@ -75,12 +57,6 @@ class _$RequestPackingListApi extends RequestPackingListApi {
                 CommandState<ApiCommand<RequestPackingListApiRequest>,
                     ApiResult<RequestPackingListApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestPackingListApiRequest>,
-                ApiResult<RequestPackingListApiResponse>,
-                RequestPackingListApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestPackingListApiRequest>,
@@ -101,18 +77,6 @@ class _$RequestPackingListApi extends RequestPackingListApi {
                     RequestPackingListApi,
                     CommandResult<ApiResult<RequestPackingListApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestPackingListApiRequest>,
-                ApiResult<RequestPackingListApiResponse>,
-                RequestPackingListApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestPackingListApiRequest>,
-                ApiResult<RequestPackingListApiResponse>,
-                RequestPackingListApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestPackingListApiRequest>,
@@ -142,12 +106,9 @@ class _$RequestPackingListApi extends RequestPackingListApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

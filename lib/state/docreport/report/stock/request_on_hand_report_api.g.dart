@@ -32,12 +32,6 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
           ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>,
           RequestOnHandReportApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
           ApiCommand<RequestOnHandReportApiRequest>,
           ApiResult<RequestOnHandReportApiResponse>,
           RequestOnHandReportApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestOnHandReportApiRequest>,
-          ApiResult<RequestOnHandReportApiResponse>,
-          RequestOnHandReportApi,
           CommandProgress>> $progress;
 
   _$RequestOnHandReportApi._(this.$options)
@@ -75,12 +57,6 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
                 CommandState<ApiCommand<RequestOnHandReportApiRequest>,
                     ApiResult<RequestOnHandReportApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestOnHandReportApiRequest>,
-                ApiResult<RequestOnHandReportApiResponse>,
-                RequestOnHandReportApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestOnHandReportApiRequest>,
@@ -101,18 +77,6 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
                     RequestOnHandReportApi,
                     CommandResult<ApiResult<RequestOnHandReportApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestOnHandReportApiRequest>,
-                ApiResult<RequestOnHandReportApiResponse>,
-                RequestOnHandReportApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestOnHandReportApiRequest>,
-                ApiResult<RequestOnHandReportApiResponse>,
-                RequestOnHandReportApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestOnHandReportApiRequest>,
@@ -142,12 +106,9 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

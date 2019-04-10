@@ -28,9 +28,6 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Empty>, MarkNotificationsReadApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
           ApiResult<Empty>, MarkNotificationsReadApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
           MarkNotificationsReadApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Empty>, MarkNotificationsReadApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<MarkNotificationsReadApiRequest>,
-          ApiResult<Empty>, MarkNotificationsReadApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<MarkNotificationsReadApiRequest>,
           ApiResult<Empty>,
@@ -61,12 +52,6 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
       : $replace = $options.action<
             CommandState<ApiCommand<MarkNotificationsReadApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Empty>,
-                MarkNotificationsReadApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
@@ -87,18 +72,6 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
                     MarkNotificationsReadApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Empty>,
-                MarkNotificationsReadApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<MarkNotificationsReadApiRequest>,
-                ApiResult<Empty>,
-                MarkNotificationsReadApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MarkNotificationsReadApiRequest>,
@@ -126,12 +99,9 @@ class _$MarkNotificationsReadApi extends MarkNotificationsReadApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

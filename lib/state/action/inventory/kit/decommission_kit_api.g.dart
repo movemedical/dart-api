@@ -27,9 +27,6 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
-          DecommissionKitApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$DecommissionKitApi extends DecommissionKitApi {
           DecommissionKitApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
-          DecommissionKitApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
-          DecommissionKitApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
           DecommissionKitApi, CommandProgress>> $progress;
 
   _$DecommissionKitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DecommissionKitApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Empty>,
-                DecommissionKitApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
@@ -80,18 +65,6 @@ class _$DecommissionKitApi extends DecommissionKitApi {
                     DecommissionKitApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Empty>,
-                DecommissionKitApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Empty>,
-                DecommissionKitApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
@@ -118,12 +91,9 @@ class _$DecommissionKitApi extends DecommissionKitApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

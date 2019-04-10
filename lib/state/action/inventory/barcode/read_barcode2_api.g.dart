@@ -29,9 +29,6 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
           ApiResult<ReadBarcode2ApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>, ReadBarcode2Api, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>, ReadBarcode2Api, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
           ReadBarcode2Api,
           CommandResult<ApiResult<ReadBarcode2ApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>, ReadBarcode2Api, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ReadBarcode2ApiRequest>,
-          ApiResult<ReadBarcode2ApiResponse>, ReadBarcode2Api, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReadBarcode2ApiRequest>,
           ApiResult<ReadBarcode2ApiResponse>,
@@ -63,12 +54,6 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
                 CommandState<ApiCommand<ReadBarcode2ApiRequest>,
                     ApiResult<ReadBarcode2ApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ReadBarcode2ApiRequest>,
-                ApiResult<ReadBarcode2ApiResponse>,
-                ReadBarcode2Api,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ReadBarcode2ApiRequest>,
@@ -89,18 +74,6 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
                     ReadBarcode2Api,
                     CommandResult<ApiResult<ReadBarcode2ApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ReadBarcode2ApiRequest>,
-                ApiResult<ReadBarcode2ApiResponse>,
-                ReadBarcode2Api,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ReadBarcode2ApiRequest>,
-                ApiResult<ReadBarcode2ApiResponse>,
-                ReadBarcode2Api,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ReadBarcode2ApiRequest>,
@@ -129,12 +102,9 @@ class _$ReadBarcode2Api extends ReadBarcode2Api {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

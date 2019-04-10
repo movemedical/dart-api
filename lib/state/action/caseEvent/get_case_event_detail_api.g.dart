@@ -32,12 +32,6 @@ class _$GetCaseEventDetailApi extends GetCaseEventDetailApi {
           ApiCommand<GetCaseEventDetailApiRequest>,
           ApiResult<GetCaseEventDetailApiResponse>,
           GetCaseEventDetailApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseEventDetailApiRequest>,
-          ApiResult<GetCaseEventDetailApiResponse>,
-          GetCaseEventDetailApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetCaseEventDetailApi extends GetCaseEventDetailApi {
           ApiCommand<GetCaseEventDetailApiRequest>,
           ApiResult<GetCaseEventDetailApiResponse>,
           GetCaseEventDetailApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseEventDetailApiRequest>,
-          ApiResult<GetCaseEventDetailApiResponse>,
-          GetCaseEventDetailApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetCaseEventDetailApiRequest>,
-          ApiResult<GetCaseEventDetailApiResponse>,
-          GetCaseEventDetailApi,
           CommandProgress>> $progress;
 
   _$GetCaseEventDetailApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetCaseEventDetailApi extends GetCaseEventDetailApi {
                 CommandState<ApiCommand<GetCaseEventDetailApiRequest>,
                     ApiResult<GetCaseEventDetailApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseEventDetailApiRequest>,
-                ApiResult<GetCaseEventDetailApiResponse>,
-                GetCaseEventDetailApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetCaseEventDetailApiRequest>,
@@ -101,18 +77,6 @@ class _$GetCaseEventDetailApi extends GetCaseEventDetailApi {
                     GetCaseEventDetailApi,
                     CommandResult<ApiResult<GetCaseEventDetailApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseEventDetailApiRequest>,
-                ApiResult<GetCaseEventDetailApiResponse>,
-                GetCaseEventDetailApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetCaseEventDetailApiRequest>,
-                ApiResult<GetCaseEventDetailApiResponse>,
-                GetCaseEventDetailApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetCaseEventDetailApiRequest>,
@@ -142,12 +106,9 @@ class _$GetCaseEventDetailApi extends GetCaseEventDetailApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

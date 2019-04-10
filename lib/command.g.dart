@@ -104,6 +104,12 @@ class _$ApiStateSerializer implements StructuredSerializer<ApiState> {
         ..add(serializers.serialize(object.appVersion,
             specifiedType: const FullType(String)));
     }
+    if (object.platformVersion != null) {
+      result
+        ..add('platformVersion')
+        ..add(serializers.serialize(object.platformVersion,
+            specifiedType: const FullType(String)));
+    }
     if (object.wsConnected != null) {
       result
         ..add('wsConnected')
@@ -115,6 +121,12 @@ class _$ApiStateSerializer implements StructuredSerializer<ApiState> {
         ..add('wsDisconnected')
         ..add(serializers.serialize(object.wsDisconnected,
             specifiedType: const FullType(DateTime)));
+    }
+    if (object.wsError != null) {
+      result
+        ..add('wsError')
+        ..add(serializers.serialize(object.wsError,
+            specifiedType: const FullType(String)));
     }
     if (object.activeLogin != null) {
       result
@@ -155,6 +167,10 @@ class _$ApiStateSerializer implements StructuredSerializer<ApiState> {
           result.appVersion = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'platformVersion':
+          result.platformVersion = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'wsConnected':
           result.wsConnected = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -162,6 +178,10 @@ class _$ApiStateSerializer implements StructuredSerializer<ApiState> {
         case 'wsDisconnected':
           result.wsDisconnected = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'wsError':
+          result.wsError = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'activeLogin':
           result.activeLogin.replace(serializers.deserialize(value,
@@ -517,9 +537,13 @@ class _$ApiState extends ApiState {
   @override
   final String appVersion;
   @override
+  final String platformVersion;
+  @override
   final DateTime wsConnected;
   @override
   final DateTime wsDisconnected;
+  @override
+  final String wsError;
   @override
   final LoginResponse activeLogin;
   @override
@@ -538,8 +562,10 @@ class _$ApiState extends ApiState {
       {this.url,
       this.wsUrl,
       this.appVersion,
+      this.platformVersion,
       this.wsConnected,
       this.wsDisconnected,
+      this.wsError,
       this.activeLogin,
       this.loginCommand,
       this.activeSetup,
@@ -567,8 +593,10 @@ class _$ApiState extends ApiState {
         url == other.url &&
         wsUrl == other.wsUrl &&
         appVersion == other.appVersion &&
+        platformVersion == other.platformVersion &&
         wsConnected == other.wsConnected &&
         wsDisconnected == other.wsDisconnected &&
+        wsError == other.wsError &&
         activeLogin == other.activeLogin &&
         loginCommand == other.loginCommand &&
         activeSetup == other.activeSetup &&
@@ -583,10 +611,16 @@ class _$ApiState extends ApiState {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, url.hashCode), wsUrl.hashCode),
-                                appVersion.hashCode),
-                            wsConnected.hashCode),
-                        wsDisconnected.hashCode),
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, url.hashCode),
+                                            wsUrl.hashCode),
+                                        appVersion.hashCode),
+                                    platformVersion.hashCode),
+                                wsConnected.hashCode),
+                            wsDisconnected.hashCode),
+                        wsError.hashCode),
                     activeLogin.hashCode),
                 loginCommand.hashCode),
             activeSetup.hashCode),
@@ -599,8 +633,10 @@ class _$ApiState extends ApiState {
           ..add('url', url)
           ..add('wsUrl', wsUrl)
           ..add('appVersion', appVersion)
+          ..add('platformVersion', platformVersion)
           ..add('wsConnected', wsConnected)
           ..add('wsDisconnected', wsDisconnected)
+          ..add('wsError', wsError)
           ..add('activeLogin', activeLogin)
           ..add('loginCommand', loginCommand)
           ..add('activeSetup', activeSetup)
@@ -624,6 +660,11 @@ class ApiStateBuilder implements Builder<ApiState, ApiStateBuilder> {
   String get appVersion => _$this._appVersion;
   set appVersion(String appVersion) => _$this._appVersion = appVersion;
 
+  String _platformVersion;
+  String get platformVersion => _$this._platformVersion;
+  set platformVersion(String platformVersion) =>
+      _$this._platformVersion = platformVersion;
+
   DateTime _wsConnected;
   DateTime get wsConnected => _$this._wsConnected;
   set wsConnected(DateTime wsConnected) => _$this._wsConnected = wsConnected;
@@ -632,6 +673,10 @@ class ApiStateBuilder implements Builder<ApiState, ApiStateBuilder> {
   DateTime get wsDisconnected => _$this._wsDisconnected;
   set wsDisconnected(DateTime wsDisconnected) =>
       _$this._wsDisconnected = wsDisconnected;
+
+  String _wsError;
+  String get wsError => _$this._wsError;
+  set wsError(String wsError) => _$this._wsError = wsError;
 
   LoginResponseBuilder _activeLogin;
   LoginResponseBuilder get activeLogin =>
@@ -676,8 +721,10 @@ class ApiStateBuilder implements Builder<ApiState, ApiStateBuilder> {
       _url = _$v.url;
       _wsUrl = _$v.wsUrl;
       _appVersion = _$v.appVersion;
+      _platformVersion = _$v.platformVersion;
       _wsConnected = _$v.wsConnected;
       _wsDisconnected = _$v.wsDisconnected;
+      _wsError = _$v.wsError;
       _activeLogin = _$v.activeLogin?.toBuilder();
       _loginCommand = _$v.loginCommand?.toBuilder();
       _activeSetup = _$v.activeSetup?.toBuilder();
@@ -709,8 +756,10 @@ class ApiStateBuilder implements Builder<ApiState, ApiStateBuilder> {
               url: url,
               wsUrl: wsUrl,
               appVersion: appVersion,
+              platformVersion: platformVersion,
               wsConnected: wsConnected,
               wsDisconnected: wsDisconnected,
+              wsError: wsError,
               activeLogin: _activeLogin?.build(),
               loginCommand: loginCommand.build(),
               activeSetup: _activeSetup?.build(),
@@ -1211,10 +1260,13 @@ class _$ApiActions extends ApiActions {
 
   final ActionDispatcher<ApiState> $replace;
   final PushDispatcher push;
+  final FieldDispatcher<String> appVersion;
+  final FieldDispatcher<String> platformVersion;
   final FieldDispatcher<String> url;
   final FieldDispatcher<String> wsUrl;
   final FieldDispatcher<DateTime> wsConnected;
   final FieldDispatcher<DateTime> wsDisconnected;
+  final FieldDispatcher<String> wsError;
   final LoginDispatcher loginCommand;
   final FieldDispatcher<LoginResponse> activeLogin;
   final GetUiSetupMobileApi setupCommand;
@@ -1224,6 +1276,16 @@ class _$ApiActions extends ApiActions {
       : $replace = $options.action<ApiState>('\$replace', (a) => a?.$replace),
         push = PushDispatcher(
             () => $options.stateless<PushDispatcher>('push', (a) => a.push)),
+        appVersion = $options.actionField<String>(
+            'appVersion',
+            (a) => a?.appVersion,
+            (s) => s?.appVersion,
+            (p, b) => p?.appVersion = b),
+        platformVersion = $options.actionField<String>(
+            'platformVersion',
+            (a) => a?.platformVersion,
+            (s) => s?.platformVersion,
+            (p, b) => p?.platformVersion = b),
         url = $options.actionField<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         wsUrl = $options.actionField<String>(
@@ -1238,6 +1300,8 @@ class _$ApiActions extends ApiActions {
             (a) => a?.wsDisconnected,
             (s) => s?.wsDisconnected,
             (p, b) => p?.wsDisconnected = b),
+        wsError = $options.actionField<String>('wsError', (a) => a?.wsError,
+            (s) => s?.wsError, (p, b) => p?.wsError = b),
         loginCommand = LoginDispatcher(() =>
             $options.stateful<
                     CommandState<ApiCommand<LoginRequest>,
@@ -1294,10 +1358,13 @@ class _$ApiActions extends ApiActions {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
+        this.appVersion,
+        this.platformVersion,
         this.url,
         this.wsUrl,
         this.wsConnected,
         this.wsDisconnected,
+        this.wsError,
         this.activeLogin,
         this.activeSetup,
       ]);
@@ -1306,10 +1373,13 @@ class _$ApiActions extends ApiActions {
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     push.$reducer(reducer);
+    appVersion.$reducer(reducer);
+    platformVersion.$reducer(reducer);
     url.$reducer(reducer);
     wsUrl.$reducer(reducer);
     wsConnected.$reducer(reducer);
     wsDisconnected.$reducer(reducer);
+    wsError.$reducer(reducer);
     loginCommand.$reducer(reducer);
     activeLogin.$reducer(reducer);
     setupCommand.$reducer(reducer);
@@ -1411,9 +1481,6 @@ class _$LoginDispatcher extends LoginDispatcher {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
           LoginDispatcher, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
@@ -1423,21 +1490,12 @@ class _$LoginDispatcher extends LoginDispatcher {
           LoginDispatcher, CommandResult<ApiResult<LoginResponse>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-          LoginDispatcher, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
           LoginDispatcher, CommandProgress>> $progress;
 
   _$LoginDispatcher._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<LoginRequest>,
                 ApiResult<LoginResponse>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-                LoginDispatcher, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
                 LoginDispatcher, String>>('\$cancel', (a) => a?.$cancel),
@@ -1455,12 +1513,6 @@ class _$LoginDispatcher extends LoginDispatcher {
                     LoginDispatcher,
                     CommandResult<ApiResult<LoginResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-                LoginDispatcher, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<LoginRequest>, ApiResult<LoginResponse>,
-                LoginDispatcher, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<LoginRequest>,
@@ -1487,12 +1539,9 @@ class _$LoginDispatcher extends LoginDispatcher {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

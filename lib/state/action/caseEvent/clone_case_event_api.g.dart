@@ -32,12 +32,6 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
           ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>,
           CloneCaseEventApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
           ApiCommand<CloneCaseEventApiRequest>,
           ApiResult<CloneCaseEventApiResponse>,
           CloneCaseEventApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CloneCaseEventApiRequest>,
-          ApiResult<CloneCaseEventApiResponse>,
-          CloneCaseEventApi,
           CommandProgress>> $progress;
 
   _$CloneCaseEventApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
                 CommandState<ApiCommand<CloneCaseEventApiRequest>,
                     ApiResult<CloneCaseEventApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CloneCaseEventApiRequest>,
-                ApiResult<CloneCaseEventApiResponse>,
-                CloneCaseEventApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CloneCaseEventApiRequest>,
@@ -101,18 +77,6 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
                     CloneCaseEventApi,
                     CommandResult<ApiResult<CloneCaseEventApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CloneCaseEventApiRequest>,
-                ApiResult<CloneCaseEventApiResponse>,
-                CloneCaseEventApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CloneCaseEventApiRequest>,
-                ApiResult<CloneCaseEventApiResponse>,
-                CloneCaseEventApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CloneCaseEventApiRequest>,
@@ -141,12 +105,9 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

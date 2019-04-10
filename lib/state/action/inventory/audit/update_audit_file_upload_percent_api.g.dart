@@ -30,9 +30,6 @@ class _$UpdateAuditFileUploadPercentApi
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
           ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -48,12 +45,6 @@ class _$UpdateAuditFileUploadPercentApi
           UpdateAuditFileUploadPercentApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-          ApiResult<Empty>, UpdateAuditFileUploadPercentApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
           ApiResult<Empty>,
@@ -64,12 +55,6 @@ class _$UpdateAuditFileUploadPercentApi
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Empty>,
-                UpdateAuditFileUploadPercentApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
@@ -91,18 +76,6 @@ class _$UpdateAuditFileUploadPercentApi
                     UpdateAuditFileUploadPercentApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Empty>,
-                UpdateAuditFileUploadPercentApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
-                ApiResult<Empty>,
-                UpdateAuditFileUploadPercentApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateAuditFileUploadPercentApiRequest>,
@@ -134,12 +107,9 @@ class _$UpdateAuditFileUploadPercentApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

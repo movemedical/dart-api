@@ -27,9 +27,6 @@ class _$AddParticipantsApi extends AddParticipantsApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddParticipantsApiRequest>, ApiResult<Empty>,
-          AddParticipantsApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddParticipantsApiRequest>, ApiResult<Empty>,
           AddParticipantsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$AddParticipantsApi extends AddParticipantsApi {
           AddParticipantsApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddParticipantsApiRequest>, ApiResult<Empty>,
-          AddParticipantsApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddParticipantsApiRequest>, ApiResult<Empty>,
-          AddParticipantsApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddParticipantsApiRequest>, ApiResult<Empty>,
           AddParticipantsApi, CommandProgress>> $progress;
 
   _$AddParticipantsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddParticipantsApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AddParticipantsApiRequest>,
-                ApiResult<Empty>,
-                AddParticipantsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddParticipantsApiRequest>,
@@ -80,18 +65,6 @@ class _$AddParticipantsApi extends AddParticipantsApi {
                     AddParticipantsApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AddParticipantsApiRequest>,
-                ApiResult<Empty>,
-                AddParticipantsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AddParticipantsApiRequest>,
-                ApiResult<Empty>,
-                AddParticipantsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddParticipantsApiRequest>,
@@ -118,12 +91,9 @@ class _$AddParticipantsApi extends AddParticipantsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
           ApiCommand<CreateOrderFromOpenLinesApiRequest>,
           ApiResult<CreateOrderFromOpenLinesApiResponse>,
           CreateOrderFromOpenLinesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrderFromOpenLinesApiRequest>,
-          ApiResult<CreateOrderFromOpenLinesApiResponse>,
-          CreateOrderFromOpenLinesApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
           ApiCommand<CreateOrderFromOpenLinesApiRequest>,
           ApiResult<CreateOrderFromOpenLinesApiResponse>,
           CreateOrderFromOpenLinesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrderFromOpenLinesApiRequest>,
-          ApiResult<CreateOrderFromOpenLinesApiResponse>,
-          CreateOrderFromOpenLinesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateOrderFromOpenLinesApiRequest>,
-          ApiResult<CreateOrderFromOpenLinesApiResponse>,
-          CreateOrderFromOpenLinesApi,
           CommandProgress>> $progress;
 
   _$CreateOrderFromOpenLinesApi._(this.$options)
@@ -76,12 +58,6 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
                 CommandState<ApiCommand<CreateOrderFromOpenLinesApiRequest>,
                     ApiResult<CreateOrderFromOpenLinesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrderFromOpenLinesApiRequest>,
-                ApiResult<CreateOrderFromOpenLinesApiResponse>,
-                CreateOrderFromOpenLinesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateOrderFromOpenLinesApiRequest>,
@@ -103,18 +79,6 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
                     CommandResult<
                         ApiResult<CreateOrderFromOpenLinesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrderFromOpenLinesApiRequest>,
-                ApiResult<CreateOrderFromOpenLinesApiResponse>,
-                CreateOrderFromOpenLinesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateOrderFromOpenLinesApiRequest>,
-                ApiResult<CreateOrderFromOpenLinesApiResponse>,
-                CreateOrderFromOpenLinesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateOrderFromOpenLinesApiRequest>,
@@ -146,12 +110,9 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

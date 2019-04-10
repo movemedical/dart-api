@@ -32,12 +32,6 @@ class _$ListHcrTeamLinksApi extends ListHcrTeamLinksApi {
           ApiCommand<ListHcrTeamLinksApiRequest>,
           ApiResult<ListHcrTeamLinksApiResponse>,
           ListHcrTeamLinksApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrTeamLinksApiRequest>,
-          ApiResult<ListHcrTeamLinksApiResponse>,
-          ListHcrTeamLinksApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListHcrTeamLinksApi extends ListHcrTeamLinksApi {
           ApiCommand<ListHcrTeamLinksApiRequest>,
           ApiResult<ListHcrTeamLinksApiResponse>,
           ListHcrTeamLinksApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrTeamLinksApiRequest>,
-          ApiResult<ListHcrTeamLinksApiResponse>,
-          ListHcrTeamLinksApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrTeamLinksApiRequest>,
-          ApiResult<ListHcrTeamLinksApiResponse>,
-          ListHcrTeamLinksApi,
           CommandProgress>> $progress;
 
   _$ListHcrTeamLinksApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListHcrTeamLinksApi extends ListHcrTeamLinksApi {
                 CommandState<ApiCommand<ListHcrTeamLinksApiRequest>,
                     ApiResult<ListHcrTeamLinksApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrTeamLinksApiRequest>,
-                ApiResult<ListHcrTeamLinksApiResponse>,
-                ListHcrTeamLinksApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListHcrTeamLinksApiRequest>,
@@ -101,18 +77,6 @@ class _$ListHcrTeamLinksApi extends ListHcrTeamLinksApi {
                     ListHcrTeamLinksApi,
                     CommandResult<ApiResult<ListHcrTeamLinksApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrTeamLinksApiRequest>,
-                ApiResult<ListHcrTeamLinksApiResponse>,
-                ListHcrTeamLinksApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrTeamLinksApiRequest>,
-                ApiResult<ListHcrTeamLinksApiResponse>,
-                ListHcrTeamLinksApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListHcrTeamLinksApiRequest>,
@@ -142,12 +106,9 @@ class _$ListHcrTeamLinksApi extends ListHcrTeamLinksApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

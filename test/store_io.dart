@@ -25,6 +25,7 @@ Store<ApiState, ApiStateBuilder, ApiActions> createStore(
               pingInterval: pingInterval),
       middleware: [actions.$createMiddleware()],
       serviceFactory: (store, register) {
+        register(DefaultJsonService(store, store.serializers));
         register(ApiService(store, store.actions));
       });
 }

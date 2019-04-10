@@ -25,9 +25,6 @@ class _$ApproveOrderApi extends ApproveOrderApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-          ApproveOrderApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
           ApproveOrderApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -40,21 +37,12 @@ class _$ApproveOrderApi extends ApproveOrderApi {
           ApproveOrderApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-          ApproveOrderApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-          ApproveOrderApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
           ApproveOrderApi, CommandProgress>> $progress;
 
   _$ApproveOrderApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ApproveOrderApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-                ApproveOrderApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
                 ApproveOrderApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -72,12 +60,6 @@ class _$ApproveOrderApi extends ApproveOrderApi {
                     ApproveOrderApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-                ApproveOrderApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-                ApproveOrderApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ApproveOrderApiRequest>,
@@ -104,12 +86,9 @@ class _$ApproveOrderApi extends ApproveOrderApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

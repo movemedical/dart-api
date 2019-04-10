@@ -29,9 +29,6 @@ class _$AddToSearchLocationsCacheApi extends AddToSearchLocationsCacheApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddToSearchLocationsCacheApiRequest>,
-          ApiResult<Empty>, AddToSearchLocationsCacheApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddToSearchLocationsCacheApiRequest>,
           ApiResult<Empty>, AddToSearchLocationsCacheApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$AddToSearchLocationsCacheApi extends AddToSearchLocationsCacheApi {
           AddToSearchLocationsCacheApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddToSearchLocationsCacheApiRequest>,
-          ApiResult<Empty>, AddToSearchLocationsCacheApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddToSearchLocationsCacheApiRequest>,
-          ApiResult<Empty>, AddToSearchLocationsCacheApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddToSearchLocationsCacheApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$AddToSearchLocationsCacheApi extends AddToSearchLocationsCacheApi {
       : $replace = $options.action<
             CommandState<ApiCommand<AddToSearchLocationsCacheApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AddToSearchLocationsCacheApiRequest>,
-                ApiResult<Empty>,
-                AddToSearchLocationsCacheApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddToSearchLocationsCacheApiRequest>,
@@ -88,18 +73,6 @@ class _$AddToSearchLocationsCacheApi extends AddToSearchLocationsCacheApi {
                     AddToSearchLocationsCacheApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AddToSearchLocationsCacheApiRequest>,
-                ApiResult<Empty>,
-                AddToSearchLocationsCacheApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AddToSearchLocationsCacheApiRequest>,
-                ApiResult<Empty>,
-                AddToSearchLocationsCacheApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddToSearchLocationsCacheApiRequest>,
@@ -129,12 +102,9 @@ class _$AddToSearchLocationsCacheApi extends AddToSearchLocationsCacheApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

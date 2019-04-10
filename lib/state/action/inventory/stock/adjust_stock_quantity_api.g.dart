@@ -27,9 +27,6 @@ class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Empty>, AdjustStockQuantityApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
           ApiResult<Empty>, AdjustStockQuantityApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,24 +42,12 @@ class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Empty>, AdjustStockQuantityApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
-          ApiResult<Empty>, AdjustStockQuantityApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AdjustStockQuantityApiRequest>,
           ApiResult<Empty>, AdjustStockQuantityApi, CommandProgress>> $progress;
 
   _$AdjustStockQuantityApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AdjustStockQuantityApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Empty>,
-                AdjustStockQuantityApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
@@ -83,18 +68,6 @@ class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
                     AdjustStockQuantityApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Empty>,
-                AdjustStockQuantityApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AdjustStockQuantityApiRequest>,
-                ApiResult<Empty>,
-                AdjustStockQuantityApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AdjustStockQuantityApiRequest>,
@@ -122,12 +95,9 @@ class _$AdjustStockQuantityApi extends AdjustStockQuantityApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

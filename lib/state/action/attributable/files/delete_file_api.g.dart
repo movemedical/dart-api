@@ -25,9 +25,6 @@ class _$DeleteFileApi extends DeleteFileApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
-          DeleteFileApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
           DeleteFileApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$DeleteFileApi extends DeleteFileApi {
           DeleteFileApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
-          DeleteFileApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
-          DeleteFileApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
           DeleteFileApi, CommandProgress>> $progress;
 
   _$DeleteFileApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteFileApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
-                DeleteFileApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
                 DeleteFileApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$DeleteFileApi extends DeleteFileApi {
                     DeleteFileApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
-                DeleteFileApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<DeleteFileApiRequest>, ApiResult<Empty>,
-                DeleteFileApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteFileApiRequest>,
@@ -101,12 +83,9 @@ class _$DeleteFileApi extends DeleteFileApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

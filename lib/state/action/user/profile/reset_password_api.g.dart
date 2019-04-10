@@ -26,9 +26,6 @@ class _$ResetPasswordApi extends ResetPasswordApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
-          ResetPasswordApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -41,24 +38,12 @@ class _$ResetPasswordApi extends ResetPasswordApi {
           ResetPasswordApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
-          ResetPasswordApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
-          ResetPasswordApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ResetPasswordApiRequest>, ApiResult<Empty>,
           ResetPasswordApi, CommandProgress>> $progress;
 
   _$ResetPasswordApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ResetPasswordApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Empty>,
-                ResetPasswordApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ResetPasswordApiRequest>,
@@ -79,18 +64,6 @@ class _$ResetPasswordApi extends ResetPasswordApi {
                     ResetPasswordApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Empty>,
-                ResetPasswordApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ResetPasswordApiRequest>,
-                ApiResult<Empty>,
-                ResetPasswordApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ResetPasswordApiRequest>,
@@ -117,12 +90,9 @@ class _$ResetPasswordApi extends ResetPasswordApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -28,9 +28,6 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<Empty>, RegisterMobileDeviceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
           RegisterMobileDeviceApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RegisterMobileDeviceApiRequest>,
-          ApiResult<Empty>, RegisterMobileDeviceApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<RegisterMobileDeviceApiRequest>,
           ApiResult<Empty>,
@@ -61,12 +52,6 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
       : $replace = $options.action<
             CommandState<ApiCommand<RegisterMobileDeviceApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Empty>,
-                RegisterMobileDeviceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
@@ -87,18 +72,6 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
                     RegisterMobileDeviceApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Empty>,
-                RegisterMobileDeviceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RegisterMobileDeviceApiRequest>,
-                ApiResult<Empty>,
-                RegisterMobileDeviceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RegisterMobileDeviceApiRequest>,
@@ -126,12 +99,9 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

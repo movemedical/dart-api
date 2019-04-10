@@ -27,9 +27,6 @@ class _$SaveAeToOrgUnitApi extends SaveAeToOrgUnitApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveAeToOrgUnitApiRequest>, ApiResult<Empty>,
-          SaveAeToOrgUnitApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveAeToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveAeToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$SaveAeToOrgUnitApi extends SaveAeToOrgUnitApi {
           SaveAeToOrgUnitApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveAeToOrgUnitApiRequest>, ApiResult<Empty>,
-          SaveAeToOrgUnitApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveAeToOrgUnitApiRequest>, ApiResult<Empty>,
-          SaveAeToOrgUnitApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveAeToOrgUnitApiRequest>, ApiResult<Empty>,
           SaveAeToOrgUnitApi, CommandProgress>> $progress;
 
   _$SaveAeToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveAeToOrgUnitApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<SaveAeToOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                SaveAeToOrgUnitApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveAeToOrgUnitApiRequest>,
@@ -80,18 +65,6 @@ class _$SaveAeToOrgUnitApi extends SaveAeToOrgUnitApi {
                     SaveAeToOrgUnitApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<SaveAeToOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                SaveAeToOrgUnitApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<SaveAeToOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                SaveAeToOrgUnitApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveAeToOrgUnitApiRequest>,
@@ -118,12 +91,9 @@ class _$SaveAeToOrgUnitApi extends SaveAeToOrgUnitApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

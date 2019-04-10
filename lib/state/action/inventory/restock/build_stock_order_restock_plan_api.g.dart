@@ -32,12 +32,6 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
           ApiCommand<BuildStockOrderRestockPlanApiRequest>,
           ApiResult<BuildStockOrderRestockPlanApiResponse>,
           BuildStockOrderRestockPlanApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildStockOrderRestockPlanApiRequest>,
-          ApiResult<BuildStockOrderRestockPlanApiResponse>,
-          BuildStockOrderRestockPlanApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
           ApiCommand<BuildStockOrderRestockPlanApiRequest>,
           ApiResult<BuildStockOrderRestockPlanApiResponse>,
           BuildStockOrderRestockPlanApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildStockOrderRestockPlanApiRequest>,
-          ApiResult<BuildStockOrderRestockPlanApiResponse>,
-          BuildStockOrderRestockPlanApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<BuildStockOrderRestockPlanApiRequest>,
-          ApiResult<BuildStockOrderRestockPlanApiResponse>,
-          BuildStockOrderRestockPlanApi,
           CommandProgress>> $progress;
 
   _$BuildStockOrderRestockPlanApi._(this.$options)
@@ -76,12 +58,6 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
                 CommandState<ApiCommand<BuildStockOrderRestockPlanApiRequest>,
                     ApiResult<BuildStockOrderRestockPlanApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<BuildStockOrderRestockPlanApiRequest>,
-                ApiResult<BuildStockOrderRestockPlanApiResponse>,
-                BuildStockOrderRestockPlanApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<BuildStockOrderRestockPlanApiRequest>,
@@ -103,18 +79,6 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
                     CommandResult<
                         ApiResult<BuildStockOrderRestockPlanApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<BuildStockOrderRestockPlanApiRequest>,
-                ApiResult<BuildStockOrderRestockPlanApiResponse>,
-                BuildStockOrderRestockPlanApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<BuildStockOrderRestockPlanApiRequest>,
-                ApiResult<BuildStockOrderRestockPlanApiResponse>,
-                BuildStockOrderRestockPlanApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<BuildStockOrderRestockPlanApiRequest>,
@@ -146,12 +110,9 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

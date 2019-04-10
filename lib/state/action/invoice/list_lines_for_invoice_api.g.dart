@@ -32,12 +32,6 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
           ApiCommand<ListLinesForInvoiceApiRequest>,
           ApiResult<ListLinesForInvoiceApiResponse>,
           ListLinesForInvoiceApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListLinesForInvoiceApiRequest>,
-          ApiResult<ListLinesForInvoiceApiResponse>,
-          ListLinesForInvoiceApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
           ApiCommand<ListLinesForInvoiceApiRequest>,
           ApiResult<ListLinesForInvoiceApiResponse>,
           ListLinesForInvoiceApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListLinesForInvoiceApiRequest>,
-          ApiResult<ListLinesForInvoiceApiResponse>,
-          ListLinesForInvoiceApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListLinesForInvoiceApiRequest>,
-          ApiResult<ListLinesForInvoiceApiResponse>,
-          ListLinesForInvoiceApi,
           CommandProgress>> $progress;
 
   _$ListLinesForInvoiceApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
                 CommandState<ApiCommand<ListLinesForInvoiceApiRequest>,
                     ApiResult<ListLinesForInvoiceApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListLinesForInvoiceApiRequest>,
-                ApiResult<ListLinesForInvoiceApiResponse>,
-                ListLinesForInvoiceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListLinesForInvoiceApiRequest>,
@@ -101,18 +77,6 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
                     ListLinesForInvoiceApi,
                     CommandResult<ApiResult<ListLinesForInvoiceApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListLinesForInvoiceApiRequest>,
-                ApiResult<ListLinesForInvoiceApiResponse>,
-                ListLinesForInvoiceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListLinesForInvoiceApiRequest>,
-                ApiResult<ListLinesForInvoiceApiResponse>,
-                ListLinesForInvoiceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListLinesForInvoiceApiRequest>,
@@ -142,12 +106,9 @@ class _$ListLinesForInvoiceApi extends ListLinesForInvoiceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

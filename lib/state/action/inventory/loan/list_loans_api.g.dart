@@ -29,9 +29,6 @@ class _$ListLoansApi extends ListLoansApi {
           ApiResult<ListLoansApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ListLoansApiRequest>,
-          ApiResult<ListLoansApiResponse>, ListLoansApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListLoansApiRequest>,
           ApiResult<ListLoansApiResponse>, ListLoansApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$ListLoansApi extends ListLoansApi {
           ListLoansApi,
           CommandResult<ApiResult<ListLoansApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ListLoansApiRequest>,
-          ApiResult<ListLoansApiResponse>, ListLoansApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListLoansApiRequest>,
-          ApiResult<ListLoansApiResponse>, ListLoansApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ListLoansApiRequest>,
           ApiResult<ListLoansApiResponse>,
@@ -63,12 +54,6 @@ class _$ListLoansApi extends ListLoansApi {
                 CommandState<ApiCommand<ListLoansApiRequest>,
                     ApiResult<ListLoansApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListLoansApiRequest>,
-                ApiResult<ListLoansApiResponse>,
-                ListLoansApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListLoansApiRequest>,
@@ -89,18 +74,6 @@ class _$ListLoansApi extends ListLoansApi {
                     ListLoansApi,
                     CommandResult<ApiResult<ListLoansApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListLoansApiRequest>,
-                ApiResult<ListLoansApiResponse>,
-                ListLoansApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListLoansApiRequest>,
-                ApiResult<ListLoansApiResponse>,
-                ListLoansApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListLoansApiRequest>,
@@ -128,12 +101,9 @@ class _$ListLoansApi extends ListLoansApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -24,9 +24,6 @@ class _$SkipErpApi extends SkipErpApi {
       CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
-          SkipErpApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
           SkipErpApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
@@ -36,21 +33,12 @@ class _$SkipErpApi extends SkipErpApi {
           SkipErpApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
-          SkipErpApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
-          SkipErpApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
           SkipErpApi, CommandProgress>> $progress;
 
   _$SkipErpApi._(this.$options)
       : $replace = $options.action<
                 CommandState<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
-                SkipErpApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                 SkipErpApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -62,12 +50,6 @@ class _$SkipErpApi extends SkipErpApi {
                 CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
                     SkipErpApi, CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
-                SkipErpApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<SkipErpApiRequest>, ApiResult<Empty>,
-                SkipErpApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SkipErpApiRequest>,
@@ -92,12 +74,9 @@ class _$SkipErpApi extends SkipErpApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

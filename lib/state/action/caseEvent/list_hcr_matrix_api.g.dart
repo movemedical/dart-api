@@ -32,12 +32,6 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
           ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>,
           ListHcrMatrixApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
           ApiCommand<ListHcrMatrixApiRequest>,
           ApiResult<ListHcrMatrixApiResponse>,
           ListHcrMatrixApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrMatrixApiRequest>,
-          ApiResult<ListHcrMatrixApiResponse>,
-          ListHcrMatrixApi,
           CommandProgress>> $progress;
 
   _$ListHcrMatrixApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
                 CommandState<ApiCommand<ListHcrMatrixApiRequest>,
                     ApiResult<ListHcrMatrixApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrMatrixApiRequest>,
-                ApiResult<ListHcrMatrixApiResponse>,
-                ListHcrMatrixApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListHcrMatrixApiRequest>,
@@ -101,18 +77,6 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
                     ListHcrMatrixApi,
                     CommandResult<ApiResult<ListHcrMatrixApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrMatrixApiRequest>,
-                ApiResult<ListHcrMatrixApiResponse>,
-                ListHcrMatrixApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrMatrixApiRequest>,
-                ApiResult<ListHcrMatrixApiResponse>,
-                ListHcrMatrixApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListHcrMatrixApiRequest>,
@@ -141,12 +105,9 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

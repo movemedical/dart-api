@@ -33,12 +33,6 @@ class _$ListItemCategoriesToBeCountedApi
           ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
           ApiResult<ListItemCategoriesToBeCountedApiResponse>,
           ListItemCategoriesToBeCountedApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
-          ApiResult<ListItemCategoriesToBeCountedApiResponse>,
-          ListItemCategoriesToBeCountedApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -59,18 +53,6 @@ class _$ListItemCategoriesToBeCountedApi
           ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
           ApiResult<ListItemCategoriesToBeCountedApiResponse>,
           ListItemCategoriesToBeCountedApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
-          ApiResult<ListItemCategoriesToBeCountedApiResponse>,
-          ListItemCategoriesToBeCountedApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
-          ApiResult<ListItemCategoriesToBeCountedApiResponse>,
-          ListItemCategoriesToBeCountedApi,
           CommandProgress>> $progress;
 
   _$ListItemCategoriesToBeCountedApi._(this.$options)
@@ -79,12 +61,6 @@ class _$ListItemCategoriesToBeCountedApi
                     ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
                     ApiResult<ListItemCategoriesToBeCountedApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
-                ApiResult<ListItemCategoriesToBeCountedApiResponse>,
-                ListItemCategoriesToBeCountedApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
@@ -107,18 +83,6 @@ class _$ListItemCategoriesToBeCountedApi
                     CommandResult<
                         ApiResult<ListItemCategoriesToBeCountedApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
-                ApiResult<ListItemCategoriesToBeCountedApiResponse>,
-                ListItemCategoriesToBeCountedApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
-                ApiResult<ListItemCategoriesToBeCountedApiResponse>,
-                ListItemCategoriesToBeCountedApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListItemCategoriesToBeCountedApiRequest>,
@@ -150,12 +114,9 @@ class _$ListItemCategoriesToBeCountedApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

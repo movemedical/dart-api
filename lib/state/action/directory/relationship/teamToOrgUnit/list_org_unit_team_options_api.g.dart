@@ -32,12 +32,6 @@ class _$ListOrgUnitTeamOptionsApi extends ListOrgUnitTeamOptionsApi {
           ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
           ApiResult<ListOrgUnitTeamOptionsApiResponse>,
           ListOrgUnitTeamOptionsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
-          ApiResult<ListOrgUnitTeamOptionsApiResponse>,
-          ListOrgUnitTeamOptionsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListOrgUnitTeamOptionsApi extends ListOrgUnitTeamOptionsApi {
           ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
           ApiResult<ListOrgUnitTeamOptionsApiResponse>,
           ListOrgUnitTeamOptionsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
-          ApiResult<ListOrgUnitTeamOptionsApiResponse>,
-          ListOrgUnitTeamOptionsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
-          ApiResult<ListOrgUnitTeamOptionsApiResponse>,
-          ListOrgUnitTeamOptionsApi,
           CommandProgress>> $progress;
 
   _$ListOrgUnitTeamOptionsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListOrgUnitTeamOptionsApi extends ListOrgUnitTeamOptionsApi {
                 CommandState<ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
                     ApiResult<ListOrgUnitTeamOptionsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
-                ApiResult<ListOrgUnitTeamOptionsApiResponse>,
-                ListOrgUnitTeamOptionsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
@@ -102,18 +78,6 @@ class _$ListOrgUnitTeamOptionsApi extends ListOrgUnitTeamOptionsApi {
                     CommandResult<
                         ApiResult<ListOrgUnitTeamOptionsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
-                ApiResult<ListOrgUnitTeamOptionsApiResponse>,
-                ListOrgUnitTeamOptionsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
-                ApiResult<ListOrgUnitTeamOptionsApiResponse>,
-                ListOrgUnitTeamOptionsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListOrgUnitTeamOptionsApiRequest>,
@@ -144,12 +108,9 @@ class _$ListOrgUnitTeamOptionsApi extends ListOrgUnitTeamOptionsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

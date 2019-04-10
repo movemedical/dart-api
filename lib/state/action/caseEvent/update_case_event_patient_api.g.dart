@@ -29,9 +29,6 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>, UpdateCaseEventPatientApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseEventPatientApiRequest>,
           ApiResult<Empty>, UpdateCaseEventPatientApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
           UpdateCaseEventPatientApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>, UpdateCaseEventPatientApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>, UpdateCaseEventPatientApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPatientApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseEventPatientApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseEventPatientApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseEventPatientApiRequest>,
@@ -88,18 +73,6 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
                     UpdateCaseEventPatientApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseEventPatientApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseEventPatientApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseEventPatientApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseEventPatientApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseEventPatientApiRequest>,
@@ -128,12 +101,9 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

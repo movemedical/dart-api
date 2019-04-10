@@ -28,9 +28,6 @@ class _$ListSSOApi extends ListSSOApi {
           ApiResult<ListSSOApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>, ListSSOApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSSOApiRequest>,
           ApiResult<ListSSOApiResponse>, ListSSOApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$ListSSOApi extends ListSSOApi {
           ListSSOApi,
           CommandResult<ApiResult<ListSSOApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>, ListSSOApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ListSSOApiRequest>,
-          ApiResult<ListSSOApiResponse>, ListSSOApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ListSSOApiRequest>,
           ApiResult<ListSSOApiResponse>,
@@ -62,12 +53,6 @@ class _$ListSSOApi extends ListSSOApi {
                 CommandState<ApiCommand<ListSSOApiRequest>,
                     ApiResult<ListSSOApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListSSOApiRequest>,
-                ApiResult<ListSSOApiResponse>,
-                ListSSOApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListSSOApiRequest>,
@@ -88,18 +73,6 @@ class _$ListSSOApi extends ListSSOApi {
                     ListSSOApi,
                     CommandResult<ApiResult<ListSSOApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListSSOApiRequest>,
-                ApiResult<ListSSOApiResponse>,
-                ListSSOApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListSSOApiRequest>,
-                ApiResult<ListSSOApiResponse>,
-                ListSSOApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListSSOApiRequest>,
@@ -126,12 +99,9 @@ class _$ListSSOApi extends ListSSOApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

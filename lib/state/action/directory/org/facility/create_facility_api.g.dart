@@ -32,12 +32,6 @@ class _$CreateFacilityApi extends CreateFacilityApi {
           ApiCommand<CreateFacilityApiRequest>,
           ApiResult<CreateFacilityApiResponse>,
           CreateFacilityApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateFacilityApiRequest>,
-          ApiResult<CreateFacilityApiResponse>,
-          CreateFacilityApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreateFacilityApi extends CreateFacilityApi {
           ApiCommand<CreateFacilityApiRequest>,
           ApiResult<CreateFacilityApiResponse>,
           CreateFacilityApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateFacilityApiRequest>,
-          ApiResult<CreateFacilityApiResponse>,
-          CreateFacilityApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreateFacilityApiRequest>,
-          ApiResult<CreateFacilityApiResponse>,
-          CreateFacilityApi,
           CommandProgress>> $progress;
 
   _$CreateFacilityApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreateFacilityApi extends CreateFacilityApi {
                 CommandState<ApiCommand<CreateFacilityApiRequest>,
                     ApiResult<CreateFacilityApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateFacilityApiRequest>,
-                ApiResult<CreateFacilityApiResponse>,
-                CreateFacilityApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateFacilityApiRequest>,
@@ -101,18 +77,6 @@ class _$CreateFacilityApi extends CreateFacilityApi {
                     CreateFacilityApi,
                     CommandResult<ApiResult<CreateFacilityApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateFacilityApiRequest>,
-                ApiResult<CreateFacilityApiResponse>,
-                CreateFacilityApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateFacilityApiRequest>,
-                ApiResult<CreateFacilityApiResponse>,
-                CreateFacilityApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateFacilityApiRequest>,
@@ -141,12 +105,9 @@ class _$CreateFacilityApi extends CreateFacilityApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

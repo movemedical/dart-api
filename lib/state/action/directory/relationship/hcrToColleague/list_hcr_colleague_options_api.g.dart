@@ -32,12 +32,6 @@ class _$ListHcrColleagueOptionsApi extends ListHcrColleagueOptionsApi {
           ApiCommand<ListHcrColleagueOptionsApiRequest>,
           ApiResult<ListHcrColleagueOptionsApiResponse>,
           ListHcrColleagueOptionsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrColleagueOptionsApiRequest>,
-          ApiResult<ListHcrColleagueOptionsApiResponse>,
-          ListHcrColleagueOptionsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListHcrColleagueOptionsApi extends ListHcrColleagueOptionsApi {
           ApiCommand<ListHcrColleagueOptionsApiRequest>,
           ApiResult<ListHcrColleagueOptionsApiResponse>,
           ListHcrColleagueOptionsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrColleagueOptionsApiRequest>,
-          ApiResult<ListHcrColleagueOptionsApiResponse>,
-          ListHcrColleagueOptionsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListHcrColleagueOptionsApiRequest>,
-          ApiResult<ListHcrColleagueOptionsApiResponse>,
-          ListHcrColleagueOptionsApi,
           CommandProgress>> $progress;
 
   _$ListHcrColleagueOptionsApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListHcrColleagueOptionsApi extends ListHcrColleagueOptionsApi {
                 CommandState<ApiCommand<ListHcrColleagueOptionsApiRequest>,
                     ApiResult<ListHcrColleagueOptionsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrColleagueOptionsApiRequest>,
-                ApiResult<ListHcrColleagueOptionsApiResponse>,
-                ListHcrColleagueOptionsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListHcrColleagueOptionsApiRequest>,
@@ -103,18 +79,6 @@ class _$ListHcrColleagueOptionsApi extends ListHcrColleagueOptionsApi {
                     CommandResult<
                         ApiResult<ListHcrColleagueOptionsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrColleagueOptionsApiRequest>,
-                ApiResult<ListHcrColleagueOptionsApiResponse>,
-                ListHcrColleagueOptionsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListHcrColleagueOptionsApiRequest>,
-                ApiResult<ListHcrColleagueOptionsApiResponse>,
-                ListHcrColleagueOptionsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListHcrColleagueOptionsApiRequest>,
@@ -146,12 +110,9 @@ class _$ListHcrColleagueOptionsApi extends ListHcrColleagueOptionsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

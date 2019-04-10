@@ -32,12 +32,6 @@ class _$ListImportLogFilesApi extends ListImportLogFilesApi {
           ApiCommand<ListImportLogFilesApiRequest>,
           ApiResult<ListImportLogFilesApiResponse>,
           ListImportLogFilesApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListImportLogFilesApiRequest>,
-          ApiResult<ListImportLogFilesApiResponse>,
-          ListImportLogFilesApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListImportLogFilesApi extends ListImportLogFilesApi {
           ApiCommand<ListImportLogFilesApiRequest>,
           ApiResult<ListImportLogFilesApiResponse>,
           ListImportLogFilesApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListImportLogFilesApiRequest>,
-          ApiResult<ListImportLogFilesApiResponse>,
-          ListImportLogFilesApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListImportLogFilesApiRequest>,
-          ApiResult<ListImportLogFilesApiResponse>,
-          ListImportLogFilesApi,
           CommandProgress>> $progress;
 
   _$ListImportLogFilesApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListImportLogFilesApi extends ListImportLogFilesApi {
                 CommandState<ApiCommand<ListImportLogFilesApiRequest>,
                     ApiResult<ListImportLogFilesApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListImportLogFilesApiRequest>,
-                ApiResult<ListImportLogFilesApiResponse>,
-                ListImportLogFilesApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListImportLogFilesApiRequest>,
@@ -101,18 +77,6 @@ class _$ListImportLogFilesApi extends ListImportLogFilesApi {
                     ListImportLogFilesApi,
                     CommandResult<ApiResult<ListImportLogFilesApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListImportLogFilesApiRequest>,
-                ApiResult<ListImportLogFilesApiResponse>,
-                ListImportLogFilesApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListImportLogFilesApiRequest>,
-                ApiResult<ListImportLogFilesApiResponse>,
-                ListImportLogFilesApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListImportLogFilesApiRequest>,
@@ -142,12 +106,9 @@ class _$ListImportLogFilesApi extends ListImportLogFilesApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
           ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>,
           GetAdjustmentApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
           ApiCommand<GetAdjustmentApiRequest>,
           ApiResult<GetAdjustmentApiResponse>,
           GetAdjustmentApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetAdjustmentApiRequest>,
-          ApiResult<GetAdjustmentApiResponse>,
-          GetAdjustmentApi,
           CommandProgress>> $progress;
 
   _$GetAdjustmentApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
                 CommandState<ApiCommand<GetAdjustmentApiRequest>,
                     ApiResult<GetAdjustmentApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetAdjustmentApiRequest>,
-                ApiResult<GetAdjustmentApiResponse>,
-                GetAdjustmentApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetAdjustmentApiRequest>,
@@ -101,18 +77,6 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
                     GetAdjustmentApi,
                     CommandResult<ApiResult<GetAdjustmentApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetAdjustmentApiRequest>,
-                ApiResult<GetAdjustmentApiResponse>,
-                GetAdjustmentApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetAdjustmentApiRequest>,
-                ApiResult<GetAdjustmentApiResponse>,
-                GetAdjustmentApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetAdjustmentApiRequest>,
@@ -141,12 +105,9 @@ class _$GetAdjustmentApi extends GetAdjustmentApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

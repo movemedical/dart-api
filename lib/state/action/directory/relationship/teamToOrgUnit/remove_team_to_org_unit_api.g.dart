@@ -27,9 +27,6 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>, RemoveTeamToOrgUnitApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
           ApiResult<Empty>, RemoveTeamToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,24 +42,12 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>, RemoveTeamToOrgUnitApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>, RemoveTeamToOrgUnitApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
           ApiResult<Empty>, RemoveTeamToOrgUnitApi, CommandProgress>> $progress;
 
   _$RemoveTeamToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                RemoveTeamToOrgUnitApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveTeamToOrgUnitApiRequest>,
@@ -83,18 +68,6 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
                     RemoveTeamToOrgUnitApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                RemoveTeamToOrgUnitApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                RemoveTeamToOrgUnitApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveTeamToOrgUnitApiRequest>,
@@ -122,12 +95,9 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

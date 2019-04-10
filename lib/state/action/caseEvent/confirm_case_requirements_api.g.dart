@@ -29,9 +29,6 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
           ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
           ConfirmCaseRequirementsApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Empty>,
-                ConfirmCaseRequirementsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
@@ -88,18 +73,6 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
                     ConfirmCaseRequirementsApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Empty>,
-                ConfirmCaseRequirementsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Empty>,
-                ConfirmCaseRequirementsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
@@ -128,12 +101,9 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -29,9 +29,6 @@ class _$CreatePhysicianForFacilityApi extends CreatePhysicianForFacilityApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreatePhysicianForFacilityApiRequest>,
-          ApiResult<Empty>, CreatePhysicianForFacilityApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePhysicianForFacilityApiRequest>,
           ApiResult<Empty>, CreatePhysicianForFacilityApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$CreatePhysicianForFacilityApi extends CreatePhysicianForFacilityApi {
           CreatePhysicianForFacilityApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePhysicianForFacilityApiRequest>,
-          ApiResult<Empty>, CreatePhysicianForFacilityApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePhysicianForFacilityApiRequest>,
-          ApiResult<Empty>, CreatePhysicianForFacilityApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreatePhysicianForFacilityApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$CreatePhysicianForFacilityApi extends CreatePhysicianForFacilityApi {
       : $replace = $options.action<
             CommandState<ApiCommand<CreatePhysicianForFacilityApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePhysicianForFacilityApiRequest>,
-                ApiResult<Empty>,
-                CreatePhysicianForFacilityApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreatePhysicianForFacilityApiRequest>,
@@ -88,18 +73,6 @@ class _$CreatePhysicianForFacilityApi extends CreatePhysicianForFacilityApi {
                     CreatePhysicianForFacilityApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePhysicianForFacilityApiRequest>,
-                ApiResult<Empty>,
-                CreatePhysicianForFacilityApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePhysicianForFacilityApiRequest>,
-                ApiResult<Empty>,
-                CreatePhysicianForFacilityApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreatePhysicianForFacilityApiRequest>,
@@ -129,12 +102,9 @@ class _$CreatePhysicianForFacilityApi extends CreatePhysicianForFacilityApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

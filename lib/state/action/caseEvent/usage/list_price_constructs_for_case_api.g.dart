@@ -32,12 +32,6 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
           ApiCommand<ListPriceConstructsForCaseApiRequest>,
           ApiResult<ListPriceConstructsForCaseApiResponse>,
           ListPriceConstructsForCaseApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPriceConstructsForCaseApiRequest>,
-          ApiResult<ListPriceConstructsForCaseApiResponse>,
-          ListPriceConstructsForCaseApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
           ApiCommand<ListPriceConstructsForCaseApiRequest>,
           ApiResult<ListPriceConstructsForCaseApiResponse>,
           ListPriceConstructsForCaseApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPriceConstructsForCaseApiRequest>,
-          ApiResult<ListPriceConstructsForCaseApiResponse>,
-          ListPriceConstructsForCaseApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListPriceConstructsForCaseApiRequest>,
-          ApiResult<ListPriceConstructsForCaseApiResponse>,
-          ListPriceConstructsForCaseApi,
           CommandProgress>> $progress;
 
   _$ListPriceConstructsForCaseApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
                 CommandState<ApiCommand<ListPriceConstructsForCaseApiRequest>,
                     ApiResult<ListPriceConstructsForCaseApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListPriceConstructsForCaseApiRequest>,
-                ApiResult<ListPriceConstructsForCaseApiResponse>,
-                ListPriceConstructsForCaseApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListPriceConstructsForCaseApiRequest>,
@@ -103,18 +79,6 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
                     CommandResult<
                         ApiResult<ListPriceConstructsForCaseApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListPriceConstructsForCaseApiRequest>,
-                ApiResult<ListPriceConstructsForCaseApiResponse>,
-                ListPriceConstructsForCaseApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListPriceConstructsForCaseApiRequest>,
-                ApiResult<ListPriceConstructsForCaseApiResponse>,
-                ListPriceConstructsForCaseApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListPriceConstructsForCaseApiRequest>,
@@ -146,12 +110,9 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

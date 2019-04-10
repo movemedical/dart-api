@@ -32,12 +32,6 @@ class _$ListAeTeamOptionsApi extends ListAeTeamOptionsApi {
           ApiCommand<ListAeTeamOptionsApiRequest>,
           ApiResult<ListAeTeamOptionsApiResponse>,
           ListAeTeamOptionsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAeTeamOptionsApiRequest>,
-          ApiResult<ListAeTeamOptionsApiResponse>,
-          ListAeTeamOptionsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListAeTeamOptionsApi extends ListAeTeamOptionsApi {
           ApiCommand<ListAeTeamOptionsApiRequest>,
           ApiResult<ListAeTeamOptionsApiResponse>,
           ListAeTeamOptionsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAeTeamOptionsApiRequest>,
-          ApiResult<ListAeTeamOptionsApiResponse>,
-          ListAeTeamOptionsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListAeTeamOptionsApiRequest>,
-          ApiResult<ListAeTeamOptionsApiResponse>,
-          ListAeTeamOptionsApi,
           CommandProgress>> $progress;
 
   _$ListAeTeamOptionsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListAeTeamOptionsApi extends ListAeTeamOptionsApi {
                 CommandState<ApiCommand<ListAeTeamOptionsApiRequest>,
                     ApiResult<ListAeTeamOptionsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListAeTeamOptionsApiRequest>,
-                ApiResult<ListAeTeamOptionsApiResponse>,
-                ListAeTeamOptionsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListAeTeamOptionsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListAeTeamOptionsApi extends ListAeTeamOptionsApi {
                     ListAeTeamOptionsApi,
                     CommandResult<ApiResult<ListAeTeamOptionsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAeTeamOptionsApiRequest>,
-                ApiResult<ListAeTeamOptionsApiResponse>,
-                ListAeTeamOptionsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListAeTeamOptionsApiRequest>,
-                ApiResult<ListAeTeamOptionsApiResponse>,
-                ListAeTeamOptionsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListAeTeamOptionsApiRequest>,
@@ -142,12 +106,9 @@ class _$ListAeTeamOptionsApi extends ListAeTeamOptionsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

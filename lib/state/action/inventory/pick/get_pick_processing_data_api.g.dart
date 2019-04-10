@@ -32,12 +32,6 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
           ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>,
           GetPickProcessingDataApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
           ApiCommand<GetPickProcessingDataApiRequest>,
           ApiResult<GetPickProcessingDataApiResponse>,
           GetPickProcessingDataApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetPickProcessingDataApiRequest>,
-          ApiResult<GetPickProcessingDataApiResponse>,
-          GetPickProcessingDataApi,
           CommandProgress>> $progress;
 
   _$GetPickProcessingDataApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
                 CommandState<ApiCommand<GetPickProcessingDataApiRequest>,
                     ApiResult<GetPickProcessingDataApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetPickProcessingDataApiRequest>,
-                ApiResult<GetPickProcessingDataApiResponse>,
-                GetPickProcessingDataApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetPickProcessingDataApiRequest>,
@@ -102,18 +78,6 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
                     CommandResult<
                         ApiResult<GetPickProcessingDataApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetPickProcessingDataApiRequest>,
-                ApiResult<GetPickProcessingDataApiResponse>,
-                GetPickProcessingDataApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetPickProcessingDataApiRequest>,
-                ApiResult<GetPickProcessingDataApiResponse>,
-                GetPickProcessingDataApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetPickProcessingDataApiRequest>,
@@ -143,12 +107,9 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

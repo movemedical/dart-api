@@ -27,9 +27,6 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
-          DeleteHoldReasonApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
           DeleteHoldReasonApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
           DeleteHoldReasonApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
-          DeleteHoldReasonApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
-          DeleteHoldReasonApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
           DeleteHoldReasonApi, CommandProgress>> $progress;
 
   _$DeleteHoldReasonApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteHoldReasonApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteHoldReasonApiRequest>,
-                ApiResult<Empty>,
-                DeleteHoldReasonApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHoldReasonApiRequest>,
@@ -80,18 +65,6 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
                     DeleteHoldReasonApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteHoldReasonApiRequest>,
-                ApiResult<Empty>,
-                DeleteHoldReasonApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<DeleteHoldReasonApiRequest>,
-                ApiResult<Empty>,
-                DeleteHoldReasonApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHoldReasonApiRequest>,
@@ -118,12 +91,9 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

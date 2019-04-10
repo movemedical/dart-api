@@ -35,12 +35,6 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
           ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
           UpdateCaseRequirementsDeliveryInfoApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-          UpdateCaseRequirementsDeliveryInfoApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -63,18 +57,6 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
           ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
           ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
           UpdateCaseRequirementsDeliveryInfoApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-          UpdateCaseRequirementsDeliveryInfoApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-          ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-          UpdateCaseRequirementsDeliveryInfoApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseRequirementsDeliveryInfoApi._(this.$options)
@@ -83,12 +65,6 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
                     ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
                     ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                UpdateCaseRequirementsDeliveryInfoApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
@@ -113,18 +89,6 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
                         ApiResult<
                             UpdateCaseRequirementsDeliveryInfoApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                UpdateCaseRequirementsDeliveryInfoApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
-                ApiResult<UpdateCaseRequirementsDeliveryInfoApiResponse>,
-                UpdateCaseRequirementsDeliveryInfoApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseRequirementsDeliveryInfoApiRequest>,
@@ -156,12 +120,9 @@ class _$UpdateCaseRequirementsDeliveryInfoApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

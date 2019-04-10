@@ -29,9 +29,6 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>, UpdateCustomerQualifierApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCustomerQualifierApiRequest>,
           ApiResult<Empty>, UpdateCustomerQualifierApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
           UpdateCustomerQualifierApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>, UpdateCustomerQualifierApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>, UpdateCustomerQualifierApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCustomerQualifierApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCustomerQualifierApiRequest>,
-                ApiResult<Empty>,
-                UpdateCustomerQualifierApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCustomerQualifierApiRequest>,
@@ -88,18 +73,6 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
                     UpdateCustomerQualifierApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCustomerQualifierApiRequest>,
-                ApiResult<Empty>,
-                UpdateCustomerQualifierApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCustomerQualifierApiRequest>,
-                ApiResult<Empty>,
-                UpdateCustomerQualifierApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCustomerQualifierApiRequest>,
@@ -128,12 +101,9 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

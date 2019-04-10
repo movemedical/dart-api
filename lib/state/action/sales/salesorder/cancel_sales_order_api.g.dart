@@ -27,9 +27,6 @@ class _$CancelSalesOrderApi extends CancelSalesOrderApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CancelSalesOrderApiRequest>, ApiResult<Empty>,
-          CancelSalesOrderApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelSalesOrderApiRequest>, ApiResult<Empty>,
           CancelSalesOrderApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$CancelSalesOrderApi extends CancelSalesOrderApi {
           CancelSalesOrderApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CancelSalesOrderApiRequest>, ApiResult<Empty>,
-          CancelSalesOrderApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelSalesOrderApiRequest>, ApiResult<Empty>,
-          CancelSalesOrderApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelSalesOrderApiRequest>, ApiResult<Empty>,
           CancelSalesOrderApi, CommandProgress>> $progress;
 
   _$CancelSalesOrderApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CancelSalesOrderApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CancelSalesOrderApiRequest>,
-                ApiResult<Empty>,
-                CancelSalesOrderApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CancelSalesOrderApiRequest>,
@@ -80,18 +65,6 @@ class _$CancelSalesOrderApi extends CancelSalesOrderApi {
                     CancelSalesOrderApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CancelSalesOrderApiRequest>,
-                ApiResult<Empty>,
-                CancelSalesOrderApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CancelSalesOrderApiRequest>,
-                ApiResult<Empty>,
-                CancelSalesOrderApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CancelSalesOrderApiRequest>,
@@ -118,12 +91,9 @@ class _$CancelSalesOrderApi extends CancelSalesOrderApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

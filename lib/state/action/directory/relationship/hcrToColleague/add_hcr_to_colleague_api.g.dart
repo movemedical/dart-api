@@ -27,9 +27,6 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
-          AddHcrToColleagueApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
           AddHcrToColleagueApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
-          AddHcrToColleagueApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
-          AddHcrToColleagueApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
           AddHcrToColleagueApi, CommandProgress>> $progress;
 
   _$AddHcrToColleagueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Empty>,
-                AddHcrToColleagueApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
@@ -80,18 +65,6 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
                     AddHcrToColleagueApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Empty>,
-                AddHcrToColleagueApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Empty>,
-                AddHcrToColleagueApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
@@ -118,12 +91,9 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

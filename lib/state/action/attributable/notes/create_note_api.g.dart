@@ -29,9 +29,6 @@ class _$CreateNoteApi extends CreateNoteApi {
           ApiResult<CreateNoteApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>, CreateNoteApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>, CreateNoteApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$CreateNoteApi extends CreateNoteApi {
           CreateNoteApi,
           CommandResult<ApiResult<CreateNoteApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>, CreateNoteApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateNoteApiRequest>,
-          ApiResult<CreateNoteApiResponse>, CreateNoteApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateNoteApiRequest>,
           ApiResult<CreateNoteApiResponse>,
@@ -63,12 +54,6 @@ class _$CreateNoteApi extends CreateNoteApi {
                 CommandState<ApiCommand<CreateNoteApiRequest>,
                     ApiResult<CreateNoteApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateNoteApiRequest>,
-                ApiResult<CreateNoteApiResponse>,
-                CreateNoteApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateNoteApiRequest>,
@@ -89,18 +74,6 @@ class _$CreateNoteApi extends CreateNoteApi {
                     CreateNoteApi,
                     CommandResult<ApiResult<CreateNoteApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateNoteApiRequest>,
-                ApiResult<CreateNoteApiResponse>,
-                CreateNoteApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateNoteApiRequest>,
-                ApiResult<CreateNoteApiResponse>,
-                CreateNoteApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateNoteApiRequest>,
@@ -129,12 +102,9 @@ class _$CreateNoteApi extends CreateNoteApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

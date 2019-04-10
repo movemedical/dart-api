@@ -26,9 +26,6 @@ class _$FinalizeUsageApi extends FinalizeUsageApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<FinalizeUsageApiRequest>, ApiResult<Empty>,
-          FinalizeUsageApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeUsageApiRequest>, ApiResult<Empty>,
           FinalizeUsageApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -41,24 +38,12 @@ class _$FinalizeUsageApi extends FinalizeUsageApi {
           FinalizeUsageApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<FinalizeUsageApiRequest>, ApiResult<Empty>,
-          FinalizeUsageApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeUsageApiRequest>, ApiResult<Empty>,
-          FinalizeUsageApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeUsageApiRequest>, ApiResult<Empty>,
           FinalizeUsageApi, CommandProgress>> $progress;
 
   _$FinalizeUsageApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<FinalizeUsageApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<FinalizeUsageApiRequest>,
-                ApiResult<Empty>,
-                FinalizeUsageApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<FinalizeUsageApiRequest>,
@@ -79,18 +64,6 @@ class _$FinalizeUsageApi extends FinalizeUsageApi {
                     FinalizeUsageApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<FinalizeUsageApiRequest>,
-                ApiResult<Empty>,
-                FinalizeUsageApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<FinalizeUsageApiRequest>,
-                ApiResult<Empty>,
-                FinalizeUsageApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<FinalizeUsageApiRequest>,
@@ -117,12 +90,9 @@ class _$FinalizeUsageApi extends FinalizeUsageApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

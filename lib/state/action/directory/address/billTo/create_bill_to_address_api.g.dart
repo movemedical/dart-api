@@ -27,9 +27,6 @@ class _$CreateBillToAddressApi extends CreateBillToAddressApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateBillToAddressApiRequest>,
-          ApiResult<Empty>, CreateBillToAddressApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateBillToAddressApiRequest>,
           ApiResult<Empty>, CreateBillToAddressApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,24 +42,12 @@ class _$CreateBillToAddressApi extends CreateBillToAddressApi {
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateBillToAddressApiRequest>,
-          ApiResult<Empty>, CreateBillToAddressApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateBillToAddressApiRequest>,
-          ApiResult<Empty>, CreateBillToAddressApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateBillToAddressApiRequest>,
           ApiResult<Empty>, CreateBillToAddressApi, CommandProgress>> $progress;
 
   _$CreateBillToAddressApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreateBillToAddressApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateBillToAddressApiRequest>,
-                ApiResult<Empty>,
-                CreateBillToAddressApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateBillToAddressApiRequest>,
@@ -83,18 +68,6 @@ class _$CreateBillToAddressApi extends CreateBillToAddressApi {
                     CreateBillToAddressApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateBillToAddressApiRequest>,
-                ApiResult<Empty>,
-                CreateBillToAddressApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateBillToAddressApiRequest>,
-                ApiResult<Empty>,
-                CreateBillToAddressApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateBillToAddressApiRequest>,
@@ -122,12 +95,9 @@ class _$CreateBillToAddressApi extends CreateBillToAddressApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

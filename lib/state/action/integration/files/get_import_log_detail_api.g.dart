@@ -32,12 +32,6 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
           ApiCommand<GetImportLogDetailApiRequest>,
           ApiResult<GetImportLogDetailApiResponse>,
           GetImportLogDetailApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogDetailApiRequest>,
-          ApiResult<GetImportLogDetailApiResponse>,
-          GetImportLogDetailApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
           ApiCommand<GetImportLogDetailApiRequest>,
           ApiResult<GetImportLogDetailApiResponse>,
           GetImportLogDetailApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogDetailApiRequest>,
-          ApiResult<GetImportLogDetailApiResponse>,
-          GetImportLogDetailApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetImportLogDetailApiRequest>,
-          ApiResult<GetImportLogDetailApiResponse>,
-          GetImportLogDetailApi,
           CommandProgress>> $progress;
 
   _$GetImportLogDetailApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
                 CommandState<ApiCommand<GetImportLogDetailApiRequest>,
                     ApiResult<GetImportLogDetailApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogDetailApiRequest>,
-                ApiResult<GetImportLogDetailApiResponse>,
-                GetImportLogDetailApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetImportLogDetailApiRequest>,
@@ -101,18 +77,6 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
                     GetImportLogDetailApi,
                     CommandResult<ApiResult<GetImportLogDetailApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogDetailApiRequest>,
-                ApiResult<GetImportLogDetailApiResponse>,
-                GetImportLogDetailApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetImportLogDetailApiRequest>,
-                ApiResult<GetImportLogDetailApiResponse>,
-                GetImportLogDetailApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetImportLogDetailApiRequest>,
@@ -142,12 +106,9 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

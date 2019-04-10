@@ -26,9 +26,6 @@ class _$CompletePicksApi extends CompletePicksApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
-          CompletePicksApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -41,24 +38,12 @@ class _$CompletePicksApi extends CompletePicksApi {
           CompletePicksApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
-          CompletePicksApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
-          CompletePicksApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CompletePicksApiRequest>, ApiResult<Empty>,
           CompletePicksApi, CommandProgress>> $progress;
 
   _$CompletePicksApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CompletePicksApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CompletePicksApiRequest>,
-                ApiResult<Empty>,
-                CompletePicksApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CompletePicksApiRequest>,
@@ -79,18 +64,6 @@ class _$CompletePicksApi extends CompletePicksApi {
                     CompletePicksApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CompletePicksApiRequest>,
-                ApiResult<Empty>,
-                CompletePicksApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CompletePicksApiRequest>,
-                ApiResult<Empty>,
-                CompletePicksApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CompletePicksApiRequest>,
@@ -117,12 +90,9 @@ class _$CompletePicksApi extends CompletePicksApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

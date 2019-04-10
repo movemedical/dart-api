@@ -25,9 +25,6 @@ class _$UpdateTeamApi extends UpdateTeamApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
-          UpdateTeamApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
           UpdateTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$UpdateTeamApi extends UpdateTeamApi {
           UpdateTeamApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
-          UpdateTeamApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
-          UpdateTeamApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
           UpdateTeamApi, CommandProgress>> $progress;
 
   _$UpdateTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateTeamApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
-                UpdateTeamApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
                 UpdateTeamApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$UpdateTeamApi extends UpdateTeamApi {
                     UpdateTeamApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
-                UpdateTeamApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<UpdateTeamApiRequest>, ApiResult<Empty>,
-                UpdateTeamApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateTeamApiRequest>,
@@ -101,12 +83,9 @@ class _$UpdateTeamApi extends UpdateTeamApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

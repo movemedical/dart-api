@@ -32,12 +32,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
           ApiCommand<ListProceduresForSearchApiRequest>,
           ApiResult<ListProceduresForSearchApiResponse>,
           ListProceduresForSearchApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProceduresForSearchApiRequest>,
-          ApiResult<ListProceduresForSearchApiResponse>,
-          ListProceduresForSearchApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
           ApiCommand<ListProceduresForSearchApiRequest>,
           ApiResult<ListProceduresForSearchApiResponse>,
           ListProceduresForSearchApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProceduresForSearchApiRequest>,
-          ApiResult<ListProceduresForSearchApiResponse>,
-          ListProceduresForSearchApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProceduresForSearchApiRequest>,
-          ApiResult<ListProceduresForSearchApiResponse>,
-          ListProceduresForSearchApi,
           CommandProgress>> $progress;
 
   _$ListProceduresForSearchApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
                 CommandState<ApiCommand<ListProceduresForSearchApiRequest>,
                     ApiResult<ListProceduresForSearchApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListProceduresForSearchApiRequest>,
-                ApiResult<ListProceduresForSearchApiResponse>,
-                ListProceduresForSearchApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListProceduresForSearchApiRequest>,
@@ -103,18 +79,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
                     CommandResult<
                         ApiResult<ListProceduresForSearchApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListProceduresForSearchApiRequest>,
-                ApiResult<ListProceduresForSearchApiResponse>,
-                ListProceduresForSearchApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListProceduresForSearchApiRequest>,
-                ApiResult<ListProceduresForSearchApiResponse>,
-                ListProceduresForSearchApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListProceduresForSearchApiRequest>,
@@ -146,12 +110,9 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

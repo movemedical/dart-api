@@ -32,12 +32,6 @@ class _$GetItemPricingApi extends GetItemPricingApi {
           ApiCommand<GetItemPricingApiRequest>,
           ApiResult<GetItemPricingApiResponse>,
           GetItemPricingApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetItemPricingApiRequest>,
-          ApiResult<GetItemPricingApiResponse>,
-          GetItemPricingApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetItemPricingApi extends GetItemPricingApi {
           ApiCommand<GetItemPricingApiRequest>,
           ApiResult<GetItemPricingApiResponse>,
           GetItemPricingApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetItemPricingApiRequest>,
-          ApiResult<GetItemPricingApiResponse>,
-          GetItemPricingApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetItemPricingApiRequest>,
-          ApiResult<GetItemPricingApiResponse>,
-          GetItemPricingApi,
           CommandProgress>> $progress;
 
   _$GetItemPricingApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetItemPricingApi extends GetItemPricingApi {
                 CommandState<ApiCommand<GetItemPricingApiRequest>,
                     ApiResult<GetItemPricingApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetItemPricingApiRequest>,
-                ApiResult<GetItemPricingApiResponse>,
-                GetItemPricingApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetItemPricingApiRequest>,
@@ -101,18 +77,6 @@ class _$GetItemPricingApi extends GetItemPricingApi {
                     GetItemPricingApi,
                     CommandResult<ApiResult<GetItemPricingApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetItemPricingApiRequest>,
-                ApiResult<GetItemPricingApiResponse>,
-                GetItemPricingApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetItemPricingApiRequest>,
-                ApiResult<GetItemPricingApiResponse>,
-                GetItemPricingApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetItemPricingApiRequest>,
@@ -141,12 +105,9 @@ class _$GetItemPricingApi extends GetItemPricingApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

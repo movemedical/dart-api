@@ -28,9 +28,6 @@ class _$GetZoneApi extends GetZoneApi {
           ApiResult<GetZoneApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetZoneApiRequest>,
-          ApiResult<GetZoneApiResponse>, GetZoneApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetZoneApiRequest>,
           ApiResult<GetZoneApiResponse>, GetZoneApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -45,12 +42,6 @@ class _$GetZoneApi extends GetZoneApi {
           GetZoneApi,
           CommandResult<ApiResult<GetZoneApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<GetZoneApiRequest>,
-          ApiResult<GetZoneApiResponse>, GetZoneApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetZoneApiRequest>,
-          ApiResult<GetZoneApiResponse>, GetZoneApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<GetZoneApiRequest>,
           ApiResult<GetZoneApiResponse>,
@@ -62,12 +53,6 @@ class _$GetZoneApi extends GetZoneApi {
                 CommandState<ApiCommand<GetZoneApiRequest>,
                     ApiResult<GetZoneApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetZoneApiRequest>,
-                ApiResult<GetZoneApiResponse>,
-                GetZoneApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetZoneApiRequest>,
@@ -88,18 +73,6 @@ class _$GetZoneApi extends GetZoneApi {
                     GetZoneApi,
                     CommandResult<ApiResult<GetZoneApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetZoneApiRequest>,
-                ApiResult<GetZoneApiResponse>,
-                GetZoneApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetZoneApiRequest>,
-                ApiResult<GetZoneApiResponse>,
-                GetZoneApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetZoneApiRequest>,
@@ -126,12 +99,9 @@ class _$GetZoneApi extends GetZoneApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

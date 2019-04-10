@@ -32,12 +32,6 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
           ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>,
           ProcessKitTrayRestockPlanApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-          ProcessKitTrayRestockPlanApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
           ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
           ApiResult<ProcessKitTrayRestockPlanApiResponse>,
           ProcessKitTrayRestockPlanApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-          ProcessKitTrayRestockPlanApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-          ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-          ProcessKitTrayRestockPlanApi,
           CommandProgress>> $progress;
 
   _$ProcessKitTrayRestockPlanApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
                 CommandState<ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
                     ApiResult<ProcessKitTrayRestockPlanApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                ProcessKitTrayRestockPlanApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
@@ -103,18 +79,6 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
                     CommandResult<
                         ApiResult<ProcessKitTrayRestockPlanApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                ProcessKitTrayRestockPlanApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
-                ApiResult<ProcessKitTrayRestockPlanApiResponse>,
-                ProcessKitTrayRestockPlanApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ProcessKitTrayRestockPlanApiRequest>,
@@ -146,12 +110,9 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

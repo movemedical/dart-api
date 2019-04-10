@@ -34,12 +34,6 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>,
-          RemoveItemCategoryToSalesOrgUnitApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -59,30 +53,12 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
           ApiResult<Empty>,
           RemoveItemCategoryToSalesOrgUnitApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>,
-          RemoveItemCategoryToSalesOrgUnitApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>,
-          RemoveItemCategoryToSalesOrgUnitApi,
           CommandProgress>> $progress;
 
   _$RemoveItemCategoryToSalesOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                RemoveItemCategoryToSalesOrgUnitApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
@@ -105,18 +81,6 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
                     RemoveItemCategoryToSalesOrgUnitApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                RemoveItemCategoryToSalesOrgUnitApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Empty>,
-                RemoveItemCategoryToSalesOrgUnitApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
@@ -148,12 +112,9 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

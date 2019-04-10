@@ -25,9 +25,6 @@ class _$CancelPickApi extends CancelPickApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
-          CancelPickApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
           CancelPickApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$CancelPickApi extends CancelPickApi {
           CancelPickApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
-          CancelPickApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
-          CancelPickApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
           CancelPickApi, CommandProgress>> $progress;
 
   _$CancelPickApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CancelPickApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
-                CancelPickApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
                 CancelPickApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$CancelPickApi extends CancelPickApi {
                     CancelPickApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
-                CancelPickApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<CancelPickApiRequest>, ApiResult<Empty>,
-                CancelPickApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CancelPickApiRequest>,
@@ -101,12 +83,9 @@ class _$CancelPickApi extends CancelPickApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
           ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>,
           ListShipmentsForDashboardApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>,
-          ListShipmentsForDashboardApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
           ApiCommand<ListShipmentsForDashboardApiRequest>,
           ApiResult<ListShipmentsForDashboardApiResponse>,
           ListShipmentsForDashboardApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>,
-          ListShipmentsForDashboardApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListShipmentsForDashboardApiRequest>,
-          ApiResult<ListShipmentsForDashboardApiResponse>,
-          ListShipmentsForDashboardApi,
           CommandProgress>> $progress;
 
   _$ListShipmentsForDashboardApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
                 CommandState<ApiCommand<ListShipmentsForDashboardApiRequest>,
                     ApiResult<ListShipmentsForDashboardApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipmentsForDashboardApiRequest>,
-                ApiResult<ListShipmentsForDashboardApiResponse>,
-                ListShipmentsForDashboardApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListShipmentsForDashboardApiRequest>,
@@ -103,18 +79,6 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
                     CommandResult<
                         ApiResult<ListShipmentsForDashboardApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipmentsForDashboardApiRequest>,
-                ApiResult<ListShipmentsForDashboardApiResponse>,
-                ListShipmentsForDashboardApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListShipmentsForDashboardApiRequest>,
-                ApiResult<ListShipmentsForDashboardApiResponse>,
-                ListShipmentsForDashboardApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListShipmentsForDashboardApiRequest>,
@@ -146,12 +110,9 @@ class _$ListShipmentsForDashboardApi extends ListShipmentsForDashboardApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
           ApiCommand<ListUnitOfMeasureApiRequest>,
           ApiResult<ListUnitOfMeasureApiResponse>,
           ListUnitOfMeasureApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUnitOfMeasureApiRequest>,
-          ApiResult<ListUnitOfMeasureApiResponse>,
-          ListUnitOfMeasureApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
           ApiCommand<ListUnitOfMeasureApiRequest>,
           ApiResult<ListUnitOfMeasureApiResponse>,
           ListUnitOfMeasureApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUnitOfMeasureApiRequest>,
-          ApiResult<ListUnitOfMeasureApiResponse>,
-          ListUnitOfMeasureApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListUnitOfMeasureApiRequest>,
-          ApiResult<ListUnitOfMeasureApiResponse>,
-          ListUnitOfMeasureApi,
           CommandProgress>> $progress;
 
   _$ListUnitOfMeasureApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
                 CommandState<ApiCommand<ListUnitOfMeasureApiRequest>,
                     ApiResult<ListUnitOfMeasureApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListUnitOfMeasureApiRequest>,
-                ApiResult<ListUnitOfMeasureApiResponse>,
-                ListUnitOfMeasureApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListUnitOfMeasureApiRequest>,
@@ -101,18 +77,6 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
                     ListUnitOfMeasureApi,
                     CommandResult<ApiResult<ListUnitOfMeasureApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListUnitOfMeasureApiRequest>,
-                ApiResult<ListUnitOfMeasureApiResponse>,
-                ListUnitOfMeasureApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListUnitOfMeasureApiRequest>,
-                ApiResult<ListUnitOfMeasureApiResponse>,
-                ListUnitOfMeasureApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListUnitOfMeasureApiRequest>,
@@ -142,12 +106,9 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

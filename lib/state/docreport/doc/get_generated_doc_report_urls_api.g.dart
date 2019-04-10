@@ -32,12 +32,6 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
           ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>,
           GetGeneratedDocReportUrlsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-          GetGeneratedDocReportUrlsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
           ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
           ApiResult<GetGeneratedDocReportUrlsApiResponse>,
           GetGeneratedDocReportUrlsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-          GetGeneratedDocReportUrlsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-          ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-          GetGeneratedDocReportUrlsApi,
           CommandProgress>> $progress;
 
   _$GetGeneratedDocReportUrlsApi._(this.$options)
@@ -76,12 +58,6 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
                 CommandState<ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
                     ApiResult<GetGeneratedDocReportUrlsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                GetGeneratedDocReportUrlsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
@@ -103,18 +79,6 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
                     CommandResult<
                         ApiResult<GetGeneratedDocReportUrlsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                GetGeneratedDocReportUrlsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
-                ApiResult<GetGeneratedDocReportUrlsApiResponse>,
-                GetGeneratedDocReportUrlsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetGeneratedDocReportUrlsApiRequest>,
@@ -146,12 +110,9 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

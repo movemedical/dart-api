@@ -26,9 +26,6 @@ class _$CreateDelegateApi extends CreateDelegateApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Empty>,
-          CreateDelegateApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Empty>,
           CreateDelegateApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -41,24 +38,12 @@ class _$CreateDelegateApi extends CreateDelegateApi {
           CreateDelegateApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Empty>,
-          CreateDelegateApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Empty>,
-          CreateDelegateApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDelegateApiRequest>, ApiResult<Empty>,
           CreateDelegateApi, CommandProgress>> $progress;
 
   _$CreateDelegateApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreateDelegateApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDelegateApiRequest>,
-                ApiResult<Empty>,
-                CreateDelegateApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateDelegateApiRequest>,
@@ -79,18 +64,6 @@ class _$CreateDelegateApi extends CreateDelegateApi {
                     CreateDelegateApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDelegateApiRequest>,
-                ApiResult<Empty>,
-                CreateDelegateApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDelegateApiRequest>,
-                ApiResult<Empty>,
-                CreateDelegateApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateDelegateApiRequest>,
@@ -117,12 +90,9 @@ class _$CreateDelegateApi extends CreateDelegateApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

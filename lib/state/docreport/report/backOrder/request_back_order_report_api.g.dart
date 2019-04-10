@@ -32,12 +32,6 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
           ApiCommand<RequestBackOrderReportApiRequest>,
           ApiResult<RequestBackOrderReportApiResponse>,
           RequestBackOrderReportApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestBackOrderReportApiRequest>,
-          ApiResult<RequestBackOrderReportApiResponse>,
-          RequestBackOrderReportApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
           ApiCommand<RequestBackOrderReportApiRequest>,
           ApiResult<RequestBackOrderReportApiResponse>,
           RequestBackOrderReportApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestBackOrderReportApiRequest>,
-          ApiResult<RequestBackOrderReportApiResponse>,
-          RequestBackOrderReportApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestBackOrderReportApiRequest>,
-          ApiResult<RequestBackOrderReportApiResponse>,
-          RequestBackOrderReportApi,
           CommandProgress>> $progress;
 
   _$RequestBackOrderReportApi._(this.$options)
@@ -75,12 +57,6 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
                 CommandState<ApiCommand<RequestBackOrderReportApiRequest>,
                     ApiResult<RequestBackOrderReportApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestBackOrderReportApiRequest>,
-                ApiResult<RequestBackOrderReportApiResponse>,
-                RequestBackOrderReportApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestBackOrderReportApiRequest>,
@@ -102,18 +78,6 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
                     CommandResult<
                         ApiResult<RequestBackOrderReportApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestBackOrderReportApiRequest>,
-                ApiResult<RequestBackOrderReportApiResponse>,
-                RequestBackOrderReportApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestBackOrderReportApiRequest>,
-                ApiResult<RequestBackOrderReportApiResponse>,
-                RequestBackOrderReportApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestBackOrderReportApiRequest>,
@@ -144,12 +108,9 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$ListConversationsApi extends ListConversationsApi {
           ApiCommand<ListConversationsApiRequest>,
           ApiResult<ListConversationsApiResponse>,
           ListConversationsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListConversationsApiRequest>,
-          ApiResult<ListConversationsApiResponse>,
-          ListConversationsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ListConversationsApi extends ListConversationsApi {
           ApiCommand<ListConversationsApiRequest>,
           ApiResult<ListConversationsApiResponse>,
           ListConversationsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListConversationsApiRequest>,
-          ApiResult<ListConversationsApiResponse>,
-          ListConversationsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListConversationsApiRequest>,
-          ApiResult<ListConversationsApiResponse>,
-          ListConversationsApi,
           CommandProgress>> $progress;
 
   _$ListConversationsApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ListConversationsApi extends ListConversationsApi {
                 CommandState<ApiCommand<ListConversationsApiRequest>,
                     ApiResult<ListConversationsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListConversationsApiRequest>,
-                ApiResult<ListConversationsApiResponse>,
-                ListConversationsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListConversationsApiRequest>,
@@ -101,18 +77,6 @@ class _$ListConversationsApi extends ListConversationsApi {
                     ListConversationsApi,
                     CommandResult<ApiResult<ListConversationsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListConversationsApiRequest>,
-                ApiResult<ListConversationsApiResponse>,
-                ListConversationsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListConversationsApiRequest>,
-                ApiResult<ListConversationsApiResponse>,
-                ListConversationsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListConversationsApiRequest>,
@@ -142,12 +106,9 @@ class _$ListConversationsApi extends ListConversationsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

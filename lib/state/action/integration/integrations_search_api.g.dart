@@ -32,12 +32,6 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
           ApiCommand<IntegrationsSearchApiRequest>,
           ApiResult<IntegrationsSearchApiResponse>,
           IntegrationsSearchApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<IntegrationsSearchApiRequest>,
-          ApiResult<IntegrationsSearchApiResponse>,
-          IntegrationsSearchApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
           ApiCommand<IntegrationsSearchApiRequest>,
           ApiResult<IntegrationsSearchApiResponse>,
           IntegrationsSearchApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<IntegrationsSearchApiRequest>,
-          ApiResult<IntegrationsSearchApiResponse>,
-          IntegrationsSearchApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<IntegrationsSearchApiRequest>,
-          ApiResult<IntegrationsSearchApiResponse>,
-          IntegrationsSearchApi,
           CommandProgress>> $progress;
 
   _$IntegrationsSearchApi._(this.$options)
@@ -75,12 +57,6 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
                 CommandState<ApiCommand<IntegrationsSearchApiRequest>,
                     ApiResult<IntegrationsSearchApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<IntegrationsSearchApiRequest>,
-                ApiResult<IntegrationsSearchApiResponse>,
-                IntegrationsSearchApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<IntegrationsSearchApiRequest>,
@@ -101,18 +77,6 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
                     IntegrationsSearchApi,
                     CommandResult<ApiResult<IntegrationsSearchApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<IntegrationsSearchApiRequest>,
-                ApiResult<IntegrationsSearchApiResponse>,
-                IntegrationsSearchApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<IntegrationsSearchApiRequest>,
-                ApiResult<IntegrationsSearchApiResponse>,
-                IntegrationsSearchApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<IntegrationsSearchApiRequest>,
@@ -142,12 +106,9 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

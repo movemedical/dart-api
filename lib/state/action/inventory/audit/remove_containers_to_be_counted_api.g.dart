@@ -29,9 +29,6 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Empty>, RemoveContainersToBeCountedApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Empty>, RemoveContainersToBeCountedApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
           RemoveContainersToBeCountedApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Empty>, RemoveContainersToBeCountedApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveContainersToBeCountedApiRequest>,
-          ApiResult<Empty>, RemoveContainersToBeCountedApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveContainersToBeCountedApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveContainersToBeCountedApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                ApiResult<Empty>,
-                RemoveContainersToBeCountedApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveContainersToBeCountedApiRequest>,
@@ -89,18 +74,6 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
                     RemoveContainersToBeCountedApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                ApiResult<Empty>,
-                RemoveContainersToBeCountedApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RemoveContainersToBeCountedApiRequest>,
-                ApiResult<Empty>,
-                RemoveContainersToBeCountedApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveContainersToBeCountedApiRequest>,
@@ -132,12 +105,9 @@ class _$RemoveContainersToBeCountedApi extends RemoveContainersToBeCountedApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

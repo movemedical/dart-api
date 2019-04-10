@@ -24,9 +24,6 @@ class _$UpdateHcrApi extends UpdateHcrApi {
       CommandState<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
-          UpdateHcrApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
@@ -36,21 +33,12 @@ class _$UpdateHcrApi extends UpdateHcrApi {
           UpdateHcrApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
-          UpdateHcrApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
-          UpdateHcrApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
           UpdateHcrApi, CommandProgress>> $progress;
 
   _$UpdateHcrApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateHcrApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
-                UpdateHcrApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
                 UpdateHcrApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -68,12 +56,6 @@ class _$UpdateHcrApi extends UpdateHcrApi {
                     UpdateHcrApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
-                UpdateHcrApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<UpdateHcrApiRequest>, ApiResult<Empty>,
-                UpdateHcrApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateHcrApiRequest>,
@@ -100,12 +82,9 @@ class _$UpdateHcrApi extends UpdateHcrApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

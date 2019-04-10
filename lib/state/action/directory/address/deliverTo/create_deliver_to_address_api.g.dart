@@ -29,9 +29,6 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Empty>, CreateDeliverToAddressApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDeliverToAddressApiRequest>,
           ApiResult<Empty>, CreateDeliverToAddressApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
           CreateDeliverToAddressApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Empty>, CreateDeliverToAddressApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateDeliverToAddressApiRequest>,
-          ApiResult<Empty>, CreateDeliverToAddressApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateDeliverToAddressApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
       : $replace = $options.action<
             CommandState<ApiCommand<CreateDeliverToAddressApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDeliverToAddressApiRequest>,
-                ApiResult<Empty>,
-                CreateDeliverToAddressApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateDeliverToAddressApiRequest>,
@@ -88,18 +73,6 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
                     CreateDeliverToAddressApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDeliverToAddressApiRequest>,
-                ApiResult<Empty>,
-                CreateDeliverToAddressApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreateDeliverToAddressApiRequest>,
-                ApiResult<Empty>,
-                CreateDeliverToAddressApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateDeliverToAddressApiRequest>,
@@ -128,12 +101,9 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

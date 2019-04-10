@@ -32,12 +32,6 @@ class _$ListProcedureBizUnitOptionsApi extends ListProcedureBizUnitOptionsApi {
           ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
           ApiResult<ListProcedureBizUnitOptionsApiResponse>,
           ListProcedureBizUnitOptionsApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
-          ApiResult<ListProcedureBizUnitOptionsApiResponse>,
-          ListProcedureBizUnitOptionsApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListProcedureBizUnitOptionsApi extends ListProcedureBizUnitOptionsApi {
           ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
           ApiResult<ListProcedureBizUnitOptionsApiResponse>,
           ListProcedureBizUnitOptionsApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
-          ApiResult<ListProcedureBizUnitOptionsApiResponse>,
-          ListProcedureBizUnitOptionsApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
-          ApiResult<ListProcedureBizUnitOptionsApiResponse>,
-          ListProcedureBizUnitOptionsApi,
           CommandProgress>> $progress;
 
   _$ListProcedureBizUnitOptionsApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListProcedureBizUnitOptionsApi extends ListProcedureBizUnitOptionsApi {
                 CommandState<ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
                     ApiResult<ListProcedureBizUnitOptionsApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
-                ApiResult<ListProcedureBizUnitOptionsApiResponse>,
-                ListProcedureBizUnitOptionsApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
@@ -104,18 +80,6 @@ class _$ListProcedureBizUnitOptionsApi extends ListProcedureBizUnitOptionsApi {
                     CommandResult<
                         ApiResult<ListProcedureBizUnitOptionsApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
-                ApiResult<ListProcedureBizUnitOptionsApiResponse>,
-                ListProcedureBizUnitOptionsApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
-                ApiResult<ListProcedureBizUnitOptionsApiResponse>,
-                ListProcedureBizUnitOptionsApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListProcedureBizUnitOptionsApiRequest>,
@@ -147,12 +111,9 @@ class _$ListProcedureBizUnitOptionsApi extends ListProcedureBizUnitOptionsApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -27,9 +27,6 @@ class _$GetHcrApi extends GetHcrApi {
           ApiResult<GetHcrApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetHcrApiRequest>, ApiResult<GetHcrApiResponse>,
-          GetHcrApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetHcrApiRequest>, ApiResult<GetHcrApiResponse>,
           GetHcrApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetHcrApiRequest>, ApiResult<GetHcrApiResponse>,
@@ -39,24 +36,12 @@ class _$GetHcrApi extends GetHcrApi {
           GetHcrApi, CommandResult<ApiResult<GetHcrApiResponse>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetHcrApiRequest>, ApiResult<GetHcrApiResponse>,
-          GetHcrApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetHcrApiRequest>, ApiResult<GetHcrApiResponse>,
-          GetHcrApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetHcrApiRequest>, ApiResult<GetHcrApiResponse>,
           GetHcrApi, CommandProgress>> $progress;
 
   _$GetHcrApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<GetHcrApiRequest>,
                 ApiResult<GetHcrApiResponse>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetHcrApiRequest>,
-                ApiResult<GetHcrApiResponse>,
-                GetHcrApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetHcrApiRequest>,
@@ -77,18 +62,6 @@ class _$GetHcrApi extends GetHcrApi {
                     GetHcrApi,
                     CommandResult<ApiResult<GetHcrApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetHcrApiRequest>,
-                ApiResult<GetHcrApiResponse>,
-                GetHcrApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetHcrApiRequest>,
-                ApiResult<GetHcrApiResponse>,
-                GetHcrApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetHcrApiRequest>,
@@ -115,12 +88,9 @@ class _$GetHcrApi extends GetHcrApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -25,9 +25,6 @@ class _$DeleteNoteApi extends DeleteNoteApi {
       $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-          DeleteNoteApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
           DeleteNoteApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
@@ -37,21 +34,12 @@ class _$DeleteNoteApi extends DeleteNoteApi {
           DeleteNoteApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-          DeleteNoteApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-          DeleteNoteApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
           DeleteNoteApi, CommandProgress>> $progress;
 
   _$DeleteNoteApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteNoteApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-                DeleteNoteApi, String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
                 DeleteNoteApi, String>>('\$cancel', (a) => a?.$cancel),
@@ -69,12 +57,6 @@ class _$DeleteNoteApi extends DeleteNoteApi {
                     DeleteNoteApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-                DeleteNoteApi, String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-                DeleteNoteApi, String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteNoteApiRequest>,
@@ -101,12 +83,9 @@ class _$DeleteNoteApi extends DeleteNoteApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

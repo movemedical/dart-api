@@ -27,9 +27,6 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
-          AssignKitContainerApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
           AssignKitContainerApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -42,24 +39,12 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
           AssignKitContainerApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
-          AssignKitContainerApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
-          AssignKitContainerApi, String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
           AssignKitContainerApi, CommandProgress>> $progress;
 
   _$AssignKitContainerApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AssignKitContainerApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Empty>,
-                AssignKitContainerApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AssignKitContainerApiRequest>,
@@ -80,18 +65,6 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
                     AssignKitContainerApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Empty>,
-                AssignKitContainerApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Empty>,
-                AssignKitContainerApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AssignKitContainerApiRequest>,
@@ -119,12 +92,9 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -32,12 +32,6 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
           ApiCommand<ProcessVerifyApiRequest>,
           ApiResult<ProcessVerifyApiResponse>,
           ProcessVerifyApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessVerifyApiRequest>,
-          ApiResult<ProcessVerifyApiResponse>,
-          ProcessVerifyApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
           ApiCommand<ProcessVerifyApiRequest>,
           ApiResult<ProcessVerifyApiResponse>,
           ProcessVerifyApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessVerifyApiRequest>,
-          ApiResult<ProcessVerifyApiResponse>,
-          ProcessVerifyApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ProcessVerifyApiRequest>,
-          ApiResult<ProcessVerifyApiResponse>,
-          ProcessVerifyApi,
           CommandProgress>> $progress;
 
   _$ProcessVerifyApi._(this.$options)
@@ -75,12 +57,6 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
                 CommandState<ApiCommand<ProcessVerifyApiRequest>,
                     ApiResult<ProcessVerifyApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessVerifyApiRequest>,
-                ApiResult<ProcessVerifyApiResponse>,
-                ProcessVerifyApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ProcessVerifyApiRequest>,
@@ -101,18 +77,6 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
                     ProcessVerifyApi,
                     CommandResult<ApiResult<ProcessVerifyApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessVerifyApiRequest>,
-                ApiResult<ProcessVerifyApiResponse>,
-                ProcessVerifyApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ProcessVerifyApiRequest>,
-                ApiResult<ProcessVerifyApiResponse>,
-                ProcessVerifyApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ProcessVerifyApiRequest>,
@@ -141,12 +105,9 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

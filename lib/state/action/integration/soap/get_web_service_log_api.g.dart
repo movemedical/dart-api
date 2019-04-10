@@ -32,12 +32,6 @@ class _$GetWebServiceLogApi extends GetWebServiceLogApi {
           ApiCommand<GetWebServiceLogApiRequest>,
           ApiResult<GetWebServiceLogApiResponse>,
           GetWebServiceLogApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetWebServiceLogApiRequest>,
-          ApiResult<GetWebServiceLogApiResponse>,
-          GetWebServiceLogApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$GetWebServiceLogApi extends GetWebServiceLogApi {
           ApiCommand<GetWebServiceLogApiRequest>,
           ApiResult<GetWebServiceLogApiResponse>,
           GetWebServiceLogApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetWebServiceLogApiRequest>,
-          ApiResult<GetWebServiceLogApiResponse>,
-          GetWebServiceLogApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<GetWebServiceLogApiRequest>,
-          ApiResult<GetWebServiceLogApiResponse>,
-          GetWebServiceLogApi,
           CommandProgress>> $progress;
 
   _$GetWebServiceLogApi._(this.$options)
@@ -75,12 +57,6 @@ class _$GetWebServiceLogApi extends GetWebServiceLogApi {
                 CommandState<ApiCommand<GetWebServiceLogApiRequest>,
                     ApiResult<GetWebServiceLogApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetWebServiceLogApiRequest>,
-                ApiResult<GetWebServiceLogApiResponse>,
-                GetWebServiceLogApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetWebServiceLogApiRequest>,
@@ -101,18 +77,6 @@ class _$GetWebServiceLogApi extends GetWebServiceLogApi {
                     GetWebServiceLogApi,
                     CommandResult<ApiResult<GetWebServiceLogApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetWebServiceLogApiRequest>,
-                ApiResult<GetWebServiceLogApiResponse>,
-                GetWebServiceLogApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetWebServiceLogApiRequest>,
-                ApiResult<GetWebServiceLogApiResponse>,
-                GetWebServiceLogApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetWebServiceLogApiRequest>,
@@ -142,12 +106,9 @@ class _$GetWebServiceLogApi extends GetWebServiceLogApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

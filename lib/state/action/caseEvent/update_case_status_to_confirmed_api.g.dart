@@ -29,9 +29,6 @@ class _$UpdateCaseStatusToConfirmedApi extends UpdateCaseStatusToConfirmedApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
-          ApiResult<Empty>, UpdateCaseStatusToConfirmedApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
           ApiResult<Empty>, UpdateCaseStatusToConfirmedApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$UpdateCaseStatusToConfirmedApi extends UpdateCaseStatusToConfirmedApi {
           UpdateCaseStatusToConfirmedApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
-          ApiResult<Empty>, UpdateCaseStatusToConfirmedApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
-          ApiResult<Empty>, UpdateCaseStatusToConfirmedApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$UpdateCaseStatusToConfirmedApi extends UpdateCaseStatusToConfirmedApi {
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseStatusToConfirmedApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
@@ -89,18 +74,6 @@ class _$UpdateCaseStatusToConfirmedApi extends UpdateCaseStatusToConfirmedApi {
                     UpdateCaseStatusToConfirmedApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseStatusToConfirmedApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
-                ApiResult<Empty>,
-                UpdateCaseStatusToConfirmedApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToConfirmedApiRequest>,
@@ -132,12 +105,9 @@ class _$UpdateCaseStatusToConfirmedApi extends UpdateCaseStatusToConfirmedApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

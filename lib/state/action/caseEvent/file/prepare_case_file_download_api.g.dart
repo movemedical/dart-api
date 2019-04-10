@@ -32,12 +32,6 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
           ApiCommand<PrepareCaseFileDownloadApiRequest>,
           ApiResult<PrepareCaseFileDownloadApiResponse>,
           PrepareCaseFileDownloadApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareCaseFileDownloadApiRequest>,
-          ApiResult<PrepareCaseFileDownloadApiResponse>,
-          PrepareCaseFileDownloadApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
           ApiCommand<PrepareCaseFileDownloadApiRequest>,
           ApiResult<PrepareCaseFileDownloadApiResponse>,
           PrepareCaseFileDownloadApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareCaseFileDownloadApiRequest>,
-          ApiResult<PrepareCaseFileDownloadApiResponse>,
-          PrepareCaseFileDownloadApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<PrepareCaseFileDownloadApiRequest>,
-          ApiResult<PrepareCaseFileDownloadApiResponse>,
-          PrepareCaseFileDownloadApi,
           CommandProgress>> $progress;
 
   _$PrepareCaseFileDownloadApi._(this.$options)
@@ -76,12 +58,6 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
                 CommandState<ApiCommand<PrepareCaseFileDownloadApiRequest>,
                     ApiResult<PrepareCaseFileDownloadApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareCaseFileDownloadApiRequest>,
-                ApiResult<PrepareCaseFileDownloadApiResponse>,
-                PrepareCaseFileDownloadApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<PrepareCaseFileDownloadApiRequest>,
@@ -103,18 +79,6 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
                     CommandResult<
                         ApiResult<PrepareCaseFileDownloadApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareCaseFileDownloadApiRequest>,
-                ApiResult<PrepareCaseFileDownloadApiResponse>,
-                PrepareCaseFileDownloadApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<PrepareCaseFileDownloadApiRequest>,
-                ApiResult<PrepareCaseFileDownloadApiResponse>,
-                PrepareCaseFileDownloadApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<PrepareCaseFileDownloadApiRequest>,
@@ -146,12 +110,9 @@ class _$PrepareCaseFileDownloadApi extends PrepareCaseFileDownloadApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

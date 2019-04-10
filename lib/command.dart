@@ -23,6 +23,9 @@ abstract class ApiActions
     extends StatefulActions<ApiState, ApiStateBuilder, ApiActions> {
   PushDispatcher get push;
 
+  FieldDispatcher<String> get appVersion;
+  FieldDispatcher<String> get platformVersion;
+
   FieldDispatcher<String> get url;
 
   FieldDispatcher<String> get wsUrl;
@@ -31,6 +34,8 @@ abstract class ApiActions
 
   FieldDispatcher<DateTime> get wsDisconnected;
 
+  FieldDispatcher<String> get wsError;
+
   LoginDispatcher get loginCommand;
 
   FieldDispatcher<LoginResponse> get activeLogin;
@@ -38,6 +43,28 @@ abstract class ApiActions
   GetUiSetupMobileApi get setupCommand;
 
   FieldDispatcher<GetUiSetupMobileApiResponse> get activeSetup;
+
+  @override
+  void $middleware(MiddlewareBuilder middleware) {
+    super.$middleware(middleware);
+    middleware
+      ..add(loginCommand.$result, (api, next, action) {
+        next(action);
+        final payload = action.payload?.payload;
+        if (payload is CommandResult<ApiResult<LoginResponse>>) {
+          final response = payload?.value?.value;
+          activeLogin(response);
+        }
+      })
+      ..add(setupCommand.$result, (api, next, action) {
+        next(action);
+        final payload = action.payload?.payload;
+        if (payload is CommandResult<ApiResult<GetUiSetupMobileApiResponse>>) {
+          final response = payload?.value?.value;
+          activeSetup(response);
+        }
+      });
+  }
 
   ApiActions._();
 
@@ -57,6 +84,9 @@ abstract class ApiState implements Built<ApiState, ApiStateBuilder> {
   @nullable
   String get appVersion;
 
+  @nullable
+  String get platformVersion;
+
   /// WebSocket Connected date.
   @nullable
   DateTime get wsConnected;
@@ -70,6 +100,9 @@ abstract class ApiState implements Built<ApiState, ApiStateBuilder> {
 
   /// Is WebSocket Disconnected?
   bool get isWsDisconnected => wsDisconnected != null;
+
+  @nullable
+  String get wsError;
 
   @nullable
   LoginResponse get activeLogin;
@@ -146,6 +179,8 @@ abstract class ApiResult<RESP>
         ..message = message
         ..value = value);
 
+  static unwrap<R>(CommandResult<ApiResult<R>> result) => result?.value?.value;
+
   static Serializer<ApiResult> get serializer => _$apiResultSerializer;
 
   static BuiltList<T>
@@ -218,7 +253,7 @@ abstract class ApiDispatcher<
       super.send(
           create(
               request: request, builder: builder, timeout: timeout, path: path),
-          timeout: timeout?.inMilliseconds);
+          timeout: timeout);
 
   ApiCommand<Req> create(
       {Req request,
@@ -252,8 +287,14 @@ abstract class ApiDispatcher<
 }
 
 /// Manages all Move API calls, websocket pushes and authentication.
-class ApiService implements StoreService {
+class ApiService extends AbstractStoreService<ApiService> {
   static const moveSessionId = 'move-session-id';
+
+  ApiService(this.store, this.actions)
+      : httpFactory = store.httpFactory,
+        wsFactory = store.wsFactory,
+        _pool = HttpPoolClient(store.httpFactory, 1, 16),
+        super(store);
 
   final Store store;
   final ApiActions actions;
@@ -265,11 +306,6 @@ class ApiService implements StoreService {
   StreamSubscription _wsSubscription;
   Timer _wsTimer;
 
-  ApiService(this.store, this.actions)
-      : httpFactory = store.httpFactory,
-        wsFactory = store.wsFactory,
-        _pool = HttpPoolClient(store.httpFactory, 1, 16);
-
   ApiState get state => actions.$mapState(store?.state);
 
   Serializers get serializers => store.serializers;
@@ -279,11 +315,23 @@ class ApiService implements StoreService {
 
   @override
   void init() {
+    store.subscribe(actions.loginCommand.$result).listen((ev) {
+      _onLoggedIn(ev.value.payload?.value?.value);
+    });
+
+    store
+        .subscribe(actions.setupCommand.$result)
+        .map((e) => e.value?.payload)
+        .listen((ev) {
+      actions.activeSetup(ApiResult.unwrap(ev));
+    });
+
     _tryConnectWs();
   }
 
   @override
   void dispose() {
+    super.dispose();
     _pool?.close();
     _wsTimer?.cancel();
     _wsTimer = null;
@@ -317,36 +365,18 @@ class ApiService implements StoreService {
     _wsTimer = Timer(Duration(seconds: 30), _wsOnTimer);
   }
 
-  @override
-  Future<bool> run(CommandFuture future, Command command) async {
-    if (future is! ApiFuture) return Future.value(false);
-
-    try {
-      final result = await (future as ApiFuture)._call(this);
-
-      // Was it a LoginRequest?
-      if (command is Command<ApiCommand<LoginRequest>> &&
-          actions.loginCommand == future.dispatcher) {
-        if (!result.isErr && !result.value.isError) {
-          _onLoggedIn(result.value.value);
-        }
-      }
-
-      return Future.value(true);
-    } catch (e, stackTrace) {
-      return Future.error(e, stackTrace);
-    }
-  }
-
   void _onLoggedIn(LoginResponse response) {
     actions.activeLogin(response);
+
+    if (response == null) return;
 
     // Connect WebSocket.
     _connectWs(response);
 
     actions.setupCommand(
-        request: GetUiSetupMobileApiRequest(
-            (b) => b..appVersion = state.appVersion ?? 'Move Dart'));
+        request: GetUiSetupMobileApiRequest((b) => b
+          ..platformVersion = state?.platformVersion ?? 'Move Dart'
+          ..appVersion = state.appVersion ?? 'Move Dart 1.0.0'));
   }
 
   Future<CommandResult<ApiResult<Resp>>> execute<
@@ -360,11 +390,20 @@ class ApiService implements StoreService {
       Command<ApiCommand<Req>> command) async {
     final future = dispatcher.newFuture(command);
     final result = await future._call(this);
+    return result;
+  }
 
-    if (result is CommandResult<ApiResult<LoginResponse>> &&
-        actions.loginCommand == future.dispatcher) {
-      _onLoggedIn(result.value.value as LoginResponse);
-    }
+  Future<CommandResult<ApiResult<Resp>>> _doExecute<
+          Req extends Built<Req, ReqBuilder>,
+          ReqBuilder extends Builder<Req, ReqBuilder>,
+          Resp extends Built<Resp, RespBuilder>,
+          RespBuilder extends Builder<Resp, RespBuilder>,
+          Actions extends ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder,
+              Actions>>(
+      ApiFuture future,
+      ApiDispatcher<Req, ReqBuilder, Resp, RespBuilder, Actions> dispatcher,
+      Command<ApiCommand<Req>> command) async {
+    final result = await _execute(future, dispatcher, command);
 
     return result;
   }
@@ -387,13 +426,11 @@ class ApiService implements StoreService {
 
     CallResponse<Resp> resp = null;
     try {
-      Duration timeout;
-      if (command.timeout == null || command.timeout <= 0) {
+      Duration timeout = command.timeout;
+      if (!command.hasTimeout) {
         timeout = Duration(seconds: 15);
-      } else if (command.timeout < 1000) {
+      } else if (command.timeout.inMilliseconds < 1000) {
         timeout = Duration(seconds: 1);
-      } else {
-        timeout = Duration(milliseconds: command.timeout);
       }
 
       final headers = <String, String>{};
@@ -520,12 +557,14 @@ class ApiService implements StoreService {
     if (push == null) return;
 
     try {
-      final p = serializers.deserializeWith(push.serializer, payload);
+      final p = store.json.deserialize(push.serializer, payload);
       push.dispatcher(p);
     } catch (e) {}
   }
 
-  void _onWsError(dynamic e) {}
+  void _onWsError(dynamic e) {
+    actions.wsError(e?.toString() ?? 'WebSocket Error');
+  }
 
   void _onWsDone() {
     actions.wsDisconnected(DateTime.now());
@@ -570,9 +609,9 @@ class ApiService implements StoreService {
     }
 
     if (path.startsWith('/')) {
-      return _url('/api$path');
+      return _url('$path');
     } else {
-      return _url('/api/$path');
+      return _url('/$path');
     }
   }
 
@@ -620,7 +659,7 @@ class ApiFuture<
 
   @override
   Future execute() async {
-    service._execute(this, dispatcher, command);
+    service._doExecute(this, dispatcher, command);
   }
 
   Serializer<Req> get reqSerializer => dispatcher.commandPayloadSerializer;
@@ -697,30 +736,6 @@ abstract class LoginDispatcher extends ApiDispatcher<LoginRequest,
 
   factory LoginDispatcher(LoginDispatcherOptions options) = _$LoginDispatcher;
 }
-
-//abstract class LoginDispatcher
-//    extends ApiDispatcher<LoginRequest, LoginResponse, LoginDispatcher> {
-//  @override
-//  String get path => '/auth/move/login';
-//
-//  @override
-//  Serializer<LoginRequest> get requestSerializer => LoginRequest.serializer;
-//
-//  @override
-//  Serializer<LoginResponse> get responseSerializer => LoginResponse.serializer;
-//
-//  void run(
-//      {LoginRequestBuilder builder(LoginRequestBuilder b),
-//      Duration timeout = const Duration(seconds: 15)}) {
-//    final b = LoginRequest().toBuilder();
-//    builder?.call(b);
-//    call(b.build(), timeout: timeout?.inMilliseconds ?? null);
-//  }
-//
-//  LoginDispatcher._();
-//
-//  factory LoginDispatcher(LoginDispatcherOptions options) = _$LoginDispatcher;
-//}
 
 enum CallResponseError {
   network,

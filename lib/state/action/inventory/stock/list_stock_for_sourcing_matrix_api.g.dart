@@ -32,12 +32,6 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
           ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>,
           ListStockForSourcingMatrixApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>,
-          ListStockForSourcingMatrixApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
           ApiCommand<ListStockForSourcingMatrixApiRequest>,
           ApiResult<ListStockForSourcingMatrixApiResponse>,
           ListStockForSourcingMatrixApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>,
-          ListStockForSourcingMatrixApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockForSourcingMatrixApiRequest>,
-          ApiResult<ListStockForSourcingMatrixApiResponse>,
-          ListStockForSourcingMatrixApi,
           CommandProgress>> $progress;
 
   _$ListStockForSourcingMatrixApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
                 CommandState<ApiCommand<ListStockForSourcingMatrixApiRequest>,
                     ApiResult<ListStockForSourcingMatrixApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                ApiResult<ListStockForSourcingMatrixApiResponse>,
-                ListStockForSourcingMatrixApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListStockForSourcingMatrixApiRequest>,
@@ -103,18 +79,6 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
                     CommandResult<
                         ApiResult<ListStockForSourcingMatrixApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                ApiResult<ListStockForSourcingMatrixApiResponse>,
-                ListStockForSourcingMatrixApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockForSourcingMatrixApiRequest>,
-                ApiResult<ListStockForSourcingMatrixApiResponse>,
-                ListStockForSourcingMatrixApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListStockForSourcingMatrixApiRequest>,
@@ -146,12 +110,9 @@ class _$ListStockForSourcingMatrixApi extends ListStockForSourcingMatrixApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

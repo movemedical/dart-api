@@ -29,9 +29,6 @@ class _$GetStockApi extends GetStockApi {
           ApiResult<GetStockApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GetStockApiRequest>,
-          ApiResult<GetStockApiResponse>, GetStockApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetStockApiRequest>,
           ApiResult<GetStockApiResponse>, GetStockApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$GetStockApi extends GetStockApi {
           GetStockApi,
           CommandResult<ApiResult<GetStockApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<GetStockApiRequest>,
-          ApiResult<GetStockApiResponse>, GetStockApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<GetStockApiRequest>,
-          ApiResult<GetStockApiResponse>, GetStockApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<GetStockApiRequest>,
           ApiResult<GetStockApiResponse>,
@@ -63,12 +54,6 @@ class _$GetStockApi extends GetStockApi {
                 CommandState<ApiCommand<GetStockApiRequest>,
                     ApiResult<GetStockApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<GetStockApiRequest>,
-                ApiResult<GetStockApiResponse>,
-                GetStockApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GetStockApiRequest>,
@@ -89,18 +74,6 @@ class _$GetStockApi extends GetStockApi {
                     GetStockApi,
                     CommandResult<ApiResult<GetStockApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<GetStockApiRequest>,
-                ApiResult<GetStockApiResponse>,
-                GetStockApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<GetStockApiRequest>,
-                ApiResult<GetStockApiResponse>,
-                GetStockApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GetStockApiRequest>,
@@ -128,12 +101,9 @@ class _$GetStockApi extends GetStockApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

@@ -33,12 +33,6 @@ class _$ListStockContainersForLocationApi
           ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>,
           ListStockContainersForLocationApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>,
-          ListStockContainersForLocationApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -59,18 +53,6 @@ class _$ListStockContainersForLocationApi
           ApiCommand<ListStockContainersForLocationApiRequest>,
           ApiResult<ListStockContainersForLocationApiResponse>,
           ListStockContainersForLocationApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>,
-          ListStockContainersForLocationApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListStockContainersForLocationApiRequest>,
-          ApiResult<ListStockContainersForLocationApiResponse>,
-          ListStockContainersForLocationApi,
           CommandProgress>> $progress;
 
   _$ListStockContainersForLocationApi._(this.$options)
@@ -79,12 +61,6 @@ class _$ListStockContainersForLocationApi
                     ApiCommand<ListStockContainersForLocationApiRequest>,
                     ApiResult<ListStockContainersForLocationApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockContainersForLocationApiRequest>,
-                ApiResult<ListStockContainersForLocationApiResponse>,
-                ListStockContainersForLocationApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListStockContainersForLocationApiRequest>,
@@ -107,18 +83,6 @@ class _$ListStockContainersForLocationApi
                     CommandResult<
                         ApiResult<ListStockContainersForLocationApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockContainersForLocationApiRequest>,
-                ApiResult<ListStockContainersForLocationApiResponse>,
-                ListStockContainersForLocationApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListStockContainersForLocationApiRequest>,
-                ApiResult<ListStockContainersForLocationApiResponse>,
-                ListStockContainersForLocationApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListStockContainersForLocationApiRequest>,
@@ -150,12 +114,9 @@ class _$ListStockContainersForLocationApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

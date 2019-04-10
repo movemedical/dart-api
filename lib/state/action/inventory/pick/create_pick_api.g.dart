@@ -29,9 +29,6 @@ class _$CreatePickApi extends CreatePickApi {
           ApiResult<CreatePickApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreatePickApiRequest>,
-          ApiResult<CreatePickApiResponse>, CreatePickApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePickApiRequest>,
           ApiResult<CreatePickApiResponse>, CreatePickApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$CreatePickApi extends CreatePickApi {
           CreatePickApi,
           CommandResult<ApiResult<CreatePickApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePickApiRequest>,
-          ApiResult<CreatePickApiResponse>, CreatePickApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreatePickApiRequest>,
-          ApiResult<CreatePickApiResponse>, CreatePickApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreatePickApiRequest>,
           ApiResult<CreatePickApiResponse>,
@@ -63,12 +54,6 @@ class _$CreatePickApi extends CreatePickApi {
                 CommandState<ApiCommand<CreatePickApiRequest>,
                     ApiResult<CreatePickApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePickApiRequest>,
-                ApiResult<CreatePickApiResponse>,
-                CreatePickApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreatePickApiRequest>,
@@ -89,18 +74,6 @@ class _$CreatePickApi extends CreatePickApi {
                     CreatePickApi,
                     CommandResult<ApiResult<CreatePickApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePickApiRequest>,
-                ApiResult<CreatePickApiResponse>,
-                CreatePickApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePickApiRequest>,
-                ApiResult<CreatePickApiResponse>,
-                CreatePickApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreatePickApiRequest>,
@@ -129,12 +102,9 @@ class _$CreatePickApi extends CreatePickApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

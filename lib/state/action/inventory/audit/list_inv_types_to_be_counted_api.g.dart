@@ -32,12 +32,6 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
           ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>,
           ListInvTypesToBeCountedApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>,
-          ListInvTypesToBeCountedApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -57,18 +51,6 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
           ApiCommand<ListInvTypesToBeCountedApiRequest>,
           ApiResult<ListInvTypesToBeCountedApiResponse>,
           ListInvTypesToBeCountedApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>,
-          ListInvTypesToBeCountedApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<ListInvTypesToBeCountedApiRequest>,
-          ApiResult<ListInvTypesToBeCountedApiResponse>,
-          ListInvTypesToBeCountedApi,
           CommandProgress>> $progress;
 
   _$ListInvTypesToBeCountedApi._(this.$options)
@@ -76,12 +58,6 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
                 CommandState<ApiCommand<ListInvTypesToBeCountedApiRequest>,
                     ApiResult<ListInvTypesToBeCountedApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                ApiResult<ListInvTypesToBeCountedApiResponse>,
-                ListInvTypesToBeCountedApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ListInvTypesToBeCountedApiRequest>,
@@ -103,18 +79,6 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
                     CommandResult<
                         ApiResult<ListInvTypesToBeCountedApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                ApiResult<ListInvTypesToBeCountedApiResponse>,
-                ListInvTypesToBeCountedApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<ListInvTypesToBeCountedApiRequest>,
-                ApiResult<ListInvTypesToBeCountedApiResponse>,
-                ListInvTypesToBeCountedApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ListInvTypesToBeCountedApiRequest>,
@@ -146,12 +110,9 @@ class _$ListInvTypesToBeCountedApi extends ListInvTypesToBeCountedApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

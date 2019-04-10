@@ -35,12 +35,6 @@ class _$RequestUnreconciledCaseUsageReportApi
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Empty>,
-          RequestUnreconciledCaseUsageReportApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
@@ -61,18 +55,6 @@ class _$RequestUnreconciledCaseUsageReportApi
           ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
           ApiResult<Empty>,
           RequestUnreconciledCaseUsageReportApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Empty>,
-          RequestUnreconciledCaseUsageReportApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-          ApiResult<Empty>,
-          RequestUnreconciledCaseUsageReportApi,
           CommandProgress>> $progress;
 
   _$RequestUnreconciledCaseUsageReportApi._(this.$options)
@@ -80,12 +62,6 @@ class _$RequestUnreconciledCaseUsageReportApi
             CommandState<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Empty>,
-                RequestUnreconciledCaseUsageReportApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
@@ -108,18 +84,6 @@ class _$RequestUnreconciledCaseUsageReportApi
                     RequestUnreconciledCaseUsageReportApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Empty>,
-                RequestUnreconciledCaseUsageReportApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
-                ApiResult<Empty>,
-                RequestUnreconciledCaseUsageReportApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnreconciledCaseUsageReportApiRequest>,
@@ -151,12 +115,9 @@ class _$RequestUnreconciledCaseUsageReportApi
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

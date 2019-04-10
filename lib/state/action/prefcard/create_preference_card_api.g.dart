@@ -32,12 +32,6 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
           ApiCommand<CreatePreferenceCardApiRequest>,
           ApiResult<CreatePreferenceCardApiResponse>,
           CreatePreferenceCardApi,
-          String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreatePreferenceCardApiRequest>,
-          ApiResult<CreatePreferenceCardApiResponse>,
-          CreatePreferenceCardApi,
           String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -56,18 +50,6 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
           ApiCommand<CreatePreferenceCardApiRequest>,
           ApiResult<CreatePreferenceCardApiResponse>,
           CreatePreferenceCardApi,
-          String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreatePreferenceCardApiRequest>,
-          ApiResult<CreatePreferenceCardApiResponse>,
-          CreatePreferenceCardApi,
-          String>> $attach;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CreatePreferenceCardApiRequest>,
-          ApiResult<CreatePreferenceCardApiResponse>,
-          CreatePreferenceCardApi,
           CommandProgress>> $progress;
 
   _$CreatePreferenceCardApi._(this.$options)
@@ -75,12 +57,6 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
                 CommandState<ApiCommand<CreatePreferenceCardApiRequest>,
                     ApiResult<CreatePreferenceCardApiResponse>>>(
             '\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePreferenceCardApiRequest>,
-                ApiResult<CreatePreferenceCardApiResponse>,
-                CreatePreferenceCardApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreatePreferenceCardApiRequest>,
@@ -101,18 +77,6 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
                     CreatePreferenceCardApi,
                     CommandResult<ApiResult<CreatePreferenceCardApiResponse>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePreferenceCardApiRequest>,
-                ApiResult<CreatePreferenceCardApiResponse>,
-                CreatePreferenceCardApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<CreatePreferenceCardApiRequest>,
-                ApiResult<CreatePreferenceCardApiResponse>,
-                CreatePreferenceCardApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreatePreferenceCardApiRequest>,
@@ -142,12 +106,9 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 

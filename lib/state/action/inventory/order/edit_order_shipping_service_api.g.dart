@@ -29,9 +29,6 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
           ApiResult<Empty>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $clear;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
           ApiResult<Empty>, EditOrderShippingServiceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
@@ -46,12 +43,6 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
           EditOrderShippingServiceApi,
           CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $detach;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<EditOrderShippingServiceApiRequest>,
-          ApiResult<Empty>, EditOrderShippingServiceApi, String>> $attach;
-  final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditOrderShippingServiceApiRequest>,
           ApiResult<Empty>,
@@ -62,12 +53,6 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
       : $replace = $options.action<
             CommandState<ApiCommand<EditOrderShippingServiceApiRequest>,
                 ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
-        $clear = $options.action<
-            CommandPayload<
-                ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Empty>,
-                EditOrderShippingServiceApi,
-                String>>('\$clear', (a) => a?.$clear),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
@@ -88,18 +73,6 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
                     EditOrderShippingServiceApi,
                     CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
-        $detach = $options.action<
-            CommandPayload<
-                ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Empty>,
-                EditOrderShippingServiceApi,
-                String>>('\$detach', (a) => a?.$detach),
-        $attach = $options.action<
-            CommandPayload<
-                ApiCommand<EditOrderShippingServiceApiRequest>,
-                ApiResult<Empty>,
-                EditOrderShippingServiceApi,
-                String>>('\$attach', (a) => a?.$attach),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EditOrderShippingServiceApiRequest>,
@@ -128,12 +101,9 @@ class _$EditOrderShippingServiceApi extends EditOrderShippingServiceApi {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.$clear,
         this.$cancel,
         this.$execute,
         this.$result,
-        this.$detach,
-        this.$attach,
         this.$progress,
       ]);
 
