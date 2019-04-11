@@ -196,7 +196,7 @@ class _$UpdateSalesOrderCustomFieldsApiRequestActions
       : $replace = $options.action<UpdateSalesOrderCustomFieldsApiRequest>(
             '\$replace', (a) => a?.$replace),
         orderCustomFieldValues =
-            $options.actionField<BuiltList<OrderCustomFieldValue>>(
+            $options.field<BuiltList<OrderCustomFieldValue>>(
                 'orderCustomFieldValues',
                 (a) => a?.orderCustomFieldValues,
                 (s) => s?.orderCustomFieldValues,
@@ -233,9 +233,6 @@ class _$UpdateSalesOrderCustomFieldsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateSalesOrderCustomFieldsApiRequestUpdateSalesOrderCustomFieldsApiRequestActions> get $serializer => UpdateSalesOrderCustomFieldsApiRequestUpdateSalesOrderCustomFieldsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

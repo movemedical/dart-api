@@ -299,9 +299,9 @@ class _$ListComponentsApiComponentActions
   _$ListComponentsApiComponentActions._(this.$options)
       : $replace = $options.action<ListComponentsApiComponent>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -313,14 +313,14 @@ class _$ListComponentsApiComponentActions
                 (s) => s?.itemSpec,
                 (b) => b?.itemSpec,
                 (parent, builder) => parent?.itemSpec = builder)),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        minimumQuantity = $options.actionField<int>(
+        minimumQuantity = $options.field<int>(
             'minimumQuantity',
             (a) => a?.minimumQuantity,
             (s) => s?.minimumQuantity,
             (p, b) => p?.minimumQuantity = b),
-        placementInSequence = $options.actionField<int>(
+        placementInSequence = $options.field<int>(
             'placementInSequence',
             (a) => a?.placementInSequence,
             (s) => s?.placementInSequence,
@@ -372,9 +372,6 @@ class _$ListComponentsApiComponentActions
     super.$middleware(middleware);
     itemSpec.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListComponentsApiComponentListComponentsApiComponentActions> get $serializer => ListComponentsApiComponentListComponentsApiComponentActions.serializer;
 
   FullType _$fullType;
   @override

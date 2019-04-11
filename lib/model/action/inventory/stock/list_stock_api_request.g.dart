@@ -223,7 +223,7 @@ class _$ListStockApiRequestActions extends ListStockApiRequestActions {
   _$ListStockApiRequestActions._(this.$options)
       : $replace = $options.action<ListStockApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockSummaryId = $options.actionField<String>(
+        stockSummaryId = $options.field<String>(
             'stockSummaryId',
             (a) => a?.stockSummaryId,
             (s) => s?.stockSummaryId,
@@ -288,9 +288,6 @@ class _$ListStockApiRequestActions extends ListStockApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockApiRequestListStockApiRequestActions> get $serializer => ListStockApiRequestListStockApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

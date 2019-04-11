@@ -214,17 +214,11 @@ class _$AddOrgUnitToFacilityApiRequestActions
   _$AddOrgUnitToFacilityApiRequestActions._(this.$options)
       : $replace = $options.action<AddOrgUnitToFacilityApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        customerQualifier = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        customerQualifier = $options.field<String>(
             'customerQualifier',
             (a) => a?.customerQualifier,
             (s) => s?.customerQualifier,
@@ -265,9 +259,6 @@ class _$AddOrgUnitToFacilityApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddOrgUnitToFacilityApiRequestAddOrgUnitToFacilityApiRequestActions> get $serializer => AddOrgUnitToFacilityApiRequestAddOrgUnitToFacilityApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

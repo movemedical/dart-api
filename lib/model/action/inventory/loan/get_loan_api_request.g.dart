@@ -172,9 +172,9 @@ class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
   _$GetLoanApiRequestActions._(this.$options)
       : $replace =
             $options.action<GetLoanApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.actionField<bool>(
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -210,9 +210,6 @@ class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetLoanApiRequestGetLoanApiRequestActions> get $serializer => GetLoanApiRequestGetLoanApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

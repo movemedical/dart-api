@@ -111,9 +111,6 @@ class _$MarkConversationsReadUnreadApi extends MarkConversationsReadUnreadApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateMarkConversationsReadUnreadApi> get $serializer => CommandStateMarkConversationsReadUnreadApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

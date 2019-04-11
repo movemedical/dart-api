@@ -230,16 +230,16 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
   _$GetItemPricingApiItemActions._(this.$options)
       : $replace = $options.action<GetItemPricingApiItem>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        caseUsageDisposition = $options.actionField<CaseUsageDisposition>(
+        caseUsageDisposition = $options.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        construct = $options.actionField<bool>('construct', (a) => a?.construct,
+        construct = $options.field<bool>('construct', (a) => a?.construct,
             (s) => s?.construct, (p, b) => p?.construct = b),
         super._();
 
@@ -277,9 +277,6 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemPricingApiItemGetItemPricingApiItemActions> get $serializer => GetItemPricingApiItemGetItemPricingApiItemActions.serializer;
 
   FullType _$fullType;
   @override

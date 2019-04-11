@@ -288,23 +288,20 @@ class _$ListItemCategoriesApiItemCategoryActions
   _$ListItemCategoriesApiItemCategoryActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesApiItemCategory>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.actionField<String>(
+        code = $options.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        hasChildren = $options.actionField<bool>(
-            'hasChildren',
-            (a) => a?.hasChildren,
-            (s) => s?.hasChildren,
-            (p, b) => p?.hasChildren = b),
-        linkedToItem = $options.actionField<bool>(
+        hasChildren = $options.field<bool>('hasChildren', (a) => a?.hasChildren,
+            (s) => s?.hasChildren, (p, b) => p?.hasChildren = b),
+        linkedToItem = $options.field<bool>(
             'linkedToItem',
             (a) => a?.linkedToItem,
             (s) => s?.linkedToItem,
             (p, b) => p?.linkedToItem = b),
-        nestedItemToCategoryLinkCount = $options.actionField<int>(
+        nestedItemToCategoryLinkCount = $options.field<int>(
             'nestedItemToCategoryLinkCount',
             (a) => a?.nestedItemToCategoryLinkCount,
             (s) => s?.nestedItemToCategoryLinkCount,
@@ -351,9 +348,6 @@ class _$ListItemCategoriesApiItemCategoryActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesApiItemCategoryListItemCategoriesApiItemCategoryActions> get $serializer => ListItemCategoriesApiItemCategoryListItemCategoriesApiItemCategoryActions.serializer;
 
   FullType _$fullType;
   @override

@@ -233,19 +233,19 @@ class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
   _$OrderFilePushMessageActions._(this.$options)
       : $replace = $options.action<OrderFilePushMessage>(
             '\$replace', (a) => a?.$replace),
-        orderFileId = $options.actionField<String>(
+        orderFileId = $options.field<String>(
             'orderFileId',
             (a) => a?.orderFileId,
             (s) => s?.orderFileId,
             (p, b) => p?.orderFileId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options.actionField<OrderFilePushMessageFileUpdateType>(
+        updateType = $options.field<OrderFilePushMessageFileUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.actionField<double>(
+        percentUploadedDecimalForm = $options.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -286,9 +286,6 @@ class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrderFilePushMessageOrderFilePushMessageActions> get $serializer => OrderFilePushMessageOrderFilePushMessageActions.serializer;
 
   FullType _$fullType;
   @override

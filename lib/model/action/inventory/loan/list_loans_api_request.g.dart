@@ -359,7 +359,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
   _$ListLoansApiRequestActions._(this.$options)
       : $replace = $options.action<ListLoansApiRequest>(
             '\$replace', (a) => a?.$replace),
-        status = $options.actionField<LoanStatus>('status', (a) => a?.status,
+        status = $options.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         location = LocationDataActions(() => $options
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
@@ -368,7 +368,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
@@ -387,11 +387,8 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
                 (s) => s?.serviceEndDateRange,
                 (b) => b?.serviceEndDateRange,
                 (parent, builder) => parent?.serviceEndDateRange = builder)),
-        loanNumber = $options.actionField<String>(
-            'loanNumber',
-            (a) => a?.loanNumber,
-            (s) => s?.loanNumber,
-            (p, b) => p?.loanNumber = b),
+        loanNumber = $options.field<String>('loanNumber', (a) => a?.loanNumber,
+            (s) => s?.loanNumber, (p, b) => p?.loanNumber = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -465,9 +462,6 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLoansApiRequestListLoansApiRequestActions> get $serializer => ListLoansApiRequestListLoansApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

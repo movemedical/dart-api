@@ -327,31 +327,28 @@ class _$GetItemPricingApiRequestActions
   _$GetItemPricingApiRequestActions._(this.$options)
       : $replace = $options.action<GetItemPricingApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        shipToAddressId = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        billToAddressId = $options.actionField<String>(
+        billToAddressId = $options.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
             (p, b) => p?.billToAddressId = b),
-        constructId = $options.actionField<String>(
+        constructId = $options.field<String>(
             'constructId',
             (a) => a?.constructId,
             (s) => s?.constructId,
             (p, b) => p?.constructId = b),
-        items = $options.actionField<BuiltList<GetItemPricingApiItem>>(
+        items = $options.field<BuiltList<GetItemPricingApiItem>>(
             'items', (a) => a?.items, (s) => s?.items, (p, b) => p?.items = b),
-        construct = $options.actionField<bool>('construct', (a) => a?.construct,
+        construct = $options.field<bool>('construct', (a) => a?.construct,
             (s) => s?.construct, (p, b) => p?.construct = b),
         super._();
 
@@ -396,9 +393,6 @@ class _$GetItemPricingApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemPricingApiRequestGetItemPricingApiRequestActions> get $serializer => GetItemPricingApiRequestGetItemPricingApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -283,23 +283,23 @@ class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
   _$OuLinkToInventoryTypeActions._(this.$options)
       : $replace = $options.action<OuLinkToInventoryType>(
             '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        inventoryTypeName = $options.actionField<String>(
+        inventoryTypeName = $options.field<String>(
             'inventoryTypeName',
             (a) => a?.inventoryTypeName,
             (s) => s?.inventoryTypeName,
             (p, b) => p?.inventoryTypeName = b),
-        view = $options.actionField<bool>(
+        view = $options.field<bool>(
             'view', (a) => a?.view, (s) => s?.view, (p, b) => p?.view = b),
-        source = $options.actionField<bool>('source', (a) => a?.source,
+        source = $options.field<bool>('source', (a) => a?.source,
             (s) => s?.source, (p, b) => p?.source = b),
-        reconcile = $options.actionField<bool>('reconcile', (a) => a?.reconcile,
+        reconcile = $options.field<bool>('reconcile', (a) => a?.reconcile,
             (s) => s?.reconcile, (p, b) => p?.reconcile = b),
-        admin = $options.actionField<bool>(
+        admin = $options.field<bool>(
             'admin', (a) => a?.admin, (s) => s?.admin, (p, b) => p?.admin = b),
         super._();
 
@@ -341,9 +341,6 @@ class _$OuLinkToInventoryTypeActions extends OuLinkToInventoryTypeActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OuLinkToInventoryTypeOuLinkToInventoryTypeActions> get $serializer => OuLinkToInventoryTypeOuLinkToInventoryTypeActions.serializer;
 
   FullType _$fullType;
   @override

@@ -178,7 +178,7 @@ class _$ConfirmPkgsApiRequestActions extends ConfirmPkgsApiRequestActions {
   _$ConfirmPkgsApiRequestActions._(this.$options)
       : $replace = $options.action<ConfirmPkgsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        confirmRequests = $options.actionField<BuiltList<ConfirmPkgApiRequest>>(
+        confirmRequests = $options.field<BuiltList<ConfirmPkgApiRequest>>(
             'confirmRequests',
             (a) => a?.confirmRequests,
             (s) => s?.confirmRequests,
@@ -213,9 +213,6 @@ class _$ConfirmPkgsApiRequestActions extends ConfirmPkgsApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConfirmPkgsApiRequestConfirmPkgsApiRequestActions> get $serializer => ConfirmPkgsApiRequestConfirmPkgsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

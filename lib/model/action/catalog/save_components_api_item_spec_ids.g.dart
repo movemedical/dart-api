@@ -266,16 +266,16 @@ class _$SaveComponentsApiItemSpecIdsActions
   _$SaveComponentsApiItemSpecIdsActions._(this.$options)
       : $replace = $options.action<SaveComponentsApiItemSpecIds>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionIds = $options.actionField<BuiltList<String>>(
+        itemVersionIds = $options.field<BuiltList<String>>(
             'itemVersionIds',
             (a) => a?.itemVersionIds,
             (s) => s?.itemVersionIds,
             (p, b) => p?.itemVersionIds = b),
-        lotIds = $options.actionField<BuiltList<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.actionField<BuiltList<String>>(
+        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        serialIds = $options.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
@@ -317,9 +317,6 @@ class _$SaveComponentsApiItemSpecIdsActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveComponentsApiItemSpecIdsSaveComponentsApiItemSpecIdsActions> get $serializer => SaveComponentsApiItemSpecIdsSaveComponentsApiItemSpecIdsActions.serializer;
 
   FullType _$fullType;
   @override

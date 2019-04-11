@@ -173,12 +173,12 @@ class _$PaginationParamsActions extends PaginationParamsActions {
   _$PaginationParamsActions._(this.$options)
       : $replace =
             $options.action<PaginationParams>('\$replace', (a) => a?.$replace),
-        startRecordIdx = $options.actionField<int>(
+        startRecordIdx = $options.field<int>(
             'startRecordIdx',
             (a) => a?.startRecordIdx,
             (s) => s?.startRecordIdx,
             (p, b) => p?.startRecordIdx = b),
-        pageSize = $options.actionField<int>('pageSize', (a) => a?.pageSize,
+        pageSize = $options.field<int>('pageSize', (a) => a?.pageSize,
             (s) => s?.pageSize, (p, b) => p?.pageSize = b),
         super._();
 
@@ -211,9 +211,6 @@ class _$PaginationParamsActions extends PaginationParamsActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PaginationParamsPaginationParamsActions> get $serializer => PaginationParamsPaginationParamsActions.serializer;
 
   FullType _$fullType;
   @override

@@ -472,43 +472,36 @@ class _$RequestStockHistoryReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        transactionTypes =
-            $options.actionField<BuiltList<StockTransactionType>>(
-                'transactionTypes',
-                (a) => a?.transactionTypes,
-                (s) => s?.transactionTypes,
-                (p, b) => p?.transactionTypes = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        transactionTypes = $options.field<BuiltList<StockTransactionType>>(
+            'transactionTypes',
+            (a) => a?.transactionTypes,
+            (s) => s?.transactionTypes,
+            (p, b) => p?.transactionTypes = b),
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
         super._();
 
@@ -570,9 +563,6 @@ class _$RequestStockHistoryReportApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestStockHistoryReportApiRequestRequestStockHistoryReportApiRequestActions> get $serializer => RequestStockHistoryReportApiRequestRequestStockHistoryReportApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

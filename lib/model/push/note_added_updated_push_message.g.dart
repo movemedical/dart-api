@@ -167,11 +167,8 @@ class _$NoteAddedUpdatedPushMessageActions
   _$NoteAddedUpdatedPushMessageActions._(this.$options)
       : $replace = $options.action<NoteAddedUpdatedPushMessage>(
             '\$replace', (a) => a?.$replace),
-        noteAttrId = $options.actionField<String>(
-            'noteAttrId',
-            (a) => a?.noteAttrId,
-            (s) => s?.noteAttrId,
-            (p, b) => p?.noteAttrId = b),
+        noteAttrId = $options.field<String>('noteAttrId', (a) => a?.noteAttrId,
+            (s) => s?.noteAttrId, (p, b) => p?.noteAttrId = b),
         super._();
 
   factory _$NoteAddedUpdatedPushMessageActions(
@@ -203,9 +200,6 @@ class _$NoteAddedUpdatedPushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<NoteAddedUpdatedPushMessageNoteAddedUpdatedPushMessageActions> get $serializer => NoteAddedUpdatedPushMessageNoteAddedUpdatedPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

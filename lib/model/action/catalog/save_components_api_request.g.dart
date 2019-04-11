@@ -205,17 +205,16 @@ class _$SaveComponentsApiRequestActions
   _$SaveComponentsApiRequestActions._(this.$options)
       : $replace = $options.action<SaveComponentsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        components =
-            $options.actionField<BuiltList<SaveComponentsApiComponent>>(
-                'components',
-                (a) => a?.components,
-                (s) => s?.components,
-                (p, b) => p?.components = b),
+        components = $options.field<BuiltList<SaveComponentsApiComponent>>(
+            'components',
+            (a) => a?.components,
+            (s) => s?.components,
+            (p, b) => p?.components = b),
         super._();
 
   factory _$SaveComponentsApiRequestActions(
@@ -249,9 +248,6 @@ class _$SaveComponentsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveComponentsApiRequestSaveComponentsApiRequestActions> get $serializer => SaveComponentsApiRequestSaveComponentsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

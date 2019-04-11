@@ -339,16 +339,13 @@ class _$UpdateOrgApiRequestActions extends UpdateOrgApiRequestActions {
   _$UpdateOrgApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateOrgApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        name = $options.actionField<String>(
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.actionField<OrgType>(
+        type = $options.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         address = AddressActions(() =>
             $options.stateful<Address, AddressBuilder, AddressActions>(
@@ -364,9 +361,9 @@ class _$UpdateOrgApiRequestActions extends UpdateOrgApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publicVisible = $options.actionField<bool>(
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
@@ -422,9 +419,6 @@ class _$UpdateOrgApiRequestActions extends UpdateOrgApiRequestActions {
     address.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateOrgApiRequestUpdateOrgApiRequestActions> get $serializer => UpdateOrgApiRequestUpdateOrgApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

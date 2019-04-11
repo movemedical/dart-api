@@ -419,11 +419,11 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
   _$GetPackageApiPkgActions._(this.$options)
       : $replace =
             $options.action<GetPackageApiPkg>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<PackageStatus>('status', (a) => a?.status,
+        status = $options.field<PackageStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         location = LocationActions(() =>
             $options.stateful<Location, LocationBuilder, LocationActions>(
@@ -446,27 +446,27 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
                 (s) => s?.shipment,
                 (b) => b?.shipment,
                 (parent, builder) => parent?.shipment = builder)),
-        estimatedDeliveryDate = $options.actionField<DateTime>(
+        estimatedDeliveryDate = $options.field<DateTime>(
             'estimatedDeliveryDate',
             (a) => a?.estimatedDeliveryDate,
             (s) => s?.estimatedDeliveryDate,
             (p, b) => p?.estimatedDeliveryDate = b),
-        actualDeliveryDate = $options.actionField<DateTime>(
+        actualDeliveryDate = $options.field<DateTime>(
             'actualDeliveryDate',
             (a) => a?.actualDeliveryDate,
             (s) => s?.actualDeliveryDate,
             (p, b) => p?.actualDeliveryDate = b),
-        actualShipDate = $options.actionField<DateTime>(
+        actualShipDate = $options.field<DateTime>(
             'actualShipDate',
             (a) => a?.actualShipDate,
             (s) => s?.actualShipDate,
             (p, b) => p?.actualShipDate = b),
-        trackingNumber = $options.actionField<String>(
+        trackingNumber = $options.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
             (p, b) => p?.trackingNumber = b),
-        trackingNumberUrl = $options.actionField<String>(
+        trackingNumberUrl = $options.field<String>(
             'trackingNumberUrl',
             (a) => a?.trackingNumberUrl,
             (s) => s?.trackingNumberUrl,
@@ -528,9 +528,6 @@ class _$GetPackageApiPkgActions extends GetPackageApiPkgActions {
     order.$middleware(middleware);
     shipment.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPackageApiPkgGetPackageApiPkgActions> get $serializer => GetPackageApiPkgGetPackageApiPkgActions.serializer;
 
   FullType _$fullType;
   @override

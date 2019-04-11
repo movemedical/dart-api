@@ -205,9 +205,9 @@ class _$ListAeOrgUnitLinksApiResponseActions
   _$ListAeOrgUnitLinksApiResponseActions._(this.$options)
       : $replace = $options.action<ListAeOrgUnitLinksApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<OrgUnitLink>>(
+        data = $options.field<BuiltList<OrgUnitLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -242,9 +242,6 @@ class _$ListAeOrgUnitLinksApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAeOrgUnitLinksApiResponseListAeOrgUnitLinksApiResponseActions> get $serializer => ListAeOrgUnitLinksApiResponseListAeOrgUnitLinksApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

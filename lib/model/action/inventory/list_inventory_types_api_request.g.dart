@@ -203,7 +203,7 @@ class _$ListInventoryTypesApiRequestActions
   _$ListInventoryTypesApiRequestActions._(this.$options)
       : $replace = $options.action<ListInventoryTypesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -253,9 +253,6 @@ class _$ListInventoryTypesApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListInventoryTypesApiRequestListInventoryTypesApiRequestActions> get $serializer => ListInventoryTypesApiRequestListInventoryTypesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

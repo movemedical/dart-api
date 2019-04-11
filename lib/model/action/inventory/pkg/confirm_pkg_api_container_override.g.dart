@@ -205,7 +205,7 @@ class _$ConfirmPkgApiContainerOverrideActions
   _$ConfirmPkgApiContainerOverrideActions._(this.$options)
       : $replace = $options.action<ConfirmPkgApiContainerOverride>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         container = StockContainerDataActions(() => $options.stateful<
                 StockContainerData,
@@ -256,9 +256,6 @@ class _$ConfirmPkgApiContainerOverrideActions
     super.$middleware(middleware);
     container.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConfirmPkgApiContainerOverrideConfirmPkgApiContainerOverrideActions> get $serializer => ConfirmPkgApiContainerOverrideConfirmPkgApiContainerOverrideActions.serializer;
 
   FullType _$fullType;
   @override

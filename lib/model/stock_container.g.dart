@@ -572,74 +572,62 @@ class _$StockContainerActions extends StockContainerActions {
   _$StockContainerActions._(this.$options)
       : $replace =
             $options.action<StockContainer>('\$replace', (a) => a?.$replace),
-        containerType = $options.actionField<StockContainerType>(
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        binName = $options.actionField<String>('binName', (a) => a?.binName,
+        binName = $options.field<String>('binName', (a) => a?.binName,
             (s) => s?.binName, (p, b) => p?.binName = b),
-        binType = $options.actionField<BinType>('binType', (a) => a?.binType,
+        binType = $options.field<BinType>('binType', (a) => a?.binType,
             (s) => s?.binType, (p, b) => p?.binType = b),
-        binAisle = $options.actionField<String>('binAisle', (a) => a?.binAisle,
+        binAisle = $options.field<String>('binAisle', (a) => a?.binAisle,
             (s) => s?.binAisle, (p, b) => p?.binAisle = b),
-        binSection = $options.actionField<int>(
-            'binSection',
-            (a) => a?.binSection,
-            (s) => s?.binSection,
-            (p, b) => p?.binSection = b),
-        binShelf = $options.actionField<int>('binShelf', (a) => a?.binShelf,
+        binSection = $options.field<int>('binSection', (a) => a?.binSection,
+            (s) => s?.binSection, (p, b) => p?.binSection = b),
+        binShelf = $options.field<int>('binShelf', (a) => a?.binShelf,
             (s) => s?.binShelf, (p, b) => p?.binShelf = b),
-        binPosition = $options.actionField<int>(
-            'binPosition',
-            (a) => a?.binPosition,
-            (s) => s?.binPosition,
-            (p, b) => p?.binPosition = b),
-        packageNumber = $options.actionField<int>(
+        binPosition = $options.field<int>('binPosition', (a) => a?.binPosition,
+            (s) => s?.binPosition, (p, b) => p?.binPosition = b),
+        packageNumber = $options.field<int>(
             'packageNumber',
             (a) => a?.packageNumber,
             (s) => s?.packageNumber,
             (p, b) => p?.packageNumber = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        serialNumber = $options.actionField<int>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        serialNumber = $options.field<int>(
             'serialNumber',
             (a) => a?.serialNumber,
             (s) => s?.serialNumber,
             (p, b) => p?.serialNumber = b),
-        serialRef = $options.actionField<String>(
-            'serialRef',
-            (a) => a?.serialRef,
-            (s) => s?.serialRef,
-            (p, b) => p?.serialRef = b),
-        sealed = $options.actionField<bool>('sealed', (a) => a?.sealed,
+        serialRef = $options.field<String>('serialRef', (a) => a?.serialRef,
+            (s) => s?.serialRef, (p, b) => p?.serialRef = b),
+        sealed = $options.field<bool>('sealed', (a) => a?.sealed,
             (s) => s?.sealed, (p, b) => p?.sealed = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        kitId = $options.actionField<String>(
+        kitId = $options.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        kitItemNumber = $options.actionField<String>(
+        kitItemNumber = $options.field<String>(
             'kitItemNumber',
             (a) => a?.kitItemNumber,
             (s) => s?.kitItemNumber,
             (p, b) => p?.kitItemNumber = b),
-        kitSerialNumber = $options.actionField<int>(
+        kitSerialNumber = $options.field<int>(
             'kitSerialNumber',
             (a) => a?.kitSerialNumber,
             (s) => s?.kitSerialNumber,
             (p, b) => p?.kitSerialNumber = b),
-        kitSerialRef = $options.actionField<String>(
+        kitSerialRef = $options.field<String>(
             'kitSerialRef',
             (a) => a?.kitSerialRef,
             (s) => s?.kitSerialRef,
@@ -707,9 +695,6 @@ class _$StockContainerActions extends StockContainerActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<StockContainerStockContainerActions> get $serializer => StockContainerStockContainerActions.serializer;
 
   FullType _$fullType;
   @override

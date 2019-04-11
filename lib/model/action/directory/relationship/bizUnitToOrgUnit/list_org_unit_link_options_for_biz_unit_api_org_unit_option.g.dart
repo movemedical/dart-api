@@ -275,27 +275,21 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
       : $replace =
             $options.action<ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption>(
                 '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        orgUnitName = $options.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        opsOrgUnit = $options.actionField<bool>(
-            'opsOrgUnit',
-            (a) => a?.opsOrgUnit,
-            (s) => s?.opsOrgUnit,
-            (p, b) => p?.opsOrgUnit = b),
-        salesOrgUnit = $options.actionField<bool>(
+        opsOrgUnit = $options.field<bool>('opsOrgUnit', (a) => a?.opsOrgUnit,
+            (s) => s?.opsOrgUnit, (p, b) => p?.opsOrgUnit = b),
+        salesOrgUnit = $options.field<bool>(
             'salesOrgUnit',
             (a) => a?.salesOrgUnit,
             (s) => s?.salesOrgUnit,
             (p, b) => p?.salesOrgUnit = b),
-        orgUnitLabel = $options.actionField<String>(
+        orgUnitLabel = $options.field<String>(
             'orgUnitLabel',
             (a) => a?.orgUnitLabel,
             (s) => s?.orgUnitLabel,
@@ -341,9 +335,6 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions> get $serializer => ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions.serializer;
 
   FullType _$fullType;
   @override

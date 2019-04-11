@@ -192,9 +192,9 @@ class _$EditOrderShippingServiceApiRequestActions
   _$EditOrderShippingServiceApiRequestActions._(this.$options)
       : $replace = $options.action<EditOrderShippingServiceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
@@ -233,9 +233,6 @@ class _$EditOrderShippingServiceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<EditOrderShippingServiceApiRequestEditOrderShippingServiceApiRequestActions> get $serializer => EditOrderShippingServiceApiRequestEditOrderShippingServiceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -112,9 +112,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetPendingPoCountApi> get $serializer => CommandStateGetPendingPoCountApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

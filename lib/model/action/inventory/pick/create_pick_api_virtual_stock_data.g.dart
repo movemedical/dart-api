@@ -242,22 +242,19 @@ class _$CreatePickApiVirtualStockDataActions
   _$CreatePickApiVirtualStockDataActions._(this.$options)
       : $replace = $options.action<CreatePickApiVirtualStockData>(
             '\$replace', (a) => a?.$replace),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        locationType = $options.actionField<LocationType>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        containerType = $options.actionField<StockContainerType>(
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
@@ -299,9 +296,6 @@ class _$CreatePickApiVirtualStockDataActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePickApiVirtualStockDataCreatePickApiVirtualStockDataActions> get $serializer => CreatePickApiVirtualStockDataCreatePickApiVirtualStockDataActions.serializer;
 
   FullType _$fullType;
   @override

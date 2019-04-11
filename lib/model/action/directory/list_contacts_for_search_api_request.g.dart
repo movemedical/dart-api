@@ -387,31 +387,30 @@ class _$ListContactsForSearchApiRequestActions
   _$ListContactsForSearchApiRequestActions._(this.$options)
       : $replace = $options.action<ListContactsForSearchApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        contactTypes = $options.actionField<BuiltList<GeneralContactType>>(
+        contactTypes = $options.field<BuiltList<GeneralContactType>>(
             'contactTypes',
             (a) => a?.contactTypes,
             (s) => s?.contactTypes,
             (p, b) => p?.contactTypes = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        export = $options.actionField<bool>('export', (a) => a?.export,
+        export = $options.field<bool>('export', (a) => a?.export,
             (s) => s?.export, (p, b) => p?.export = b),
-        activeChoice =
-            $options.actionField<ListContactsForSearchApiActiveStatus>(
-                'activeChoice',
-                (a) => a?.activeChoice,
-                (s) => s?.activeChoice,
-                (p, b) => p?.activeChoice = b),
+        activeChoice = $options.field<ListContactsForSearchApiActiveStatus>(
+            'activeChoice',
+            (a) => a?.activeChoice,
+            (s) => s?.activeChoice,
+            (p, b) => p?.activeChoice = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -484,9 +483,6 @@ class _$ListContactsForSearchApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListContactsForSearchApiRequestListContactsForSearchApiRequestActions> get $serializer => ListContactsForSearchApiRequestListContactsForSearchApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

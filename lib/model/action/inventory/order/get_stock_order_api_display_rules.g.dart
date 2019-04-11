@@ -519,62 +519,59 @@ class _$GetStockOrderApiDisplayRulesActions
   _$GetStockOrderApiDisplayRulesActions._(this.$options)
       : $replace = $options.action<GetStockOrderApiDisplayRules>(
             '\$replace', (a) => a?.$replace),
-        editLineQuantity = $options.actionField<bool>(
+        editLineQuantity = $options.field<bool>(
             'editLineQuantity',
             (a) => a?.editLineQuantity,
             (s) => s?.editLineQuantity,
             (p, b) => p?.editLineQuantity = b),
-        requestApproval = $options.actionField<bool>(
+        requestApproval = $options.field<bool>(
             'requestApproval',
             (a) => a?.requestApproval,
             (s) => s?.requestApproval,
             (p, b) => p?.requestApproval = b),
-        approve = $options.actionField<bool>('approve', (a) => a?.approve,
+        approve = $options.field<bool>('approve', (a) => a?.approve,
             (s) => s?.approve, (p, b) => p?.approve = b),
-        sourcingMatrix = $options.actionField<bool>(
+        sourcingMatrix = $options.field<bool>(
             'sourcingMatrix',
             (a) => a?.sourcingMatrix,
             (s) => s?.sourcingMatrix,
             (p, b) => p?.sourcingMatrix = b),
-        editDetails = $options.actionField<bool>(
-            'editDetails',
-            (a) => a?.editDetails,
-            (s) => s?.editDetails,
-            (p, b) => p?.editDetails = b),
-        sendToErp = $options.actionField<bool>('sendToErp', (a) => a?.sendToErp,
+        editDetails = $options.field<bool>('editDetails', (a) => a?.editDetails,
+            (s) => s?.editDetails, (p, b) => p?.editDetails = b),
+        sendToErp = $options.field<bool>('sendToErp', (a) => a?.sendToErp,
             (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
-        skipErp = $options.actionField<bool>('skipErp', (a) => a?.skipErp,
+        skipErp = $options.field<bool>('skipErp', (a) => a?.skipErp,
             (s) => s?.skipErp, (p, b) => p?.skipErp = b),
-        cancel = $options.actionField<bool>('cancel', (a) => a?.cancel,
+        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        toInventoryType = $options.actionField<bool>(
+        toInventoryType = $options.field<bool>(
             'toInventoryType',
             (a) => a?.toInventoryType,
             (s) => s?.toInventoryType,
             (p, b) => p?.toInventoryType = b),
-        externalToLocation = $options.actionField<bool>(
+        externalToLocation = $options.field<bool>(
             'externalToLocation',
             (a) => a?.externalToLocation,
             (s) => s?.externalToLocation,
             (p, b) => p?.externalToLocation = b),
-        createOrderFromOpenLines = $options.actionField<bool>(
+        createOrderFromOpenLines = $options.field<bool>(
             'createOrderFromOpenLines',
             (a) => a?.createOrderFromOpenLines,
             (s) => s?.createOrderFromOpenLines,
             (p, b) => p?.createOrderFromOpenLines = b),
-        restocksAvailable = $options.actionField<bool>(
+        restocksAvailable = $options.field<bool>(
             'restocksAvailable',
             (a) => a?.restocksAvailable,
             (s) => s?.restocksAvailable,
             (p, b) => p?.restocksAvailable = b),
-        updatePo = $options.actionField<bool>('updatePo', (a) => a?.updatePo,
+        updatePo = $options.field<bool>('updatePo', (a) => a?.updatePo,
             (s) => s?.updatePo, (p, b) => p?.updatePo = b),
-        showShipments = $options.actionField<bool>(
+        showShipments = $options.field<bool>(
             'showShipments',
             (a) => a?.showShipments,
             (s) => s?.showShipments,
             (p, b) => p?.showShipments = b),
-        editDeliverTo = $options.actionField<bool>(
+        editDeliverTo = $options.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
@@ -638,9 +635,6 @@ class _$GetStockOrderApiDisplayRulesActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockOrderApiDisplayRulesGetStockOrderApiDisplayRulesActions> get $serializer => GetStockOrderApiDisplayRulesGetStockOrderApiDisplayRulesActions.serializer;
 
   FullType _$fullType;
   @override

@@ -190,8 +190,8 @@ class _$BuildUsageRestockPlanApiResponseActions
   _$BuildUsageRestockPlanApiResponseActions._(this.$options)
       : $replace = $options.action<BuildUsageRestockPlanApiResponse>(
             '\$replace', (a) => a?.$replace),
-        restockItems = $options
-            .actionField<BuiltList<BuildUsageRestockPlanApiRestockItem>>(
+        restockItems =
+            $options.field<BuiltList<BuildUsageRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
@@ -228,9 +228,6 @@ class _$BuildUsageRestockPlanApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildUsageRestockPlanApiResponseBuildUsageRestockPlanApiResponseActions> get $serializer => BuildUsageRestockPlanApiResponseBuildUsageRestockPlanApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

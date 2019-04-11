@@ -208,14 +208,14 @@ class _$ResetPasswordApiRequestActions extends ResetPasswordApiRequestActions {
   _$ResetPasswordApiRequestActions._(this.$options)
       : $replace = $options.action<ResetPasswordApiRequest>(
             '\$replace', (a) => a?.$replace),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        currentPassword = $options.actionField<String>(
+        currentPassword = $options.field<String>(
             'currentPassword',
             (a) => a?.currentPassword,
             (s) => s?.currentPassword,
             (p, b) => p?.currentPassword = b),
-        newPassword = $options.actionField<String>(
+        newPassword = $options.field<String>(
             'newPassword',
             (a) => a?.newPassword,
             (s) => s?.newPassword,
@@ -255,9 +255,6 @@ class _$ResetPasswordApiRequestActions extends ResetPasswordApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ResetPasswordApiRequestResetPasswordApiRequestActions> get $serializer => ResetPasswordApiRequestResetPasswordApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

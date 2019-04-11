@@ -332,14 +332,14 @@ class _$ListAdjustmentsApiAdjustmentActions
   _$ListAdjustmentsApiAdjustmentActions._(this.$options)
       : $replace = $options.action<ListAdjustmentsApiAdjustment>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<AdjustmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        reason = $options.actionField<AdjustmentReason>('reason',
-            (a) => a?.reason, (s) => s?.reason, (p, b) => p?.reason = b),
+        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
+        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+            (s) => s?.reason, (p, b) => p?.reason = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
@@ -354,7 +354,7 @@ class _$ListAdjustmentsApiAdjustmentActions
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        adjustedDate = $options.actionField<DateTime>(
+        adjustedDate = $options.field<DateTime>(
             'adjustedDate',
             (a) => a?.adjustedDate,
             (s) => s?.adjustedDate,
@@ -409,9 +409,6 @@ class _$ListAdjustmentsApiAdjustmentActions
     stockItem.$middleware(middleware);
     stockPlace.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAdjustmentsApiAdjustmentListAdjustmentsApiAdjustmentActions> get $serializer => ListAdjustmentsApiAdjustmentListAdjustmentsApiAdjustmentActions.serializer;
 
   FullType _$fullType;
   @override

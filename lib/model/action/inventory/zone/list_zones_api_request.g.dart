@@ -321,18 +321,15 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
   _$ListZonesApiRequestActions._(this.$options)
       : $replace = $options.action<ListZonesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        zoneId = $options.actionField<String>('zoneId', (a) => a?.zoneId,
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        type = $options.actionField<ZoneType>(
+        type = $options.field<ZoneType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -402,9 +399,6 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListZonesApiRequestListZonesApiRequestActions> get $serializer => ListZonesApiRequestListZonesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

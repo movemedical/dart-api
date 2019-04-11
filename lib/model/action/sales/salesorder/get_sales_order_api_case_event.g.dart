@@ -301,15 +301,12 @@ class _$GetSalesOrderApiCaseEventActions
   _$GetSalesOrderApiCaseEventActions._(this.$options)
       : $replace = $options.action<GetSalesOrderApiCaseEvent>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        eventNumber = $options.actionField<int>(
-            'eventNumber',
-            (a) => a?.eventNumber,
-            (s) => s?.eventNumber,
-            (p, b) => p?.eventNumber = b),
+        eventNumber = $options.field<int>('eventNumber', (a) => a?.eventNumber,
+            (s) => s?.eventNumber, (p, b) => p?.eventNumber = b),
         salesOu = OrgUnitActions(() =>
             $options.stateful<OrgUnit, OrgUnitBuilder, OrgUnitActions>(
                 'salesOu',
@@ -380,9 +377,6 @@ class _$GetSalesOrderApiCaseEventActions
     opsOu.$middleware(middleware);
     hcrTeam.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSalesOrderApiCaseEventGetSalesOrderApiCaseEventActions> get $serializer => GetSalesOrderApiCaseEventGetSalesOrderApiCaseEventActions.serializer;
 
   FullType _$fullType;
   @override

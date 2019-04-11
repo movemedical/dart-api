@@ -184,9 +184,9 @@ class _$GetStockApiStockAttributeActions
   _$GetStockApiStockAttributeActions._(this.$options)
       : $replace = $options.action<GetStockApiStockAttribute>(
             '\$replace', (a) => a?.$replace),
-        label = $options.actionField<String>(
+        label = $options.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.actionField<String>(
+        value = $options.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -221,9 +221,6 @@ class _$GetStockApiStockAttributeActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockApiStockAttributeGetStockApiStockAttributeActions> get $serializer => GetStockApiStockAttributeGetStockApiStockAttributeActions.serializer;
 
   FullType _$fullType;
   @override

@@ -169,7 +169,7 @@ class _$RequestAdjustmentExportDocApiResponseActions
   _$RequestAdjustmentExportDocApiResponseActions._(this.$options)
       : $replace = $options.action<RequestAdjustmentExportDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -206,9 +206,6 @@ class _$RequestAdjustmentExportDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestAdjustmentExportDocApiResponseRequestAdjustmentExportDocApiResponseActions> get $serializer => RequestAdjustmentExportDocApiResponseRequestAdjustmentExportDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

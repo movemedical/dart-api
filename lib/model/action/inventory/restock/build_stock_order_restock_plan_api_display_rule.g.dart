@@ -292,32 +292,28 @@ class _$BuildStockOrderRestockPlanApiDisplayRuleActions
   _$BuildStockOrderRestockPlanApiDisplayRuleActions._(this.$options)
       : $replace = $options.action<BuildStockOrderRestockPlanApiDisplayRule>(
             '\$replace', (a) => a?.$replace),
-        allowUserOverrideDoNotRestock = $options.actionField<bool>(
+        allowUserOverrideDoNotRestock = $options.field<bool>(
             'allowUserOverrideDoNotRestock',
             (a) => a?.allowUserOverrideDoNotRestock,
             (s) => s?.allowUserOverrideDoNotRestock,
             (p, b) => p?.allowUserOverrideDoNotRestock = b),
-        allowUserOverrideRestockLocation = $options.actionField<bool>(
+        allowUserOverrideRestockLocation = $options.field<bool>(
             'allowUserOverrideRestockLocation',
             (a) => a?.allowUserOverrideRestockLocation,
             (s) => s?.allowUserOverrideRestockLocation,
             (p, b) => p?.allowUserOverrideRestockLocation = b),
-        allowUserOverrideRestockDeliverTo = $options.actionField<bool>(
+        allowUserOverrideRestockDeliverTo = $options.field<bool>(
             'allowUserOverrideRestockDeliverTo',
             (a) => a?.allowUserOverrideRestockDeliverTo,
             (s) => s?.allowUserOverrideRestockDeliverTo,
             (p, b) => p?.allowUserOverrideRestockDeliverTo = b),
-        allowUserOverrideRestockByDateShippingService =
-            $options.actionField<bool>(
-                'allowUserOverrideRestockByDateShippingService',
-                (a) => a?.allowUserOverrideRestockByDateShippingService,
-                (s) => s?.allowUserOverrideRestockByDateShippingService,
-                (p, b) => p?.allowUserOverrideRestockByDateShippingService = b),
-        poRequired = $options.actionField<bool>(
-            'poRequired',
-            (a) => a?.poRequired,
-            (s) => s?.poRequired,
-            (p, b) => p?.poRequired = b),
+        allowUserOverrideRestockByDateShippingService = $options.field<bool>(
+            'allowUserOverrideRestockByDateShippingService',
+            (a) => a?.allowUserOverrideRestockByDateShippingService,
+            (s) => s?.allowUserOverrideRestockByDateShippingService,
+            (p, b) => p?.allowUserOverrideRestockByDateShippingService = b),
+        poRequired = $options.field<bool>('poRequired', (a) => a?.poRequired,
+            (s) => s?.poRequired, (p, b) => p?.poRequired = b),
         super._();
 
   factory _$BuildStockOrderRestockPlanApiDisplayRuleActions(
@@ -358,9 +354,6 @@ class _$BuildStockOrderRestockPlanApiDisplayRuleActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildStockOrderRestockPlanApiDisplayRuleBuildStockOrderRestockPlanApiDisplayRuleActions> get $serializer => BuildStockOrderRestockPlanApiDisplayRuleBuildStockOrderRestockPlanApiDisplayRuleActions.serializer;
 
   FullType _$fullType;
   @override

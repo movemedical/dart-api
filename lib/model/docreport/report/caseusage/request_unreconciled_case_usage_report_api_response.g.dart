@@ -240,7 +240,7 @@ class _$RequestUnreconciledCaseUsageReportApiResponseActions
       : $replace =
             $options.action<RequestUnreconciledCaseUsageReportApiResponse>(
                 '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -303,9 +303,6 @@ class _$RequestUnreconciledCaseUsageReportApiResponseActions
     hcrTeam.$middleware(middleware);
     hospital.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestUnreconciledCaseUsageReportApiResponseRequestUnreconciledCaseUsageReportApiResponseActions> get $serializer => RequestUnreconciledCaseUsageReportApiResponseRequestUnreconciledCaseUsageReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

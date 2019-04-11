@@ -225,9 +225,9 @@ class _$ListCancelReasonsApiRequestActions
   _$ListCancelReasonsApiRequestActions._(this.$options)
       : $replace = $options.action<ListCancelReasonsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -279,9 +279,6 @@ class _$ListCancelReasonsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCancelReasonsApiRequestListCancelReasonsApiRequestActions> get $serializer => ListCancelReasonsApiRequestListCancelReasonsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

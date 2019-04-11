@@ -299,25 +299,25 @@ class _$OrderHeaderLiteActions extends OrderHeaderLiteActions {
   _$OrderHeaderLiteActions._(this.$options)
       : $replace =
             $options.action<OrderHeaderLite>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        created = $options.actionField<DateTime>('created', (a) => a?.created,
+        created = $options.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<OrderStatus>('status', (a) => a?.status,
+        status = $options.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        orderReasonId = $options.actionField<String>(
+        orderReasonId = $options.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        orderReasonName = $options.actionField<String>(
+        orderReasonName = $options.field<String>(
             'orderReasonName',
             (a) => a?.orderReasonName,
             (s) => s?.orderReasonName,
             (p, b) => p?.orderReasonName = b),
-        orderReasonGroup = $options.actionField<OrderReasonGroup>(
+        orderReasonGroup = $options.field<OrderReasonGroup>(
             'orderReasonGroup',
             (a) => a?.orderReasonGroup,
             (s) => s?.orderReasonGroup,
@@ -363,9 +363,6 @@ class _$OrderHeaderLiteActions extends OrderHeaderLiteActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrderHeaderLiteOrderHeaderLiteActions> get $serializer => OrderHeaderLiteOrderHeaderLiteActions.serializer;
 
   FullType _$fullType;
   @override

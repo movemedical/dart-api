@@ -644,17 +644,17 @@ class _$ListStockSummaryApiStockSummaryActions
   _$ListStockSummaryApiStockSummaryActions._(this.$options)
       : $replace = $options.action<ListStockSummaryApiStockSummary>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        key = $options.actionField<String>(
+        key = $options.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        qty = $options.actionField<int>(
+        qty = $options.field<int>(
             'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
-        holdQty = $options.actionField<int>('holdQty', (a) => a?.holdQty,
+        holdQty = $options.field<int>('holdQty', (a) => a?.holdQty,
             (s) => s?.holdQty, (p, b) => p?.holdQty = b),
-        lostQty = $options.actionField<int>('lostQty', (a) => a?.lostQty,
+        lostQty = $options.field<int>('lostQty', (a) => a?.lostQty,
             (s) => s?.lostQty, (p, b) => p?.lostQty = b),
-        foundQty = $options.actionField<int>('foundQty', (a) => a?.foundQty,
+        foundQty = $options.field<int>('foundQty', (a) => a?.foundQty,
             (s) => s?.foundQty, (p, b) => p?.foundQty = b),
         place = StockPlaceActions(() =>
             $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
@@ -707,29 +707,29 @@ class _$ListStockSummaryApiStockSummaryActions
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        kitId = $options.actionField<String>(
+        kitId = $options.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        kitItemNumber = $options.actionField<String>(
+        kitItemNumber = $options.field<String>(
             'kitItemNumber',
             (a) => a?.kitItemNumber,
             (s) => s?.kitItemNumber,
             (p, b) => p?.kitItemNumber = b),
-        kitSerialNumber = $options.actionField<int>(
+        kitSerialNumber = $options.field<int>(
             'kitSerialNumber',
             (a) => a?.kitSerialNumber,
             (s) => s?.kitSerialNumber,
             (p, b) => p?.kitSerialNumber = b),
-        kitSerialRef = $options.actionField<String>(
+        kitSerialRef = $options.field<String>(
             'kitSerialRef',
             (a) => a?.kitSerialRef,
             (s) => s?.kitSerialRef,
             (p, b) => p?.kitSerialRef = b),
-        attributeLabel = $options.actionField<String>(
+        attributeLabel = $options.field<String>(
             'attributeLabel',
             (a) => a?.attributeLabel,
             (s) => s?.attributeLabel,
             (p, b) => p?.attributeLabel = b),
-        attributeValue = $options.actionField<String>(
+        attributeValue = $options.field<String>(
             'attributeValue',
             (a) => a?.attributeValue,
             (s) => s?.attributeValue,
@@ -814,9 +814,6 @@ class _$ListStockSummaryApiStockSummaryActions
     demandLoan.$middleware(middleware);
     consignmentLoan.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockSummaryApiStockSummaryListStockSummaryApiStockSummaryActions> get $serializer => ListStockSummaryApiStockSummaryListStockSummaryApiStockSummaryActions.serializer;
 
   FullType _$fullType;
   @override

@@ -116,9 +116,6 @@ class _$ListContainersToBeCountedApi extends ListContainersToBeCountedApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListContainersToBeCountedApi> get $serializer => CommandStateListContainersToBeCountedApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

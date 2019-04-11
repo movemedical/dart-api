@@ -107,9 +107,6 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestRollForwardReportApi> get $serializer => CommandStateRequestRollForwardReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

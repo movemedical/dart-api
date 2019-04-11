@@ -89,9 +89,6 @@ class _$DeleteFileApi extends DeleteFileApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteFileApi> get $serializer => CommandStateDeleteFileApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

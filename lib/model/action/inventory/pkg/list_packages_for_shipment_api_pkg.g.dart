@@ -263,18 +263,18 @@ class _$ListPackagesForShipmentApiPkgActions
   _$ListPackagesForShipmentApiPkgActions._(this.$options)
       : $replace = $options.action<ListPackagesForShipmentApiPkg>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<PackageStatus>('status', (a) => a?.status,
+        status = $options.field<PackageStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        trackingNumber = $options.actionField<String>(
+        trackingNumber = $options.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
             (p, b) => p?.trackingNumber = b),
-        trackingNumberUrl = $options.actionField<String>(
+        trackingNumberUrl = $options.field<String>(
             'trackingNumberUrl',
             (a) => a?.trackingNumberUrl,
             (s) => s?.trackingNumberUrl,
@@ -318,9 +318,6 @@ class _$ListPackagesForShipmentApiPkgActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPackagesForShipmentApiPkgListPackagesForShipmentApiPkgActions> get $serializer => ListPackagesForShipmentApiPkgListPackagesForShipmentApiPkgActions.serializer;
 
   FullType _$fullType;
   @override

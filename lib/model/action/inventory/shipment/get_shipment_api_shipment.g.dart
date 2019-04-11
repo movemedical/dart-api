@@ -498,12 +498,12 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   _$GetShipmentApiShipmentActions._(this.$options)
       : $replace = $options.action<GetShipmentApiShipment>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<ShipmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
@@ -550,23 +550,20 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
             (s) => s?.shippingService,
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        erpStatus = $options.actionField<ErpStatus>(
-            'erpStatus',
-            (a) => a?.erpStatus,
-            (s) => s?.erpStatus,
-            (p, b) => p?.erpStatus = b),
+        erpStatus = $options.field<ErpStatus>('erpStatus', (a) => a?.erpStatus,
+            (s) => s?.erpStatus, (p, b) => p?.erpStatus = b),
         validationMessages =
-            $options.actionField<BuiltList<GetShipmentApiValidationMsg>>(
+            $options.field<BuiltList<GetShipmentApiValidationMsg>>(
                 'validationMessages',
                 (a) => a?.validationMessages,
                 (s) => s?.validationMessages,
                 (p, b) => p?.validationMessages = b),
-        deliverWindowEnd = $options.actionField<DateTime>(
+        deliverWindowEnd = $options.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
@@ -637,9 +634,6 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
     deliverToOverride.$middleware(middleware);
     shippingService.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetShipmentApiShipmentGetShipmentApiShipmentActions> get $serializer => GetShipmentApiShipmentGetShipmentApiShipmentActions.serializer;
 
   FullType _$fullType;
   @override

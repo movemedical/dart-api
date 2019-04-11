@@ -915,16 +915,16 @@ class _$UpdateFacilityApiRequestActions
   _$UpdateFacilityApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateFacilityApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        facilityType = $options.actionField<FacilityType>(
+        facilityType = $options.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         contactName = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -940,63 +940,57 @@ class _$UpdateFacilityApiRequestActions
                 (s) => s?.contactPhone,
                 (b) => b?.contactPhone,
                 (parent, builder) => parent?.contactPhone = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        caseLoaningMethodology = $options.actionField<CaseLoaningMethodology>(
+        caseLoaningMethodology = $options.field<CaseLoaningMethodology>(
             'caseLoaningMethodology',
             (a) => a?.caseLoaningMethodology,
             (s) => s?.caseLoaningMethodology,
             (p, b) => p?.caseLoaningMethodology = b),
-        restockType = $options.actionField<RestockType>(
+        restockType = $options.field<RestockType>(
             'restockType',
             (a) => a?.restockType,
             (s) => s?.restockType,
             (p, b) => p?.restockType = b),
-        binManaged = $options.actionField<bool>(
-            'binManaged',
-            (a) => a?.binManaged,
-            (s) => s?.binManaged,
-            (p, b) => p?.binManaged = b),
-        autoPutAway = $options.actionField<bool>(
-            'autoPutAway',
-            (a) => a?.autoPutAway,
-            (s) => s?.autoPutAway,
-            (p, b) => p?.autoPutAway = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        binManaged = $options.field<bool>('binManaged', (a) => a?.binManaged,
+            (s) => s?.binManaged, (p, b) => p?.binManaged = b),
+        autoPutAway = $options.field<bool>('autoPutAway', (a) => a?.autoPutAway,
+            (s) => s?.autoPutAway, (p, b) => p?.autoPutAway = b),
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        opsScheduleProfileId = $options.actionField<String>(
+        opsScheduleProfileId = $options.field<String>(
             'opsScheduleProfileId',
             (a) => a?.opsScheduleProfileId,
             (s) => s?.opsScheduleProfileId,
             (p, b) => p?.opsScheduleProfileId = b),
-        deliveryScheduleProfileId = $options.actionField<String>(
+        deliveryScheduleProfileId = $options.field<String>(
             'deliveryScheduleProfileId',
             (a) => a?.deliveryScheduleProfileId,
             (s) => s?.deliveryScheduleProfileId,
             (p, b) => p?.deliveryScheduleProfileId = b),
-        courierProfileId = $options.actionField<String>(
+        courierProfileId = $options.field<String>(
             'courierProfileId',
             (a) => a?.courierProfileId,
             (s) => s?.courierProfileId,
             (p, b) => p?.courierProfileId = b),
-        lagTime = $options.actionField<int>('lagTime', (a) => a?.lagTime,
+        lagTime = $options.field<int>('lagTime', (a) => a?.lagTime,
             (s) => s?.lagTime, (p, b) => p?.lagTime = b),
-        splitImplantsAndInstruments = $options.actionField<bool>(
+        splitImplantsAndInstruments = $options.field<bool>(
             'splitImplantsAndInstruments',
             (a) => a?.splitImplantsAndInstruments,
             (s) => s?.splitImplantsAndInstruments,
             (p, b) => p?.splitImplantsAndInstruments = b),
-        turnTimeInMinutes = $options.actionField<int>(
+        turnTimeInMinutes = $options.field<int>(
             'turnTimeInMinutes',
             (a) => a?.turnTimeInMinutes,
             (s) => s?.turnTimeInMinutes,
             (p, b) => p?.turnTimeInMinutes = b),
-        loanSplitMethod = $options.actionField<LoanSplitMethod>(
+        loanSplitMethod = $options.field<LoanSplitMethod>(
             'loanSplitMethod',
             (a) => a?.loanSplitMethod,
             (s) => s?.loanSplitMethod,
             (p, b) => p?.loanSplitMethod = b),
-        optimizeLoans = $options.actionField<bool>(
+        optimizeLoans = $options.field<bool>(
             'optimizeLoans',
             (a) => a?.optimizeLoans,
             (s) => s?.optimizeLoans,
@@ -1008,17 +1002,14 @@ class _$UpdateFacilityApiRequestActions
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicVisible = $options.actionField<bool>(
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        shipToAddressId = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
@@ -1030,27 +1021,27 @@ class _$UpdateFacilityApiRequestActions
                 (s) => s?.shipToAddress,
                 (b) => b?.shipToAddress,
                 (parent, builder) => parent?.shipToAddress = builder)),
-        shipToAddressCustomerKey = $options.actionField<String>(
+        shipToAddressCustomerKey = $options.field<String>(
             'shipToAddressCustomerKey',
             (a) => a?.shipToAddressCustomerKey,
             (s) => s?.shipToAddressCustomerKey,
             (p, b) => p?.shipToAddressCustomerKey = b),
-        shipToReference_1 = $options.actionField<String>(
+        shipToReference_1 = $options.field<String>(
             'shipToReference_1',
             (a) => a?.shipToReference_1,
             (s) => s?.shipToReference_1,
             (p, b) => p?.shipToReference_1 = b),
-        shipToReference_2 = $options.actionField<String>(
+        shipToReference_2 = $options.field<String>(
             'shipToReference_2',
             (a) => a?.shipToReference_2,
             (s) => s?.shipToReference_2,
             (p, b) => p?.shipToReference_2 = b),
-        defaultBillToAddressId = $options.actionField<String>(
+        defaultBillToAddressId = $options.field<String>(
             'defaultBillToAddressId',
             (a) => a?.defaultBillToAddressId,
             (s) => s?.defaultBillToAddressId,
             (p, b) => p?.defaultBillToAddressId = b),
-        defaultDeliverToAddressId = $options.actionField<String>(
+        defaultDeliverToAddressId = $options.field<String>(
             'defaultDeliverToAddressId',
             (a) => a?.defaultDeliverToAddressId,
             (s) => s?.defaultDeliverToAddressId,
@@ -1164,9 +1155,6 @@ class _$UpdateFacilityApiRequestActions
     shipToAddress.$middleware(middleware);
     defaultDeliverToAddress.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateFacilityApiRequestUpdateFacilityApiRequestActions> get $serializer => UpdateFacilityApiRequestUpdateFacilityApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

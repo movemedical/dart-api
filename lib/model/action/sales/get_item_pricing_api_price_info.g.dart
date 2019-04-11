@@ -184,9 +184,9 @@ class _$GetItemPricingApiPriceInfoActions
   _$GetItemPricingApiPriceInfoActions._(this.$options)
       : $replace = $options.action<GetItemPricingApiPriceInfo>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        value = $options.actionField<String>(
+        value = $options.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -221,9 +221,6 @@ class _$GetItemPricingApiPriceInfoActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemPricingApiPriceInfoGetItemPricingApiPriceInfoActions> get $serializer => GetItemPricingApiPriceInfoGetItemPricingApiPriceInfoActions.serializer;
 
   FullType _$fullType;
   @override

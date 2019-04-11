@@ -111,9 +111,6 @@ class _$GetUiSetupAllApi extends GetUiSetupAllApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetUiSetupAllApi> get $serializer => CommandStateGetUiSetupAllApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

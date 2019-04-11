@@ -211,9 +211,6 @@ class _$GetTeamApiResponseActions extends GetTeamApiResponseActions {
     detail.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetTeamApiResponseGetTeamApiResponseActions> get $serializer => GetTeamApiResponseGetTeamApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetTeamApiResponse);

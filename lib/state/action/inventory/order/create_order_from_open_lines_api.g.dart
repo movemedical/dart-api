@@ -116,9 +116,6 @@ class _$CreateOrderFromOpenLinesApi extends CreateOrderFromOpenLinesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateOrderFromOpenLinesApi> get $serializer => CommandStateCreateOrderFromOpenLinesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

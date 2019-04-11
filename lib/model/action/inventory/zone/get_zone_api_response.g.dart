@@ -211,9 +211,6 @@ class _$GetZoneApiResponseActions extends GetZoneApiResponseActions {
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetZoneApiResponseGetZoneApiResponseActions> get $serializer => GetZoneApiResponseGetZoneApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetZoneApiResponse);

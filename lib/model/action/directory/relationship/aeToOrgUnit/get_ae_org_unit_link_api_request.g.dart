@@ -165,7 +165,7 @@ class _$GetAeOrgUnitLinkApiRequestActions
   _$GetAeOrgUnitLinkApiRequestActions._(this.$options)
       : $replace = $options.action<GetAeOrgUnitLinkApiRequest>(
             '\$replace', (a) => a?.$replace),
-        aeToOrgUnitId = $options.actionField<String>(
+        aeToOrgUnitId = $options.field<String>(
             'aeToOrgUnitId',
             (a) => a?.aeToOrgUnitId,
             (s) => s?.aeToOrgUnitId,
@@ -201,9 +201,6 @@ class _$GetAeOrgUnitLinkApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAeOrgUnitLinkApiRequestGetAeOrgUnitLinkApiRequestActions> get $serializer => GetAeOrgUnitLinkApiRequestGetAeOrgUnitLinkApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

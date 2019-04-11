@@ -261,12 +261,9 @@ class _$ListOrgUnitFacilityLinksApiRequestActions
   _$ListOrgUnitFacilityLinksApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrgUnitFacilityLinksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -332,9 +329,6 @@ class _$ListOrgUnitFacilityLinksApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgUnitFacilityLinksApiRequestListOrgUnitFacilityLinksApiRequestActions> get $serializer => ListOrgUnitFacilityLinksApiRequestListOrgUnitFacilityLinksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

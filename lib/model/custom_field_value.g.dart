@@ -398,51 +398,48 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
   _$CustomFieldValueActions._(this.$options)
       : $replace =
             $options.action<CustomFieldValue>('\$replace', (a) => a?.$replace),
-        customFieldId = $options.actionField<String>(
+        customFieldId = $options.field<String>(
             'customFieldId',
             (a) => a?.customFieldId,
             (s) => s?.customFieldId,
             (p, b) => p?.customFieldId = b),
-        customFieldName = $options.actionField<String>(
+        customFieldName = $options.field<String>(
             'customFieldName',
             (a) => a?.customFieldName,
             (s) => s?.customFieldName,
             (p, b) => p?.customFieldName = b),
-        customFieldValueId = $options.actionField<String>(
+        customFieldValueId = $options.field<String>(
             'customFieldValueId',
             (a) => a?.customFieldValueId,
             (s) => s?.customFieldValueId,
             (p, b) => p?.customFieldValueId = b),
-        customFieldDataType = $options.actionField<CustomFieldDataType>(
+        customFieldDataType = $options.field<CustomFieldDataType>(
             'customFieldDataType',
             (a) => a?.customFieldDataType,
             (s) => s?.customFieldDataType,
             (p, b) => p?.customFieldDataType = b),
-        sort = $options.actionField<int>(
+        sort = $options.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
-        required = $options.actionField<bool>('required', (a) => a?.required,
+        required = $options.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
-        booleanValue = $options.actionField<bool>(
+        booleanValue = $options.field<bool>(
             'booleanValue',
             (a) => a?.booleanValue,
             (s) => s?.booleanValue,
             (p, b) => p?.booleanValue = b),
-        stringValue = $options.actionField<String>(
+        stringValue = $options.field<String>(
             'stringValue',
             (a) => a?.stringValue,
             (s) => s?.stringValue,
             (p, b) => p?.stringValue = b),
-        dateValue = $options.actionField<DateTime>(
-            'dateValue',
-            (a) => a?.dateValue,
-            (s) => s?.dateValue,
-            (p, b) => p?.dateValue = b),
-        doubleValue = $options.actionField<double>(
+        dateValue = $options.field<DateTime>('dateValue', (a) => a?.dateValue,
+            (s) => s?.dateValue, (p, b) => p?.dateValue = b),
+        doubleValue = $options.field<double>(
             'doubleValue',
             (a) => a?.doubleValue,
             (s) => s?.doubleValue,
             (p, b) => p?.doubleValue = b),
-        longValue = $options.actionField<int>('longValue', (a) => a?.longValue,
+        longValue = $options.field<int>('longValue', (a) => a?.longValue,
             (s) => s?.longValue, (p, b) => p?.longValue = b),
         super._();
 
@@ -493,9 +490,6 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomFieldValueCustomFieldValueActions> get $serializer => CustomFieldValueCustomFieldValueActions.serializer;
 
   FullType _$fullType;
   @override

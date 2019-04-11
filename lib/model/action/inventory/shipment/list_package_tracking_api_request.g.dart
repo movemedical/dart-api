@@ -167,11 +167,8 @@ class _$ListPackageTrackingApiRequestActions
   _$ListPackageTrackingApiRequestActions._(this.$options)
       : $replace = $options.action<ListPackageTrackingApiRequest>(
             '\$replace', (a) => a?.$replace),
-        packageId = $options.actionField<String>(
-            'packageId',
-            (a) => a?.packageId,
-            (s) => s?.packageId,
-            (p, b) => p?.packageId = b),
+        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+            (s) => s?.packageId, (p, b) => p?.packageId = b),
         super._();
 
   factory _$ListPackageTrackingApiRequestActions(
@@ -203,9 +200,6 @@ class _$ListPackageTrackingApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPackageTrackingApiRequestListPackageTrackingApiRequestActions> get $serializer => ListPackageTrackingApiRequestListPackageTrackingApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

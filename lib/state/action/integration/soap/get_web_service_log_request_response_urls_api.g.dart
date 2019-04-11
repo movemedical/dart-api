@@ -126,9 +126,6 @@ class _$GetWebServiceLogRequestResponseUrlsApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetWebServiceLogRequestResponseUrlsApi> get $serializer => CommandStateGetWebServiceLogRequestResponseUrlsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

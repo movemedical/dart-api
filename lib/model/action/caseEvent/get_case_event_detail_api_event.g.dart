@@ -385,49 +385,40 @@ class _$GetCaseEventDetailApiEventActions
   _$GetCaseEventDetailApiEventActions._(this.$options)
       : $replace = $options.action<GetCaseEventDetailApiEvent>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        eventType = $options.actionField<EventType>(
-            'eventType',
-            (a) => a?.eventType,
-            (s) => s?.eventType,
-            (p, b) => p?.eventType = b),
-        eventDate = $options.actionField<DateTime>(
-            'eventDate',
-            (a) => a?.eventDate,
-            (s) => s?.eventDate,
-            (p, b) => p?.eventDate = b),
-        localEventDate = $options.actionField<DateTime>(
+        eventType = $options.field<EventType>('eventType', (a) => a?.eventType,
+            (s) => s?.eventType, (p, b) => p?.eventType = b),
+        eventDate = $options.field<DateTime>('eventDate', (a) => a?.eventDate,
+            (s) => s?.eventDate, (p, b) => p?.eventDate = b),
+        localEventDate = $options.field<DateTime>(
             'localEventDate',
             (a) => a?.localEventDate,
             (s) => s?.localEventDate,
             (p, b) => p?.localEventDate = b),
-        eventDuration = $options.actionField<int>(
+        eventDuration = $options.field<int>(
             'eventDuration',
             (a) => a?.eventDuration,
             (s) => s?.eventDuration,
             (p, b) => p?.eventDuration = b),
-        eventStatus = $options.actionField<EventStatus>(
+        eventStatus = $options.field<EventStatus>(
             'eventStatus',
             (a) => a?.eventStatus,
             (s) => s?.eventStatus,
             (p, b) => p?.eventStatus = b),
-        eventState = $options.actionField<EventState>(
+        eventState = $options.field<EventState>(
             'eventState',
             (a) => a?.eventState,
             (s) => s?.eventState,
             (p, b) => p?.eventState = b),
-        eventDescription = $options.actionField<String>(
+        eventDescription = $options.field<String>(
             'eventDescription',
             (a) => a?.eventDescription,
             (s) => s?.eventDescription,
             (p, b) => p?.eventDescription = b),
-        eventNumber = $options.actionField<int>(
-            'eventNumber',
-            (a) => a?.eventNumber,
-            (s) => s?.eventNumber,
-            (p, b) => p?.eventNumber = b),
-        eventTimeUnknown = $options.actionField<bool>(
+        eventNumber = $options.field<int>('eventNumber', (a) => a?.eventNumber,
+            (s) => s?.eventNumber, (p, b) => p?.eventNumber = b),
+        eventTimeUnknown = $options.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
@@ -481,9 +472,6 @@ class _$GetCaseEventDetailApiEventActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiEventGetCaseEventDetailApiEventActions> get $serializer => GetCaseEventDetailApiEventGetCaseEventDetailApiEventActions.serializer;
 
   FullType _$fullType;
   @override

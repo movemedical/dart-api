@@ -185,9 +185,9 @@ class _$SendOrderToErpApiRequestActions
   _$SendOrderToErpApiRequestActions._(this.$options)
       : $replace = $options.action<SendOrderToErpApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        validateOnly = $options.actionField<bool>(
+        validateOnly = $options.field<bool>(
             'validateOnly',
             (a) => a?.validateOnly,
             (s) => s?.validateOnly,
@@ -225,9 +225,6 @@ class _$SendOrderToErpApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SendOrderToErpApiRequestSendOrderToErpApiRequestActions> get $serializer => SendOrderToErpApiRequestSendOrderToErpApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

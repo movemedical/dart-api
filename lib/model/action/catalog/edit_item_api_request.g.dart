@@ -424,63 +424,51 @@ class _$EditItemApiRequestActions extends EditItemApiRequestActions {
   _$EditItemApiRequestActions._(this.$options)
       : $replace = $options.action<EditItemApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        skuNumber = $options.actionField<String>(
-            'skuNumber',
-            (a) => a?.skuNumber,
-            (s) => s?.skuNumber,
-            (p, b) => p?.skuNumber = b),
-        longDescription = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        skuNumber = $options.field<String>('skuNumber', (a) => a?.skuNumber,
+            (s) => s?.skuNumber, (p, b) => p?.skuNumber = b),
+        longDescription = $options.field<String>(
             'longDescription',
             (a) => a?.longDescription,
             (s) => s?.longDescription,
             (p, b) => p?.longDescription = b),
-        shortDescription = $options.actionField<String>(
+        shortDescription = $options.field<String>(
             'shortDescription',
             (a) => a?.shortDescription,
             (s) => s?.shortDescription,
             (p, b) => p?.shortDescription = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.actionField<MoveItemType>(
+        moveItemType = $options.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        sizeSequence = $options.actionField<int>(
+        sizeSequence = $options.field<int>(
             'sizeSequence',
             (a) => a?.sizeSequence,
             (s) => s?.sizeSequence,
             (p, b) => p?.sizeSequence = b),
-        unitOfMeasureId = $options.actionField<String>(
+        unitOfMeasureId = $options.field<String>(
             'unitOfMeasureId',
             (a) => a?.unitOfMeasureId,
             (s) => s?.unitOfMeasureId,
             (p, b) => p?.unitOfMeasureId = b),
-        forceContainersOnDelivery = $options.actionField<bool>(
+        forceContainersOnDelivery = $options.field<bool>(
             'forceContainersOnDelivery',
             (a) => a?.forceContainersOnDelivery,
             (s) => s?.forceContainersOnDelivery,
             (p, b) => p?.forceContainersOnDelivery = b),
-        auditCode = $options.actionField<AuditCode>(
-            'auditCode',
-            (a) => a?.auditCode,
-            (s) => s?.auditCode,
-            (p, b) => p?.auditCode = b),
+        auditCode = $options.field<AuditCode>('auditCode', (a) => a?.auditCode,
+            (s) => s?.auditCode, (p, b) => p?.auditCode = b),
         super._();
 
   factory _$EditItemApiRequestActions(
@@ -533,9 +521,6 @@ class _$EditItemApiRequestActions extends EditItemApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<EditItemApiRequestEditItemApiRequestActions> get $serializer => EditItemApiRequestEditItemApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

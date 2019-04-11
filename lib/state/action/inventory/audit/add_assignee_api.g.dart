@@ -89,9 +89,6 @@ class _$AddAssigneeApi extends AddAssigneeApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddAssigneeApi> get $serializer => CommandStateAddAssigneeApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

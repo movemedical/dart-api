@@ -734,103 +734,85 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
   _$ListSalesOrdersApiOrderActions._(this.$options)
       : $replace = $options.action<ListSalesOrdersApiOrder>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderNumber = $options.actionField<int>(
-            'orderNumber',
-            (a) => a?.orderNumber,
-            (s) => s?.orderNumber,
-            (p, b) => p?.orderNumber = b),
-        erpReference = $options.actionField<String>(
+        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+            (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        orderReasonId = $options.actionField<String>(
+        orderReasonId = $options.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        orderReasonName = $options.actionField<String>(
+        orderReasonName = $options.field<String>(
             'orderReasonName',
             (a) => a?.orderReasonName,
             (s) => s?.orderReasonName,
             (p, b) => p?.orderReasonName = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        customerName = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        customerName = $options.field<String>(
             'customerName',
             (a) => a?.customerName,
             (s) => s?.customerName,
             (p, b) => p?.customerName = b),
-        shipToId = $options.actionField<String>('shipToId', (a) => a?.shipToId,
+        shipToId = $options.field<String>('shipToId', (a) => a?.shipToId,
             (s) => s?.shipToId, (p, b) => p?.shipToId = b),
-        billToId = $options.actionField<String>('billToId', (a) => a?.billToId,
+        billToId = $options.field<String>('billToId', (a) => a?.billToId,
             (s) => s?.billToId, (p, b) => p?.billToId = b),
-        deliverToId = $options.actionField<String>(
+        deliverToId = $options.field<String>(
             'deliverToId',
             (a) => a?.deliverToId,
             (s) => s?.deliverToId,
             (p, b) => p?.deliverToId = b),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        salesRepName = $options.actionField<String>(
+        salesRepName = $options.field<String>(
             'salesRepName',
             (a) => a?.salesRepName,
             (s) => s?.salesRepName,
             (p, b) => p?.salesRepName = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        locationName = $options.actionField<String>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        locationName = $options.field<String>(
             'locationName',
             (a) => a?.locationName,
             (s) => s?.locationName,
             (p, b) => p?.locationName = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        salesOrgUnitId = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        created = $options.actionField<DateTime>('created', (a) => a?.created,
+        created = $options.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        saleDate = $options.actionField<DateTime>('saleDate',
-            (a) => a?.saleDate, (s) => s?.saleDate, (p, b) => p?.saleDate = b),
-        email = $options.actionField<String>(
+        saleDate = $options.field<DateTime>('saleDate', (a) => a?.saleDate,
+            (s) => s?.saleDate, (p, b) => p?.saleDate = b),
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
-        status = $options.actionField<OrderStatus>('status', (a) => a?.status,
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
+        status = $options.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        createdByName = $options.actionField<String>(
+        createdByName = $options.field<String>(
             'createdByName',
             (a) => a?.createdByName,
             (s) => s?.createdByName,
             (p, b) => p?.createdByName = b),
-        grandTotal = $options.actionField<double>(
-            'grandTotal',
-            (a) => a?.grandTotal,
-            (s) => s?.grandTotal,
-            (p, b) => p?.grandTotal = b),
-        noteCount = $options.actionField<int>('noteCount', (a) => a?.noteCount,
+        grandTotal = $options.field<double>('grandTotal', (a) => a?.grandTotal,
+            (s) => s?.grandTotal, (p, b) => p?.grandTotal = b),
+        noteCount = $options.field<int>('noteCount', (a) => a?.noteCount,
             (s) => s?.noteCount, (p, b) => p?.noteCount = b),
         super._();
 
@@ -911,9 +893,6 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSalesOrdersApiOrderListSalesOrdersApiOrderActions> get $serializer => ListSalesOrdersApiOrderListSalesOrdersApiOrderActions.serializer;
 
   FullType _$fullType;
   @override

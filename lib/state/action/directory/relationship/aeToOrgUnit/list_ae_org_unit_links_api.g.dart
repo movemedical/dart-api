@@ -112,9 +112,6 @@ class _$ListAeOrgUnitLinksApi extends ListAeOrgUnitLinksApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListAeOrgUnitLinksApi> get $serializer => CommandStateListAeOrgUnitLinksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

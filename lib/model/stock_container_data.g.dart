@@ -174,12 +174,12 @@ class _$StockContainerDataActions extends StockContainerDataActions {
   _$StockContainerDataActions._(this.$options)
       : $replace = $options.action<StockContainerData>(
             '\$replace', (a) => a?.$replace),
-        containerType = $options.actionField<StockContainerType>(
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -216,9 +216,6 @@ class _$StockContainerDataActions extends StockContainerDataActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<StockContainerDataStockContainerDataActions> get $serializer => StockContainerDataStockContainerDataActions.serializer;
 
   FullType _$fullType;
   @override

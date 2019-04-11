@@ -168,7 +168,7 @@ class _$GetCaseEventHistoryApiRequestActions
   _$GetCaseEventHistoryApiRequestActions._(this.$options)
       : $replace = $options.action<GetCaseEventHistoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        mdcCaseEventId = $options.actionField<String>(
+        mdcCaseEventId = $options.field<String>(
             'mdcCaseEventId',
             (a) => a?.mdcCaseEventId,
             (s) => s?.mdcCaseEventId,
@@ -204,9 +204,6 @@ class _$GetCaseEventHistoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventHistoryApiRequestGetCaseEventHistoryApiRequestActions> get $serializer => GetCaseEventHistoryApiRequestGetCaseEventHistoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

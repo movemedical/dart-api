@@ -203,17 +203,13 @@ class _$DecommissionKitApiRequestActions
   _$DecommissionKitApiRequestActions._(this.$options)
       : $replace = $options.action<DecommissionKitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        kitStockId = $options.actionField<String>(
-            'kitStockId',
-            (a) => a?.kitStockId,
-            (s) => s?.kitStockId,
-            (p, b) => p?.kitStockId = b),
-        containers =
-            $options.actionField<BuiltList<DecommissionKitApiKitContainer>>(
-                'containers',
-                (a) => a?.containers,
-                (s) => s?.containers,
-                (p, b) => p?.containers = b),
+        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+            (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
+        containers = $options.field<BuiltList<DecommissionKitApiKitContainer>>(
+            'containers',
+            (a) => a?.containers,
+            (s) => s?.containers,
+            (p, b) => p?.containers = b),
         super._();
 
   factory _$DecommissionKitApiRequestActions(
@@ -247,9 +243,6 @@ class _$DecommissionKitApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DecommissionKitApiRequestDecommissionKitApiRequestActions> get $serializer => DecommissionKitApiRequestDecommissionKitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

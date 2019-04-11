@@ -414,58 +414,40 @@ class _$GetUiSetupAllApiUserPermissionsActions
   _$GetUiSetupAllApiUserPermissionsActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiUserPermissions>(
             '\$replace', (a) => a?.$replace),
-        directoryAdmin = $options.actionField<bool>(
+        directoryAdmin = $options.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
-        manageCatalog = $options.actionField<bool>(
+        manageCatalog = $options.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        phiAllowed = $options.actionField<bool>(
-            'phiAllowed',
-            (a) => a?.phiAllowed,
-            (s) => s?.phiAllowed,
-            (p, b) => p?.phiAllowed = b),
-        createCase = $options.actionField<bool>(
-            'createCase',
-            (a) => a?.createCase,
-            (s) => s?.createCase,
-            (p, b) => p?.createCase = b),
-        manageUsers = $options.actionField<bool>(
-            'manageUsers',
-            (a) => a?.manageUsers,
-            (s) => s?.manageUsers,
-            (p, b) => p?.manageUsers = b),
-        orgAdmin = $options.actionField<bool>('orgAdmin', (a) => a?.orgAdmin,
+        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+            (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
+        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+            (s) => s?.createCase, (p, b) => p?.createCase = b),
+        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+            (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
+        orgAdmin = $options.field<bool>('orgAdmin', (a) => a?.orgAdmin,
             (s) => s?.orgAdmin, (p, b) => p?.orgAdmin = b),
-        createStock = $options.actionField<bool>(
-            'createStock',
-            (a) => a?.createStock,
-            (s) => s?.createStock,
-            (p, b) => p?.createStock = b),
-        createSalesOrder = $options.actionField<bool>(
+        createStock = $options.field<bool>('createStock', (a) => a?.createStock,
+            (s) => s?.createStock, (p, b) => p?.createStock = b),
+        createSalesOrder = $options.field<bool>(
             'createSalesOrder',
             (a) => a?.createSalesOrder,
             (s) => s?.createSalesOrder,
             (p, b) => p?.createSalesOrder = b),
-        createStockOrder = $options.actionField<bool>(
+        createStockOrder = $options.field<bool>(
             'createStockOrder',
             (a) => a?.createStockOrder,
             (s) => s?.createStockOrder,
             (p, b) => p?.createStockOrder = b),
-        createAudit = $options.actionField<bool>(
-            'createAudit',
-            (a) => a?.createAudit,
-            (s) => s?.createAudit,
-            (p, b) => p?.createAudit = b),
-        getPricing = $options.actionField<bool>(
-            'getPricing',
-            (a) => a?.getPricing,
-            (s) => s?.getPricing,
-            (p, b) => p?.getPricing = b),
+        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+            (s) => s?.createAudit, (p, b) => p?.createAudit = b),
+        getPricing = $options.field<bool>('getPricing', (a) => a?.getPricing,
+            (s) => s?.getPricing, (p, b) => p?.getPricing = b),
         super._();
 
   factory _$GetUiSetupAllApiUserPermissionsActions(
@@ -518,9 +500,6 @@ class _$GetUiSetupAllApiUserPermissionsActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiUserPermissionsGetUiSetupAllApiUserPermissionsActions> get $serializer => GetUiSetupAllApiUserPermissionsGetUiSetupAllApiUserPermissionsActions.serializer;
 
   FullType _$fullType;
   @override

@@ -337,36 +337,33 @@ class _$SubmitSalesOrderApiRequestActions
   _$SubmitSalesOrderApiRequestActions._(this.$options)
       : $replace = $options.action<SubmitSalesOrderApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        validateOnly = $options.actionField<bool>(
+        validateOnly = $options.field<bool>(
             'validateOnly',
             (a) => a?.validateOnly,
             (s) => s?.validateOnly,
             (p, b) => p?.validateOnly = b),
-        oracleUserId = $options.actionField<String>(
+        oracleUserId = $options.field<String>(
             'oracleUserId',
             (a) => a?.oracleUserId,
             (s) => s?.oracleUserId,
             (p, b) => p?.oracleUserId = b),
-        cc_code = $options.actionField<String>('cc_code', (a) => a?.cc_code,
+        cc_code = $options.field<String>('cc_code', (a) => a?.cc_code,
             (s) => s?.cc_code, (p, b) => p?.cc_code = b),
-        cc_holderName = $options.actionField<String>(
+        cc_holderName = $options.field<String>(
             'cc_holderName',
             (a) => a?.cc_holderName,
             (s) => s?.cc_holderName,
             (p, b) => p?.cc_holderName = b),
-        cc_number = $options.actionField<String>(
-            'cc_number',
-            (a) => a?.cc_number,
-            (s) => s?.cc_number,
-            (p, b) => p?.cc_number = b),
-        cc_expiry_month = $options.actionField<int>(
+        cc_number = $options.field<String>('cc_number', (a) => a?.cc_number,
+            (s) => s?.cc_number, (p, b) => p?.cc_number = b),
+        cc_expiry_month = $options.field<int>(
             'cc_expiry_month',
             (a) => a?.cc_expiry_month,
             (s) => s?.cc_expiry_month,
             (p, b) => p?.cc_expiry_month = b),
-        cc_expiry_year = $options.actionField<int>(
+        cc_expiry_year = $options.field<int>(
             'cc_expiry_year',
             (a) => a?.cc_expiry_year,
             (s) => s?.cc_expiry_year,
@@ -416,9 +413,6 @@ class _$SubmitSalesOrderApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SubmitSalesOrderApiRequestSubmitSalesOrderApiRequestActions> get $serializer => SubmitSalesOrderApiRequestSubmitSalesOrderApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

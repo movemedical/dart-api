@@ -363,26 +363,26 @@ class _$SaveCaseRequirementsApiRequirementActions
   _$SaveCaseRequirementsApiRequirementActions._(this.$options)
       : $replace = $options.action<SaveCaseRequirementsApiRequirement>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        source = $options.actionField<CaseRequirementSource>('source',
+        source = $options.field<CaseRequirementSource>('source',
             (a) => a?.source, (s) => s?.source, (p, b) => p?.source = b),
-        sourceId = $options.actionField<String>('sourceId', (a) => a?.sourceId,
+        sourceId = $options.field<String>('sourceId', (a) => a?.sourceId,
             (s) => s?.sourceId, (p, b) => p?.sourceId = b),
-        remove = $options.actionField<bool>('remove', (a) => a?.remove,
+        remove = $options.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -432,9 +432,6 @@ class _$SaveCaseRequirementsApiRequirementActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveCaseRequirementsApiRequirementSaveCaseRequirementsApiRequirementActions> get $serializer => SaveCaseRequirementsApiRequirementSaveCaseRequirementsApiRequirementActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$CancelCaseEventApi extends CancelCaseEventApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCancelCaseEventApi> get $serializer => CommandStateCancelCaseEventApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

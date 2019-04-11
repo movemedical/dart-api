@@ -169,7 +169,7 @@ class _$ListInvoicesForSalesOrderApiRequestActions
   _$ListInvoicesForSalesOrderApiRequestActions._(this.$options)
       : $replace = $options.action<ListInvoicesForSalesOrderApiRequest>(
             '\$replace', (a) => a?.$replace),
-        salesOrderId = $options.actionField<String>(
+        salesOrderId = $options.field<String>(
             'salesOrderId',
             (a) => a?.salesOrderId,
             (s) => s?.salesOrderId,
@@ -206,9 +206,6 @@ class _$ListInvoicesForSalesOrderApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListInvoicesForSalesOrderApiRequestListInvoicesForSalesOrderApiRequestActions> get $serializer => ListInvoicesForSalesOrderApiRequestListInvoicesForSalesOrderApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

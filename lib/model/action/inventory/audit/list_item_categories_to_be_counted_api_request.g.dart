@@ -244,7 +244,7 @@ class _$ListItemCategoriesToBeCountedApiRequestActions
   _$ListItemCategoriesToBeCountedApiRequestActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesToBeCountedApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -308,9 +308,6 @@ class _$ListItemCategoriesToBeCountedApiRequestActions
     paging.$middleware(middleware);
     sortBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesToBeCountedApiRequestListItemCategoriesToBeCountedApiRequestActions> get $serializer => ListItemCategoriesToBeCountedApiRequestListItemCategoriesToBeCountedApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

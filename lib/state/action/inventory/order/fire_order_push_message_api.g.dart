@@ -105,9 +105,6 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateFireOrderPushMessageApi> get $serializer => CommandStateFireOrderPushMessageApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

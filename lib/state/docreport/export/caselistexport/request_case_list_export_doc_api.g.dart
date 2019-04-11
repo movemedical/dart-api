@@ -107,9 +107,6 @@ class _$RequestCaseListExportDocApi extends RequestCaseListExportDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestCaseListExportDocApi> get $serializer => CommandStateRequestCaseListExportDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

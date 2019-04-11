@@ -193,16 +193,13 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
   _$GetGeneratedDocReportUrlsApiRequestActions._(this.$options)
       : $replace = $options.action<GetGeneratedDocReportUrlsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        generatedDocReportId = $options.actionField<String>(
+        generatedDocReportId = $options.field<String>(
             'generatedDocReportId',
             (a) => a?.generatedDocReportId,
             (s) => s?.generatedDocReportId,
             (p, b) => p?.generatedDocReportId = b),
-        attachment = $options.actionField<bool>(
-            'attachment',
-            (a) => a?.attachment,
-            (s) => s?.attachment,
-            (p, b) => p?.attachment = b),
+        attachment = $options.field<bool>('attachment', (a) => a?.attachment,
+            (s) => s?.attachment, (p, b) => p?.attachment = b),
         super._();
 
   factory _$GetGeneratedDocReportUrlsApiRequestActions(
@@ -237,9 +234,6 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetGeneratedDocReportUrlsApiRequestGetGeneratedDocReportUrlsApiRequestActions> get $serializer => GetGeneratedDocReportUrlsApiRequestGetGeneratedDocReportUrlsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

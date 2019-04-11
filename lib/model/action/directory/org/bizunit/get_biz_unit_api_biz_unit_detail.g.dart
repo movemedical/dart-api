@@ -394,17 +394,17 @@ class _$GetBizUnitApiBizUnitDetailActions
   _$GetBizUnitApiBizUnitDetailActions._(this.$options)
       : $replace = $options.action<GetBizUnitApiBizUnitDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        key = $options.actionField<String>(
+        key = $options.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -413,17 +413,17 @@ class _$GetBizUnitApiBizUnitDetailActions
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        publicListing = $options.actionField<bool>(
+        publicListing = $options.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -480,9 +480,6 @@ class _$GetBizUnitApiBizUnitDetailActions
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetBizUnitApiBizUnitDetailGetBizUnitApiBizUnitDetailActions> get $serializer => GetBizUnitApiBizUnitDetailGetBizUnitApiBizUnitDetailActions.serializer;
 
   FullType _$fullType;
   @override

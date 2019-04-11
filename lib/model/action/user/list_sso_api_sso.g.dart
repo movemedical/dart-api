@@ -190,11 +190,11 @@ class _$ListSSOApiSSOActions extends ListSSOApiSSOActions {
   _$ListSSOApiSSOActions._(this.$options)
       : $replace =
             $options.action<ListSSOApiSSO>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        ssoType = $options.actionField<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        ssoName = $options.actionField<String>('ssoName', (a) => a?.ssoName,
+        ssoName = $options.field<String>('ssoName', (a) => a?.ssoName,
             (s) => s?.ssoName, (p, b) => p?.ssoName = b),
         super._();
 
@@ -229,9 +229,6 @@ class _$ListSSOApiSSOActions extends ListSSOApiSSOActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSSOApiSSOListSSOApiSSOActions> get $serializer => ListSSOApiSSOListSSOApiSSOActions.serializer;
 
   FullType _$fullType;
   @override

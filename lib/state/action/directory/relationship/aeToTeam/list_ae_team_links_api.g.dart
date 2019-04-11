@@ -112,9 +112,6 @@ class _$ListAeTeamLinksApi extends ListAeTeamLinksApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListAeTeamLinksApi> get $serializer => CommandStateListAeTeamLinksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

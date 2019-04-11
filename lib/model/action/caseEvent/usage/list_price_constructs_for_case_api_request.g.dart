@@ -230,9 +230,9 @@ class _$ListPriceConstructsForCaseApiRequestActions
   _$ListPriceConstructsForCaseApiRequestActions._(this.$options)
       : $replace = $options.action<ListPriceConstructsForCaseApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -285,9 +285,6 @@ class _$ListPriceConstructsForCaseApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPriceConstructsForCaseApiRequestListPriceConstructsForCaseApiRequestActions> get $serializer => ListPriceConstructsForCaseApiRequestListPriceConstructsForCaseApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

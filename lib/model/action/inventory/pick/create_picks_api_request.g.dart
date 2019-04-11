@@ -176,7 +176,7 @@ class _$CreatePicksApiRequestActions extends CreatePicksApiRequestActions {
   _$CreatePicksApiRequestActions._(this.$options)
       : $replace = $options.action<CreatePicksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        pickRequests = $options.actionField<BuiltList<CreatePickApiRequest>>(
+        pickRequests = $options.field<BuiltList<CreatePickApiRequest>>(
             'pickRequests',
             (a) => a?.pickRequests,
             (s) => s?.pickRequests,
@@ -211,9 +211,6 @@ class _$CreatePicksApiRequestActions extends CreatePicksApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePicksApiRequestCreatePicksApiRequestActions> get $serializer => CreatePicksApiRequestCreatePicksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

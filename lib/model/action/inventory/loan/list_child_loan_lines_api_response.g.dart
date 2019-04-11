@@ -206,9 +206,9 @@ class _$ListChildLoanLinesApiResponseActions
   _$ListChildLoanLinesApiResponseActions._(this.$options)
       : $replace = $options.action<ListChildLoanLinesApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListChildLoanLinesApiLoanLine>>(
+        data = $options.field<BuiltList<ListChildLoanLinesApiLoanLine>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -243,9 +243,6 @@ class _$ListChildLoanLinesApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListChildLoanLinesApiResponseListChildLoanLinesApiResponseActions> get $serializer => ListChildLoanLinesApiResponseListChildLoanLinesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

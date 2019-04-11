@@ -332,14 +332,14 @@ class _$CreateCaseEventApiInsuranceActions
   _$CreateCaseEventApiInsuranceActions._(this.$options)
       : $replace = $options.action<CreateCaseEventApiInsurance>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        policyNumber = $options.actionField<String>(
+        policyNumber = $options.field<String>(
             'policyNumber',
             (a) => a?.policyNumber,
             (s) => s?.policyNumber,
             (p, b) => p?.policyNumber = b),
-        groupNumber = $options.actionField<String>(
+        groupNumber = $options.field<String>(
             'groupNumber',
             (a) => a?.groupNumber,
             (s) => s?.groupNumber,
@@ -358,12 +358,12 @@ class _$CreateCaseEventApiInsuranceActions
                 (s) => s?.subscriberName,
                 (b) => b?.subscriberName,
                 (parent, builder) => parent?.subscriberName = builder)),
-        subscriberRelation = $options.actionField<String>(
+        subscriberRelation = $options.field<String>(
             'subscriberRelation',
             (a) => a?.subscriberRelation,
             (s) => s?.subscriberRelation,
             (p, b) => p?.subscriberRelation = b),
-        subscriberDateOfBirth = $options.actionField<DateTime>(
+        subscriberDateOfBirth = $options.field<DateTime>(
             'subscriberDateOfBirth',
             (a) => a?.subscriberDateOfBirth,
             (s) => s?.subscriberDateOfBirth,
@@ -418,9 +418,6 @@ class _$CreateCaseEventApiInsuranceActions
     phoneNumber.$middleware(middleware);
     subscriberName.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCaseEventApiInsuranceCreateCaseEventApiInsuranceActions> get $serializer => CreateCaseEventApiInsuranceCreateCaseEventApiInsuranceActions.serializer;
 
   FullType _$fullType;
   @override

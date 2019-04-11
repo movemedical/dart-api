@@ -272,17 +272,17 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
   _$ListStockApiStockActions._(this.$options)
       : $replace =
             $options.action<ListStockApiStock>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        allocated = $options.actionField<bool>('allocated', (a) => a?.allocated,
+        allocated = $options.field<bool>('allocated', (a) => a?.allocated,
             (s) => s?.allocated, (p, b) => p?.allocated = b),
-        onHold = $options.actionField<bool>('onHold', (a) => a?.onHold,
+        onHold = $options.field<bool>('onHold', (a) => a?.onHold,
             (s) => s?.onHold, (p, b) => p?.onHold = b),
-        lost = $options.actionField<bool>(
+        lost = $options.field<bool>(
             'lost', (a) => a?.lost, (s) => s?.lost, (p, b) => p?.lost = b),
-        found = $options.actionField<bool>(
+        found = $options.field<bool>(
             'found', (a) => a?.found, (s) => s?.found, (p, b) => p?.found = b),
         super._();
 
@@ -323,9 +323,6 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockApiStockListStockApiStockActions> get $serializer => ListStockApiStockListStockApiStockActions.serializer;
 
   FullType _$fullType;
   @override

@@ -165,7 +165,7 @@ class _$GetConversationApiRequestActions
   _$GetConversationApiRequestActions._(this.$options)
       : $replace = $options.action<GetConversationApiRequest>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -201,9 +201,6 @@ class _$GetConversationApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetConversationApiRequestGetConversationApiRequestActions> get $serializer => GetConversationApiRequestGetConversationApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

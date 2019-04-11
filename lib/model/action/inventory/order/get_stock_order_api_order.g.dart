@@ -1064,29 +1064,23 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   _$GetStockOrderApiOrderActions._(this.$options)
       : $replace = $options.action<GetStockOrderApiOrder>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        createdDate = $options.actionField<DateTime>(
+        createdDate = $options.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        createdBy = $options.actionField<String>(
-            'createdBy',
-            (a) => a?.createdBy,
-            (s) => s?.createdBy,
-            (p, b) => p?.createdBy = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        createdBy = $options.field<String>('createdBy', (a) => a?.createdBy,
+            (s) => s?.createdBy, (p, b) => p?.createdBy = b),
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<OrderStatus>('status', (a) => a?.status,
+        status = $options.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
         orderReason = OrderReasonActions(() => $options
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'orderReason',
@@ -1094,7 +1088,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
@@ -1113,12 +1107,12 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        sourceStartDate = $options.actionField<DateTime>(
+        sourceStartDate = $options.field<DateTime>(
             'sourceStartDate',
             (a) => a?.sourceStartDate,
             (s) => s?.sourceStartDate,
             (p, b) => p?.sourceStartDate = b),
-        expirationCutoff = $options.actionField<DateTime>(
+        expirationCutoff = $options.field<DateTime>(
             'expirationCutoff',
             (a) => a?.expirationCutoff,
             (s) => s?.expirationCutoff,
@@ -1171,17 +1165,17 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.restockForOrder,
             (b) => b?.restockForOrder,
             (parent, builder) => parent?.restockForOrder = builder)),
-        childOrders = $options.actionField<BuiltList<OrderHeaderLite>>(
+        childOrders = $options.field<BuiltList<OrderHeaderLite>>(
             'childOrders',
             (a) => a?.childOrders,
             (s) => s?.childOrders,
             (p, b) => p?.childOrders = b),
-        restockOrders = $options.actionField<BuiltList<OrderHeaderLite>>(
+        restockOrders = $options.field<BuiltList<OrderHeaderLite>>(
             'restockOrders',
             (a) => a?.restockOrders,
             (s) => s?.restockOrders,
             (p, b) => p?.restockOrders = b),
-        caseEvents = $options.actionField<BuiltList<CaseEventLite>>(
+        caseEvents = $options.field<BuiltList<CaseEventLite>>(
             'caseEvents',
             (a) => a?.caseEvents,
             (s) => s?.caseEvents,
@@ -1195,7 +1189,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.shipToAddress,
             (b) => b?.shipToAddress,
             (parent, builder) => parent?.shipToAddress = builder)),
-        deliverToAttn = $options.actionField<String>(
+        deliverToAttn = $options.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
@@ -1216,15 +1210,15 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
         validationMsgs =
-            $options.actionField<BuiltList<GetStockOrderApiValidationMsg>>(
+            $options.field<BuiltList<GetStockOrderApiValidationMsg>>(
                 'validationMsgs',
                 (a) => a?.validationMsgs,
                 (s) => s?.validationMsgs,
@@ -1252,7 +1246,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
             (s) => s?.toResponsibleParty,
             (b) => b?.toResponsibleParty,
             (parent, builder) => parent?.toResponsibleParty = builder)),
-        kitTrayStockId = $options.actionField<String>(
+        kitTrayStockId = $options.field<String>(
             'kitTrayStockId',
             (a) => a?.kitTrayStockId,
             (s) => s?.kitTrayStockId,
@@ -1264,7 +1258,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
                 (s) => s?.restockingKitTray,
                 (b) => b?.restockingKitTray,
                 (parent, builder) => parent?.restockingKitTray = builder)),
-        lastWebServiceLogId = $options.actionField<String>(
+        lastWebServiceLogId = $options.field<String>(
             'lastWebServiceLogId',
             (a) => a?.lastWebServiceLogId,
             (s) => s?.lastWebServiceLogId,
@@ -1388,9 +1382,6 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
     toResponsibleParty.$middleware(middleware);
     restockingKitTray.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockOrderApiOrderGetStockOrderApiOrderActions> get $serializer => GetStockOrderApiOrderGetStockOrderApiOrderActions.serializer;
 
   FullType _$fullType;
   @override

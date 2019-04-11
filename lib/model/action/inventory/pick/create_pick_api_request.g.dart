@@ -530,7 +530,7 @@ class _$CreatePickApiRequestActions extends CreatePickApiRequestActions {
   _$CreatePickApiRequestActions._(this.$options)
       : $replace = $options.action<CreatePickApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         virtualStockData = CreatePickApiVirtualStockDataActions(() =>
             $options.stateful<
@@ -542,48 +542,48 @@ class _$CreatePickApiRequestActions extends CreatePickApiRequestActions {
                 (s) => s?.virtualStockData,
                 (b) => b?.virtualStockData,
                 (parent, builder) => parent?.virtualStockData = builder)),
-        orderLineId = $options.actionField<String>(
+        orderLineId = $options.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
             (p, b) => p?.orderLineId = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        allowVersionSwap = $options.actionField<bool>(
+        allowVersionSwap = $options.field<bool>(
             'allowVersionSwap',
             (a) => a?.allowVersionSwap,
             (s) => s?.allowVersionSwap,
             (p, b) => p?.allowVersionSwap = b),
-        allowLotSerialSwap = $options.actionField<bool>(
+        allowLotSerialSwap = $options.field<bool>(
             'allowLotSerialSwap',
             (a) => a?.allowLotSerialSwap,
             (s) => s?.allowLotSerialSwap,
             (p, b) => p?.allowLotSerialSwap = b),
-        released = $options.actionField<bool>('released', (a) => a?.released,
+        released = $options.field<bool>('released', (a) => a?.released,
             (s) => s?.released, (p, b) => p?.released = b),
-        releaseDate = $options.actionField<DateTime>(
+        releaseDate = $options.field<DateTime>(
             'releaseDate',
             (a) => a?.releaseDate,
             (s) => s?.releaseDate,
             (p, b) => p?.releaseDate = b),
-        dueDate = $options.actionField<DateTime>('dueDate', (a) => a?.dueDate,
+        dueDate = $options.field<DateTime>('dueDate', (a) => a?.dueDate,
             (s) => s?.dueDate, (p, b) => p?.dueDate = b),
-        dependsOnPickId = $options.actionField<String>(
+        dependsOnPickId = $options.field<String>(
             'dependsOnPickId',
             (a) => a?.dependsOnPickId,
             (s) => s?.dependsOnPickId,
             (p, b) => p?.dependsOnPickId = b),
-        toKitId = $options.actionField<String>('toKitId', (a) => a?.toKitId,
+        toKitId = $options.field<String>('toKitId', (a) => a?.toKitId,
             (s) => s?.toKitId, (p, b) => p?.toKitId = b),
-        toKitContainerDefId = $options.actionField<String>(
+        toKitContainerDefId = $options.field<String>(
             'toKitContainerDefId',
             (a) => a?.toKitContainerDefId,
             (s) => s?.toKitContainerDefId,
@@ -598,7 +598,7 @@ class _$CreatePickApiRequestActions extends CreatePickApiRequestActions {
                 (s) => s?.shipmentOptions,
                 (b) => b?.shipmentOptions,
                 (parent, builder) => parent?.shipmentOptions = builder)),
-        complete = $options.actionField<bool>('complete', (a) => a?.complete,
+        complete = $options.field<bool>('complete', (a) => a?.complete,
             (s) => s?.complete, (p, b) => p?.complete = b),
         super._();
 
@@ -665,9 +665,6 @@ class _$CreatePickApiRequestActions extends CreatePickApiRequestActions {
     virtualStockData.$middleware(middleware);
     shipmentOptions.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePickApiRequestCreatePickApiRequestActions> get $serializer => CreatePickApiRequestCreatePickApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

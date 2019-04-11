@@ -112,9 +112,6 @@ class _$ListHCRForFacilityApi extends ListHCRForFacilityApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListHCRForFacilityApi> get $serializer => CommandStateListHCRForFacilityApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

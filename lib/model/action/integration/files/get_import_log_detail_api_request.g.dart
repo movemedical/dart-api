@@ -167,7 +167,7 @@ class _$GetImportLogDetailApiRequestActions
   _$GetImportLogDetailApiRequestActions._(this.$options)
       : $replace = $options.action<GetImportLogDetailApiRequest>(
             '\$replace', (a) => a?.$replace),
-        importLogId = $options.actionField<String>(
+        importLogId = $options.field<String>(
             'importLogId',
             (a) => a?.importLogId,
             (s) => s?.importLogId,
@@ -203,9 +203,6 @@ class _$GetImportLogDetailApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetImportLogDetailApiRequestGetImportLogDetailApiRequestActions> get $serializer => GetImportLogDetailApiRequestGetImportLogDetailApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

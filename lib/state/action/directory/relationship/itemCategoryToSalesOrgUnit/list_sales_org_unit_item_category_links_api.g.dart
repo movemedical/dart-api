@@ -124,9 +124,6 @@ class _$ListSalesOrgUnitItemCategoryLinksApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListSalesOrgUnitItemCategoryLinksApi> get $serializer => CommandStateListSalesOrgUnitItemCategoryLinksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

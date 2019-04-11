@@ -393,32 +393,32 @@ class _$ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailActions
       : $replace = $options.action<
                 ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        instrumentDeliveryLeadTimeDays = $options.actionField<int>(
+        instrumentDeliveryLeadTimeDays = $options.field<int>(
             'instrumentDeliveryLeadTimeDays',
             (a) => a?.instrumentDeliveryLeadTimeDays,
             (s) => s?.instrumentDeliveryLeadTimeDays,
             (p, b) => p?.instrumentDeliveryLeadTimeDays = b),
-        instrumentDeliveryLeadTimeHours = $options.actionField<int>(
+        instrumentDeliveryLeadTimeHours = $options.field<int>(
             'instrumentDeliveryLeadTimeHours',
             (a) => a?.instrumentDeliveryLeadTimeHours,
             (s) => s?.instrumentDeliveryLeadTimeHours,
             (p, b) => p?.instrumentDeliveryLeadTimeHours = b),
-        implantDeliveryLeadTimeDays = $options.actionField<int>(
+        implantDeliveryLeadTimeDays = $options.field<int>(
             'implantDeliveryLeadTimeDays',
             (a) => a?.implantDeliveryLeadTimeDays,
             (s) => s?.implantDeliveryLeadTimeDays,
             (p, b) => p?.implantDeliveryLeadTimeDays = b),
-        implantDeliveryLeadTimeHours = $options.actionField<int>(
+        implantDeliveryLeadTimeHours = $options.field<int>(
             'implantDeliveryLeadTimeHours',
             (a) => a?.implantDeliveryLeadTimeHours,
             (s) => s?.implantDeliveryLeadTimeHours,
@@ -474,9 +474,6 @@ class _$ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailActions> get $serializer => ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailActions.serializer;
 
   FullType _$fullType;
   @override

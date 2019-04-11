@@ -423,36 +423,36 @@ class _$ListPreferenceCardsApiRequestActions
   _$ListPreferenceCardsApiRequestActions._(this.$options)
       : $replace = $options.action<ListPreferenceCardsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        ids = $options.actionField<BuiltList<String>>(
+        ids = $options.field<BuiltList<String>>(
             'ids', (a) => a?.ids, (s) => s?.ids, (p, b) => p?.ids = b),
-        physicianIds = $options.actionField<BuiltList<String>>(
+        physicianIds = $options.field<BuiltList<String>>(
             'physicianIds',
             (a) => a?.physicianIds,
             (s) => s?.physicianIds,
             (p, b) => p?.physicianIds = b),
-        techniqueIds = $options.actionField<BuiltList<String>>(
+        techniqueIds = $options.field<BuiltList<String>>(
             'techniqueIds',
             (a) => a?.techniqueIds,
             (s) => s?.techniqueIds,
             (p, b) => p?.techniqueIds = b),
-        procedureIds = $options.actionField<BuiltList<String>>(
+        procedureIds = $options.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        subProcedureIds = $options.actionField<BuiltList<String>>(
+        subProcedureIds = $options.field<BuiltList<String>>(
             'subProcedureIds',
             (a) => a?.subProcedureIds,
             (s) => s?.subProcedureIds,
             (p, b) => p?.subProcedureIds = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        productGroupIds = $options.actionField<BuiltList<String>>(
+        productGroupIds = $options.field<BuiltList<String>>(
             'productGroupIds',
             (a) => a?.productGroupIds,
             (s) => s?.productGroupIds,
             (p, b) => p?.productGroupIds = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -516,9 +516,6 @@ class _$ListPreferenceCardsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPreferenceCardsApiRequestListPreferenceCardsApiRequestActions> get $serializer => ListPreferenceCardsApiRequestListPreferenceCardsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

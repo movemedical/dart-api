@@ -288,29 +288,23 @@ class _$ListUpcomingCasesApiCaseEventActions
   _$ListUpcomingCasesApiCaseEventActions._(this.$options)
       : $replace = $options.action<ListUpcomingCasesApiCaseEvent>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        caseNumber = $options.actionField<int>(
-            'caseNumber',
-            (a) => a?.caseNumber,
-            (s) => s?.caseNumber,
-            (p, b) => p?.caseNumber = b),
-        eventDate = $options.actionField<DateTime>(
-            'eventDate',
-            (a) => a?.eventDate,
-            (s) => s?.eventDate,
-            (p, b) => p?.eventDate = b),
-        status = $options.actionField<CaseEventStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        facilityName = $options.actionField<String>(
+        caseNumber = $options.field<int>('caseNumber', (a) => a?.caseNumber,
+            (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
+        eventDate = $options.field<DateTime>('eventDate', (a) => a?.eventDate,
+            (s) => s?.eventDate, (p, b) => p?.eventDate = b),
+        status = $options.field<CaseEventStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
+        facilityName = $options.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         super._();
 
@@ -353,9 +347,6 @@ class _$ListUpcomingCasesApiCaseEventActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUpcomingCasesApiCaseEventListUpcomingCasesApiCaseEventActions> get $serializer => ListUpcomingCasesApiCaseEventListUpcomingCasesApiCaseEventActions.serializer;
 
   FullType _$fullType;
   @override

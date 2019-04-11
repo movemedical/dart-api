@@ -148,9 +148,6 @@ class _$ListCalendarSubscriptionsApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<ListCalendarSubscriptionsApiRequestListCalendarSubscriptionsApiRequestActions> get $serializer => ListCalendarSubscriptionsApiRequestListCalendarSubscriptionsApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

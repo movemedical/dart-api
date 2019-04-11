@@ -216,7 +216,7 @@ class _$RequestAuditItemExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -258,9 +258,6 @@ class _$RequestAuditItemExportDocApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestAuditItemExportDocApiRequestRequestAuditItemExportDocApiRequestActions> get $serializer => RequestAuditItemExportDocApiRequestRequestAuditItemExportDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

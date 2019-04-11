@@ -251,14 +251,14 @@ class _$ItemSpecActions extends ItemSpecActions {
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        itemVersions = $options.actionField<BuiltList<ItemVersion>>(
+        itemVersions = $options.field<BuiltList<ItemVersion>>(
             'itemVersions',
             (a) => a?.itemVersions,
             (s) => s?.itemVersions,
             (p, b) => p?.itemVersions = b),
-        lots = $options.actionField<BuiltList<Lot>>(
+        lots = $options.field<BuiltList<Lot>>(
             'lots', (a) => a?.lots, (s) => s?.lots, (p, b) => p?.lots = b),
-        serials = $options.actionField<BuiltList<Serial>>('serials',
+        serials = $options.field<BuiltList<Serial>>('serials',
             (a) => a?.serials, (s) => s?.serials, (p, b) => p?.serials = b),
         super._();
 
@@ -301,9 +301,6 @@ class _$ItemSpecActions extends ItemSpecActions {
     super.$middleware(middleware);
     item.$middleware(middleware);
   }
-
-// @override
-// Serializer<ItemSpecItemSpecActions> get $serializer => ItemSpecItemSpecActions.serializer;
 
   FullType _$fullType;
   @override

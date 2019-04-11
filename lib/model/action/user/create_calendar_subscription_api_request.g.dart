@@ -212,7 +212,7 @@ class _$CreateCalendarSubscriptionApiRequestActions
   _$CreateCalendarSubscriptionApiRequestActions._(this.$options)
       : $replace = $options.action<CreateCalendarSubscriptionApiRequest>(
             '\$replace', (a) => a?.$replace),
-        calendar = $options.actionField<String>('calendar', (a) => a?.calendar,
+        calendar = $options.field<String>('calendar', (a) => a?.calendar,
             (s) => s?.calendar, (p, b) => p?.calendar = b),
         listCaseEventsRequest = ListCaseEventsApiRequestActions(() =>
             $options.stateful<
@@ -264,9 +264,6 @@ class _$CreateCalendarSubscriptionApiRequestActions
     super.$middleware(middleware);
     listCaseEventsRequest.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCalendarSubscriptionApiRequestCreateCalendarSubscriptionApiRequestActions> get $serializer => CreateCalendarSubscriptionApiRequestCreateCalendarSubscriptionApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

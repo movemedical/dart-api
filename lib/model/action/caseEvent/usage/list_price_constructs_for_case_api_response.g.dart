@@ -214,10 +214,10 @@ class _$ListPriceConstructsForCaseApiResponseActions
   _$ListPriceConstructsForCaseApiResponseActions._(this.$options)
       : $replace = $options.action<ListPriceConstructsForCaseApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
-                BuiltList<ListPriceConstructsForCaseApiPriceConstruct>>(
-            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options
+            .field<BuiltList<ListPriceConstructsForCaseApiPriceConstruct>>(
+                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -253,9 +253,6 @@ class _$ListPriceConstructsForCaseApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPriceConstructsForCaseApiResponseListPriceConstructsForCaseApiResponseActions> get $serializer => ListPriceConstructsForCaseApiResponseListPriceConstructsForCaseApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -169,7 +169,7 @@ class _$RegenerateImportFileApiRequestActions
   _$RegenerateImportFileApiRequestActions._(this.$options)
       : $replace = $options.action<RegenerateImportFileApiRequest>(
             '\$replace', (a) => a?.$replace),
-        integrationIssueId = $options.actionField<String>(
+        integrationIssueId = $options.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
@@ -206,9 +206,6 @@ class _$RegenerateImportFileApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RegenerateImportFileApiRequestRegenerateImportFileApiRequestActions> get $serializer => RegenerateImportFileApiRequestRegenerateImportFileApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

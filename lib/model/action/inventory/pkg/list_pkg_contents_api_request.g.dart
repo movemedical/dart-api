@@ -162,7 +162,7 @@ class _$ListPkgContentsApiRequestActions
   _$ListPkgContentsApiRequestActions._(this.$options)
       : $replace = $options.action<ListPkgContentsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$ListPkgContentsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPkgContentsApiRequestListPkgContentsApiRequestActions> get $serializer => ListPkgContentsApiRequestListPkgContentsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

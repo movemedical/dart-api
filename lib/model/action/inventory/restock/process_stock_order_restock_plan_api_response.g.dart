@@ -190,7 +190,7 @@ class _$ProcessStockOrderRestockPlanApiResponseActions
   _$ProcessStockOrderRestockPlanApiResponseActions._(this.$options)
       : $replace = $options.action<ProcessStockOrderRestockPlanApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orderIds = $options.actionField<BuiltList<String>>('orderIds',
+        orderIds = $options.field<BuiltList<String>>('orderIds',
             (a) => a?.orderIds, (s) => s?.orderIds, (p, b) => p?.orderIds = b),
         super._();
 
@@ -224,9 +224,6 @@ class _$ProcessStockOrderRestockPlanApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessStockOrderRestockPlanApiResponseProcessStockOrderRestockPlanApiResponseActions> get $serializer => ProcessStockOrderRestockPlanApiResponseProcessStockOrderRestockPlanApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

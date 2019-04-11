@@ -168,7 +168,7 @@ class _$CaseUsagePoRequestDocApiResponseActions
   _$CaseUsagePoRequestDocApiResponseActions._(this.$options)
       : $replace = $options.action<CaseUsagePoRequestDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -205,9 +205,6 @@ class _$CaseUsagePoRequestDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CaseUsagePoRequestDocApiResponseCaseUsagePoRequestDocApiResponseActions> get $serializer => CaseUsagePoRequestDocApiResponseCaseUsagePoRequestDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -114,9 +114,6 @@ class _$ListCustomerQualifiersApi extends ListCustomerQualifiersApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListCustomerQualifiersApi> get $serializer => CommandStateListCustomerQualifiersApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -245,24 +245,21 @@ class _$BizUnitLinkActions extends BizUnitLinkActions {
   _$BizUnitLinkActions._(this.$options)
       : $replace =
             $options.action<BizUnitLink>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        bizUnitName = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        bizUnitName = $options.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
             (p, b) => p?.bizUnitName = b),
-        bizUnitDescription = $options.actionField<String>(
+        bizUnitDescription = $options.field<String>(
             'bizUnitDescription',
             (a) => a?.bizUnitDescription,
             (s) => s?.bizUnitDescription,
             (p, b) => p?.bizUnitDescription = b),
-        bizUnitActive = $options.actionField<bool>(
+        bizUnitActive = $options.field<bool>(
             'bizUnitActive',
             (a) => a?.bizUnitActive,
             (s) => s?.bizUnitActive,
@@ -304,9 +301,6 @@ class _$BizUnitLinkActions extends BizUnitLinkActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BizUnitLinkBizUnitLinkActions> get $serializer => BizUnitLinkBizUnitLinkActions.serializer;
 
   FullType _$fullType;
   @override

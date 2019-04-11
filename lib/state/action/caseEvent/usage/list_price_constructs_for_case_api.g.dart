@@ -116,9 +116,6 @@ class _$ListPriceConstructsForCaseApi extends ListPriceConstructsForCaseApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListPriceConstructsForCaseApi> get $serializer => CommandStateListPriceConstructsForCaseApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

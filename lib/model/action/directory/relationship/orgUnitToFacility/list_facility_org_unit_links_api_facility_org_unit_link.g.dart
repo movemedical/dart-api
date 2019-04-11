@@ -326,37 +326,31 @@ class _$ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkActions
       : $replace =
             $options.action<ListFacilityOrgUnitLinksApiFacilityOrgUnitLink>(
                 '\$replace', (a) => a?.$replace),
-        orgUnitToFacilityId = $options.actionField<String>(
+        orgUnitToFacilityId = $options.field<String>(
             'orgUnitToFacilityId',
             (a) => a?.orgUnitToFacilityId,
             (s) => s?.orgUnitToFacilityId,
             (p, b) => p?.orgUnitToFacilityId = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        orgUnitName = $options.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        orgUnitLabel = $options.actionField<String>(
+        orgUnitLabel = $options.field<String>(
             'orgUnitLabel',
             (a) => a?.orgUnitLabel,
             (s) => s?.orgUnitLabel,
             (p, b) => p?.orgUnitLabel = b),
-        orgUnitSales = $options.actionField<bool>(
+        orgUnitSales = $options.field<bool>(
             'orgUnitSales',
             (a) => a?.orgUnitSales,
             (s) => s?.orgUnitSales,
             (p, b) => p?.orgUnitSales = b),
-        orgUnitOps = $options.actionField<bool>(
-            'orgUnitOps',
-            (a) => a?.orgUnitOps,
-            (s) => s?.orgUnitOps,
-            (p, b) => p?.orgUnitOps = b),
-        orgUnitActive = $options.actionField<bool>(
+        orgUnitOps = $options.field<bool>('orgUnitOps', (a) => a?.orgUnitOps,
+            (s) => s?.orgUnitOps, (p, b) => p?.orgUnitOps = b),
+        orgUnitActive = $options.field<bool>(
             'orgUnitActive',
             (a) => a?.orgUnitActive,
             (s) => s?.orgUnitActive,
@@ -406,9 +400,6 @@ class _$ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkListFacilityOrgUnitLinksApiFacilityOrgUnitLinkActions> get $serializer => ListFacilityOrgUnitLinksApiFacilityOrgUnitLinkListFacilityOrgUnitLinksApiFacilityOrgUnitLinkActions.serializer;
 
   FullType _$fullType;
   @override

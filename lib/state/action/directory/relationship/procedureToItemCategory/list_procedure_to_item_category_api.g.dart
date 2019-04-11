@@ -117,9 +117,6 @@ class _$ListProcedureToItemCategoryApi extends ListProcedureToItemCategoryApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListProcedureToItemCategoryApi> get $serializer => CommandStateListProcedureToItemCategoryApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

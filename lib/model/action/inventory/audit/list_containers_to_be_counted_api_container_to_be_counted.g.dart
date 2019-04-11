@@ -219,7 +219,7 @@ class _$ListContainersToBeCountedApiContainerToBeCountedActions
       : $replace =
             $options.action<ListContainersToBeCountedApiContainerToBeCounted>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         container = StockContainerActions(() => $options.stateful<
                 StockContainer, StockContainerBuilder, StockContainerActions>(
@@ -269,9 +269,6 @@ class _$ListContainersToBeCountedApiContainerToBeCountedActions
     super.$middleware(middleware);
     container.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListContainersToBeCountedApiContainerToBeCountedListContainersToBeCountedApiContainerToBeCountedActions> get $serializer => ListContainersToBeCountedApiContainerToBeCountedListContainersToBeCountedApiContainerToBeCountedActions.serializer;
 
   FullType _$fullType;
   @override

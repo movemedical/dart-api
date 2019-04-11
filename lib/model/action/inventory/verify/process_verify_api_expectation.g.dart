@@ -403,11 +403,11 @@ class _$ProcessVerifyApiExpectationActions
   _$ProcessVerifyApiExpectationActions._(this.$options)
       : $replace = $options.action<ProcessVerifyApiExpectation>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<BuildVerifyApiExpectationType>(
+        type = $options.field<BuildVerifyApiExpectationType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        verifyNow = $options.actionField<bool>('verifyNow', (a) => a?.verifyNow,
+        verifyNow = $options.field<bool>('verifyNow', (a) => a?.verifyNow,
             (s) => s?.verifyNow, (p, b) => p?.verifyNow = b),
         toContainerOverride = StockContainerDataActions(() => $options.stateful<
                 StockContainerData,
@@ -419,25 +419,25 @@ class _$ProcessVerifyApiExpectationActions
             (b) => b?.toContainerOverride,
             (parent, builder) => parent?.toContainerOverride = builder)),
         expectedStocksWithIssue =
-            $options.actionField<BuiltList<BuildVerifyApiExpectedStock>>(
+            $options.field<BuiltList<BuildVerifyApiExpectedStock>>(
                 'expectedStocksWithIssue',
                 (a) => a?.expectedStocksWithIssue,
                 (s) => s?.expectedStocksWithIssue,
                 (p, b) => p?.expectedStocksWithIssue = b),
         enteredLinesWithIssue =
-            $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
+            $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
                 'enteredLinesWithIssue',
                 (a) => a?.enteredLinesWithIssue,
                 (s) => s?.enteredLinesWithIssue,
                 (p, b) => p?.enteredLinesWithIssue = b),
-        expectedStocksToContainerOverrides = $options.actionField<
+        expectedStocksToContainerOverrides = $options.field<
                 BuiltList<
                     ProcessVerifyApiExpectedStockWithToContainerOverride>>(
             'expectedStocksToContainerOverrides',
             (a) => a?.expectedStocksToContainerOverrides,
             (s) => s?.expectedStocksToContainerOverrides,
             (p, b) => p?.expectedStocksToContainerOverrides = b),
-        children = $options.actionField<BuiltList<ProcessVerifyApiExpectation>>(
+        children = $options.field<BuiltList<ProcessVerifyApiExpectation>>(
             'children',
             (a) => a?.children,
             (s) => s?.children,
@@ -493,9 +493,6 @@ class _$ProcessVerifyApiExpectationActions
     super.$middleware(middleware);
     toContainerOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessVerifyApiExpectationProcessVerifyApiExpectationActions> get $serializer => ProcessVerifyApiExpectationProcessVerifyApiExpectationActions.serializer;
 
   FullType _$fullType;
   @override

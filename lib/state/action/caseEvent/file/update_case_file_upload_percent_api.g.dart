@@ -111,9 +111,6 @@ class _$UpdateCaseFileUploadPercentApi extends UpdateCaseFileUploadPercentApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateCaseFileUploadPercentApi> get $serializer => CommandStateUpdateCaseFileUploadPercentApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

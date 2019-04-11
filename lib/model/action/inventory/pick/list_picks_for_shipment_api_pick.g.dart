@@ -382,29 +382,26 @@ class _$ListPicksForShipmentApiPickActions
   _$ListPicksForShipmentApiPickActions._(this.$options)
       : $replace = $options.action<ListPicksForShipmentApiPick>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        dependsOnPickId = $options.actionField<String>(
+        dependsOnPickId = $options.field<String>(
             'dependsOnPickId',
             (a) => a?.dependsOnPickId,
             (s) => s?.dependsOnPickId,
             (p, b) => p?.dependsOnPickId = b),
-        pickNumber = $options.actionField<int>(
-            'pickNumber',
-            (a) => a?.pickNumber,
-            (s) => s?.pickNumber,
-            (p, b) => p?.pickNumber = b),
-        pickStatus = $options.actionField<PickStatus>(
+        pickNumber = $options.field<int>('pickNumber', (a) => a?.pickNumber,
+            (s) => s?.pickNumber, (p, b) => p?.pickNumber = b),
+        pickStatus = $options.field<PickStatus>(
             'pickStatus',
             (a) => a?.pickStatus,
             (s) => s?.pickStatus,
             (p, b) => p?.pickStatus = b),
-        assignedUserId = $options.actionField<String>(
+        assignedUserId = $options.field<String>(
             'assignedUserId',
             (a) => a?.assignedUserId,
             (s) => s?.assignedUserId,
             (p, b) => p?.assignedUserId = b),
-        assignedUserDisplayName = $options.actionField<String>(
+        assignedUserDisplayName = $options.field<String>(
             'assignedUserDisplayName',
             (a) => a?.assignedUserDisplayName,
             (s) => s?.assignedUserDisplayName,
@@ -485,9 +482,6 @@ class _$ListPicksForShipmentApiPickActions
     kitItem.$middleware(middleware);
     kitSerial.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPicksForShipmentApiPickListPicksForShipmentApiPickActions> get $serializer => ListPicksForShipmentApiPickListPicksForShipmentApiPickActions.serializer;
 
   FullType _$fullType;
   @override

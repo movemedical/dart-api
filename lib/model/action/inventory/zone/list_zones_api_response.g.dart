@@ -196,9 +196,9 @@ class _$ListZonesApiResponseActions extends ListZonesApiResponseActions {
   _$ListZonesApiResponseActions._(this.$options)
       : $replace = $options.action<ListZonesApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListZonesApiZoneDetail>>(
+        data = $options.field<BuiltList<ListZonesApiZoneDetail>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -232,9 +232,6 @@ class _$ListZonesApiResponseActions extends ListZonesApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListZonesApiResponseListZonesApiResponseActions> get $serializer => ListZonesApiResponseListZonesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

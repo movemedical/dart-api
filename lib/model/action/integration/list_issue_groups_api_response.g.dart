@@ -183,7 +183,7 @@ class _$ListIssueGroupsApiResponseActions
   _$ListIssueGroupsApiResponseActions._(this.$options)
       : $replace = $options.action<ListIssueGroupsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        issueGroups = $options.actionField<BuiltList<String>>(
+        issueGroups = $options.field<BuiltList<String>>(
             'issueGroups',
             (a) => a?.issueGroups,
             (s) => s?.issueGroups,
@@ -219,9 +219,6 @@ class _$ListIssueGroupsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListIssueGroupsApiResponseListIssueGroupsApiResponseActions> get $serializer => ListIssueGroupsApiResponseListIssueGroupsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

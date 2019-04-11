@@ -165,7 +165,7 @@ class _$GetAuditsDueCountApiResponseActions
   _$GetAuditsDueCountApiResponseActions._(this.$options)
       : $replace = $options.action<GetAuditsDueCountApiResponse>(
             '\$replace', (a) => a?.$replace),
-        count = $options.actionField<int>(
+        count = $options.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$GetAuditsDueCountApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAuditsDueCountApiResponseGetAuditsDueCountApiResponseActions> get $serializer => GetAuditsDueCountApiResponseGetAuditsDueCountApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -207,13 +207,13 @@ class _$OrgUnitActions extends OrgUnitActions {
 
   _$OrgUnitActions._(this.$options)
       : $replace = $options.action<OrgUnit>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        ops = $options.actionField<bool>(
+        ops = $options.field<bool>(
             'ops', (a) => a?.ops, (s) => s?.ops, (p, b) => p?.ops = b),
-        sales = $options.actionField<bool>(
+        sales = $options.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
         super._();
 
@@ -250,9 +250,6 @@ class _$OrgUnitActions extends OrgUnitActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrgUnitOrgUnitActions> get $serializer => OrgUnitOrgUnitActions.serializer;
 
   FullType _$fullType;
   @override

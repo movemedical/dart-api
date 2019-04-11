@@ -113,9 +113,6 @@ class _$UpdateAuditFileUploadPercentApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateAuditFileUploadPercentApi> get $serializer => CommandStateUpdateAuditFileUploadPercentApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

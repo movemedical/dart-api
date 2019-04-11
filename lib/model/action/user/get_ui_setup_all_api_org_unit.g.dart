@@ -201,11 +201,11 @@ class _$GetUiSetupAllApiOrgUnitActions extends GetUiSetupAllApiOrgUnitActions {
   _$GetUiSetupAllApiOrgUnitActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiOrgUnit>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        sales = $options.actionField<bool>(
+        sales = $options.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
         super._();
 
@@ -242,9 +242,6 @@ class _$GetUiSetupAllApiOrgUnitActions extends GetUiSetupAllApiOrgUnitActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiOrgUnitGetUiSetupAllApiOrgUnitActions> get $serializer => GetUiSetupAllApiOrgUnitGetUiSetupAllApiOrgUnitActions.serializer;
 
   FullType _$fullType;
   @override

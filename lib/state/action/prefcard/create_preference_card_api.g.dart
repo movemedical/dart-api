@@ -112,9 +112,6 @@ class _$CreatePreferenceCardApi extends CreatePreferenceCardApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreatePreferenceCardApi> get $serializer => CommandStateCreatePreferenceCardApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

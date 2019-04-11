@@ -108,9 +108,6 @@ class _$ReadBarcodeApi extends ReadBarcodeApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateReadBarcodeApi> get $serializer => CommandStateReadBarcodeApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

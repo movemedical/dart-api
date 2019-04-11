@@ -272,16 +272,13 @@ class _$ReadBarcodeApiResponseActions extends ReadBarcodeApiResponseActions {
   _$ReadBarcodeApiResponseActions._(this.$options)
       : $replace = $options.action<ReadBarcodeApiResponse>(
             '\$replace', (a) => a?.$replace),
-        requestId = $options.actionField<String>(
-            'requestId',
-            (a) => a?.requestId,
-            (s) => s?.requestId,
-            (p, b) => p?.requestId = b),
-        barcode1 = $options.actionField<String>('barcode1', (a) => a?.barcode1,
+        requestId = $options.field<String>('requestId', (a) => a?.requestId,
+            (s) => s?.requestId, (p, b) => p?.requestId = b),
+        barcode1 = $options.field<String>('barcode1', (a) => a?.barcode1,
             (s) => s?.barcode1, (p, b) => p?.barcode1 = b),
-        barcode2 = $options.actionField<String>('barcode2', (a) => a?.barcode2,
+        barcode2 = $options.field<String>('barcode2', (a) => a?.barcode2,
             (s) => s?.barcode2, (p, b) => p?.barcode2 = b),
-        barcode3 = $options.actionField<String>('barcode3', (a) => a?.barcode3,
+        barcode3 = $options.field<String>('barcode3', (a) => a?.barcode3,
             (s) => s?.barcode3, (p, b) => p?.barcode3 = b),
         scanResult = ReadBarcodeApiScanResultActions(() => $options.stateful<
                 ReadBarcodeApiScanResult,
@@ -337,9 +334,6 @@ class _$ReadBarcodeApiResponseActions extends ReadBarcodeApiResponseActions {
     super.$middleware(middleware);
     scanResult.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcodeApiResponseReadBarcodeApiResponseActions> get $serializer => ReadBarcodeApiResponseReadBarcodeApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

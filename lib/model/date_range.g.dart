@@ -163,9 +163,9 @@ class _$DateRangeActions extends DateRangeActions {
 
   _$DateRangeActions._(this.$options)
       : $replace = $options.action<DateRange>('\$replace', (a) => a?.$replace),
-        start = $options.actionField<DateTime>(
+        start = $options.field<DateTime>(
             'start', (a) => a?.start, (s) => s?.start, (p, b) => p?.start = b),
-        end = $options.actionField<DateTime>(
+        end = $options.field<DateTime>(
             'end', (a) => a?.end, (s) => s?.end, (p, b) => p?.end = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$DateRangeActions extends DateRangeActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DateRangeDateRangeActions> get $serializer => DateRangeDateRangeActions.serializer;
 
   FullType _$fullType;
   @override

@@ -118,9 +118,6 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveItemCategoryToSalesOrgUnitApi> get $serializer => CommandStateRemoveItemCategoryToSalesOrgUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

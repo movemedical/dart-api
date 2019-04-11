@@ -112,9 +112,6 @@ class _$RunCustomActionApi extends RunCustomActionApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRunCustomActionApi> get $serializer => CommandStateRunCustomActionApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

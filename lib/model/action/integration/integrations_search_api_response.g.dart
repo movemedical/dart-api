@@ -190,7 +190,7 @@ class _$IntegrationsSearchApiResponseActions
       : $replace = $options.action<IntegrationsSearchApiResponse>(
             '\$replace', (a) => a?.$replace),
         searchResults =
-            $options.actionField<BuiltList<IntegrationsSearchApiSearchResult>>(
+            $options.field<BuiltList<IntegrationsSearchApiSearchResult>>(
                 'searchResults',
                 (a) => a?.searchResults,
                 (s) => s?.searchResults,
@@ -226,9 +226,6 @@ class _$IntegrationsSearchApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<IntegrationsSearchApiResponseIntegrationsSearchApiResponseActions> get $serializer => IntegrationsSearchApiResponseIntegrationsSearchApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

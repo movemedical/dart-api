@@ -343,41 +343,35 @@ class _$LocationActions extends LocationActions {
 
   _$LocationActions._(this.$options)
       : $replace = $options.action<Location>('\$replace', (a) => a?.$replace),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        facilityType = $options.actionField<FacilityType>(
+        facilityType = $options.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        displayText = $options.actionField<String>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        displayPriority = $options.actionField<int>(
+        displayPriority = $options.field<int>(
             'displayPriority',
             (a) => a?.displayPriority,
             (s) => s?.displayPriority,
             (p, b) => p?.displayPriority = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        favorite = $options.actionField<bool>('favorite', (a) => a?.favorite,
+        favorite = $options.field<bool>('favorite', (a) => a?.favorite,
             (s) => s?.favorite, (p, b) => p?.favorite = b),
-        distance = $options.actionField<double>('distance', (a) => a?.distance,
+        distance = $options.field<double>('distance', (a) => a?.distance,
             (s) => s?.distance, (p, b) => p?.distance = b),
         super._();
 
@@ -424,9 +418,6 @@ class _$LocationActions extends LocationActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<LocationLocationActions> get $serializer => LocationLocationActions.serializer;
 
   FullType _$fullType;
   @override

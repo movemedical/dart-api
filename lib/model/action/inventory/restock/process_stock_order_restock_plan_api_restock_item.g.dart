@@ -392,13 +392,13 @@ class _$ProcessStockOrderRestockPlanApiRestockItemActions
   _$ProcessStockOrderRestockPlanApiRestockItemActions._(this.$options)
       : $replace = $options.action<ProcessStockOrderRestockPlanApiRestockItem>(
             '\$replace', (a) => a?.$replace),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
@@ -427,12 +427,12 @@ class _$ProcessStockOrderRestockPlanApiRestockItemActions
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
@@ -493,9 +493,6 @@ class _$ProcessStockOrderRestockPlanApiRestockItemActions
     deliverToAddress.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessStockOrderRestockPlanApiRestockItemProcessStockOrderRestockPlanApiRestockItemActions> get $serializer => ProcessStockOrderRestockPlanApiRestockItemProcessStockOrderRestockPlanApiRestockItemActions.serializer;
 
   FullType _$fullType;
   @override

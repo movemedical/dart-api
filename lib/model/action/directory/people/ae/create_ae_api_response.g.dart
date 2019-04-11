@@ -197,15 +197,12 @@ class _$CreateAeApiResponseActions extends CreateAeApiResponseActions {
   _$CreateAeApiResponseActions._(this.$options)
       : $replace = $options.action<CreateAeApiResponse>(
             '\$replace', (a) => a?.$replace),
-        aeId = $options.actionField<String>(
+        aeId = $options.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        contactId = $options.actionField<String>(
-            'contactId',
-            (a) => a?.contactId,
-            (s) => s?.contactId,
-            (p, b) => p?.contactId = b),
+        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+            (s) => s?.contactId, (p, b) => p?.contactId = b),
         super._();
 
   factory _$CreateAeApiResponseActions(
@@ -240,9 +237,6 @@ class _$CreateAeApiResponseActions extends CreateAeApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateAeApiResponseCreateAeApiResponseActions> get $serializer => CreateAeApiResponseCreateAeApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

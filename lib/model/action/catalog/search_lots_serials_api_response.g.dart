@@ -210,9 +210,9 @@ class _$SearchLotsSerialsApiResponseActions
   _$SearchLotsSerialsApiResponseActions._(this.$options)
       : $replace = $options.action<SearchLotsSerialsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        lots = $options.actionField<BuiltList<Lot>>(
+        lots = $options.field<BuiltList<Lot>>(
             'lots', (a) => a?.lots, (s) => s?.lots, (p, b) => p?.lots = b),
-        serials = $options.actionField<BuiltList<Serial>>('serials',
+        serials = $options.field<BuiltList<Serial>>('serials',
             (a) => a?.serials, (s) => s?.serials, (p, b) => p?.serials = b),
         super._();
 
@@ -247,9 +247,6 @@ class _$SearchLotsSerialsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchLotsSerialsApiResponseSearchLotsSerialsApiResponseActions> get $serializer => SearchLotsSerialsApiResponseSearchLotsSerialsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

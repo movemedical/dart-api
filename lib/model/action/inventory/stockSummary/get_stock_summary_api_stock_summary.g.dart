@@ -528,7 +528,7 @@ class _$GetStockSummaryApiStockSummaryActions
   _$GetStockSummaryApiStockSummaryActions._(this.$options)
       : $replace = $options.action<GetStockSummaryApiStockSummary>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
@@ -581,21 +581,21 @@ class _$GetStockSummaryApiStockSummaryActions
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        qty = $options.actionField<int>(
+        qty = $options.field<int>(
             'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
-        qtyAllocated = $options.actionField<int>(
+        qtyAllocated = $options.field<int>(
             'qtyAllocated',
             (a) => a?.qtyAllocated,
             (s) => s?.qtyAllocated,
             (p, b) => p?.qtyAllocated = b),
-        qtyHold = $options.actionField<int>('qtyHold', (a) => a?.qtyHold,
+        qtyHold = $options.field<int>('qtyHold', (a) => a?.qtyHold,
             (s) => s?.qtyHold, (p, b) => p?.qtyHold = b),
-        qtyLost = $options.actionField<int>('qtyLost', (a) => a?.qtyLost,
+        qtyLost = $options.field<int>('qtyLost', (a) => a?.qtyLost,
             (s) => s?.qtyLost, (p, b) => p?.qtyLost = b),
-        qtyFound = $options.actionField<int>('qtyFound', (a) => a?.qtyFound,
+        qtyFound = $options.field<int>('qtyFound', (a) => a?.qtyFound,
             (s) => s?.qtyFound, (p, b) => p?.qtyFound = b),
         attributes =
-            $options.actionField<BuiltList<GetStockSummaryApiStockAttribute>>(
+            $options.field<BuiltList<GetStockSummaryApiStockAttribute>>(
                 'attributes',
                 (a) => a?.attributes,
                 (s) => s?.attributes,
@@ -670,9 +670,6 @@ class _$GetStockSummaryApiStockSummaryActions
     demandLoan.$middleware(middleware);
     consignmentLoan.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockSummaryApiStockSummaryGetStockSummaryApiStockSummaryActions> get $serializer => GetStockSummaryApiStockSummaryGetStockSummaryApiStockSummaryActions.serializer;
 
   FullType _$fullType;
   @override

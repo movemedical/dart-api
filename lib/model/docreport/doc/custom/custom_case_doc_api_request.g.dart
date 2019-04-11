@@ -285,20 +285,17 @@ class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        caseDocId = $options.actionField<String>(
-            'caseDocId',
-            (a) => a?.caseDocId,
-            (s) => s?.caseDocId,
-            (p, b) => p?.caseDocId = b),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseDocId = $options.field<String>('caseDocId', (a) => a?.caseDocId,
+            (s) => s?.caseDocId, (p, b) => p?.caseDocId = b),
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
         super._();
 
   factory _$CustomCaseDocApiRequestActions(
@@ -344,9 +341,6 @@ class _$CustomCaseDocApiRequestActions extends CustomCaseDocApiRequestActions {
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomCaseDocApiRequestCustomCaseDocApiRequestActions> get $serializer => CustomCaseDocApiRequestCustomCaseDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

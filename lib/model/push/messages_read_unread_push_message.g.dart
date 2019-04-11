@@ -168,7 +168,7 @@ class _$MessagesReadUnreadPushMessageActions
   _$MessagesReadUnreadPushMessageActions._(this.$options)
       : $replace = $options.action<MessagesReadUnreadPushMessage>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -204,9 +204,6 @@ class _$MessagesReadUnreadPushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MessagesReadUnreadPushMessageMessagesReadUnreadPushMessageActions> get $serializer => MessagesReadUnreadPushMessageMessagesReadUnreadPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

@@ -195,12 +195,9 @@ class _$SetCustomerDefaultShipToAddressApiRequestActions
   _$SetCustomerDefaultShipToAddressApiRequestActions._(this.$options)
       : $replace = $options.action<SetCustomerDefaultShipToAddressApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        shipToAddressId = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
@@ -239,9 +236,6 @@ class _$SetCustomerDefaultShipToAddressApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SetCustomerDefaultShipToAddressApiRequestSetCustomerDefaultShipToAddressApiRequestActions> get $serializer => SetCustomerDefaultShipToAddressApiRequestSetCustomerDefaultShipToAddressApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

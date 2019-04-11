@@ -89,9 +89,6 @@ class _$UnlockUserApi extends UnlockUserApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUnlockUserApi> get $serializer => CommandStateUnlockUserApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

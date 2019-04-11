@@ -274,24 +274,21 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
       : $replace =
             $options.action<ListPreferenceCardItemsApiPreferenceCardItem>(
                 '\$replace', (a) => a?.$replace),
-        preferenceCardItemId = $options.actionField<String>(
+        preferenceCardItemId = $options.field<String>(
             'preferenceCardItemId',
             (a) => a?.preferenceCardItemId,
             (s) => s?.preferenceCardItemId,
             (p, b) => p?.preferenceCardItemId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        itemDescription = $options.actionField<String>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        itemDescription = $options.field<String>(
             'itemDescription',
             (a) => a?.itemDescription,
             (s) => s?.itemDescription,
             (p, b) => p?.itemDescription = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -333,9 +330,6 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPreferenceCardItemsApiPreferenceCardItemListPreferenceCardItemsApiPreferenceCardItemActions> get $serializer => ListPreferenceCardItemsApiPreferenceCardItemListPreferenceCardItemsApiPreferenceCardItemActions.serializer;
 
   FullType _$fullType;
   @override

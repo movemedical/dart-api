@@ -112,9 +112,6 @@ class _$ListAdjustmentsApi extends ListAdjustmentsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListAdjustmentsApi> get $serializer => CommandStateListAdjustmentsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

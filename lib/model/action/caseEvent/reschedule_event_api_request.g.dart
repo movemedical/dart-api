@@ -234,19 +234,16 @@ class _$RescheduleEventApiRequestActions
   _$RescheduleEventApiRequestActions._(this.$options)
       : $replace = $options.action<RescheduleEventApiRequest>(
             '\$replace', (a) => a?.$replace),
-        eventId = $options.actionField<String>('eventId', (a) => a?.eventId,
+        eventId = $options.field<String>('eventId', (a) => a?.eventId,
             (s) => s?.eventId, (p, b) => p?.eventId = b),
-        eventDate = $options.actionField<DateTime>(
-            'eventDate',
-            (a) => a?.eventDate,
-            (s) => s?.eventDate,
-            (p, b) => p?.eventDate = b),
-        eventTimeUnknown = $options.actionField<bool>(
+        eventDate = $options.field<DateTime>('eventDate', (a) => a?.eventDate,
+            (s) => s?.eventDate, (p, b) => p?.eventDate = b),
+        eventTimeUnknown = $options.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
             (p, b) => p?.eventTimeUnknown = b),
-        eventDuration = $options.actionField<int>(
+        eventDuration = $options.field<int>(
             'eventDuration',
             (a) => a?.eventDuration,
             (s) => s?.eventDuration,
@@ -288,9 +285,6 @@ class _$RescheduleEventApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RescheduleEventApiRequestRescheduleEventApiRequestActions> get $serializer => RescheduleEventApiRequestRescheduleEventApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

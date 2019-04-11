@@ -349,10 +349,10 @@ class _$ListChildLoanLinesApiLoanLineActions
   _$ListChildLoanLinesApiLoanLineActions._(this.$options)
       : $replace = $options.action<ListChildLoanLinesApiLoanLine>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        status = $options.actionField<LoanLineStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<LoanLineStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
@@ -360,28 +360,19 @@ class _$ListChildLoanLinesApiLoanLineActions
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        qtyCommitted = $options.actionField<int>(
+        qtyCommitted = $options.field<int>(
             'qtyCommitted',
             (a) => a?.qtyCommitted,
             (s) => s?.qtyCommitted,
             (p, b) => p?.qtyCommitted = b),
-        qtyInbound = $options.actionField<int>(
-            'qtyInbound',
-            (a) => a?.qtyInbound,
-            (s) => s?.qtyInbound,
-            (p, b) => p?.qtyInbound = b),
-        qtyOnHand = $options.actionField<int>('qtyOnHand', (a) => a?.qtyOnHand,
+        qtyInbound = $options.field<int>('qtyInbound', (a) => a?.qtyInbound,
+            (s) => s?.qtyInbound, (p, b) => p?.qtyInbound = b),
+        qtyOnHand = $options.field<int>('qtyOnHand', (a) => a?.qtyOnHand,
             (s) => s?.qtyOnHand, (p, b) => p?.qtyOnHand = b),
-        qtyOutbound = $options.actionField<int>(
-            'qtyOutbound',
-            (a) => a?.qtyOutbound,
-            (s) => s?.qtyOutbound,
-            (p, b) => p?.qtyOutbound = b),
-        qtyReturned = $options.actionField<int>(
-            'qtyReturned',
-            (a) => a?.qtyReturned,
-            (s) => s?.qtyReturned,
-            (p, b) => p?.qtyReturned = b),
+        qtyOutbound = $options.field<int>('qtyOutbound', (a) => a?.qtyOutbound,
+            (s) => s?.qtyOutbound, (p, b) => p?.qtyOutbound = b),
+        qtyReturned = $options.field<int>('qtyReturned', (a) => a?.qtyReturned,
+            (s) => s?.qtyReturned, (p, b) => p?.qtyReturned = b),
         super._();
 
   factory _$ListChildLoanLinesApiLoanLineActions(
@@ -433,9 +424,6 @@ class _$ListChildLoanLinesApiLoanLineActions
     super.$middleware(middleware);
     stockItem.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListChildLoanLinesApiLoanLineListChildLoanLinesApiLoanLineActions> get $serializer => ListChildLoanLinesApiLoanLineListChildLoanLinesApiLoanLineActions.serializer;
 
   FullType _$fullType;
   @override

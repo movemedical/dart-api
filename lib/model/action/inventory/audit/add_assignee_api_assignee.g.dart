@@ -183,12 +183,12 @@ class _$AddAssigneeApiAssigneeActions extends AddAssigneeApiAssigneeActions {
   _$AddAssigneeApiAssigneeActions._(this.$options)
       : $replace = $options.action<AddAssigneeApiAssignee>(
             '\$replace', (a) => a?.$replace),
-        linkedType = $options.actionField<GeneralContactType>(
+        linkedType = $options.field<GeneralContactType>(
             'linkedType',
             (a) => a?.linkedType,
             (s) => s?.linkedType,
             (p, b) => p?.linkedType = b),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
         super._();
 
@@ -223,9 +223,6 @@ class _$AddAssigneeApiAssigneeActions extends AddAssigneeApiAssigneeActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddAssigneeApiAssigneeAddAssigneeApiAssigneeActions> get $serializer => AddAssigneeApiAssigneeAddAssigneeApiAssigneeActions.serializer;
 
   FullType _$fullType;
   @override

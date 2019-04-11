@@ -241,19 +241,19 @@ class _$AddItemCategoryToSalesOrgUnitApiRequestActions
   _$AddItemCategoryToSalesOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<AddItemCategoryToSalesOrgUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemCategoryId = $options.actionField<String>(
+        itemCategoryId = $options.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        salesOrgUnitId = $options.actionField<String>(
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        canStock = $options.actionField<bool>('canStock', (a) => a?.canStock,
+        canStock = $options.field<bool>('canStock', (a) => a?.canStock,
             (s) => s?.canStock, (p, b) => p?.canStock = b),
-        canSell = $options.actionField<bool>('canSell', (a) => a?.canSell,
+        canSell = $options.field<bool>('canSell', (a) => a?.canSell,
             (s) => s?.canSell, (p, b) => p?.canSell = b),
         super._();
 
@@ -293,9 +293,6 @@ class _$AddItemCategoryToSalesOrgUnitApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddItemCategoryToSalesOrgUnitApiRequestAddItemCategoryToSalesOrgUnitApiRequestActions> get $serializer => AddItemCategoryToSalesOrgUnitApiRequestAddItemCategoryToSalesOrgUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

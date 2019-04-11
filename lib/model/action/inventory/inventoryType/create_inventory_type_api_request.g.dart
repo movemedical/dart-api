@@ -187,9 +187,9 @@ class _$CreateInventoryTypeApiRequestActions
   _$CreateInventoryTypeApiRequestActions._(this.$options)
       : $replace = $options.action<CreateInventoryTypeApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -224,9 +224,6 @@ class _$CreateInventoryTypeApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateInventoryTypeApiRequestCreateInventoryTypeApiRequestActions> get $serializer => CreateInventoryTypeApiRequestCreateInventoryTypeApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

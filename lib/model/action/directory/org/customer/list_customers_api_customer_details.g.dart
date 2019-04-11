@@ -362,32 +362,29 @@ class _$ListCustomersApiCustomerDetailsActions
   _$ListCustomersApiCustomerDetailsActions._(this.$options)
       : $replace = $options.action<ListCustomersApiCustomerDetails>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        hsOrgId = $options.actionField<String>('hsOrgId', (a) => a?.hsOrgId,
+        hsOrgId = $options.field<String>('hsOrgId', (a) => a?.hsOrgId,
             (s) => s?.hsOrgId, (p, b) => p?.hsOrgId = b),
-        hsOrgName = $options.actionField<String>(
-            'hsOrgName',
-            (a) => a?.hsOrgName,
-            (s) => s?.hsOrgName,
-            (p, b) => p?.hsOrgName = b),
-        customerNumber = $options.actionField<String>(
+        hsOrgName = $options.field<String>('hsOrgName', (a) => a?.hsOrgName,
+            (s) => s?.hsOrgName, (p, b) => p?.hsOrgName = b),
+        customerNumber = $options.field<String>(
             'customerNumber',
             (a) => a?.customerNumber,
             (s) => s?.customerNumber,
             (p, b) => p?.customerNumber = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        formattedName = $options.actionField<String>(
+        formattedName = $options.field<String>(
             'formattedName',
             (a) => a?.formattedName,
             (s) => s?.formattedName,
             (p, b) => p?.formattedName = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        city = $options.actionField<String>(
+        city = $options.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        state = $options.actionField<String>(
+        state = $options.field<String>(
             'state', (a) => a?.state, (s) => s?.state, (p, b) => p?.state = b),
         super._();
 
@@ -437,9 +434,6 @@ class _$ListCustomersApiCustomerDetailsActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCustomersApiCustomerDetailsListCustomersApiCustomerDetailsActions> get $serializer => ListCustomersApiCustomerDetailsListCustomersApiCustomerDetailsActions.serializer;
 
   FullType _$fullType;
   @override

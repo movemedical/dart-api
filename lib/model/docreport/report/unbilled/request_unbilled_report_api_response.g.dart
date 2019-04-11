@@ -229,7 +229,7 @@ class _$RequestUnbilledReportApiResponseActions
   _$RequestUnbilledReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestUnbilledReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -291,9 +291,6 @@ class _$RequestUnbilledReportApiResponseActions
     hcrTeam.$middleware(middleware);
     hospital.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestUnbilledReportApiResponseRequestUnbilledReportApiResponseActions> get $serializer => RequestUnbilledReportApiResponseRequestUnbilledReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

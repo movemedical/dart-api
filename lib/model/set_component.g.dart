@@ -277,7 +277,7 @@ class _$SetComponentActions extends SetComponentActions {
   _$SetComponentActions._(this.$options)
       : $replace =
             $options.action<SetComponent>('\$replace', (a) => a?.$replace),
-        qtyOpen = $options.actionField<int>('qtyOpen', (a) => a?.qtyOpen,
+        qtyOpen = $options.field<int>('qtyOpen', (a) => a?.qtyOpen,
             (s) => s?.qtyOpen, (p, b) => p?.qtyOpen = b),
         component = DBComponentActions(() => $options
             .stateful<DBComponent, DBComponentBuilder, DBComponentActions>(
@@ -286,14 +286,14 @@ class _$SetComponentActions extends SetComponentActions {
                 (s) => s?.component,
                 (b) => b?.component,
                 (parent, builder) => parent?.component = builder)),
-        versionIds = $options.actionField<BuiltSet<String>>(
+        versionIds = $options.field<BuiltSet<String>>(
             'versionIds',
             (a) => a?.versionIds,
             (s) => s?.versionIds,
             (p, b) => p?.versionIds = b),
-        lotIds = $options.actionField<BuiltSet<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.actionField<BuiltSet<String>>(
+        lotIds = $options.field<BuiltSet<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        serialIds = $options.field<BuiltSet<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
@@ -341,9 +341,6 @@ class _$SetComponentActions extends SetComponentActions {
     super.$middleware(middleware);
     component.$middleware(middleware);
   }
-
-// @override
-// Serializer<SetComponentSetComponentActions> get $serializer => SetComponentSetComponentActions.serializer;
 
   FullType _$fullType;
   @override

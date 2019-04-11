@@ -197,7 +197,7 @@ class _$ListMessagesApiRequestActions extends ListMessagesApiRequestActions {
   _$ListMessagesApiRequestActions._(this.$options)
       : $replace = $options.action<ListMessagesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -250,9 +250,6 @@ class _$ListMessagesApiRequestActions extends ListMessagesApiRequestActions {
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListMessagesApiRequestListMessagesApiRequestActions> get $serializer => ListMessagesApiRequestListMessagesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

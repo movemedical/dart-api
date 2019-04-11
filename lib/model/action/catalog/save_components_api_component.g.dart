@@ -326,9 +326,9 @@ class _$SaveComponentsApiComponentActions
   _$SaveComponentsApiComponentActions._(this.$options)
       : $replace = $options.action<SaveComponentsApiComponent>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -342,16 +342,16 @@ class _$SaveComponentsApiComponentActions
             (s) => s?.itemSpec,
             (b) => b?.itemSpec,
             (parent, builder) => parent?.itemSpec = builder)),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        remove = $options.actionField<bool>('remove', (a) => a?.remove,
+        remove = $options.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        minimumQuantity = $options.actionField<int>(
+        minimumQuantity = $options.field<int>(
             'minimumQuantity',
             (a) => a?.minimumQuantity,
             (s) => s?.minimumQuantity,
             (p, b) => p?.minimumQuantity = b),
-        placementInSequence = $options.actionField<int>(
+        placementInSequence = $options.field<int>(
             'placementInSequence',
             (a) => a?.placementInSequence,
             (s) => s?.placementInSequence,
@@ -405,9 +405,6 @@ class _$SaveComponentsApiComponentActions
     super.$middleware(middleware);
     itemSpec.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveComponentsApiComponentSaveComponentsApiComponentActions> get $serializer => SaveComponentsApiComponentSaveComponentsApiComponentActions.serializer;
 
   FullType _$fullType;
   @override

@@ -335,16 +335,16 @@ class _$InsuranceActions extends InsuranceActions {
 
   _$InsuranceActions._(this.$options)
       : $replace = $options.action<Insurance>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        policyNumber = $options.actionField<String>(
+        policyNumber = $options.field<String>(
             'policyNumber',
             (a) => a?.policyNumber,
             (s) => s?.policyNumber,
             (p, b) => p?.policyNumber = b),
-        groupNumber = $options.actionField<String>(
+        groupNumber = $options.field<String>(
             'groupNumber',
             (a) => a?.groupNumber,
             (s) => s?.groupNumber,
@@ -363,12 +363,12 @@ class _$InsuranceActions extends InsuranceActions {
                 (s) => s?.subscriberName,
                 (b) => b?.subscriberName,
                 (parent, builder) => parent?.subscriberName = builder)),
-        subscriberRelation = $options.actionField<String>(
+        subscriberRelation = $options.field<String>(
             'subscriberRelation',
             (a) => a?.subscriberRelation,
             (s) => s?.subscriberRelation,
             (p, b) => p?.subscriberRelation = b),
-        subscriberDateOfBirth = $options.actionField<DateTime>(
+        subscriberDateOfBirth = $options.field<DateTime>(
             'subscriberDateOfBirth',
             (a) => a?.subscriberDateOfBirth,
             (s) => s?.subscriberDateOfBirth,
@@ -423,9 +423,6 @@ class _$InsuranceActions extends InsuranceActions {
     phoneNumber.$middleware(middleware);
     subscriberName.$middleware(middleware);
   }
-
-// @override
-// Serializer<InsuranceInsuranceActions> get $serializer => InsuranceInsuranceActions.serializer;
 
   FullType _$fullType;
   @override

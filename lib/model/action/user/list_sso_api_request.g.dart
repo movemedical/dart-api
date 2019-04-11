@@ -126,9 +126,6 @@ class _$ListSSOApiRequestActions extends ListSSOApiRequestActions {
         this.$replace,
       ]);
 
-// @override
-// Serializer<ListSSOApiRequestListSSOApiRequestActions> get $serializer => ListSSOApiRequestListSSOApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(ListSSOApiRequest);

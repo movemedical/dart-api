@@ -97,9 +97,6 @@ class _$AddUserNavHistoryApi extends AddUserNavHistoryApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddUserNavHistoryApi> get $serializer => CommandStateAddUserNavHistoryApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

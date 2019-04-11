@@ -204,11 +204,11 @@ class _$UpdateHoldReasonApiRequestActions
   _$UpdateHoldReasonApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateHoldReasonApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -245,9 +245,6 @@ class _$UpdateHoldReasonApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateHoldReasonApiRequestUpdateHoldReasonApiRequestActions> get $serializer => UpdateHoldReasonApiRequestUpdateHoldReasonApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

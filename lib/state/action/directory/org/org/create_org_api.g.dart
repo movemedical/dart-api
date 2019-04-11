@@ -107,9 +107,6 @@ class _$CreateOrgApi extends CreateOrgApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateOrgApi> get $serializer => CommandStateCreateOrgApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

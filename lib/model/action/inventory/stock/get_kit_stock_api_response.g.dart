@@ -242,7 +242,7 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
             (s) => s?.kitStock,
             (b) => b?.kitStock,
             (parent, builder) => parent?.kitStock = builder)),
-        containers = $options.actionField<BuiltList<GetStockApiStock>>(
+        containers = $options.field<BuiltList<GetStockApiStock>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -298,9 +298,6 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
     kitStock.$middleware(middleware);
     inProgressVerify.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetKitStockApiResponseGetKitStockApiResponseActions> get $serializer => GetKitStockApiResponseGetKitStockApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$UpdateUserProfileApi extends UpdateUserProfileApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateUserProfileApi> get $serializer => CommandStateUpdateUserProfileApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

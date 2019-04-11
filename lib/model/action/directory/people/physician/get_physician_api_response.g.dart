@@ -223,9 +223,6 @@ class _$GetPhysicianApiResponseActions extends GetPhysicianApiResponseActions {
     detail.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetPhysicianApiResponseGetPhysicianApiResponseActions> get $serializer => GetPhysicianApiResponseGetPhysicianApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetPhysicianApiResponse);

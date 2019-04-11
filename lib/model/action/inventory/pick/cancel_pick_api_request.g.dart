@@ -156,7 +156,7 @@ class _$CancelPickApiRequestActions extends CancelPickApiRequestActions {
   _$CancelPickApiRequestActions._(this.$options)
       : $replace = $options.action<CancelPickApiRequest>(
             '\$replace', (a) => a?.$replace),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$CancelPickApiRequestActions extends CancelPickApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CancelPickApiRequestCancelPickApiRequestActions> get $serializer => CancelPickApiRequestCancelPickApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

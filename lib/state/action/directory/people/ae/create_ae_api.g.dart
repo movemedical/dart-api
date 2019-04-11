@@ -107,9 +107,6 @@ class _$CreateAeApi extends CreateAeApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateAeApi> get $serializer => CommandStateCreateAeApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

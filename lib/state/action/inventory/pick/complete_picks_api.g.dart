@@ -96,9 +96,6 @@ class _$CompletePicksApi extends CompletePicksApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCompletePicksApi> get $serializer => CommandStateCompletePicksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

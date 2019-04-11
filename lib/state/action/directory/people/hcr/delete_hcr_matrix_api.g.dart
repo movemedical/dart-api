@@ -97,9 +97,6 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteHcrMatrixApi> get $serializer => CommandStateDeleteHcrMatrixApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

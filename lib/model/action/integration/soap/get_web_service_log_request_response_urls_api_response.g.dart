@@ -201,12 +201,9 @@ class _$GetWebServiceLogRequestResponseUrlsApiResponseActions
       : $replace =
             $options.action<GetWebServiceLogRequestResponseUrlsApiResponse>(
                 '\$replace', (a) => a?.$replace),
-        requestUrl = $options.actionField<String>(
-            'requestUrl',
-            (a) => a?.requestUrl,
-            (s) => s?.requestUrl,
-            (p, b) => p?.requestUrl = b),
-        responseUrl = $options.actionField<String>(
+        requestUrl = $options.field<String>('requestUrl', (a) => a?.requestUrl,
+            (s) => s?.requestUrl, (p, b) => p?.requestUrl = b),
+        responseUrl = $options.field<String>(
             'responseUrl',
             (a) => a?.responseUrl,
             (s) => s?.responseUrl,
@@ -246,9 +243,6 @@ class _$GetWebServiceLogRequestResponseUrlsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetWebServiceLogRequestResponseUrlsApiResponseGetWebServiceLogRequestResponseUrlsApiResponseActions> get $serializer => GetWebServiceLogRequestResponseUrlsApiResponseGetWebServiceLogRequestResponseUrlsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

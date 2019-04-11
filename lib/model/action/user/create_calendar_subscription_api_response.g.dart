@@ -192,12 +192,12 @@ class _$CreateCalendarSubscriptionApiResponseActions
   _$CreateCalendarSubscriptionApiResponseActions._(this.$options)
       : $replace = $options.action<CreateCalendarSubscriptionApiResponse>(
             '\$replace', (a) => a?.$replace),
-        subscriptionId = $options.actionField<String>(
+        subscriptionId = $options.field<String>(
             'subscriptionId',
             (a) => a?.subscriptionId,
             (s) => s?.subscriptionId,
             (p, b) => p?.subscriptionId = b),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -233,9 +233,6 @@ class _$CreateCalendarSubscriptionApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCalendarSubscriptionApiResponseCreateCalendarSubscriptionApiResponseActions> get $serializer => CreateCalendarSubscriptionApiResponseCreateCalendarSubscriptionApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

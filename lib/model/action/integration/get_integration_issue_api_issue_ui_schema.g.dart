@@ -290,23 +290,20 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
   _$GetIntegrationIssueApiIssueUiSchemaActions._(this.$options)
       : $replace = $options.action<GetIntegrationIssueApiIssueUiSchema>(
             '\$replace', (a) => a?.$replace),
-        assign = $options.actionField<bool>('assign', (a) => a?.assign,
+        assign = $options.field<bool>('assign', (a) => a?.assign,
             (s) => s?.assign, (p, b) => p?.assign = b),
-        markResolved = $options.actionField<bool>(
+        markResolved = $options.field<bool>(
             'markResolved',
             (a) => a?.markResolved,
             (s) => s?.markResolved,
             (p, b) => p?.markResolved = b),
-        regenerate = $options.actionField<bool>(
-            'regenerate',
-            (a) => a?.regenerate,
-            (s) => s?.regenerate,
-            (p, b) => p?.regenerate = b),
-        reprocess = $options.actionField<bool>('reprocess', (a) => a?.reprocess,
+        regenerate = $options.field<bool>('regenerate', (a) => a?.regenerate,
+            (s) => s?.regenerate, (p, b) => p?.regenerate = b),
+        reprocess = $options.field<bool>('reprocess', (a) => a?.reprocess,
             (s) => s?.reprocess, (p, b) => p?.reprocess = b),
-        reopen = $options.actionField<bool>('reopen', (a) => a?.reopen,
+        reopen = $options.field<bool>('reopen', (a) => a?.reopen,
             (s) => s?.reopen, (p, b) => p?.reopen = b),
-        requeueImportJob = $options.actionField<bool>(
+        requeueImportJob = $options.field<bool>(
             'requeueImportJob',
             (a) => a?.requeueImportJob,
             (s) => s?.requeueImportJob,
@@ -353,9 +350,6 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetIntegrationIssueApiIssueUiSchemaGetIntegrationIssueApiIssueUiSchemaActions> get $serializer => GetIntegrationIssueApiIssueUiSchemaGetIntegrationIssueApiIssueUiSchemaActions.serializer;
 
   FullType _$fullType;
   @override

@@ -315,28 +315,28 @@ class _$PrepareAuditFileUploadApiRequestActions
   _$PrepareAuditFileUploadApiRequestActions._(this.$options)
       : $replace = $options.action<PrepareAuditFileUploadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.actionField<String>(
+        fileDescription = $options.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        fileType = $options.actionField<AuditFileType>('fileType',
-            (a) => a?.fileType, (s) => s?.fileType, (p, b) => p?.fileType = b),
-        estimatedSizeKb = $options.actionField<int>(
+        fileType = $options.field<AuditFileType>('fileType', (a) => a?.fileType,
+            (s) => s?.fileType, (p, b) => p?.fileType = b),
+        estimatedSizeKb = $options.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.actionField<Visibility>(
+        visibility = $options.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -385,9 +385,6 @@ class _$PrepareAuditFileUploadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareAuditFileUploadApiRequestPrepareAuditFileUploadApiRequestActions> get $serializer => PrepareAuditFileUploadApiRequestPrepareAuditFileUploadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

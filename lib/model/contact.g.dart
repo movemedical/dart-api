@@ -456,42 +456,39 @@ class _$ContactActions extends ContactActions {
 
   _$ContactActions._(this.$options)
       : $replace = $options.action<Contact>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        linkedType = $options.actionField<ContactType>(
+        linkedType = $options.field<ContactType>(
             'linkedType',
             (a) => a?.linkedType,
             (s) => s?.linkedType,
             (p, b) => p?.linkedType = b),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        generalLinkedType = $options.actionField<GeneralContactType>(
+        generalLinkedType = $options.field<GeneralContactType>(
             'generalLinkedType',
             (a) => a?.generalLinkedType,
             (s) => s?.generalLinkedType,
             (p, b) => p?.generalLinkedType = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        organizationName = $options.actionField<String>(
+        organizationName = $options.field<String>(
             'organizationName',
             (a) => a?.organizationName,
             (s) => s?.organizationName,
             (p, b) => p?.organizationName = b),
-        publicVisible = $options.actionField<bool>(
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
@@ -506,12 +503,12 @@ class _$ContactActions extends ContactActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        formattedName = $options.actionField<String>(
+        formattedName = $options.field<String>(
             'formattedName',
             (a) => a?.formattedName,
             (s) => s?.formattedName,
             (p, b) => p?.formattedName = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -573,9 +570,6 @@ class _$ContactActions extends ContactActions {
     email.$middleware(middleware);
     name.$middleware(middleware);
   }
-
-// @override
-// Serializer<ContactContactActions> get $serializer => ContactContactActions.serializer;
 
   FullType _$fullType;
   @override

@@ -189,11 +189,11 @@ class _$InventoryTypeActions extends InventoryTypeActions {
   _$InventoryTypeActions._(this.$options)
       : $replace =
             $options.action<InventoryType>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -228,9 +228,6 @@ class _$InventoryTypeActions extends InventoryTypeActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<InventoryTypeInventoryTypeActions> get $serializer => InventoryTypeInventoryTypeActions.serializer;
 
   FullType _$fullType;
   @override

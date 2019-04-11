@@ -107,9 +107,6 @@ class _$UpdateCaseEventInsuranceApi extends UpdateCaseEventInsuranceApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateCaseEventInsuranceApi> get $serializer => CommandStateUpdateCaseEventInsuranceApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -233,19 +233,19 @@ class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
   _$AuditFilePushMessageActions._(this.$options)
       : $replace = $options.action<AuditFilePushMessage>(
             '\$replace', (a) => a?.$replace),
-        auditFileId = $options.actionField<String>(
+        auditFileId = $options.field<String>(
             'auditFileId',
             (a) => a?.auditFileId,
             (s) => s?.auditFileId,
             (p, b) => p?.auditFileId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType = $options.actionField<AuditFilePushMessageFileUpdateType>(
+        updateType = $options.field<AuditFilePushMessageFileUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
             (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.actionField<double>(
+        percentUploadedDecimalForm = $options.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -286,9 +286,6 @@ class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AuditFilePushMessageAuditFilePushMessageActions> get $serializer => AuditFilePushMessageAuditFilePushMessageActions.serializer;
 
   FullType _$fullType;
   @override

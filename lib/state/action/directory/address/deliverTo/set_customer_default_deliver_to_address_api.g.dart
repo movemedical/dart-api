@@ -121,9 +121,6 @@ class _$SetCustomerDefaultDeliverToAddressApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSetCustomerDefaultDeliverToAddressApi> get $serializer => CommandStateSetCustomerDefaultDeliverToAddressApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

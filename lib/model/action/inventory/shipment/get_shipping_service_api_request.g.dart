@@ -165,7 +165,7 @@ class _$GetShippingServiceApiRequestActions
   _$GetShippingServiceApiRequestActions._(this.$options)
       : $replace = $options.action<GetShippingServiceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$GetShippingServiceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetShippingServiceApiRequestGetShippingServiceApiRequestActions> get $serializer => GetShippingServiceApiRequestGetShippingServiceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -243,20 +243,19 @@ class _$GetItemLotSerialHistoryApiHistoryRecordActions
   _$GetItemLotSerialHistoryApiHistoryRecordActions._(this.$options)
       : $replace = $options.action<GetItemLotSerialHistoryApiHistoryRecord>(
             '\$replace', (a) => a?.$replace),
-        date = $options.actionField<DateTime>(
+        date = $options.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        historyType =
-            $options.actionField<GetItemLotSerialHistoryApiHistoryType>(
-                'historyType',
-                (a) => a?.historyType,
-                (s) => s?.historyType,
-                (p, b) => p?.historyType = b),
-        referenceId = $options.actionField<String>(
+        historyType = $options.field<GetItemLotSerialHistoryApiHistoryType>(
+            'historyType',
+            (a) => a?.historyType,
+            (s) => s?.historyType,
+            (p, b) => p?.historyType = b),
+        referenceId = $options.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
@@ -299,9 +298,6 @@ class _$GetItemLotSerialHistoryApiHistoryRecordActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemLotSerialHistoryApiHistoryRecordGetItemLotSerialHistoryApiHistoryRecordActions> get $serializer => GetItemLotSerialHistoryApiHistoryRecordGetItemLotSerialHistoryApiHistoryRecordActions.serializer;
 
   FullType _$fullType;
   @override

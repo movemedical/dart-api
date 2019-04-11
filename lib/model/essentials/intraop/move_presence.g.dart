@@ -192,14 +192,14 @@ class _$MovePresenceActions extends MovePresenceActions {
   _$MovePresenceActions._(this.$options)
       : $replace =
             $options.action<MovePresence>('\$replace', (a) => a?.$replace),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userDisplay = $options.actionField<String>(
+        userDisplay = $options.field<String>(
             'userDisplay',
             (a) => a?.userDisplay,
             (s) => s?.userDisplay,
             (p, b) => p?.userDisplay = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -234,9 +234,6 @@ class _$MovePresenceActions extends MovePresenceActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MovePresenceMovePresenceActions> get $serializer => MovePresenceMovePresenceActions.serializer;
 
   FullType _$fullType;
   @override

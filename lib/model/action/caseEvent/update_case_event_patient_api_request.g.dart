@@ -464,14 +464,14 @@ class _$UpdateCaseEventPatientApiRequestActions
   _$UpdateCaseEventPatientApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateCaseEventPatientApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        ssn = $options.actionField<String>(
+        ssn = $options.field<String>(
             'ssn', (a) => a?.ssn, (s) => s?.ssn, (p, b) => p?.ssn = b),
-        mrn = $options.actionField<String>(
+        mrn = $options.field<String>(
             'mrn', (a) => a?.mrn, (s) => s?.mrn, (p, b) => p?.mrn = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -480,38 +480,35 @@ class _$UpdateCaseEventPatientApiRequestActions
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        dateOfBirth = $options.actionField<DateTime>(
+        dateOfBirth = $options.field<DateTime>(
             'dateOfBirth',
             (a) => a?.dateOfBirth,
             (s) => s?.dateOfBirth,
             (p, b) => p?.dateOfBirth = b),
-        gender = $options.actionField<Gender>('gender', (a) => a?.gender,
+        gender = $options.field<Gender>('gender', (a) => a?.gender,
             (s) => s?.gender, (p, b) => p?.gender = b),
-        heightMeasurement = $options.actionField<double>(
+        heightMeasurement = $options.field<double>(
             'heightMeasurement',
             (a) => a?.heightMeasurement,
             (s) => s?.heightMeasurement,
             (p, b) => p?.heightMeasurement = b),
-        heightMeasurementType = $options.actionField<LengthMeasurementType>(
+        heightMeasurementType = $options.field<LengthMeasurementType>(
             'heightMeasurementType',
             (a) => a?.heightMeasurementType,
             (s) => s?.heightMeasurementType,
             (p, b) => p?.heightMeasurementType = b),
-        weightMeasurement = $options.actionField<double>(
+        weightMeasurement = $options.field<double>(
             'weightMeasurement',
             (a) => a?.weightMeasurement,
             (s) => s?.weightMeasurement,
             (p, b) => p?.weightMeasurement = b),
-        weightMeasurementType = $options.actionField<WeightMeasurementType>(
+        weightMeasurementType = $options.field<WeightMeasurementType>(
             'weightMeasurementType',
             (a) => a?.weightMeasurementType,
             (s) => s?.weightMeasurementType,
             (p, b) => p?.weightMeasurementType = b),
-        ethnicity = $options.actionField<Ethnicity>(
-            'ethnicity',
-            (a) => a?.ethnicity,
-            (s) => s?.ethnicity,
-            (p, b) => p?.ethnicity = b),
+        ethnicity = $options.field<Ethnicity>('ethnicity', (a) => a?.ethnicity,
+            (s) => s?.ethnicity, (p, b) => p?.ethnicity = b),
         updateInsuranceRequest = UpdateCaseEventInsuranceApiRequestActions(() =>
             $options.stateful<
                     UpdateCaseEventInsuranceApiRequest,
@@ -583,9 +580,6 @@ class _$UpdateCaseEventPatientApiRequestActions
     name.$middleware(middleware);
     updateInsuranceRequest.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCaseEventPatientApiRequestUpdateCaseEventPatientApiRequestActions> get $serializer => UpdateCaseEventPatientApiRequestUpdateCaseEventPatientApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

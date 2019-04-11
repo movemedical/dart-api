@@ -206,9 +206,9 @@ class _$ListShippingServicesApiResponseActions
   _$ListShippingServicesApiResponseActions._(this.$options)
       : $replace = $options.action<ListShippingServicesApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ShippingService>>(
+        data = $options.field<BuiltList<ShippingService>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -244,9 +244,6 @@ class _$ListShippingServicesApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListShippingServicesApiResponseListShippingServicesApiResponseActions> get $serializer => ListShippingServicesApiResponseListShippingServicesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

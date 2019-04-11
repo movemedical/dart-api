@@ -112,9 +112,6 @@ class _$GetCaseCountByDayApi extends GetCaseCountByDayApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetCaseCountByDayApi> get $serializer => CommandStateGetCaseCountByDayApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

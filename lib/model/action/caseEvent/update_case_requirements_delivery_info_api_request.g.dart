@@ -291,22 +291,19 @@ class _$UpdateCaseRequirementsDeliveryInfoApiRequestActions
       : $replace =
             $options.action<UpdateCaseRequirementsDeliveryInfoApiRequest>(
                 '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
-        deliverToAddressId = $options.actionField<String>(
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -365,9 +362,6 @@ class _$UpdateCaseRequirementsDeliveryInfoApiRequestActions
     super.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCaseRequirementsDeliveryInfoApiRequestUpdateCaseRequirementsDeliveryInfoApiRequestActions> get $serializer => UpdateCaseRequirementsDeliveryInfoApiRequestUpdateCaseRequirementsDeliveryInfoApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

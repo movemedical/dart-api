@@ -339,36 +339,36 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   _$ListPreferenceCardsApiPreferenceCardActions._(this.$options)
       : $replace = $options.action<ListPreferenceCardsApiPreferenceCard>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        techniqueId = $options.actionField<String>(
+        techniqueId = $options.field<String>(
             'techniqueId',
             (a) => a?.techniqueId,
             (s) => s?.techniqueId,
             (p, b) => p?.techniqueId = b),
-        techniqueName = $options.actionField<String>(
+        techniqueName = $options.field<String>(
             'techniqueName',
             (a) => a?.techniqueName,
             (s) => s?.techniqueName,
             (p, b) => p?.techniqueName = b),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianName = $options.actionField<String>(
+        physicianName = $options.field<String>(
             'physicianName',
             (a) => a?.physicianName,
             (s) => s?.physicianName,
             (p, b) => p?.physicianName = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -416,9 +416,6 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPreferenceCardsApiPreferenceCardListPreferenceCardsApiPreferenceCardActions> get $serializer => ListPreferenceCardsApiPreferenceCardListPreferenceCardsApiPreferenceCardActions.serializer;
 
   FullType _$fullType;
   @override

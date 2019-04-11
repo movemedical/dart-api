@@ -156,7 +156,7 @@ class _$CreateLotApiResponseActions extends CreateLotApiResponseActions {
   _$CreateLotApiResponseActions._(this.$options)
       : $replace = $options.action<CreateLotApiResponse>(
             '\$replace', (a) => a?.$replace),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$CreateLotApiResponseActions extends CreateLotApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateLotApiResponseCreateLotApiResponseActions> get $serializer => CreateLotApiResponseCreateLotApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

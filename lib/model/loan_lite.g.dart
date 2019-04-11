@@ -237,18 +237,18 @@ class _$LoanLiteActions extends LoanLiteActions {
 
   _$LoanLiteActions._(this.$options)
       : $replace = $options.action<LoanLite>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<LoanStatus>('status', (a) => a?.status,
+        status = $options.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        serviceEndDate = $options.actionField<DateTime>(
+        serviceEndDate = $options.field<DateTime>(
             'serviceEndDate',
             (a) => a?.serviceEndDate,
             (s) => s?.serviceEndDate,
             (p, b) => p?.serviceEndDate = b),
-        daysLate = $options.actionField<int>('daysLate', (a) => a?.daysLate,
+        daysLate = $options.field<int>('daysLate', (a) => a?.daysLate,
             (s) => s?.daysLate, (p, b) => p?.daysLate = b),
         super._();
 
@@ -287,9 +287,6 @@ class _$LoanLiteActions extends LoanLiteActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<LoanLiteLoanLiteActions> get $serializer => LoanLiteLoanLiteActions.serializer;
 
   FullType _$fullType;
   @override

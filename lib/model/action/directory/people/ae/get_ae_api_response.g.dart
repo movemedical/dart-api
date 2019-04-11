@@ -210,9 +210,6 @@ class _$GetAeApiResponseActions extends GetAeApiResponseActions {
     detail.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetAeApiResponseGetAeApiResponseActions> get $serializer => GetAeApiResponseGetAeApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAeApiResponse);

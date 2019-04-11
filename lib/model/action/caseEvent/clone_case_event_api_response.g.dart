@@ -164,7 +164,7 @@ class _$CloneCaseEventApiResponseActions
   _$CloneCaseEventApiResponseActions._(this.$options)
       : $replace = $options.action<CloneCaseEventApiResponse>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -200,9 +200,6 @@ class _$CloneCaseEventApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CloneCaseEventApiResponseCloneCaseEventApiResponseActions> get $serializer => CloneCaseEventApiResponseCloneCaseEventApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

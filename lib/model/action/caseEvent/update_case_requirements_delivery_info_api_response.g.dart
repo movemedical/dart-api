@@ -325,17 +325,17 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
       : $replace =
             $options.action<UpdateCaseRequirementsDeliveryInfoApiResponse>(
                 '\$replace', (a) => a?.$replace),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        deliverByDateTz = $options.actionField<String>(
+        deliverByDateTz = $options.field<String>(
             'deliverByDateTz',
             (a) => a?.deliverByDateTz,
             (s) => s?.deliverByDateTz,
             (p, b) => p?.deliverByDateTz = b),
-        deliverToAttn = $options.actionField<String>(
+        deliverToAttn = $options.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
@@ -356,7 +356,7 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        editDeliverTo = $options.actionField<bool>(
+        editDeliverTo = $options.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
@@ -411,9 +411,6 @@ class _$UpdateCaseRequirementsDeliveryInfoApiResponseActions
     deliverTo.$middleware(middleware);
     deliverToOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCaseRequirementsDeliveryInfoApiResponseUpdateCaseRequirementsDeliveryInfoApiResponseActions> get $serializer => UpdateCaseRequirementsDeliveryInfoApiResponseUpdateCaseRequirementsDeliveryInfoApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

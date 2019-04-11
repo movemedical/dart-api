@@ -167,7 +167,7 @@ class _$GetAuditItemHistoryApiRequestActions
   _$GetAuditItemHistoryApiRequestActions._(this.$options)
       : $replace = $options.action<GetAuditItemHistoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditItemId = $options.actionField<String>(
+        auditItemId = $options.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
@@ -203,9 +203,6 @@ class _$GetAuditItemHistoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAuditItemHistoryApiRequestGetAuditItemHistoryApiRequestActions> get $serializer => GetAuditItemHistoryApiRequestGetAuditItemHistoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

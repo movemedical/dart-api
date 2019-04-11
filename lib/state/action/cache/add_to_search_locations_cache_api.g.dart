@@ -108,9 +108,6 @@ class _$AddToSearchLocationsCacheApi extends AddToSearchLocationsCacheApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddToSearchLocationsCacheApi> get $serializer => CommandStateAddToSearchLocationsCacheApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -339,30 +339,24 @@ class _$CustomOrderDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        orderReasonDocId = $options.actionField<String>(
+        orderReasonDocId = $options.field<String>(
             'orderReasonDocId',
             (a) => a?.orderReasonDocId,
             (s) => s?.orderReasonDocId,
             (p, b) => p?.orderReasonDocId = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        packageId = $options.actionField<String>(
-            'packageId',
-            (a) => a?.packageId,
-            (s) => s?.packageId,
-            (p, b) => p?.packageId = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+            (s) => s?.packageId, (p, b) => p?.packageId = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
         super._();
 
   factory _$CustomOrderDocApiRequestActions(
@@ -412,9 +406,6 @@ class _$CustomOrderDocApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomOrderDocApiRequestCustomOrderDocApiRequestActions> get $serializer => CustomOrderDocApiRequestCustomOrderDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

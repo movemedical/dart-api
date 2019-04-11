@@ -209,11 +209,11 @@ class _$UpdateInventoryTypeApiRequestActions
   _$UpdateInventoryTypeApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateInventoryTypeApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -250,9 +250,6 @@ class _$UpdateInventoryTypeApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateInventoryTypeApiRequestUpdateInventoryTypeApiRequestActions> get $serializer => UpdateInventoryTypeApiRequestUpdateInventoryTypeApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

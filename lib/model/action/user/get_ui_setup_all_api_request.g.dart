@@ -208,14 +208,11 @@ class _$GetUiSetupAllApiRequestActions extends GetUiSetupAllApiRequestActions {
   _$GetUiSetupAllApiRequestActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiRequest>(
             '\$replace', (a) => a?.$replace),
-        type = $options.actionField<String>(
+        type = $options.field<String>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        appVersion = $options.actionField<String>(
-            'appVersion',
-            (a) => a?.appVersion,
-            (s) => s?.appVersion,
-            (p, b) => p?.appVersion = b),
-        platformVersion = $options.actionField<String>(
+        appVersion = $options.field<String>('appVersion', (a) => a?.appVersion,
+            (s) => s?.appVersion, (p, b) => p?.appVersion = b),
+        platformVersion = $options.field<String>(
             'platformVersion',
             (a) => a?.platformVersion,
             (s) => s?.platformVersion,
@@ -255,9 +252,6 @@ class _$GetUiSetupAllApiRequestActions extends GetUiSetupAllApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiRequestGetUiSetupAllApiRequestActions> get $serializer => GetUiSetupAllApiRequestGetUiSetupAllApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

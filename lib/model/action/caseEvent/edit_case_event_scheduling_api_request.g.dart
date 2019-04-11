@@ -461,58 +461,46 @@ class _$EditCaseEventSchedulingApiRequestActions
   _$EditCaseEventSchedulingApiRequestActions._(this.$options)
       : $replace = $options.action<EditCaseEventSchedulingApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseTypeId = $options.actionField<String>(
-            'caseTypeId',
-            (a) => a?.caseTypeId,
-            (s) => s?.caseTypeId,
-            (p, b) => p?.caseTypeId = b),
-        caseEventId = $options.actionField<String>(
+        caseTypeId = $options.field<String>('caseTypeId', (a) => a?.caseTypeId,
+            (s) => s?.caseTypeId, (p, b) => p?.caseTypeId = b),
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        salesOuId = $options.actionField<String>(
-            'salesOuId',
-            (a) => a?.salesOuId,
-            (s) => s?.salesOuId,
-            (p, b) => p?.salesOuId = b),
-        procedureId = $options.actionField<String>(
+        salesOuId = $options.field<String>('salesOuId', (a) => a?.salesOuId,
+            (s) => s?.salesOuId, (p, b) => p?.salesOuId = b),
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.actionField<String>(
+        subProcedureId = $options.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        physicianId = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianTemp = $options.actionField<String>(
+        physicianTemp = $options.field<String>(
             'physicianTemp',
             (a) => a?.physicianTemp,
             (s) => s?.physicianTemp,
             (p, b) => p?.physicianTemp = b),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        coverageId = $options.actionField<String>(
-            'coverageId',
-            (a) => a?.coverageId,
-            (s) => s?.coverageId,
-            (p, b) => p?.coverageId = b),
-        bodySide = $options.actionField<BodySide>('bodySide',
-            (a) => a?.bodySide, (s) => s?.bodySide, (p, b) => p?.bodySide = b),
-        procedureDesc = $options.actionField<String>(
+        coverageId = $options.field<String>('coverageId', (a) => a?.coverageId,
+            (s) => s?.coverageId, (p, b) => p?.coverageId = b),
+        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+            (s) => s?.bodySide, (p, b) => p?.bodySide = b),
+        procedureDesc = $options.field<String>(
             'procedureDesc',
             (a) => a?.procedureDesc,
             (s) => s?.procedureDesc,
@@ -573,9 +561,6 @@ class _$EditCaseEventSchedulingApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<EditCaseEventSchedulingApiRequestEditCaseEventSchedulingApiRequestActions> get $serializer => EditCaseEventSchedulingApiRequestEditCaseEventSchedulingApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

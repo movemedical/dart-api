@@ -114,9 +114,6 @@ class _$SearchExpirationLevelsApi extends SearchExpirationLevelsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSearchExpirationLevelsApi> get $serializer => CommandStateSearchExpirationLevelsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

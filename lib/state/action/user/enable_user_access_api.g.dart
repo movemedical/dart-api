@@ -97,9 +97,6 @@ class _$EnableUserAccessApi extends EnableUserAccessApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateEnableUserAccessApi> get $serializer => CommandStateEnableUserAccessApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

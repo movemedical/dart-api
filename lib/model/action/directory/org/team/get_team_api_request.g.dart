@@ -149,7 +149,7 @@ class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
   _$GetTeamApiRequestActions._(this.$options)
       : $replace =
             $options.action<GetTeamApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -180,9 +180,6 @@ class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetTeamApiRequestGetTeamApiRequestActions> get $serializer => GetTeamApiRequestGetTeamApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

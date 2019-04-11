@@ -108,9 +108,6 @@ class _$GetPackageApi extends GetPackageApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetPackageApi> get $serializer => CommandStateGetPackageApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

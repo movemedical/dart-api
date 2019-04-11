@@ -1046,20 +1046,20 @@ class _$GetFacilityApiFacilityDetailActions
   _$GetFacilityApiFacilityDetailActions._(this.$options)
       : $replace = $options.action<GetFacilityApiFacilityDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        facilityType = $options.actionField<FacilityType>(
+        facilityType = $options.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         contactName = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -1082,96 +1082,87 @@ class _$GetFacilityApiFacilityDetailActions
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        caseLoaningMethodology = $options.actionField<CaseLoaningMethodology>(
+        caseLoaningMethodology = $options.field<CaseLoaningMethodology>(
             'caseLoaningMethodology',
             (a) => a?.caseLoaningMethodology,
             (s) => s?.caseLoaningMethodology,
             (p, b) => p?.caseLoaningMethodology = b),
-        restockType = $options.actionField<RestockType>(
+        restockType = $options.field<RestockType>(
             'restockType',
             (a) => a?.restockType,
             (s) => s?.restockType,
             (p, b) => p?.restockType = b),
-        publicVisible = $options.actionField<bool>(
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        binManaged = $options.actionField<bool>(
-            'binManaged',
-            (a) => a?.binManaged,
-            (s) => s?.binManaged,
-            (p, b) => p?.binManaged = b),
-        autoPutAway = $options.actionField<bool>(
-            'autoPutAway',
-            (a) => a?.autoPutAway,
-            (s) => s?.autoPutAway,
-            (p, b) => p?.autoPutAway = b),
-        opsScheduleProfileName = $options.actionField<String>(
+        binManaged = $options.field<bool>('binManaged', (a) => a?.binManaged,
+            (s) => s?.binManaged, (p, b) => p?.binManaged = b),
+        autoPutAway = $options.field<bool>('autoPutAway', (a) => a?.autoPutAway,
+            (s) => s?.autoPutAway, (p, b) => p?.autoPutAway = b),
+        opsScheduleProfileName = $options.field<String>(
             'opsScheduleProfileName',
             (a) => a?.opsScheduleProfileName,
             (s) => s?.opsScheduleProfileName,
             (p, b) => p?.opsScheduleProfileName = b),
-        opsScheduleProfileId = $options.actionField<String>(
+        opsScheduleProfileId = $options.field<String>(
             'opsScheduleProfileId',
             (a) => a?.opsScheduleProfileId,
             (s) => s?.opsScheduleProfileId,
             (p, b) => p?.opsScheduleProfileId = b),
-        deliveryScheduleProfileName = $options.actionField<String>(
+        deliveryScheduleProfileName = $options.field<String>(
             'deliveryScheduleProfileName',
             (a) => a?.deliveryScheduleProfileName,
             (s) => s?.deliveryScheduleProfileName,
             (p, b) => p?.deliveryScheduleProfileName = b),
-        deliveryScheduleProfileId = $options.actionField<String>(
+        deliveryScheduleProfileId = $options.field<String>(
             'deliveryScheduleProfileId',
             (a) => a?.deliveryScheduleProfileId,
             (s) => s?.deliveryScheduleProfileId,
             (p, b) => p?.deliveryScheduleProfileId = b),
-        courierProfileName = $options.actionField<String>(
+        courierProfileName = $options.field<String>(
             'courierProfileName',
             (a) => a?.courierProfileName,
             (s) => s?.courierProfileName,
             (p, b) => p?.courierProfileName = b),
-        courierProfileId = $options.actionField<String>(
+        courierProfileId = $options.field<String>(
             'courierProfileId',
             (a) => a?.courierProfileId,
             (s) => s?.courierProfileId,
             (p, b) => p?.courierProfileId = b),
-        lagTime = $options.actionField<int>('lagTime', (a) => a?.lagTime,
+        lagTime = $options.field<int>('lagTime', (a) => a?.lagTime,
             (s) => s?.lagTime, (p, b) => p?.lagTime = b),
-        splitImplantsAndInstruments = $options.actionField<bool>(
+        splitImplantsAndInstruments = $options.field<bool>(
             'splitImplantsAndInstruments',
             (a) => a?.splitImplantsAndInstruments,
             (s) => s?.splitImplantsAndInstruments,
             (p, b) => p?.splitImplantsAndInstruments = b),
-        turnTimeInMinutes = $options.actionField<int>(
+        turnTimeInMinutes = $options.field<int>(
             'turnTimeInMinutes',
             (a) => a?.turnTimeInMinutes,
             (s) => s?.turnTimeInMinutes,
             (p, b) => p?.turnTimeInMinutes = b),
-        loanSplitMethod = $options.actionField<LoanSplitMethod>(
+        loanSplitMethod = $options.field<LoanSplitMethod>(
             'loanSplitMethod',
             (a) => a?.loanSplitMethod,
             (s) => s?.loanSplitMethod,
             (p, b) => p?.loanSplitMethod = b),
-        optimizeLoans = $options.actionField<bool>(
+        optimizeLoans = $options.field<bool>(
             'optimizeLoans',
             (a) => a?.optimizeLoans,
             (s) => s?.optimizeLoans,
             (p, b) => p?.optimizeLoans = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        customerName = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        customerName = $options.field<String>(
             'customerName',
             (a) => a?.customerName,
             (s) => s?.customerName,
             (p, b) => p?.customerName = b),
-        customerNumber = $options.actionField<String>(
+        customerNumber = $options.field<String>(
             'customerNumber',
             (a) => a?.customerNumber,
             (s) => s?.customerNumber,
@@ -1192,7 +1183,7 @@ class _$GetFacilityApiFacilityDetailActions
             (s) => s?.defaultBillTo,
             (b) => b?.defaultBillTo,
             (parent, builder) => parent?.defaultBillTo = builder)),
-        defaultDeliverToAddressId = $options.actionField<String>(
+        defaultDeliverToAddressId = $options.field<String>(
             'defaultDeliverToAddressId',
             (a) => a?.defaultDeliverToAddressId,
             (s) => s?.defaultDeliverToAddressId,
@@ -1205,15 +1196,14 @@ class _$GetFacilityApiFacilityDetailActions
                 (b) => b?.defaultDeliverToAddress,
                 (parent, builder) =>
                     parent?.defaultDeliverToAddress = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        attributes =
-            $options.actionField<BuiltList<GetFacilityApiFacilityAttribute>>(
-                'attributes',
-                (a) => a?.attributes,
-                (s) => s?.attributes,
-                (p, b) => p?.attributes = b),
-        customActions = $options.actionField<BuiltList<CustomAction>>(
+        attributes = $options.field<BuiltList<GetFacilityApiFacilityAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
+        customActions = $options.field<BuiltList<CustomAction>>(
             'customActions',
             (a) => a?.customActions,
             (s) => s?.customActions,
@@ -1330,9 +1320,6 @@ class _$GetFacilityApiFacilityDetailActions
     defaultBillTo.$middleware(middleware);
     defaultDeliverToAddress.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetFacilityApiFacilityDetailGetFacilityApiFacilityDetailActions> get $serializer => GetFacilityApiFacilityDetailGetFacilityApiFacilityDetailActions.serializer;
 
   FullType _$fullType;
   @override

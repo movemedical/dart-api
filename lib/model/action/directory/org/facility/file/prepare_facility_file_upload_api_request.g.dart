@@ -318,34 +318,31 @@ class _$PrepareFacilityFileUploadApiRequestActions
   _$PrepareFacilityFileUploadApiRequestActions._(this.$options)
       : $replace = $options.action<PrepareFacilityFileUploadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.actionField<String>(
+        fileDescription = $options.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        facilityFileType = $options.actionField<FacilityFileType>(
+        facilityFileType = $options.field<FacilityFileType>(
             'facilityFileType',
             (a) => a?.facilityFileType,
             (s) => s?.facilityFileType,
             (p, b) => p?.facilityFileType = b),
-        estimatedSizeKb = $options.actionField<int>(
+        estimatedSizeKb = $options.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.actionField<Visibility>(
+        visibility = $options.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -394,9 +391,6 @@ class _$PrepareFacilityFileUploadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareFacilityFileUploadApiRequestPrepareFacilityFileUploadApiRequestActions> get $serializer => PrepareFacilityFileUploadApiRequestPrepareFacilityFileUploadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

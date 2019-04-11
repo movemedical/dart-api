@@ -111,9 +111,6 @@ class _$GetItemPricingApi extends GetItemPricingApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetItemPricingApi> get $serializer => CommandStateGetItemPricingApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

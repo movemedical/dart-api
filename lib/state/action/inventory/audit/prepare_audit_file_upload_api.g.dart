@@ -114,9 +114,6 @@ class _$PrepareAuditFileUploadApi extends PrepareAuditFileUploadApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStatePrepareAuditFileUploadApi> get $serializer => CommandStatePrepareAuditFileUploadApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

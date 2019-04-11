@@ -116,9 +116,6 @@ class _$RequestAdjustmentExportDocApi extends RequestAdjustmentExportDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestAdjustmentExportDocApi> get $serializer => CommandStateRequestAdjustmentExportDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -181,9 +181,9 @@ class _$GetAdjustmentApiRequestActions extends GetAdjustmentApiRequestActions {
   _$GetAdjustmentApiRequestActions._(this.$options)
       : $replace = $options.action<GetAdjustmentApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.actionField<bool>(
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -221,9 +221,6 @@ class _$GetAdjustmentApiRequestActions extends GetAdjustmentApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAdjustmentApiRequestGetAdjustmentApiRequestActions> get $serializer => GetAdjustmentApiRequestGetAdjustmentApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

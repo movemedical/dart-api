@@ -197,9 +197,9 @@ class _$AssignPicksApiRequestActions extends AssignPicksApiRequestActions {
   _$AssignPicksApiRequestActions._(this.$options)
       : $replace = $options.action<AssignPicksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        pickIds = $options.actionField<BuiltList<String>>('pickIds',
+        pickIds = $options.field<BuiltList<String>>('pickIds',
             (a) => a?.pickIds, (s) => s?.pickIds, (p, b) => p?.pickIds = b),
         super._();
 
@@ -233,9 +233,6 @@ class _$AssignPicksApiRequestActions extends AssignPicksApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AssignPicksApiRequestAssignPicksApiRequestActions> get $serializer => AssignPicksApiRequestAssignPicksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

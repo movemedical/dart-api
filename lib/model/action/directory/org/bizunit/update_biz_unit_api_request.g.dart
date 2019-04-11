@@ -317,13 +317,13 @@ class _$UpdateBizUnitApiRequestActions extends UpdateBizUnitApiRequestActions {
   _$UpdateBizUnitApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateBizUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        key = $options.actionField<String>(
+        key = $options.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -335,12 +335,12 @@ class _$UpdateBizUnitApiRequestActions extends UpdateBizUnitApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicListing = $options.actionField<bool>(
+        publicListing = $options.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -391,9 +391,6 @@ class _$UpdateBizUnitApiRequestActions extends UpdateBizUnitApiRequestActions {
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateBizUnitApiRequestUpdateBizUnitApiRequestActions> get $serializer => UpdateBizUnitApiRequestUpdateBizUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

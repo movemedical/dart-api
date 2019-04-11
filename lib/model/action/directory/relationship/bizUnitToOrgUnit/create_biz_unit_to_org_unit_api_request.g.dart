@@ -190,16 +190,10 @@ class _$CreateBizUnitToOrgUnitApiRequestActions
   _$CreateBizUnitToOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<CreateBizUnitToOrgUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
         super._();
 
   factory _$CreateBizUnitToOrgUnitApiRequestActions(
@@ -234,9 +228,6 @@ class _$CreateBizUnitToOrgUnitApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateBizUnitToOrgUnitApiRequestCreateBizUnitToOrgUnitApiRequestActions> get $serializer => CreateBizUnitToOrgUnitApiRequestCreateBizUnitToOrgUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

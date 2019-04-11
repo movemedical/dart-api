@@ -190,14 +190,14 @@ class _$CustomDocActions extends CustomDocActions {
 
   _$CustomDocActions._(this.$options)
       : $replace = $options.action<CustomDoc>('\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orderReasonDocId = $options.actionField<String>(
+        orderReasonDocId = $options.field<String>(
             'orderReasonDocId',
             (a) => a?.orderReasonDocId,
             (s) => s?.orderReasonDocId,
             (p, b) => p?.orderReasonDocId = b),
-        validFor = $options.actionField<OrderReasonDocValidFor>('validFor',
+        validFor = $options.field<OrderReasonDocValidFor>('validFor',
             (a) => a?.validFor, (s) => s?.validFor, (p, b) => p?.validFor = b),
         super._();
 
@@ -232,9 +232,6 @@ class _$CustomDocActions extends CustomDocActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomDocCustomDocActions> get $serializer => CustomDocCustomDocActions.serializer;
 
   FullType _$fullType;
   @override

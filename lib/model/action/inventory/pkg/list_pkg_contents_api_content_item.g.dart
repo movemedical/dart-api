@@ -395,12 +395,12 @@ class _$ListPkgContentsApiContentItemActions
   _$ListPkgContentsApiContentItemActions._(this.$options)
       : $replace = $options.action<ListPkgContentsApiContentItem>(
             '\$replace', (a) => a?.$replace),
-        stockSummaryKey = $options.actionField<String>(
+        stockSummaryKey = $options.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
             (p, b) => p?.stockSummaryKey = b),
-        stockIds = $options.actionField<BuiltList<String>>('stockIds',
+        stockIds = $options.field<BuiltList<String>>('stockIds',
             (a) => a?.stockIds, (s) => s?.stockIds, (p, b) => p?.stockIds = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
@@ -423,12 +423,9 @@ class _$ListPkgContentsApiContentItemActions
             (s) => s?.expirationInfo,
             (b) => b?.expirationInfo,
             (parent, builder) => parent?.expirationInfo = builder)),
-        qtyShipped = $options.actionField<int>(
-            'qtyShipped',
-            (a) => a?.qtyShipped,
-            (s) => s?.qtyShipped,
-            (p, b) => p?.qtyShipped = b),
-        qtyInPkg = $options.actionField<int>('qtyInPkg', (a) => a?.qtyInPkg,
+        qtyShipped = $options.field<int>('qtyShipped', (a) => a?.qtyShipped,
+            (s) => s?.qtyShipped, (p, b) => p?.qtyShipped = b),
+        qtyInPkg = $options.field<int>('qtyInPkg', (a) => a?.qtyInPkg,
             (s) => s?.qtyInPkg, (p, b) => p?.qtyInPkg = b),
         kitItem = ItemActions(() =>
             $options.stateful<Item, ItemBuilder, ItemActions>(
@@ -501,9 +498,6 @@ class _$ListPkgContentsApiContentItemActions
     kitItem.$middleware(middleware);
     kitSerial.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPkgContentsApiContentItemListPkgContentsApiContentItemActions> get $serializer => ListPkgContentsApiContentItemListPkgContentsApiContentItemActions.serializer;
 
   FullType _$fullType;
   @override

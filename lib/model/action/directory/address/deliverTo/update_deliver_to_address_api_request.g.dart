@@ -191,12 +191,12 @@ class _$UpdateDeliverToAddressApiRequestActions
   _$UpdateDeliverToAddressApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateDeliverToAddressApiRequest>(
             '\$replace', (a) => a?.$replace),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
             (p, b) => p?.deliverToAddressId = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -232,9 +232,6 @@ class _$UpdateDeliverToAddressApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateDeliverToAddressApiRequestUpdateDeliverToAddressApiRequestActions> get $serializer => UpdateDeliverToAddressApiRequestUpdateDeliverToAddressApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

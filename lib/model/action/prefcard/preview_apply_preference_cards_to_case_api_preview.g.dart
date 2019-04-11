@@ -273,24 +273,21 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
   _$PreviewApplyPreferenceCardsToCaseApiPreviewActions._(this.$options)
       : $replace = $options.action<PreviewApplyPreferenceCardsToCaseApiPreview>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        itemDescription = $options.actionField<String>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        itemDescription = $options.field<String>(
             'itemDescription',
             (a) => a?.itemDescription,
             (s) => s?.itemDescription,
             (p, b) => p?.itemDescription = b),
-        quantityToIncrement = $options.actionField<int>(
+        quantityToIncrement = $options.field<int>(
             'quantityToIncrement',
             (a) => a?.quantityToIncrement,
             (s) => s?.quantityToIncrement,
             (p, b) => p?.quantityToIncrement = b),
-        quantityDeduplicated = $options.actionField<int>(
+        quantityDeduplicated = $options.field<int>(
             'quantityDeduplicated',
             (a) => a?.quantityDeduplicated,
             (s) => s?.quantityDeduplicated,
@@ -335,9 +332,6 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PreviewApplyPreferenceCardsToCaseApiPreviewPreviewApplyPreferenceCardsToCaseApiPreviewActions> get $serializer => PreviewApplyPreferenceCardsToCaseApiPreviewPreviewApplyPreferenceCardsToCaseApiPreviewActions.serializer;
 
   FullType _$fullType;
   @override

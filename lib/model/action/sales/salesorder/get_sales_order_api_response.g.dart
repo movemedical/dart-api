@@ -322,23 +322,21 @@ class _$GetSalesOrderApiResponseActions
                 (s) => s?.displayRules,
                 (b) => b?.displayRules,
                 (parent, builder) => parent?.displayRules = builder)),
-        orderCustomFieldValues =
-            $options.actionField<BuiltList<CustomFieldValue>>(
-                'orderCustomFieldValues',
-                (a) => a?.orderCustomFieldValues,
-                (s) => s?.orderCustomFieldValues,
-                (p, b) => p?.orderCustomFieldValues = b),
-        customDocs = $options.actionField<BuiltList<CustomDoc>>(
+        orderCustomFieldValues = $options.field<BuiltList<CustomFieldValue>>(
+            'orderCustomFieldValues',
+            (a) => a?.orderCustomFieldValues,
+            (s) => s?.orderCustomFieldValues,
+            (p, b) => p?.orderCustomFieldValues = b),
+        customDocs = $options.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
             (p, b) => p?.customDocs = b),
-        attributes =
-            $options.actionField<BuiltList<GetSalesOrderApiOrderAttribute>>(
-                'attributes',
-                (a) => a?.attributes,
-                (s) => s?.attributes,
-                (p, b) => p?.attributes = b),
+        attributes = $options.field<BuiltList<GetSalesOrderApiOrderAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
         super._();
 
   factory _$GetSalesOrderApiResponseActions(
@@ -385,9 +383,6 @@ class _$GetSalesOrderApiResponseActions
     orderDetail.$middleware(middleware);
     displayRules.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSalesOrderApiResponseGetSalesOrderApiResponseActions> get $serializer => GetSalesOrderApiResponseGetSalesOrderApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

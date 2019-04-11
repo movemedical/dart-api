@@ -603,62 +603,59 @@ class _$CreateStockApiRequestActions extends CreateStockApiRequestActions {
   _$CreateStockApiRequestActions._(this.$options)
       : $replace = $options.action<CreateStockApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        generateSerials = $options.actionField<bool>(
+        generateSerials = $options.field<bool>(
             'generateSerials',
             (a) => a?.generateSerials,
             (s) => s?.generateSerials,
             (p, b) => p?.generateSerials = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        homeLocationType = $options.actionField<LocationType>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        homeLocationType = $options.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.actionField<String>(
+        homeLocationId = $options.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        containerType = $options.actionField<StockContainerType>(
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        found = $options.actionField<bool>(
+        found = $options.field<bool>(
             'found', (a) => a?.found, (s) => s?.found, (p, b) => p?.found = b),
         adjustmentDetails = AdjustmentDetailsActions(() => $options.stateful<
                 AdjustmentDetails,
@@ -669,12 +666,12 @@ class _$CreateStockApiRequestActions extends CreateStockApiRequestActions {
             (s) => s?.adjustmentDetails,
             (b) => b?.adjustmentDetails,
             (parent, builder) => parent?.adjustmentDetails = builder)),
-        responsiblePartyType = $options.actionField<ResponsiblePartyType>(
+        responsiblePartyType = $options.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.actionField<String>(
+        responsiblePartyId = $options.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
@@ -749,9 +746,6 @@ class _$CreateStockApiRequestActions extends CreateStockApiRequestActions {
     super.$middleware(middleware);
     adjustmentDetails.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateStockApiRequestCreateStockApiRequestActions> get $serializer => CreateStockApiRequestCreateStockApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

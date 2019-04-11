@@ -189,8 +189,8 @@ class _$MoveStockWithinLocationApiRequestActions
   _$MoveStockWithinLocationApiRequestActions._(this.$options)
       : $replace = $options.action<MoveStockWithinLocationApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockMoves = $options
-            .actionField<BuiltList<MoveStockWithinLocationApiStockMove>>(
+        stockMoves =
+            $options.field<BuiltList<MoveStockWithinLocationApiStockMove>>(
                 'stockMoves',
                 (a) => a?.stockMoves,
                 (s) => s?.stockMoves,
@@ -227,9 +227,6 @@ class _$MoveStockWithinLocationApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockWithinLocationApiRequestMoveStockWithinLocationApiRequestActions> get $serializer => MoveStockWithinLocationApiRequestMoveStockWithinLocationApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

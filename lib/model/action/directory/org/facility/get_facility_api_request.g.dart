@@ -156,7 +156,7 @@ class _$GetFacilityApiRequestActions extends GetFacilityApiRequestActions {
   _$GetFacilityApiRequestActions._(this.$options)
       : $replace = $options.action<GetFacilityApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$GetFacilityApiRequestActions extends GetFacilityApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetFacilityApiRequestGetFacilityApiRequestActions> get $serializer => GetFacilityApiRequestGetFacilityApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -237,9 +237,6 @@ class _$GetTeamOrgUnitLinkApiResponseActions
     detailedOrgUnitLink.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetTeamOrgUnitLinkApiResponseGetTeamOrgUnitLinkApiResponseActions> get $serializer => GetTeamOrgUnitLinkApiResponseGetTeamOrgUnitLinkApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

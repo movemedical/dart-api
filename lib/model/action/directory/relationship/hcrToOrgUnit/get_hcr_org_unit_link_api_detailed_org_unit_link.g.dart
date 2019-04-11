@@ -508,71 +508,52 @@ class _$GetHcrOrgUnitLinkApiDetailedOrgUnitLinkActions
   _$GetHcrOrgUnitLinkApiDetailedOrgUnitLinkActions._(this.$options)
       : $replace = $options.action<GetHcrOrgUnitLinkApiDetailedOrgUnitLink>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        orgUnitName = $options.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        ouAccessType = $options.actionField<OuAccessType>(
+        ouAccessType = $options.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        createCase = $options.actionField<bool>(
-            'createCase',
-            (a) => a?.createCase,
-            (s) => s?.createCase,
-            (p, b) => p?.createCase = b),
-        editCase = $options.actionField<bool>('editCase', (a) => a?.editCase,
+        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+            (s) => s?.createCase, (p, b) => p?.createCase = b),
+        editCase = $options.field<bool>('editCase', (a) => a?.editCase,
             (s) => s?.editCase, (p, b) => p?.editCase = b),
-        processOrders = $options.actionField<bool>(
+        processOrders = $options.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.actionField<bool>(
+        manageCatalog = $options.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        manageUsers = $options.actionField<bool>(
-            'manageUsers',
-            (a) => a?.manageUsers,
-            (s) => s?.manageUsers,
-            (p, b) => p?.manageUsers = b),
-        createAudit = $options.actionField<bool>(
-            'createAudit',
-            (a) => a?.createAudit,
-            (s) => s?.createAudit,
-            (p, b) => p?.createAudit = b),
-        performAudit = $options.actionField<bool>(
+        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+            (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
+        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+            (s) => s?.createAudit, (p, b) => p?.createAudit = b),
+        performAudit = $options.field<bool>(
             'performAudit',
             (a) => a?.performAudit,
             (s) => s?.performAudit,
             (p, b) => p?.performAudit = b),
-        manageAudit = $options.actionField<bool>(
-            'manageAudit',
-            (a) => a?.manageAudit,
-            (s) => s?.manageAudit,
-            (p, b) => p?.manageAudit = b),
-        requestLoan = $options.actionField<bool>(
-            'requestLoan',
-            (a) => a?.requestLoan,
-            (s) => s?.requestLoan,
-            (p, b) => p?.requestLoan = b),
-        inventoryTypeLinks =
-            $options.actionField<BuiltList<OuLinkToInventoryType>>(
-                'inventoryTypeLinks',
-                (a) => a?.inventoryTypeLinks,
-                (s) => s?.inventoryTypeLinks,
-                (p, b) => p?.inventoryTypeLinks = b),
+        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+            (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
+        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+            (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
+        inventoryTypeLinks = $options.field<BuiltList<OuLinkToInventoryType>>(
+            'inventoryTypeLinks',
+            (a) => a?.inventoryTypeLinks,
+            (s) => s?.inventoryTypeLinks,
+            (p, b) => p?.inventoryTypeLinks = b),
         super._();
 
   factory _$GetHcrOrgUnitLinkApiDetailedOrgUnitLinkActions(
@@ -631,9 +612,6 @@ class _$GetHcrOrgUnitLinkApiDetailedOrgUnitLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetHcrOrgUnitLinkApiDetailedOrgUnitLinkGetHcrOrgUnitLinkApiDetailedOrgUnitLinkActions> get $serializer => GetHcrOrgUnitLinkApiDetailedOrgUnitLinkGetHcrOrgUnitLinkApiDetailedOrgUnitLinkActions.serializer;
 
   FullType _$fullType;
   @override

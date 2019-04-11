@@ -323,37 +323,37 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
   _$ListBizUnitProcedureLinksApiProcedureLinkActions._(this.$options)
       : $replace = $options.action<ListBizUnitProcedureLinksApiProcedureLink>(
             '\$replace', (a) => a?.$replace),
-        procedureToBizUnitId = $options.actionField<String>(
+        procedureToBizUnitId = $options.field<String>(
             'procedureToBizUnitId',
             (a) => a?.procedureToBizUnitId,
             (s) => s?.procedureToBizUnitId,
             (p, b) => p?.procedureToBizUnitId = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.actionField<String>(
+        procedureName = $options.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        procedureIcdCode = $options.actionField<String>(
+        procedureIcdCode = $options.field<String>(
             'procedureIcdCode',
             (a) => a?.procedureIcdCode,
             (s) => s?.procedureIcdCode,
             (p, b) => p?.procedureIcdCode = b),
-        procedureDescription = $options.actionField<String>(
+        procedureDescription = $options.field<String>(
             'procedureDescription',
             (a) => a?.procedureDescription,
             (s) => s?.procedureDescription,
             (p, b) => p?.procedureDescription = b),
-        procedureBodySideRequired = $options.actionField<bool>(
+        procedureBodySideRequired = $options.field<bool>(
             'procedureBodySideRequired',
             (a) => a?.procedureBodySideRequired,
             (s) => s?.procedureBodySideRequired,
             (p, b) => p?.procedureBodySideRequired = b),
-        procedureActive = $options.actionField<bool>(
+        procedureActive = $options.field<bool>(
             'procedureActive',
             (a) => a?.procedureActive,
             (s) => s?.procedureActive,
@@ -402,9 +402,6 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListBizUnitProcedureLinksApiProcedureLinkListBizUnitProcedureLinksApiProcedureLinkActions> get $serializer => ListBizUnitProcedureLinksApiProcedureLinkListBizUnitProcedureLinksApiProcedureLinkActions.serializer;
 
   FullType _$fullType;
   @override

@@ -107,9 +107,6 @@ class _$UpdateCaseStatusToPostOpApi extends UpdateCaseStatusToPostOpApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateCaseStatusToPostOpApi> get $serializer => CommandStateUpdateCaseStatusToPostOpApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

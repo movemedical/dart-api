@@ -252,21 +252,21 @@ class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
   _$AdjustmentDetailsActions._(this.$options)
       : $replace =
             $options.action<AdjustmentDetails>('\$replace', (a) => a?.$replace),
-        reason = $options.actionField<AdjustmentReason>('reason',
-            (a) => a?.reason, (s) => s?.reason, (p, b) => p?.reason = b),
-        status = $options.actionField<AdjustmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        erpReferenceNumber = $options.actionField<String>(
+        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+            (s) => s?.reason, (p, b) => p?.reason = b),
+        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
+        erpReferenceNumber = $options.field<String>(
             'erpReferenceNumber',
             (a) => a?.erpReferenceNumber,
             (s) => s?.erpReferenceNumber,
             (p, b) => p?.erpReferenceNumber = b),
-        referenceType = $options.actionField<AdjustmentReferenceType>(
+        referenceType = $options.field<AdjustmentReferenceType>(
             'referenceType',
             (a) => a?.referenceType,
             (s) => s?.referenceType,
             (p, b) => p?.referenceType = b),
-        referenceId = $options.actionField<String>(
+        referenceId = $options.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
@@ -308,9 +308,6 @@ class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AdjustmentDetailsAdjustmentDetailsActions> get $serializer => AdjustmentDetailsAdjustmentDetailsActions.serializer;
 
   FullType _$fullType;
   @override

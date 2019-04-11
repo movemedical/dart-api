@@ -184,12 +184,12 @@ class _$CloseAuditItemApiRequestActions
   _$CloseAuditItemApiRequestActions._(this.$options)
       : $replace = $options.action<CloseAuditItemApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditItemId = $options.actionField<String>(
+        auditItemId = $options.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
             (p, b) => p?.auditItemId = b),
-        note = $options.actionField<String>(
+        note = $options.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
         super._();
 
@@ -224,9 +224,6 @@ class _$CloseAuditItemApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CloseAuditItemApiRequestCloseAuditItemApiRequestActions> get $serializer => CloseAuditItemApiRequestCloseAuditItemApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

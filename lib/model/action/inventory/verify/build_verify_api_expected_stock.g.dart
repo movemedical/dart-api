@@ -354,7 +354,7 @@ class _$BuildVerifyApiExpectedStockActions
   _$BuildVerifyApiExpectedStockActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiExpectedStock>(
             '\$replace', (a) => a?.$replace),
-        expectationId = $options.actionField<String>(
+        expectationId = $options.field<String>(
             'expectationId',
             (a) => a?.expectationId,
             (s) => s?.expectationId,
@@ -366,7 +366,7 @@ class _$BuildVerifyApiExpectedStockActions
                 (s) => s?.stockData,
                 (b) => b?.stockData,
                 (parent, builder) => parent?.stockData = builder)),
-        fillsKitStandard = $options.actionField<bool>(
+        fillsKitStandard = $options.field<bool>(
             'fillsKitStandard',
             (a) => a?.fillsKitStandard,
             (s) => s?.fillsKitStandard,
@@ -380,7 +380,7 @@ class _$BuildVerifyApiExpectedStockActions
             (s) => s?.toContainer,
             (b) => b?.toContainer,
             (parent, builder) => parent?.toContainer = builder)),
-        enteredLineMatch = $options.actionField<String>(
+        enteredLineMatch = $options.field<String>(
             'enteredLineMatch',
             (a) => a?.enteredLineMatch,
             (s) => s?.enteredLineMatch,
@@ -395,8 +395,8 @@ class _$BuildVerifyApiExpectedStockActions
                 (s) => s?.selectedOption,
                 (b) => b?.selectedOption,
                 (parent, builder) => parent?.selectedOption = builder)),
-        options = $options
-            .actionField<BuiltList<BuildVerifyApiMissingExpectedStockOption>>(
+        options =
+            $options.field<BuiltList<BuildVerifyApiMissingExpectedStockOption>>(
                 'options',
                 (a) => a?.options,
                 (s) => s?.options,
@@ -452,9 +452,6 @@ class _$BuildVerifyApiExpectedStockActions
     toContainer.$middleware(middleware);
     selectedOption.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiExpectedStockBuildVerifyApiExpectedStockActions> get $serializer => BuildVerifyApiExpectedStockBuildVerifyApiExpectedStockActions.serializer;
 
   FullType _$fullType;
   @override

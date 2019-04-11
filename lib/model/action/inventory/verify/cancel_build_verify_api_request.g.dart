@@ -186,7 +186,7 @@ class _$CancelBuildVerifyApiRequestActions
   _$CancelBuildVerifyApiRequestActions._(this.$options)
       : $replace = $options.action<CancelBuildVerifyApiRequest>(
             '\$replace', (a) => a?.$replace),
-        expectationIds = $options.actionField<BuiltList<String>>(
+        expectationIds = $options.field<BuiltList<String>>(
             'expectationIds',
             (a) => a?.expectationIds,
             (s) => s?.expectationIds,
@@ -222,9 +222,6 @@ class _$CancelBuildVerifyApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CancelBuildVerifyApiRequestCancelBuildVerifyApiRequestActions> get $serializer => CancelBuildVerifyApiRequestCancelBuildVerifyApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

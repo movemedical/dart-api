@@ -420,53 +420,50 @@ class _$DBComponentActions extends DBComponentActions {
   _$DBComponentActions._(this.$options)
       : $replace =
             $options.action<DBComponent>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        parentItemId = $options.actionField<String>(
+        parentItemId = $options.field<String>(
             'parentItemId',
             (a) => a?.parentItemId,
             (s) => s?.parentItemId,
             (p, b) => p?.parentItemId = b),
-        parentItemVersionId = $options.actionField<String>(
+        parentItemVersionId = $options.field<String>(
             'parentItemVersionId',
             (a) => a?.parentItemVersionId,
             (s) => s?.parentItemVersionId,
             (p, b) => p?.parentItemVersionId = b),
-        componentItemId = $options.actionField<String>(
+        componentItemId = $options.field<String>(
             'componentItemId',
             (a) => a?.componentItemId,
             (s) => s?.componentItemId,
             (p, b) => p?.componentItemId = b),
-        anyVersion = $options.actionField<bool>(
-            'anyVersion',
-            (a) => a?.anyVersion,
-            (s) => s?.anyVersion,
-            (p, b) => p?.anyVersion = b),
-        kitContainerDefId = $options.actionField<String>(
+        anyVersion = $options.field<bool>('anyVersion', (a) => a?.anyVersion,
+            (s) => s?.anyVersion, (p, b) => p?.anyVersion = b),
+        kitContainerDefId = $options.field<String>(
             'kitContainerDefId',
             (a) => a?.kitContainerDefId,
             (s) => s?.kitContainerDefId,
             (p, b) => p?.kitContainerDefId = b),
-        trayLayerDefId = $options.actionField<String>(
+        trayLayerDefId = $options.field<String>(
             'trayLayerDefId',
             (a) => a?.trayLayerDefId,
             (s) => s?.trayLayerDefId,
             (p, b) => p?.trayLayerDefId = b),
-        forceContainerOrLayer = $options.actionField<bool>(
+        forceContainerOrLayer = $options.field<bool>(
             'forceContainerOrLayer',
             (a) => a?.forceContainerOrLayer,
             (s) => s?.forceContainerOrLayer,
             (p, b) => p?.forceContainerOrLayer = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        v = $options.actionField<int>(
+        v = $options.field<int>(
             'v', (a) => a?.v, (s) => s?.v, (p, b) => p?.v = b),
-        minimumQuantity = $options.actionField<int>(
+        minimumQuantity = $options.field<int>(
             'minimumQuantity',
             (a) => a?.minimumQuantity,
             (s) => s?.minimumQuantity,
             (p, b) => p?.minimumQuantity = b),
-        placementInSequence = $options.actionField<int>(
+        placementInSequence = $options.field<int>(
             'placementInSequence',
             (a) => a?.placementInSequence,
             (s) => s?.placementInSequence,
@@ -522,9 +519,6 @@ class _$DBComponentActions extends DBComponentActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DBComponentDBComponentActions> get $serializer => DBComponentDBComponentActions.serializer;
 
   FullType _$fullType;
   @override

@@ -212,12 +212,12 @@ class _$MovePresenceEventActions extends MovePresenceEventActions {
   _$MovePresenceEventActions._(this.$options)
       : $replace =
             $options.action<MovePresenceEvent>('\$replace', (a) => a?.$replace),
-        eventType = $options.actionField<PresenceEventType>(
+        eventType = $options.field<PresenceEventType>(
             'eventType',
             (a) => a?.eventType,
             (s) => s?.eventType,
             (p, b) => p?.eventType = b),
-        objectId = $options.actionField<String>('objectId', (a) => a?.objectId,
+        objectId = $options.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
         presence = MovePresenceActions(() => $options
             .stateful<MovePresence, MovePresenceBuilder, MovePresenceActions>(
@@ -265,9 +265,6 @@ class _$MovePresenceEventActions extends MovePresenceEventActions {
     super.$middleware(middleware);
     presence.$middleware(middleware);
   }
-
-// @override
-// Serializer<MovePresenceEventMovePresenceEventActions> get $serializer => MovePresenceEventMovePresenceEventActions.serializer;
 
   FullType _$fullType;
   @override

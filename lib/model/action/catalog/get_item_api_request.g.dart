@@ -150,7 +150,7 @@ class _$GetItemApiRequestActions extends GetItemApiRequestActions {
   _$GetItemApiRequestActions._(this.$options)
       : $replace =
             $options.action<GetItemApiRequest>('\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         super._();
 
@@ -181,9 +181,6 @@ class _$GetItemApiRequestActions extends GetItemApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemApiRequestGetItemApiRequestActions> get $serializer => GetItemApiRequestGetItemApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

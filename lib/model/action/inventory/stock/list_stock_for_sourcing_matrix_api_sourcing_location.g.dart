@@ -442,12 +442,12 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
       : $replace =
             $options.action<ListStockForSourcingMatrixApiSourcingLocation>(
                 '\$replace', (a) => a?.$replace),
-        locationKey = $options.actionField<String>(
+        locationKey = $options.field<String>(
             'locationKey',
             (a) => a?.locationKey,
             (s) => s?.locationKey,
             (p, b) => p?.locationKey = b),
-        responsibleParty = $options.actionField<String>(
+        responsibleParty = $options.field<String>(
             'responsibleParty',
             (a) => a?.responsibleParty,
             (s) => s?.responsibleParty,
@@ -466,34 +466,34 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
                 (s) => s?.homeLocation,
                 (b) => b?.homeLocation,
                 (parent, builder) => parent?.homeLocation = builder)),
-        demandLoanId = $options.actionField<String>(
+        demandLoanId = $options.field<String>(
             'demandLoanId',
             (a) => a?.demandLoanId,
             (s) => s?.demandLoanId,
             (p, b) => p?.demandLoanId = b),
-        consignmentLoanId = $options.actionField<String>(
+        consignmentLoanId = $options.field<String>(
             'consignmentLoanId',
             (a) => a?.consignmentLoanId,
             (s) => s?.consignmentLoanId,
             (p, b) => p?.consignmentLoanId = b),
-        loanDisplay = $options.actionField<String>(
+        loanDisplay = $options.field<String>(
             'loanDisplay',
             (a) => a?.loanDisplay,
             (s) => s?.loanDisplay,
             (p, b) => p?.loanDisplay = b),
-        lastLoanSurgeryDate = $options.actionField<DateTime>(
+        lastLoanSurgeryDate = $options.field<DateTime>(
             'lastLoanSurgeryDate',
             (a) => a?.lastLoanSurgeryDate,
             (s) => s?.lastLoanSurgeryDate,
             (p, b) => p?.lastLoanSurgeryDate = b),
-        inTransit = $options.actionField<bool>('inTransit', (a) => a?.inTransit,
+        inTransit = $options.field<bool>('inTransit', (a) => a?.inTransit,
             (s) => s?.inTransit, (p, b) => p?.inTransit = b),
-        percentageMatch = $options.actionField<double>(
+        percentageMatch = $options.field<double>(
             'percentageMatch',
             (a) => a?.percentageMatch,
             (s) => s?.percentageMatch,
             (p, b) => p?.percentageMatch = b),
-        virtualStock = $options.actionField<bool>(
+        virtualStock = $options.field<bool>(
             'virtualStock',
             (a) => a?.virtualStock,
             (s) => s?.virtualStock,
@@ -558,9 +558,6 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
     location.$middleware(middleware);
     homeLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForSourcingMatrixApiSourcingLocationListStockForSourcingMatrixApiSourcingLocationActions> get $serializer => ListStockForSourcingMatrixApiSourcingLocationListStockForSourcingMatrixApiSourcingLocationActions.serializer;
 
   FullType _$fullType;
   @override

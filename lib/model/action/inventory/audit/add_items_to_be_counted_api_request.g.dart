@@ -205,9 +205,9 @@ class _$AddItemsToBeCountedApiRequestActions
   _$AddItemsToBeCountedApiRequestActions._(this.$options)
       : $replace = $options.action<AddItemsToBeCountedApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
         super._();
 
@@ -242,9 +242,6 @@ class _$AddItemsToBeCountedApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddItemsToBeCountedApiRequestAddItemsToBeCountedApiRequestActions> get $serializer => AddItemsToBeCountedApiRequestAddItemsToBeCountedApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

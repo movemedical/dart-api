@@ -402,20 +402,19 @@ class _$BuildUsageRestockPlanApiRestockItemActions
   _$BuildUsageRestockPlanApiRestockItemActions._(this.$options)
       : $replace = $options.action<BuildUsageRestockPlanApiRestockItem>(
             '\$replace', (a) => a?.$replace),
-        guid = $options.actionField<String>(
+        guid = $options.field<String>(
             'guid', (a) => a?.guid, (s) => s?.guid, (p, b) => p?.guid = b),
-        shouldRestock = $options.actionField<bool>(
+        shouldRestock = $options.field<bool>(
             'shouldRestock',
             (a) => a?.shouldRestock,
             (s) => s?.shouldRestock,
             (p, b) => p?.shouldRestock = b),
-        restockByType =
-            $options.actionField<BuildUsageRestockPlanApiRestockByType>(
-                'restockByType',
-                (a) => a?.restockByType,
-                (s) => s?.restockByType,
-                (p, b) => p?.restockByType = b),
-        deliverByDate = $options.actionField<DateTime>(
+        restockByType = $options.field<BuildUsageRestockPlanApiRestockByType>(
+            'restockByType',
+            (a) => a?.restockByType,
+            (s) => s?.restockByType,
+            (p, b) => p?.restockByType = b),
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
@@ -436,12 +435,12 @@ class _$BuildUsageRestockPlanApiRestockItemActions
                 (s) => s?.replenishLocation,
                 (b) => b?.replenishLocation,
                 (parent, builder) => parent?.replenishLocation = builder)),
-        replenishContainerType = $options.actionField<StockContainerType>(
+        replenishContainerType = $options.field<StockContainerType>(
             'replenishContainerType',
             (a) => a?.replenishContainerType,
             (s) => s?.replenishContainerType,
             (p, b) => p?.replenishContainerType = b),
-        replenishContainerId = $options.actionField<String>(
+        replenishContainerId = $options.field<String>(
             'replenishContainerId',
             (a) => a?.replenishContainerId,
             (s) => s?.replenishContainerId,
@@ -512,9 +511,6 @@ class _$BuildUsageRestockPlanApiRestockItemActions
     replenishLocation.$middleware(middleware);
     displayRule.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildUsageRestockPlanApiRestockItemBuildUsageRestockPlanApiRestockItemActions> get $serializer => BuildUsageRestockPlanApiRestockItemBuildUsageRestockPlanApiRestockItemActions.serializer;
 
   FullType _$fullType;
   @override

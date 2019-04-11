@@ -391,46 +391,40 @@ class _$GetIntegrationIssueApiIssueActions
   _$GetIntegrationIssueApiIssueActions._(this.$options)
       : $replace = $options.action<GetIntegrationIssueApiIssue>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        issueNumber = $options.actionField<int>(
-            'issueNumber',
-            (a) => a?.issueNumber,
-            (s) => s?.issueNumber,
-            (p, b) => p?.issueNumber = b),
-        logReferenceId = $options.actionField<String>(
+        issueNumber = $options.field<int>('issueNumber', (a) => a?.issueNumber,
+            (s) => s?.issueNumber, (p, b) => p?.issueNumber = b),
+        logReferenceId = $options.field<String>(
             'logReferenceId',
             (a) => a?.logReferenceId,
             (s) => s?.logReferenceId,
             (p, b) => p?.logReferenceId = b),
-        status = $options.actionField<IntegrationIssueStatus>('status',
+        status = $options.field<IntegrationIssueStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        issueType = $options.actionField<IntegrationType>(
+        issueType = $options.field<IntegrationType>(
             'issueType',
             (a) => a?.issueType,
             (s) => s?.issueType,
             (p, b) => p?.issueType = b),
-        issueGroup = $options.actionField<String>(
-            'issueGroup',
-            (a) => a?.issueGroup,
-            (s) => s?.issueGroup,
-            (p, b) => p?.issueGroup = b),
-        createdDate = $options.actionField<DateTime>(
+        issueGroup = $options.field<String>('issueGroup', (a) => a?.issueGroup,
+            (s) => s?.issueGroup, (p, b) => p?.issueGroup = b),
+        createdDate = $options.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        assignedDate = $options.actionField<DateTime>(
+        assignedDate = $options.field<DateTime>(
             'assignedDate',
             (a) => a?.assignedDate,
             (s) => s?.assignedDate,
             (p, b) => p?.assignedDate = b),
-        resolvedDate = $options.actionField<DateTime>(
+        resolvedDate = $options.field<DateTime>(
             'resolvedDate',
             (a) => a?.resolvedDate,
             (s) => s?.resolvedDate,
             (p, b) => p?.resolvedDate = b),
-        regenerateFileId = $options.actionField<String>(
+        regenerateFileId = $options.field<String>(
             'regenerateFileId',
             (a) => a?.regenerateFileId,
             (s) => s?.regenerateFileId,
@@ -484,9 +478,6 @@ class _$GetIntegrationIssueApiIssueActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetIntegrationIssueApiIssueGetIntegrationIssueApiIssueActions> get $serializer => GetIntegrationIssueApiIssueGetIntegrationIssueApiIssueActions.serializer;
 
   FullType _$fullType;
   @override

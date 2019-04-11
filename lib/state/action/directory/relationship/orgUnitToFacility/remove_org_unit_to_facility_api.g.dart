@@ -107,9 +107,6 @@ class _$RemoveOrgUnitToFacilityApi extends RemoveOrgUnitToFacilityApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveOrgUnitToFacilityApi> get $serializer => CommandStateRemoveOrgUnitToFacilityApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

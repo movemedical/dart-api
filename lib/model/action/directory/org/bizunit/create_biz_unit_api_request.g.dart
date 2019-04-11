@@ -295,11 +295,11 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
   _$CreateBizUnitApiRequestActions._(this.$options)
       : $replace = $options.action<CreateBizUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        key = $options.actionField<String>(
+        key = $options.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -311,12 +311,12 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicListing = $options.actionField<bool>(
+        publicListing = $options.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -365,9 +365,6 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateBizUnitApiRequestCreateBizUnitApiRequestActions> get $serializer => CreateBizUnitApiRequestCreateBizUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

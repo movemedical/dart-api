@@ -181,12 +181,9 @@ class _$MoveOrgUnitApiRequestActions extends MoveOrgUnitApiRequestActions {
   _$MoveOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<MoveOrgUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        parentOrgUnitId = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        parentOrgUnitId = $options.field<String>(
             'parentOrgUnitId',
             (a) => a?.parentOrgUnitId,
             (s) => s?.parentOrgUnitId,
@@ -223,9 +220,6 @@ class _$MoveOrgUnitApiRequestActions extends MoveOrgUnitApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveOrgUnitApiRequestMoveOrgUnitApiRequestActions> get $serializer => MoveOrgUnitApiRequestMoveOrgUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

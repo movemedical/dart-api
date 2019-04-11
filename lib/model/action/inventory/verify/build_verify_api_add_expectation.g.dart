@@ -233,13 +233,13 @@ class _$BuildVerifyApiAddExpectationActions
   _$BuildVerifyApiAddExpectationActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiAddExpectation>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<BuildVerifyApiExpectationType>(
+        type = $options.field<BuildVerifyApiExpectationType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        autoScan = $options.actionField<bool>('autoScan', (a) => a?.autoScan,
+        autoScan = $options.field<bool>('autoScan', (a) => a?.autoScan,
             (s) => s?.autoScan, (p, b) => p?.autoScan = b),
-        verifyNow = $options.actionField<bool>('verifyNow', (a) => a?.verifyNow,
+        verifyNow = $options.field<bool>('verifyNow', (a) => a?.verifyNow,
             (s) => s?.verifyNow, (p, b) => p?.verifyNow = b),
         super._();
 
@@ -278,9 +278,6 @@ class _$BuildVerifyApiAddExpectationActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiAddExpectationBuildVerifyApiAddExpectationActions> get $serializer => BuildVerifyApiAddExpectationBuildVerifyApiAddExpectationActions.serializer;
 
   FullType _$fullType;
   @override

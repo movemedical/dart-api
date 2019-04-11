@@ -577,52 +577,52 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
   _$ListItemsApiRequestActions._(this.$options)
       : $replace = $options.action<ListItemsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.actionField<BuiltList<String>>(
+        itemCategoryIds = $options.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        procedureIds = $options.actionField<BuiltList<String>>(
+        procedureIds = $options.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        subProcedureIds = $options.actionField<BuiltList<String>>(
+        subProcedureIds = $options.field<BuiltList<String>>(
             'subProcedureIds',
             (a) => a?.subProcedureIds,
             (s) => s?.subProcedureIds,
             (p, b) => p?.subProcedureIds = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        moveItemTypes = $options.actionField<BuiltList<MoveItemType>>(
+        moveItemTypes = $options.field<BuiltList<MoveItemType>>(
             'moveItemTypes',
             (a) => a?.moveItemTypes,
             (s) => s?.moveItemTypes,
             (p, b) => p?.moveItemTypes = b),
-        moveItemClasses = $options.actionField<BuiltList<MoveItemClass>>(
+        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        canStock = $options.actionField<bool>('canStock', (a) => a?.canStock,
+        canStock = $options.field<bool>('canStock', (a) => a?.canStock,
             (s) => s?.canStock, (p, b) => p?.canStock = b),
-        canSell = $options.actionField<bool>('canSell', (a) => a?.canSell,
+        canSell = $options.field<bool>('canSell', (a) => a?.canSell,
             (s) => s?.canSell, (p, b) => p?.canSell = b),
-        includeListPrice = $options.actionField<bool>(
+        includeListPrice = $options.field<bool>(
             'includeListPrice',
             (a) => a?.includeListPrice,
             (s) => s?.includeListPrice,
@@ -711,9 +711,6 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemsApiRequestListItemsApiRequestActions> get $serializer => ListItemsApiRequestListItemsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

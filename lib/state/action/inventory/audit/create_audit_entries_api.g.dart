@@ -98,9 +98,6 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateAuditEntriesApi> get $serializer => CommandStateCreateAuditEntriesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

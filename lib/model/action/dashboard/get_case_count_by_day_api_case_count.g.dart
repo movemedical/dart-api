@@ -187,9 +187,9 @@ class _$GetCaseCountByDayApiCaseCountActions
   _$GetCaseCountByDayApiCaseCountActions._(this.$options)
       : $replace = $options.action<GetCaseCountByDayApiCaseCount>(
             '\$replace', (a) => a?.$replace),
-        date = $options.actionField<DateTime>(
+        date = $options.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        count = $options.actionField<int>(
+        count = $options.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -224,9 +224,6 @@ class _$GetCaseCountByDayApiCaseCountActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseCountByDayApiCaseCountGetCaseCountByDayApiCaseCountActions> get $serializer => GetCaseCountByDayApiCaseCountGetCaseCountByDayApiCaseCountActions.serializer;
 
   FullType _$fullType;
   @override

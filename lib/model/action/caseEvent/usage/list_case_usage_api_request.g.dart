@@ -181,9 +181,9 @@ class _$ListCaseUsageApiRequestActions extends ListCaseUsageApiRequestActions {
   _$ListCaseUsageApiRequestActions._(this.$options)
       : $replace = $options.action<ListCaseUsageApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -218,9 +218,6 @@ class _$ListCaseUsageApiRequestActions extends ListCaseUsageApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseUsageApiRequestListCaseUsageApiRequestActions> get $serializer => ListCaseUsageApiRequestListCaseUsageApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

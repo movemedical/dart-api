@@ -254,22 +254,22 @@ class _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions
       : $replace = $options
             .action<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>(
                 '\$replace', (a) => a?.$replace),
-        itemCategoryId = $options.actionField<String>(
+        itemCategoryId = $options.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemCategoryName = $options.actionField<String>(
+        itemCategoryName = $options.field<String>(
             'itemCategoryName',
             (a) => a?.itemCategoryName,
             (s) => s?.itemCategoryName,
             (p, b) => p?.itemCategoryName = b),
-        nextPath = $options
-            .actionField<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>(
+        nextPath =
+            $options.field<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>(
                 'nextPath',
                 (a) => a?.nextPath,
                 (s) => s?.nextPath,
-                (p, b) => p?.nextPath = b?.toBuilder()),
+                (p, b) => p?.nextPath = b),
         super._();
 
   factory _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions(
@@ -307,9 +307,6 @@ class _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesLinkedToItemApiLinkedCategoryPathListItemCategoriesLinkedToItemApiLinkedCategoryPathActions> get $serializer => ListItemCategoriesLinkedToItemApiLinkedCategoryPathListItemCategoriesLinkedToItemApiLinkedCategoryPathActions.serializer;
 
   FullType _$fullType;
   @override

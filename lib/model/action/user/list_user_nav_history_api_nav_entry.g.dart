@@ -264,21 +264,21 @@ class _$ListUserNavHistoryApiNavEntryActions
   _$ListUserNavHistoryApiNavEntryActions._(this.$options)
       : $replace = $options.action<ListUserNavHistoryApiNavEntry>(
             '\$replace', (a) => a?.$replace),
-        date = $options.actionField<DateTime>(
+        date = $options.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        deviceType = $options.actionField<DeviceType>(
+        deviceType = $options.field<DeviceType>(
             'deviceType',
             (a) => a?.deviceType,
             (s) => s?.deviceType,
             (p, b) => p?.deviceType = b),
-        place = $options.actionField<Place>(
+        place = $options.field<Place>(
             'place', (a) => a?.place, (s) => s?.place, (p, b) => p?.place = b),
-        referenceId = $options.actionField<String>(
+        referenceId = $options.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
             (p, b) => p?.referenceId = b),
-        referenceString = $options.actionField<String>(
+        referenceString = $options.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
@@ -322,9 +322,6 @@ class _$ListUserNavHistoryApiNavEntryActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUserNavHistoryApiNavEntryListUserNavHistoryApiNavEntryActions> get $serializer => ListUserNavHistoryApiNavEntryListUserNavHistoryApiNavEntryActions.serializer;
 
   FullType _$fullType;
   @override

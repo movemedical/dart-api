@@ -351,28 +351,26 @@ class _$GetStockOrderApiResponseActions
                 (s) => s?.displayRules,
                 (b) => b?.displayRules,
                 (parent, builder) => parent?.displayRules = builder)),
-        presences = $options.actionField<BuiltList<MovePresence>>(
+        presences = $options.field<BuiltList<MovePresence>>(
             'presences',
             (a) => a?.presences,
             (s) => s?.presences,
             (p, b) => p?.presences = b),
-        orderCustomFieldValues =
-            $options.actionField<BuiltList<CustomFieldValue>>(
-                'orderCustomFieldValues',
-                (a) => a?.orderCustomFieldValues,
-                (s) => s?.orderCustomFieldValues,
-                (p, b) => p?.orderCustomFieldValues = b),
-        customDocs = $options.actionField<BuiltList<CustomDoc>>(
+        orderCustomFieldValues = $options.field<BuiltList<CustomFieldValue>>(
+            'orderCustomFieldValues',
+            (a) => a?.orderCustomFieldValues,
+            (s) => s?.orderCustomFieldValues,
+            (p, b) => p?.orderCustomFieldValues = b),
+        customDocs = $options.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
             (p, b) => p?.customDocs = b),
-        attributes =
-            $options.actionField<BuiltList<GetStockOrderApiOrderAttribute>>(
-                'attributes',
-                (a) => a?.attributes,
-                (s) => s?.attributes,
-                (p, b) => p?.attributes = b),
+        attributes = $options.field<BuiltList<GetStockOrderApiOrderAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
         super._();
 
   factory _$GetStockOrderApiResponseActions(
@@ -421,9 +419,6 @@ class _$GetStockOrderApiResponseActions
     order.$middleware(middleware);
     displayRules.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockOrderApiResponseGetStockOrderApiResponseActions> get $serializer => GetStockOrderApiResponseGetStockOrderApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

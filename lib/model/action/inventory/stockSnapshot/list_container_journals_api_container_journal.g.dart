@@ -388,13 +388,13 @@ class _$ListContainerJournalsApiContainerJournalActions
   _$ListContainerJournalsApiContainerJournalActions._(this.$options)
       : $replace = $options.action<ListContainerJournalsApiContainerJournal>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        date = $options.actionField<DateTime>(
+        date = $options.field<DateTime>(
             'date', (a) => a?.date, (s) => s?.date, (p, b) => p?.date = b),
-        stockTransactionType = $options.actionField<StockTransactionType>(
+        stockTransactionType = $options.field<StockTransactionType>(
             'stockTransactionType',
             (a) => a?.stockTransactionType,
             (s) => s?.stockTransactionType,
@@ -413,17 +413,17 @@ class _$ListContainerJournalsApiContainerJournalActions
             (s) => s?.container,
             (b) => b?.container,
             (parent, builder) => parent?.container = builder)),
-        quantityChange = $options.actionField<int>(
+        quantityChange = $options.field<int>(
             'quantityChange',
             (a) => a?.quantityChange,
             (s) => s?.quantityChange,
             (p, b) => p?.quantityChange = b),
-        transactionReferenceType = $options.actionField<StockReferenceType>(
+        transactionReferenceType = $options.field<StockReferenceType>(
             'transactionReferenceType',
             (a) => a?.transactionReferenceType,
             (s) => s?.transactionReferenceType,
             (p, b) => p?.transactionReferenceType = b),
-        transactionReferenceId = $options.actionField<String>(
+        transactionReferenceId = $options.field<String>(
             'transactionReferenceId',
             (a) => a?.transactionReferenceId,
             (s) => s?.transactionReferenceId,
@@ -483,9 +483,6 @@ class _$ListContainerJournalsApiContainerJournalActions
     location.$middleware(middleware);
     container.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListContainerJournalsApiContainerJournalListContainerJournalsApiContainerJournalActions> get $serializer => ListContainerJournalsApiContainerJournalListContainerJournalsApiContainerJournalActions.serializer;
 
   FullType _$fullType;
   @override

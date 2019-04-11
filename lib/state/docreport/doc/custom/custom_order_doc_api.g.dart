@@ -111,9 +111,6 @@ class _$CustomOrderDocApi extends CustomOrderDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCustomOrderDocApi> get $serializer => CommandStateCustomOrderDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

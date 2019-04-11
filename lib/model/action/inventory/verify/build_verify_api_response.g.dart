@@ -379,23 +379,23 @@ class _$BuildVerifyApiResponseActions extends BuildVerifyApiResponseActions {
       : $replace = $options.action<BuildVerifyApiResponse>(
             '\$replace', (a) => a?.$replace),
         confirmedExpectations =
-            $options.actionField<BuiltList<BuildVerifyApiExpectation>>(
+            $options.field<BuiltList<BuildVerifyApiExpectation>>(
                 'confirmedExpectations',
                 (a) => a?.confirmedExpectations,
                 (s) => s?.confirmedExpectations,
                 (p, b) => p?.confirmedExpectations = b),
         potentialExpectations =
-            $options.actionField<BuiltList<BuildVerifyApiPotentialExpectation>>(
+            $options.field<BuiltList<BuildVerifyApiPotentialExpectation>>(
                 'potentialExpectations',
                 (a) => a?.potentialExpectations,
                 (s) => s?.potentialExpectations,
                 (p, b) => p?.potentialExpectations = b),
-        looseLines = $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
+        looseLines = $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
             'looseLines',
             (a) => a?.looseLines,
             (s) => s?.looseLines,
             (p, b) => p?.looseLines = b),
-        scanSequence = $options.actionField<int>(
+        scanSequence = $options.field<int>(
             'scanSequence',
             (a) => a?.scanSequence,
             (s) => s?.scanSequence,
@@ -410,17 +410,17 @@ class _$BuildVerifyApiResponseActions extends BuildVerifyApiResponseActions {
                 (s) => s?.supportingInfo,
                 (b) => b?.supportingInfo,
                 (parent, builder) => parent?.supportingInfo = builder)),
-        inProgressUserId = $options.actionField<String>(
+        inProgressUserId = $options.field<String>(
             'inProgressUserId',
             (a) => a?.inProgressUserId,
             (s) => s?.inProgressUserId,
             (p, b) => p?.inProgressUserId = b),
-        inProgressUserDisplay = $options.actionField<String>(
+        inProgressUserDisplay = $options.field<String>(
             'inProgressUserDisplay',
             (a) => a?.inProgressUserDisplay,
             (s) => s?.inProgressUserDisplay,
             (p, b) => p?.inProgressUserDisplay = b),
-        inProgressTimestamp = $options.actionField<DateTime>(
+        inProgressTimestamp = $options.field<DateTime>(
             'inProgressTimestamp',
             (a) => a?.inProgressTimestamp,
             (s) => s?.inProgressTimestamp,
@@ -476,9 +476,6 @@ class _$BuildVerifyApiResponseActions extends BuildVerifyApiResponseActions {
     super.$middleware(middleware);
     supportingInfo.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiResponseBuildVerifyApiResponseActions> get $serializer => BuildVerifyApiResponseBuildVerifyApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

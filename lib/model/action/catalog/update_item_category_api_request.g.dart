@@ -230,13 +230,13 @@ class _$UpdateItemCategoryApiRequestActions
   _$UpdateItemCategoryApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateItemCategoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.actionField<String>(
+        code = $options.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        delete = $options.actionField<bool>('delete', (a) => a?.delete,
+        delete = $options.field<bool>('delete', (a) => a?.delete,
             (s) => s?.delete, (p, b) => p?.delete = b),
         super._();
 
@@ -275,9 +275,6 @@ class _$UpdateItemCategoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateItemCategoryApiRequestUpdateItemCategoryApiRequestActions> get $serializer => UpdateItemCategoryApiRequestUpdateItemCategoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

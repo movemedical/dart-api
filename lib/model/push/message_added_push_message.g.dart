@@ -183,16 +183,13 @@ class _$MessageAddedPushMessageActions extends MessageAddedPushMessageActions {
   _$MessageAddedPushMessageActions._(this.$options)
       : $replace = $options.action<MessageAddedPushMessage>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
             (p, b) => p?.conversationId = b),
-        messageId = $options.actionField<String>(
-            'messageId',
-            (a) => a?.messageId,
-            (s) => s?.messageId,
-            (p, b) => p?.messageId = b),
+        messageId = $options.field<String>('messageId', (a) => a?.messageId,
+            (s) => s?.messageId, (p, b) => p?.messageId = b),
         super._();
 
   factory _$MessageAddedPushMessageActions(
@@ -226,9 +223,6 @@ class _$MessageAddedPushMessageActions extends MessageAddedPushMessageActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MessageAddedPushMessageMessageAddedPushMessageActions> get $serializer => MessageAddedPushMessageMessageAddedPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

@@ -324,9 +324,9 @@ class _$BarcodeScansToStockApiScanActions
   _$BarcodeScansToStockApiScanActions._(this.$options)
       : $replace = $options.action<BarcodeScansToStockApiScan>(
             '\$replace', (a) => a?.$replace),
-        loanIds = $options.actionField<BuiltList<String>>('loanIds',
+        loanIds = $options.field<BuiltList<String>>('loanIds',
             (a) => a?.loanIds, (s) => s?.loanIds, (p, b) => p?.loanIds = b),
-        containerIds = $options.actionField<BuiltList<String>>(
+        containerIds = $options.field<BuiltList<String>>(
             'containerIds',
             (a) => a?.containerIds,
             (s) => s?.containerIds,
@@ -338,7 +338,7 @@ class _$BarcodeScansToStockApiScanActions
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        inventoryTypeIds = $options.actionField<BuiltList<String>>(
+        inventoryTypeIds = $options.field<BuiltList<String>>(
             'inventoryTypeIds',
             (a) => a?.inventoryTypeIds,
             (s) => s?.inventoryTypeIds,
@@ -352,7 +352,7 @@ class _$BarcodeScansToStockApiScanActions
             (s) => s?.scan,
             (b) => b?.scan,
             (parent, builder) => parent?.scan = builder)),
-        capturedType = $options.actionField<ItemCaptureType>(
+        capturedType = $options.field<ItemCaptureType>(
             'capturedType',
             (a) => a?.capturedType,
             (s) => s?.capturedType,
@@ -405,9 +405,6 @@ class _$BarcodeScansToStockApiScanActions
     location.$middleware(middleware);
     scan.$middleware(middleware);
   }
-
-// @override
-// Serializer<BarcodeScansToStockApiScanBarcodeScansToStockApiScanActions> get $serializer => BarcodeScansToStockApiScanBarcodeScansToStockApiScanActions.serializer;
 
   FullType _$fullType;
   @override

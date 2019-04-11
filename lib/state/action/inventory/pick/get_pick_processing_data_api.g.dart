@@ -113,9 +113,6 @@ class _$GetPickProcessingDataApi extends GetPickProcessingDataApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetPickProcessingDataApi> get $serializer => CommandStateGetPickProcessingDataApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

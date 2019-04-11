@@ -270,24 +270,24 @@ class _$DecommissionKitApiKitContainerActions
   _$DecommissionKitApiKitContainerActions._(this.$options)
       : $replace = $options.action<DecommissionKitApiKitContainer>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        contentsToContainerType = $options.actionField<StockContainerType>(
+        contentsToContainerType = $options.field<StockContainerType>(
             'contentsToContainerType',
             (a) => a?.contentsToContainerType,
             (s) => s?.contentsToContainerType,
             (p, b) => p?.contentsToContainerType = b),
-        contentsToContainerId = $options.actionField<String>(
+        contentsToContainerId = $options.field<String>(
             'contentsToContainerId',
             (a) => a?.contentsToContainerId,
             (s) => s?.contentsToContainerId,
@@ -332,9 +332,6 @@ class _$DecommissionKitApiKitContainerActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DecommissionKitApiKitContainerDecommissionKitApiKitContainerActions> get $serializer => DecommissionKitApiKitContainerDecommissionKitApiKitContainerActions.serializer;
 
   FullType _$fullType;
   @override

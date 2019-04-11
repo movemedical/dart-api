@@ -234,16 +234,15 @@ class _$ListComponentsApiResponseActions
   _$ListComponentsApiResponseActions._(this.$options)
       : $replace = $options.action<ListComponentsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListComponentsApiComponent>>(
+        data = $options.field<BuiltList<ListComponentsApiComponent>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
-        containers =
-            $options.actionField<BuiltList<ListComponentsApiContainerLite>>(
-                'containers',
-                (a) => a?.containers,
-                (s) => s?.containers,
-                (p, b) => p?.containers = b),
+        containers = $options.field<BuiltList<ListComponentsApiContainerLite>>(
+            'containers',
+            (a) => a?.containers,
+            (s) => s?.containers,
+            (p, b) => p?.containers = b),
         super._();
 
   factory _$ListComponentsApiResponseActions(
@@ -279,9 +278,6 @@ class _$ListComponentsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListComponentsApiResponseListComponentsApiResponseActions> get $serializer => ListComponentsApiResponseListComponentsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -113,9 +113,6 @@ class _$AddItemCategoriesToBeCountedApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddItemCategoriesToBeCountedApi> get $serializer => CommandStateAddItemCategoriesToBeCountedApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

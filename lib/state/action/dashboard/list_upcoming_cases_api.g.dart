@@ -112,9 +112,6 @@ class _$ListUpcomingCasesApi extends ListUpcomingCasesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListUpcomingCasesApi> get $serializer => CommandStateListUpcomingCasesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

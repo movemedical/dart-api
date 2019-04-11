@@ -193,7 +193,7 @@ class _$ListStockContainersForLocationApiResponseActions
   _$ListStockContainersForLocationApiResponseActions._(this.$options)
       : $replace = $options.action<ListStockContainersForLocationApiResponse>(
             '\$replace', (a) => a?.$replace),
-        stockContainers = $options.actionField<BuiltList<StockContainer>>(
+        stockContainers = $options.field<BuiltList<StockContainer>>(
             'stockContainers',
             (a) => a?.stockContainers,
             (s) => s?.stockContainers,
@@ -230,9 +230,6 @@ class _$ListStockContainersForLocationApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockContainersForLocationApiResponseListStockContainersForLocationApiResponseActions> get $serializer => ListStockContainersForLocationApiResponseListStockContainersForLocationApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

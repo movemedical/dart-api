@@ -165,7 +165,7 @@ class _$SearchIssueGroupsApiRequestActions
   _$SearchIssueGroupsApiRequestActions._(this.$options)
       : $replace = $options.action<SearchIssueGroupsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$SearchIssueGroupsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchIssueGroupsApiRequestSearchIssueGroupsApiRequestActions> get $serializer => SearchIssueGroupsApiRequestSearchIssueGroupsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

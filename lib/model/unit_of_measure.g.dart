@@ -189,11 +189,11 @@ class _$UnitOfMeasureActions extends UnitOfMeasureActions {
   _$UnitOfMeasureActions._(this.$options)
       : $replace =
             $options.action<UnitOfMeasure>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -228,9 +228,6 @@ class _$UnitOfMeasureActions extends UnitOfMeasureActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UnitOfMeasureUnitOfMeasureActions> get $serializer => UnitOfMeasureUnitOfMeasureActions.serializer;
 
   FullType _$fullType;
   @override

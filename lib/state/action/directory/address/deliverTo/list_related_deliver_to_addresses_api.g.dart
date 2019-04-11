@@ -120,9 +120,6 @@ class _$ListRelatedDeliverToAddressesApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListRelatedDeliverToAddressesApi> get $serializer => CommandStateListRelatedDeliverToAddressesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -264,23 +264,20 @@ class _$ConfirmPkgApiRequestActions extends ConfirmPkgApiRequestActions {
   _$ConfirmPkgApiRequestActions._(this.$options)
       : $replace = $options.action<ConfirmPkgApiRequest>(
             '\$replace', (a) => a?.$replace),
-        packageId = $options.actionField<String>(
-            'packageId',
-            (a) => a?.packageId,
-            (s) => s?.packageId,
-            (p, b) => p?.packageId = b),
+        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+            (s) => s?.packageId, (p, b) => p?.packageId = b),
         containerOverrides =
-            $options.actionField<BuiltList<ConfirmPkgApiContainerOverride>>(
+            $options.field<BuiltList<ConfirmPkgApiContainerOverride>>(
                 'containerOverrides',
                 (a) => a?.containerOverrides,
                 (s) => s?.containerOverrides,
                 (p, b) => p?.containerOverrides = b),
-        autoConfirmAdjustments = $options.actionField<bool>(
+        autoConfirmAdjustments = $options.field<bool>(
             'autoConfirmAdjustments',
             (a) => a?.autoConfirmAdjustments,
             (s) => s?.autoConfirmAdjustments,
             (p, b) => p?.autoConfirmAdjustments = b),
-        doNotConfirmKitContainerIds = $options.actionField<BuiltList<String>>(
+        doNotConfirmKitContainerIds = $options.field<BuiltList<String>>(
             'doNotConfirmKitContainerIds',
             (a) => a?.doNotConfirmKitContainerIds,
             (s) => s?.doNotConfirmKitContainerIds,
@@ -321,9 +318,6 @@ class _$ConfirmPkgApiRequestActions extends ConfirmPkgApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConfirmPkgApiRequestConfirmPkgApiRequestActions> get $serializer => ConfirmPkgApiRequestConfirmPkgApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

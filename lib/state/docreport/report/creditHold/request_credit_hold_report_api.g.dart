@@ -116,9 +116,6 @@ class _$RequestCreditHoldReportApi extends RequestCreditHoldReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestCreditHoldReportApi> get $serializer => CommandStateRequestCreditHoldReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

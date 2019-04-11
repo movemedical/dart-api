@@ -964,32 +964,23 @@ class _$GetSalesOrderApiOrderDetailActions
   _$GetSalesOrderApiOrderDetailActions._(this.$options)
       : $replace = $options.action<GetSalesOrderApiOrderDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderNumber = $options.actionField<int>(
-            'orderNumber',
-            (a) => a?.orderNumber,
-            (s) => s?.orderNumber,
-            (p, b) => p?.orderNumber = b),
-        createdDate = $options.actionField<DateTime>(
+        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+            (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
+        createdDate = $options.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        createdBy = $options.actionField<String>(
-            'createdBy',
-            (a) => a?.createdBy,
-            (s) => s?.createdBy,
-            (p, b) => p?.createdBy = b),
-        status = $options.actionField<OrderStatus>('status', (a) => a?.status,
+        createdBy = $options.field<String>('createdBy', (a) => a?.createdBy,
+            (s) => s?.createdBy, (p, b) => p?.createdBy = b),
+        status = $options.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
         orderReason = OrderReasonActions(() => $options
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
                 'orderReason',
@@ -997,7 +988,7 @@ class _$GetSalesOrderApiOrderDetailActions
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
@@ -1016,7 +1007,7 @@ class _$GetSalesOrderApiOrderDetailActions
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        sourceStartDate = $options.actionField<DateTime>(
+        sourceStartDate = $options.field<DateTime>(
             'sourceStartDate',
             (a) => a?.sourceStartDate,
             (s) => s?.sourceStartDate,
@@ -1035,7 +1026,7 @@ class _$GetSalesOrderApiOrderDetailActions
                 (s) => s?.salesOrgUnit,
                 (b) => b?.salesOrgUnit,
                 (parent, builder) => parent?.salesOrgUnit = builder)),
-        restockOrders = $options.actionField<BuiltList<OrderHeaderLite>>(
+        restockOrders = $options.field<BuiltList<OrderHeaderLite>>(
             'restockOrders',
             (a) => a?.restockOrders,
             (s) => s?.restockOrders,
@@ -1076,9 +1067,9 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.deliverToAddress,
             (b) => b?.deliverToAddress,
             (parent, builder) => parent?.deliverToAddress = builder)),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
@@ -1106,12 +1097,9 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.toResponsibleParty,
             (b) => b?.toResponsibleParty,
             (parent, builder) => parent?.toResponsibleParty = builder)),
-        grandTotal = $options.actionField<double>(
-            'grandTotal',
-            (a) => a?.grandTotal,
-            (s) => s?.grandTotal,
-            (p, b) => p?.grandTotal = b),
-        itemQuantity = $options.actionField<int>(
+        grandTotal = $options.field<double>('grandTotal', (a) => a?.grandTotal,
+            (s) => s?.grandTotal, (p, b) => p?.grandTotal = b),
+        itemQuantity = $options.field<int>(
             'itemQuantity',
             (a) => a?.itemQuantity,
             (s) => s?.itemQuantity,
@@ -1127,7 +1115,7 @@ class _$GetSalesOrderApiOrderDetailActions
                 (b) => b?.customer,
                 (parent, builder) => parent?.customer = builder)),
         validationMessages =
-            $options.actionField<BuiltList<GetSalesOrderApiValidationMsg>>(
+            $options.field<BuiltList<GetSalesOrderApiValidationMsg>>(
                 'validationMessages',
                 (a) => a?.validationMessages,
                 (s) => s?.validationMessages,
@@ -1138,7 +1126,7 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.hcr,
             (b) => b?.hcr,
             (parent, builder) => parent?.hcr = builder)),
-        lastWebServiceLogId = $options.actionField<String>(
+        lastWebServiceLogId = $options.field<String>(
             'lastWebServiceLogId',
             (a) => a?.lastWebServiceLogId,
             (s) => s?.lastWebServiceLogId,
@@ -1263,9 +1251,6 @@ class _$GetSalesOrderApiOrderDetailActions
     hcr.$middleware(middleware);
     shippingService.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSalesOrderApiOrderDetailGetSalesOrderApiOrderDetailActions> get $serializer => GetSalesOrderApiOrderDetailGetSalesOrderApiOrderDetailActions.serializer;
 
   FullType _$fullType;
   @override

@@ -200,7 +200,7 @@ class _$ListAuditEntriesApiRequestActions
   _$ListAuditEntriesApiRequestActions._(this.$options)
       : $replace = $options.action<ListAuditEntriesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditItemId = $options.actionField<String>(
+        auditItemId = $options.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
@@ -253,9 +253,6 @@ class _$ListAuditEntriesApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditEntriesApiRequestListAuditEntriesApiRequestActions> get $serializer => ListAuditEntriesApiRequestListAuditEntriesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

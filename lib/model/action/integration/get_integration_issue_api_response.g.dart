@@ -328,7 +328,7 @@ class _$GetIntegrationIssueApiResponseActions
                 (s) => s?.resolvedByUser,
                 (b) => b?.resolvedByUser,
                 (parent, builder) => parent?.resolvedByUser = builder)),
-        nextOpenIssueId = $options.actionField<String>(
+        nextOpenIssueId = $options.field<String>(
             'nextOpenIssueId',
             (a) => a?.nextOpenIssueId,
             (s) => s?.nextOpenIssueId,
@@ -392,9 +392,6 @@ class _$GetIntegrationIssueApiResponseActions
     resolvedByUser.$middleware(middleware);
     uiSchema.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetIntegrationIssueApiResponseGetIntegrationIssueApiResponseActions> get $serializer => GetIntegrationIssueApiResponseGetIntegrationIssueApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

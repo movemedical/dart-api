@@ -648,12 +648,12 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
   _$ListAuditsApiRequestActions._(this.$options)
       : $replace = $options.action<ListAuditsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        statuses = $options.actionField<BuiltList<AuditStatus>>('statuses',
+        statuses = $options.field<BuiltList<AuditStatus>>('statuses',
             (a) => a?.statuses, (s) => s?.statuses, (p, b) => p?.statuses = b),
         scheduledStartDateRange = DateRangeActions(() =>
             $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
@@ -670,45 +670,45 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
                 (s) => s?.scheduledEndDateRange,
                 (b) => b?.scheduledEndDateRange,
                 (parent, builder) => parent?.scheduledEndDateRange = builder)),
-        assigned = $options.actionField<bool>('assigned', (a) => a?.assigned,
+        assigned = $options.field<bool>('assigned', (a) => a?.assigned,
             (s) => s?.assigned, (p, b) => p?.assigned = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.actionField<BuiltList<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.actionField<BuiltList<String>>(
+        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        serialIds = $options.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        itemCategoryIds = $options.actionField<BuiltList<String>>(
+        itemCategoryIds = $options.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        assigneeLinkedIds = $options.actionField<BuiltList<String>>(
+        assigneeLinkedIds = $options.field<BuiltList<String>>(
             'assigneeLinkedIds',
             (a) => a?.assigneeLinkedIds,
             (s) => s?.assigneeLinkedIds,
             (p, b) => p?.assigneeLinkedIds = b),
-        types = $options.actionField<BuiltList<AuditType>>(
+        types = $options.field<BuiltList<AuditType>>(
             'types', (a) => a?.types, (s) => s?.types, (p, b) => p?.types = b),
-        countTypes = $options.actionField<BuiltList<AuditCountType>>(
+        countTypes = $options.field<BuiltList<AuditCountType>>(
             'countTypes',
             (a) => a?.countTypes,
             (s) => s?.countTypes,
             (p, b) => p?.countTypes = b),
-        auditNumber = $options.actionField<String>(
+        auditNumber = $options.field<String>(
             'auditNumber',
             (a) => a?.auditNumber,
             (s) => s?.auditNumber,
             (p, b) => p?.auditNumber = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -800,9 +800,6 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
     paging.$middleware(middleware);
     sortBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditsApiRequestListAuditsApiRequestActions> get $serializer => ListAuditsApiRequestListAuditsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

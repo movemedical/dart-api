@@ -92,9 +92,6 @@ class _$ApproveOrderApi extends ApproveOrderApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateApproveOrderApi> get $serializer => CommandStateApproveOrderApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

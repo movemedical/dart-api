@@ -410,7 +410,7 @@ class _$EditOrderDetailsApiRequestActions
   _$EditOrderDetailsApiRequestActions._(this.$options)
       : $replace = $options.action<EditOrderDetailsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         toLocation = LocationDataActions(() => $options
             .stateful<LocationData, LocationDataBuilder, LocationDataActions>(
@@ -419,19 +419,16 @@ class _$EditOrderDetailsApiRequestActions
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
-        shipToAddressId = $options.actionField<String>(
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -444,7 +441,7 @@ class _$EditOrderDetailsApiRequestActions
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
@@ -456,7 +453,7 @@ class _$EditOrderDetailsApiRequestActions
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         super._();
 
@@ -515,9 +512,6 @@ class _$EditOrderDetailsApiRequestActions
     deliverToAddressOverride.$middleware(middleware);
     deliveryWindow.$middleware(middleware);
   }
-
-// @override
-// Serializer<EditOrderDetailsApiRequestEditOrderDetailsApiRequestActions> get $serializer => EditOrderDetailsApiRequestEditOrderDetailsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

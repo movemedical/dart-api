@@ -108,9 +108,6 @@ class _$UpdateCaseStatusToPlanningApi extends UpdateCaseStatusToPlanningApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateCaseStatusToPlanningApi> get $serializer => CommandStateUpdateCaseStatusToPlanningApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

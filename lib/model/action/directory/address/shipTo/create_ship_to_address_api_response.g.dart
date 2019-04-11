@@ -189,13 +189,10 @@ class _$CreateShipToAddressApiResponseActions
   _$CreateShipToAddressApiResponseActions._(this.$options)
       : $replace = $options.action<CreateShipToAddressApiResponse>(
             '\$replace', (a) => a?.$replace),
-        shipToId = $options.actionField<String>('shipToId', (a) => a?.shipToId,
+        shipToId = $options.field<String>('shipToId', (a) => a?.shipToId,
             (s) => s?.shipToId, (p, b) => p?.shipToId = b),
-        addressId = $options.actionField<String>(
-            'addressId',
-            (a) => a?.addressId,
-            (s) => s?.addressId,
-            (p, b) => p?.addressId = b),
+        addressId = $options.field<String>('addressId', (a) => a?.addressId,
+            (s) => s?.addressId, (p, b) => p?.addressId = b),
         super._();
 
   factory _$CreateShipToAddressApiResponseActions(
@@ -230,9 +227,6 @@ class _$CreateShipToAddressApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateShipToAddressApiResponseCreateShipToAddressApiResponseActions> get $serializer => CreateShipToAddressApiResponseCreateShipToAddressApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

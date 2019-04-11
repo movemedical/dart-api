@@ -267,18 +267,18 @@ class _$TeamToOrgUnitDataToOuInventoryTypeDataActions
   _$TeamToOrgUnitDataToOuInventoryTypeDataActions._(this.$options)
       : $replace = $options.action<TeamToOrgUnitDataToOuInventoryTypeData>(
             '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        view = $options.actionField<bool>(
+        view = $options.field<bool>(
             'view', (a) => a?.view, (s) => s?.view, (p, b) => p?.view = b),
-        source = $options.actionField<bool>('source', (a) => a?.source,
+        source = $options.field<bool>('source', (a) => a?.source,
             (s) => s?.source, (p, b) => p?.source = b),
-        reconcile = $options.actionField<bool>('reconcile', (a) => a?.reconcile,
+        reconcile = $options.field<bool>('reconcile', (a) => a?.reconcile,
             (s) => s?.reconcile, (p, b) => p?.reconcile = b),
-        admin = $options.actionField<bool>(
+        admin = $options.field<bool>(
             'admin', (a) => a?.admin, (s) => s?.admin, (p, b) => p?.admin = b),
         super._();
 
@@ -320,9 +320,6 @@ class _$TeamToOrgUnitDataToOuInventoryTypeDataActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<TeamToOrgUnitDataToOuInventoryTypeDataTeamToOrgUnitDataToOuInventoryTypeDataActions> get $serializer => TeamToOrgUnitDataToOuInventoryTypeDataTeamToOrgUnitDataToOuInventoryTypeDataActions.serializer;
 
   FullType _$fullType;
   @override

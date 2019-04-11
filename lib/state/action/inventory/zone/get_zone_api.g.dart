@@ -105,9 +105,6 @@ class _$GetZoneApi extends GetZoneApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetZoneApi> get $serializer => CommandStateGetZoneApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

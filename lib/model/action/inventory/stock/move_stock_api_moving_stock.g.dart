@@ -250,24 +250,21 @@ class _$MoveStockApiMovingStockActions extends MoveStockApiMovingStockActions {
   _$MoveStockApiMovingStockActions._(this.$options)
       : $replace = $options.action<MoveStockApiMovingStock>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        summaryKey = $options.actionField<String>(
-            'summaryKey',
-            (a) => a?.summaryKey,
-            (s) => s?.summaryKey,
-            (p, b) => p?.summaryKey = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        summaryKey = $options.field<String>('summaryKey', (a) => a?.summaryKey,
+            (s) => s?.summaryKey, (p, b) => p?.summaryKey = b),
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        orderLineId = $options.actionField<String>(
+        orderLineId = $options.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
@@ -311,9 +308,6 @@ class _$MoveStockApiMovingStockActions extends MoveStockApiMovingStockActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockApiMovingStockMoveStockApiMovingStockActions> get $serializer => MoveStockApiMovingStockMoveStockApiMovingStockActions.serializer;
 
   FullType _$fullType;
   @override

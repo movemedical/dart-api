@@ -407,48 +407,33 @@ class _$CustomerAddressActions extends CustomerAddressActions {
   _$CustomerAddressActions._(this.$options)
       : $replace =
             $options.action<CustomerAddress>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        facilityName = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        facilityName = $options.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        customerReference = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        customerReference = $options.field<String>(
             'customerReference',
             (a) => a?.customerReference,
             (s) => s?.customerReference,
             (p, b) => p?.customerReference = b),
-        customerKey = $options.actionField<String>(
+        customerKey = $options.field<String>(
             'customerKey',
             (a) => a?.customerKey,
             (s) => s?.customerKey,
             (p, b) => p?.customerKey = b),
-        reference1 = $options.actionField<String>(
-            'reference1',
-            (a) => a?.reference1,
-            (s) => s?.reference1,
-            (p, b) => p?.reference1 = b),
-        reference2 = $options.actionField<String>(
-            'reference2',
-            (a) => a?.reference2,
-            (s) => s?.reference2,
-            (p, b) => p?.reference2 = b),
-        addressId = $options.actionField<String>(
-            'addressId',
-            (a) => a?.addressId,
-            (s) => s?.addressId,
-            (p, b) => p?.addressId = b),
+        reference1 = $options.field<String>('reference1', (a) => a?.reference1,
+            (s) => s?.reference1, (p, b) => p?.reference1 = b),
+        reference2 = $options.field<String>('reference2', (a) => a?.reference2,
+            (s) => s?.reference2, (p, b) => p?.reference2 = b),
+        addressId = $options.field<String>('addressId', (a) => a?.addressId,
+            (s) => s?.addressId, (p, b) => p?.addressId = b),
         address = AddressActions(() =>
             $options.stateful<Address, AddressBuilder, AddressActions>(
                 'address',
@@ -456,7 +441,7 @@ class _$CustomerAddressActions extends CustomerAddressActions {
                 (s) => s?.address,
                 (b) => b?.address,
                 (parent, builder) => parent?.address = builder)),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -516,9 +501,6 @@ class _$CustomerAddressActions extends CustomerAddressActions {
     super.$middleware(middleware);
     address.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomerAddressCustomerAddressActions> get $serializer => CustomerAddressCustomerAddressActions.serializer;
 
   FullType _$fullType;
   @override

@@ -108,9 +108,6 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateReprocessIntegrationIssueApi> get $serializer => CommandStateReprocessIntegrationIssueApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

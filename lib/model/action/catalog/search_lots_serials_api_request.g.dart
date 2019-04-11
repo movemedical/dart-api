@@ -187,9 +187,9 @@ class _$SearchLotsSerialsApiRequestActions
   _$SearchLotsSerialsApiRequestActions._(this.$options)
       : $replace = $options.action<SearchLotsSerialsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -224,9 +224,6 @@ class _$SearchLotsSerialsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchLotsSerialsApiRequestSearchLotsSerialsApiRequestActions> get $serializer => SearchLotsSerialsApiRequestSearchLotsSerialsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

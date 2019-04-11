@@ -180,9 +180,9 @@ class _$AddHcrToTeamApiRequestActions extends AddHcrToTeamApiRequestActions {
   _$AddHcrToTeamApiRequestActions._(this.$options)
       : $replace = $options.action<AddHcrToTeamApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
         super._();
 
@@ -217,9 +217,6 @@ class _$AddHcrToTeamApiRequestActions extends AddHcrToTeamApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddHcrToTeamApiRequestAddHcrToTeamApiRequestActions> get $serializer => AddHcrToTeamApiRequestAddHcrToTeamApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

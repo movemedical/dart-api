@@ -863,77 +863,59 @@ class _$CreateCaseEventApiRequestActions
   _$CreateCaseEventApiRequestActions._(this.$options)
       : $replace = $options.action<CreateCaseEventApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseTypeId = $options.actionField<String>(
-            'caseTypeId',
-            (a) => a?.caseTypeId,
-            (s) => s?.caseTypeId,
-            (p, b) => p?.caseTypeId = b),
-        surgeryDate = $options.actionField<DateTime>(
+        caseTypeId = $options.field<String>('caseTypeId', (a) => a?.caseTypeId,
+            (s) => s?.caseTypeId, (p, b) => p?.caseTypeId = b),
+        surgeryDate = $options.field<DateTime>(
             'surgeryDate',
             (a) => a?.surgeryDate,
             (s) => s?.surgeryDate,
             (p, b) => p?.surgeryDate = b),
-        eventTimeUnknown = $options.actionField<bool>(
+        eventTimeUnknown = $options.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
             (p, b) => p?.eventTimeUnknown = b),
-        eventDuration = $options.actionField<int>(
+        eventDuration = $options.field<int>(
             'eventDuration',
             (a) => a?.eventDuration,
             (s) => s?.eventDuration,
             (p, b) => p?.eventDuration = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        salesOuId = $options.actionField<String>(
-            'salesOuId',
-            (a) => a?.salesOuId,
-            (s) => s?.salesOuId,
-            (p, b) => p?.salesOuId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        procedureId = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        salesOuId = $options.field<String>('salesOuId', (a) => a?.salesOuId,
+            (s) => s?.salesOuId, (p, b) => p?.salesOuId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.actionField<String>(
+        subProcedureId = $options.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        surgeonPhysicianId = $options.actionField<String>(
+        surgeonPhysicianId = $options.field<String>(
             'surgeonPhysicianId',
             (a) => a?.surgeonPhysicianId,
             (s) => s?.surgeonPhysicianId,
             (p, b) => p?.surgeonPhysicianId = b),
-        surgeonPhysicianTemp = $options.actionField<String>(
+        surgeonPhysicianTemp = $options.field<String>(
             'surgeonPhysicianTemp',
             (a) => a?.surgeonPhysicianTemp,
             (s) => s?.surgeonPhysicianTemp,
             (p, b) => p?.surgeonPhysicianTemp = b),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        coverageId = $options.actionField<String>(
-            'coverageId',
-            (a) => a?.coverageId,
-            (s) => s?.coverageId,
-            (p, b) => p?.coverageId = b),
-        bodySide = $options.actionField<BodySide>('bodySide',
-            (a) => a?.bodySide, (s) => s?.bodySide, (p, b) => p?.bodySide = b),
-        patientId = $options.actionField<String>(
-            'patientId',
-            (a) => a?.patientId,
-            (s) => s?.patientId,
-            (p, b) => p?.patientId = b),
+        coverageId = $options.field<String>('coverageId', (a) => a?.coverageId,
+            (s) => s?.coverageId, (p, b) => p?.coverageId = b),
+        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+            (s) => s?.bodySide, (p, b) => p?.bodySide = b),
+        patientId = $options.field<String>('patientId', (a) => a?.patientId,
+            (s) => s?.patientId, (p, b) => p?.patientId = b),
         patientName = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'patientName',
@@ -941,46 +923,40 @@ class _$CreateCaseEventApiRequestActions
                 (s) => s?.patientName,
                 (b) => b?.patientName,
                 (parent, builder) => parent?.patientName = builder)),
-        patientMrn = $options.actionField<String>(
-            'patientMrn',
-            (a) => a?.patientMrn,
-            (s) => s?.patientMrn,
-            (p, b) => p?.patientMrn = b),
-        patientDob = $options.actionField<DateTime>(
+        patientMrn = $options.field<String>('patientMrn', (a) => a?.patientMrn,
+            (s) => s?.patientMrn, (p, b) => p?.patientMrn = b),
+        patientDob = $options.field<DateTime>(
             'patientDob',
             (a) => a?.patientDob,
             (s) => s?.patientDob,
             (p, b) => p?.patientDob = b),
-        patientGender = $options.actionField<Gender>(
+        patientGender = $options.field<Gender>(
             'patientGender',
             (a) => a?.patientGender,
             (s) => s?.patientGender,
             (p, b) => p?.patientGender = b),
-        heightMeasurement = $options.actionField<double>(
+        heightMeasurement = $options.field<double>(
             'heightMeasurement',
             (a) => a?.heightMeasurement,
             (s) => s?.heightMeasurement,
             (p, b) => p?.heightMeasurement = b),
-        heightMeasurementType = $options.actionField<LengthMeasurementType>(
+        heightMeasurementType = $options.field<LengthMeasurementType>(
             'heightMeasurementType',
             (a) => a?.heightMeasurementType,
             (s) => s?.heightMeasurementType,
             (p, b) => p?.heightMeasurementType = b),
-        weightMeasurement = $options.actionField<double>(
+        weightMeasurement = $options.field<double>(
             'weightMeasurement',
             (a) => a?.weightMeasurement,
             (s) => s?.weightMeasurement,
             (p, b) => p?.weightMeasurement = b),
-        weightMeasurementType = $options.actionField<WeightMeasurementType>(
+        weightMeasurementType = $options.field<WeightMeasurementType>(
             'weightMeasurementType',
             (a) => a?.weightMeasurementType,
             (s) => s?.weightMeasurementType,
             (p, b) => p?.weightMeasurementType = b),
-        ethnicity = $options.actionField<Ethnicity>(
-            'ethnicity',
-            (a) => a?.ethnicity,
-            (s) => s?.ethnicity,
-            (p, b) => p?.ethnicity = b),
+        ethnicity = $options.field<Ethnicity>('ethnicity', (a) => a?.ethnicity,
+            (s) => s?.ethnicity, (p, b) => p?.ethnicity = b),
         primaryInsurance = CreateCaseEventApiInsuranceActions(() =>
             $options.stateful<
                     CreateCaseEventApiInsurance,
@@ -1001,12 +977,12 @@ class _$CreateCaseEventApiRequestActions
                 (s) => s?.secondaryInsurance,
                 (b) => b?.secondaryInsurance,
                 (parent, builder) => parent?.secondaryInsurance = builder)),
-        fastForward = $options.actionField<CaseEventStatus>(
+        fastForward = $options.field<CaseEventStatus>(
             'fastForward',
             (a) => a?.fastForward,
             (s) => s?.fastForward,
             (p, b) => p?.fastForward = b),
-        procedureDesc = $options.actionField<String>(
+        procedureDesc = $options.field<String>(
             'procedureDesc',
             (a) => a?.procedureDesc,
             (s) => s?.procedureDesc,
@@ -1106,9 +1082,6 @@ class _$CreateCaseEventApiRequestActions
     primaryInsurance.$middleware(middleware);
     secondaryInsurance.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCaseEventApiRequestCreateCaseEventApiRequestActions> get $serializer => CreateCaseEventApiRequestCreateCaseEventApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

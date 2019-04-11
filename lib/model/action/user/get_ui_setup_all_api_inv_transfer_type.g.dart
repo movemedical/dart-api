@@ -560,11 +560,11 @@ class _$GetUiSetupAllApiInvTransferTypeActions
   _$GetUiSetupAllApiInvTransferTypeActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiInvTransferType>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orderReasonId = $options.actionField<String>(
+        orderReasonId = $options.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
@@ -576,52 +576,52 @@ class _$GetUiSetupAllApiInvTransferTypeActions
                 (s) => s?.orderReason,
                 (b) => b?.orderReason,
                 (parent, builder) => parent?.orderReason = builder)),
-        fromInventoryTypes = $options.actionField<BuiltList<InventoryType>>(
+        fromInventoryTypes = $options.field<BuiltList<InventoryType>>(
             'fromInventoryTypes',
             (a) => a?.fromInventoryTypes,
             (s) => s?.fromInventoryTypes,
             (p, b) => p?.fromInventoryTypes = b),
-        moveItemClasses = $options.actionField<BuiltList<MoveItemClass>>(
+        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        moveItemTypes = $options.actionField<BuiltList<MoveItemType>>(
+        moveItemTypes = $options.field<BuiltList<MoveItemType>>(
             'moveItemTypes',
             (a) => a?.moveItemTypes,
             (s) => s?.moveItemTypes,
             (p, b) => p?.moveItemTypes = b),
-        fromLocationTypes = $options.actionField<BuiltList<LocationType>>(
+        fromLocationTypes = $options.field<BuiltList<LocationType>>(
             'fromLocationTypes',
             (a) => a?.fromLocationTypes,
             (s) => s?.fromLocationTypes,
             (p, b) => p?.fromLocationTypes = b),
-        fromFacilityTypes = $options.actionField<BuiltList<FacilityType>>(
+        fromFacilityTypes = $options.field<BuiltList<FacilityType>>(
             'fromFacilityTypes',
             (a) => a?.fromFacilityTypes,
             (s) => s?.fromFacilityTypes,
             (p, b) => p?.fromFacilityTypes = b),
-        fromLocations = $options.actionField<BuiltList<Location>>(
+        fromLocations = $options.field<BuiltList<Location>>(
             'fromLocations',
             (a) => a?.fromLocations,
             (s) => s?.fromLocations,
             (p, b) => p?.fromLocations = b),
-        toLocationTypes = $options.actionField<BuiltList<LocationType>>(
+        toLocationTypes = $options.field<BuiltList<LocationType>>(
             'toLocationTypes',
             (a) => a?.toLocationTypes,
             (s) => s?.toLocationTypes,
             (p, b) => p?.toLocationTypes = b),
-        toFacilityTypes = $options.actionField<BuiltList<FacilityType>>(
+        toFacilityTypes = $options.field<BuiltList<FacilityType>>(
             'toFacilityTypes',
             (a) => a?.toFacilityTypes,
             (s) => s?.toFacilityTypes,
             (p, b) => p?.toFacilityTypes = b),
-        toLocations = $options.actionField<BuiltList<Location>>(
+        toLocations = $options.field<BuiltList<Location>>(
             'toLocations',
             (a) => a?.toLocations,
             (s) => s?.toLocations,
             (p, b) => p?.toLocations = b),
-        scopeToLocation = $options.actionField<bool>(
+        scopeToLocation = $options.field<bool>(
             'scopeToLocation',
             (a) => a?.scopeToLocation,
             (s) => s?.scopeToLocation,
@@ -690,9 +690,6 @@ class _$GetUiSetupAllApiInvTransferTypeActions
     super.$middleware(middleware);
     orderReason.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiInvTransferTypeGetUiSetupAllApiInvTransferTypeActions> get $serializer => GetUiSetupAllApiInvTransferTypeGetUiSetupAllApiInvTransferTypeActions.serializer;
 
   FullType _$fullType;
   @override

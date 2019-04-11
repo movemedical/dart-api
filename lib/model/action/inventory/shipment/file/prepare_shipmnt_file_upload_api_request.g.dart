@@ -269,24 +269,21 @@ class _$PrepareShipmntFileUploadApiRequestActions
   _$PrepareShipmntFileUploadApiRequestActions._(this.$options)
       : $replace = $options.action<PrepareShipmntFileUploadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        shipmentFileType = $options.actionField<ShipmentFileType>(
+        shipmentFileType = $options.field<ShipmentFileType>(
             'shipmentFileType',
             (a) => a?.shipmentFileType,
             (s) => s?.shipmentFileType,
             (p, b) => p?.shipmentFileType = b),
-        fileDescription = $options.actionField<String>(
+        fileDescription = $options.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        estimatedSizeKb = $options.actionField<int>(
+        estimatedSizeKb = $options.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
@@ -331,9 +328,6 @@ class _$PrepareShipmntFileUploadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareShipmntFileUploadApiRequestPrepareShipmntFileUploadApiRequestActions> get $serializer => PrepareShipmntFileUploadApiRequestPrepareShipmntFileUploadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -190,12 +190,9 @@ class _$AdjustStockQuantityApiAdjustmentActions
   _$AdjustStockQuantityApiAdjustmentActions._(this.$options)
       : $replace = $options.action<AdjustStockQuantityApiAdjustment>(
             '\$replace', (a) => a?.$replace),
-        summaryId = $options.actionField<String>(
-            'summaryId',
-            (a) => a?.summaryId,
-            (s) => s?.summaryId,
-            (p, b) => p?.summaryId = b),
-        qtyChange = $options.actionField<int>('qtyChange', (a) => a?.qtyChange,
+        summaryId = $options.field<String>('summaryId', (a) => a?.summaryId,
+            (s) => s?.summaryId, (p, b) => p?.summaryId = b),
+        qtyChange = $options.field<int>('qtyChange', (a) => a?.qtyChange,
             (s) => s?.qtyChange, (p, b) => p?.qtyChange = b),
         super._();
 
@@ -231,9 +228,6 @@ class _$AdjustStockQuantityApiAdjustmentActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AdjustStockQuantityApiAdjustmentAdjustStockQuantityApiAdjustmentActions> get $serializer => AdjustStockQuantityApiAdjustmentAdjustStockQuantityApiAdjustmentActions.serializer;
 
   FullType _$fullType;
   @override

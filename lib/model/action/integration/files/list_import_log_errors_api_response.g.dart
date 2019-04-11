@@ -206,10 +206,9 @@ class _$ListImportLogErrorsApiResponseActions
   _$ListImportLogErrorsApiResponseActions._(this.$options)
       : $replace = $options.action<ListImportLogErrorsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options
-            .actionField<BuiltList<ListImportLogErrorsApiImportLogError>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options.field<BuiltList<ListImportLogErrorsApiImportLogError>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -245,9 +244,6 @@ class _$ListImportLogErrorsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListImportLogErrorsApiResponseListImportLogErrorsApiResponseActions> get $serializer => ListImportLogErrorsApiResponseListImportLogErrorsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

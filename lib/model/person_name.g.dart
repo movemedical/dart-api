@@ -314,33 +314,24 @@ class _$PersonNameActions extends PersonNameActions {
 
   _$PersonNameActions._(this.$options)
       : $replace = $options.action<PersonName>('\$replace', (a) => a?.$replace),
-        title = $options.actionField<String>(
+        title = $options.field<String>(
             'title', (a) => a?.title, (s) => s?.title, (p, b) => p?.title = b),
-        givenName = $options.actionField<String>(
-            'givenName',
-            (a) => a?.givenName,
-            (s) => s?.givenName,
-            (p, b) => p?.givenName = b),
-        middleName = $options.actionField<String>(
-            'middleName',
-            (a) => a?.middleName,
-            (s) => s?.middleName,
-            (p, b) => p?.middleName = b),
-        familyName = $options.actionField<String>(
-            'familyName',
-            (a) => a?.familyName,
-            (s) => s?.familyName,
-            (p, b) => p?.familyName = b),
-        suffix = $options.actionField<String>('suffix', (a) => a?.suffix,
+        givenName = $options.field<String>('givenName', (a) => a?.givenName,
+            (s) => s?.givenName, (p, b) => p?.givenName = b),
+        middleName = $options.field<String>('middleName', (a) => a?.middleName,
+            (s) => s?.middleName, (p, b) => p?.middleName = b),
+        familyName = $options.field<String>('familyName', (a) => a?.familyName,
+            (s) => s?.familyName, (p, b) => p?.familyName = b),
+        suffix = $options.field<String>('suffix', (a) => a?.suffix,
             (s) => s?.suffix, (p, b) => p?.suffix = b),
-        fullName = $options.actionField<String>('fullName', (a) => a?.fullName,
+        fullName = $options.field<String>('fullName', (a) => a?.fullName,
             (s) => s?.fullName, (p, b) => p?.fullName = b),
-        displayName = $options.actionField<String>(
+        displayName = $options.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        locale = $options.actionField<int>('locale', (a) => a?.locale,
+        locale = $options.field<int>('locale', (a) => a?.locale,
             (s) => s?.locale, (p, b) => p?.locale = b),
         super._();
 
@@ -385,9 +376,6 @@ class _$PersonNameActions extends PersonNameActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PersonNamePersonNameActions> get $serializer => PersonNamePersonNameActions.serializer;
 
   FullType _$fullType;
   @override

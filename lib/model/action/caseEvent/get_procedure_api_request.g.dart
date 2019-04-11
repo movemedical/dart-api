@@ -158,7 +158,7 @@ class _$GetProcedureApiRequestActions extends GetProcedureApiRequestActions {
   _$GetProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<GetProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -191,9 +191,6 @@ class _$GetProcedureApiRequestActions extends GetProcedureApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetProcedureApiRequestGetProcedureApiRequestActions> get $serializer => GetProcedureApiRequestGetProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

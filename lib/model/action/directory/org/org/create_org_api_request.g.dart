@@ -290,14 +290,11 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
   _$CreateOrgApiRequestActions._(this.$options)
       : $replace = $options.action<CreateOrgApiRequest>(
             '\$replace', (a) => a?.$replace),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        name = $options.actionField<String>(
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.actionField<OrgType>(
+        type = $options.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         address = AddressActions(() =>
             $options.stateful<Address, AddressBuilder, AddressActions>(
@@ -313,7 +310,7 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -362,9 +359,6 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
     address.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateOrgApiRequestCreateOrgApiRequestActions> get $serializer => CreateOrgApiRequestCreateOrgApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

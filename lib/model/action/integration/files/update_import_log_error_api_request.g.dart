@@ -215,13 +215,13 @@ class _$UpdateImportLogErrorApiRequestActions
   _$UpdateImportLogErrorApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateImportLogErrorApiRequest>(
             '\$replace', (a) => a?.$replace),
-        integrationIssueId = $options.actionField<String>(
+        integrationIssueId = $options.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
             (p, b) => p?.integrationIssueId = b),
-        importLogErrors = $options
-            .actionField<BuiltList<UpdateImportLogErrorApiImportLogError>>(
+        importLogErrors =
+            $options.field<BuiltList<UpdateImportLogErrorApiImportLogError>>(
                 'importLogErrors',
                 (a) => a?.importLogErrors,
                 (s) => s?.importLogErrors,
@@ -260,9 +260,6 @@ class _$UpdateImportLogErrorApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateImportLogErrorApiRequestUpdateImportLogErrorApiRequestActions> get $serializer => UpdateImportLogErrorApiRequestUpdateImportLogErrorApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

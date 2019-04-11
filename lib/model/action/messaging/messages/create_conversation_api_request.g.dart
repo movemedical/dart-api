@@ -334,28 +334,28 @@ class _$CreateConversationApiRequestActions
   _$CreateConversationApiRequestActions._(this.$options)
       : $replace = $options.action<CreateConversationApiRequest>(
             '\$replace', (a) => a?.$replace),
-        startedByContactId = $options.actionField<String>(
+        startedByContactId = $options.field<String>(
             'startedByContactId',
             (a) => a?.startedByContactId,
             (s) => s?.startedByContactId,
             (p, b) => p?.startedByContactId = b),
-        purpose = $options.actionField<String>('purpose', (a) => a?.purpose,
+        purpose = $options.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        urgency = $options.actionField<DateTime>('urgency', (a) => a?.urgency,
+        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
-        participantContactIds = $options.actionField<BuiltList<String>>(
+        participantContactIds = $options.field<BuiltList<String>>(
             'participantContactIds',
             (a) => a?.participantContactIds,
             (s) => s?.participantContactIds,
             (p, b) => p?.participantContactIds = b),
-        attributableType = $options.actionField<AttributableType>(
+        attributableType = $options.field<AttributableType>(
             'attributableType',
             (a) => a?.attributableType,
             (s) => s?.attributableType,
             (p, b) => p?.attributableType = b),
-        attrId = $options.actionField<String>('attrId', (a) => a?.attrId,
+        attrId = $options.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
         super._();
 
@@ -400,9 +400,6 @@ class _$CreateConversationApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateConversationApiRequestCreateConversationApiRequestActions> get $serializer => CreateConversationApiRequestCreateConversationApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

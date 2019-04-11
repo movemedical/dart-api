@@ -215,10 +215,10 @@ class _$ListFacilityPhysicianOptionsApiResponseActions
   _$ListFacilityPhysicianOptionsApiResponseActions._(this.$options)
       : $replace = $options.action<ListFacilityPhysicianOptionsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
-                BuiltList<ListFacilityPhysicianOptionsApiPhysicianOption>>(
-            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options
+            .field<BuiltList<ListFacilityPhysicianOptionsApiPhysicianOption>>(
+                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -254,9 +254,6 @@ class _$ListFacilityPhysicianOptionsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListFacilityPhysicianOptionsApiResponseListFacilityPhysicianOptionsApiResponseActions> get $serializer => ListFacilityPhysicianOptionsApiResponseListFacilityPhysicianOptionsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

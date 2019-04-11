@@ -205,14 +205,14 @@ class _$ReadBarcodeApiPackageActions extends ReadBarcodeApiPackageActions {
   _$ReadBarcodeApiPackageActions._(this.$options)
       : $replace = $options.action<ReadBarcodeApiPackage>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        packageNumber = $options.actionField<int>(
+        packageNumber = $options.field<int>(
             'packageNumber',
             (a) => a?.packageNumber,
             (s) => s?.packageNumber,
             (p, b) => p?.packageNumber = b),
-        trackingNumber = $options.actionField<String>(
+        trackingNumber = $options.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
@@ -251,9 +251,6 @@ class _$ReadBarcodeApiPackageActions extends ReadBarcodeApiPackageActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcodeApiPackageReadBarcodeApiPackageActions> get $serializer => ReadBarcodeApiPackageReadBarcodeApiPackageActions.serializer;
 
   FullType _$fullType;
   @override

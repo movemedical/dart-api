@@ -105,9 +105,6 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestUnbilledReportApi> get $serializer => CommandStateRequestUnbilledReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

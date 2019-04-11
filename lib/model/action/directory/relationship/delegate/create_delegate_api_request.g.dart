@@ -228,11 +228,11 @@ class _$CreateDelegateApiRequestActions
   _$CreateDelegateApiRequestActions._(this.$options)
       : $replace = $options.action<CreateDelegateApiRequest>(
             '\$replace', (a) => a?.$replace),
-        linkType = $options.actionField<DirectoryNonPersonType>('linkType',
+        linkType = $options.field<DirectoryNonPersonType>('linkType',
             (a) => a?.linkType, (s) => s?.linkType, (p, b) => p?.linkType = b),
-        linkId = $options.actionField<String>('linkId', (a) => a?.linkId,
+        linkId = $options.field<String>('linkId', (a) => a?.linkId,
             (s) => s?.linkId, (p, b) => p?.linkId = b),
-        delegates = $options.actionField<BuiltList<CreateDelegateApiDelegate>>(
+        delegates = $options.field<BuiltList<CreateDelegateApiDelegate>>(
             'delegates',
             (a) => a?.delegates,
             (s) => s?.delegates,
@@ -272,9 +272,6 @@ class _$CreateDelegateApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateDelegateApiRequestCreateDelegateApiRequestActions> get $serializer => CreateDelegateApiRequestCreateDelegateApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

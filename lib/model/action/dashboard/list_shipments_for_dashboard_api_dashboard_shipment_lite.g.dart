@@ -268,14 +268,14 @@ class _$ListShipmentsForDashboardApiDashboardShipmentLiteActions
       : $replace =
             $options.action<ListShipmentsForDashboardApiDashboardShipmentLite>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        shipmentNumber = $options.actionField<int>(
+        shipmentNumber = $options.field<int>(
             'shipmentNumber',
             (a) => a?.shipmentNumber,
             (s) => s?.shipmentNumber,
             (p, b) => p?.shipmentNumber = b),
-        shipmentStatus = $options.actionField<ShipmentStatus>(
+        shipmentStatus = $options.field<ShipmentStatus>(
             'shipmentStatus',
             (a) => a?.shipmentStatus,
             (s) => s?.shipmentStatus,
@@ -332,9 +332,6 @@ class _$ListShipmentsForDashboardApiDashboardShipmentLiteActions
     super.$middleware(middleware);
     toLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListShipmentsForDashboardApiDashboardShipmentLiteListShipmentsForDashboardApiDashboardShipmentLiteActions> get $serializer => ListShipmentsForDashboardApiDashboardShipmentLiteListShipmentsForDashboardApiDashboardShipmentLiteActions.serializer;
 
   FullType _$fullType;
   @override

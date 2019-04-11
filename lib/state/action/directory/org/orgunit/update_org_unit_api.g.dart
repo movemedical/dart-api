@@ -96,9 +96,6 @@ class _$UpdateOrgUnitApi extends UpdateOrgUnitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateOrgUnitApi> get $serializer => CommandStateUpdateOrgUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

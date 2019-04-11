@@ -165,7 +165,7 @@ class _$RemoveTeamToOrgUnitApiRequestActions
   _$RemoveTeamToOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<RemoveTeamToOrgUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$RemoveTeamToOrgUnitApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RemoveTeamToOrgUnitApiRequestRemoveTeamToOrgUnitApiRequestActions> get $serializer => RemoveTeamToOrgUnitApiRequestRemoveTeamToOrgUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

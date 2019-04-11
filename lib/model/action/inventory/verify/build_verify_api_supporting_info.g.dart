@@ -513,41 +513,41 @@ class _$BuildVerifyApiSupportingInfoActions
   _$BuildVerifyApiSupportingInfoActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiSupportingInfo>(
             '\$replace', (a) => a?.$replace),
-        stocks = $options.actionField<BuiltList<StockData>>('stocks',
+        stocks = $options.field<BuiltList<StockData>>('stocks',
             (a) => a?.stocks, (s) => s?.stocks, (p, b) => p?.stocks = b),
-        items = $options.actionField<BuiltList<Item>>(
+        items = $options.field<BuiltList<Item>>(
             'items', (a) => a?.items, (s) => s?.items, (p, b) => p?.items = b),
-        itemVersions = $options.actionField<BuiltList<ItemVersion>>(
+        itemVersions = $options.field<BuiltList<ItemVersion>>(
             'itemVersions',
             (a) => a?.itemVersions,
             (s) => s?.itemVersions,
             (p, b) => p?.itemVersions = b),
-        lots = $options.actionField<BuiltList<Lot>>(
+        lots = $options.field<BuiltList<Lot>>(
             'lots', (a) => a?.lots, (s) => s?.lots, (p, b) => p?.lots = b),
-        serials = $options.actionField<BuiltList<Serial>>('serials',
+        serials = $options.field<BuiltList<Serial>>('serials',
             (a) => a?.serials, (s) => s?.serials, (p, b) => p?.serials = b),
-        tags = $options.actionField<BuiltList<Tag>>(
+        tags = $options.field<BuiltList<Tag>>(
             'tags', (a) => a?.tags, (s) => s?.tags, (p, b) => p?.tags = b),
-        locations = $options.actionField<BuiltList<Location>>(
+        locations = $options.field<BuiltList<Location>>(
             'locations',
             (a) => a?.locations,
             (s) => s?.locations,
             (p, b) => p?.locations = b),
-        containers = $options.actionField<BuiltList<StockContainer>>(
+        containers = $options.field<BuiltList<StockContainer>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
             (p, b) => p?.containers = b),
-        inventoryTypes = $options.actionField<BuiltList<InventoryType>>(
+        inventoryTypes = $options.field<BuiltList<InventoryType>>(
             'inventoryTypes',
             (a) => a?.inventoryTypes,
             (s) => s?.inventoryTypes,
             (p, b) => p?.inventoryTypes = b),
-        loans = $options.actionField<BuiltList<LoanLite>>(
+        loans = $options.field<BuiltList<LoanLite>>(
             'loans', (a) => a?.loans, (s) => s?.loans, (p, b) => p?.loans = b),
-        cases = $options.actionField<BuiltList<CaseEventLite>>(
+        cases = $options.field<BuiltList<CaseEventLite>>(
             'cases', (a) => a?.cases, (s) => s?.cases, (p, b) => p?.cases = b),
-        pkgs = $options.actionField<BuiltList<Pkg>>(
+        pkgs = $options.field<BuiltList<Pkg>>(
             'pkgs', (a) => a?.pkgs, (s) => s?.pkgs, (p, b) => p?.pkgs = b),
         super._();
 
@@ -602,9 +602,6 @@ class _$BuildVerifyApiSupportingInfoActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiSupportingInfoBuildVerifyApiSupportingInfoActions> get $serializer => BuildVerifyApiSupportingInfoBuildVerifyApiSupportingInfoActions.serializer;
 
   FullType _$fullType;
   @override

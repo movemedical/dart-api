@@ -219,14 +219,11 @@ class _$CreatePickApiResponseActions extends CreatePickApiResponseActions {
   _$CreatePickApiResponseActions._(this.$options)
       : $replace = $options.action<CreatePickApiResponse>(
             '\$replace', (a) => a?.$replace),
-        pickIds = $options.actionField<BuiltList<String>>('pickIds',
+        pickIds = $options.field<BuiltList<String>>('pickIds',
             (a) => a?.pickIds, (s) => s?.pickIds, (p, b) => p?.pickIds = b),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        pkgId = $options.actionField<String>(
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        pkgId = $options.field<String>(
             'pkgId', (a) => a?.pkgId, (s) => s?.pkgId, (p, b) => p?.pkgId = b),
         super._();
 
@@ -262,9 +259,6 @@ class _$CreatePickApiResponseActions extends CreatePickApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePickApiResponseCreatePickApiResponseActions> get $serializer => CreatePickApiResponseCreatePickApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

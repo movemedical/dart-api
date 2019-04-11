@@ -192,12 +192,12 @@ class _$GetUiSetupWebApiDashboardWidgetActions
   _$GetUiSetupWebApiDashboardWidgetActions._(this.$options)
       : $replace = $options.action<GetUiSetupWebApiDashboardWidget>(
             '\$replace', (a) => a?.$replace),
-        widgetType = $options.actionField<WebDashboardWidgetType>(
+        widgetType = $options.field<WebDashboardWidgetType>(
             'widgetType',
             (a) => a?.widgetType,
             (s) => s?.widgetType,
             (p, b) => p?.widgetType = b),
-        widgetConfig = $options.actionField<String>(
+        widgetConfig = $options.field<String>(
             'widgetConfig',
             (a) => a?.widgetConfig,
             (s) => s?.widgetConfig,
@@ -236,9 +236,6 @@ class _$GetUiSetupWebApiDashboardWidgetActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupWebApiDashboardWidgetGetUiSetupWebApiDashboardWidgetActions> get $serializer => GetUiSetupWebApiDashboardWidgetGetUiSetupWebApiDashboardWidgetActions.serializer;
 
   FullType _$fullType;
   @override

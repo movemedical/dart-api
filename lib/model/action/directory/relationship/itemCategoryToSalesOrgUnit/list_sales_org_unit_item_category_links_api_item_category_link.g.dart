@@ -353,33 +353,33 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
       : $replace = $options
             .action<ListSalesOrgUnitItemCategoryLinksApiItemCategoryLink>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemCategoryId = $options.actionField<String>(
+        itemCategoryId = $options.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemCategoryName = $options.actionField<String>(
+        itemCategoryName = $options.field<String>(
             'itemCategoryName',
             (a) => a?.itemCategoryName,
             (s) => s?.itemCategoryName,
             (p, b) => p?.itemCategoryName = b),
-        itemCategoryCode = $options.actionField<String>(
+        itemCategoryCode = $options.field<String>(
             'itemCategoryCode',
             (a) => a?.itemCategoryCode,
             (s) => s?.itemCategoryCode,
             (p, b) => p?.itemCategoryCode = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        canStock = $options.actionField<bool>('canStock', (a) => a?.canStock,
+        canStock = $options.field<bool>('canStock', (a) => a?.canStock,
             (s) => s?.canStock, (p, b) => p?.canStock = b),
-        canSell = $options.actionField<bool>('canSell', (a) => a?.canSell,
+        canSell = $options.field<bool>('canSell', (a) => a?.canSell,
             (s) => s?.canSell, (p, b) => p?.canSell = b),
-        inherited = $options.actionField<bool>('inherited', (a) => a?.inherited,
+        inherited = $options.field<bool>('inherited', (a) => a?.inherited,
             (s) => s?.inherited, (p, b) => p?.inherited = b),
         super._();
 
@@ -429,9 +429,6 @@ class _$ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions> get $serializer => ListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkListSalesOrgUnitItemCategoryLinksApiItemCategoryLinkActions.serializer;
 
   FullType _$fullType;
   @override

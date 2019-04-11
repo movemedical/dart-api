@@ -116,9 +116,6 @@ class _$ListCalendarSubscriptionsApi extends ListCalendarSubscriptionsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListCalendarSubscriptionsApi> get $serializer => CommandStateListCalendarSubscriptionsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

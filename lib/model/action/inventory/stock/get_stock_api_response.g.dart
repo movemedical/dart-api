@@ -214,9 +214,6 @@ class _$GetStockApiResponseActions extends GetStockApiResponseActions {
     stock.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetStockApiResponseGetStockApiResponseActions> get $serializer => GetStockApiResponseGetStockApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockApiResponse);

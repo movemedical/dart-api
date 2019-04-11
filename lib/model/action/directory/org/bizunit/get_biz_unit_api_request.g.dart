@@ -155,7 +155,7 @@ class _$GetBizUnitApiRequestActions extends GetBizUnitApiRequestActions {
   _$GetBizUnitApiRequestActions._(this.$options)
       : $replace = $options.action<GetBizUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -187,9 +187,6 @@ class _$GetBizUnitApiRequestActions extends GetBizUnitApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetBizUnitApiRequestGetBizUnitApiRequestActions> get $serializer => GetBizUnitApiRequestGetBizUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

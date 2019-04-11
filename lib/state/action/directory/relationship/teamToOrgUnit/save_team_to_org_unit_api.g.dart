@@ -97,9 +97,6 @@ class _$SaveTeamToOrgUnitApi extends SaveTeamToOrgUnitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSaveTeamToOrgUnitApi> get $serializer => CommandStateSaveTeamToOrgUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

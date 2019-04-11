@@ -167,11 +167,8 @@ class _$ListLinesForInvoiceApiRequestActions
   _$ListLinesForInvoiceApiRequestActions._(this.$options)
       : $replace = $options.action<ListLinesForInvoiceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        invoiceId = $options.actionField<String>(
-            'invoiceId',
-            (a) => a?.invoiceId,
-            (s) => s?.invoiceId,
-            (p, b) => p?.invoiceId = b),
+        invoiceId = $options.field<String>('invoiceId', (a) => a?.invoiceId,
+            (s) => s?.invoiceId, (p, b) => p?.invoiceId = b),
         super._();
 
   factory _$ListLinesForInvoiceApiRequestActions(
@@ -203,9 +200,6 @@ class _$ListLinesForInvoiceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLinesForInvoiceApiRequestListLinesForInvoiceApiRequestActions> get $serializer => ListLinesForInvoiceApiRequestListLinesForInvoiceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

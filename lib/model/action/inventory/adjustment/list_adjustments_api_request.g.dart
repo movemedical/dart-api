@@ -489,27 +489,27 @@ class _$ListAdjustmentsApiRequestActions
   _$ListAdjustmentsApiRequestActions._(this.$options)
       : $replace = $options.action<ListAdjustmentsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        reason = $options.actionField<AdjustmentReason>('reason',
-            (a) => a?.reason, (s) => s?.reason, (p, b) => p?.reason = b),
-        status = $options.actionField<AdjustmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+            (s) => s?.reason, (p, b) => p?.reason = b),
+        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.actionField<MoveItemType>(
+        moveItemType = $options.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
@@ -528,7 +528,7 @@ class _$ListAdjustmentsApiRequestActions
                 (s) => s?.adjustedDateRange,
                 (b) => b?.adjustedDateRange,
                 (parent, builder) => parent?.adjustedDateRange = builder)),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -613,9 +613,6 @@ class _$ListAdjustmentsApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAdjustmentsApiRequestListAdjustmentsApiRequestActions> get $serializer => ListAdjustmentsApiRequestListAdjustmentsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

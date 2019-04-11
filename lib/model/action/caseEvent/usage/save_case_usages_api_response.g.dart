@@ -166,7 +166,7 @@ class _$SaveCaseUsagesApiResponseActions
   _$SaveCaseUsagesApiResponseActions._(this.$options)
       : $replace = $options.action<SaveCaseUsagesApiResponse>(
             '\$replace', (a) => a?.$replace),
-        confirmUsageFailed = $options.actionField<bool>(
+        confirmUsageFailed = $options.field<bool>(
             'confirmUsageFailed',
             (a) => a?.confirmUsageFailed,
             (s) => s?.confirmUsageFailed,
@@ -202,9 +202,6 @@ class _$SaveCaseUsagesApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveCaseUsagesApiResponseSaveCaseUsagesApiResponseActions> get $serializer => SaveCaseUsagesApiResponseSaveCaseUsagesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

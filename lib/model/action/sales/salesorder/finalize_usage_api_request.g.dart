@@ -159,7 +159,7 @@ class _$FinalizeUsageApiRequestActions extends FinalizeUsageApiRequestActions {
   _$FinalizeUsageApiRequestActions._(this.$options)
       : $replace = $options.action<FinalizeUsageApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -192,9 +192,6 @@ class _$FinalizeUsageApiRequestActions extends FinalizeUsageApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FinalizeUsageApiRequestFinalizeUsageApiRequestActions> get $serializer => FinalizeUsageApiRequestFinalizeUsageApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

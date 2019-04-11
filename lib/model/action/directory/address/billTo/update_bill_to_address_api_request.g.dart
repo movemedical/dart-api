@@ -190,12 +190,12 @@ class _$UpdateBillToAddressApiRequestActions
   _$UpdateBillToAddressApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateBillToAddressApiRequest>(
             '\$replace', (a) => a?.$replace),
-        billToAddressId = $options.actionField<String>(
+        billToAddressId = $options.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
             (p, b) => p?.billToAddressId = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -230,9 +230,6 @@ class _$UpdateBillToAddressApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateBillToAddressApiRequestUpdateBillToAddressApiRequestActions> get $serializer => UpdateBillToAddressApiRequestUpdateBillToAddressApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

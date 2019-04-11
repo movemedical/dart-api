@@ -313,26 +313,23 @@ class _$GetSubProcedureApiSubProcedureDetailActions
   _$GetSubProcedureApiSubProcedureDetailActions._(this.$options)
       : $replace = $options.action<GetSubProcedureApiSubProcedureDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        parentId = $options.actionField<String>('parentId', (a) => a?.parentId,
+        parentId = $options.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.actionField<String>('icdCode', (a) => a?.icdCode,
+        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        allowDelete = $options.actionField<bool>(
-            'allowDelete',
-            (a) => a?.allowDelete,
-            (s) => s?.allowDelete,
-            (p, b) => p?.allowDelete = b),
+        allowDelete = $options.field<bool>('allowDelete', (a) => a?.allowDelete,
+            (s) => s?.allowDelete, (p, b) => p?.allowDelete = b),
         super._();
 
   factory _$GetSubProcedureApiSubProcedureDetailActions(
@@ -377,9 +374,6 @@ class _$GetSubProcedureApiSubProcedureDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSubProcedureApiSubProcedureDetailGetSubProcedureApiSubProcedureDetailActions> get $serializer => GetSubProcedureApiSubProcedureDetailGetSubProcedureApiSubProcedureDetailActions.serializer;
 
   FullType _$fullType;
   @override

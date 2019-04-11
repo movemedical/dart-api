@@ -236,19 +236,19 @@ class _$CompletePickApiRequestActions extends CompletePickApiRequestActions {
   _$CompletePickApiRequestActions._(this.$options)
       : $replace = $options.action<CompletePickApiRequest>(
             '\$replace', (a) => a?.$replace),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        pickedStockId = $options.actionField<String>(
+        pickedStockId = $options.field<String>(
             'pickedStockId',
             (a) => a?.pickedStockId,
             (s) => s?.pickedStockId,
             (p, b) => p?.pickedStockId = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
@@ -290,9 +290,6 @@ class _$CompletePickApiRequestActions extends CompletePickApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CompletePickApiRequestCompletePickApiRequestActions> get $serializer => CompletePickApiRequestCompletePickApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

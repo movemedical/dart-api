@@ -256,31 +256,25 @@ class _$GetAuditApiItemDetailActions extends GetAuditApiItemDetailActions {
   _$GetAuditApiItemDetailActions._(this.$options)
       : $replace = $options.action<GetAuditApiItemDetail>(
             '\$replace', (a) => a?.$replace),
-        expectedItem = $options.actionField<int>(
+        expectedItem = $options.field<int>(
             'expectedItem',
             (a) => a?.expectedItem,
             (s) => s?.expectedItem,
             (p, b) => p?.expectedItem = b),
-        notCountedItem = $options.actionField<int>(
+        notCountedItem = $options.field<int>(
             'notCountedItem',
             (a) => a?.notCountedItem,
             (s) => s?.notCountedItem,
             (p, b) => p?.notCountedItem = b),
-        shortageItem = $options.actionField<int>(
+        shortageItem = $options.field<int>(
             'shortageItem',
             (a) => a?.shortageItem,
             (s) => s?.shortageItem,
             (p, b) => p?.shortageItem = b),
-        overageItem = $options.actionField<int>(
-            'overageItem',
-            (a) => a?.overageItem,
-            (s) => s?.overageItem,
-            (p, b) => p?.overageItem = b),
-        matchedItem = $options.actionField<int>(
-            'matchedItem',
-            (a) => a?.matchedItem,
-            (s) => s?.matchedItem,
-            (p, b) => p?.matchedItem = b),
+        overageItem = $options.field<int>('overageItem', (a) => a?.overageItem,
+            (s) => s?.overageItem, (p, b) => p?.overageItem = b),
+        matchedItem = $options.field<int>('matchedItem', (a) => a?.matchedItem,
+            (s) => s?.matchedItem, (p, b) => p?.matchedItem = b),
         super._();
 
   factory _$GetAuditApiItemDetailActions(
@@ -319,9 +313,6 @@ class _$GetAuditApiItemDetailActions extends GetAuditApiItemDetailActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAuditApiItemDetailGetAuditApiItemDetailActions> get $serializer => GetAuditApiItemDetailGetAuditApiItemDetailActions.serializer;
 
   FullType _$fullType;
   @override

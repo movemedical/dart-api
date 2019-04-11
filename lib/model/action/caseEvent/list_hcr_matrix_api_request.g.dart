@@ -251,9 +251,9 @@ class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
   _$ListHcrMatrixApiRequestActions._(this.$options)
       : $replace = $options.action<ListHcrMatrixApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -318,9 +318,6 @@ class _$ListHcrMatrixApiRequestActions extends ListHcrMatrixApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHcrMatrixApiRequestListHcrMatrixApiRequestActions> get $serializer => ListHcrMatrixApiRequestListHcrMatrixApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

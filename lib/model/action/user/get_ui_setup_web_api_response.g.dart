@@ -286,18 +286,17 @@ class _$GetUiSetupWebApiResponseActions
             (b) => b?.uiSetup,
             (parent, builder) => parent?.uiSetup = builder)),
         dashboardWidgets =
-            $options.actionField<BuiltList<GetUiSetupWebApiDashboardWidget>>(
+            $options.field<BuiltList<GetUiSetupWebApiDashboardWidget>>(
                 'dashboardWidgets',
                 (a) => a?.dashboardWidgets,
                 (s) => s?.dashboardWidgets,
                 (p, b) => p?.dashboardWidgets = b),
-        navigationElements =
-            $options.actionField<BuiltList<WebNavigationElement>>(
-                'navigationElements',
-                (a) => a?.navigationElements,
-                (s) => s?.navigationElements,
-                (p, b) => p?.navigationElements = b),
-        webReports = $options.actionField<BuiltList<WebReport>>(
+        navigationElements = $options.field<BuiltList<WebNavigationElement>>(
+            'navigationElements',
+            (a) => a?.navigationElements,
+            (s) => s?.navigationElements,
+            (p, b) => p?.navigationElements = b),
+        webReports = $options.field<BuiltList<WebReport>>(
             'webReports',
             (a) => a?.webReports,
             (s) => s?.webReports,
@@ -345,9 +344,6 @@ class _$GetUiSetupWebApiResponseActions
     super.$middleware(middleware);
     uiSetup.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupWebApiResponseGetUiSetupWebApiResponseActions> get $serializer => GetUiSetupWebApiResponseGetUiSetupWebApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

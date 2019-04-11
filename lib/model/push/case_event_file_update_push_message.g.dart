@@ -247,20 +247,20 @@ class _$CaseEventFileUpdatePushMessageActions
   _$CaseEventFileUpdatePushMessageActions._(this.$options)
       : $replace = $options.action<CaseEventFileUpdatePushMessage>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         updateType = $options
-            .actionField<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>(
+            .field<CaseEventFileUpdatePushMessageCaseEventFileUpdateType>(
                 'updateType',
                 (a) => a?.updateType,
                 (s) => s?.updateType,
                 (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.actionField<double>(
+        percentUploadedDecimalForm = $options.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -303,9 +303,6 @@ class _$CaseEventFileUpdatePushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CaseEventFileUpdatePushMessageCaseEventFileUpdatePushMessageActions> get $serializer => CaseEventFileUpdatePushMessageCaseEventFileUpdatePushMessageActions.serializer;
 
   FullType _$fullType;
   @override

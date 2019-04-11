@@ -336,26 +336,23 @@ class _$BinActions extends BinActions {
 
   _$BinActions._(this.$options)
       : $replace = $options.action<Bin>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        name = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.actionField<BinType>(
+        type = $options.field<BinType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        aisle = $options.actionField<String>(
+        aisle = $options.field<String>(
             'aisle', (a) => a?.aisle, (s) => s?.aisle, (p, b) => p?.aisle = b),
-        section = $options.actionField<int>('section', (a) => a?.section,
+        section = $options.field<int>('section', (a) => a?.section,
             (s) => s?.section, (p, b) => p?.section = b),
-        shelf = $options.actionField<int>(
+        shelf = $options.field<int>(
             'shelf', (a) => a?.shelf, (s) => s?.shelf, (p, b) => p?.shelf = b),
-        position = $options.actionField<int>('position', (a) => a?.position,
+        position = $options.field<int>('position', (a) => a?.position,
             (s) => s?.position, (p, b) => p?.position = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -401,9 +398,6 @@ class _$BinActions extends BinActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BinBinActions> get $serializer => BinBinActions.serializer;
 
   FullType _$fullType;
   @override

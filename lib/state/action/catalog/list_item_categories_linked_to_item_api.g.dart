@@ -120,9 +120,6 @@ class _$ListItemCategoriesLinkedToItemApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListItemCategoriesLinkedToItemApi> get $serializer => CommandStateListItemCategoriesLinkedToItemApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

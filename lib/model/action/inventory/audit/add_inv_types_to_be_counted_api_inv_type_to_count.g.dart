@@ -194,12 +194,12 @@ class _$AddInvTypesToBeCountedApiInvTypeToCountActions
   _$AddInvTypesToBeCountedApiInvTypeToCountActions._(this.$options)
       : $replace = $options.action<AddInvTypesToBeCountedApiInvTypeToCount>(
             '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        sequence = $options.actionField<int>('sequence', (a) => a?.sequence,
+        sequence = $options.field<int>('sequence', (a) => a?.sequence,
             (s) => s?.sequence, (p, b) => p?.sequence = b),
         super._();
 
@@ -235,9 +235,6 @@ class _$AddInvTypesToBeCountedApiInvTypeToCountActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddInvTypesToBeCountedApiInvTypeToCountAddInvTypesToBeCountedApiInvTypeToCountActions> get $serializer => AddInvTypesToBeCountedApiInvTypeToCountAddInvTypesToBeCountedApiInvTypeToCountActions.serializer;
 
   FullType _$fullType;
   @override

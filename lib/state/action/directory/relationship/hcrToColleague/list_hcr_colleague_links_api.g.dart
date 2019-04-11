@@ -113,9 +113,6 @@ class _$ListHcrColleagueLinksApi extends ListHcrColleagueLinksApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListHcrColleagueLinksApi> get $serializer => CommandStateListHcrColleagueLinksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

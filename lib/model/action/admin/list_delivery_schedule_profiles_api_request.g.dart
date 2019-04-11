@@ -295,9 +295,9 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
   _$ListDeliveryScheduleProfilesApiRequestActions._(this.$options)
       : $replace = $options.action<ListDeliveryScheduleProfilesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -318,7 +318,7 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
             (s) => s?.orderBy,
             (b) => b?.orderBy,
             (parent, builder) => parent?.orderBy = builder)),
-        profileIds = $options.actionField<BuiltList<String>>(
+        profileIds = $options.field<BuiltList<String>>(
             'profileIds',
             (a) => a?.profileIds,
             (s) => s?.profileIds,
@@ -370,9 +370,6 @@ class _$ListDeliveryScheduleProfilesApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListDeliveryScheduleProfilesApiRequestListDeliveryScheduleProfilesApiRequestActions> get $serializer => ListDeliveryScheduleProfilesApiRequestListDeliveryScheduleProfilesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

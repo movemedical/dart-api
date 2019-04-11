@@ -467,55 +467,55 @@ class _$ListImportLogFilesApiImportLogFileActions
   _$ListImportLogFilesApiImportLogFileActions._(this.$options)
       : $replace = $options.action<ListImportLogFilesApiImportLogFile>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        jobKey = $options.actionField<String>('jobKey', (a) => a?.jobKey,
+        jobKey = $options.field<String>('jobKey', (a) => a?.jobKey,
             (s) => s?.jobKey, (p, b) => p?.jobKey = b),
-        importLogId = $options.actionField<String>(
+        importLogId = $options.field<String>(
             'importLogId',
             (a) => a?.importLogId,
             (s) => s?.importLogId,
             (p, b) => p?.importLogId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileContentType = $options.actionField<String>(
+        fileContentType = $options.field<String>(
             'fileContentType',
             (a) => a?.fileContentType,
             (s) => s?.fileContentType,
             (p, b) => p?.fileContentType = b),
-        fileCreatedDate = $options.actionField<DateTime>(
+        fileCreatedDate = $options.field<DateTime>(
             'fileCreatedDate',
             (a) => a?.fileCreatedDate,
             (s) => s?.fileCreatedDate,
             (p, b) => p?.fileCreatedDate = b),
-        fileExpiresDate = $options.actionField<DateTime>(
+        fileExpiresDate = $options.field<DateTime>(
             'fileExpiresDate',
             (a) => a?.fileExpiresDate,
             (s) => s?.fileExpiresDate,
             (p, b) => p?.fileExpiresDate = b),
-        totalRecordCount = $options.actionField<int>(
+        totalRecordCount = $options.field<int>(
             'totalRecordCount',
             (a) => a?.totalRecordCount,
             (s) => s?.totalRecordCount,
             (p, b) => p?.totalRecordCount = b),
-        successRecordCount = $options.actionField<int>(
+        successRecordCount = $options.field<int>(
             'successRecordCount',
             (a) => a?.successRecordCount,
             (s) => s?.successRecordCount,
             (p, b) => p?.successRecordCount = b),
-        failRecordCount = $options.actionField<int>(
+        failRecordCount = $options.field<int>(
             'failRecordCount',
             (a) => a?.failRecordCount,
             (s) => s?.failRecordCount,
             (p, b) => p?.failRecordCount = b),
-        skipRecordCount = $options.actionField<int>(
+        skipRecordCount = $options.field<int>(
             'skipRecordCount',
             (a) => a?.skipRecordCount,
             (s) => s?.skipRecordCount,
             (p, b) => p?.skipRecordCount = b),
-        outcome = $options.actionField<ImportLogFileOutcome>('outcome',
+        outcome = $options.field<ImportLogFileOutcome>('outcome',
             (a) => a?.outcome, (s) => s?.outcome, (p, b) => p?.outcome = b),
         super._();
 
@@ -573,9 +573,6 @@ class _$ListImportLogFilesApiImportLogFileActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListImportLogFilesApiImportLogFileListImportLogFilesApiImportLogFileActions> get $serializer => ListImportLogFilesApiImportLogFileListImportLogFilesApiImportLogFileActions.serializer;
 
   FullType _$fullType;
   @override

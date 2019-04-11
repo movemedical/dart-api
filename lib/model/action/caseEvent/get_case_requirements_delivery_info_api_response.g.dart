@@ -417,17 +417,17 @@ class _$GetCaseRequirementsDeliveryInfoApiResponseActions
   _$GetCaseRequirementsDeliveryInfoApiResponseActions._(this.$options)
       : $replace = $options.action<GetCaseRequirementsDeliveryInfoApiResponse>(
             '\$replace', (a) => a?.$replace),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        deliverByDateTz = $options.actionField<String>(
+        deliverByDateTz = $options.field<String>(
             'deliverByDateTz',
             (a) => a?.deliverByDateTz,
             (s) => s?.deliverByDateTz,
             (p, b) => p?.deliverByDateTz = b),
-        deliverToAttn = $options.actionField<String>(
+        deliverToAttn = $options.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
@@ -448,25 +448,19 @@ class _$GetCaseRequirementsDeliveryInfoApiResponseActions
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        editDeliverTo = $options.actionField<bool>(
+        editDeliverTo = $options.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
             (p, b) => p?.editDeliverTo = b),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
         super._();
 
   factory _$GetCaseRequirementsDeliveryInfoApiResponseActions(
@@ -524,9 +518,6 @@ class _$GetCaseRequirementsDeliveryInfoApiResponseActions
     deliverTo.$middleware(middleware);
     deliverToOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseRequirementsDeliveryInfoApiResponseGetCaseRequirementsDeliveryInfoApiResponseActions> get $serializer => GetCaseRequirementsDeliveryInfoApiResponseGetCaseRequirementsDeliveryInfoApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

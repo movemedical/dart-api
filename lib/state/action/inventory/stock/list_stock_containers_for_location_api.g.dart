@@ -120,9 +120,6 @@ class _$ListStockContainersForLocationApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListStockContainersForLocationApi> get $serializer => CommandStateListStockContainersForLocationApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

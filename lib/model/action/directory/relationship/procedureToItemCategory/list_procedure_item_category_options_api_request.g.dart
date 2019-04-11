@@ -273,12 +273,12 @@ class _$ListProcedureItemCategoryOptionsApiRequestActions
   _$ListProcedureItemCategoryOptionsApiRequestActions._(this.$options)
       : $replace = $options.action<ListProcedureItemCategoryOptionsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        parentCategoryId = $options.actionField<String>(
+        parentCategoryId = $options.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -347,9 +347,6 @@ class _$ListProcedureItemCategoryOptionsApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProcedureItemCategoryOptionsApiRequestListProcedureItemCategoryOptionsApiRequestActions> get $serializer => ListProcedureItemCategoryOptionsApiRequestListProcedureItemCategoryOptionsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

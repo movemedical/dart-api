@@ -112,9 +112,6 @@ class _$ListUnitOfMeasureApi extends ListUnitOfMeasureApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListUnitOfMeasureApi> get $serializer => CommandStateListUnitOfMeasureApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

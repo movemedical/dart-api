@@ -414,16 +414,13 @@ class _$BuildStockOrderRestockPlanApiPendingRestockItemActions
       : $replace =
             $options.action<BuildStockOrderRestockPlanApiPendingRestockItem>(
                 '\$replace', (a) => a?.$replace),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        description = $options.actionField<String>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -435,21 +432,21 @@ class _$BuildStockOrderRestockPlanApiPendingRestockItemActions
             (s) => s?.inventoryType,
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        orderDisplay = $options.actionField<String>(
+        orderDisplay = $options.field<String>(
             'orderDisplay',
             (a) => a?.orderDisplay,
             (s) => s?.orderDisplay,
             (p, b) => p?.orderDisplay = b),
-        restockWithPickId = $options.actionField<String>(
+        restockWithPickId = $options.field<String>(
             'restockWithPickId',
             (a) => a?.restockWithPickId,
             (s) => s?.restockWithPickId,
             (p, b) => p?.restockWithPickId = b),
-        pickDisplay = $options.actionField<String>(
+        pickDisplay = $options.field<String>(
             'pickDisplay',
             (a) => a?.pickDisplay,
             (s) => s?.pickDisplay,
@@ -511,9 +508,6 @@ class _$BuildStockOrderRestockPlanApiPendingRestockItemActions
     super.$middleware(middleware);
     inventoryType.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildStockOrderRestockPlanApiPendingRestockItemBuildStockOrderRestockPlanApiPendingRestockItemActions> get $serializer => BuildStockOrderRestockPlanApiPendingRestockItemBuildStockOrderRestockPlanApiPendingRestockItemActions.serializer;
 
   FullType _$fullType;
   @override

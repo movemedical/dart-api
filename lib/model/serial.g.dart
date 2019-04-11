@@ -315,33 +315,30 @@ class _$SerialActions extends SerialActions {
 
   _$SerialActions._(this.$options)
       : $replace = $options.action<Serial>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        serialNumber = $options.actionField<int>(
+        serialNumber = $options.field<int>(
             'serialNumber',
             (a) => a?.serialNumber,
             (s) => s?.serialNumber,
             (p, b) => p?.serialNumber = b),
-        serialRef = $options.actionField<String>(
-            'serialRef',
-            (a) => a?.serialRef,
-            (s) => s?.serialRef,
-            (p, b) => p?.serialRef = b),
-        expirationDate = $options.actionField<DateTime>(
+        serialRef = $options.field<String>('serialRef', (a) => a?.serialRef,
+            (s) => s?.serialRef, (p, b) => p?.serialRef = b),
+        expirationDate = $options.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        manufactureDate = $options.actionField<DateTime>(
+        manufactureDate = $options.field<DateTime>(
             'manufactureDate',
             (a) => a?.manufactureDate,
             (s) => s?.manufactureDate,
             (p, b) => p?.manufactureDate = b),
-        sealed = $options.actionField<bool>('sealed', (a) => a?.sealed,
+        sealed = $options.field<bool>('sealed', (a) => a?.sealed,
             (s) => s?.sealed, (p, b) => p?.sealed = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -386,9 +383,6 @@ class _$SerialActions extends SerialActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SerialSerialActions> get $serializer => SerialSerialActions.serializer;
 
   FullType _$fullType;
   @override

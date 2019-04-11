@@ -213,14 +213,11 @@ class _$ListPackageTrackingApiTrackingEventActions
   _$ListPackageTrackingApiTrackingEventActions._(this.$options)
       : $replace = $options.action<ListPackageTrackingApiTrackingEvent>(
             '\$replace', (a) => a?.$replace),
-        timestamp = $options.actionField<DateTime>(
-            'timestamp',
-            (a) => a?.timestamp,
-            (s) => s?.timestamp,
-            (p, b) => p?.timestamp = b),
-        city = $options.actionField<String>(
+        timestamp = $options.field<DateTime>('timestamp', (a) => a?.timestamp,
+            (s) => s?.timestamp, (p, b) => p?.timestamp = b),
+        city = $options.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -261,9 +258,6 @@ class _$ListPackageTrackingApiTrackingEventActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPackageTrackingApiTrackingEventListPackageTrackingApiTrackingEventActions> get $serializer => ListPackageTrackingApiTrackingEventListPackageTrackingApiTrackingEventActions.serializer;
 
   FullType _$fullType;
   @override

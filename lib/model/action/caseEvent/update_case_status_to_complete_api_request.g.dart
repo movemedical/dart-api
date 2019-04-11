@@ -169,7 +169,7 @@ class _$UpdateCaseStatusToCompleteApiRequestActions
   _$UpdateCaseStatusToCompleteApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateCaseStatusToCompleteApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -206,9 +206,6 @@ class _$UpdateCaseStatusToCompleteApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCaseStatusToCompleteApiRequestUpdateCaseStatusToCompleteApiRequestActions> get $serializer => UpdateCaseStatusToCompleteApiRequestUpdateCaseStatusToCompleteApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

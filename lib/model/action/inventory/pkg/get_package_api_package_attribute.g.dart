@@ -187,9 +187,9 @@ class _$GetPackageApiPackageAttributeActions
   _$GetPackageApiPackageAttributeActions._(this.$options)
       : $replace = $options.action<GetPackageApiPackageAttribute>(
             '\$replace', (a) => a?.$replace),
-        label = $options.actionField<String>(
+        label = $options.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.actionField<String>(
+        value = $options.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -224,9 +224,6 @@ class _$GetPackageApiPackageAttributeActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPackageApiPackageAttributeGetPackageApiPackageAttributeActions> get $serializer => GetPackageApiPackageAttributeGetPackageApiPackageAttributeActions.serializer;
 
   FullType _$fullType;
   @override

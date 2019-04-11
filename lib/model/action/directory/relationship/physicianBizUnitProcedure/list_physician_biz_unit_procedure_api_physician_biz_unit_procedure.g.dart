@@ -309,29 +309,26 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
       : $replace = $options
             .action<ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedure>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        bizUnitName = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        bizUnitName = $options.field<String>(
             'bizUnitName',
             (a) => a?.bizUnitName,
             (s) => s?.bizUnitName,
             (p, b) => p?.bizUnitName = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.actionField<String>(
+        procedureName = $options.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        procedureIcdCode = $options.actionField<String>(
+        procedureIcdCode = $options.field<String>(
             'procedureIcdCode',
             (a) => a?.procedureIcdCode,
             (s) => s?.procedureIcdCode,
@@ -381,9 +378,6 @@ class _$ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions> get $serializer => ListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureListPhysicianBizUnitProcedureApiPhysicianBizUnitProcedureActions.serializer;
 
   FullType _$fullType;
   @override

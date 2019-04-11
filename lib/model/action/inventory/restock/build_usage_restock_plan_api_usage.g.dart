@@ -391,34 +391,34 @@ class _$BuildUsageRestockPlanApiUsageActions
   _$BuildUsageRestockPlanApiUsageActions._(this.$options)
       : $replace = $options.action<BuildUsageRestockPlanApiUsage>(
             '\$replace', (a) => a?.$replace),
-        guid = $options.actionField<String>(
+        guid = $options.field<String>(
             'guid', (a) => a?.guid, (s) => s?.guid, (p, b) => p?.guid = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        rawBarcodeData = $options.actionField<String>(
+        rawBarcodeData = $options.field<String>(
             'rawBarcodeData',
             (a) => a?.rawBarcodeData,
             (s) => s?.rawBarcodeData,
             (p, b) => p?.rawBarcodeData = b),
-        caseUsageDisposition = $options.actionField<CaseUsageDisposition>(
+        caseUsageDisposition = $options.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        usageCaptureType = $options.actionField<ItemCaptureType>(
+        usageCaptureType = $options.field<ItemCaptureType>(
             'usageCaptureType',
             (a) => a?.usageCaptureType,
             (s) => s?.usageCaptureType,
             (p, b) => p?.usageCaptureType = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        locationHint = $options.actionField<LocationHint>(
+        locationHint = $options.field<LocationHint>(
             'locationHint',
             (a) => a?.locationHint,
             (s) => s?.locationHint,
@@ -472,9 +472,6 @@ class _$BuildUsageRestockPlanApiUsageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildUsageRestockPlanApiUsageBuildUsageRestockPlanApiUsageActions> get $serializer => BuildUsageRestockPlanApiUsageBuildUsageRestockPlanApiUsageActions.serializer;
 
   FullType _$fullType;
   @override

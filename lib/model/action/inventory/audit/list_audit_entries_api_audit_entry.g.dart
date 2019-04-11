@@ -216,17 +216,17 @@ class _$ListAuditEntriesApiAuditEntryActions
   _$ListAuditEntriesApiAuditEntryActions._(this.$options)
       : $replace = $options.action<ListAuditEntriesApiAuditEntry>(
             '\$replace', (a) => a?.$replace),
-        enteredByUserId = $options.actionField<String>(
+        enteredByUserId = $options.field<String>(
             'enteredByUserId',
             (a) => a?.enteredByUserId,
             (s) => s?.enteredByUserId,
             (p, b) => p?.enteredByUserId = b),
-        enteredTimestamp = $options.actionField<DateTime>(
+        enteredTimestamp = $options.field<DateTime>(
             'enteredTimestamp',
             (a) => a?.enteredTimestamp,
             (s) => s?.enteredTimestamp,
             (p, b) => p?.enteredTimestamp = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -263,9 +263,6 @@ class _$ListAuditEntriesApiAuditEntryActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditEntriesApiAuditEntryListAuditEntriesApiAuditEntryActions> get $serializer => ListAuditEntriesApiAuditEntryListAuditEntriesApiAuditEntryActions.serializer;
 
   FullType _$fullType;
   @override

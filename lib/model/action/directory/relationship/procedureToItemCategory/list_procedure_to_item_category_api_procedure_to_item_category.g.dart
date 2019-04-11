@@ -333,34 +333,34 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
       : $replace = $options
             .action<ListProcedureToItemCategoryApiProcedureToItemCategory>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemCategoryId = $options.actionField<String>(
+        itemCategoryId = $options.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemCategoryName = $options.actionField<String>(
+        itemCategoryName = $options.field<String>(
             'itemCategoryName',
             (a) => a?.itemCategoryName,
             (s) => s?.itemCategoryName,
             (p, b) => p?.itemCategoryName = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureName = $options.actionField<String>(
+        procedureName = $options.field<String>(
             'procedureName',
             (a) => a?.procedureName,
             (s) => s?.procedureName,
             (p, b) => p?.procedureName = b),
-        subProcedureId = $options.actionField<String>(
+        subProcedureId = $options.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
             (p, b) => p?.subProcedureId = b),
-        subProcedureName = $options.actionField<String>(
+        subProcedureName = $options.field<String>(
             'subProcedureName',
             (a) => a?.subProcedureName,
             (s) => s?.subProcedureName,
@@ -411,9 +411,6 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProcedureToItemCategoryApiProcedureToItemCategoryListProcedureToItemCategoryApiProcedureToItemCategoryActions> get $serializer => ListProcedureToItemCategoryApiProcedureToItemCategoryListProcedureToItemCategoryApiProcedureToItemCategoryActions.serializer;
 
   FullType _$fullType;
   @override

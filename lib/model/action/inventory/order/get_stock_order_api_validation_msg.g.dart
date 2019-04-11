@@ -239,19 +239,19 @@ class _$GetStockOrderApiValidationMsgActions
   _$GetStockOrderApiValidationMsgActions._(this.$options)
       : $replace = $options.action<GetStockOrderApiValidationMsg>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        messageGroupId = $options.actionField<String>(
+        messageGroupId = $options.field<String>(
             'messageGroupId',
             (a) => a?.messageGroupId,
             (s) => s?.messageGroupId,
             (p, b) => p?.messageGroupId = b),
-        messageType = $options.actionField<ValidationMessageType>(
+        messageType = $options.field<ValidationMessageType>(
             'messageType',
             (a) => a?.messageType,
             (s) => s?.messageType,
             (p, b) => p?.messageType = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -290,9 +290,6 @@ class _$GetStockOrderApiValidationMsgActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockOrderApiValidationMsgGetStockOrderApiValidationMsgActions> get $serializer => GetStockOrderApiValidationMsgGetStockOrderApiValidationMsgActions.serializer;
 
   FullType _$fullType;
   @override

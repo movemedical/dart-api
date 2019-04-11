@@ -111,9 +111,6 @@ class _$ProcessVerifyApi extends ProcessVerifyApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateProcessVerifyApi> get $serializer => CommandStateProcessVerifyApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

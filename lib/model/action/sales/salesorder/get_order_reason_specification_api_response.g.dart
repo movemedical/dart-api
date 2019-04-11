@@ -269,16 +269,16 @@ class _$GetOrderReasonSpecificationApiResponseActions
   _$GetOrderReasonSpecificationApiResponseActions._(this.$options)
       : $replace = $options.action<GetOrderReasonSpecificationApiResponse>(
             '\$replace', (a) => a?.$replace),
-        fields = $options.actionField<
+        fields = $options.field<
                 BuiltList<GetOrderReasonSpecificationApiOrderReasonFieldData>>(
             'fields',
             (a) => a?.fields,
             (s) => s?.fields,
             (p, b) => p?.fields = b),
-        docs = $options.actionField<
-                BuiltList<GetOrderReasonSpecificationApiOrderReasonDoc>>(
-            'docs', (a) => a?.docs, (s) => s?.docs, (p, b) => p?.docs = b),
-        customFields = $options.actionField<
+        docs = $options
+            .field<BuiltList<GetOrderReasonSpecificationApiOrderReasonDoc>>(
+                'docs', (a) => a?.docs, (s) => s?.docs, (p, b) => p?.docs = b),
+        customFields = $options.field<
                 BuiltList<
                     GetOrderReasonSpecificationApiOrderReasonCustomFieldData>>(
             'customFields',
@@ -321,9 +321,6 @@ class _$GetOrderReasonSpecificationApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrderReasonSpecificationApiResponseGetOrderReasonSpecificationApiResponseActions> get $serializer => GetOrderReasonSpecificationApiResponseGetOrderReasonSpecificationApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

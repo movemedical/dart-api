@@ -191,12 +191,9 @@ class _$ListProceduresForSchedulingApiRequestActions
   _$ListProceduresForSchedulingApiRequestActions._(this.$options)
       : $replace = $options.action<ListProceduresForSchedulingApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -232,9 +229,6 @@ class _$ListProceduresForSchedulingApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProceduresForSchedulingApiRequestListProceduresForSchedulingApiRequestActions> get $serializer => ListProceduresForSchedulingApiRequestListProceduresForSchedulingApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

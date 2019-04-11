@@ -172,9 +172,9 @@ class _$GetStockApiRequestActions extends GetStockApiRequestActions {
   _$GetStockApiRequestActions._(this.$options)
       : $replace = $options.action<GetStockApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        skipPresence = $options.actionField<bool>(
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -211,9 +211,6 @@ class _$GetStockApiRequestActions extends GetStockApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockApiRequestGetStockApiRequestActions> get $serializer => GetStockApiRequestGetStockApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

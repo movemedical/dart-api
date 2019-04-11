@@ -113,9 +113,6 @@ class _$RequestShipmentPackingListDocApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestShipmentPackingListDocApi> get $serializer => CommandStateRequestShipmentPackingListDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

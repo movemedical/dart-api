@@ -185,7 +185,7 @@ class _$GetKitContainersApiResponseActions
   _$GetKitContainersApiResponseActions._(this.$options)
       : $replace = $options.action<GetKitContainersApiResponse>(
             '\$replace', (a) => a?.$replace),
-        containers = $options.actionField<BuiltList<GetStockApiStock>>(
+        containers = $options.field<BuiltList<GetStockApiStock>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -221,9 +221,6 @@ class _$GetKitContainersApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetKitContainersApiResponseGetKitContainersApiResponseActions> get $serializer => GetKitContainersApiResponseGetKitContainersApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

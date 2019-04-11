@@ -285,12 +285,12 @@ class _$UpdateCaseEventInsuranceApiRequestActions
   _$UpdateCaseEventInsuranceApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateCaseEventInsuranceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        mdcCaseEventId = $options.actionField<String>(
+        mdcCaseEventId = $options.field<String>(
             'mdcCaseEventId',
             (a) => a?.mdcCaseEventId,
             (s) => s?.mdcCaseEventId,
             (p, b) => p?.mdcCaseEventId = b),
-        removePrimary = $options.actionField<bool>(
+        removePrimary = $options.field<bool>(
             'removePrimary',
             (a) => a?.removePrimary,
             (s) => s?.removePrimary,
@@ -302,7 +302,7 @@ class _$UpdateCaseEventInsuranceApiRequestActions
                 (s) => s?.primary,
                 (b) => b?.primary,
                 (parent, builder) => parent?.primary = builder)),
-        removeSecondary = $options.actionField<bool>(
+        removeSecondary = $options.field<bool>(
             'removeSecondary',
             (a) => a?.removeSecondary,
             (s) => s?.removeSecondary,
@@ -361,9 +361,6 @@ class _$UpdateCaseEventInsuranceApiRequestActions
     primary.$middleware(middleware);
     secondary.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCaseEventInsuranceApiRequestUpdateCaseEventInsuranceApiRequestActions> get $serializer => UpdateCaseEventInsuranceApiRequestUpdateCaseEventInsuranceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

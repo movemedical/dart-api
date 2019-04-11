@@ -65,29 +65,23 @@ void main() {
       ..appVersion = 'Move Dart - 1.0.0');
     final api = store.service<ApiService>();
 
-    store.actions.loginCommand.onResult(store, (event, result) {
+    store.actions.loginCommand.onResult((event, result) {
       print('Result!!! -> ${result}');
     });
 
-    final future = store.execute(
-        store.actions.loginCommand,
-        store.actions.loginCommand.create(
-            request: LoginRequest((b) => b
-              ..session = ''
-              ..email = 'admin@movemedical.com'
-              ..password = 'move')));
+    final future = store.actions.loginCommand(
+        request: LoginRequest((b) => b
+          ..session = ''
+          ..email = 'admin@movemedical.com'
+          ..password = 'move'));
 
     final result = await future;
 
-    store.actions.activeLogin(result.value.value);
-
-    final setupFuture = store.execute(
-        store.actions.setupCommand,
-        store.actions.setupCommand.create(
-            builder: (b) => b
-              ..appVersion = '1.0.0'
-              ..platformVersion = 'Dart 2.2',
-            timeout: Duration(seconds: 600)));
+    final setupFuture = store.actions.setupCommand(
+        builder: (b) => b
+          ..appVersion = '1.0.0'
+          ..platformVersion = 'Dart 2.2',
+        timeout: Duration(seconds: 600));
 
     final setupResult = await setupFuture;
     print(result);

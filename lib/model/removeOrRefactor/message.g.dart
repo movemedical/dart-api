@@ -312,36 +312,35 @@ class _$MessageActions extends MessageActions {
 
   _$MessageActions._(this.$options)
       : $replace = $options.action<Message>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        fromParticipantId = $options.actionField<String>(
+        fromParticipantId = $options.field<String>(
             'fromParticipantId',
             (a) => a?.fromParticipantId,
             (s) => s?.fromParticipantId,
             (p, b) => p?.fromParticipantId = b),
-        behalfOfParticipantId = $options.actionField<String>(
+        behalfOfParticipantId = $options.field<String>(
             'behalfOfParticipantId',
             (a) => a?.behalfOfParticipantId,
             (s) => s?.behalfOfParticipantId,
             (p, b) => p?.behalfOfParticipantId = b),
-        sentDate = $options.actionField<DateTime>('sentDate',
-            (a) => a?.sentDate, (s) => s?.sentDate, (p, b) => p?.sentDate = b),
-        messageContent = $options.actionField<String>(
+        sentDate = $options.field<DateTime>('sentDate', (a) => a?.sentDate,
+            (s) => s?.sentDate, (p, b) => p?.sentDate = b),
+        messageContent = $options.field<String>(
             'messageContent',
             (a) => a?.messageContent,
             (s) => s?.messageContent,
             (p, b) => p?.messageContent = b),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
             (p, b) => p?.conversationId = b),
-        participants =
-            $options.actionField<BuiltList<MessageMessageParticipant>>(
-                'participants',
-                (a) => a?.participants,
-                (s) => s?.participants,
-                (p, b) => p?.participants = b),
+        participants = $options.field<BuiltList<MessageMessageParticipant>>(
+            'participants',
+            (a) => a?.participants,
+            (s) => s?.participants,
+            (p, b) => p?.participants = b),
         super._();
 
   factory _$MessageActions(MessageActionsOptions options) =>
@@ -383,9 +382,6 @@ class _$MessageActions extends MessageActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MessageMessageActions> get $serializer => MessageMessageActions.serializer;
 
   FullType _$fullType;
   @override

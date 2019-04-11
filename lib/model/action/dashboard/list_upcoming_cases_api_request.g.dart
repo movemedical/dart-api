@@ -145,9 +145,6 @@ class _$ListUpcomingCasesApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<ListUpcomingCasesApiRequestListUpcomingCasesApiRequestActions> get $serializer => ListUpcomingCasesApiRequestListUpcomingCasesApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

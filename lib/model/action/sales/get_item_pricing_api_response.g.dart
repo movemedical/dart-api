@@ -311,37 +311,36 @@ class _$GetItemPricingApiResponseActions
   _$GetItemPricingApiResponseActions._(this.$options)
       : $replace = $options.action<GetItemPricingApiResponse>(
             '\$replace', (a) => a?.$replace),
-        shipToRemotePricingSuccess = $options.actionField<bool>(
+        shipToRemotePricingSuccess = $options.field<bool>(
             'shipToRemotePricingSuccess',
             (a) => a?.shipToRemotePricingSuccess,
             (s) => s?.shipToRemotePricingSuccess,
             (p, b) => p?.shipToRemotePricingSuccess = b),
-        shipToRemotePricingSoapLogId = $options.actionField<String>(
+        shipToRemotePricingSoapLogId = $options.field<String>(
             'shipToRemotePricingSoapLogId',
             (a) => a?.shipToRemotePricingSoapLogId,
             (s) => s?.shipToRemotePricingSoapLogId,
             (p, b) => p?.shipToRemotePricingSoapLogId = b),
-        billToRemotePricingSuccess = $options.actionField<bool>(
+        billToRemotePricingSuccess = $options.field<bool>(
             'billToRemotePricingSuccess',
             (a) => a?.billToRemotePricingSuccess,
             (s) => s?.billToRemotePricingSuccess,
             (p, b) => p?.billToRemotePricingSuccess = b),
-        billToRemotePricingSoapLogId = $options.actionField<String>(
+        billToRemotePricingSoapLogId = $options.field<String>(
             'billToRemotePricingSoapLogId',
             (a) => a?.billToRemotePricingSoapLogId,
             (s) => s?.billToRemotePricingSoapLogId,
             (p, b) => p?.billToRemotePricingSoapLogId = b),
-        constructPrice = $options.actionField<double>(
+        constructPrice = $options.field<double>(
             'constructPrice',
             (a) => a?.constructPrice,
             (s) => s?.constructPrice,
             (p, b) => p?.constructPrice = b),
-        itemPrices =
-            $options.actionField<BuiltList<GetItemPricingApiItemPrice>>(
-                'itemPrices',
-                (a) => a?.itemPrices,
-                (s) => s?.itemPrices,
-                (p, b) => p?.itemPrices = b),
+        itemPrices = $options.field<BuiltList<GetItemPricingApiItemPrice>>(
+            'itemPrices',
+            (a) => a?.itemPrices,
+            (s) => s?.itemPrices,
+            (p, b) => p?.itemPrices = b),
         super._();
 
   factory _$GetItemPricingApiResponseActions(
@@ -383,9 +382,6 @@ class _$GetItemPricingApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemPricingApiResponseGetItemPricingApiResponseActions> get $serializer => GetItemPricingApiResponseGetItemPricingApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

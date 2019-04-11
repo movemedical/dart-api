@@ -111,9 +111,6 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateMoveCaseEventBackToPlanningApi> get $serializer => CommandStateMoveCaseEventBackToPlanningApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

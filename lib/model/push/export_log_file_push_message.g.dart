@@ -241,20 +241,19 @@ class _$ExportLogFilePushMessageActions
   _$ExportLogFilePushMessageActions._(this.$options)
       : $replace = $options.action<ExportLogFilePushMessage>(
             '\$replace', (a) => a?.$replace),
-        exportLogFileId = $options.actionField<String>(
+        exportLogFileId = $options.field<String>(
             'exportLogFileId',
             (a) => a?.exportLogFileId,
             (s) => s?.exportLogFileId,
             (p, b) => p?.exportLogFileId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        updateType =
-            $options.actionField<ExportLogFilePushMessageFileUpdateType>(
-                'updateType',
-                (a) => a?.updateType,
-                (s) => s?.updateType,
-                (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.actionField<double>(
+        updateType = $options.field<ExportLogFilePushMessageFileUpdateType>(
+            'updateType',
+            (a) => a?.updateType,
+            (s) => s?.updateType,
+            (p, b) => p?.updateType = b),
+        percentUploadedDecimalForm = $options.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -296,9 +295,6 @@ class _$ExportLogFilePushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ExportLogFilePushMessageExportLogFilePushMessageActions> get $serializer => ExportLogFilePushMessageExportLogFilePushMessageActions.serializer;
 
   FullType _$fullType;
   @override

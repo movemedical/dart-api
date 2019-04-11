@@ -187,12 +187,9 @@ class _$CreateDelegateApiDelegateActions
   _$CreateDelegateApiDelegateActions._(this.$options)
       : $replace = $options.action<CreateDelegateApiDelegate>(
             '\$replace', (a) => a?.$replace),
-        delegateId = $options.actionField<String>(
-            'delegateId',
-            (a) => a?.delegateId,
-            (s) => s?.delegateId,
-            (p, b) => p?.delegateId = b),
-        delegateType = $options.actionField<DelegateType>(
+        delegateId = $options.field<String>('delegateId', (a) => a?.delegateId,
+            (s) => s?.delegateId, (p, b) => p?.delegateId = b),
+        delegateType = $options.field<DelegateType>(
             'delegateType',
             (a) => a?.delegateType,
             (s) => s?.delegateType,
@@ -230,9 +227,6 @@ class _$CreateDelegateApiDelegateActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateDelegateApiDelegateCreateDelegateApiDelegateActions> get $serializer => CreateDelegateApiDelegateCreateDelegateApiDelegateActions.serializer;
 
   FullType _$fullType;
   @override

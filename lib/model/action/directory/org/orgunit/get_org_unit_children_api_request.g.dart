@@ -166,7 +166,7 @@ class _$GetOrgUnitChildrenApiRequestActions
   _$GetOrgUnitChildrenApiRequestActions._(this.$options)
       : $replace = $options.action<GetOrgUnitChildrenApiRequest>(
             '\$replace', (a) => a?.$replace),
-        parentId = $options.actionField<String>('parentId', (a) => a?.parentId,
+        parentId = $options.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$GetOrgUnitChildrenApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrgUnitChildrenApiRequestGetOrgUnitChildrenApiRequestActions> get $serializer => GetOrgUnitChildrenApiRequestGetOrgUnitChildrenApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

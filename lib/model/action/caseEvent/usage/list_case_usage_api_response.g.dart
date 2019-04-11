@@ -418,51 +418,41 @@ class _$ListCaseUsageApiResponseActions
   _$ListCaseUsageApiResponseActions._(this.$options)
       : $replace = $options.action<ListCaseUsageApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orders =
-            $options.actionField<BuiltList<ListCaseUsageApiCaseUsageOrder>>(
-                'orders',
-                (a) => a?.orders,
-                (s) => s?.orders,
-                (p, b) => p?.orders = b),
+        orders = $options.field<BuiltList<ListCaseUsageApiCaseUsageOrder>>(
+            'orders',
+            (a) => a?.orders,
+            (s) => s?.orders,
+            (p, b) => p?.orders = b),
         constructs =
-            $options.actionField<BuiltList<ListCaseUsageApiCaseUsageConstruct>>(
+            $options.field<BuiltList<ListCaseUsageApiCaseUsageConstruct>>(
                 'constructs',
                 (a) => a?.constructs,
                 (s) => s?.constructs,
                 (p, b) => p?.constructs = b),
-        usages = $options.actionField<BuiltList<ListCaseUsageApiUsage>>(
-            'usages',
-            (a) => a?.usages,
-            (s) => s?.usages,
-            (p, b) => p?.usages = b),
-        canEditUsage = $options.actionField<bool>(
+        usages = $options.field<BuiltList<ListCaseUsageApiUsage>>('usages',
+            (a) => a?.usages, (s) => s?.usages, (p, b) => p?.usages = b),
+        canEditUsage = $options.field<bool>(
             'canEditUsage',
             (a) => a?.canEditUsage,
             (s) => s?.canEditUsage,
             (p, b) => p?.canEditUsage = b),
-        canConfirmUsage = $options.actionField<bool>(
+        canConfirmUsage = $options.field<bool>(
             'canConfirmUsage',
             (a) => a?.canConfirmUsage,
             (s) => s?.canConfirmUsage,
             (p, b) => p?.canConfirmUsage = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        hcrId = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
         super._();
 
@@ -513,9 +503,6 @@ class _$ListCaseUsageApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseUsageApiResponseListCaseUsageApiResponseActions> get $serializer => ListCaseUsageApiResponseListCaseUsageApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

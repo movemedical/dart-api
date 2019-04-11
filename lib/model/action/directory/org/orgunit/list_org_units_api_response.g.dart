@@ -176,7 +176,7 @@ class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
   _$ListOrgUnitsApiResponseActions._(this.$options)
       : $replace = $options.action<ListOrgUnitsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orgUnits = $options.actionField<BuiltList<OrgUnit>>('orgUnits',
+        orgUnits = $options.field<BuiltList<OrgUnit>>('orgUnits',
             (a) => a?.orgUnits, (s) => s?.orgUnits, (p, b) => p?.orgUnits = b),
         super._();
 
@@ -209,9 +209,6 @@ class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgUnitsApiResponseListOrgUnitsApiResponseActions> get $serializer => ListOrgUnitsApiResponseListOrgUnitsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

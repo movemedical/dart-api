@@ -242,13 +242,13 @@ class _$ListProceduresForBizUnitProcedureApiProcedureActions
       : $replace =
             $options.action<ListProceduresForBizUnitProcedureApiProcedure>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.actionField<String>('icdCode', (a) => a?.icdCode,
+        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -292,9 +292,6 @@ class _$ListProceduresForBizUnitProcedureApiProcedureActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProceduresForBizUnitProcedureApiProcedureListProceduresForBizUnitProcedureApiProcedureActions> get $serializer => ListProceduresForBizUnitProcedureApiProcedureListProceduresForBizUnitProcedureApiProcedureActions.serializer;
 
   FullType _$fullType;
   @override

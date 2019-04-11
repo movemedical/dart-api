@@ -169,7 +169,7 @@ class _$RequestCreditHoldReportApiResponseActions
   _$RequestCreditHoldReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestCreditHoldReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -206,9 +206,6 @@ class _$RequestCreditHoldReportApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestCreditHoldReportApiResponseRequestCreditHoldReportApiResponseActions> get $serializer => RequestCreditHoldReportApiResponseRequestCreditHoldReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

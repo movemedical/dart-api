@@ -244,13 +244,12 @@ class _$ProcessVerifyApiRequestActions extends ProcessVerifyApiRequestActions {
                 (s) => s?.verifyingAtLocation,
                 (b) => b?.verifyingAtLocation,
                 (parent, builder) => parent?.verifyingAtLocation = builder)),
-        expectations =
-            $options.actionField<BuiltList<ProcessVerifyApiExpectation>>(
-                'expectations',
-                (a) => a?.expectations,
-                (s) => s?.expectations,
-                (p, b) => p?.expectations = b),
-        loose = $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
+        expectations = $options.field<BuiltList<ProcessVerifyApiExpectation>>(
+            'expectations',
+            (a) => a?.expectations,
+            (s) => s?.expectations,
+            (p, b) => p?.expectations = b),
+        loose = $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
             'loose', (a) => a?.loose, (s) => s?.loose, (p, b) => p?.loose = b),
         super._();
 
@@ -293,9 +292,6 @@ class _$ProcessVerifyApiRequestActions extends ProcessVerifyApiRequestActions {
     super.$middleware(middleware);
     verifyingAtLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessVerifyApiRequestProcessVerifyApiRequestActions> get $serializer => ProcessVerifyApiRequestProcessVerifyApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

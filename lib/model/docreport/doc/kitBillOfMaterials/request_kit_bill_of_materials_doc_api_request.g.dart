@@ -297,19 +297,16 @@ class _$RequestKitBillOfMaterialsDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        kitItemId = $options.actionField<String>(
-            'kitItemId',
-            (a) => a?.kitItemId,
-            (s) => s?.kitItemId,
-            (p, b) => p?.kitItemId = b),
-        kitItemVersionId = $options.actionField<String>(
+        kitItemId = $options.field<String>('kitItemId', (a) => a?.kitItemId,
+            (s) => s?.kitItemId, (p, b) => p?.kitItemId = b),
+        kitItemVersionId = $options.field<String>(
             'kitItemVersionId',
             (a) => a?.kitItemVersionId,
             (s) => s?.kitItemVersionId,
@@ -360,9 +357,6 @@ class _$RequestKitBillOfMaterialsDocApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestKitBillOfMaterialsDocApiRequestRequestKitBillOfMaterialsDocApiRequestActions> get $serializer => RequestKitBillOfMaterialsDocApiRequestRequestKitBillOfMaterialsDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

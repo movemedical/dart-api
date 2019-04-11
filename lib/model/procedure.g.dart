@@ -189,11 +189,11 @@ class _$ProcedureActions extends ProcedureActions {
 
   _$ProcedureActions._(this.$options)
       : $replace = $options.action<Procedure>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        bodySideRequired = $options.actionField<bool>(
+        bodySideRequired = $options.field<bool>(
             'bodySideRequired',
             (a) => a?.bodySideRequired,
             (s) => s?.bodySideRequired,
@@ -231,9 +231,6 @@ class _$ProcedureActions extends ProcedureActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcedureProcedureActions> get $serializer => ProcedureProcedureActions.serializer;
 
   FullType _$fullType;
   @override

@@ -108,9 +108,6 @@ class _$BuildVerifyApi extends BuildVerifyApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateBuildVerifyApi> get $serializer => CommandStateBuildVerifyApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

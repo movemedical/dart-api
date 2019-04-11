@@ -803,55 +803,55 @@ class _$ListSalesOrdersApiRequestActions
   _$ListSalesOrdersApiRequestActions._(this.$options)
       : $replace = $options.action<ListSalesOrdersApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customerIds = $options.actionField<BuiltList<String>>(
+        customerIds = $options.field<BuiltList<String>>(
             'customerIds',
             (a) => a?.customerIds,
             (s) => s?.customerIds,
             (p, b) => p?.customerIds = b),
-        orderStatuses = $options.actionField<BuiltList<OrderStatus>>(
+        orderStatuses = $options.field<BuiltList<OrderStatus>>(
             'orderStatuses',
             (a) => a?.orderStatuses,
             (s) => s?.orderStatuses,
             (p, b) => p?.orderStatuses = b),
-        orderReasonIds = $options.actionField<BuiltList<String>>(
+        orderReasonIds = $options.field<BuiltList<String>>(
             'orderReasonIds',
             (a) => a?.orderReasonIds,
             (s) => s?.orderReasonIds,
             (p, b) => p?.orderReasonIds = b),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        locationTypes = $options.actionField<BuiltList<LocationType>>(
+        locationTypes = $options.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.actionField<BuiltList<String>>(
+        itemCategoryIds = $options.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        createdByContactIds = $options.actionField<BuiltList<String>>(
+        createdByContactIds = $options.field<BuiltList<String>>(
             'createdByContactIds',
             (a) => a?.createdByContactIds,
             (s) => s?.createdByContactIds,
             (p, b) => p?.createdByContactIds = b),
-        hcrIds = $options.actionField<BuiltList<String>>('hcrIds',
-            (a) => a?.hcrIds, (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        teamIds = $options.actionField<BuiltList<String>>('teamIds',
+        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+            (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
+        teamIds = $options.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.actionField<BuiltList<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.actionField<BuiltList<String>>(
+        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        serialIds = $options.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
@@ -863,31 +863,28 @@ class _$ListSalesOrdersApiRequestActions
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
-        hasErpError = $options.actionField<bool>(
-            'hasErpError',
-            (a) => a?.hasErpError,
-            (s) => s?.hasErpError,
-            (p, b) => p?.hasErpError = b),
-        billOnly = $options.actionField<bool>('billOnly', (a) => a?.billOnly,
+        hasErpError = $options.field<bool>('hasErpError', (a) => a?.hasErpError,
+            (s) => s?.hasErpError, (p, b) => p?.hasErpError = b),
+        billOnly = $options.field<bool>('billOnly', (a) => a?.billOnly,
             (s) => s?.billOnly, (p, b) => p?.billOnly = b),
-        erpOrderNumberSearch = $options.actionField<String>(
+        erpOrderNumberSearch = $options.field<String>(
             'erpOrderNumberSearch',
             (a) => a?.erpOrderNumberSearch,
             (s) => s?.erpOrderNumberSearch,
             (p, b) => p?.erpOrderNumberSearch = b),
-        poNumberSearch = $options.actionField<String>(
+        poNumberSearch = $options.field<String>(
             'poNumberSearch',
             (a) => a?.poNumberSearch,
             (s) => s?.poNumberSearch,
             (p, b) => p?.poNumberSearch = b),
-        pendingPo = $options.actionField<bool>('pendingPo', (a) => a?.pendingPo,
+        pendingPo = $options.field<bool>('pendingPo', (a) => a?.pendingPo,
             (s) => s?.pendingPo, (p, b) => p?.pendingPo = b),
-        orderNumber = $options.actionField<String>(
+        orderNumber = $options.field<String>(
             'orderNumber',
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
             (p, b) => p?.orderNumber = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -991,9 +988,6 @@ class _$ListSalesOrdersApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSalesOrdersApiRequestListSalesOrdersApiRequestActions> get $serializer => ListSalesOrdersApiRequestListSalesOrdersApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

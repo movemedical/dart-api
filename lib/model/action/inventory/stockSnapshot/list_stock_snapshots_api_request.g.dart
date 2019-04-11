@@ -203,7 +203,7 @@ class _$ListStockSnapshotsApiRequestActions
   _$ListStockSnapshotsApiRequestActions._(this.$options)
       : $replace = $options.action<ListStockSnapshotsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -253,9 +253,6 @@ class _$ListStockSnapshotsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockSnapshotsApiRequestListStockSnapshotsApiRequestActions> get $serializer => ListStockSnapshotsApiRequestListStockSnapshotsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

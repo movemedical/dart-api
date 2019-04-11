@@ -692,90 +692,81 @@ class _$DBGeneratedDocReportActions extends DBGeneratedDocReportActions {
   _$DBGeneratedDocReportActions._(this.$options)
       : $replace = $options.action<DBGeneratedDocReport>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        generatedByUserId = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        generatedByUserId = $options.field<String>(
             'generatedByUserId',
             (a) => a?.generatedByUserId,
             (s) => s?.generatedByUserId,
             (p, b) => p?.generatedByUserId = b),
-        scheduledReportId = $options.actionField<String>(
+        scheduledReportId = $options.field<String>(
             'scheduledReportId',
             (a) => a?.scheduledReportId,
             (s) => s?.scheduledReportId,
             (p, b) => p?.scheduledReportId = b),
-        docReportType = $options.actionField<DocReportType>(
+        docReportType = $options.field<DocReportType>(
             'docReportType',
             (a) => a?.docReportType,
             (s) => s?.docReportType,
             (p, b) => p?.docReportType = b),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        requestClassName = $options.actionField<String>(
+        requestClassName = $options.field<String>(
             'requestClassName',
             (a) => a?.requestClassName,
             (s) => s?.requestClassName,
             (p, b) => p?.requestClassName = b),
-        parameters = $options.actionField<String>(
-            'parameters',
-            (a) => a?.parameters,
-            (s) => s?.parameters,
-            (p, b) => p?.parameters = b),
-        typedFileId = $options.actionField<String>(
+        parameters = $options.field<String>('parameters', (a) => a?.parameters,
+            (s) => s?.parameters, (p, b) => p?.parameters = b),
+        typedFileId = $options.field<String>(
             'typedFileId',
             (a) => a?.typedFileId,
             (s) => s?.typedFileId,
             (p, b) => p?.typedFileId = b),
-        displayName = $options.actionField<String>(
+        displayName = $options.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        processingTimeSeconds = $options.actionField<double>(
+        processingTimeSeconds = $options.field<double>(
             'processingTimeSeconds',
             (a) => a?.processingTimeSeconds,
             (s) => s?.processingTimeSeconds,
             (p, b) => p?.processingTimeSeconds = b),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
-        expiresOnDate = $options.actionField<DateTime>(
+        expiresOnDate = $options.field<DateTime>(
             'expiresOnDate',
             (a) => a?.expiresOnDate,
             (s) => s?.expiresOnDate,
             (p, b) => p?.expiresOnDate = b),
-        status = $options.actionField<GeneratedDocReportStatus>('status',
+        status = $options.field<GeneratedDocReportStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        timeout = $options.actionField<DateTime>('timeout', (a) => a?.timeout,
+        timeout = $options.field<DateTime>('timeout', (a) => a?.timeout,
             (s) => s?.timeout, (p, b) => p?.timeout = b),
-        attempt = $options.actionField<int>('attempt', (a) => a?.attempt,
+        attempt = $options.field<int>('attempt', (a) => a?.attempt,
             (s) => s?.attempt, (p, b) => p?.attempt = b),
-        maxDownloads = $options.actionField<int>(
+        maxDownloads = $options.field<int>(
             'maxDownloads',
             (a) => a?.maxDownloads,
             (s) => s?.maxDownloads,
             (p, b) => p?.maxDownloads = b),
-        v = $options.actionField<int>(
+        v = $options.field<int>(
             'v', (a) => a?.v, (s) => s?.v, (p, b) => p?.v = b),
         super._();
 
@@ -851,9 +842,6 @@ class _$DBGeneratedDocReportActions extends DBGeneratedDocReportActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DBGeneratedDocReportDBGeneratedDocReportActions> get $serializer => DBGeneratedDocReportDBGeneratedDocReportActions.serializer;
 
   FullType _$fullType;
   @override

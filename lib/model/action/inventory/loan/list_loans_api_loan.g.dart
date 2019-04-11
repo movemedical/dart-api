@@ -312,15 +312,15 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
   _$ListLoansApiLoanActions._(this.$options)
       : $replace =
             $options.action<ListLoansApiLoan>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<LoanStatus>('status', (a) => a?.status,
+        status = $options.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        reason = $options.actionField<LoanReason>('reason', (a) => a?.reason,
+        reason = $options.field<LoanReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
@@ -387,9 +387,6 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
     location.$middleware(middleware);
     service.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLoansApiLoanListLoansApiLoanActions> get $serializer => ListLoansApiLoanListLoansApiLoanActions.serializer;
 
   FullType _$fullType;
   @override

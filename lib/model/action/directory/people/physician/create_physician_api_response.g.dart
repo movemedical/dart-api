@@ -186,16 +186,13 @@ class _$CreatePhysicianApiResponseActions
   _$CreatePhysicianApiResponseActions._(this.$options)
       : $replace = $options.action<CreatePhysicianApiResponse>(
             '\$replace', (a) => a?.$replace),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        contactId = $options.actionField<String>(
-            'contactId',
-            (a) => a?.contactId,
-            (s) => s?.contactId,
-            (p, b) => p?.contactId = b),
+        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+            (s) => s?.contactId, (p, b) => p?.contactId = b),
         super._();
 
   factory _$CreatePhysicianApiResponseActions(
@@ -229,9 +226,6 @@ class _$CreatePhysicianApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePhysicianApiResponseCreatePhysicianApiResponseActions> get $serializer => CreatePhysicianApiResponseCreatePhysicianApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

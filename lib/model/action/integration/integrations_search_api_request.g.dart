@@ -166,7 +166,7 @@ class _$IntegrationsSearchApiRequestActions
   _$IntegrationsSearchApiRequestActions._(this.$options)
       : $replace = $options.action<IntegrationsSearchApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$IntegrationsSearchApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<IntegrationsSearchApiRequestIntegrationsSearchApiRequestActions> get $serializer => IntegrationsSearchApiRequestIntegrationsSearchApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -453,61 +453,58 @@ class _$EditAuditApiRequestActions extends EditAuditApiRequestActions {
   _$EditAuditApiRequestActions._(this.$options)
       : $replace = $options.action<EditAuditApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        referenceString = $options.actionField<String>(
+        referenceString = $options.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        type = $options.actionField<AuditType>(
+        type = $options.field<AuditType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        countingBins = $options.actionField<bool>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        countingBins = $options.field<bool>(
             'countingBins',
             (a) => a?.countingBins,
             (s) => s?.countingBins,
             (p, b) => p?.countingBins = b),
-        toteContentsRequired = $options.actionField<bool>(
+        toteContentsRequired = $options.field<bool>(
             'toteContentsRequired',
             (a) => a?.toteContentsRequired,
             (s) => s?.toteContentsRequired,
             (p, b) => p?.toteContentsRequired = b),
-        kitToteContentsRequired = $options.actionField<bool>(
+        kitToteContentsRequired = $options.field<bool>(
             'kitToteContentsRequired',
             (a) => a?.kitToteContentsRequired,
             (s) => s?.kitToteContentsRequired,
             (p, b) => p?.kitToteContentsRequired = b),
-        pkgContentsRequired = $options.actionField<bool>(
+        pkgContentsRequired = $options.field<bool>(
             'pkgContentsRequired',
             (a) => a?.pkgContentsRequired,
             (s) => s?.pkgContentsRequired,
             (p, b) => p?.pkgContentsRequired = b),
-        trayContentsRequired = $options.actionField<bool>(
+        trayContentsRequired = $options.field<bool>(
             'trayContentsRequired',
             (a) => a?.trayContentsRequired,
             (s) => s?.trayContentsRequired,
             (p, b) => p?.trayContentsRequired = b),
-        scheduledWindowStart = $options.actionField<DateTime>(
+        scheduledWindowStart = $options.field<DateTime>(
             'scheduledWindowStart',
             (a) => a?.scheduledWindowStart,
             (s) => s?.scheduledWindowStart,
             (p, b) => p?.scheduledWindowStart = b),
-        scheduledWindowEnd = $options.actionField<DateTime>(
+        scheduledWindowEnd = $options.field<DateTime>(
             'scheduledWindowEnd',
             (a) => a?.scheduledWindowEnd,
             (s) => s?.scheduledWindowEnd,
             (p, b) => p?.scheduledWindowEnd = b),
-        blind = $options.actionField<bool>(
+        blind = $options.field<bool>(
             'blind', (a) => a?.blind, (s) => s?.blind, (p, b) => p?.blind = b),
         super._();
 
@@ -563,9 +560,6 @@ class _$EditAuditApiRequestActions extends EditAuditApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<EditAuditApiRequestEditAuditApiRequestActions> get $serializer => EditAuditApiRequestEditAuditApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

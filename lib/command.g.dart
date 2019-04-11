@@ -1276,31 +1276,28 @@ class _$ApiActions extends ApiActions {
       : $replace = $options.action<ApiState>('\$replace', (a) => a?.$replace),
         push = PushDispatcher(
             () => $options.stateless<PushDispatcher>('push', (a) => a.push)),
-        appVersion = $options.actionField<String>(
-            'appVersion',
-            (a) => a?.appVersion,
-            (s) => s?.appVersion,
-            (p, b) => p?.appVersion = b),
-        platformVersion = $options.actionField<String>(
+        appVersion = $options.field<String>('appVersion', (a) => a?.appVersion,
+            (s) => s?.appVersion, (p, b) => p?.appVersion = b),
+        platformVersion = $options.field<String>(
             'platformVersion',
             (a) => a?.platformVersion,
             (s) => s?.platformVersion,
             (p, b) => p?.platformVersion = b),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
-        wsUrl = $options.actionField<String>(
+        wsUrl = $options.field<String>(
             'wsUrl', (a) => a?.wsUrl, (s) => s?.wsUrl, (p, b) => p?.wsUrl = b),
-        wsConnected = $options.actionField<DateTime>(
+        wsConnected = $options.field<DateTime>(
             'wsConnected',
             (a) => a?.wsConnected,
             (s) => s?.wsConnected,
             (p, b) => p?.wsConnected = b),
-        wsDisconnected = $options.actionField<DateTime>(
+        wsDisconnected = $options.field<DateTime>(
             'wsDisconnected',
             (a) => a?.wsDisconnected,
             (s) => s?.wsDisconnected,
             (p, b) => p?.wsDisconnected = b),
-        wsError = $options.actionField<String>('wsError', (a) => a?.wsError,
+        wsError = $options.field<String>('wsError', (a) => a?.wsError,
             (s) => s?.wsError, (p, b) => p?.wsError = b),
         loginCommand = LoginDispatcher(() =>
             $options.stateful<
@@ -1314,11 +1311,11 @@ class _$ApiActions extends ApiActions {
                 (s) => s?.loginCommand,
                 (b) => b?.loginCommand,
                 (parent, builder) => parent?.loginCommand = builder)),
-        activeLogin = $options.actionField<LoginResponse>(
+        activeLogin = $options.field<LoginResponse>(
             'activeLogin',
             (a) => a?.activeLogin,
             (s) => s?.activeLogin,
-            (p, b) => p?.activeLogin = b?.toBuilder()),
+            (p, b) => p?.activeLogin = b),
         setupCommand = GetUiSetupMobileApi(() => $options.stateful<
                 CommandState<ApiCommand<GetUiSetupMobileApiRequest>,
                     ApiResult<GetUiSetupMobileApiResponse>>,
@@ -1330,11 +1327,11 @@ class _$ApiActions extends ApiActions {
             (s) => s?.setupCommand,
             (b) => b?.setupCommand,
             (parent, builder) => parent?.setupCommand = builder)),
-        activeSetup = $options.actionField<GetUiSetupMobileApiResponse>(
+        activeSetup = $options.field<GetUiSetupMobileApiResponse>(
             'activeSetup',
             (a) => a?.activeSetup,
             (s) => s?.activeSetup,
-            (p, b) => p?.activeSetup = b?.toBuilder()),
+            (p, b) => p?.activeSetup = b),
         super._();
 
   factory _$ApiActions(ApiActionsOptions options) => _$ApiActions._(options());
@@ -1394,9 +1391,6 @@ class _$ApiActions extends ApiActions {
     setupCommand.$middleware(middleware);
   }
 
-// @override
-// Serializer<ApiStateApiActions> get $serializer => ApiStateApiActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(ApiState);
@@ -1417,11 +1411,11 @@ class _$LoginRequestActions extends LoginRequestActions {
   _$LoginRequestActions._(this.$options)
       : $replace =
             $options.action<LoginRequest>('\$replace', (a) => a?.$replace),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        password = $options.actionField<String>('password', (a) => a?.password,
+        password = $options.field<String>('password', (a) => a?.password,
             (s) => s?.password, (p, b) => p?.password = b),
-        session = $options.actionField<String>('session', (a) => a?.session,
+        session = $options.field<String>('session', (a) => a?.session,
             (s) => s?.session, (p, b) => p?.session = b),
         super._();
 
@@ -1456,9 +1450,6 @@ class _$LoginRequestActions extends LoginRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<LoginRequestLoginRequestActions> get $serializer => LoginRequestLoginRequestActions.serializer;
 
   FullType _$fullType;
   @override
@@ -1544,9 +1535,6 @@ class _$LoginDispatcher extends LoginDispatcher {
         this.$result,
         this.$progress,
       ]);
-
-// @override
-// Serializer<CommandStateLoginDispatcher> get $serializer => CommandStateLoginDispatcher.serializer;
 
   FullType _$fullType;
   @override

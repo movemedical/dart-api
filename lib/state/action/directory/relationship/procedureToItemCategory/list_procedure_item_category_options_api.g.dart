@@ -123,9 +123,6 @@ class _$ListProcedureItemCategoryOptionsApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListProcedureItemCategoryOptionsApi> get $serializer => CommandStateListProcedureItemCategoryOptionsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

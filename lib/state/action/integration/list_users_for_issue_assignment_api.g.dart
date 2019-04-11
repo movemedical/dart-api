@@ -117,9 +117,6 @@ class _$ListUsersForIssueAssignmentApi extends ListUsersForIssueAssignmentApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListUsersForIssueAssignmentApi> get $serializer => CommandStateListUsersForIssueAssignmentApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

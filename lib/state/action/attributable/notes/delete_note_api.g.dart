@@ -89,9 +89,6 @@ class _$DeleteNoteApi extends DeleteNoteApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteNoteApi> get $serializer => CommandStateDeleteNoteApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

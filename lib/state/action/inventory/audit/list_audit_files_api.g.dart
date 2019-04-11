@@ -111,9 +111,6 @@ class _$ListAuditFilesApi extends ListAuditFilesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListAuditFilesApi> get $serializer => CommandStateListAuditFilesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -183,12 +183,12 @@ class _$GetSalesOrderApiRequestActions extends GetSalesOrderApiRequestActions {
   _$GetSalesOrderApiRequestActions._(this.$options)
       : $replace = $options.action<GetSalesOrderApiRequest>(
             '\$replace', (a) => a?.$replace),
-        salesOrderId = $options.actionField<String>(
+        salesOrderId = $options.field<String>(
             'salesOrderId',
             (a) => a?.salesOrderId,
             (s) => s?.salesOrderId,
             (p, b) => p?.salesOrderId = b),
-        skipPresence = $options.actionField<bool>(
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -226,9 +226,6 @@ class _$GetSalesOrderApiRequestActions extends GetSalesOrderApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSalesOrderApiRequestGetSalesOrderApiRequestActions> get $serializer => GetSalesOrderApiRequestGetSalesOrderApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

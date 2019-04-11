@@ -170,7 +170,7 @@ class _$ReopenIntegrationIssueApiRequestActions
   _$ReopenIntegrationIssueApiRequestActions._(this.$options)
       : $replace = $options.action<ReopenIntegrationIssueApiRequest>(
             '\$replace', (a) => a?.$replace),
-        integrationIssueId = $options.actionField<String>(
+        integrationIssueId = $options.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
@@ -207,9 +207,6 @@ class _$ReopenIntegrationIssueApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReopenIntegrationIssueApiRequestReopenIntegrationIssueApiRequestActions> get $serializer => ReopenIntegrationIssueApiRequestReopenIntegrationIssueApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

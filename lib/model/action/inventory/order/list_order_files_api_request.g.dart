@@ -231,7 +231,7 @@ class _$ListOrderFilesApiRequestActions
   _$ListOrderFilesApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrderFilesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -294,9 +294,6 @@ class _$ListOrderFilesApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrderFilesApiRequestListOrderFilesApiRequestActions> get $serializer => ListOrderFilesApiRequestListOrderFilesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -162,7 +162,7 @@ class _$DeleteProcedureApiRequestActions
   _$DeleteProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<DeleteProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$DeleteProcedureApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DeleteProcedureApiRequestDeleteProcedureApiRequestActions> get $serializer => DeleteProcedureApiRequestDeleteProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -298,31 +298,25 @@ class _$ReadBarcodeApiItemActions extends ReadBarcodeApiItemActions {
   _$ReadBarcodeApiItemActions._(this.$options)
       : $replace = $options.action<ReadBarcodeApiItem>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        moveItemType = $options.actionField<MoveItemType>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        moveItemType = $options.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        lotTracked = $options.actionField<bool>(
-            'lotTracked',
-            (a) => a?.lotTracked,
-            (s) => s?.lotTracked,
-            (p, b) => p?.lotTracked = b),
-        serialTracked = $options.actionField<bool>(
+        lotTracked = $options.field<bool>('lotTracked', (a) => a?.lotTracked,
+            (s) => s?.lotTracked, (p, b) => p?.lotTracked = b),
+        serialTracked = $options.field<bool>(
             'serialTracked',
             (a) => a?.serialTracked,
             (s) => s?.serialTracked,
@@ -369,9 +363,6 @@ class _$ReadBarcodeApiItemActions extends ReadBarcodeApiItemActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcodeApiItemReadBarcodeApiItemActions> get $serializer => ReadBarcodeApiItemReadBarcodeApiItemActions.serializer;
 
   FullType _$fullType;
   @override

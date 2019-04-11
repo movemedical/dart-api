@@ -201,17 +201,17 @@ class _$ResponsiblePartyActions extends ResponsiblePartyActions {
   _$ResponsiblePartyActions._(this.$options)
       : $replace =
             $options.action<ResponsibleParty>('\$replace', (a) => a?.$replace),
-        responsiblePartyType = $options.actionField<ResponsiblePartyType>(
+        responsiblePartyType = $options.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.actionField<String>(
+        responsiblePartyId = $options.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
             (p, b) => p?.responsiblePartyId = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -249,9 +249,6 @@ class _$ResponsiblePartyActions extends ResponsiblePartyActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ResponsiblePartyResponsiblePartyActions> get $serializer => ResponsiblePartyResponsiblePartyActions.serializer;
 
   FullType _$fullType;
   @override

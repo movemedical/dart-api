@@ -317,7 +317,7 @@ class _$StockItemActions extends StockItemActions {
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
-        rawLotNumber = $options.actionField<String>(
+        rawLotNumber = $options.field<String>(
             'rawLotNumber',
             (a) => a?.rawLotNumber,
             (s) => s?.rawLotNumber,
@@ -377,9 +377,6 @@ class _$StockItemActions extends StockItemActions {
     serial.$middleware(middleware);
     tag.$middleware(middleware);
   }
-
-// @override
-// Serializer<StockItemStockItemActions> get $serializer => StockItemStockItemActions.serializer;
 
   FullType _$fullType;
   @override

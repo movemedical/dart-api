@@ -112,9 +112,6 @@ class _$RequestPackingListApi extends RequestPackingListApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestPackingListApi> get $serializer => CommandStateRequestPackingListApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

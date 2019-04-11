@@ -167,7 +167,7 @@ class _$CaseReqPickListDocApiResponseActions
   _$CaseReqPickListDocApiResponseActions._(this.$options)
       : $replace = $options.action<CaseReqPickListDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -203,9 +203,6 @@ class _$CaseReqPickListDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CaseReqPickListDocApiResponseCaseReqPickListDocApiResponseActions> get $serializer => CaseReqPickListDocApiResponseCaseReqPickListDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

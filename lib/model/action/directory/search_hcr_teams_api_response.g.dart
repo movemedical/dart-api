@@ -177,7 +177,7 @@ class _$SearchHcrTeamsApiResponseActions
   _$SearchHcrTeamsApiResponseActions._(this.$options)
       : $replace = $options.action<SearchHcrTeamsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<HcrTeam>>(
+        data = $options.field<BuiltList<HcrTeam>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         super._();
 
@@ -210,9 +210,6 @@ class _$SearchHcrTeamsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchHcrTeamsApiResponseSearchHcrTeamsApiResponseActions> get $serializer => SearchHcrTeamsApiResponseSearchHcrTeamsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

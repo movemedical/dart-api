@@ -207,9 +207,9 @@ class _$ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionActions
       : $replace = $options
             .action<ListBizUnitInventoryTypeOptionsApiInventoryTypeOption>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -247,9 +247,6 @@ class _$ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionListBizUnitInventoryTypeOptionsApiInventoryTypeOptionActions> get $serializer => ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionListBizUnitInventoryTypeOptionsApiInventoryTypeOptionActions.serializer;
 
   FullType _$fullType;
   @override

@@ -162,7 +162,7 @@ class _$CreateProcedureApiResponseActions
   _$CreateProcedureApiResponseActions._(this.$options)
       : $replace = $options.action<CreateProcedureApiResponse>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$CreateProcedureApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateProcedureApiResponseCreateProcedureApiResponseActions> get $serializer => CreateProcedureApiResponseCreateProcedureApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

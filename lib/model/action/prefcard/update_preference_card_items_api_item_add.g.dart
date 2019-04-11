@@ -191,9 +191,9 @@ class _$UpdatePreferenceCardItemsApiItemAddActions
   _$UpdatePreferenceCardItemsApiItemAddActions._(this.$options)
       : $replace = $options.action<UpdatePreferenceCardItemsApiItemAdd>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -229,9 +229,6 @@ class _$UpdatePreferenceCardItemsApiItemAddActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdatePreferenceCardItemsApiItemAddUpdatePreferenceCardItemsApiItemAddActions> get $serializer => UpdatePreferenceCardItemsApiItemAddUpdatePreferenceCardItemsApiItemAddActions.serializer;
 
   FullType _$fullType;
   @override

@@ -273,7 +273,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
             (s) => s?.scan,
             (b) => b?.scan,
             (parent, builder) => parent?.scan = builder)),
-        multipleMatches = $options.actionField<bool>(
+        multipleMatches = $options.field<bool>(
             'multipleMatches',
             (a) => a?.multipleMatches,
             (s) => s?.multipleMatches,
@@ -341,9 +341,6 @@ class _$BarcodeScansToStockApiBarcodeStockActions
     stockSummary.$middleware(middleware);
     stockItem.$middleware(middleware);
   }
-
-// @override
-// Serializer<BarcodeScansToStockApiBarcodeStockBarcodeScansToStockApiBarcodeStockActions> get $serializer => BarcodeScansToStockApiBarcodeStockBarcodeScansToStockApiBarcodeStockActions.serializer;
 
   FullType _$fullType;
   @override

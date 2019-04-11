@@ -439,53 +439,50 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
   _$ListHcrMatrixApiHcrMatrixDetailActions._(this.$options)
       : $replace = $options.action<ListHcrMatrixApiHcrMatrixDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamText = $options.actionField<String>('teamText', (a) => a?.teamText,
+        teamText = $options.field<String>('teamText', (a) => a?.teamText,
             (s) => s?.teamText, (p, b) => p?.teamText = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        facilityText = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        facilityText = $options.field<String>(
             'facilityText',
             (a) => a?.facilityText,
             (s) => s?.facilityText,
             (p, b) => p?.facilityText = b),
-        allFacilities = $options.actionField<bool>(
+        allFacilities = $options.field<bool>(
             'allFacilities',
             (a) => a?.allFacilities,
             (s) => s?.allFacilities,
             (p, b) => p?.allFacilities = b),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianText = $options.actionField<String>(
+        physicianText = $options.field<String>(
             'physicianText',
             (a) => a?.physicianText,
             (s) => s?.physicianText,
             (p, b) => p?.physicianText = b),
-        allPhysicians = $options.actionField<bool>(
+        allPhysicians = $options.field<bool>(
             'allPhysicians',
             (a) => a?.allPhysicians,
             (s) => s?.allPhysicians,
             (p, b) => p?.allPhysicians = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        procedureText = $options.actionField<String>(
+        procedureText = $options.field<String>(
             'procedureText',
             (a) => a?.procedureText,
             (s) => s?.procedureText,
             (p, b) => p?.procedureText = b),
-        allProcedures = $options.actionField<bool>(
+        allProcedures = $options.field<bool>(
             'allProcedures',
             (a) => a?.allProcedures,
             (s) => s?.allProcedures,
@@ -544,9 +541,6 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHcrMatrixApiHcrMatrixDetailListHcrMatrixApiHcrMatrixDetailActions> get $serializer => ListHcrMatrixApiHcrMatrixDetailListHcrMatrixApiHcrMatrixDetailActions.serializer;
 
   FullType _$fullType;
   @override

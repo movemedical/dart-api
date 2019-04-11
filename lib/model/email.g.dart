@@ -186,11 +186,11 @@ class _$EmailActions extends EmailActions {
 
   _$EmailActions._(this.$options)
       : $replace = $options.action<Email>('\$replace', (a) => a?.$replace),
-        user = $options.actionField<String>(
+        user = $options.field<String>(
             'user', (a) => a?.user, (s) => s?.user, (p, b) => p?.user = b),
-        domain = $options.actionField<String>('domain', (a) => a?.domain,
+        domain = $options.field<String>('domain', (a) => a?.domain,
             (s) => s?.domain, (p, b) => p?.domain = b),
-        suffix = $options.actionField<String>('suffix', (a) => a?.suffix,
+        suffix = $options.field<String>('suffix', (a) => a?.suffix,
             (s) => s?.suffix, (p, b) => p?.suffix = b),
         super._();
 
@@ -225,9 +225,6 @@ class _$EmailActions extends EmailActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<EmailEmailActions> get $serializer => EmailEmailActions.serializer;
 
   FullType _$fullType;
   @override

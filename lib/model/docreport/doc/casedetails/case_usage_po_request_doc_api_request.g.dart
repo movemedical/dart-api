@@ -265,14 +265,14 @@ class _$CaseUsagePoRequestDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -321,9 +321,6 @@ class _$CaseUsagePoRequestDocApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<CaseUsagePoRequestDocApiRequestCaseUsagePoRequestDocApiRequestActions> get $serializer => CaseUsagePoRequestDocApiRequestCaseUsagePoRequestDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

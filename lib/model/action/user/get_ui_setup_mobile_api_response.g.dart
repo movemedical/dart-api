@@ -285,18 +285,17 @@ class _$GetUiSetupMobileApiResponseActions
             (b) => b?.uiSetup,
             (parent, builder) => parent?.uiSetup = builder)),
         dashboardWidgets =
-            $options.actionField<BuiltList<GetUiSetupMobileApiDashboardWidget>>(
+            $options.field<BuiltList<GetUiSetupMobileApiDashboardWidget>>(
                 'dashboardWidgets',
                 (a) => a?.dashboardWidgets,
                 (s) => s?.dashboardWidgets,
                 (p, b) => p?.dashboardWidgets = b),
-        tabBarElements =
-            $options.actionField<BuiltList<MobileNavigationElement>>(
-                'tabBarElements',
-                (a) => a?.tabBarElements,
-                (s) => s?.tabBarElements,
-                (p, b) => p?.tabBarElements = b),
-        reports = $options.actionField<BuiltList<MobileReport>>('reports',
+        tabBarElements = $options.field<BuiltList<MobileNavigationElement>>(
+            'tabBarElements',
+            (a) => a?.tabBarElements,
+            (s) => s?.tabBarElements,
+            (p, b) => p?.tabBarElements = b),
+        reports = $options.field<BuiltList<MobileReport>>('reports',
             (a) => a?.reports, (s) => s?.reports, (p, b) => p?.reports = b),
         super._();
 
@@ -341,9 +340,6 @@ class _$GetUiSetupMobileApiResponseActions
     super.$middleware(middleware);
     uiSetup.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupMobileApiResponseGetUiSetupMobileApiResponseActions> get $serializer => GetUiSetupMobileApiResponseGetUiSetupMobileApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

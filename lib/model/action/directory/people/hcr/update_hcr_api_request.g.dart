@@ -524,18 +524,12 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
   _$UpdateHcrApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateHcrApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
                 'name',
@@ -543,7 +537,7 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        hcrType = $options.actionField<HcrType>('hcrType', (a) => a?.hcrType,
+        hcrType = $options.field<HcrType>('hcrType', (a) => a?.hcrType,
             (s) => s?.hcrType, (p, b) => p?.hcrType = b),
         workPhoneNumber = PhoneNumberActions(() => $options
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
@@ -566,12 +560,12 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        workingHomeId = $options.actionField<String>(
+        workingHomeId = $options.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.actionField<String>(
+        workingAtId = $options.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
@@ -583,16 +577,13 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -662,9 +653,6 @@ class _$UpdateHcrApiRequestActions extends UpdateHcrApiRequestActions {
     faxNumber.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateHcrApiRequestUpdateHcrApiRequestActions> get $serializer => UpdateHcrApiRequestUpdateHcrApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

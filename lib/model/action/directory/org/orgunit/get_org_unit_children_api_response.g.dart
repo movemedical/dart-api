@@ -184,9 +184,8 @@ class _$GetOrgUnitChildrenApiResponseActions
   _$GetOrgUnitChildrenApiResponseActions._(this.$options)
       : $replace = $options.action<GetOrgUnitChildrenApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data =
-            $options.actionField<BuiltList<GetOrgUnitChildrenApiOrgUnitDetail>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        data = $options.field<BuiltList<GetOrgUnitChildrenApiOrgUnitDetail>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         super._();
 
   factory _$GetOrgUnitChildrenApiResponseActions(
@@ -218,9 +217,6 @@ class _$GetOrgUnitChildrenApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrgUnitChildrenApiResponseGetOrgUnitChildrenApiResponseActions> get $serializer => GetOrgUnitChildrenApiResponseGetOrgUnitChildrenApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

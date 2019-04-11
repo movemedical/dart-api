@@ -197,7 +197,7 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
   _$ListLoanLinesApiRequestActions._(this.$options)
       : $replace = $options.action<ListLoanLinesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        loanId = $options.actionField<String>('loanId', (a) => a?.loanId,
+        loanId = $options.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -247,9 +247,6 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLoanLinesApiRequestListLoanLinesApiRequestActions> get $serializer => ListLoanLinesApiRequestListLoanLinesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -238,16 +238,16 @@ class _$SaveCaseUsagesApiUsageOrderActions
   _$SaveCaseUsagesApiUsageOrderActions._(this.$options)
       : $replace = $options.action<SaveCaseUsagesApiUsageOrder>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        referenceString = $options.actionField<String>(
+        referenceString = $options.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        billToAddressId = $options.actionField<String>(
+        billToAddressId = $options.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
@@ -289,9 +289,6 @@ class _$SaveCaseUsagesApiUsageOrderActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveCaseUsagesApiUsageOrderSaveCaseUsagesApiUsageOrderActions> get $serializer => SaveCaseUsagesApiUsageOrderSaveCaseUsagesApiUsageOrderActions.serializer;
 
   FullType _$fullType;
   @override

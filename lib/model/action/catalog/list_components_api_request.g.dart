@@ -201,7 +201,7 @@ class _$ListComponentsApiRequestActions
   _$ListComponentsApiRequestActions._(this.$options)
       : $replace = $options.action<ListComponentsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
@@ -254,9 +254,6 @@ class _$ListComponentsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListComponentsApiRequestListComponentsApiRequestActions> get $serializer => ListComponentsApiRequestListComponentsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

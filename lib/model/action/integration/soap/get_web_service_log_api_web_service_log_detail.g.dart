@@ -240,19 +240,19 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
   _$GetWebServiceLogApiWebServiceLogDetailActions._(this.$options)
       : $replace = $options.action<GetWebServiceLogApiWebServiceLogDetail>(
             '\$replace', (a) => a?.$replace),
-        interfaceKey = $options.actionField<String>(
+        interfaceKey = $options.field<String>(
             'interfaceKey',
             (a) => a?.interfaceKey,
             (s) => s?.interfaceKey,
             (p, b) => p?.interfaceKey = b),
-        outcomeMessage = $options.actionField<String>(
+        outcomeMessage = $options.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
             (p, b) => p?.outcomeMessage = b),
-        request = $options.actionField<String>('request', (a) => a?.request,
+        request = $options.field<String>('request', (a) => a?.request,
             (s) => s?.request, (p, b) => p?.request = b),
-        response = $options.actionField<String>('response', (a) => a?.response,
+        response = $options.field<String>('response', (a) => a?.response,
             (s) => s?.response, (p, b) => p?.response = b),
         super._();
 
@@ -292,9 +292,6 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetWebServiceLogApiWebServiceLogDetailGetWebServiceLogApiWebServiceLogDetailActions> get $serializer => GetWebServiceLogApiWebServiceLogDetailGetWebServiceLogApiWebServiceLogDetailActions.serializer;
 
   FullType _$fullType;
   @override

@@ -114,9 +114,6 @@ class _$RequestBackOrderReportApi extends RequestBackOrderReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestBackOrderReportApi> get $serializer => CommandStateRequestBackOrderReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

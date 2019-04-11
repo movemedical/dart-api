@@ -416,45 +416,42 @@ class _$ListWebServiceLogsApiWebServiceLogActions
   _$ListWebServiceLogsApiWebServiceLogActions._(this.$options)
       : $replace = $options.action<ListWebServiceLogsApiWebServiceLog>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        interfaceKey = $options.actionField<String>(
+        interfaceKey = $options.field<String>(
             'interfaceKey',
             (a) => a?.interfaceKey,
             (s) => s?.interfaceKey,
             (p, b) => p?.interfaceKey = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        outcome = $options.actionField<bool>('outcome', (a) => a?.outcome,
+        outcome = $options.field<bool>('outcome', (a) => a?.outcome,
             (s) => s?.outcome, (p, b) => p?.outcome = b),
-        outcomeMessage = $options.actionField<String>(
+        outcomeMessage = $options.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
             (p, b) => p?.outcomeMessage = b),
-        webServiceType = $options.actionField<WebServiceType>(
+        webServiceType = $options.field<WebServiceType>(
             'webServiceType',
             (a) => a?.webServiceType,
             (s) => s?.webServiceType,
             (p, b) => p?.webServiceType = b),
-        direction = $options.actionField<WebServiceDirection>(
+        direction = $options.field<WebServiceDirection>(
             'direction',
             (a) => a?.direction,
             (s) => s?.direction,
             (p, b) => p?.direction = b),
-        logInitiator = $options.actionField<WebServiceLogInitiatorType>(
+        logInitiator = $options.field<WebServiceLogInitiatorType>(
             'logInitiator',
             (a) => a?.logInitiator,
             (s) => s?.logInitiator,
             (p, b) => p?.logInitiator = b),
-        request = $options.actionField<String>('request', (a) => a?.request,
+        request = $options.field<String>('request', (a) => a?.request,
             (s) => s?.request, (p, b) => p?.request = b),
-        response = $options.actionField<String>('response', (a) => a?.response,
+        response = $options.field<String>('response', (a) => a?.response,
             (s) => s?.response, (p, b) => p?.response = b),
         super._();
 
@@ -508,9 +505,6 @@ class _$ListWebServiceLogsApiWebServiceLogActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListWebServiceLogsApiWebServiceLogListWebServiceLogsApiWebServiceLogActions> get $serializer => ListWebServiceLogsApiWebServiceLogListWebServiceLogsApiWebServiceLogActions.serializer;
 
   FullType _$fullType;
   @override

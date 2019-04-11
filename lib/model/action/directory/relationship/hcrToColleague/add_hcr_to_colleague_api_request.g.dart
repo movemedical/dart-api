@@ -188,9 +188,9 @@ class _$AddHcrToColleagueApiRequestActions
   _$AddHcrToColleagueApiRequestActions._(this.$options)
       : $replace = $options.action<AddHcrToColleagueApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        colleagueId = $options.actionField<String>(
+        colleagueId = $options.field<String>(
             'colleagueId',
             (a) => a?.colleagueId,
             (s) => s?.colleagueId,
@@ -228,9 +228,6 @@ class _$AddHcrToColleagueApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddHcrToColleagueApiRequestAddHcrToColleagueApiRequestActions> get $serializer => AddHcrToColleagueApiRequestAddHcrToColleagueApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

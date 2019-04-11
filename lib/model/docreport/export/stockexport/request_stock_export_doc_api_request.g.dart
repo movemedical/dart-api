@@ -246,8 +246,8 @@ class _$RequestStockExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
         stockRequest = ListStockSummaryApiRequestActions(() =>
             $options.stateful<
                     ListStockSummaryApiRequest,
@@ -301,9 +301,6 @@ class _$RequestStockExportDocApiRequestActions
     docReport.$middleware(middleware);
     stockRequest.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestStockExportDocApiRequestRequestStockExportDocApiRequestActions> get $serializer => RequestStockExportDocApiRequestRequestStockExportDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -299,32 +299,32 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
   _$ListFacilityPhysicianLinksApiPhysicianLinkActions._(this.$options)
       : $replace = $options.action<ListFacilityPhysicianLinksApiPhysicianLink>(
             '\$replace', (a) => a?.$replace),
-        physicianToFacilityId = $options.actionField<String>(
+        physicianToFacilityId = $options.field<String>(
             'physicianToFacilityId',
             (a) => a?.physicianToFacilityId,
             (s) => s?.physicianToFacilityId,
             (p, b) => p?.physicianToFacilityId = b),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        physicianName = $options.actionField<String>(
+        physicianName = $options.field<String>(
             'physicianName',
             (a) => a?.physicianName,
             (s) => s?.physicianName,
             (p, b) => p?.physicianName = b),
-        physicianType = $options.actionField<PhysicianType>(
+        physicianType = $options.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
             (p, b) => p?.physicianType = b),
-        physicianNpi = $options.actionField<String>(
+        physicianNpi = $options.field<String>(
             'physicianNpi',
             (a) => a?.physicianNpi,
             (s) => s?.physicianNpi,
             (p, b) => p?.physicianNpi = b),
-        physicianActive = $options.actionField<bool>(
+        physicianActive = $options.field<bool>(
             'physicianActive',
             (a) => a?.physicianActive,
             (s) => s?.physicianActive,
@@ -371,9 +371,6 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListFacilityPhysicianLinksApiPhysicianLinkListFacilityPhysicianLinksApiPhysicianLinkActions> get $serializer => ListFacilityPhysicianLinksApiPhysicianLinkListFacilityPhysicianLinksApiPhysicianLinkActions.serializer;
 
   FullType _$fullType;
   @override

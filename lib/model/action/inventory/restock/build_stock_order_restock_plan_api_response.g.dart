@@ -341,17 +341,16 @@ class _$BuildStockOrderRestockPlanApiResponseActions
   _$BuildStockOrderRestockPlanApiResponseActions._(this.$options)
       : $replace = $options.action<BuildStockOrderRestockPlanApiResponse>(
             '\$replace', (a) => a?.$replace),
-        replenishmentAvailable = $options.actionField<bool>(
+        replenishmentAvailable = $options.field<bool>(
             'replenishmentAvailable',
             (a) => a?.replenishmentAvailable,
             (s) => s?.replenishmentAvailable,
             (p, b) => p?.replenishmentAvailable = b),
-        system =
-            $options.actionField<BuildStockOrderRestockPlanApiRestockSystem>(
-                'system',
-                (a) => a?.system,
-                (s) => s?.system,
-                (p, b) => p?.system = b),
+        system = $options.field<BuildStockOrderRestockPlanApiRestockSystem>(
+            'system',
+            (a) => a?.system,
+            (s) => s?.system,
+            (p, b) => p?.system = b),
         usingExistingOrder = OrderHeaderLiteActions(() => $options.stateful<
                 OrderHeaderLite,
                 OrderHeaderLiteBuilder,
@@ -361,20 +360,20 @@ class _$BuildStockOrderRestockPlanApiResponseActions
             (s) => s?.usingExistingOrder,
             (b) => b?.usingExistingOrder,
             (parent, builder) => parent?.usingExistingOrder = builder)),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        restockItems = $options
-            .actionField<BuiltList<BuildStockOrderRestockPlanApiRestockItem>>(
+        restockItems =
+            $options.field<BuiltList<BuildStockOrderRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
                 (p, b) => p?.restockItems = b),
-        pendingRestockItems = $options.actionField<
-                BuiltList<BuildStockOrderRestockPlanApiPendingRestockItem>>(
-            'pendingRestockItems',
-            (a) => a?.pendingRestockItems,
-            (s) => s?.pendingRestockItems,
-            (p, b) => p?.pendingRestockItems = b),
+        pendingRestockItems = $options
+            .field<BuiltList<BuildStockOrderRestockPlanApiPendingRestockItem>>(
+                'pendingRestockItems',
+                (a) => a?.pendingRestockItems,
+                (s) => s?.pendingRestockItems,
+                (p, b) => p?.pendingRestockItems = b),
         super._();
 
   factory _$BuildStockOrderRestockPlanApiResponseActions(
@@ -423,9 +422,6 @@ class _$BuildStockOrderRestockPlanApiResponseActions
     super.$middleware(middleware);
     usingExistingOrder.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildStockOrderRestockPlanApiResponseBuildStockOrderRestockPlanApiResponseActions> get $serializer => BuildStockOrderRestockPlanApiResponseBuildStockOrderRestockPlanApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

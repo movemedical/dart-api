@@ -195,7 +195,7 @@ class _$ListUsersForIssueAssignmentApiResponseActions
       : $replace = $options.action<ListUsersForIssueAssignmentApiResponse>(
             '\$replace', (a) => a?.$replace),
         users = $options
-            .actionField<BuiltList<ListUsersForIssueAssignmentApiDisplayUser>>(
+            .field<BuiltList<ListUsersForIssueAssignmentApiDisplayUser>>(
                 'users',
                 (a) => a?.users,
                 (s) => s?.users,
@@ -232,9 +232,6 @@ class _$ListUsersForIssueAssignmentApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUsersForIssueAssignmentApiResponseListUsersForIssueAssignmentApiResponseActions> get $serializer => ListUsersForIssueAssignmentApiResponseListUsersForIssueAssignmentApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

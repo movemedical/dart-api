@@ -221,10 +221,10 @@ class _$ListProceduresForBizUnitProcedureApiResponseActions
       : $replace =
             $options.action<ListProceduresForBizUnitProcedureApiResponse>(
                 '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
-                BuiltList<ListProceduresForBizUnitProcedureApiProcedure>>(
-            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options
+            .field<BuiltList<ListProceduresForBizUnitProcedureApiProcedure>>(
+                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -260,9 +260,6 @@ class _$ListProceduresForBizUnitProcedureApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProceduresForBizUnitProcedureApiResponseListProceduresForBizUnitProcedureApiResponseActions> get $serializer => ListProceduresForBizUnitProcedureApiResponseListProceduresForBizUnitProcedureApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

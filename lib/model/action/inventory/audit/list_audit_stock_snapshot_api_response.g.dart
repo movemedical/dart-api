@@ -207,10 +207,9 @@ class _$ListAuditStockSnapshotApiResponseActions
   _$ListAuditStockSnapshotApiResponseActions._(this.$options)
       : $replace = $options.action<ListAuditStockSnapshotApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options
-            .actionField<BuiltList<ListAuditStockSnapshotApiAuditStock>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options.field<BuiltList<ListAuditStockSnapshotApiAuditStock>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -246,9 +245,6 @@ class _$ListAuditStockSnapshotApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditStockSnapshotApiResponseListAuditStockSnapshotApiResponseActions> get $serializer => ListAuditStockSnapshotApiResponseListAuditStockSnapshotApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

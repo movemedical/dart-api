@@ -599,39 +599,39 @@ class _$BuildVerifyApiEnteredLineActions
   _$BuildVerifyApiEnteredLineActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiEnteredLine>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        expectationId = $options.actionField<String>(
+        expectationId = $options.field<String>(
             'expectationId',
             (a) => a?.expectationId,
             (s) => s?.expectationId,
             (p, b) => p?.expectationId = b),
-        scanSequence = $options.actionField<int>(
+        scanSequence = $options.field<int>(
             'scanSequence',
             (a) => a?.scanSequence,
             (s) => s?.scanSequence,
             (p, b) => p?.scanSequence = b),
-        fillsKitStandard = $options.actionField<bool>(
+        fillsKitStandard = $options.field<bool>(
             'fillsKitStandard',
             (a) => a?.fillsKitStandard,
             (s) => s?.fillsKitStandard,
             (p, b) => p?.fillsKitStandard = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        tagId = $options.actionField<String>(
+        tagId = $options.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        expectedStockMatch = $options.actionField<String>(
+        expectedStockMatch = $options.field<String>(
             'expectedStockMatch',
             (a) => a?.expectedStockMatch,
             (s) => s?.expectedStockMatch,
@@ -646,23 +646,23 @@ class _$BuildVerifyApiEnteredLineActions
                 (s) => s?.selectedOption,
                 (b) => b?.selectedOption,
                 (parent, builder) => parent?.selectedOption = builder)),
-        options = $options
-            .actionField<BuiltList<BuildVerifyApiExtraEnteredLineOption>>(
+        options =
+            $options.field<BuiltList<BuildVerifyApiExtraEnteredLineOption>>(
                 'options',
                 (a) => a?.options,
                 (s) => s?.options,
                 (p, b) => p?.options = b),
-        solvedByEnteredLineId = $options.actionField<String>(
+        solvedByEnteredLineId = $options.field<String>(
             'solvedByEnteredLineId',
             (a) => a?.solvedByEnteredLineId,
             (s) => s?.solvedByEnteredLineId,
             (p, b) => p?.solvedByEnteredLineId = b),
-        solvedByNeedsUserAction = $options.actionField<bool>(
+        solvedByNeedsUserAction = $options.field<bool>(
             'solvedByNeedsUserAction',
             (a) => a?.solvedByNeedsUserAction,
             (s) => s?.solvedByNeedsUserAction,
             (p, b) => p?.solvedByNeedsUserAction = b),
-        dispositionId = $options.actionField<String>(
+        dispositionId = $options.field<String>(
             'dispositionId',
             (a) => a?.dispositionId,
             (s) => s?.dispositionId,
@@ -746,9 +746,6 @@ class _$BuildVerifyApiEnteredLineActions
     selectedOption.$middleware(middleware);
     toContainerOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiEnteredLineBuildVerifyApiEnteredLineActions> get $serializer => BuildVerifyApiEnteredLineBuildVerifyApiEnteredLineActions.serializer;
 
   FullType _$fullType;
   @override

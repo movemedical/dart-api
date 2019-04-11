@@ -220,11 +220,11 @@ class _$ListProcedureToItemCategoryApiResponseActions
   _$ListProcedureToItemCategoryApiResponseActions._(this.$options)
       : $replace = $options.action<ListProcedureToItemCategoryApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
+        data = $options.field<
                 BuiltList<
                     ListProcedureToItemCategoryApiProcedureToItemCategory>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -260,9 +260,6 @@ class _$ListProcedureToItemCategoryApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProcedureToItemCategoryApiResponseListProcedureToItemCategoryApiResponseActions> get $serializer => ListProcedureToItemCategoryApiResponseListProcedureToItemCategoryApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

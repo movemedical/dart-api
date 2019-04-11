@@ -202,9 +202,9 @@ class _$ListExportLogsApiResponseActions
   _$ListExportLogsApiResponseActions._(this.$options)
       : $replace = $options.action<ListExportLogsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListExportLogsApiExportLog>>(
+        data = $options.field<BuiltList<ListExportLogsApiExportLog>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -239,9 +239,6 @@ class _$ListExportLogsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListExportLogsApiResponseListExportLogsApiResponseActions> get $serializer => ListExportLogsApiResponseListExportLogsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

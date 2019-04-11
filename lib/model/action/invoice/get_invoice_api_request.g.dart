@@ -179,12 +179,9 @@ class _$GetInvoiceApiRequestActions extends GetInvoiceApiRequestActions {
   _$GetInvoiceApiRequestActions._(this.$options)
       : $replace = $options.action<GetInvoiceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        invoiceId = $options.actionField<String>(
-            'invoiceId',
-            (a) => a?.invoiceId,
-            (s) => s?.invoiceId,
-            (p, b) => p?.invoiceId = b),
-        skipPresence = $options.actionField<bool>(
+        invoiceId = $options.field<String>('invoiceId', (a) => a?.invoiceId,
+            (s) => s?.invoiceId, (p, b) => p?.invoiceId = b),
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -221,9 +218,6 @@ class _$GetInvoiceApiRequestActions extends GetInvoiceApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetInvoiceApiRequestGetInvoiceApiRequestActions> get $serializer => GetInvoiceApiRequestGetInvoiceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

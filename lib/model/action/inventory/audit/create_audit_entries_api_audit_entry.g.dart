@@ -571,72 +571,69 @@ class _$CreateAuditEntriesApiAuditEntryActions
   _$CreateAuditEntriesApiAuditEntryActions._(this.$options)
       : $replace = $options.action<CreateAuditEntriesApiAuditEntry>(
             '\$replace', (a) => a?.$replace),
-        auditItemId = $options.actionField<String>(
+        auditItemId = $options.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
             (s) => s?.auditItemId,
             (p, b) => p?.auditItemId = b),
-        entryType = $options.actionField<ItemCaptureType>(
+        entryType = $options.field<ItemCaptureType>(
             'entryType',
             (a) => a?.entryType,
             (s) => s?.entryType,
             (p, b) => p?.entryType = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        containerType = $options.actionField<StockContainerType>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        tagId = $options.actionField<String>(
+        tagId = $options.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        unknownItemNumber = $options.actionField<String>(
+        unknownItemNumber = $options.field<String>(
             'unknownItemNumber',
             (a) => a?.unknownItemNumber,
             (s) => s?.unknownItemNumber,
             (p, b) => p?.unknownItemNumber = b),
-        unknownLotNumber = $options.actionField<String>(
+        unknownLotNumber = $options.field<String>(
             'unknownLotNumber',
             (a) => a?.unknownLotNumber,
             (s) => s?.unknownLotNumber,
             (p, b) => p?.unknownLotNumber = b),
-        unknownSerialNumber = $options.actionField<String>(
+        unknownSerialNumber = $options.field<String>(
             'unknownSerialNumber',
             (a) => a?.unknownSerialNumber,
             (s) => s?.unknownSerialNumber,
             (p, b) => p?.unknownSerialNumber = b),
-        unknownScanValue = $options.actionField<String>(
+        unknownScanValue = $options.field<String>(
             'unknownScanValue',
             (a) => a?.unknownScanValue,
             (s) => s?.unknownScanValue,
             (p, b) => p?.unknownScanValue = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        containerString = $options.actionField<String>(
+        containerString = $options.field<String>(
             'containerString',
             (a) => a?.containerString,
             (s) => s?.containerString,
@@ -705,9 +702,6 @@ class _$CreateAuditEntriesApiAuditEntryActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateAuditEntriesApiAuditEntryCreateAuditEntriesApiAuditEntryActions> get $serializer => CreateAuditEntriesApiAuditEntryCreateAuditEntriesApiAuditEntryActions.serializer;
 
   FullType _$fullType;
   @override

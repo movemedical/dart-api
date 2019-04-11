@@ -305,34 +305,31 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
   _$OrderCustomFieldValueActions._(this.$options)
       : $replace = $options.action<OrderCustomFieldValue>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderReasonCustomFieldId = $options.actionField<String>(
+        orderReasonCustomFieldId = $options.field<String>(
             'orderReasonCustomFieldId',
             (a) => a?.orderReasonCustomFieldId,
             (s) => s?.orderReasonCustomFieldId,
             (p, b) => p?.orderReasonCustomFieldId = b),
-        booleanValue = $options.actionField<bool>(
+        booleanValue = $options.field<bool>(
             'booleanValue',
             (a) => a?.booleanValue,
             (s) => s?.booleanValue,
             (p, b) => p?.booleanValue = b),
-        stringValue = $options.actionField<String>(
+        stringValue = $options.field<String>(
             'stringValue',
             (a) => a?.stringValue,
             (s) => s?.stringValue,
             (p, b) => p?.stringValue = b),
-        dateValue = $options.actionField<DateTime>(
-            'dateValue',
-            (a) => a?.dateValue,
-            (s) => s?.dateValue,
-            (p, b) => p?.dateValue = b),
-        doubleValue = $options.actionField<double>(
+        dateValue = $options.field<DateTime>('dateValue', (a) => a?.dateValue,
+            (s) => s?.dateValue, (p, b) => p?.dateValue = b),
+        doubleValue = $options.field<double>(
             'doubleValue',
             (a) => a?.doubleValue,
             (s) => s?.doubleValue,
             (p, b) => p?.doubleValue = b),
-        longValue = $options.actionField<int>('longValue', (a) => a?.longValue,
+        longValue = $options.field<int>('longValue', (a) => a?.longValue,
             (s) => s?.longValue, (p, b) => p?.longValue = b),
         super._();
 
@@ -376,9 +373,6 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrderCustomFieldValueOrderCustomFieldValueActions> get $serializer => OrderCustomFieldValueOrderCustomFieldValueActions.serializer;
 
   FullType _$fullType;
   @override

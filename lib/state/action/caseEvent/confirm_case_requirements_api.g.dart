@@ -107,9 +107,6 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateConfirmCaseRequirementsApi> get $serializer => CommandStateConfirmCaseRequirementsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

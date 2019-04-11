@@ -97,9 +97,6 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRefreshPresenceApi> get $serializer => CommandStateRefreshPresenceApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

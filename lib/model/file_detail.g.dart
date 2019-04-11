@@ -484,42 +484,42 @@ class _$FileDetailActions extends FileDetailActions {
 
   _$FileDetailActions._(this.$options)
       : $replace = $options.action<FileDetail>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        created = $options.actionField<DateTime>('created', (a) => a?.created,
+        created = $options.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        expires = $options.actionField<DateTime>('expires', (a) => a?.expires,
+        expires = $options.field<DateTime>('expires', (a) => a?.expires,
             (s) => s?.expires, (p, b) => p?.expires = b),
-        contentType = $options.actionField<String>(
+        contentType = $options.field<String>(
             'contentType',
             (a) => a?.contentType,
             (s) => s?.contentType,
             (p, b) => p?.contentType = b),
-        md5 = $options.actionField<String>(
+        md5 = $options.field<String>(
             'md5', (a) => a?.md5, (s) => s?.md5, (p, b) => p?.md5 = b),
-        size = $options.actionField<int>(
+        size = $options.field<int>(
             'size', (a) => a?.size, (s) => s?.size, (p, b) => p?.size = b),
-        region = $options.actionField<String>('region', (a) => a?.region,
+        region = $options.field<String>('region', (a) => a?.region,
             (s) => s?.region, (p, b) => p?.region = b),
-        bucket = $options.actionField<String>('bucket', (a) => a?.bucket,
+        bucket = $options.field<String>('bucket', (a) => a?.bucket,
             (s) => s?.bucket, (p, b) => p?.bucket = b),
-        key = $options.actionField<String>(
+        key = $options.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        storageClass = $options.actionField<String>(
+        storageClass = $options.field<String>(
             'storageClass',
             (a) => a?.storageClass,
             (s) => s?.storageClass,
             (p, b) => p?.storageClass = b),
-        resource = $options.actionField<bool>('resource', (a) => a?.resource,
+        resource = $options.field<bool>('resource', (a) => a?.resource,
             (s) => s?.resource, (p, b) => p?.resource = b),
-        uploaded = $options.actionField<bool>('uploaded', (a) => a?.uploaded,
+        uploaded = $options.field<bool>('uploaded', (a) => a?.uploaded,
             (s) => s?.uploaded, (p, b) => p?.uploaded = b),
-        fileType = $options.actionField<FileType>('fileType',
-            (a) => a?.fileType, (s) => s?.fileType, (p, b) => p?.fileType = b),
+        fileType = $options.field<FileType>('fileType', (a) => a?.fileType,
+            (s) => s?.fileType, (p, b) => p?.fileType = b),
         super._();
 
   factory _$FileDetailActions(FileDetailActionsOptions options) =>
@@ -577,9 +577,6 @@ class _$FileDetailActions extends FileDetailActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FileDetailFileDetailActions> get $serializer => FileDetailFileDetailActions.serializer;
 
   FullType _$fullType;
   @override

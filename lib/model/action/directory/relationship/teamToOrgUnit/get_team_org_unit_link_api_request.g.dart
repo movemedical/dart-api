@@ -168,7 +168,7 @@ class _$GetTeamOrgUnitLinkApiRequestActions
   _$GetTeamOrgUnitLinkApiRequestActions._(this.$options)
       : $replace = $options.action<GetTeamOrgUnitLinkApiRequest>(
             '\$replace', (a) => a?.$replace),
-        teamToOrgUnitId = $options.actionField<String>(
+        teamToOrgUnitId = $options.field<String>(
             'teamToOrgUnitId',
             (a) => a?.teamToOrgUnitId,
             (s) => s?.teamToOrgUnitId,
@@ -204,9 +204,6 @@ class _$GetTeamOrgUnitLinkApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetTeamOrgUnitLinkApiRequestGetTeamOrgUnitLinkApiRequestActions> get $serializer => GetTeamOrgUnitLinkApiRequestGetTeamOrgUnitLinkApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

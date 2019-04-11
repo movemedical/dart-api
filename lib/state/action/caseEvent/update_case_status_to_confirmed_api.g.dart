@@ -111,9 +111,6 @@ class _$UpdateCaseStatusToConfirmedApi extends UpdateCaseStatusToConfirmedApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateCaseStatusToConfirmedApi> get $serializer => CommandStateUpdateCaseStatusToConfirmedApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

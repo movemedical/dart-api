@@ -88,9 +88,6 @@ class _$UpdateHcrApi extends UpdateHcrApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateHcrApi> get $serializer => CommandStateUpdateHcrApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

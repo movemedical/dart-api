@@ -317,34 +317,34 @@ class _$PrepareOrderFileUploadApiRequestActions
   _$PrepareOrderFileUploadApiRequestActions._(this.$options)
       : $replace = $options.action<PrepareOrderFileUploadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderHeaderId = $options.actionField<String>(
+        orderHeaderId = $options.field<String>(
             'orderHeaderId',
             (a) => a?.orderHeaderId,
             (s) => s?.orderHeaderId,
             (p, b) => p?.orderHeaderId = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.actionField<String>(
+        fileDescription = $options.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        orderFileType = $options.actionField<OrderFileType>(
+        orderFileType = $options.field<OrderFileType>(
             'orderFileType',
             (a) => a?.orderFileType,
             (s) => s?.orderFileType,
             (p, b) => p?.orderFileType = b),
-        estimatedSizeKb = $options.actionField<int>(
+        estimatedSizeKb = $options.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.actionField<Visibility>(
+        visibility = $options.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -393,9 +393,6 @@ class _$PrepareOrderFileUploadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareOrderFileUploadApiRequestPrepareOrderFileUploadApiRequestActions> get $serializer => PrepareOrderFileUploadApiRequestPrepareOrderFileUploadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

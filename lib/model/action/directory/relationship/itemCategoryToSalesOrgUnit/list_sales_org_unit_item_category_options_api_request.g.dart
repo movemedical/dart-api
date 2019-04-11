@@ -279,12 +279,12 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions
       : $replace =
             $options.action<ListSalesOrgUnitItemCategoryOptionsApiRequest>(
                 '\$replace', (a) => a?.$replace),
-        salesOrgUnitId = $options.actionField<String>(
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -355,9 +355,6 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSalesOrgUnitItemCategoryOptionsApiRequestListSalesOrgUnitItemCategoryOptionsApiRequestActions> get $serializer => ListSalesOrgUnitItemCategoryOptionsApiRequestListSalesOrgUnitItemCategoryOptionsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

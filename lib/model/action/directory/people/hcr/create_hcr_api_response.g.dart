@@ -201,15 +201,12 @@ class _$CreateHcrApiResponseActions extends CreateHcrApiResponseActions {
   _$CreateHcrApiResponseActions._(this.$options)
       : $replace = $options.action<CreateHcrApiResponse>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        contactId = $options.actionField<String>(
-            'contactId',
-            (a) => a?.contactId,
-            (s) => s?.contactId,
-            (p, b) => p?.contactId = b),
+        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+            (s) => s?.contactId, (p, b) => p?.contactId = b),
         super._();
 
   factory _$CreateHcrApiResponseActions(
@@ -244,9 +241,6 @@ class _$CreateHcrApiResponseActions extends CreateHcrApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateHcrApiResponseCreateHcrApiResponseActions> get $serializer => CreateHcrApiResponseCreateHcrApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

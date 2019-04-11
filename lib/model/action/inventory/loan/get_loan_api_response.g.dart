@@ -208,9 +208,6 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
     loan.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetLoanApiResponseGetLoanApiResponseActions> get $serializer => GetLoanApiResponseGetLoanApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetLoanApiResponse);

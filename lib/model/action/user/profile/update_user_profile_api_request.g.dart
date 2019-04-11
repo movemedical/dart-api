@@ -365,41 +365,38 @@ class _$UpdateUserProfileApiRequestActions
   _$UpdateUserProfileApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateUserProfileApiRequest>(
             '\$replace', (a) => a?.$replace),
-        currentPassword = $options.actionField<String>(
+        currentPassword = $options.field<String>(
             'currentPassword',
             (a) => a?.currentPassword,
             (s) => s?.currentPassword,
             (p, b) => p?.currentPassword = b),
-        newPassword = $options.actionField<String>(
+        newPassword = $options.field<String>(
             'newPassword',
             (a) => a?.newPassword,
             (s) => s?.newPassword,
             (p, b) => p?.newPassword = b),
-        timezone = $options.actionField<String>('timezone', (a) => a?.timezone,
+        timezone = $options.field<String>('timezone', (a) => a?.timezone,
             (s) => s?.timezone, (p, b) => p?.timezone = b),
-        erpUserId = $options.actionField<String>(
-            'erpUserId',
-            (a) => a?.erpUserId,
-            (s) => s?.erpUserId,
-            (p, b) => p?.erpUserId = b),
-        defaultOpsOrgUnitId = $options.actionField<String>(
+        erpUserId = $options.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        defaultOpsOrgUnitId = $options.field<String>(
             'defaultOpsOrgUnitId',
             (a) => a?.defaultOpsOrgUnitId,
             (s) => s?.defaultOpsOrgUnitId,
             (p, b) => p?.defaultOpsOrgUnitId = b),
-        defaultSalesOrgUnitId = $options.actionField<String>(
+        defaultSalesOrgUnitId = $options.field<String>(
             'defaultSalesOrgUnitId',
             (a) => a?.defaultSalesOrgUnitId,
             (s) => s?.defaultSalesOrgUnitId,
             (p, b) => p?.defaultSalesOrgUnitId = b),
-        defaultBizUnitId = $options.actionField<String>(
+        defaultBizUnitId = $options.field<String>(
             'defaultBizUnitId',
             (a) => a?.defaultBizUnitId,
             (s) => s?.defaultBizUnitId,
             (p, b) => p?.defaultBizUnitId = b),
-        ssoType = $options.actionField<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        ssoId = $options.actionField<String>(
+        ssoId = $options.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
         super._();
 
@@ -448,9 +445,6 @@ class _$UpdateUserProfileApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateUserProfileApiRequestUpdateUserProfileApiRequestActions> get $serializer => UpdateUserProfileApiRequestUpdateUserProfileApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

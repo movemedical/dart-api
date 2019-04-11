@@ -234,22 +234,19 @@ class _$SaveCaseRequirementsApiRequestActions
   _$SaveCaseRequirementsApiRequestActions._(this.$options)
       : $replace = $options.action<SaveCaseRequirementsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
         requirements =
-            $options.actionField<BuiltList<SaveCaseRequirementsApiRequirement>>(
+            $options.field<BuiltList<SaveCaseRequirementsApiRequirement>>(
                 'requirements',
                 (a) => a?.requirements,
                 (s) => s?.requirements,
                 (p, b) => p?.requirements = b),
-        confirmCase = $options.actionField<bool>(
-            'confirmCase',
-            (a) => a?.confirmCase,
-            (s) => s?.confirmCase,
-            (p, b) => p?.confirmCase = b),
+        confirmCase = $options.field<bool>('confirmCase', (a) => a?.confirmCase,
+            (s) => s?.confirmCase, (p, b) => p?.confirmCase = b),
         super._();
 
   factory _$SaveCaseRequirementsApiRequestActions(
@@ -286,9 +283,6 @@ class _$SaveCaseRequirementsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveCaseRequirementsApiRequestSaveCaseRequirementsApiRequestActions> get $serializer => SaveCaseRequirementsApiRequestSaveCaseRequirementsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

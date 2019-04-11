@@ -230,7 +230,7 @@ class _$RequestOpenBillingReportApiResponseActions
   _$RequestOpenBillingReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestOpenBillingReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -292,9 +292,6 @@ class _$RequestOpenBillingReportApiResponseActions
     hcrTeam.$middleware(middleware);
     hospital.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestOpenBillingReportApiResponseRequestOpenBillingReportApiResponseActions> get $serializer => RequestOpenBillingReportApiResponseRequestOpenBillingReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

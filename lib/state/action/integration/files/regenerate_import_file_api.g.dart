@@ -105,9 +105,6 @@ class _$RegenerateImportFileApi extends RegenerateImportFileApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRegenerateImportFileApi> get $serializer => CommandStateRegenerateImportFileApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

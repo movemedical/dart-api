@@ -284,26 +284,20 @@ class _$GetCaseEventDetailApiLoanActions
   _$GetCaseEventDetailApiLoanActions._(this.$options)
       : $replace = $options.action<GetCaseEventDetailApiLoan>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        loanNumber = $options.actionField<int>(
-            'loanNumber',
-            (a) => a?.loanNumber,
-            (s) => s?.loanNumber,
-            (p, b) => p?.loanNumber = b),
-        loanStatus = $options.actionField<LoanStatus>(
+        loanNumber = $options.field<int>('loanNumber', (a) => a?.loanNumber,
+            (s) => s?.loanNumber, (p, b) => p?.loanNumber = b),
+        loanStatus = $options.field<LoanStatus>(
             'loanStatus',
             (a) => a?.loanStatus,
             (s) => s?.loanStatus,
             (p, b) => p?.loanStatus = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        orderNumber = $options.actionField<int>(
-            'orderNumber',
-            (a) => a?.orderNumber,
-            (s) => s?.orderNumber,
-            (p, b) => p?.orderNumber = b),
-        orderStatus = $options.actionField<OrderStatus>(
+        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+            (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
+        orderStatus = $options.field<OrderStatus>(
             'orderStatus',
             (a) => a?.orderStatus,
             (s) => s?.orderStatus,
@@ -349,9 +343,6 @@ class _$GetCaseEventDetailApiLoanActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiLoanGetCaseEventDetailApiLoanActions> get $serializer => GetCaseEventDetailApiLoanGetCaseEventDetailApiLoanActions.serializer;
 
   FullType _$fullType;
   @override

@@ -304,18 +304,18 @@ class _$ListCaseUsageApiCaseUsageOrderActions
   _$ListCaseUsageApiCaseUsageOrderActions._(this.$options)
       : $replace = $options.action<ListCaseUsageApiCaseUsageOrder>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        referenceString = $options.actionField<String>(
+        referenceString = $options.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        closed = $options.actionField<bool>('closed', (a) => a?.closed,
+        closed = $options.field<bool>('closed', (a) => a?.closed,
             (s) => s?.closed, (p, b) => p?.closed = b),
         billToAddress = CustomerAddressActions(() => $options.stateful<
                 CustomerAddress,
@@ -374,9 +374,6 @@ class _$ListCaseUsageApiCaseUsageOrderActions
     super.$middleware(middleware);
     billToAddress.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseUsageApiCaseUsageOrderListCaseUsageApiCaseUsageOrderActions> get $serializer => ListCaseUsageApiCaseUsageOrderListCaseUsageApiCaseUsageOrderActions.serializer;
 
   FullType _$fullType;
   @override

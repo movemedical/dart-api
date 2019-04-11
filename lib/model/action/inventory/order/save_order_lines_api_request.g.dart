@@ -225,11 +225,11 @@ class _$SaveOrderLinesApiRequestActions
   _$SaveOrderLinesApiRequestActions._(this.$options)
       : $replace = $options.action<SaveOrderLinesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        sendToErp = $options.actionField<bool>('sendToErp', (a) => a?.sendToErp,
+        sendToErp = $options.field<bool>('sendToErp', (a) => a?.sendToErp,
             (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
-        lines = $options.actionField<BuiltList<SaveOrderLinesApiOrderLine>>(
+        lines = $options.field<BuiltList<SaveOrderLinesApiOrderLine>>(
             'lines', (a) => a?.lines, (s) => s?.lines, (p, b) => p?.lines = b),
         super._();
 
@@ -266,9 +266,6 @@ class _$SaveOrderLinesApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveOrderLinesApiRequestSaveOrderLinesApiRequestActions> get $serializer => SaveOrderLinesApiRequestSaveOrderLinesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

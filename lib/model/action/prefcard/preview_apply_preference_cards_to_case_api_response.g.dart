@@ -201,12 +201,12 @@ class _$PreviewApplyPreferenceCardsToCaseApiResponseActions
       : $replace =
             $options.action<PreviewApplyPreferenceCardsToCaseApiResponse>(
                 '\$replace', (a) => a?.$replace),
-        preview = $options.actionField<
-                BuiltList<PreviewApplyPreferenceCardsToCaseApiPreview>>(
-            'preview',
-            (a) => a?.preview,
-            (s) => s?.preview,
-            (p, b) => p?.preview = b),
+        preview = $options
+            .field<BuiltList<PreviewApplyPreferenceCardsToCaseApiPreview>>(
+                'preview',
+                (a) => a?.preview,
+                (s) => s?.preview,
+                (p, b) => p?.preview = b),
         super._();
 
   factory _$PreviewApplyPreferenceCardsToCaseApiResponseActions(
@@ -239,9 +239,6 @@ class _$PreviewApplyPreferenceCardsToCaseApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PreviewApplyPreferenceCardsToCaseApiResponsePreviewApplyPreferenceCardsToCaseApiResponseActions> get $serializer => PreviewApplyPreferenceCardsToCaseApiResponsePreviewApplyPreferenceCardsToCaseApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

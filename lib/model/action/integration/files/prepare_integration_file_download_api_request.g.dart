@@ -170,7 +170,7 @@ class _$PrepareIntegrationFileDownloadApiRequestActions
   _$PrepareIntegrationFileDownloadApiRequestActions._(this.$options)
       : $replace = $options.action<PrepareIntegrationFileDownloadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         super._();
 
@@ -204,9 +204,6 @@ class _$PrepareIntegrationFileDownloadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareIntegrationFileDownloadApiRequestPrepareIntegrationFileDownloadApiRequestActions> get $serializer => PrepareIntegrationFileDownloadApiRequestPrepareIntegrationFileDownloadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

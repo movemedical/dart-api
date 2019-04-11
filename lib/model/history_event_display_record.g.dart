@@ -281,29 +281,25 @@ class _$HistoryEventDisplayRecordActions
   _$HistoryEventDisplayRecordActions._(this.$options)
       : $replace = $options.action<HistoryEventDisplayRecord>(
             '\$replace', (a) => a?.$replace),
-        recordName = $options.actionField<String>(
-            'recordName',
-            (a) => a?.recordName,
-            (s) => s?.recordName,
-            (p, b) => p?.recordName = b),
-        recordDescription = $options.actionField<String>(
+        recordName = $options.field<String>('recordName', (a) => a?.recordName,
+            (s) => s?.recordName, (p, b) => p?.recordName = b),
+        recordDescription = $options.field<String>(
             'recordDescription',
             (a) => a?.recordDescription,
             (s) => s?.recordDescription,
             (p, b) => p?.recordDescription = b),
-        action = $options.actionField<HistoryEventDisplayRecordAction>('action',
+        action = $options.field<HistoryEventDisplayRecordAction>('action',
             (a) => a?.action, (s) => s?.action, (p, b) => p?.action = b),
-        actionDescription = $options.actionField<String>(
+        actionDescription = $options.field<String>(
             'actionDescription',
             (a) => a?.actionDescription,
             (s) => s?.actionDescription,
             (p, b) => p?.actionDescription = b),
-        details =
-            $options.actionField<BuiltList<HistoryEventDisplayRecordDetail>>(
-                'details',
-                (a) => a?.details,
-                (s) => s?.details,
-                (p, b) => p?.details = b),
+        details = $options.field<BuiltList<HistoryEventDisplayRecordDetail>>(
+            'details',
+            (a) => a?.details,
+            (s) => s?.details,
+            (p, b) => p?.details = b),
         super._();
 
   factory _$HistoryEventDisplayRecordActions(
@@ -343,9 +339,6 @@ class _$HistoryEventDisplayRecordActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<HistoryEventDisplayRecordHistoryEventDisplayRecordActions> get $serializer => HistoryEventDisplayRecordHistoryEventDisplayRecordActions.serializer;
 
   FullType _$fullType;
   @override

@@ -105,9 +105,6 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestKitManifestDocApi> get $serializer => CommandStateRequestKitManifestDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

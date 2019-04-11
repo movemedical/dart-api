@@ -223,9 +223,6 @@ class _$SaveHcrToOrgUnitApiRequestActions
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<SaveHcrToOrgUnitApiRequestSaveHcrToOrgUnitApiRequestActions> get $serializer => SaveHcrToOrgUnitApiRequestSaveHcrToOrgUnitApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveHcrToOrgUnitApiRequest);

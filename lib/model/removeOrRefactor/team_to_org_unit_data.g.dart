@@ -546,77 +546,53 @@ class _$TeamToOrgUnitDataActions extends TeamToOrgUnitDataActions {
   _$TeamToOrgUnitDataActions._(this.$options)
       : $replace =
             $options.action<TeamToOrgUnitData>('\$replace', (a) => a?.$replace),
-        userRoleId = $options.actionField<String>(
-            'userRoleId',
-            (a) => a?.userRoleId,
-            (s) => s?.userRoleId,
-            (p, b) => p?.userRoleId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        userRoleId = $options.field<String>('userRoleId', (a) => a?.userRoleId,
+            (s) => s?.userRoleId, (p, b) => p?.userRoleId = b),
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        ouAccessType = $options.actionField<OuAccessType>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        ouAccessType = $options.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        createCase = $options.actionField<bool>(
-            'createCase',
-            (a) => a?.createCase,
-            (s) => s?.createCase,
-            (p, b) => p?.createCase = b),
-        editCase = $options.actionField<bool>('editCase', (a) => a?.editCase,
+        createCase = $options.field<bool>('createCase', (a) => a?.createCase,
+            (s) => s?.createCase, (p, b) => p?.createCase = b),
+        editCase = $options.field<bool>('editCase', (a) => a?.editCase,
             (s) => s?.editCase, (p, b) => p?.editCase = b),
-        processOrders = $options.actionField<bool>(
+        processOrders = $options.field<bool>(
             'processOrders',
             (a) => a?.processOrders,
             (s) => s?.processOrders,
             (p, b) => p?.processOrders = b),
-        manageCatalog = $options.actionField<bool>(
+        manageCatalog = $options.field<bool>(
             'manageCatalog',
             (a) => a?.manageCatalog,
             (s) => s?.manageCatalog,
             (p, b) => p?.manageCatalog = b),
-        manageUsers = $options.actionField<bool>(
-            'manageUsers',
-            (a) => a?.manageUsers,
-            (s) => s?.manageUsers,
-            (p, b) => p?.manageUsers = b),
-        manageAudit = $options.actionField<bool>(
-            'manageAudit',
-            (a) => a?.manageAudit,
-            (s) => s?.manageAudit,
-            (p, b) => p?.manageAudit = b),
-        performAudit = $options.actionField<bool>(
+        manageUsers = $options.field<bool>('manageUsers', (a) => a?.manageUsers,
+            (s) => s?.manageUsers, (p, b) => p?.manageUsers = b),
+        manageAudit = $options.field<bool>('manageAudit', (a) => a?.manageAudit,
+            (s) => s?.manageAudit, (p, b) => p?.manageAudit = b),
+        performAudit = $options.field<bool>(
             'performAudit',
             (a) => a?.performAudit,
             (s) => s?.performAudit,
             (p, b) => p?.performAudit = b),
-        requestLoan = $options.actionField<bool>(
-            'requestLoan',
-            (a) => a?.requestLoan,
-            (s) => s?.requestLoan,
-            (p, b) => p?.requestLoan = b),
-        createAudit = $options.actionField<bool>(
-            'createAudit',
-            (a) => a?.createAudit,
-            (s) => s?.createAudit,
-            (p, b) => p?.createAudit = b),
-        approveLoan = $options.actionField<bool>(
-            'approveLoan',
-            (a) => a?.approveLoan,
-            (s) => s?.approveLoan,
-            (p, b) => p?.approveLoan = b),
-        approveLoanMax = $options.actionField<double>(
+        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+            (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
+        createAudit = $options.field<bool>('createAudit', (a) => a?.createAudit,
+            (s) => s?.createAudit, (p, b) => p?.createAudit = b),
+        approveLoan = $options.field<bool>('approveLoan', (a) => a?.approveLoan,
+            (s) => s?.approveLoan, (p, b) => p?.approveLoan = b),
+        approveLoanMax = $options.field<double>(
             'approveLoanMax',
             (a) => a?.approveLoanMax,
             (s) => s?.approveLoanMax,
             (p, b) => p?.approveLoanMax = b),
-        toOuInventoryTypeData = $options
-            .actionField<BuiltList<TeamToOrgUnitDataToOuInventoryTypeData>>(
+        toOuInventoryTypeData =
+            $options.field<BuiltList<TeamToOrgUnitDataToOuInventoryTypeData>>(
                 'toOuInventoryTypeData',
                 (a) => a?.toOuInventoryTypeData,
                 (s) => s?.toOuInventoryTypeData,
@@ -680,9 +656,6 @@ class _$TeamToOrgUnitDataActions extends TeamToOrgUnitDataActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<TeamToOrgUnitDataTeamToOrgUnitDataActions> get $serializer => TeamToOrgUnitDataTeamToOrgUnitDataActions.serializer;
 
   FullType _$fullType;
   @override

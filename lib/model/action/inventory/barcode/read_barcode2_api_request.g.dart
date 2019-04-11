@@ -206,7 +206,7 @@ class _$ReadBarcode2ApiRequestActions extends ReadBarcode2ApiRequestActions {
   _$ReadBarcode2ApiRequestActions._(this.$options)
       : $replace = $options.action<ReadBarcode2ApiRequest>(
             '\$replace', (a) => a?.$replace),
-        scanBarcodes = $options.actionField<BuiltList<String>>(
+        scanBarcodes = $options.field<BuiltList<String>>(
             'scanBarcodes',
             (a) => a?.scanBarcodes,
             (s) => s?.scanBarcodes,
@@ -260,9 +260,6 @@ class _$ReadBarcode2ApiRequestActions extends ReadBarcode2ApiRequestActions {
     super.$middleware(middleware);
     previousResponse.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcode2ApiRequestReadBarcode2ApiRequestActions> get $serializer => ReadBarcode2ApiRequestReadBarcode2ApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

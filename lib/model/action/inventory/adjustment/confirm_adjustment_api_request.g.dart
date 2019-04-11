@@ -189,12 +189,12 @@ class _$ConfirmAdjustmentApiRequestActions
   _$ConfirmAdjustmentApiRequestActions._(this.$options)
       : $replace = $options.action<ConfirmAdjustmentApiRequest>(
             '\$replace', (a) => a?.$replace),
-        adjustmentId = $options.actionField<String>(
+        adjustmentId = $options.field<String>(
             'adjustmentId',
             (a) => a?.adjustmentId,
             (s) => s?.adjustmentId,
             (p, b) => p?.adjustmentId = b),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
@@ -232,9 +232,6 @@ class _$ConfirmAdjustmentApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConfirmAdjustmentApiRequestConfirmAdjustmentApiRequestActions> get $serializer => ConfirmAdjustmentApiRequestConfirmAdjustmentApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

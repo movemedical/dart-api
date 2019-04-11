@@ -108,9 +108,6 @@ class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestAuditItemExportDocApi> get $serializer => CommandStateRequestAuditItemExportDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

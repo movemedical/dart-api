@@ -148,9 +148,6 @@ class _$ResetInventoryAndScheduleApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<ResetInventoryAndScheduleApiRequestResetInventoryAndScheduleApiRequestActions> get $serializer => ResetInventoryAndScheduleApiRequestResetInventoryAndScheduleApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

@@ -181,9 +181,9 @@ class _$MoveStockApiResponseActions extends MoveStockApiResponseActions {
   _$MoveStockApiResponseActions._(this.$options)
       : $replace = $options.action<MoveStockApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        orderReasonGroup = $options.actionField<OrderReasonGroup>(
+        orderReasonGroup = $options.field<OrderReasonGroup>(
             'orderReasonGroup',
             (a) => a?.orderReasonGroup,
             (s) => s?.orderReasonGroup,
@@ -220,9 +220,6 @@ class _$MoveStockApiResponseActions extends MoveStockApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockApiResponseMoveStockApiResponseActions> get $serializer => MoveStockApiResponseMoveStockApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

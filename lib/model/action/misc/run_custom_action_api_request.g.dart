@@ -186,12 +186,12 @@ class _$RunCustomActionApiRequestActions
   _$RunCustomActionApiRequestActions._(this.$options)
       : $replace = $options.action<RunCustomActionApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customActionId = $options.actionField<String>(
+        customActionId = $options.field<String>(
             'customActionId',
             (a) => a?.customActionId,
             (s) => s?.customActionId,
             (p, b) => p?.customActionId = b),
-        args = $options.actionField<String>(
+        args = $options.field<String>(
             'args', (a) => a?.args, (s) => s?.args, (p, b) => p?.args = b),
         super._();
 
@@ -226,9 +226,6 @@ class _$RunCustomActionApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RunCustomActionApiRequestRunCustomActionApiRequestActions> get $serializer => RunCustomActionApiRequestRunCustomActionApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

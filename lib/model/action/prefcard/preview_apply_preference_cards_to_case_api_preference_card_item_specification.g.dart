@@ -221,12 +221,12 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActio
       : $replace = $options.action<
                 PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>(
             '\$replace', (a) => a?.$replace),
-        preferenceCardItemId = $options.actionField<String>(
+        preferenceCardItemId = $options.field<String>(
             'preferenceCardItemId',
             (a) => a?.preferenceCardItemId,
             (s) => s?.preferenceCardItemId,
             (p, b) => p?.preferenceCardItemId = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
 
@@ -266,9 +266,6 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActio
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationPreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActions> get $serializer => PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationPreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActions.serializer;
 
   FullType _$fullType;
   @override

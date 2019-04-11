@@ -858,108 +858,102 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
   _$SaveCaseUsagesApiUsageActions._(this.$options)
       : $replace = $options.action<SaveCaseUsagesApiUsage>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        remove = $options.actionField<bool>('remove', (a) => a?.remove,
+        remove = $options.field<bool>('remove', (a) => a?.remove,
             (s) => s?.remove, (p, b) => p?.remove = b),
-        caseUsageOrderId = $options.actionField<String>(
+        caseUsageOrderId = $options.field<String>(
             'caseUsageOrderId',
             (a) => a?.caseUsageOrderId,
             (s) => s?.caseUsageOrderId,
             (p, b) => p?.caseUsageOrderId = b),
-        caseUsageConstructId = $options.actionField<String>(
+        caseUsageConstructId = $options.field<String>(
             'caseUsageConstructId',
             (a) => a?.caseUsageConstructId,
             (s) => s?.caseUsageConstructId,
             (p, b) => p?.caseUsageConstructId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        lotNumber = $options.actionField<String>(
-            'lotNumber',
-            (a) => a?.lotNumber,
-            (s) => s?.lotNumber,
-            (p, b) => p?.lotNumber = b),
-        serialNumber = $options.actionField<String>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        lotNumber = $options.field<String>('lotNumber', (a) => a?.lotNumber,
+            (s) => s?.lotNumber, (p, b) => p?.lotNumber = b),
+        serialNumber = $options.field<String>(
             'serialNumber',
             (a) => a?.serialNumber,
             (s) => s?.serialNumber,
             (p, b) => p?.serialNumber = b),
-        rawBarcodeData = $options.actionField<String>(
+        rawBarcodeData = $options.field<String>(
             'rawBarcodeData',
             (a) => a?.rawBarcodeData,
             (s) => s?.rawBarcodeData,
             (p, b) => p?.rawBarcodeData = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        caseUsageDisposition = $options.actionField<CaseUsageDisposition>(
+        caseUsageDisposition = $options.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
-        usageCaptureType = $options.actionField<ItemCaptureType>(
+        usageCaptureType = $options.field<ItemCaptureType>(
             'usageCaptureType',
             (a) => a?.usageCaptureType,
             (s) => s?.usageCaptureType,
             (p, b) => p?.usageCaptureType = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        note = $options.actionField<String>(
+        note = $options.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
-        locationHint = $options.actionField<LocationHint>(
+        locationHint = $options.field<LocationHint>(
             'locationHint',
             (a) => a?.locationHint,
             (s) => s?.locationHint,
             (p, b) => p?.locationHint = b),
-        replenishOption = $options.actionField<ReplenishOption>(
+        replenishOption = $options.field<ReplenishOption>(
             'replenishOption',
             (a) => a?.replenishOption,
             (s) => s?.replenishOption,
             (p, b) => p?.replenishOption = b),
-        replenishLocationType = $options.actionField<LocationType>(
+        replenishLocationType = $options.field<LocationType>(
             'replenishLocationType',
             (a) => a?.replenishLocationType,
             (s) => s?.replenishLocationType,
             (p, b) => p?.replenishLocationType = b),
-        replenishLocationId = $options.actionField<String>(
+        replenishLocationId = $options.field<String>(
             'replenishLocationId',
             (a) => a?.replenishLocationId,
             (s) => s?.replenishLocationId,
             (p, b) => p?.replenishLocationId = b),
-        replenishContainerType = $options.actionField<StockContainerType>(
+        replenishContainerType = $options.field<StockContainerType>(
             'replenishContainerType',
             (a) => a?.replenishContainerType,
             (s) => s?.replenishContainerType,
             (p, b) => p?.replenishContainerType = b),
-        replenishContainerId = $options.actionField<String>(
+        replenishContainerId = $options.field<String>(
             'replenishContainerId',
             (a) => a?.replenishContainerId,
             (s) => s?.replenishContainerId,
             (p, b) => p?.replenishContainerId = b),
-        replenishByDate = $options.actionField<DateTime>(
+        replenishByDate = $options.field<DateTime>(
             'replenishByDate',
             (a) => a?.replenishByDate,
             (s) => s?.replenishByDate,
             (p, b) => p?.replenishByDate = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        restockDeliverToAttn = $options.actionField<String>(
+        restockDeliverToAttn = $options.field<String>(
             'restockDeliverToAttn',
             (a) => a?.restockDeliverToAttn,
             (s) => s?.restockDeliverToAttn,
             (p, b) => p?.restockDeliverToAttn = b),
-        restockDeliverToAddressId = $options.actionField<String>(
+        restockDeliverToAddressId = $options.field<String>(
             'restockDeliverToAddressId',
             (a) => a?.restockDeliverToAddressId,
             (s) => s?.restockDeliverToAddressId,
@@ -972,12 +966,12 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
                 (b) => b?.restockDeliverToAddressOverride,
                 (parent, builder) =>
                     parent?.restockDeliverToAddressOverride = builder)),
-        doNotRestock = $options.actionField<bool>(
+        doNotRestock = $options.field<bool>(
             'doNotRestock',
             (a) => a?.doNotRestock,
             (s) => s?.doNotRestock,
             (p, b) => p?.doNotRestock = b),
-        overridePrice = $options.actionField<double>(
+        overridePrice = $options.field<double>(
             'overridePrice',
             (a) => a?.overridePrice,
             (s) => s?.overridePrice,
@@ -1075,9 +1069,6 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
     super.$middleware(middleware);
     restockDeliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveCaseUsagesApiUsageSaveCaseUsagesApiUsageActions> get $serializer => SaveCaseUsagesApiUsageSaveCaseUsagesApiUsageActions.serializer;
 
   FullType _$fullType;
   @override

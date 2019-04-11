@@ -320,24 +320,18 @@ class _$RequestShipmentPackingListDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        packageId = $options.actionField<String>(
-            'packageId',
-            (a) => a?.packageId,
-            (s) => s?.packageId,
-            (p, b) => p?.packageId = b),
-        displayNotes = $options.actionField<bool>(
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+            (s) => s?.packageId, (p, b) => p?.packageId = b),
+        displayNotes = $options.field<bool>(
             'displayNotes',
             (a) => a?.displayNotes,
             (s) => s?.displayNotes,
@@ -390,9 +384,6 @@ class _$RequestShipmentPackingListDocApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestShipmentPackingListDocApiRequestRequestShipmentPackingListDocApiRequestActions> get $serializer => RequestShipmentPackingListDocApiRequestRequestShipmentPackingListDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

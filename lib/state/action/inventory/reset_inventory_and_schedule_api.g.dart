@@ -108,9 +108,6 @@ class _$ResetInventoryAndScheduleApi extends ResetInventoryAndScheduleApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateResetInventoryAndScheduleApi> get $serializer => CommandStateResetInventoryAndScheduleApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

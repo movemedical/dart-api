@@ -599,7 +599,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
   _$GetStockApiStockActions._(this.$options)
       : $replace =
             $options.action<GetStockApiStock>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
@@ -622,11 +622,8 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        kitStockId = $options.actionField<String>(
-            'kitStockId',
-            (a) => a?.kitStockId,
-            (s) => s?.kitStockId,
-            (p, b) => p?.kitStockId = b),
+        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+            (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
         kitStockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'kitStockItem',
@@ -657,30 +654,24 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
                 (s) => s?.consignmentLoan,
                 (b) => b?.consignmentLoan,
                 (parent, builder) => parent?.consignmentLoan = builder)),
-        activeRestockOrders = $options.actionField<BuiltList<OrderHeaderLite>>(
+        activeRestockOrders = $options.field<BuiltList<OrderHeaderLite>>(
             'activeRestockOrders',
             (a) => a?.activeRestockOrders,
             (s) => s?.activeRestockOrders,
             (p, b) => p?.activeRestockOrders = b),
-        allocated = $options.actionField<bool>('allocated', (a) => a?.allocated,
+        allocated = $options.field<bool>('allocated', (a) => a?.allocated,
             (s) => s?.allocated, (p, b) => p?.allocated = b),
-        onHold = $options.actionField<bool>('onHold', (a) => a?.onHold,
+        onHold = $options.field<bool>('onHold', (a) => a?.onHold,
             (s) => s?.onHold, (p, b) => p?.onHold = b),
-        lostFound = $options.actionField<LostFound>(
-            'lostFound',
-            (a) => a?.lostFound,
-            (s) => s?.lostFound,
-            (p, b) => p?.lostFound = b),
-        verified = $options.actionField<bool>('verified', (a) => a?.verified,
+        lostFound = $options.field<LostFound>('lostFound', (a) => a?.lostFound,
+            (s) => s?.lostFound, (p, b) => p?.lostFound = b),
+        verified = $options.field<bool>('verified', (a) => a?.verified,
             (s) => s?.verified, (p, b) => p?.verified = b),
-        hasExtras = $options.actionField<bool>('hasExtras', (a) => a?.hasExtras,
+        hasExtras = $options.field<bool>('hasExtras', (a) => a?.hasExtras,
             (s) => s?.hasExtras, (p, b) => p?.hasExtras = b),
-        hasMissing = $options.actionField<bool>(
-            'hasMissing',
-            (a) => a?.hasMissing,
-            (s) => s?.hasMissing,
-            (p, b) => p?.hasMissing = b),
-        attributes = $options.actionField<BuiltList<GetStockApiStockAttribute>>(
+        hasMissing = $options.field<bool>('hasMissing', (a) => a?.hasMissing,
+            (s) => s?.hasMissing, (p, b) => p?.hasMissing = b),
+        attributes = $options.field<BuiltList<GetStockApiStockAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
@@ -758,9 +749,6 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
     demandLoan.$middleware(middleware);
     consignmentLoan.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockApiStockGetStockApiStockActions> get $serializer => GetStockApiStockGetStockApiStockActions.serializer;
 
   FullType _$fullType;
   @override

@@ -108,9 +108,6 @@ class _$GetFacilityApi extends GetFacilityApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetFacilityApi> get $serializer => CommandStateGetFacilityApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

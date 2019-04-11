@@ -147,9 +147,6 @@ class _$GetUnreadMessageCountApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<GetUnreadMessageCountApiRequestGetUnreadMessageCountApiRequestActions> get $serializer => GetUnreadMessageCountApiRequestGetUnreadMessageCountApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

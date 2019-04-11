@@ -96,9 +96,6 @@ class _$ResetPasswordApi extends ResetPasswordApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateResetPasswordApi> get $serializer => CommandStateResetPasswordApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

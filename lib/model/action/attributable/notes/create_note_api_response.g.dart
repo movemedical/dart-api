@@ -157,7 +157,7 @@ class _$CreateNoteApiResponseActions extends CreateNoteApiResponseActions {
   _$CreateNoteApiResponseActions._(this.$options)
       : $replace = $options.action<CreateNoteApiResponse>(
             '\$replace', (a) => a?.$replace),
-        noteId = $options.actionField<String>('noteId', (a) => a?.noteId,
+        noteId = $options.field<String>('noteId', (a) => a?.noteId,
             (s) => s?.noteId, (p, b) => p?.noteId = b),
         super._();
 
@@ -189,9 +189,6 @@ class _$CreateNoteApiResponseActions extends CreateNoteApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateNoteApiResponseCreateNoteApiResponseActions> get $serializer => CreateNoteApiResponseCreateNoteApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

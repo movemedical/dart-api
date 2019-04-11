@@ -375,37 +375,31 @@ class _$ListImportLogsApiRequestActions
   _$ListImportLogsApiRequestActions._(this.$options)
       : $replace = $options.action<ListImportLogsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        importJobId = $options.actionField<String>(
+        importJobId = $options.field<String>(
             'importJobId',
             (a) => a?.importJobId,
             (s) => s?.importJobId,
             (p, b) => p?.importJobId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        currentState = $options.actionField<ImportStatus>(
+        currentState = $options.field<ImportStatus>(
             'currentState',
             (a) => a?.currentState,
             (s) => s?.currentState,
             (p, b) => p?.currentState = b),
-        excludeEmpty = $options.actionField<bool>(
+        excludeEmpty = $options.field<bool>(
             'excludeEmpty',
             (a) => a?.excludeEmpty,
             (s) => s?.excludeEmpty,
             (p, b) => p?.excludeEmpty = b),
-        sortBy = $options.actionField<ListImportLogsApiSortBy>('sortBy',
+        sortBy = $options.field<ListImportLogsApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        descending = $options.actionField<bool>(
-            'descending',
-            (a) => a?.descending,
-            (s) => s?.descending,
-            (p, b) => p?.descending = b),
+        descending = $options.field<bool>('descending', (a) => a?.descending,
+            (s) => s?.descending, (p, b) => p?.descending = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -468,9 +462,6 @@ class _$ListImportLogsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListImportLogsApiRequestListImportLogsApiRequestActions> get $serializer => ListImportLogsApiRequestListImportLogsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteProcedureApi> get $serializer => CommandStateDeleteProcedureApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

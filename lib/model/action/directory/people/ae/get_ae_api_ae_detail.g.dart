@@ -662,15 +662,15 @@ class _$GetAeApiAeDetailActions extends GetAeApiAeDetailActions {
   _$GetAeApiAeDetailActions._(this.$options)
       : $replace =
             $options.action<GetAeApiAeDetail>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        aeReference = $options.actionField<String>(
+        aeReference = $options.field<String>(
             'aeReference',
             (a) => a?.aeReference,
             (s) => s?.aeReference,
@@ -710,45 +710,36 @@ class _$GetAeApiAeDetailActions extends GetAeApiAeDetailActions {
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userPerspective = $options.actionField<UserPerspective>(
+        userPerspective = $options.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        userStatus = $options.actionField<UserStatus>(
+        userStatus = $options.field<UserStatus>(
             'userStatus',
             (a) => a?.userStatus,
             (s) => s?.userStatus,
             (p, b) => p?.userStatus = b),
-        userLocked = $options.actionField<bool>(
-            'userLocked',
-            (a) => a?.userLocked,
-            (s) => s?.userLocked,
-            (p, b) => p?.userLocked = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        userLocked = $options.field<bool>('userLocked', (a) => a?.userLocked,
+            (s) => s?.userLocked, (p, b) => p?.userLocked = b),
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        directoryAdmin = $options.actionField<bool>(
+        directoryAdmin = $options.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
-        phiAllowed = $options.actionField<bool>(
-            'phiAllowed',
-            (a) => a?.phiAllowed,
-            (s) => s?.phiAllowed,
-            (p, b) => p?.phiAllowed = b),
-        lastVisibilityUpdateDate = $options.actionField<DateTime>(
+        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+            (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
+        lastVisibilityUpdateDate = $options.field<DateTime>(
             'lastVisibilityUpdateDate',
             (a) => a?.lastVisibilityUpdateDate,
             (s) => s?.lastVisibilityUpdateDate,
@@ -832,9 +823,6 @@ class _$GetAeApiAeDetailActions extends GetAeApiAeDetailActions {
     mobilePhoneNumber.$middleware(middleware);
     faxNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAeApiAeDetailGetAeApiAeDetailActions> get $serializer => GetAeApiAeDetailGetAeApiAeDetailActions.serializer;
 
   FullType _$fullType;
   @override

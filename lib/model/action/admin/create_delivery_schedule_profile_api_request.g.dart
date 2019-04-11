@@ -278,24 +278,24 @@ class _$CreateDeliveryScheduleProfileApiRequestActions
   _$CreateDeliveryScheduleProfileApiRequestActions._(this.$options)
       : $replace = $options.action<CreateDeliveryScheduleProfileApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        instrumentDeliveryLeadTimeDays = $options.actionField<int>(
+        instrumentDeliveryLeadTimeDays = $options.field<int>(
             'instrumentDeliveryLeadTimeDays',
             (a) => a?.instrumentDeliveryLeadTimeDays,
             (s) => s?.instrumentDeliveryLeadTimeDays,
             (p, b) => p?.instrumentDeliveryLeadTimeDays = b),
-        instrumentDeliveryLeadTimeHours = $options.actionField<int>(
+        instrumentDeliveryLeadTimeHours = $options.field<int>(
             'instrumentDeliveryLeadTimeHours',
             (a) => a?.instrumentDeliveryLeadTimeHours,
             (s) => s?.instrumentDeliveryLeadTimeHours,
             (p, b) => p?.instrumentDeliveryLeadTimeHours = b),
-        implantDeliveryLeadTimeDays = $options.actionField<int>(
+        implantDeliveryLeadTimeDays = $options.field<int>(
             'implantDeliveryLeadTimeDays',
             (a) => a?.implantDeliveryLeadTimeDays,
             (s) => s?.implantDeliveryLeadTimeDays,
             (p, b) => p?.implantDeliveryLeadTimeDays = b),
-        implantDeliveryLeadTimeHours = $options.actionField<int>(
+        implantDeliveryLeadTimeHours = $options.field<int>(
             'implantDeliveryLeadTimeHours',
             (a) => a?.implantDeliveryLeadTimeHours,
             (s) => s?.implantDeliveryLeadTimeHours,
@@ -340,9 +340,6 @@ class _$CreateDeliveryScheduleProfileApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateDeliveryScheduleProfileApiRequestCreateDeliveryScheduleProfileApiRequestActions> get $serializer => CreateDeliveryScheduleProfileApiRequestCreateDeliveryScheduleProfileApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

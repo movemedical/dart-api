@@ -108,9 +108,6 @@ class _$DeleteCalendarSubscriptionApi extends DeleteCalendarSubscriptionApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteCalendarSubscriptionApi> get $serializer => CommandStateDeleteCalendarSubscriptionApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

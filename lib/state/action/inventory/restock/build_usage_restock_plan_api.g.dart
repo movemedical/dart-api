@@ -113,9 +113,6 @@ class _$BuildUsageRestockPlanApi extends BuildUsageRestockPlanApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateBuildUsageRestockPlanApi> get $serializer => CommandStateBuildUsageRestockPlanApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

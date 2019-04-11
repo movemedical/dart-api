@@ -150,11 +150,8 @@ class _$ShipPkgApiRequestActions extends ShipPkgApiRequestActions {
   _$ShipPkgApiRequestActions._(this.$options)
       : $replace =
             $options.action<ShipPkgApiRequest>('\$replace', (a) => a?.$replace),
-        packageId = $options.actionField<String>(
-            'packageId',
-            (a) => a?.packageId,
-            (s) => s?.packageId,
-            (p, b) => p?.packageId = b),
+        packageId = $options.field<String>('packageId', (a) => a?.packageId,
+            (s) => s?.packageId, (p, b) => p?.packageId = b),
         super._();
 
   factory _$ShipPkgApiRequestActions(ShipPkgApiRequestActionsOptions options) =>
@@ -184,9 +181,6 @@ class _$ShipPkgApiRequestActions extends ShipPkgApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ShipPkgApiRequestShipPkgApiRequestActions> get $serializer => ShipPkgApiRequestShipPkgApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

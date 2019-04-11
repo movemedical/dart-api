@@ -327,23 +327,17 @@ class _$ListWebServiceLogsApiRequestActions
   _$ListWebServiceLogsApiRequestActions._(this.$options)
       : $replace = $options.action<ListWebServiceLogsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        sortBy = $options.actionField<ListWebServiceLogsApiSortBy>('sortBy',
+        sortBy = $options.field<ListWebServiceLogsApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        descending = $options.actionField<bool>(
-            'descending',
-            (a) => a?.descending,
-            (s) => s?.descending,
-            (p, b) => p?.descending = b),
-        failed = $options.actionField<bool>('failed', (a) => a?.failed,
+        descending = $options.field<bool>('descending', (a) => a?.descending,
+            (s) => s?.descending, (p, b) => p?.descending = b),
+        failed = $options.field<bool>('failed', (a) => a?.failed,
             (s) => s?.failed, (p, b) => p?.failed = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -403,9 +397,6 @@ class _$ListWebServiceLogsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListWebServiceLogsApiRequestListWebServiceLogsApiRequestActions> get $serializer => ListWebServiceLogsApiRequestListWebServiceLogsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

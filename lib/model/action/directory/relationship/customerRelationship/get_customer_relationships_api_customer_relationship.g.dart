@@ -256,22 +256,22 @@ class _$GetCustomerRelationshipsApiCustomerRelationshipActions
       : $replace =
             $options.action<GetCustomerRelationshipsApiCustomerRelationship>(
                 '\$replace', (a) => a?.$replace),
-        direction = $options.actionField<GetCustomerRelationshipsApiDirection>(
+        direction = $options.field<GetCustomerRelationshipsApiDirection>(
             'direction',
             (a) => a?.direction,
             (s) => s?.direction,
             (p, b) => p?.direction = b),
-        relatedCustomerId = $options.actionField<String>(
+        relatedCustomerId = $options.field<String>(
             'relatedCustomerId',
             (a) => a?.relatedCustomerId,
             (s) => s?.relatedCustomerId,
             (p, b) => p?.relatedCustomerId = b),
-        relatedCustomerName = $options.actionField<String>(
+        relatedCustomerName = $options.field<String>(
             'relatedCustomerName',
             (a) => a?.relatedCustomerName,
             (s) => s?.relatedCustomerName,
             (p, b) => p?.relatedCustomerName = b),
-        comments = $options.actionField<String>('comments', (a) => a?.comments,
+        comments = $options.field<String>('comments', (a) => a?.comments,
             (s) => s?.comments, (p, b) => p?.comments = b),
         super._();
 
@@ -312,9 +312,6 @@ class _$GetCustomerRelationshipsApiCustomerRelationshipActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCustomerRelationshipsApiCustomerRelationshipGetCustomerRelationshipsApiCustomerRelationshipActions> get $serializer => GetCustomerRelationshipsApiCustomerRelationshipGetCustomerRelationshipsApiCustomerRelationshipActions.serializer;
 
   FullType _$fullType;
   @override

@@ -302,32 +302,23 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
   _$CreateZoneApiRequestActions._(this.$options)
       : $replace = $options.action<CreateZoneApiRequest>(
             '\$replace', (a) => a?.$replace),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        name = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        zoneType = $options.actionField<ZoneType>('zoneType',
-            (a) => a?.zoneType, (s) => s?.zoneType, (p, b) => p?.zoneType = b),
-        sourceable = $options.actionField<bool>(
-            'sourceable',
-            (a) => a?.sourceable,
-            (s) => s?.sourceable,
-            (p, b) => p?.sourceable = b),
-        receivable = $options.actionField<bool>(
-            'receivable',
-            (a) => a?.receivable,
-            (s) => s?.receivable,
-            (p, b) => p?.receivable = b),
+        zoneType = $options.field<ZoneType>('zoneType', (a) => a?.zoneType,
+            (s) => s?.zoneType, (p, b) => p?.zoneType = b),
+        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+            (s) => s?.sourceable, (p, b) => p?.sourceable = b),
+        receivable = $options.field<bool>('receivable', (a) => a?.receivable,
+            (s) => s?.receivable, (p, b) => p?.receivable = b),
         super._();
 
   factory _$CreateZoneApiRequestActions(
@@ -370,9 +361,6 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateZoneApiRequestCreateZoneApiRequestActions> get $serializer => CreateZoneApiRequestCreateZoneApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

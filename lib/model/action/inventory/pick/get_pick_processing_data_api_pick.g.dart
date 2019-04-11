@@ -389,19 +389,16 @@ class _$GetPickProcessingDataApiPickActions
   _$GetPickProcessingDataApiPickActions._(this.$options)
       : $replace = $options.action<GetPickProcessingDataApiPick>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        sourcedStockId = $options.actionField<String>(
+        sourcedStockId = $options.field<String>(
             'sourcedStockId',
             (a) => a?.sourcedStockId,
             (s) => s?.sourcedStockId,
             (p, b) => p?.sourcedStockId = b),
-        pickNumber = $options.actionField<int>(
-            'pickNumber',
-            (a) => a?.pickNumber,
-            (s) => s?.pickNumber,
-            (p, b) => p?.pickNumber = b),
-        dependsOnPickId = $options.actionField<String>(
+        pickNumber = $options.field<int>('pickNumber', (a) => a?.pickNumber,
+            (s) => s?.pickNumber, (p, b) => p?.pickNumber = b),
+        dependsOnPickId = $options.field<String>(
             'dependsOnPickId',
             (a) => a?.dependsOnPickId,
             (s) => s?.dependsOnPickId,
@@ -498,9 +495,6 @@ class _$GetPickProcessingDataApiPickActions
     fromContainer.$middleware(middleware);
     toContainer.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPickProcessingDataApiPickGetPickProcessingDataApiPickActions> get $serializer => GetPickProcessingDataApiPickGetPickProcessingDataApiPickActions.serializer;
 
   FullType _$fullType;
   @override

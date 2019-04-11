@@ -231,9 +231,6 @@ class _$GetExportLogDetailApiResponseActions
     exportLog.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetExportLogDetailApiResponseGetExportLogDetailApiResponseActions> get $serializer => GetExportLogDetailApiResponseGetExportLogDetailApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

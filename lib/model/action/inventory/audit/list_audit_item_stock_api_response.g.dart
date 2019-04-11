@@ -206,9 +206,9 @@ class _$ListAuditItemStockApiResponseActions
   _$ListAuditItemStockApiResponseActions._(this.$options)
       : $replace = $options.action<ListAuditItemStockApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListAuditItemStockApiAuditStock>>(
+        data = $options.field<BuiltList<ListAuditItemStockApiAuditStock>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -243,9 +243,6 @@ class _$ListAuditItemStockApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditItemStockApiResponseListAuditItemStockApiResponseActions> get $serializer => ListAuditItemStockApiResponseListAuditItemStockApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

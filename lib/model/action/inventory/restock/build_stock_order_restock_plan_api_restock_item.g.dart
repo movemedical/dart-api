@@ -538,23 +538,20 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
   _$BuildStockOrderRestockPlanApiRestockItemActions._(this.$options)
       : $replace = $options.action<BuildStockOrderRestockPlanApiRestockItem>(
             '\$replace', (a) => a?.$replace),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        shouldRestock = $options.actionField<bool>(
+        shouldRestock = $options.field<bool>(
             'shouldRestock',
             (a) => a?.shouldRestock,
             (s) => s?.shouldRestock,
             (p, b) => p?.shouldRestock = b),
-        requirePo = $options.actionField<bool>('requirePo', (a) => a?.requirePo,
+        requirePo = $options.field<bool>('requirePo', (a) => a?.requirePo,
             (s) => s?.requirePo, (p, b) => p?.requirePo = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        description = $options.actionField<String>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -590,13 +587,13 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        restockByDateType = $options
-            .actionField<BuildStockOrderRestockPlanApiRestockByDateType>(
+        restockByDateType =
+            $options.field<BuildStockOrderRestockPlanApiRestockByDateType>(
                 'restockByDateType',
                 (a) => a?.restockByDateType,
                 (s) => s?.restockByDateType,
                 (p, b) => p?.restockByDateType = b),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
@@ -689,9 +686,6 @@ class _$BuildStockOrderRestockPlanApiRestockItemActions
     shippingService.$middleware(middleware);
     displayRule.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildStockOrderRestockPlanApiRestockItemBuildStockOrderRestockPlanApiRestockItemActions> get $serializer => BuildStockOrderRestockPlanApiRestockItemBuildStockOrderRestockPlanApiRestockItemActions.serializer;
 
   FullType _$fullType;
   @override

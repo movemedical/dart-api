@@ -281,22 +281,19 @@ class _$UpdateShipmentDetailsApiRequestActions
   _$UpdateShipmentDetailsApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateShipmentDetailsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        erpReference = $options.actionField<String>(
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -355,9 +352,6 @@ class _$UpdateShipmentDetailsApiRequestActions
     super.$middleware(middleware);
     deliverToOverrideAddress.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateShipmentDetailsApiRequestUpdateShipmentDetailsApiRequestActions> get $serializer => UpdateShipmentDetailsApiRequestUpdateShipmentDetailsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

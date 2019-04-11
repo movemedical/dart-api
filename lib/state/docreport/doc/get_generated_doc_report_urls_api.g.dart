@@ -116,9 +116,6 @@ class _$GetGeneratedDocReportUrlsApi extends GetGeneratedDocReportUrlsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetGeneratedDocReportUrlsApi> get $serializer => CommandStateGetGeneratedDocReportUrlsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

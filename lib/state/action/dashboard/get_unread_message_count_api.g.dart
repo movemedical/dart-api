@@ -113,9 +113,6 @@ class _$GetUnreadMessageCountApi extends GetUnreadMessageCountApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetUnreadMessageCountApi> get $serializer => CommandStateGetUnreadMessageCountApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

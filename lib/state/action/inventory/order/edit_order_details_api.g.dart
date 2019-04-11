@@ -97,9 +97,6 @@ class _$EditOrderDetailsApi extends EditOrderDetailsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateEditOrderDetailsApi> get $serializer => CommandStateEditOrderDetailsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

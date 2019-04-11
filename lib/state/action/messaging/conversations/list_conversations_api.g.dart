@@ -112,9 +112,6 @@ class _$ListConversationsApi extends ListConversationsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListConversationsApi> get $serializer => CommandStateListConversationsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

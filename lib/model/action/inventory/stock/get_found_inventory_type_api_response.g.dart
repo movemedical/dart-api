@@ -230,9 +230,6 @@ class _$GetFoundInventoryTypeApiResponseActions
     inventoryType.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetFoundInventoryTypeApiResponseGetFoundInventoryTypeApiResponseActions> get $serializer => GetFoundInventoryTypeApiResponseGetFoundInventoryTypeApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

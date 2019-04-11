@@ -283,19 +283,16 @@ class _$ListOrderReasonsApiRequestActions
   _$ListOrderReasonsApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrderReasonsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        reasonGroups = $options.actionField<BuiltList<OrderReasonGroup>>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        reasonGroups = $options.field<BuiltList<OrderReasonGroup>>(
             'reasonGroups',
             (a) => a?.reasonGroups,
             (s) => s?.reasonGroups,
             (p, b) => p?.reasonGroups = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -351,9 +348,6 @@ class _$ListOrderReasonsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrderReasonsApiRequestListOrderReasonsApiRequestActions> get $serializer => ListOrderReasonsApiRequestListOrderReasonsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

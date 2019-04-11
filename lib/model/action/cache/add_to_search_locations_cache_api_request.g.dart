@@ -237,22 +237,21 @@ class _$AddToSearchLocationsCacheApiRequestActions
   _$AddToSearchLocationsCacheApiRequestActions._(this.$options)
       : $replace = $options.action<AddToSearchLocationsCacheApiRequest>(
             '\$replace', (a) => a?.$replace),
-        locations = $options.actionField<BuiltList<Location>>(
+        locations = $options.field<BuiltList<Location>>(
             'locations',
             (a) => a?.locations,
             (s) => s?.locations,
             (p, b) => p?.locations = b),
-        locationVizScoped = $options.actionField<bool>(
+        locationVizScoped = $options.field<bool>(
             'locationVizScoped',
             (a) => a?.locationVizScoped,
             (s) => s?.locationVizScoped,
             (p, b) => p?.locationVizScoped = b),
-        purpose =
-            $options.actionField<SearchLocationsApiSearchLocationsPurpose>(
-                'purpose',
-                (a) => a?.purpose,
-                (s) => s?.purpose,
-                (p, b) => p?.purpose = b),
+        purpose = $options.field<SearchLocationsApiSearchLocationsPurpose>(
+            'purpose',
+            (a) => a?.purpose,
+            (s) => s?.purpose,
+            (p, b) => p?.purpose = b),
         super._();
 
   factory _$AddToSearchLocationsCacheApiRequestActions(
@@ -289,9 +288,6 @@ class _$AddToSearchLocationsCacheApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddToSearchLocationsCacheApiRequestAddToSearchLocationsCacheApiRequestActions> get $serializer => AddToSearchLocationsCacheApiRequestAddToSearchLocationsCacheApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

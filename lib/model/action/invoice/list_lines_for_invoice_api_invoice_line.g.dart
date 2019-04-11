@@ -327,23 +327,20 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
   _$ListLinesForInvoiceApiInvoiceLineActions._(this.$options)
       : $replace = $options.action<ListLinesForInvoiceApiInvoiceLine>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        invoiceLineNumber = $options.actionField<int>(
+        invoiceLineNumber = $options.field<int>(
             'invoiceLineNumber',
             (a) => a?.invoiceLineNumber,
             (s) => s?.invoiceLineNumber,
             (p, b) => p?.invoiceLineNumber = b),
-        quantity = $options.actionField<int>('quantity', (a) => a?.quantity,
+        quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
-        price = $options.actionField<double>(
+        price = $options.field<double>(
             'price', (a) => a?.price, (s) => s?.price, (p, b) => p?.price = b),
-        unitPrice = $options.actionField<double>(
-            'unitPrice',
-            (a) => a?.unitPrice,
-            (s) => s?.unitPrice,
-            (p, b) => p?.unitPrice = b),
-        erpOrderLineNumber = $options.actionField<String>(
+        unitPrice = $options.field<double>('unitPrice', (a) => a?.unitPrice,
+            (s) => s?.unitPrice, (p, b) => p?.unitPrice = b),
+        erpOrderLineNumber = $options.field<String>(
             'erpOrderLineNumber',
             (a) => a?.erpOrderLineNumber,
             (s) => s?.erpOrderLineNumber,
@@ -405,9 +402,6 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
     super.$middleware(middleware);
     item.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLinesForInvoiceApiInvoiceLineListLinesForInvoiceApiInvoiceLineActions> get $serializer => ListLinesForInvoiceApiInvoiceLineListLinesForInvoiceApiInvoiceLineActions.serializer;
 
   FullType _$fullType;
   @override

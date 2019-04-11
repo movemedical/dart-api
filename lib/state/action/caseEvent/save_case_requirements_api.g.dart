@@ -105,9 +105,6 @@ class _$SaveCaseRequirementsApi extends SaveCaseRequirementsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSaveCaseRequirementsApi> get $serializer => CommandStateSaveCaseRequirementsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

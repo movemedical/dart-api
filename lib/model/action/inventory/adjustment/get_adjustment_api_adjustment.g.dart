@@ -615,12 +615,12 @@ class _$GetAdjustmentApiAdjustmentActions
   _$GetAdjustmentApiAdjustmentActions._(this.$options)
       : $replace = $options.action<GetAdjustmentApiAdjustment>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<AdjustmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<AdjustmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
@@ -635,24 +635,24 @@ class _$GetAdjustmentApiAdjustmentActions
                 (s) => s?.stockPlace,
                 (b) => b?.stockPlace,
                 (parent, builder) => parent?.stockPlace = builder)),
-        adjustedDate = $options.actionField<DateTime>(
+        adjustedDate = $options.field<DateTime>(
             'adjustedDate',
             (a) => a?.adjustedDate,
             (s) => s?.adjustedDate,
             (p, b) => p?.adjustedDate = b),
-        reason = $options.actionField<AdjustmentReason>('reason',
-            (a) => a?.reason, (s) => s?.reason, (p, b) => p?.reason = b),
-        adjustedByUserId = $options.actionField<String>(
+        reason = $options.field<AdjustmentReason>('reason', (a) => a?.reason,
+            (s) => s?.reason, (p, b) => p?.reason = b),
+        adjustedByUserId = $options.field<String>(
             'adjustedByUserId',
             (a) => a?.adjustedByUserId,
             (s) => s?.adjustedByUserId,
             (p, b) => p?.adjustedByUserId = b),
-        adjustedByUserDisplayName = $options.actionField<String>(
+        adjustedByUserDisplayName = $options.field<String>(
             'adjustedByUserDisplayName',
             (a) => a?.adjustedByUserDisplayName,
             (s) => s?.adjustedByUserDisplayName,
             (p, b) => p?.adjustedByUserDisplayName = b),
-        erpReferenceNumber = $options.actionField<String>(
+        erpReferenceNumber = $options.field<String>(
             'erpReferenceNumber',
             (a) => a?.erpReferenceNumber,
             (s) => s?.erpReferenceNumber,
@@ -664,34 +664,34 @@ class _$GetAdjustmentApiAdjustmentActions
             (s) => s?.inventoryType,
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
-        qtyChange = $options.actionField<int>('qtyChange', (a) => a?.qtyChange,
+        qtyChange = $options.field<int>('qtyChange', (a) => a?.qtyChange,
             (s) => s?.qtyChange, (p, b) => p?.qtyChange = b),
-        referenceType = $options.actionField<AdjustmentReferenceType>(
+        referenceType = $options.field<AdjustmentReferenceType>(
             'referenceType',
             (a) => a?.referenceType,
             (s) => s?.referenceType,
             (p, b) => p?.referenceType = b),
-        referenceId = $options.actionField<String>(
+        referenceId = $options.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
             (p, b) => p?.referenceId = b),
-        referenceDisplayText = $options.actionField<String>(
+        referenceDisplayText = $options.field<String>(
             'referenceDisplayText',
             (a) => a?.referenceDisplayText,
             (s) => s?.referenceDisplayText,
             (p, b) => p?.referenceDisplayText = b),
-        reference2Id = $options.actionField<String>(
+        reference2Id = $options.field<String>(
             'reference2Id',
             (a) => a?.reference2Id,
             (s) => s?.reference2Id,
             (p, b) => p?.reference2Id = b),
-        reference2DisplayText = $options.actionField<String>(
+        reference2DisplayText = $options.field<String>(
             'reference2DisplayText',
             (a) => a?.reference2DisplayText,
             (s) => s?.reference2DisplayText,
             (p, b) => p?.reference2DisplayText = b),
-        note = $options.actionField<String>(
+        note = $options.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
         super._();
 
@@ -766,9 +766,6 @@ class _$GetAdjustmentApiAdjustmentActions
     stockPlace.$middleware(middleware);
     inventoryType.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAdjustmentApiAdjustmentGetAdjustmentApiAdjustmentActions> get $serializer => GetAdjustmentApiAdjustmentGetAdjustmentApiAdjustmentActions.serializer;
 
   FullType _$fullType;
   @override

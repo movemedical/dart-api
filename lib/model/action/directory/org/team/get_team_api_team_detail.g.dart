@@ -375,28 +375,28 @@ class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
   _$GetTeamApiTeamDetailActions._(this.$options)
       : $replace = $options.action<GetTeamApiTeamDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        salesTeam = $options.actionField<bool>('salesTeam', (a) => a?.salesTeam,
+        salesTeam = $options.field<bool>('salesTeam', (a) => a?.salesTeam,
             (s) => s?.salesTeam, (p, b) => p?.salesTeam = b),
-        opsTeam = $options.actionField<bool>('opsTeam', (a) => a?.opsTeam,
+        opsTeam = $options.field<bool>('opsTeam', (a) => a?.opsTeam,
             (s) => s?.opsTeam, (p, b) => p?.opsTeam = b),
-        teamReference = $options.actionField<String>(
+        teamReference = $options.field<String>(
             'teamReference',
             (a) => a?.teamReference,
             (s) => s?.teamReference,
             (p, b) => p?.teamReference = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -446,9 +446,6 @@ class _$GetTeamApiTeamDetailActions extends GetTeamApiTeamDetailActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetTeamApiTeamDetailGetTeamApiTeamDetailActions> get $serializer => GetTeamApiTeamDetailGetTeamApiTeamDetailActions.serializer;
 
   FullType _$fullType;
   @override

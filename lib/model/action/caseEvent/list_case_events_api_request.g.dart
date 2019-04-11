@@ -848,102 +848,96 @@ class _$ListCaseEventsApiRequestActions
   _$ListCaseEventsApiRequestActions._(this.$options)
       : $replace = $options.action<ListCaseEventsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        startDateLocal = $options.actionField<DateTime>(
+        startDateLocal = $options.field<DateTime>(
             'startDateLocal',
             (a) => a?.startDateLocal,
             (s) => s?.startDateLocal,
             (p, b) => p?.startDateLocal = b),
-        endDateLocal = $options.actionField<DateTime>(
+        endDateLocal = $options.field<DateTime>(
             'endDateLocal',
             (a) => a?.endDateLocal,
             (s) => s?.endDateLocal,
             (p, b) => p?.endDateLocal = b),
-        caseIds = $options.actionField<BuiltList<String>>('caseIds',
+        caseIds = $options.field<BuiltList<String>>('caseIds',
             (a) => a?.caseIds, (s) => s?.caseIds, (p, b) => p?.caseIds = b),
-        caseTypeIds = $options.actionField<BuiltList<String>>(
+        caseTypeIds = $options.field<BuiltList<String>>(
             'caseTypeIds',
             (a) => a?.caseTypeIds,
             (s) => s?.caseTypeIds,
             (p, b) => p?.caseTypeIds = b),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        hcrIds = $options.actionField<BuiltList<String>>('hcrIds',
-            (a) => a?.hcrIds, (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        coverageHcrIds = $options.actionField<BuiltList<String>>(
+        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+            (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
+        coverageHcrIds = $options.field<BuiltList<String>>(
             'coverageHcrIds',
             (a) => a?.coverageHcrIds,
             (s) => s?.coverageHcrIds,
             (p, b) => p?.coverageHcrIds = b),
-        teamIds = $options.actionField<BuiltList<String>>('teamIds',
+        teamIds = $options.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        facilityIds = $options.actionField<BuiltList<String>>(
+        facilityIds = $options.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        surgeonIds = $options.actionField<BuiltList<String>>(
+        surgeonIds = $options.field<BuiltList<String>>(
             'surgeonIds',
             (a) => a?.surgeonIds,
             (s) => s?.surgeonIds,
             (p, b) => p?.surgeonIds = b),
-        procedureIds = $options.actionField<BuiltList<String>>(
+        procedureIds = $options.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        subProcedureIds = $options.actionField<BuiltList<String>>(
+        subProcedureIds = $options.field<BuiltList<String>>(
             'subProcedureIds',
             (a) => a?.subProcedureIds,
             (s) => s?.subProcedureIds,
             (p, b) => p?.subProcedureIds = b),
-        bodySides = $options.actionField<BuiltList<BodySide>>(
+        bodySides = $options.field<BuiltList<BodySide>>(
             'bodySides',
             (a) => a?.bodySides,
             (s) => s?.bodySides,
             (p, b) => p?.bodySides = b),
-        statuses = $options.actionField<BuiltList<CaseEventStatus>>('statuses',
+        statuses = $options.field<BuiltList<CaseEventStatus>>('statuses',
             (a) => a?.statuses, (s) => s?.statuses, (p, b) => p?.statuses = b),
-        patientName = $options.actionField<String>(
+        patientName = $options.field<String>(
             'patientName',
             (a) => a?.patientName,
             (s) => s?.patientName,
             (p, b) => p?.patientName = b),
-        patientGender = $options.actionField<Gender>(
+        patientGender = $options.field<Gender>(
             'patientGender',
             (a) => a?.patientGender,
             (s) => s?.patientGender,
             (p, b) => p?.patientGender = b),
-        patientSearch = $options.actionField<String>(
+        patientSearch = $options.field<String>(
             'patientSearch',
             (a) => a?.patientSearch,
             (s) => s?.patientSearch,
             (p, b) => p?.patientSearch = b),
-        caseNumber = $options.actionField<String>(
-            'caseNumber',
-            (a) => a?.caseNumber,
-            (s) => s?.caseNumber,
-            (p, b) => p?.caseNumber = b),
-        activeWarnings = $options.actionField<bool>(
+        caseNumber = $options.field<String>('caseNumber', (a) => a?.caseNumber,
+            (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
+        activeWarnings = $options.field<bool>(
             'activeWarnings',
             (a) => a?.activeWarnings,
             (s) => s?.activeWarnings,
             (p, b) => p?.activeWarnings = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        forExport = $options.actionField<bool>('forExport', (a) => a?.forExport,
+        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -1050,9 +1044,6 @@ class _$ListCaseEventsApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseEventsApiRequestListCaseEventsApiRequestActions> get $serializer => ListCaseEventsApiRequestListCaseEventsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

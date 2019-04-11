@@ -124,9 +124,6 @@ class _$PreviewApplyPreferenceCardsToCaseApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStatePreviewApplyPreferenceCardsToCaseApi> get $serializer => CommandStatePreviewApplyPreferenceCardsToCaseApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -416,36 +416,36 @@ class _$ListNotificationsApiNotificationActions
   _$ListNotificationsApiNotificationActions._(this.$options)
       : $replace = $options.action<ListNotificationsApiNotification>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        notificationDate = $options.actionField<DateTime>(
+        notificationDate = $options.field<DateTime>(
             'notificationDate',
             (a) => a?.notificationDate,
             (s) => s?.notificationDate,
             (p, b) => p?.notificationDate = b),
-        pushed = $options.actionField<bool>('pushed', (a) => a?.pushed,
+        pushed = $options.field<bool>('pushed', (a) => a?.pushed,
             (s) => s?.pushed, (p, b) => p?.pushed = b),
-        emailed = $options.actionField<bool>('emailed', (a) => a?.emailed,
+        emailed = $options.field<bool>('emailed', (a) => a?.emailed,
             (s) => s?.emailed, (p, b) => p?.emailed = b),
-        read = $options.actionField<bool>(
+        read = $options.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
-        readDate = $options.actionField<DateTime>('readDate',
-            (a) => a?.readDate, (s) => s?.readDate, (p, b) => p?.readDate = b),
-        notificationType = $options.actionField<NotificationType>(
+        readDate = $options.field<DateTime>('readDate', (a) => a?.readDate,
+            (s) => s?.readDate, (p, b) => p?.readDate = b),
+        notificationType = $options.field<NotificationType>(
             'notificationType',
             (a) => a?.notificationType,
             (s) => s?.notificationType,
             (p, b) => p?.notificationType = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        objectType = $options.actionField<AttributableType>(
+        objectType = $options.field<AttributableType>(
             'objectType',
             (a) => a?.objectType,
             (s) => s?.objectType,
             (p, b) => p?.objectType = b),
-        objectId = $options.actionField<String>('objectId', (a) => a?.objectId,
+        objectId = $options.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
-        objectDisplayText = $options.actionField<String>(
+        objectDisplayText = $options.field<String>(
             'objectDisplayText',
             (a) => a?.objectDisplayText,
             (s) => s?.objectDisplayText,
@@ -502,9 +502,6 @@ class _$ListNotificationsApiNotificationActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListNotificationsApiNotificationListNotificationsApiNotificationActions> get $serializer => ListNotificationsApiNotificationListNotificationsApiNotificationActions.serializer;
 
   FullType _$fullType;
   @override

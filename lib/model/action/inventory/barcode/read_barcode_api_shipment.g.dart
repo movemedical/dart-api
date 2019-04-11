@@ -284,29 +284,29 @@ class _$ReadBarcodeApiShipmentActions extends ReadBarcodeApiShipmentActions {
   _$ReadBarcodeApiShipmentActions._(this.$options)
       : $replace = $options.action<ReadBarcodeApiShipment>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        shipmentNumber = $options.actionField<int>(
+        shipmentNumber = $options.field<int>(
             'shipmentNumber',
             (a) => a?.shipmentNumber,
             (s) => s?.shipmentNumber,
             (p, b) => p?.shipmentNumber = b),
-        fromLocationType = $options.actionField<LocationType>(
+        fromLocationType = $options.field<LocationType>(
             'fromLocationType',
             (a) => a?.fromLocationType,
             (s) => s?.fromLocationType,
             (p, b) => p?.fromLocationType = b),
-        fromLocationId = $options.actionField<String>(
+        fromLocationId = $options.field<String>(
             'fromLocationId',
             (a) => a?.fromLocationId,
             (s) => s?.fromLocationId,
             (p, b) => p?.fromLocationId = b),
-        toLocationType = $options.actionField<LocationType>(
+        toLocationType = $options.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        toLocationId = $options.actionField<String>(
+        toLocationId = $options.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
@@ -352,9 +352,6 @@ class _$ReadBarcodeApiShipmentActions extends ReadBarcodeApiShipmentActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcodeApiShipmentReadBarcodeApiShipmentActions> get $serializer => ReadBarcodeApiShipmentReadBarcodeApiShipmentActions.serializer;
 
   FullType _$fullType;
   @override

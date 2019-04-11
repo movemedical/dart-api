@@ -193,12 +193,12 @@ class _$GetUiSetupMobileApiDashboardWidgetActions
   _$GetUiSetupMobileApiDashboardWidgetActions._(this.$options)
       : $replace = $options.action<GetUiSetupMobileApiDashboardWidget>(
             '\$replace', (a) => a?.$replace),
-        widgetType = $options.actionField<MobileDashboardWidgetType>(
+        widgetType = $options.field<MobileDashboardWidgetType>(
             'widgetType',
             (a) => a?.widgetType,
             (s) => s?.widgetType,
             (p, b) => p?.widgetType = b),
-        widgetConfig = $options.actionField<String>(
+        widgetConfig = $options.field<String>(
             'widgetConfig',
             (a) => a?.widgetConfig,
             (s) => s?.widgetConfig,
@@ -237,9 +237,6 @@ class _$GetUiSetupMobileApiDashboardWidgetActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupMobileApiDashboardWidgetGetUiSetupMobileApiDashboardWidgetActions> get $serializer => GetUiSetupMobileApiDashboardWidgetGetUiSetupMobileApiDashboardWidgetActions.serializer;
 
   FullType _$fullType;
   @override

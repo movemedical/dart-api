@@ -145,9 +145,6 @@ class _$GetPendingPoCountApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<GetPendingPoCountApiRequestGetPendingPoCountApiRequestActions> get $serializer => GetPendingPoCountApiRequestGetPendingPoCountApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

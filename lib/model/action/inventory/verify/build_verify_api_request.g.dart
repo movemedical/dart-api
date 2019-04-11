@@ -630,74 +630,73 @@ class _$BuildVerifyApiRequestActions extends BuildVerifyApiRequestActions {
                 (b) => b?.verifyingAtLocation,
                 (parent, builder) => parent?.verifyingAtLocation = builder)),
         confirmedExpectations =
-            $options.actionField<BuiltList<BuildVerifyApiExpectation>>(
+            $options.field<BuiltList<BuildVerifyApiExpectation>>(
                 'confirmedExpectations',
                 (a) => a?.confirmedExpectations,
                 (s) => s?.confirmedExpectations,
                 (p, b) => p?.confirmedExpectations = b),
-        looseLines = $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
+        looseLines = $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
             'looseLines',
             (a) => a?.looseLines,
             (s) => s?.looseLines,
             (p, b) => p?.looseLines = b),
-        omitPotentialExpectationIds = $options.actionField<BuiltList<String>>(
+        omitPotentialExpectationIds = $options.field<BuiltList<String>>(
             'omitPotentialExpectationIds',
             (a) => a?.omitPotentialExpectationIds,
             (s) => s?.omitPotentialExpectationIds,
             (p, b) => p?.omitPotentialExpectationIds = b),
-        scanSequence = $options.actionField<int>(
+        scanSequence = $options.field<int>(
             'scanSequence',
             (a) => a?.scanSequence,
             (s) => s?.scanSequence,
             (p, b) => p?.scanSequence = b),
-        removeExpectationIds = $options.actionField<BuiltList<String>>(
+        removeExpectationIds = $options.field<BuiltList<String>>(
             'removeExpectationIds',
             (a) => a?.removeExpectationIds,
             (s) => s?.removeExpectationIds,
             (p, b) => p?.removeExpectationIds = b),
         addExpectations =
-            $options.actionField<BuiltList<BuildVerifyApiAddExpectation>>(
+            $options.field<BuiltList<BuildVerifyApiAddExpectation>>(
                 'addExpectations',
                 (a) => a?.addExpectations,
                 (s) => s?.addExpectations,
                 (p, b) => p?.addExpectations = b),
-        addOrderIdExpectations = $options.actionField<BuiltList<String>>(
+        addOrderIdExpectations = $options.field<BuiltList<String>>(
             'addOrderIdExpectations',
             (a) => a?.addOrderIdExpectations,
             (s) => s?.addOrderIdExpectations,
             (p, b) => p?.addOrderIdExpectations = b),
-        addShipmentIdExpectations = $options.actionField<BuiltList<String>>(
+        addShipmentIdExpectations = $options.field<BuiltList<String>>(
             'addShipmentIdExpectations',
             (a) => a?.addShipmentIdExpectations,
             (s) => s?.addShipmentIdExpectations,
             (p, b) => p?.addShipmentIdExpectations = b),
-        removeEnteredLineIds = $options.actionField<BuiltList<String>>(
+        removeEnteredLineIds = $options.field<BuiltList<String>>(
             'removeEnteredLineIds',
             (a) => a?.removeEnteredLineIds,
             (s) => s?.removeEnteredLineIds,
             (p, b) => p?.removeEnteredLineIds = b),
-        addEnteredLines =
-            $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
-                'addEnteredLines',
-                (a) => a?.addEnteredLines,
-                (s) => s?.addEnteredLines,
-                (p, b) => p?.addEnteredLines = b),
-        responsiblePartyIds = $options.actionField<BuiltList<String>>(
+        addEnteredLines = $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
+            'addEnteredLines',
+            (a) => a?.addEnteredLines,
+            (s) => s?.addEnteredLines,
+            (p, b) => p?.addEnteredLines = b),
+        responsiblePartyIds = $options.field<BuiltList<String>>(
             'responsiblePartyIds',
             (a) => a?.responsiblePartyIds,
             (s) => s?.responsiblePartyIds,
             (p, b) => p?.responsiblePartyIds = b),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        locationTypes = $options.actionField<BuiltList<LocationType>>(
+        locationTypes = $options.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.actionField<BuiltList<FacilityType>>(
+        facilityTypes = $options.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
@@ -766,9 +765,6 @@ class _$BuildVerifyApiRequestActions extends BuildVerifyApiRequestActions {
     super.$middleware(middleware);
     verifyingAtLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiRequestBuildVerifyApiRequestActions> get $serializer => BuildVerifyApiRequestBuildVerifyApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

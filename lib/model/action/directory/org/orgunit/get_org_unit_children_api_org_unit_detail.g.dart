@@ -282,20 +282,17 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
   _$GetOrgUnitChildrenApiOrgUnitDetailActions._(this.$options)
       : $replace = $options.action<GetOrgUnitChildrenApiOrgUnitDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        ops = $options.actionField<bool>(
+        ops = $options.field<bool>(
             'ops', (a) => a?.ops, (s) => s?.ops, (p, b) => p?.ops = b),
-        sales = $options.actionField<bool>(
+        sales = $options.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
-        hasChildren = $options.actionField<bool>(
-            'hasChildren',
-            (a) => a?.hasChildren,
-            (s) => s?.hasChildren,
-            (p, b) => p?.hasChildren = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        hasChildren = $options.field<bool>('hasChildren', (a) => a?.hasChildren,
+            (s) => s?.hasChildren, (p, b) => p?.hasChildren = b),
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -339,9 +336,6 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrgUnitChildrenApiOrgUnitDetailGetOrgUnitChildrenApiOrgUnitDetailActions> get $serializer => GetOrgUnitChildrenApiOrgUnitDetailGetOrgUnitChildrenApiOrgUnitDetailActions.serializer;
 
   FullType _$fullType;
   @override

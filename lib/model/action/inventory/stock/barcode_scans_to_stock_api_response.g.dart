@@ -184,12 +184,11 @@ class _$BarcodeScansToStockApiResponseActions
   _$BarcodeScansToStockApiResponseActions._(this.$options)
       : $replace = $options.action<BarcodeScansToStockApiResponse>(
             '\$replace', (a) => a?.$replace),
-        stocks =
-            $options.actionField<BuiltList<BarcodeScansToStockApiBarcodeStock>>(
-                'stocks',
-                (a) => a?.stocks,
-                (s) => s?.stocks,
-                (p, b) => p?.stocks = b),
+        stocks = $options.field<BuiltList<BarcodeScansToStockApiBarcodeStock>>(
+            'stocks',
+            (a) => a?.stocks,
+            (s) => s?.stocks,
+            (p, b) => p?.stocks = b),
         super._();
 
   factory _$BarcodeScansToStockApiResponseActions(
@@ -222,9 +221,6 @@ class _$BarcodeScansToStockApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BarcodeScansToStockApiResponseBarcodeScansToStockApiResponseActions> get $serializer => BarcodeScansToStockApiResponseBarcodeScansToStockApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

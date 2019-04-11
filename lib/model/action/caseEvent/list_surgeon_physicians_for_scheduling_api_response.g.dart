@@ -198,7 +198,7 @@ class _$ListSurgeonPhysiciansForSchedulingApiResponseActions
       : $replace =
             $options.action<ListSurgeonPhysiciansForSchedulingApiResponse>(
                 '\$replace', (a) => a?.$replace),
-        physicians = $options.actionField<BuiltList<Physician>>(
+        physicians = $options.field<BuiltList<Physician>>(
             'physicians',
             (a) => a?.physicians,
             (s) => s?.physicians,
@@ -236,9 +236,6 @@ class _$ListSurgeonPhysiciansForSchedulingApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSurgeonPhysiciansForSchedulingApiResponseListSurgeonPhysiciansForSchedulingApiResponseActions> get $serializer => ListSurgeonPhysiciansForSchedulingApiResponseListSurgeonPhysiciansForSchedulingApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

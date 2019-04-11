@@ -97,9 +97,6 @@ class _$MarkMessagesReadApi extends MarkMessagesReadApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateMarkMessagesReadApi> get $serializer => CommandStateMarkMessagesReadApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

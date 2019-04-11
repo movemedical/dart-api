@@ -483,9 +483,9 @@ class _$GetPhysicianApiPhysicianDetailActions
   _$GetPhysicianApiPhysicianDetailActions._(this.$options)
       : $replace = $options.action<GetPhysicianApiPhysicianDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        physicianType = $options.actionField<PhysicianType>(
+        physicianType = $options.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
@@ -518,28 +518,25 @@ class _$GetPhysicianApiPhysicianDetailActions
                 (s) => s?.mobilePhoneNumber,
                 (b) => b?.mobilePhoneNumber,
                 (parent, builder) => parent?.mobilePhoneNumber = builder)),
-        reference1 = $options.actionField<String>(
-            'reference1',
-            (a) => a?.reference1,
-            (s) => s?.reference1,
-            (p, b) => p?.reference1 = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        reference1 = $options.field<String>('reference1', (a) => a?.reference1,
+            (s) => s?.reference1, (p, b) => p?.reference1 = b),
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        npi = $options.actionField<String>(
+        npi = $options.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userPerspective = $options.actionField<UserPerspective>(
+        userPerspective = $options.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        userStatus = $options.actionField<UserStatus>(
+        userStatus = $options.field<UserStatus>(
             'userStatus',
             (a) => a?.userStatus,
             (s) => s?.userStatus,
             (p, b) => p?.userStatus = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         super._();
 
@@ -606,9 +603,6 @@ class _$GetPhysicianApiPhysicianDetailActions
     workPhoneNumber.$middleware(middleware);
     mobilePhoneNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPhysicianApiPhysicianDetailGetPhysicianApiPhysicianDetailActions> get $serializer => GetPhysicianApiPhysicianDetailGetPhysicianApiPhysicianDetailActions.serializer;
 
   FullType _$fullType;
   @override

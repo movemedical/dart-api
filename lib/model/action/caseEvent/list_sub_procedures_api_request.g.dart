@@ -167,7 +167,7 @@ class _$ListSubProceduresApiRequestActions
   _$ListSubProceduresApiRequestActions._(this.$options)
       : $replace = $options.action<ListSubProceduresApiRequest>(
             '\$replace', (a) => a?.$replace),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
@@ -203,9 +203,6 @@ class _$ListSubProceduresApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSubProceduresApiRequestListSubProceduresApiRequestActions> get $serializer => ListSubProceduresApiRequestListSubProceduresApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

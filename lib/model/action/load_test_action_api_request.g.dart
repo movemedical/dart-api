@@ -162,7 +162,7 @@ class _$LoadTestActionApiRequestActions
   _$LoadTestActionApiRequestActions._(this.$options)
       : $replace = $options.action<LoadTestActionApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$LoadTestActionApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<LoadTestActionApiRequestLoadTestActionApiRequestActions> get $serializer => LoadTestActionApiRequestLoadTestActionApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

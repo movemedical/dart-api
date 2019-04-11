@@ -229,9 +229,6 @@ class _$GetStockSnapshotApiResponseActions
     snapshot.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetStockSnapshotApiResponseGetStockSnapshotApiResponseActions> get $serializer => GetStockSnapshotApiResponseGetStockSnapshotApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

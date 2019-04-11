@@ -215,17 +215,17 @@ class _$ListOpenBillingsApiResponseActions
   _$ListOpenBillingsApiResponseActions._(this.$options)
       : $replace = $options.action<ListOpenBillingsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        pendingPoSum = $options.actionField<double>(
+        pendingPoSum = $options.field<double>(
             'pendingPoSum',
             (a) => a?.pendingPoSum,
             (s) => s?.pendingPoSum,
             (p, b) => p?.pendingPoSum = b),
-        missingUsageSum = $options.actionField<double>(
+        missingUsageSum = $options.field<double>(
             'missingUsageSum',
             (a) => a?.missingUsageSum,
             (s) => s?.missingUsageSum,
             (p, b) => p?.missingUsageSum = b),
-        unreconciledSum = $options.actionField<double>(
+        unreconciledSum = $options.field<double>(
             'unreconciledSum',
             (a) => a?.unreconciledSum,
             (s) => s?.unreconciledSum,
@@ -265,9 +265,6 @@ class _$ListOpenBillingsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOpenBillingsApiResponseListOpenBillingsApiResponseActions> get $serializer => ListOpenBillingsApiResponseListOpenBillingsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

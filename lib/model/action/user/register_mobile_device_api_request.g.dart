@@ -166,7 +166,7 @@ class _$RegisterMobileDeviceApiRequestActions
   _$RegisterMobileDeviceApiRequestActions._(this.$options)
       : $replace = $options.action<RegisterMobileDeviceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        token = $options.actionField<String>(
+        token = $options.field<String>(
             'token', (a) => a?.token, (s) => s?.token, (p, b) => p?.token = b),
         super._();
 
@@ -200,9 +200,6 @@ class _$RegisterMobileDeviceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RegisterMobileDeviceApiRequestRegisterMobileDeviceApiRequestActions> get $serializer => RegisterMobileDeviceApiRequestRegisterMobileDeviceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

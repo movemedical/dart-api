@@ -565,73 +565,61 @@ class _$GetImportLogDetailApiImportLogActions
   _$GetImportLogDetailApiImportLogActions._(this.$options)
       : $replace = $options.action<GetImportLogDetailApiImportLog>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        importLogNumber = $options.actionField<String>(
+        importLogNumber = $options.field<String>(
             'importLogNumber',
             (a) => a?.importLogNumber,
             (s) => s?.importLogNumber,
             (p, b) => p?.importLogNumber = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        jobKey = $options.actionField<String>('jobKey', (a) => a?.jobKey,
+        jobKey = $options.field<String>('jobKey', (a) => a?.jobKey,
             (s) => s?.jobKey, (p, b) => p?.jobKey = b),
-        jobId = $options.actionField<String>(
+        jobId = $options.field<String>(
             'jobId', (a) => a?.jobId, (s) => s?.jobId, (p, b) => p?.jobId = b),
-        serverName = $options.actionField<String>(
-            'serverName',
-            (a) => a?.serverName,
-            (s) => s?.serverName,
-            (p, b) => p?.serverName = b),
-        directory = $options.actionField<String>(
-            'directory',
-            (a) => a?.directory,
-            (s) => s?.directory,
-            (p, b) => p?.directory = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        serverName = $options.field<String>('serverName', (a) => a?.serverName,
+            (s) => s?.serverName, (p, b) => p?.serverName = b),
+        directory = $options.field<String>('directory', (a) => a?.directory,
+            (s) => s?.directory, (p, b) => p?.directory = b),
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        processingTimeSec = $options.actionField<int>(
+        processingTimeSec = $options.field<int>(
             'processingTimeSec',
             (a) => a?.processingTimeSec,
             (s) => s?.processingTimeSec,
             (p, b) => p?.processingTimeSec = b),
-        currentState = $options.actionField<ImportStatus>(
+        currentState = $options.field<ImportStatus>(
             'currentState',
             (a) => a?.currentState,
             (s) => s?.currentState,
             (p, b) => p?.currentState = b),
-        currentStateEnteredTime = $options.actionField<DateTime>(
+        currentStateEnteredTime = $options.field<DateTime>(
             'currentStateEnteredTime',
             (a) => a?.currentStateEnteredTime,
             (s) => s?.currentStateEnteredTime,
             (p, b) => p?.currentStateEnteredTime = b),
-        currentStateTimeOut = $options.actionField<DateTime>(
+        currentStateTimeOut = $options.field<DateTime>(
             'currentStateTimeOut',
             (a) => a?.currentStateTimeOut,
             (s) => s?.currentStateTimeOut,
             (p, b) => p?.currentStateTimeOut = b),
-        statusMessage = $options.actionField<String>(
+        statusMessage = $options.field<String>(
             'statusMessage',
             (a) => a?.statusMessage,
             (s) => s?.statusMessage,
             (p, b) => p?.statusMessage = b),
-        outcome = $options.actionField<bool>('outcome', (a) => a?.outcome,
+        outcome = $options.field<bool>('outcome', (a) => a?.outcome,
             (s) => s?.outcome, (p, b) => p?.outcome = b),
-        outcomeMessage = $options.actionField<String>(
+        outcomeMessage = $options.field<String>(
             'outcomeMessage',
             (a) => a?.outcomeMessage,
             (s) => s?.outcomeMessage,
             (p, b) => p?.outcomeMessage = b),
-        issueCount = $options.actionField<int>(
-            'issueCount',
-            (a) => a?.issueCount,
-            (s) => s?.issueCount,
-            (p, b) => p?.issueCount = b),
+        issueCount = $options.field<int>('issueCount', (a) => a?.issueCount,
+            (s) => s?.issueCount, (p, b) => p?.issueCount = b),
         super._();
 
   factory _$GetImportLogDetailApiImportLogActions(
@@ -696,9 +684,6 @@ class _$GetImportLogDetailApiImportLogActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetImportLogDetailApiImportLogGetImportLogDetailApiImportLogActions> get $serializer => GetImportLogDetailApiImportLogGetImportLogDetailApiImportLogActions.serializer;
 
   FullType _$fullType;
   @override

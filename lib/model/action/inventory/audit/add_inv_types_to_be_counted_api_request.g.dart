@@ -211,10 +211,10 @@ class _$AddInvTypesToBeCountedApiRequestActions
   _$AddInvTypesToBeCountedApiRequestActions._(this.$options)
       : $replace = $options.action<AddInvTypesToBeCountedApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        invTypes = $options
-            .actionField<BuiltList<AddInvTypesToBeCountedApiInvTypeToCount>>(
+        invTypes =
+            $options.field<BuiltList<AddInvTypesToBeCountedApiInvTypeToCount>>(
                 'invTypes',
                 (a) => a?.invTypes,
                 (s) => s?.invTypes,
@@ -253,9 +253,6 @@ class _$AddInvTypesToBeCountedApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddInvTypesToBeCountedApiRequestAddInvTypesToBeCountedApiRequestActions> get $serializer => AddInvTypesToBeCountedApiRequestAddInvTypesToBeCountedApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

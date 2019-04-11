@@ -255,9 +255,9 @@ class _$ListOrgDelegatesApiRequestActions
   _$ListOrgDelegatesApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrgDelegatesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -322,9 +322,6 @@ class _$ListOrgDelegatesApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgDelegatesApiRequestListOrgDelegatesApiRequestActions> get $serializer => ListOrgDelegatesApiRequestListOrgDelegatesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

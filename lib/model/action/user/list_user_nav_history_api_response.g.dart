@@ -184,12 +184,11 @@ class _$ListUserNavHistoryApiResponseActions
   _$ListUserNavHistoryApiResponseActions._(this.$options)
       : $replace = $options.action<ListUserNavHistoryApiResponse>(
             '\$replace', (a) => a?.$replace),
-        entries =
-            $options.actionField<BuiltList<ListUserNavHistoryApiNavEntry>>(
-                'entries',
-                (a) => a?.entries,
-                (s) => s?.entries,
-                (p, b) => p?.entries = b),
+        entries = $options.field<BuiltList<ListUserNavHistoryApiNavEntry>>(
+            'entries',
+            (a) => a?.entries,
+            (s) => s?.entries,
+            (p, b) => p?.entries = b),
         super._();
 
   factory _$ListUserNavHistoryApiResponseActions(
@@ -221,9 +220,6 @@ class _$ListUserNavHistoryApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUserNavHistoryApiResponseListUserNavHistoryApiResponseActions> get $serializer => ListUserNavHistoryApiResponseListUserNavHistoryApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

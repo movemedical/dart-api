@@ -187,7 +187,7 @@ class _$MarkNotificationsReadApiRequestActions
   _$MarkNotificationsReadApiRequestActions._(this.$options)
       : $replace = $options.action<MarkNotificationsReadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        notificationIds = $options.actionField<BuiltList<String>>(
+        notificationIds = $options.field<BuiltList<String>>(
             'notificationIds',
             (a) => a?.notificationIds,
             (s) => s?.notificationIds,
@@ -224,9 +224,6 @@ class _$MarkNotificationsReadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MarkNotificationsReadApiRequestMarkNotificationsReadApiRequestActions> get $serializer => MarkNotificationsReadApiRequestMarkNotificationsReadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

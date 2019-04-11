@@ -168,7 +168,7 @@ class _$RequestDueBackReportApiResponseActions
   _$RequestDueBackReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestDueBackReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -205,9 +205,6 @@ class _$RequestDueBackReportApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestDueBackReportApiResponseRequestDueBackReportApiResponseActions> get $serializer => RequestDueBackReportApiResponseRequestDueBackReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddHcrToColleagueApi> get $serializer => CommandStateAddHcrToColleagueApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -354,11 +354,11 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
             (s) => s?.unitOfMeasure,
             (b) => b?.unitOfMeasure,
             (parent, builder) => parent?.unitOfMeasure = builder)),
-        versions = $options.actionField<BuiltList<ItemVersion>>('versions',
+        versions = $options.field<BuiltList<ItemVersion>>('versions',
             (a) => a?.versions, (s) => s?.versions, (p, b) => p?.versions = b),
-        gtins = $options.actionField<BuiltList<String>>(
+        gtins = $options.field<BuiltList<String>>(
             'gtins', (a) => a?.gtins, (s) => s?.gtins, (p, b) => p?.gtins = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         displayRule = GetItemApiDisplayRuleActions(() => $options.stateful<
                 GetItemApiDisplayRule,
@@ -420,9 +420,6 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
     unitOfMeasure.$middleware(middleware);
     displayRule.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemApiResponseGetItemApiResponseActions> get $serializer => GetItemApiResponseGetItemApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -179,7 +179,7 @@ class _$SearchContactsApiResponseActions
   _$SearchContactsApiResponseActions._(this.$options)
       : $replace = $options.action<SearchContactsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        contacts = $options.actionField<BuiltList<Contact>>('contacts',
+        contacts = $options.field<BuiltList<Contact>>('contacts',
             (a) => a?.contacts, (s) => s?.contacts, (p, b) => p?.contacts = b),
         super._();
 
@@ -212,9 +212,6 @@ class _$SearchContactsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchContactsApiResponseSearchContactsApiResponseActions> get $serializer => SearchContactsApiResponseSearchContactsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

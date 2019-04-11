@@ -203,7 +203,7 @@ class _$ListExportLogFilesApiRequestActions
   _$ListExportLogFilesApiRequestActions._(this.$options)
       : $replace = $options.action<ListExportLogFilesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        exportLogId = $options.actionField<String>(
+        exportLogId = $options.field<String>(
             'exportLogId',
             (a) => a?.exportLogId,
             (s) => s?.exportLogId,
@@ -256,9 +256,6 @@ class _$ListExportLogFilesApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListExportLogFilesApiRequestListExportLogFilesApiRequestActions> get $serializer => ListExportLogFilesApiRequestListExportLogFilesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

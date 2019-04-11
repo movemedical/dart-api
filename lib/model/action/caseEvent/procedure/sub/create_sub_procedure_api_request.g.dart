@@ -259,18 +259,18 @@ class _$CreateSubProcedureApiRequestActions
   _$CreateSubProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<CreateSubProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        parentId = $options.actionField<String>('parentId', (a) => a?.parentId,
+        parentId = $options.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        icdCode = $options.actionField<String>('icdCode', (a) => a?.icdCode,
+        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -311,9 +311,6 @@ class _$CreateSubProcedureApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateSubProcedureApiRequestCreateSubProcedureApiRequestActions> get $serializer => CreateSubProcedureApiRequestCreateSubProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

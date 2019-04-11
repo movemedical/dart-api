@@ -105,9 +105,6 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateArchiveConversationsApi> get $serializer => CommandStateArchiveConversationsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

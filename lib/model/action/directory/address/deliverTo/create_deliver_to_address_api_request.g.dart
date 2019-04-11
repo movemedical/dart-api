@@ -510,54 +510,42 @@ class _$CreateDeliverToAddressApiRequestActions
   _$CreateDeliverToAddressApiRequestActions._(this.$options)
       : $replace = $options.action<CreateDeliverToAddressApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        customerReference = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        customerReference = $options.field<String>(
             'customerReference',
             (a) => a?.customerReference,
             (s) => s?.customerReference,
             (p, b) => p?.customerReference = b),
-        customerKey = $options.actionField<String>(
+        customerKey = $options.field<String>(
             'customerKey',
             (a) => a?.customerKey,
             (s) => s?.customerKey,
             (p, b) => p?.customerKey = b),
-        line1 = $options.actionField<String>(
+        line1 = $options.field<String>(
             'line1', (a) => a?.line1, (s) => s?.line1, (p, b) => p?.line1 = b),
-        line2 = $options.actionField<String>(
+        line2 = $options.field<String>(
             'line2', (a) => a?.line2, (s) => s?.line2, (p, b) => p?.line2 = b),
-        line3 = $options.actionField<String>(
+        line3 = $options.field<String>(
             'line3', (a) => a?.line3, (s) => s?.line3, (p, b) => p?.line3 = b),
-        city = $options.actionField<String>(
+        city = $options.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        county = $options.actionField<String>('county', (a) => a?.county,
+        county = $options.field<String>('county', (a) => a?.county,
             (s) => s?.county, (p, b) => p?.county = b),
-        state = $options.actionField<String>(
+        state = $options.field<String>(
             'state', (a) => a?.state, (s) => s?.state, (p, b) => p?.state = b),
-        postalCode = $options.actionField<String>(
-            'postalCode',
-            (a) => a?.postalCode,
-            (s) => s?.postalCode,
-            (p, b) => p?.postalCode = b),
-        country = $options.actionField<String>('country', (a) => a?.country,
+        postalCode = $options.field<String>('postalCode', (a) => a?.postalCode,
+            (s) => s?.postalCode, (p, b) => p?.postalCode = b),
+        country = $options.field<String>('country', (a) => a?.country,
             (s) => s?.country, (p, b) => p?.country = b),
-        latitude = $options.actionField<double>('latitude', (a) => a?.latitude,
+        latitude = $options.field<double>('latitude', (a) => a?.latitude,
             (s) => s?.latitude, (p, b) => p?.latitude = b),
-        longitude = $options.actionField<double>(
-            'longitude',
-            (a) => a?.longitude,
-            (s) => s?.longitude,
-            (p, b) => p?.longitude = b),
+        longitude = $options.field<double>('longitude', (a) => a?.longitude,
+            (s) => s?.longitude, (p, b) => p?.longitude = b),
         super._();
 
   factory _$CreateDeliverToAddressApiRequestActions(
@@ -618,9 +606,6 @@ class _$CreateDeliverToAddressApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateDeliverToAddressApiRequestCreateDeliverToAddressApiRequestActions> get $serializer => CreateDeliverToAddressApiRequestCreateDeliverToAddressApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

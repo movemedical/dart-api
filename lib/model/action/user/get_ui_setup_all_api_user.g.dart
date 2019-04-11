@@ -617,28 +617,25 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   _$GetUiSetupAllApiUserActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiUser>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        displayName = $options.actionField<String>(
+        displayName = $options.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        erpUserId = $options.actionField<String>(
-            'erpUserId',
-            (a) => a?.erpUserId,
-            (s) => s?.erpUserId,
-            (p, b) => p?.erpUserId = b),
-        orgId = $options.actionField<String>(
+        erpUserId = $options.field<String>('erpUserId', (a) => a?.erpUserId,
+            (s) => s?.erpUserId, (p, b) => p?.erpUserId = b),
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        userPerspective = $options.actionField<UserPerspective>(
+        userPerspective = $options.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         contact = ContactActions(() =>
             $options.stateful<Contact, ContactBuilder, ContactActions>(
@@ -647,9 +644,9 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
                 (s) => s?.contact,
                 (b) => b?.contact,
                 (parent, builder) => parent?.contact = builder)),
-        ssoType = $options.actionField<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        ssoId = $options.actionField<String>(
+        ssoId = $options.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
         orgInfo = GetUiSetupAllApiOrgInfoActions(() => $options.stateful<
                 GetUiSetupAllApiOrgInfo,
@@ -786,9 +783,6 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
     dce.$middleware(middleware);
     consumer.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiUserGetUiSetupAllApiUserActions> get $serializer => GetUiSetupAllApiUserGetUiSetupAllApiUserActions.serializer;
 
   FullType _$fullType;
   @override

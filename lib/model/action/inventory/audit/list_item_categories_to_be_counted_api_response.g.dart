@@ -215,10 +215,10 @@ class _$ListItemCategoriesToBeCountedApiResponseActions
   _$ListItemCategoriesToBeCountedApiResponseActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesToBeCountedApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
-                BuiltList<ListItemCategoriesToBeCountedApiItemCategory>>(
-            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options
+            .field<BuiltList<ListItemCategoriesToBeCountedApiItemCategory>>(
+                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -254,9 +254,6 @@ class _$ListItemCategoriesToBeCountedApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesToBeCountedApiResponseListItemCategoriesToBeCountedApiResponseActions> get $serializer => ListItemCategoriesToBeCountedApiResponseListItemCategoriesToBeCountedApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

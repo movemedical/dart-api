@@ -96,9 +96,6 @@ class _$UpdateFacilityApi extends UpdateFacilityApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateFacilityApi> get $serializer => CommandStateUpdateFacilityApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

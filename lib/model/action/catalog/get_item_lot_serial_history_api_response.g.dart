@@ -193,8 +193,8 @@ class _$GetItemLotSerialHistoryApiResponseActions
   _$GetItemLotSerialHistoryApiResponseActions._(this.$options)
       : $replace = $options.action<GetItemLotSerialHistoryApiResponse>(
             '\$replace', (a) => a?.$replace),
-        historyRecords = $options
-            .actionField<BuiltList<GetItemLotSerialHistoryApiHistoryRecord>>(
+        historyRecords =
+            $options.field<BuiltList<GetItemLotSerialHistoryApiHistoryRecord>>(
                 'historyRecords',
                 (a) => a?.historyRecords,
                 (s) => s?.historyRecords,
@@ -231,9 +231,6 @@ class _$GetItemLotSerialHistoryApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemLotSerialHistoryApiResponseGetItemLotSerialHistoryApiResponseActions> get $serializer => GetItemLotSerialHistoryApiResponseGetItemLotSerialHistoryApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -256,25 +256,22 @@ class _$CreateNoteApiRequestActions extends CreateNoteApiRequestActions {
   _$CreateNoteApiRequestActions._(this.$options)
       : $replace = $options.action<CreateNoteApiRequest>(
             '\$replace', (a) => a?.$replace),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        attrType = $options.actionField<AttributableType>('attrType',
+        attrType = $options.field<AttributableType>('attrType',
             (a) => a?.attrType, (s) => s?.attrType, (p, b) => p?.attrType = b),
-        attrId = $options.actionField<String>('attrId', (a) => a?.attrId,
+        attrId = $options.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        visibility = $options.actionField<Visibility>(
+        visibility = $options.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
             (p, b) => p?.visibility = b),
-        noteValue = $options.actionField<String>(
-            'noteValue',
-            (a) => a?.noteValue,
-            (s) => s?.noteValue,
-            (p, b) => p?.noteValue = b),
+        noteValue = $options.field<String>('noteValue', (a) => a?.noteValue,
+            (s) => s?.noteValue, (p, b) => p?.noteValue = b),
         super._();
 
   factory _$CreateNoteApiRequestActions(
@@ -313,9 +310,6 @@ class _$CreateNoteApiRequestActions extends CreateNoteApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateNoteApiRequestCreateNoteApiRequestActions> get $serializer => CreateNoteApiRequestCreateNoteApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

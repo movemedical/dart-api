@@ -523,54 +523,51 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
   _$ListStockForSourcingMatrixApiSourcingLineActions._(this.$options)
       : $replace = $options.action<ListStockForSourcingMatrixApiSourcingLine>(
             '\$replace', (a) => a?.$replace),
-        orderLineId = $options.actionField<String>(
+        orderLineId = $options.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
             (p, b) => p?.orderLineId = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        itemDesc = $options.actionField<String>('itemDesc', (a) => a?.itemDesc,
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        itemDesc = $options.field<String>('itemDesc', (a) => a?.itemDesc,
             (s) => s?.itemDesc, (p, b) => p?.itemDesc = b),
-        moveItemType = $options.actionField<MoveItemType>(
+        moveItemType = $options.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        qtyOpen = $options.actionField<int>('qtyOpen', (a) => a?.qtyOpen,
+        qtyOpen = $options.field<int>('qtyOpen', (a) => a?.qtyOpen,
             (s) => s?.qtyOpen, (p, b) => p?.qtyOpen = b),
-        locationItems = $options.actionField<
-                BuiltList<ListStockForSourcingMatrixApiLineAvailability>>(
-            'locationItems',
-            (a) => a?.locationItems,
-            (s) => s?.locationItems,
-            (p, b) => p?.locationItems = b),
+        locationItems = $options
+            .field<BuiltList<ListStockForSourcingMatrixApiLineAvailability>>(
+                'locationItems',
+                (a) => a?.locationItems,
+                (s) => s?.locationItems,
+                (p, b) => p?.locationItems = b),
         childItems = $options
-            .actionField<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>(
+            .field<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>(
                 'childItems',
                 (a) => a?.childItems,
                 (s) => s?.childItems,
                 (p, b) => p?.childItems = b),
-        locationItemMap = $options.actionField<
+        locationItemMap = $options.field<
                 BuiltMap<String,
                     ListStockForSourcingMatrixApiLineAvailability>>(
             'locationItemMap',
@@ -648,9 +645,6 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
     super.$middleware(middleware);
     setComponent.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForSourcingMatrixApiSourcingLineListStockForSourcingMatrixApiSourcingLineActions> get $serializer => ListStockForSourcingMatrixApiSourcingLineListStockForSourcingMatrixApiSourcingLineActions.serializer;
 
   FullType _$fullType;
   @override

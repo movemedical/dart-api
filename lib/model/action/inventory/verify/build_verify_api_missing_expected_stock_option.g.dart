@@ -404,50 +404,49 @@ class _$BuildVerifyApiMissingExpectedStockOptionActions
   _$BuildVerifyApiMissingExpectedStockOptionActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiMissingExpectedStockOption>(
             '\$replace', (a) => a?.$replace),
-        type =
-            $options.actionField<BuildVerifyApiMissingExpectedStockOptionType>(
-                'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        otherExpectationExtraMatchId = $options.actionField<String>(
+        type = $options.field<BuildVerifyApiMissingExpectedStockOptionType>(
+            'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
+        otherExpectationExtraMatchId = $options.field<String>(
             'otherExpectationExtraMatchId',
             (a) => a?.otherExpectationExtraMatchId,
             (s) => s?.otherExpectationExtraMatchId,
             (p, b) => p?.otherExpectationExtraMatchId = b),
-        looseEnteredLineId = $options.actionField<String>(
+        looseEnteredLineId = $options.field<String>(
             'looseEnteredLineId',
             (a) => a?.looseEnteredLineId,
             (s) => s?.looseEnteredLineId,
             (p, b) => p?.looseEnteredLineId = b),
-        pushBackAssociationType = $options.actionField<AssociationType>(
+        pushBackAssociationType = $options.field<AssociationType>(
             'pushBackAssociationType',
             (a) => a?.pushBackAssociationType,
             (s) => s?.pushBackAssociationType,
             (p, b) => p?.pushBackAssociationType = b),
-        pushBackAssociationId = $options.actionField<String>(
+        pushBackAssociationId = $options.field<String>(
             'pushBackAssociationId',
             (a) => a?.pushBackAssociationId,
             (s) => s?.pushBackAssociationId,
             (p, b) => p?.pushBackAssociationId = b),
-        pushBackLocationType = $options.actionField<LocationType>(
+        pushBackLocationType = $options.field<LocationType>(
             'pushBackLocationType',
             (a) => a?.pushBackLocationType,
             (s) => s?.pushBackLocationType,
             (p, b) => p?.pushBackLocationType = b),
-        pushBackLocationId = $options.actionField<String>(
+        pushBackLocationId = $options.field<String>(
             'pushBackLocationId',
             (a) => a?.pushBackLocationId,
             (s) => s?.pushBackLocationId,
             (p, b) => p?.pushBackLocationId = b),
-        pushBackContainerType = $options.actionField<StockContainerType>(
+        pushBackContainerType = $options.field<StockContainerType>(
             'pushBackContainerType',
             (a) => a?.pushBackContainerType,
             (s) => s?.pushBackContainerType,
             (p, b) => p?.pushBackContainerType = b),
-        pushBackContainerId = $options.actionField<String>(
+        pushBackContainerId = $options.field<String>(
             'pushBackContainerId',
             (a) => a?.pushBackContainerId,
             (s) => s?.pushBackContainerId,
             (p, b) => p?.pushBackContainerId = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         super._();
 
@@ -499,9 +498,6 @@ class _$BuildVerifyApiMissingExpectedStockOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiMissingExpectedStockOptionBuildVerifyApiMissingExpectedStockOptionActions> get $serializer => BuildVerifyApiMissingExpectedStockOptionBuildVerifyApiMissingExpectedStockOptionActions.serializer;
 
   FullType _$fullType;
   @override

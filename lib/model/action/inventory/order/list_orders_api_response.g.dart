@@ -197,9 +197,9 @@ class _$ListOrdersApiResponseActions extends ListOrdersApiResponseActions {
   _$ListOrdersApiResponseActions._(this.$options)
       : $replace = $options.action<ListOrdersApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListOrdersApiOrder>>(
+        data = $options.field<BuiltList<ListOrdersApiOrder>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -233,9 +233,6 @@ class _$ListOrdersApiResponseActions extends ListOrdersApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrdersApiResponseListOrdersApiResponseActions> get $serializer => ListOrdersApiResponseListOrdersApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

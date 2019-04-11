@@ -482,55 +482,51 @@ class _$SearchLocationsApiRequestActions
   _$SearchLocationsApiRequestActions._(this.$options)
       : $replace = $options.action<SearchLocationsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        locationTypes = $options.actionField<BuiltList<LocationType>>(
+        locationTypes = $options.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.actionField<BuiltList<FacilityType>>(
+        facilityTypes = $options.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
             (p, b) => p?.facilityTypes = b),
-        scopeToLocationVizibility = $options.actionField<bool>(
+        scopeToLocationVizibility = $options.field<bool>(
             'scopeToLocationVizibility',
             (a) => a?.scopeToLocationVizibility,
             (s) => s?.scopeToLocationVizibility,
             (p, b) => p?.scopeToLocationVizibility = b),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        skipCache = $options.actionField<bool>('skipCache', (a) => a?.skipCache,
+        skipCache = $options.field<bool>('skipCache', (a) => a?.skipCache,
             (s) => s?.skipCache, (p, b) => p?.skipCache = b),
-        purpose =
-            $options.actionField<SearchLocationsApiSearchLocationsPurpose>(
-                'purpose',
-                (a) => a?.purpose,
-                (s) => s?.purpose,
-                (p, b) => p?.purpose = b),
-        latitude = $options.actionField<double>('latitude', (a) => a?.latitude,
+        purpose = $options.field<SearchLocationsApiSearchLocationsPurpose>(
+            'purpose',
+            (a) => a?.purpose,
+            (s) => s?.purpose,
+            (p, b) => p?.purpose = b),
+        latitude = $options.field<double>('latitude', (a) => a?.latitude,
             (s) => s?.latitude, (p, b) => p?.latitude = b),
-        longitude = $options.actionField<double>(
-            'longitude',
-            (a) => a?.longitude,
-            (s) => s?.longitude,
-            (p, b) => p?.longitude = b),
+        longitude = $options.field<double>('longitude', (a) => a?.longitude,
+            (s) => s?.longitude, (p, b) => p?.longitude = b),
         super._();
 
   factory _$SearchLocationsApiRequestActions(
@@ -584,9 +580,6 @@ class _$SearchLocationsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchLocationsApiRequestSearchLocationsApiRequestActions> get $serializer => SearchLocationsApiRequestSearchLocationsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

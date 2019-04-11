@@ -187,13 +187,10 @@ class _$GetCaseEventDetailApiCaseDocActions
   _$GetCaseEventDetailApiCaseDocActions._(this.$options)
       : $replace = $options.action<GetCaseEventDetailApiCaseDoc>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        caseDocId = $options.actionField<String>(
-            'caseDocId',
-            (a) => a?.caseDocId,
-            (s) => s?.caseDocId,
-            (p, b) => p?.caseDocId = b),
+        caseDocId = $options.field<String>('caseDocId', (a) => a?.caseDocId,
+            (s) => s?.caseDocId, (p, b) => p?.caseDocId = b),
         super._();
 
   factory _$GetCaseEventDetailApiCaseDocActions(
@@ -227,9 +224,6 @@ class _$GetCaseEventDetailApiCaseDocActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiCaseDocGetCaseEventDetailApiCaseDocActions> get $serializer => GetCaseEventDetailApiCaseDocGetCaseEventDetailApiCaseDocActions.serializer;
 
   FullType _$fullType;
   @override

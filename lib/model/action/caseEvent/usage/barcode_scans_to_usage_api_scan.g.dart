@@ -332,9 +332,9 @@ class _$BarcodeScansToUsageApiScanActions
   _$BarcodeScansToUsageApiScanActions._(this.$options)
       : $replace = $options.action<BarcodeScansToUsageApiScan>(
             '\$replace', (a) => a?.$replace),
-        loanId = $options.actionField<String>('loanId', (a) => a?.loanId,
+        loanId = $options.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -346,7 +346,7 @@ class _$BarcodeScansToUsageApiScanActions
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        inventoryType = $options.actionField<String>(
+        inventoryType = $options.field<String>(
             'inventoryType',
             (a) => a?.inventoryType,
             (s) => s?.inventoryType,
@@ -360,12 +360,12 @@ class _$BarcodeScansToUsageApiScanActions
             (s) => s?.scan,
             (b) => b?.scan,
             (parent, builder) => parent?.scan = builder)),
-        capturedType = $options.actionField<ItemCaptureType>(
+        capturedType = $options.field<ItemCaptureType>(
             'capturedType',
             (a) => a?.capturedType,
             (s) => s?.capturedType,
             (p, b) => p?.capturedType = b),
-        disposition = $options.actionField<CaseUsageDisposition>(
+        disposition = $options.field<CaseUsageDisposition>(
             'disposition',
             (a) => a?.disposition,
             (s) => s?.disposition,
@@ -420,9 +420,6 @@ class _$BarcodeScansToUsageApiScanActions
     location.$middleware(middleware);
     scan.$middleware(middleware);
   }
-
-// @override
-// Serializer<BarcodeScansToUsageApiScanBarcodeScansToUsageApiScanActions> get $serializer => BarcodeScansToUsageApiScanBarcodeScansToUsageApiScanActions.serializer;
 
   FullType _$fullType;
   @override

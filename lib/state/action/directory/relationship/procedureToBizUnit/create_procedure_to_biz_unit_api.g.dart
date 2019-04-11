@@ -107,9 +107,6 @@ class _$CreateProcedureToBizUnitApi extends CreateProcedureToBizUnitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateProcedureToBizUnitApi> get $serializer => CommandStateCreateProcedureToBizUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

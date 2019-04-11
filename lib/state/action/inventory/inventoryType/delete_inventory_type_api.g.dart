@@ -101,9 +101,6 @@ class _$DeleteInventoryTypeApi extends DeleteInventoryTypeApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteInventoryTypeApi> get $serializer => CommandStateDeleteInventoryTypeApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -108,9 +108,6 @@ class _$LoadSalesOrderLinePricingApi extends LoadSalesOrderLinePricingApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateLoadSalesOrderLinePricingApi> get $serializer => CommandStateLoadSalesOrderLinePricingApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

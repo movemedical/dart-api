@@ -315,12 +315,12 @@ class _$GetPickProcessingDataApiResponseActions
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        containers = $options.actionField<BuiltList<StockContainer>>(
+        containers = $options.field<BuiltList<StockContainer>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
             (p, b) => p?.containers = b),
-        picks = $options.actionField<BuiltList<GetPickProcessingDataApiPick>>(
+        picks = $options.field<BuiltList<GetPickProcessingDataApiPick>>(
             'picks', (a) => a?.picks, (s) => s?.picks, (p, b) => p?.picks = b),
         super._();
 
@@ -370,9 +370,6 @@ class _$GetPickProcessingDataApiResponseActions
     shipment.$middleware(middleware);
     location.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPickProcessingDataApiResponseGetPickProcessingDataApiResponseActions> get $serializer => GetPickProcessingDataApiResponseGetPickProcessingDataApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

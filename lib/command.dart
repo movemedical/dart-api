@@ -47,23 +47,23 @@ abstract class ApiActions
   @override
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
-    middleware
-      ..add(loginCommand.$result, (api, next, action) {
-        next(action);
-        final payload = action.payload?.payload;
-        if (payload is CommandResult<ApiResult<LoginResponse>>) {
-          final response = payload?.value?.value;
-          activeLogin(response);
-        }
-      })
-      ..add(setupCommand.$result, (api, next, action) {
-        next(action);
-        final payload = action.payload?.payload;
-        if (payload is CommandResult<ApiResult<GetUiSetupMobileApiResponse>>) {
-          final response = payload?.value?.value;
-          activeSetup(response);
-        }
-      });
+//    middleware
+//      ..add(loginCommand.$result, (api, next, action) {
+//        next(action);
+//        final payload = action.payload?.payload;
+//        if (payload is CommandResult<ApiResult<LoginResponse>>) {
+//          final response = payload?.value?.value;
+//          activeLogin(response);
+//        }
+//      })
+//      ..add(setupCommand.$result, (api, next, action) {
+//        next(action);
+//        final payload = action.payload?.payload;
+//        if (payload is CommandResult<ApiResult<GetUiSetupMobileApiResponse>>) {
+//          final response = payload?.value?.value;
+//          activeSetup(response);
+//        }
+//      });
   }
 
   ApiActions._();
@@ -246,20 +246,20 @@ abstract class ApiDispatcher<
     Actions> {
   String get path;
 
-  void call(
-          {Req request,
-          void builder(ReqBuilder),
-          Duration timeout = const Duration(seconds: 15)}) =>
-      super.send(
-          create(
-              request: request, builder: builder, timeout: timeout, path: path),
-          timeout: timeout);
+  Future<CommandResult<ApiResult<Resp>>> call(
+      {Req request,
+      void builder(ReqBuilder),
+      Duration timeout = const Duration(seconds: 30)}) {
+    final r = create(
+        request: request, builder: builder, timeout: timeout, path: path);
+    return $store.execute(this, r, timeout: timeout);
+  }
 
   ApiCommand<Req> create(
       {Req request,
       void builder(ReqBuilder),
       String path = '',
-      Duration timeout = const Duration(seconds: 15),
+      Duration timeout = const Duration(seconds: 30),
       bool unsecured = false}) {
     if (request == null) {
       final b = newCommandPayloadBuilder();
@@ -284,20 +284,47 @@ abstract class ApiDispatcher<
   void $middleware(MiddlewareBuilder builder) {
     super.$middleware(builder);
   }
+
+  StoreSubscription<
+      CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+          CommandResult<ApiResult<Resp>>>> onResponse(
+      Function(
+              ModuxEvent<
+                  CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+                      CommandResult<ApiResult<Resp>>>>,
+              Resp response)
+          handler) {
+    return onResult((ev, r) {
+      handler?.call(ev, r?.value?.value);
+    });
+  }
+
+  StoreSubscription<
+      CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+          CommandResult<ApiResult<Resp>>>> onApiResult(
+      Function(
+              ModuxEvent<
+                  CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+                      CommandResult<ApiResult<Resp>>>>,
+              ApiResult<Resp> result)
+          handler) {
+    return onResult((ev, r) {
+      handler?.call(ev, r?.value);
+    });
+  }
 }
 
 /// Manages all Move API calls, websocket pushes and authentication.
-class ApiService extends AbstractStoreService<ApiService> {
+class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
+    ApiActions, ApiService> {
   static const moveSessionId = 'move-session-id';
 
-  ApiService(this.store, this.actions)
+  ApiService(Store store, ApiActions actions)
       : httpFactory = store.httpFactory,
         wsFactory = store.wsFactory,
         _pool = HttpPoolClient(store.httpFactory, 1, 16),
-        super(store);
+        super(store, actions);
 
-  final Store store;
-  final ApiActions actions;
   final HttpPoolClient _pool;
   final HttpClientFactory httpFactory;
   final WebSocketFactory wsFactory;
@@ -306,24 +333,14 @@ class ApiService extends AbstractStoreService<ApiService> {
   StreamSubscription _wsSubscription;
   Timer _wsTimer;
 
-  ApiState get state => actions.$mapState(store?.state);
-
   Serializers get serializers => store.serializers;
 
   @override
-  Type get keyType => ApiService;
-
-  @override
   void init() {
-    store.subscribe(actions.loginCommand.$result).listen((ev) {
-      _onLoggedIn(ev.value.payload?.value?.value);
-    });
+    actions.loginCommand.onResult((ev, r) => _onLoggedIn(r?.value?.value));
 
-    store
-        .subscribe(actions.setupCommand.$result)
-        .map((e) => e.value?.payload)
-        .listen((ev) {
-      actions.activeSetup(ApiResult.unwrap(ev));
+    actions.setupCommand.onResult((ev, r) {
+      actions.activeSetup(ApiResult.unwrap(r));
     });
 
     _tryConnectWs();

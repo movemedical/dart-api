@@ -226,11 +226,11 @@ class _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions
       : $replace =
             $options.action<GetOrderReasonSpecificationApiOrderReasonFieldData>(
                 '\$replace', (a) => a?.$replace),
-        name = $options.actionField<OrderReasonField>(
+        name = $options.field<OrderReasonField>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        sort = $options.actionField<int>(
+        sort = $options.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
-        required = $options.actionField<bool>('required', (a) => a?.required,
+        required = $options.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
         super._();
 
@@ -269,9 +269,6 @@ class _$GetOrderReasonSpecificationApiOrderReasonFieldDataActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrderReasonSpecificationApiOrderReasonFieldDataGetOrderReasonSpecificationApiOrderReasonFieldDataActions> get $serializer => GetOrderReasonSpecificationApiOrderReasonFieldDataGetOrderReasonSpecificationApiOrderReasonFieldDataActions.serializer;
 
   FullType _$fullType;
   @override

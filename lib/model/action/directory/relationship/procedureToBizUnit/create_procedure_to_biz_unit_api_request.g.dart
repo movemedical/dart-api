@@ -217,12 +217,12 @@ class _$CreateProcedureToBizUnitApiRequestActions
   _$CreateProcedureToBizUnitApiRequestActions._(this.$options)
       : $replace = $options.action<CreateProcedureToBizUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        procedureIds = $options.actionField<BuiltList<String>>(
+        procedureIds = $options.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
@@ -261,9 +261,6 @@ class _$CreateProcedureToBizUnitApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateProcedureToBizUnitApiRequestCreateProcedureToBizUnitApiRequestActions> get $serializer => CreateProcedureToBizUnitApiRequestCreateProcedureToBizUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

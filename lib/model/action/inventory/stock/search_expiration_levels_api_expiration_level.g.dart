@@ -240,19 +240,13 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
   _$SearchExpirationLevelsApiExpirationLevelActions._(this.$options)
       : $replace = $options.action<SearchExpirationLevelsApiExpirationLevel>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        groupName = $options.actionField<String>(
-            'groupName',
-            (a) => a?.groupName,
-            (s) => s?.groupName,
-            (p, b) => p?.groupName = b),
-        levelName = $options.actionField<String>(
-            'levelName',
-            (a) => a?.levelName,
-            (s) => s?.levelName,
-            (p, b) => p?.levelName = b),
-        levelColor = $options.actionField<ExpirationLevelColor>(
+        groupName = $options.field<String>('groupName', (a) => a?.groupName,
+            (s) => s?.groupName, (p, b) => p?.groupName = b),
+        levelName = $options.field<String>('levelName', (a) => a?.levelName,
+            (s) => s?.levelName, (p, b) => p?.levelName = b),
+        levelColor = $options.field<ExpirationLevelColor>(
             'levelColor',
             (a) => a?.levelColor,
             (s) => s?.levelColor,
@@ -295,9 +289,6 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchExpirationLevelsApiExpirationLevelSearchExpirationLevelsApiExpirationLevelActions> get $serializer => SearchExpirationLevelsApiExpirationLevelSearchExpirationLevelsApiExpirationLevelActions.serializer;
 
   FullType _$fullType;
   @override

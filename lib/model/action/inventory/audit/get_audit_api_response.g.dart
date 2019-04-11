@@ -374,9 +374,6 @@ class _$GetAuditApiResponseActions extends GetAuditApiResponseActions {
     displayRules.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetAuditApiResponseGetAuditApiResponseActions> get $serializer => GetAuditApiResponseGetAuditApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAuditApiResponse);

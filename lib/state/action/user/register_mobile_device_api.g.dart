@@ -105,9 +105,6 @@ class _$RegisterMobileDeviceApi extends RegisterMobileDeviceApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRegisterMobileDeviceApi> get $serializer => CommandStateRegisterMobileDeviceApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

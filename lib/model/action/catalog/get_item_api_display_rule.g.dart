@@ -158,11 +158,8 @@ class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
   _$GetItemApiDisplayRuleActions._(this.$options)
       : $replace = $options.action<GetItemApiDisplayRule>(
             '\$replace', (a) => a?.$replace),
-        editAllowed = $options.actionField<bool>(
-            'editAllowed',
-            (a) => a?.editAllowed,
-            (s) => s?.editAllowed,
-            (p, b) => p?.editAllowed = b),
+        editAllowed = $options.field<bool>('editAllowed', (a) => a?.editAllowed,
+            (s) => s?.editAllowed, (p, b) => p?.editAllowed = b),
         super._();
 
   factory _$GetItemApiDisplayRuleActions(
@@ -193,9 +190,6 @@ class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemApiDisplayRuleGetItemApiDisplayRuleActions> get $serializer => GetItemApiDisplayRuleGetItemApiDisplayRuleActions.serializer;
 
   FullType _$fullType;
   @override

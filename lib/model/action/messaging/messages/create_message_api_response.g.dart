@@ -221,9 +221,6 @@ class _$CreateMessageApiResponseActions
     message.$middleware(middleware);
   }
 
-// @override
-// Serializer<CreateMessageApiResponseCreateMessageApiResponseActions> get $serializer => CreateMessageApiResponseCreateMessageApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateMessageApiResponse);

@@ -96,9 +96,6 @@ class _$RemoveAeToTeamApi extends RemoveAeToTeamApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveAeToTeamApi> get $serializer => CommandStateRemoveAeToTeamApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

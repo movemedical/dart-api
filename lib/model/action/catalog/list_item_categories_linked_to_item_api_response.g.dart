@@ -253,12 +253,12 @@ class _$ListItemCategoriesLinkedToItemApiResponseActions
   _$ListItemCategoriesLinkedToItemApiResponseActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesLinkedToItemApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
+        data = $options.field<
                 BuiltList<ListItemCategoriesLinkedToItemApiLinkedCategoryPath>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
-        linkedCategoryIds = $options.actionField<BuiltList<String>>(
+        linkedCategoryIds = $options.field<BuiltList<String>>(
             'linkedCategoryIds',
             (a) => a?.linkedCategoryIds,
             (s) => s?.linkedCategoryIds,
@@ -299,9 +299,6 @@ class _$ListItemCategoriesLinkedToItemApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesLinkedToItemApiResponseListItemCategoriesLinkedToItemApiResponseActions> get $serializer => ListItemCategoriesLinkedToItemApiResponseListItemCategoriesLinkedToItemApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

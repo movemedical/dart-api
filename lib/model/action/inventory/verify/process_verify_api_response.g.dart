@@ -245,17 +245,17 @@ class _$ProcessVerifyApiResponseActions
       : $replace = $options.action<ProcessVerifyApiResponse>(
             '\$replace', (a) => a?.$replace),
         expectationProcessingErrors = $options
-            .actionField<BuiltList<ProcessVerifyApiExpectationProcessingError>>(
+            .field<BuiltList<ProcessVerifyApiExpectationProcessingError>>(
                 'expectationProcessingErrors',
                 (a) => a?.expectationProcessingErrors,
                 (s) => s?.expectationProcessingErrors,
                 (p, b) => p?.expectationProcessingErrors = b),
-        looseProcessingError = $options.actionField<String>(
+        looseProcessingError = $options.field<String>(
             'looseProcessingError',
             (a) => a?.looseProcessingError,
             (s) => s?.looseProcessingError,
             (p, b) => p?.looseProcessingError = b),
-        kitHasMissing = $options.actionField<bool>(
+        kitHasMissing = $options.field<bool>(
             'kitHasMissing',
             (a) => a?.kitHasMissing,
             (s) => s?.kitHasMissing,
@@ -295,9 +295,6 @@ class _$ProcessVerifyApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessVerifyApiResponseProcessVerifyApiResponseActions> get $serializer => ProcessVerifyApiResponseProcessVerifyApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

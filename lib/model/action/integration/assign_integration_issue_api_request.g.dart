@@ -211,12 +211,12 @@ class _$AssignIntegrationIssueApiRequestActions
   _$AssignIntegrationIssueApiRequestActions._(this.$options)
       : $replace = $options.action<AssignIntegrationIssueApiRequest>(
             '\$replace', (a) => a?.$replace),
-        integrationIssueIds = $options.actionField<BuiltList<String>>(
+        integrationIssueIds = $options.field<BuiltList<String>>(
             'integrationIssueIds',
             (a) => a?.integrationIssueIds,
             (s) => s?.integrationIssueIds,
             (p, b) => p?.integrationIssueIds = b),
-        assignUserId = $options.actionField<String>(
+        assignUserId = $options.field<String>(
             'assignUserId',
             (a) => a?.assignUserId,
             (s) => s?.assignUserId,
@@ -255,9 +255,6 @@ class _$AssignIntegrationIssueApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AssignIntegrationIssueApiRequestAssignIntegrationIssueApiRequestActions> get $serializer => AssignIntegrationIssueApiRequestAssignIntegrationIssueApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

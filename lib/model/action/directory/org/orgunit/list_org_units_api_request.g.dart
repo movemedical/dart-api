@@ -330,39 +330,30 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
   _$ListOrgUnitsApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrgUnitsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        includeFullAccess = $options.actionField<bool>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        includeFullAccess = $options.field<bool>(
             'includeFullAccess',
             (a) => a?.includeFullAccess,
             (s) => s?.includeFullAccess,
             (p, b) => p?.includeFullAccess = b),
-        includeInventoryOnly = $options.actionField<bool>(
+        includeInventoryOnly = $options.field<bool>(
             'includeInventoryOnly',
             (a) => a?.includeInventoryOnly,
             (s) => s?.includeInventoryOnly,
             (p, b) => p?.includeInventoryOnly = b),
-        includeSales = $options.actionField<bool>(
+        includeSales = $options.field<bool>(
             'includeSales',
             (a) => a?.includeSales,
             (s) => s?.includeSales,
             (p, b) => p?.includeSales = b),
-        includeOps = $options.actionField<bool>(
-            'includeOps',
-            (a) => a?.includeOps,
-            (s) => s?.includeOps,
-            (p, b) => p?.includeOps = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        includeOps = $options.field<bool>('includeOps', (a) => a?.includeOps,
+            (s) => s?.includeOps, (p, b) => p?.includeOps = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -409,9 +400,6 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgUnitsApiRequestListOrgUnitsApiRequestActions> get $serializer => ListOrgUnitsApiRequestListOrgUnitsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

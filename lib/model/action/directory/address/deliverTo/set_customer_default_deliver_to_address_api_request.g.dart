@@ -200,12 +200,9 @@ class _$SetCustomerDefaultDeliverToAddressApiRequestActions
       : $replace =
             $options.action<SetCustomerDefaultDeliverToAddressApiRequest>(
                 '\$replace', (a) => a?.$replace),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        deliverToAddressId = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -244,9 +241,6 @@ class _$SetCustomerDefaultDeliverToAddressApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SetCustomerDefaultDeliverToAddressApiRequestSetCustomerDefaultDeliverToAddressApiRequestActions> get $serializer => SetCustomerDefaultDeliverToAddressApiRequestSetCustomerDefaultDeliverToAddressApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

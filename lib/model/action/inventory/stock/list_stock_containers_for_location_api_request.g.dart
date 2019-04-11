@@ -240,19 +240,16 @@ class _$ListStockContainersForLocationApiRequestActions
   _$ListStockContainersForLocationApiRequestActions._(this.$options)
       : $replace = $options.action<ListStockContainersForLocationApiRequest>(
             '\$replace', (a) => a?.$replace),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        locationType = $options.actionField<LocationType>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -292,9 +289,6 @@ class _$ListStockContainersForLocationApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockContainersForLocationApiRequestListStockContainersForLocationApiRequestActions> get $serializer => ListStockContainersForLocationApiRequestListStockContainersForLocationApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -215,9 +215,9 @@ class _$BarcodeScansToStockApiRequestActions
   _$BarcodeScansToStockApiRequestActions._(this.$options)
       : $replace = $options.action<BarcodeScansToStockApiRequest>(
             '\$replace', (a) => a?.$replace),
-        scans = $options.actionField<BuiltList<BarcodeScansToStockApiScan>>(
+        scans = $options.field<BuiltList<BarcodeScansToStockApiScan>>(
             'scans', (a) => a?.scans, (s) => s?.scans, (p, b) => p?.scans = b),
-        prevSelectedSummaryKeys = $options.actionField<BuiltList<String>>(
+        prevSelectedSummaryKeys = $options.field<BuiltList<String>>(
             'prevSelectedSummaryKeys',
             (a) => a?.prevSelectedSummaryKeys,
             (s) => s?.prevSelectedSummaryKeys,
@@ -255,9 +255,6 @@ class _$BarcodeScansToStockApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BarcodeScansToStockApiRequestBarcodeScansToStockApiRequestActions> get $serializer => BarcodeScansToStockApiRequestBarcodeScansToStockApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

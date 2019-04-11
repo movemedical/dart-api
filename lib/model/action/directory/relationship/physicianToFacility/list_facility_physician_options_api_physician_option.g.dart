@@ -244,16 +244,16 @@ class _$ListFacilityPhysicianOptionsApiPhysicianOptionActions
       : $replace =
             $options.action<ListFacilityPhysicianOptionsApiPhysicianOption>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        physicianType = $options.actionField<PhysicianType>(
+        physicianType = $options.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
             (p, b) => p?.physicianType = b),
-        npi = $options.actionField<String>(
+        npi = $options.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
         super._();
 
@@ -294,9 +294,6 @@ class _$ListFacilityPhysicianOptionsApiPhysicianOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListFacilityPhysicianOptionsApiPhysicianOptionListFacilityPhysicianOptionsApiPhysicianOptionActions> get $serializer => ListFacilityPhysicianOptionsApiPhysicianOptionListFacilityPhysicianOptionsApiPhysicianOptionActions.serializer;
 
   FullType _$fullType;
   @override

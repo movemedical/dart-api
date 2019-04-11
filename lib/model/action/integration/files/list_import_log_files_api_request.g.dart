@@ -203,7 +203,7 @@ class _$ListImportLogFilesApiRequestActions
   _$ListImportLogFilesApiRequestActions._(this.$options)
       : $replace = $options.action<ListImportLogFilesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        importLogId = $options.actionField<String>(
+        importLogId = $options.field<String>(
             'importLogId',
             (a) => a?.importLogId,
             (s) => s?.importLogId,
@@ -256,9 +256,6 @@ class _$ListImportLogFilesApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListImportLogFilesApiRequestListImportLogFilesApiRequestActions> get $serializer => ListImportLogFilesApiRequestListImportLogFilesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

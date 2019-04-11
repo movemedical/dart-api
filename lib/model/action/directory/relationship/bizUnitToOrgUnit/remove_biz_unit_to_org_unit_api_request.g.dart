@@ -170,7 +170,7 @@ class _$RemoveBizUnitToOrgUnitApiRequestActions
   _$RemoveBizUnitToOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<RemoveBizUnitToOrgUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitToOrgUnitId = $options.actionField<String>(
+        bizUnitToOrgUnitId = $options.field<String>(
             'bizUnitToOrgUnitId',
             (a) => a?.bizUnitToOrgUnitId,
             (s) => s?.bizUnitToOrgUnitId,
@@ -207,9 +207,6 @@ class _$RemoveBizUnitToOrgUnitApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RemoveBizUnitToOrgUnitApiRequestRemoveBizUnitToOrgUnitApiRequestActions> get $serializer => RemoveBizUnitToOrgUnitApiRequestRemoveBizUnitToOrgUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

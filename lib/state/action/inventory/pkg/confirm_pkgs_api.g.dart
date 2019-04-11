@@ -89,9 +89,6 @@ class _$ConfirmPkgsApi extends ConfirmPkgsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateConfirmPkgsApi> get $serializer => CommandStateConfirmPkgsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -317,26 +317,23 @@ class _$SaveCaseUsagesApiRequestActions
   _$SaveCaseUsagesApiRequestActions._(this.$options)
       : $replace = $options.action<SaveCaseUsagesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        usageComplete = $options.actionField<bool>(
+        usageComplete = $options.field<bool>(
             'usageComplete',
             (a) => a?.usageComplete,
             (s) => s?.usageComplete,
             (p, b) => p?.usageComplete = b),
-        usages = $options.actionField<BuiltList<SaveCaseUsagesApiUsage>>(
-            'usages',
-            (a) => a?.usages,
-            (s) => s?.usages,
-            (p, b) => p?.usages = b),
-        orders = $options.actionField<BuiltList<SaveCaseUsagesApiUsageOrder>>(
+        usages = $options.field<BuiltList<SaveCaseUsagesApiUsage>>('usages',
+            (a) => a?.usages, (s) => s?.usages, (p, b) => p?.usages = b),
+        orders = $options.field<BuiltList<SaveCaseUsagesApiUsageOrder>>(
             'orders',
             (a) => a?.orders,
             (s) => s?.orders,
             (p, b) => p?.orders = b),
-        orderIdsToDelete = $options.actionField<BuiltList<String>>(
+        orderIdsToDelete = $options.field<BuiltList<String>>(
             'orderIdsToDelete',
             (a) => a?.orderIdsToDelete,
             (s) => s?.orderIdsToDelete,
@@ -382,9 +379,6 @@ class _$SaveCaseUsagesApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveCaseUsagesApiRequestSaveCaseUsagesApiRequestActions> get $serializer => SaveCaseUsagesApiRequestSaveCaseUsagesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

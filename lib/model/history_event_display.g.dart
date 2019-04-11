@@ -215,14 +215,11 @@ class _$HistoryEventDisplayActions extends HistoryEventDisplayActions {
   _$HistoryEventDisplayActions._(this.$options)
       : $replace = $options.action<HistoryEventDisplay>(
             '\$replace', (a) => a?.$replace),
-        user = $options.actionField<String>(
+        user = $options.field<String>(
             'user', (a) => a?.user, (s) => s?.user, (p, b) => p?.user = b),
-        timestamp = $options.actionField<DateTime>(
-            'timestamp',
-            (a) => a?.timestamp,
-            (s) => s?.timestamp,
-            (p, b) => p?.timestamp = b),
-        records = $options.actionField<BuiltList<HistoryEventDisplayRecord>>(
+        timestamp = $options.field<DateTime>('timestamp', (a) => a?.timestamp,
+            (s) => s?.timestamp, (p, b) => p?.timestamp = b),
+        records = $options.field<BuiltList<HistoryEventDisplayRecord>>(
             'records',
             (a) => a?.records,
             (s) => s?.records,
@@ -261,9 +258,6 @@ class _$HistoryEventDisplayActions extends HistoryEventDisplayActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<HistoryEventDisplayHistoryEventDisplayActions> get $serializer => HistoryEventDisplayHistoryEventDisplayActions.serializer;
 
   FullType _$fullType;
   @override

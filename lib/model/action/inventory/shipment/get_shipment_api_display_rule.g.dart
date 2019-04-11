@@ -360,41 +360,35 @@ class _$GetShipmentApiDisplayRuleActions
   _$GetShipmentApiDisplayRuleActions._(this.$options)
       : $replace = $options.action<GetShipmentApiDisplayRule>(
             '\$replace', (a) => a?.$replace),
-        cancel = $options.actionField<bool>('cancel', (a) => a?.cancel,
+        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        release = $options.actionField<bool>('release', (a) => a?.release,
+        release = $options.field<bool>('release', (a) => a?.release,
             (s) => s?.release, (p, b) => p?.release = b),
-        processPicks = $options.actionField<bool>(
+        processPicks = $options.field<bool>(
             'processPicks',
             (a) => a?.processPicks,
             (s) => s?.processPicks,
             (p, b) => p?.processPicks = b),
-        printPackingList = $options.actionField<bool>(
+        printPackingList = $options.field<bool>(
             'printPackingList',
             (a) => a?.printPackingList,
             (s) => s?.printPackingList,
             (p, b) => p?.printPackingList = b),
-        receiveShipment = $options.actionField<bool>(
+        receiveShipment = $options.field<bool>(
             'receiveShipment',
             (a) => a?.receiveShipment,
             (s) => s?.receiveShipment,
             (p, b) => p?.receiveShipment = b),
-        assignPick = $options.actionField<bool>(
-            'assignPick',
-            (a) => a?.assignPick,
-            (s) => s?.assignPick,
-            (p, b) => p?.assignPick = b),
-        cancelPick = $options.actionField<bool>(
-            'cancelPick',
-            (a) => a?.cancelPick,
-            (s) => s?.cancelPick,
-            (p, b) => p?.cancelPick = b),
-        updateErpReference = $options.actionField<bool>(
+        assignPick = $options.field<bool>('assignPick', (a) => a?.assignPick,
+            (s) => s?.assignPick, (p, b) => p?.assignPick = b),
+        cancelPick = $options.field<bool>('cancelPick', (a) => a?.cancelPick,
+            (s) => s?.cancelPick, (p, b) => p?.cancelPick = b),
+        updateErpReference = $options.field<bool>(
             'updateErpReference',
             (a) => a?.updateErpReference,
             (s) => s?.updateErpReference,
             (p, b) => p?.updateErpReference = b),
-        updateShipmentDetails = $options.actionField<bool>(
+        updateShipmentDetails = $options.field<bool>(
             'updateShipmentDetails',
             (a) => a?.updateShipmentDetails,
             (s) => s?.updateShipmentDetails,
@@ -446,9 +440,6 @@ class _$GetShipmentApiDisplayRuleActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetShipmentApiDisplayRuleGetShipmentApiDisplayRuleActions> get $serializer => GetShipmentApiDisplayRuleGetShipmentApiDisplayRuleActions.serializer;
 
   FullType _$fullType;
   @override

@@ -358,34 +358,34 @@ class _$ListStockForSourcingMatrixApiRequestActions
   _$ListStockForSourcingMatrixApiRequestActions._(this.$options)
       : $replace = $options.action<ListStockForSourcingMatrixApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        minPercentageMatch = $options.actionField<double>(
+        minPercentageMatch = $options.field<double>(
             'minPercentageMatch',
             (a) => a?.minPercentageMatch,
             (s) => s?.minPercentageMatch,
             (p, b) => p?.minPercentageMatch = b),
-        moveItemClasses = $options.actionField<BuiltList<MoveItemClass>>(
+        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        locationTypes = $options.actionField<BuiltList<LocationType>>(
+        locationTypes = $options.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.actionField<BuiltList<FacilityType>>(
+        facilityTypes = $options.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
             (p, b) => p?.facilityTypes = b),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
@@ -434,9 +434,6 @@ class _$ListStockForSourcingMatrixApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForSourcingMatrixApiRequestListStockForSourcingMatrixApiRequestActions> get $serializer => ListStockForSourcingMatrixApiRequestListStockForSourcingMatrixApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

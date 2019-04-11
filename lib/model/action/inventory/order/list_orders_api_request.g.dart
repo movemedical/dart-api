@@ -766,58 +766,58 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   _$ListOrdersApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrdersApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderStatuses = $options.actionField<BuiltList<OrderStatus>>(
+        orderStatuses = $options.field<BuiltList<OrderStatus>>(
             'orderStatuses',
             (a) => a?.orderStatuses,
             (s) => s?.orderStatuses,
             (p, b) => p?.orderStatuses = b),
-        orderReasonGroups = $options.actionField<BuiltList<OrderReasonGroup>>(
+        orderReasonGroups = $options.field<BuiltList<OrderReasonGroup>>(
             'orderReasonGroups',
             (a) => a?.orderReasonGroups,
             (s) => s?.orderReasonGroups,
             (p, b) => p?.orderReasonGroups = b),
-        orderReasonIds = $options.actionField<BuiltList<String>>(
+        orderReasonIds = $options.field<BuiltList<String>>(
             'orderReasonIds',
             (a) => a?.orderReasonIds,
             (s) => s?.orderReasonIds,
             (p, b) => p?.orderReasonIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        itemCategoryIds = $options.actionField<BuiltList<String>>(
+        itemCategoryIds = $options.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        createdByContactIds = $options.actionField<BuiltList<String>>(
+        createdByContactIds = $options.field<BuiltList<String>>(
             'createdByContactIds',
             (a) => a?.createdByContactIds,
             (s) => s?.createdByContactIds,
             (p, b) => p?.createdByContactIds = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.actionField<BuiltList<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.actionField<BuiltList<String>>(
+        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        serialIds = $options.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        hasErpErrors = $options.actionField<bool>(
+        hasErpErrors = $options.field<bool>(
             'hasErpErrors',
             (a) => a?.hasErpErrors,
             (s) => s?.hasErpErrors,
             (p, b) => p?.hasErpErrors = b),
-        pendingPo = $options.actionField<bool>('pendingPo', (a) => a?.pendingPo,
+        pendingPo = $options.field<bool>('pendingPo', (a) => a?.pendingPo,
             (s) => s?.pendingPo, (p, b) => p?.pendingPo = b),
-        orderNumber = $options.actionField<String>(
+        orderNumber = $options.field<String>(
             'orderNumber',
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
             (p, b) => p?.orderNumber = b),
-        erpOrderNumber = $options.actionField<String>(
+        erpOrderNumber = $options.field<String>(
             'erpOrderNumber',
             (a) => a?.erpOrderNumber,
             (s) => s?.erpOrderNumber,
@@ -829,7 +829,7 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
@@ -862,7 +862,7 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
                 (s) => s?.deliveryEndDateRange,
                 (b) => b?.deliveryEndDateRange,
                 (parent, builder) => parent?.deliveryEndDateRange = builder)),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -967,9 +967,6 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrdersApiRequestListOrdersApiRequestActions> get $serializer => ListOrdersApiRequestListOrdersApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

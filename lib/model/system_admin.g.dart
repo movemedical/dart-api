@@ -227,7 +227,7 @@ class _$SystemAdminActions extends SystemAdminActions {
   _$SystemAdminActions._(this.$options)
       : $replace =
             $options.action<SystemAdmin>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -243,7 +243,7 @@ class _$SystemAdminActions extends SystemAdminActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -287,9 +287,6 @@ class _$SystemAdminActions extends SystemAdminActions {
     email.$middleware(middleware);
     name.$middleware(middleware);
   }
-
-// @override
-// Serializer<SystemAdminSystemAdminActions> get $serializer => SystemAdminSystemAdminActions.serializer;
 
   FullType _$fullType;
   @override

@@ -112,9 +112,6 @@ class _$SearchLocationsApi extends SearchLocationsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSearchLocationsApi> get $serializer => CommandStateSearchLocationsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -398,19 +398,19 @@ class _$ListHcrColleagueLinksApiColleagueLinkActions
   _$ListHcrColleagueLinksApiColleagueLinkActions._(this.$options)
       : $replace = $options.action<ListHcrColleagueLinksApiColleagueLink>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        colleagueHcrId = $options.actionField<String>(
+        colleagueHcrId = $options.field<String>(
             'colleagueHcrId',
             (a) => a?.colleagueHcrId,
             (s) => s?.colleagueHcrId,
             (p, b) => p?.colleagueHcrId = b),
-        colleagueHcrType = $options.actionField<HcrType>(
+        colleagueHcrType = $options.field<HcrType>(
             'colleagueHcrType',
             (a) => a?.colleagueHcrType,
             (s) => s?.colleagueHcrType,
             (p, b) => p?.colleagueHcrType = b),
-        colleagueName = $options.actionField<String>(
+        colleagueName = $options.field<String>(
             'colleagueName',
             (a) => a?.colleagueName,
             (s) => s?.colleagueName,
@@ -445,7 +445,7 @@ class _$ListHcrColleagueLinksApiColleagueLinkActions
                 (s) => s?.colleagueFaxNumber,
                 (b) => b?.colleagueFaxNumber,
                 (parent, builder) => parent?.colleagueFaxNumber = builder)),
-        colleagueActive = $options.actionField<bool>(
+        colleagueActive = $options.field<bool>(
             'colleagueActive',
             (a) => a?.colleagueActive,
             (s) => s?.colleagueActive,
@@ -507,9 +507,6 @@ class _$ListHcrColleagueLinksApiColleagueLinkActions
     colleagueMobilePhoneNumber.$middleware(middleware);
     colleagueFaxNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHcrColleagueLinksApiColleagueLinkListHcrColleagueLinksApiColleagueLinkActions> get $serializer => ListHcrColleagueLinksApiColleagueLinkListHcrColleagueLinksApiColleagueLinkActions.serializer;
 
   FullType _$fullType;
   @override

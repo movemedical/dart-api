@@ -752,105 +752,99 @@ class _$StockDataActions extends StockDataActions {
 
   _$StockDataActions._(this.$options)
       : $replace = $options.action<StockData>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
-        tagId = $options.actionField<String>(
+        tagId = $options.field<String>(
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
-        kitId = $options.actionField<String>(
+        kitId = $options.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
-        virtual = $options.actionField<bool>('virtual', (a) => a?.virtual,
+        virtual = $options.field<bool>('virtual', (a) => a?.virtual,
             (s) => s?.virtual, (p, b) => p?.virtual = b),
-        verified = $options.actionField<bool>('verified', (a) => a?.verified,
+        verified = $options.field<bool>('verified', (a) => a?.verified,
             (s) => s?.verified, (p, b) => p?.verified = b),
-        hasExtras = $options.actionField<bool>('hasExtras', (a) => a?.hasExtras,
+        hasExtras = $options.field<bool>('hasExtras', (a) => a?.hasExtras,
             (s) => s?.hasExtras, (p, b) => p?.hasExtras = b),
-        hasMissing = $options.actionField<bool>(
-            'hasMissing',
-            (a) => a?.hasMissing,
-            (s) => s?.hasMissing,
-            (p, b) => p?.hasMissing = b),
-        inventoryTypeId = $options.actionField<String>(
+        hasMissing = $options.field<bool>('hasMissing', (a) => a?.hasMissing,
+            (s) => s?.hasMissing, (p, b) => p?.hasMissing = b),
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        fromLocationType = $options.actionField<LocationType>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        fromLocationType = $options.field<LocationType>(
             'fromLocationType',
             (a) => a?.fromLocationType,
             (s) => s?.fromLocationType,
             (p, b) => p?.fromLocationType = b),
-        fromLocationId = $options.actionField<String>(
+        fromLocationId = $options.field<String>(
             'fromLocationId',
             (a) => a?.fromLocationId,
             (s) => s?.fromLocationId,
             (p, b) => p?.fromLocationId = b),
-        toLocationType = $options.actionField<LocationType>(
+        toLocationType = $options.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        toLocationId = $options.actionField<String>(
+        toLocationId = $options.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
             (p, b) => p?.toLocationId = b),
-        homeLocationType = $options.actionField<LocationType>(
+        homeLocationType = $options.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.actionField<String>(
+        homeLocationId = $options.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        rootContainerType = $options.actionField<StockContainerType>(
+        rootContainerType = $options.field<StockContainerType>(
             'rootContainerType',
             (a) => a?.rootContainerType,
             (s) => s?.rootContainerType,
             (p, b) => p?.rootContainerType = b),
-        rootContainerId = $options.actionField<String>(
+        rootContainerId = $options.field<String>(
             'rootContainerId',
             (a) => a?.rootContainerId,
             (s) => s?.rootContainerId,
             (p, b) => p?.rootContainerId = b),
-        containerType = $options.actionField<StockContainerType>(
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
-        responsiblePartyType = $options.actionField<ResponsiblePartyType>(
+        responsiblePartyType = $options.field<ResponsiblePartyType>(
             'responsiblePartyType',
             (a) => a?.responsiblePartyType,
             (s) => s?.responsiblePartyType,
             (p, b) => p?.responsiblePartyType = b),
-        responsiblePartyId = $options.actionField<String>(
+        responsiblePartyId = $options.field<String>(
             'responsiblePartyId',
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
@@ -934,9 +928,6 @@ class _$StockDataActions extends StockDataActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<StockDataStockDataActions> get $serializer => StockDataStockDataActions.serializer;
 
   FullType _$fullType;
   @override

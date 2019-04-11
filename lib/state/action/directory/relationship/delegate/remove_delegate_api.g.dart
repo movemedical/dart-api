@@ -96,9 +96,6 @@ class _$RemoveDelegateApi extends RemoveDelegateApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveDelegateApi> get $serializer => CommandStateRemoveDelegateApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

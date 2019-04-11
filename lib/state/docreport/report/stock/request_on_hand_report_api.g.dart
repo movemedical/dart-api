@@ -112,9 +112,6 @@ class _$RequestOnHandReportApi extends RequestOnHandReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestOnHandReportApi> get $serializer => CommandStateRequestOnHandReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

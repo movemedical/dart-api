@@ -205,9 +205,9 @@ class _$ListUnitOfMeasureApiResponseActions
   _$ListUnitOfMeasureApiResponseActions._(this.$options)
       : $replace = $options.action<ListUnitOfMeasureApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<UnitOfMeasure>>(
+        data = $options.field<BuiltList<UnitOfMeasure>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -242,9 +242,6 @@ class _$ListUnitOfMeasureApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUnitOfMeasureApiResponseListUnitOfMeasureApiResponseActions> get $serializer => ListUnitOfMeasureApiResponseListUnitOfMeasureApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -299,7 +299,7 @@ class _$UpdatePhysicianApiRequestActions
   _$UpdatePhysicianApiRequestActions._(this.$options)
       : $replace = $options.action<UpdatePhysicianApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -308,9 +308,9 @@ class _$UpdatePhysicianApiRequestActions
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        npi = $options.actionField<String>(
+        npi = $options.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -319,7 +319,7 @@ class _$UpdatePhysicianApiRequestActions
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        physicianType = $options.actionField<PhysicianType>(
+        physicianType = $options.field<PhysicianType>(
             'physicianType',
             (a) => a?.physicianType,
             (s) => s?.physicianType,
@@ -372,9 +372,6 @@ class _$UpdatePhysicianApiRequestActions
     name.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdatePhysicianApiRequestUpdatePhysicianApiRequestActions> get $serializer => UpdatePhysicianApiRequestUpdatePhysicianApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

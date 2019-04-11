@@ -107,9 +107,6 @@ class _$AddInvTypesToBeCountedApi extends AddInvTypesToBeCountedApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddInvTypesToBeCountedApi> get $serializer => CommandStateAddInvTypesToBeCountedApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

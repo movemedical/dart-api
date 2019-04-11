@@ -216,11 +216,11 @@ class _$UpdateCaseFileUploadPercentApiRequestActions
   _$UpdateCaseFileUploadPercentApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateCaseFileUploadPercentApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        percentDecimalForm = $options.actionField<double>(
+        percentDecimalForm = $options.field<double>(
             'percentDecimalForm',
             (a) => a?.percentDecimalForm,
             (s) => s?.percentDecimalForm,
@@ -261,9 +261,6 @@ class _$UpdateCaseFileUploadPercentApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCaseFileUploadPercentApiRequestUpdateCaseFileUploadPercentApiRequestActions> get $serializer => UpdateCaseFileUploadPercentApiRequestUpdateCaseFileUploadPercentApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

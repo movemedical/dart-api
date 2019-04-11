@@ -277,27 +277,24 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
       : $replace =
             $options.action<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink>(
                 '\$replace', (a) => a?.$replace),
-        orgUnitToFacilityId = $options.actionField<String>(
+        orgUnitToFacilityId = $options.field<String>(
             'orgUnitToFacilityId',
             (a) => a?.orgUnitToFacilityId,
             (s) => s?.orgUnitToFacilityId,
             (p, b) => p?.orgUnitToFacilityId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        facilityName = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        facilityName = $options.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        facilityType = $options.actionField<FacilityType>(
+        facilityType = $options.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        facilityActive = $options.actionField<bool>(
+        facilityActive = $options.field<bool>(
             'facilityActive',
             (a) => a?.facilityActive,
             (s) => s?.facilityActive,
@@ -343,9 +340,6 @@ class _$ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions> get $serializer => ListOrgUnitFacilityLinksApiOrgUnitFacilityLinkListOrgUnitFacilityLinksApiOrgUnitFacilityLinkActions.serializer;
 
   FullType _$fullType;
   @override

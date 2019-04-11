@@ -358,30 +358,30 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
   _$ListCustomersApiRequestActions._(this.$options)
       : $replace = $options.action<ListCustomersApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customerIds = $options.actionField<BuiltList<String>>(
+        customerIds = $options.field<BuiltList<String>>(
             'customerIds',
             (a) => a?.customerIds,
             (s) => s?.customerIds,
             (p, b) => p?.customerIds = b),
-        hsOrgIds = $options.actionField<BuiltList<String>>('hsOrgIds',
+        hsOrgIds = $options.field<BuiltList<String>>('hsOrgIds',
             (a) => a?.hsOrgIds, (s) => s?.hsOrgIds, (p, b) => p?.hsOrgIds = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        sortBy = $options.actionField<ListCustomersApiSortBy>('sortBy',
+        sortBy = $options.field<ListCustomersApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        sortAscending = $options.actionField<bool>(
+        sortAscending = $options.field<bool>(
             'sortAscending',
             (a) => a?.sortAscending,
             (s) => s?.sortAscending,
             (p, b) => p?.sortAscending = b),
-        startRecordIdx = $options.actionField<int>(
+        startRecordIdx = $options.field<int>(
             'startRecordIdx',
             (a) => a?.startRecordIdx,
             (s) => s?.startRecordIdx,
             (p, b) => p?.startRecordIdx = b),
-        pageSize = $options.actionField<int>('pageSize', (a) => a?.pageSize,
+        pageSize = $options.field<int>('pageSize', (a) => a?.pageSize,
             (s) => s?.pageSize, (p, b) => p?.pageSize = b),
         super._();
 
@@ -428,9 +428,6 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCustomersApiRequestListCustomersApiRequestActions> get $serializer => ListCustomersApiRequestListCustomersApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

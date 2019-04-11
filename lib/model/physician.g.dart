@@ -251,7 +251,7 @@ class _$PhysicianActions extends PhysicianActions {
 
   _$PhysicianActions._(this.$options)
       : $replace = $options.action<Physician>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -260,9 +260,9 @@ class _$PhysicianActions extends PhysicianActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        npi = $options.actionField<String>(
+        npi = $options.field<String>(
             'npi', (a) => a?.npi, (s) => s?.npi, (p, b) => p?.npi = b),
-        display = $options.actionField<String>('display', (a) => a?.display,
+        display = $options.field<String>('display', (a) => a?.display,
             (s) => s?.display, (p, b) => p?.display = b),
         address = AddressActions(() =>
             $options.stateful<Address, AddressBuilder, AddressActions>(
@@ -315,9 +315,6 @@ class _$PhysicianActions extends PhysicianActions {
     name.$middleware(middleware);
     address.$middleware(middleware);
   }
-
-// @override
-// Serializer<PhysicianPhysicianActions> get $serializer => PhysicianPhysicianActions.serializer;
 
   FullType _$fullType;
   @override

@@ -238,26 +238,17 @@ class _$ListOrderLinesApiBackOrderDetailActions
   _$ListOrderLinesApiBackOrderDetailActions._(this.$options)
       : $replace = $options.action<ListOrderLinesApiBackOrderDetail>(
             '\$replace', (a) => a?.$replace),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        createdTimestamp = $options.actionField<DateTime>(
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        createdTimestamp = $options.field<DateTime>(
             'createdTimestamp',
             (a) => a?.createdTimestamp,
             (s) => s?.createdTimestamp,
             (p, b) => p?.createdTimestamp = b),
-        fieldName = $options.actionField<String>(
-            'fieldName',
-            (a) => a?.fieldName,
-            (s) => s?.fieldName,
-            (p, b) => p?.fieldName = b),
-        fieldValue = $options.actionField<String>(
-            'fieldValue',
-            (a) => a?.fieldValue,
-            (s) => s?.fieldValue,
-            (p, b) => p?.fieldValue = b),
+        fieldName = $options.field<String>('fieldName', (a) => a?.fieldName,
+            (s) => s?.fieldName, (p, b) => p?.fieldName = b),
+        fieldValue = $options.field<String>('fieldValue', (a) => a?.fieldValue,
+            (s) => s?.fieldValue, (p, b) => p?.fieldValue = b),
         super._();
 
   factory _$ListOrderLinesApiBackOrderDetailActions(
@@ -296,9 +287,6 @@ class _$ListOrderLinesApiBackOrderDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrderLinesApiBackOrderDetailListOrderLinesApiBackOrderDetailActions> get $serializer => ListOrderLinesApiBackOrderDetailListOrderLinesApiBackOrderDetailActions.serializer;
 
   FullType _$fullType;
   @override

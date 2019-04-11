@@ -197,12 +197,12 @@ class _$GetCustomerRelationshipsApiResponseActions
   _$GetCustomerRelationshipsApiResponseActions._(this.$options)
       : $replace = $options.action<GetCustomerRelationshipsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        customerRelationships = $options.actionField<
-                BuiltList<GetCustomerRelationshipsApiCustomerRelationship>>(
-            'customerRelationships',
-            (a) => a?.customerRelationships,
-            (s) => s?.customerRelationships,
-            (p, b) => p?.customerRelationships = b),
+        customerRelationships = $options
+            .field<BuiltList<GetCustomerRelationshipsApiCustomerRelationship>>(
+                'customerRelationships',
+                (a) => a?.customerRelationships,
+                (s) => s?.customerRelationships,
+                (p, b) => p?.customerRelationships = b),
         super._();
 
   factory _$GetCustomerRelationshipsApiResponseActions(
@@ -235,9 +235,6 @@ class _$GetCustomerRelationshipsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCustomerRelationshipsApiResponseGetCustomerRelationshipsApiResponseActions> get $serializer => GetCustomerRelationshipsApiResponseGetCustomerRelationshipsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

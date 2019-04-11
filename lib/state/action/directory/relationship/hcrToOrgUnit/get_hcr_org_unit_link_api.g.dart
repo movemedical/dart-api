@@ -112,9 +112,6 @@ class _$GetHcrOrgUnitLinkApi extends GetHcrOrgUnitLinkApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetHcrOrgUnitLinkApi> get $serializer => CommandStateGetHcrOrgUnitLinkApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

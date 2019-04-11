@@ -211,14 +211,11 @@ class _$GetCaseEventDetailApiRequestActions
   _$GetCaseEventDetailApiRequestActions._(this.$options)
       : $replace = $options.action<GetCaseEventDetailApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        caseNumber = $options.actionField<int>(
-            'caseNumber',
-            (a) => a?.caseNumber,
-            (s) => s?.caseNumber,
-            (p, b) => p?.caseNumber = b),
-        skipPresence = $options.actionField<bool>(
+        caseNumber = $options.field<int>('caseNumber', (a) => a?.caseNumber,
+            (s) => s?.caseNumber, (p, b) => p?.caseNumber = b),
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -258,9 +255,6 @@ class _$GetCaseEventDetailApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiRequestGetCaseEventDetailApiRequestActions> get $serializer => GetCaseEventDetailApiRequestGetCaseEventDetailApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

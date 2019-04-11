@@ -158,7 +158,7 @@ class _$ApproveOrderApiRequestActions extends ApproveOrderApiRequestActions {
   _$ApproveOrderApiRequestActions._(this.$options)
       : $replace = $options.action<ApproveOrderApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -191,9 +191,6 @@ class _$ApproveOrderApiRequestActions extends ApproveOrderApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ApproveOrderApiRequestApproveOrderApiRequestActions> get $serializer => ApproveOrderApiRequestApproveOrderApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

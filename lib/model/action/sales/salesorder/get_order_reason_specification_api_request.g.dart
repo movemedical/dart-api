@@ -171,7 +171,7 @@ class _$GetOrderReasonSpecificationApiRequestActions
   _$GetOrderReasonSpecificationApiRequestActions._(this.$options)
       : $replace = $options.action<GetOrderReasonSpecificationApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orderReasonId = $options.actionField<String>(
+        orderReasonId = $options.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
@@ -208,9 +208,6 @@ class _$GetOrderReasonSpecificationApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrderReasonSpecificationApiRequestGetOrderReasonSpecificationApiRequestActions> get $serializer => GetOrderReasonSpecificationApiRequestGetOrderReasonSpecificationApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

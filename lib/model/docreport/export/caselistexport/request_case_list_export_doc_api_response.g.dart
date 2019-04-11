@@ -169,7 +169,7 @@ class _$RequestCaseListExportDocApiResponseActions
   _$RequestCaseListExportDocApiResponseActions._(this.$options)
       : $replace = $options.action<RequestCaseListExportDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -206,9 +206,6 @@ class _$RequestCaseListExportDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestCaseListExportDocApiResponseRequestCaseListExportDocApiResponseActions> get $serializer => RequestCaseListExportDocApiResponseRequestCaseListExportDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

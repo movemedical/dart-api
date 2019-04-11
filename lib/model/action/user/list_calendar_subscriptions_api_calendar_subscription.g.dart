@@ -266,11 +266,11 @@ class _$ListCalendarSubscriptionsApiCalendarSubscriptionActions
       : $replace =
             $options.action<ListCalendarSubscriptionsApiCalendarSubscription>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        calendar = $options.actionField<String>('calendar', (a) => a?.calendar,
+        calendar = $options.field<String>('calendar', (a) => a?.calendar,
             (s) => s?.calendar, (p, b) => p?.calendar = b),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         listCaseEventsRequest = ListCaseEventsApiRequestActions(() =>
             $options.stateful<
@@ -327,9 +327,6 @@ class _$ListCalendarSubscriptionsApiCalendarSubscriptionActions
     super.$middleware(middleware);
     listCaseEventsRequest.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCalendarSubscriptionsApiCalendarSubscriptionListCalendarSubscriptionsApiCalendarSubscriptionActions> get $serializer => ListCalendarSubscriptionsApiCalendarSubscriptionListCalendarSubscriptionsApiCalendarSubscriptionActions.serializer;
 
   FullType _$fullType;
   @override

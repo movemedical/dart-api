@@ -157,7 +157,7 @@ class _$OrderDetailPushMessageActions extends OrderDetailPushMessageActions {
   _$OrderDetailPushMessageActions._(this.$options)
       : $replace = $options.action<OrderDetailPushMessage>(
             '\$replace', (a) => a?.$replace),
-        content = $options.actionField<String>('content', (a) => a?.content,
+        content = $options.field<String>('content', (a) => a?.content,
             (s) => s?.content, (p, b) => p?.content = b),
         super._();
 
@@ -190,9 +190,6 @@ class _$OrderDetailPushMessageActions extends OrderDetailPushMessageActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrderDetailPushMessageOrderDetailPushMessageActions> get $serializer => OrderDetailPushMessageOrderDetailPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

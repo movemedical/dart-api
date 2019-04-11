@@ -167,7 +167,7 @@ class _$ListSSOApiResponseActions extends ListSSOApiResponseActions {
   _$ListSSOApiResponseActions._(this.$options)
       : $replace = $options.action<ListSSOApiResponse>(
             '\$replace', (a) => a?.$replace),
-        ssos = $options.actionField<BuiltList<ListSSOApiSSO>>(
+        ssos = $options.field<BuiltList<ListSSOApiSSO>>(
             'ssos', (a) => a?.ssos, (s) => s?.ssos, (p, b) => p?.ssos = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$ListSSOApiResponseActions extends ListSSOApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSSOApiResponseListSSOApiResponseActions> get $serializer => ListSSOApiResponseListSSOApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

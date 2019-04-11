@@ -201,9 +201,9 @@ class _$ListAeTeamLinksApiResponseActions
   _$ListAeTeamLinksApiResponseActions._(this.$options)
       : $replace = $options.action<ListAeTeamLinksApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<TeamLink>>(
+        data = $options.field<BuiltList<TeamLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -238,9 +238,6 @@ class _$ListAeTeamLinksApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAeTeamLinksApiResponseListAeTeamLinksApiResponseActions> get $serializer => ListAeTeamLinksApiResponseListAeTeamLinksApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

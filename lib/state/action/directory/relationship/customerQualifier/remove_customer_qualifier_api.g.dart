@@ -107,9 +107,6 @@ class _$RemoveCustomerQualifierApi extends RemoveCustomerQualifierApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveCustomerQualifierApi> get $serializer => CommandStateRemoveCustomerQualifierApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

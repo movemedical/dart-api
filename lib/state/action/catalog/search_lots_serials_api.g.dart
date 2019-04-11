@@ -112,9 +112,6 @@ class _$SearchLotsSerialsApi extends SearchLotsSerialsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSearchLotsSerialsApi> get $serializer => CommandStateSearchLotsSerialsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

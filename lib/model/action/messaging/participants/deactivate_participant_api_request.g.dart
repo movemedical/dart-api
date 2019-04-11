@@ -169,7 +169,7 @@ class _$DeactivateParticipantApiRequestActions
   _$DeactivateParticipantApiRequestActions._(this.$options)
       : $replace = $options.action<DeactivateParticipantApiRequest>(
             '\$replace', (a) => a?.$replace),
-        participantId = $options.actionField<String>(
+        participantId = $options.field<String>(
             'participantId',
             (a) => a?.participantId,
             (s) => s?.participantId,
@@ -206,9 +206,6 @@ class _$DeactivateParticipantApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DeactivateParticipantApiRequestDeactivateParticipantApiRequestActions> get $serializer => DeactivateParticipantApiRequestDeactivateParticipantApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

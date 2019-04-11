@@ -239,13 +239,13 @@ class _$ListPriceConstructsForCaseApiPriceConstructActions
   _$ListPriceConstructsForCaseApiPriceConstructActions._(this.$options)
       : $replace = $options.action<ListPriceConstructsForCaseApiPriceConstruct>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        number = $options.actionField<String>('number', (a) => a?.number,
+        number = $options.field<String>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -288,9 +288,6 @@ class _$ListPriceConstructsForCaseApiPriceConstructActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPriceConstructsForCaseApiPriceConstructListPriceConstructsForCaseApiPriceConstructActions> get $serializer => ListPriceConstructsForCaseApiPriceConstructListPriceConstructsForCaseApiPriceConstructActions.serializer;
 
   FullType _$fullType;
   @override

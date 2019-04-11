@@ -218,9 +218,6 @@ class _$GetBizUnitApiResponseActions extends GetBizUnitApiResponseActions {
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetBizUnitApiResponseGetBizUnitApiResponseActions> get $serializer => GetBizUnitApiResponseGetBizUnitApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetBizUnitApiResponse);

@@ -297,9 +297,6 @@ class _$ReadBarcodeApiItemChoiceActions
     serial.$middleware(middleware);
   }
 
-// @override
-// Serializer<ReadBarcodeApiItemChoiceReadBarcodeApiItemChoiceActions> get $serializer => ReadBarcodeApiItemChoiceReadBarcodeApiItemChoiceActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(ReadBarcodeApiItemChoice);

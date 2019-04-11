@@ -460,16 +460,16 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
   _$ListOrdersApiOrderActions._(this.$options)
       : $replace = $options.action<ListOrdersApiOrder>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        status = $options.actionField<OrderStatus>('status', (a) => a?.status,
+        status = $options.field<OrderStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
         reason = OrderReasonActions(() => $options
             .stateful<OrderReason, OrderReasonBuilder, OrderReasonActions>(
@@ -485,34 +485,31 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        created = $options.actionField<DateTime>('created', (a) => a?.created,
+        created = $options.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        createdBy = $options.actionField<String>(
-            'createdBy',
-            (a) => a?.createdBy,
-            (s) => s?.createdBy,
-            (p, b) => p?.createdBy = b),
-        sourceStart = $options.actionField<DateTime>(
+        createdBy = $options.field<String>('createdBy', (a) => a?.createdBy,
+            (s) => s?.createdBy, (p, b) => p?.createdBy = b),
+        sourceStart = $options.field<DateTime>(
             'sourceStart',
             (a) => a?.sourceStart,
             (s) => s?.sourceStart,
             (p, b) => p?.sourceStart = b),
-        deliveryStart = $options.actionField<DateTime>(
+        deliveryStart = $options.field<DateTime>(
             'deliveryStart',
             (a) => a?.deliveryStart,
             (s) => s?.deliveryStart,
             (p, b) => p?.deliveryStart = b),
-        deliveryEnd = $options.actionField<DateTime>(
+        deliveryEnd = $options.field<DateTime>(
             'deliveryEnd',
             (a) => a?.deliveryEnd,
             (s) => s?.deliveryEnd,
             (p, b) => p?.deliveryEnd = b),
-        noteCount = $options.actionField<int>('noteCount', (a) => a?.noteCount,
+        noteCount = $options.field<int>('noteCount', (a) => a?.noteCount,
             (s) => s?.noteCount, (p, b) => p?.noteCount = b),
         super._();
 
@@ -575,9 +572,6 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
     reason.$middleware(middleware);
     toLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrdersApiOrderListOrdersApiOrderActions> get $serializer => ListOrdersApiOrderListOrdersApiOrderActions.serializer;
 
   FullType _$fullType;
   @override

@@ -383,7 +383,7 @@ class _$PatientActions extends PatientActions {
 
   _$PatientActions._(this.$options)
       : $replace = $options.action<Patient>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -392,33 +392,33 @@ class _$PatientActions extends PatientActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        initials = $options.actionField<String>('initials', (a) => a?.initials,
+        initials = $options.field<String>('initials', (a) => a?.initials,
             (s) => s?.initials, (p, b) => p?.initials = b),
-        mrn = $options.actionField<String>(
+        mrn = $options.field<String>(
             'mrn', (a) => a?.mrn, (s) => s?.mrn, (p, b) => p?.mrn = b),
-        dateOfBirth = $options.actionField<DateTime>(
+        dateOfBirth = $options.field<DateTime>(
             'dateOfBirth',
             (a) => a?.dateOfBirth,
             (s) => s?.dateOfBirth,
             (p, b) => p?.dateOfBirth = b),
-        gender = $options.actionField<Gender>('gender', (a) => a?.gender,
+        gender = $options.field<Gender>('gender', (a) => a?.gender,
             (s) => s?.gender, (p, b) => p?.gender = b),
-        heightMeasurement = $options.actionField<double>(
+        heightMeasurement = $options.field<double>(
             'heightMeasurement',
             (a) => a?.heightMeasurement,
             (s) => s?.heightMeasurement,
             (p, b) => p?.heightMeasurement = b),
-        heightMeasurementType = $options.actionField<LengthMeasurementType>(
+        heightMeasurementType = $options.field<LengthMeasurementType>(
             'heightMeasurementType',
             (a) => a?.heightMeasurementType,
             (s) => s?.heightMeasurementType,
             (p, b) => p?.heightMeasurementType = b),
-        weightMeasurement = $options.actionField<double>(
+        weightMeasurement = $options.field<double>(
             'weightMeasurement',
             (a) => a?.weightMeasurement,
             (s) => s?.weightMeasurement,
             (p, b) => p?.weightMeasurement = b),
-        weightMeasurementType = $options.actionField<WeightMeasurementType>(
+        weightMeasurementType = $options.field<WeightMeasurementType>(
             'weightMeasurementType',
             (a) => a?.weightMeasurementType,
             (s) => s?.weightMeasurementType,
@@ -476,9 +476,6 @@ class _$PatientActions extends PatientActions {
     super.$middleware(middleware);
     name.$middleware(middleware);
   }
-
-// @override
-// Serializer<PatientPatientActions> get $serializer => PatientPatientActions.serializer;
 
   FullType _$fullType;
   @override

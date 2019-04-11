@@ -298,12 +298,11 @@ class _$GetCaseEventDetailApiResponseActions
                 (s) => s?.displayRules,
                 (b) => b?.displayRules,
                 (parent, builder) => parent?.displayRules = builder)),
-        caseDocs =
-            $options.actionField<BuiltList<GetCaseEventDetailApiCaseDoc>>(
-                'caseDocs',
-                (a) => a?.caseDocs,
-                (s) => s?.caseDocs,
-                (p, b) => p?.caseDocs = b),
+        caseDocs = $options.field<BuiltList<GetCaseEventDetailApiCaseDoc>>(
+            'caseDocs',
+            (a) => a?.caseDocs,
+            (s) => s?.caseDocs,
+            (p, b) => p?.caseDocs = b),
         super._();
 
   factory _$GetCaseEventDetailApiResponseActions(
@@ -349,9 +348,6 @@ class _$GetCaseEventDetailApiResponseActions
     event.$middleware(middleware);
     displayRules.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiResponseGetCaseEventDetailApiResponseActions> get $serializer => GetCaseEventDetailApiResponseGetCaseEventDetailApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

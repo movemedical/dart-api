@@ -112,9 +112,6 @@ class _$ListCaseRequirementsApi extends ListCaseRequirementsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListCaseRequirementsApi> get $serializer => CommandStateListCaseRequirementsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

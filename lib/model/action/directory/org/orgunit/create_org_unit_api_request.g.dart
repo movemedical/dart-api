@@ -597,14 +597,11 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
   _$CreateOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<CreateOrgUnitApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        parentId = $options.actionField<String>('parentId', (a) => a?.parentId,
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        parentId = $options.field<String>('parentId', (a) => a?.parentId,
             (s) => s?.parentId, (p, b) => p?.parentId = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -613,63 +610,57 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicName = $options.actionField<String>(
-            'publicName',
-            (a) => a?.publicName,
-            (s) => s?.publicName,
-            (p, b) => p?.publicName = b),
-        salesOrgUnit = $options.actionField<bool>(
+        publicName = $options.field<String>('publicName', (a) => a?.publicName,
+            (s) => s?.publicName, (p, b) => p?.publicName = b),
+        salesOrgUnit = $options.field<bool>(
             'salesOrgUnit',
             (a) => a?.salesOrgUnit,
             (s) => s?.salesOrgUnit,
             (p, b) => p?.salesOrgUnit = b),
-        opsOrgUnit = $options.actionField<bool>(
-            'opsOrgUnit',
-            (a) => a?.opsOrgUnit,
-            (s) => s?.opsOrgUnit,
-            (p, b) => p?.opsOrgUnit = b),
-        opsOrgUnitId = $options.actionField<String>(
+        opsOrgUnit = $options.field<bool>('opsOrgUnit', (a) => a?.opsOrgUnit,
+            (s) => s?.opsOrgUnit, (p, b) => p?.opsOrgUnit = b),
+        opsOrgUnitId = $options.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
             (p, b) => p?.opsOrgUnitId = b),
-        signUpAllowed = $options.actionField<bool>(
+        signUpAllowed = $options.field<bool>(
             'signUpAllowed',
             (a) => a?.signUpAllowed,
             (s) => s?.signUpAllowed,
             (p, b) => p?.signUpAllowed = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        label = $options.actionField<String>(
+        label = $options.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        schema = $options.actionField<String>('schema', (a) => a?.schema,
+        schema = $options.field<String>('schema', (a) => a?.schema,
             (s) => s?.schema, (p, b) => p?.schema = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publicListing = $options.actionField<bool>(
+        publicListing = $options.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        allowRemoteUsage = $options.actionField<bool>(
+        allowRemoteUsage = $options.field<bool>(
             'allowRemoteUsage',
             (a) => a?.allowRemoteUsage,
             (s) => s?.allowRemoteUsage,
             (p, b) => p?.allowRemoteUsage = b),
-        allowMixedInventoryTypeUsage = $options.actionField<bool>(
+        allowMixedInventoryTypeUsage = $options.field<bool>(
             'allowMixedInventoryTypeUsage',
             (a) => a?.allowMixedInventoryTypeUsage,
             (s) => s?.allowMixedInventoryTypeUsage,
             (p, b) => p?.allowMixedInventoryTypeUsage = b),
-        fulfillmentLeadTimeHours = $options.actionField<int>(
+        fulfillmentLeadTimeHours = $options.field<int>(
             'fulfillmentLeadTimeHours',
             (a) => a?.fulfillmentLeadTimeHours,
             (s) => s?.fulfillmentLeadTimeHours,
             (p, b) => p?.fulfillmentLeadTimeHours = b),
-        requirementsLeadTimeHours = $options.actionField<int>(
+        requirementsLeadTimeHours = $options.field<int>(
             'requirementsLeadTimeHours',
             (a) => a?.requirementsLeadTimeHours,
             (s) => s?.requirementsLeadTimeHours,
@@ -745,9 +736,6 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateOrgUnitApiRequestCreateOrgUnitApiRequestActions> get $serializer => CreateOrgUnitApiRequestCreateOrgUnitApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

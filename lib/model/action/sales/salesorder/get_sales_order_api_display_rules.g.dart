@@ -517,53 +517,50 @@ class _$GetSalesOrderApiDisplayRulesActions
   _$GetSalesOrderApiDisplayRulesActions._(this.$options)
       : $replace = $options.action<GetSalesOrderApiDisplayRules>(
             '\$replace', (a) => a?.$replace),
-        editLinePricing = $options.actionField<bool>(
+        editLinePricing = $options.field<bool>(
             'editLinePricing',
             (a) => a?.editLinePricing,
             (s) => s?.editLinePricing,
             (p, b) => p?.editLinePricing = b),
-        editDetails = $options.actionField<bool>(
-            'editDetails',
-            (a) => a?.editDetails,
-            (s) => s?.editDetails,
-            (p, b) => p?.editDetails = b),
-        editLineQuantity = $options.actionField<bool>(
+        editDetails = $options.field<bool>('editDetails', (a) => a?.editDetails,
+            (s) => s?.editDetails, (p, b) => p?.editDetails = b),
+        editLineQuantity = $options.field<bool>(
             'editLineQuantity',
             (a) => a?.editLineQuantity,
             (s) => s?.editLineQuantity,
             (p, b) => p?.editLineQuantity = b),
-        sendToErp = $options.actionField<bool>('sendToErp', (a) => a?.sendToErp,
+        sendToErp = $options.field<bool>('sendToErp', (a) => a?.sendToErp,
             (s) => s?.sendToErp, (p, b) => p?.sendToErp = b),
-        skipErp = $options.actionField<bool>('skipErp', (a) => a?.skipErp,
+        skipErp = $options.field<bool>('skipErp', (a) => a?.skipErp,
             (s) => s?.skipErp, (p, b) => p?.skipErp = b),
-        confirm = $options.actionField<bool>('confirm', (a) => a?.confirm,
+        confirm = $options.field<bool>('confirm', (a) => a?.confirm,
             (s) => s?.confirm, (p, b) => p?.confirm = b),
-        cancel = $options.actionField<bool>('cancel', (a) => a?.cancel,
+        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        showItemPricing = $options.actionField<bool>(
+        showItemPricing = $options.field<bool>(
             'showItemPricing',
             (a) => a?.showItemPricing,
             (s) => s?.showItemPricing,
             (p, b) => p?.showItemPricing = b),
-        getItemPricing = $options.actionField<bool>(
+        getItemPricing = $options.field<bool>(
             'getItemPricing',
             (a) => a?.getItemPricing,
             (s) => s?.getItemPricing,
             (p, b) => p?.getItemPricing = b),
-        printSalesOrder = $options.actionField<bool>(
+        printSalesOrder = $options.field<bool>(
             'printSalesOrder',
             (a) => a?.printSalesOrder,
             (s) => s?.printSalesOrder,
             (p, b) => p?.printSalesOrder = b),
-        editUsage = $options.actionField<bool>('editUsage', (a) => a?.editUsage,
+        editUsage = $options.field<bool>('editUsage', (a) => a?.editUsage,
             (s) => s?.editUsage, (p, b) => p?.editUsage = b),
-        updatePo = $options.actionField<bool>('updatePo', (a) => a?.updatePo,
+        updatePo = $options.field<bool>('updatePo', (a) => a?.updatePo,
             (s) => s?.updatePo, (p, b) => p?.updatePo = b),
-        showUsage = $options.actionField<bool>('showUsage', (a) => a?.showUsage,
+        showUsage = $options.field<bool>('showUsage', (a) => a?.showUsage,
             (s) => s?.showUsage, (p, b) => p?.showUsage = b),
-        showLines = $options.actionField<bool>('showLines', (a) => a?.showLines,
+        showLines = $options.field<bool>('showLines', (a) => a?.showLines,
             (s) => s?.showLines, (p, b) => p?.showLines = b),
-        showShipments = $options.actionField<bool>(
+        showShipments = $options.field<bool>(
             'showShipments',
             (a) => a?.showShipments,
             (s) => s?.showShipments,
@@ -627,9 +624,6 @@ class _$GetSalesOrderApiDisplayRulesActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSalesOrderApiDisplayRulesGetSalesOrderApiDisplayRulesActions> get $serializer => GetSalesOrderApiDisplayRulesGetSalesOrderApiDisplayRulesActions.serializer;
 
   FullType _$fullType;
   @override

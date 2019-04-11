@@ -156,7 +156,7 @@ class _$DeleteFileApiRequestActions extends DeleteFileApiRequestActions {
   _$DeleteFileApiRequestActions._(this.$options)
       : $replace = $options.action<DeleteFileApiRequest>(
             '\$replace', (a) => a?.$replace),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$DeleteFileApiRequestActions extends DeleteFileApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DeleteFileApiRequestDeleteFileApiRequestActions> get $serializer => DeleteFileApiRequestDeleteFileApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

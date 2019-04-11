@@ -112,9 +112,6 @@ class _$ListLocationJournalsApi extends ListLocationJournalsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListLocationJournalsApi> get $serializer => CommandStateListLocationJournalsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

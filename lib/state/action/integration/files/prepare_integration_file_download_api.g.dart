@@ -120,9 +120,6 @@ class _$PrepareIntegrationFileDownloadApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStatePrepareIntegrationFileDownloadApi> get $serializer => CommandStatePrepareIntegrationFileDownloadApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

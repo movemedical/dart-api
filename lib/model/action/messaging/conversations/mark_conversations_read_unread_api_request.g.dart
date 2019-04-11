@@ -211,12 +211,12 @@ class _$MarkConversationsReadUnreadApiRequestActions
   _$MarkConversationsReadUnreadApiRequestActions._(this.$options)
       : $replace = $options.action<MarkConversationsReadUnreadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        conversationIds = $options.actionField<BuiltList<String>>(
+        conversationIds = $options.field<BuiltList<String>>(
             'conversationIds',
             (a) => a?.conversationIds,
             (s) => s?.conversationIds,
             (p, b) => p?.conversationIds = b),
-        read = $options.actionField<bool>(
+        read = $options.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
         super._();
 
@@ -252,9 +252,6 @@ class _$MarkConversationsReadUnreadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MarkConversationsReadUnreadApiRequestMarkConversationsReadUnreadApiRequestActions> get $serializer => MarkConversationsReadUnreadApiRequestMarkConversationsReadUnreadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

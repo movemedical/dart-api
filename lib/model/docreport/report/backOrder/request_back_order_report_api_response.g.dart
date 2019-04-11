@@ -168,7 +168,7 @@ class _$RequestBackOrderReportApiResponseActions
   _$RequestBackOrderReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestBackOrderReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -205,9 +205,6 @@ class _$RequestBackOrderReportApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestBackOrderReportApiResponseRequestBackOrderReportApiResponseActions> get $serializer => RequestBackOrderReportApiResponseRequestBackOrderReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -443,40 +443,37 @@ class _$GetCaseCountByDayApiRequestActions
   _$GetCaseCountByDayApiRequestActions._(this.$options)
       : $replace = $options.action<GetCaseCountByDayApiRequest>(
             '\$replace', (a) => a?.$replace),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        caseTypeIds = $options.actionField<BuiltList<String>>(
+        caseTypeIds = $options.field<BuiltList<String>>(
             'caseTypeIds',
             (a) => a?.caseTypeIds,
             (s) => s?.caseTypeIds,
             (p, b) => p?.caseTypeIds = b),
-        hcrIds = $options.actionField<BuiltList<String>>('hcrIds',
-            (a) => a?.hcrIds, (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        teamIds = $options.actionField<BuiltList<String>>('teamIds',
+        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+            (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
+        teamIds = $options.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        facilityIds = $options.actionField<BuiltList<String>>(
+        facilityIds = $options.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        surgeonIds = $options.actionField<BuiltList<String>>(
+        surgeonIds = $options.field<BuiltList<String>>(
             'surgeonIds',
             (a) => a?.surgeonIds,
             (s) => s?.surgeonIds,
             (p, b) => p?.surgeonIds = b),
-        procedureIds = $options.actionField<BuiltList<String>>(
+        procedureIds = $options.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        statuses = $options.actionField<BuiltList<CaseEventStatus>>('statuses',
+        statuses = $options.field<BuiltList<CaseEventStatus>>('statuses',
             (a) => a?.statuses, (s) => s?.statuses, (p, b) => p?.statuses = b),
-        patientName = $options.actionField<String>(
+        patientName = $options.field<String>(
             'patientName',
             (a) => a?.patientName,
             (s) => s?.patientName,
@@ -530,9 +527,6 @@ class _$GetCaseCountByDayApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseCountByDayApiRequestGetCaseCountByDayApiRequestActions> get $serializer => GetCaseCountByDayApiRequestGetCaseCountByDayApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -220,9 +220,6 @@ class _$GetCustomerApiResponseActions extends GetCustomerApiResponseActions {
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetCustomerApiResponseGetCustomerApiResponseActions> get $serializer => GetCustomerApiResponseGetCustomerApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetCustomerApiResponse);

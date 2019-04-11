@@ -88,9 +88,6 @@ class _$UpdateLotApi extends UpdateLotApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateLotApi> get $serializer => CommandStateUpdateLotApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

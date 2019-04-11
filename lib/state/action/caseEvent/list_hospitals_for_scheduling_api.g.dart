@@ -116,9 +116,6 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListHospitalsForSchedulingApi> get $serializer => CommandStateListHospitalsForSchedulingApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

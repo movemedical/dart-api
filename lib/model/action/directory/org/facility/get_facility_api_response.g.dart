@@ -222,9 +222,6 @@ class _$GetFacilityApiResponseActions extends GetFacilityApiResponseActions {
     detail.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetFacilityApiResponseGetFacilityApiResponseActions> get $serializer => GetFacilityApiResponseGetFacilityApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetFacilityApiResponse);

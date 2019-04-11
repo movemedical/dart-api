@@ -148,9 +148,6 @@ class _$CaseRequirementsUpdatedPushMessageActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<CaseRequirementsUpdatedPushMessageCaseRequirementsUpdatedPushMessageActions> get $serializer => CaseRequirementsUpdatedPushMessageCaseRequirementsUpdatedPushMessageActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

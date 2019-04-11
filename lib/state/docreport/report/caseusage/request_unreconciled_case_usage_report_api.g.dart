@@ -121,9 +121,6 @@ class _$RequestUnreconciledCaseUsageReportApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestUnreconciledCaseUsageReportApi> get $serializer => CommandStateRequestUnreconciledCaseUsageReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

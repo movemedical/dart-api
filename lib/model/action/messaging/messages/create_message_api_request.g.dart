@@ -184,12 +184,12 @@ class _$CreateMessageApiRequestActions extends CreateMessageApiRequestActions {
   _$CreateMessageApiRequestActions._(this.$options)
       : $replace = $options.action<CreateMessageApiRequest>(
             '\$replace', (a) => a?.$replace),
-        fromParticipantId = $options.actionField<String>(
+        fromParticipantId = $options.field<String>(
             'fromParticipantId',
             (a) => a?.fromParticipantId,
             (s) => s?.fromParticipantId,
             (p, b) => p?.fromParticipantId = b),
-        messageText = $options.actionField<String>(
+        messageText = $options.field<String>(
             'messageText',
             (a) => a?.messageText,
             (s) => s?.messageText,
@@ -227,9 +227,6 @@ class _$CreateMessageApiRequestActions extends CreateMessageApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateMessageApiRequestCreateMessageApiRequestActions> get $serializer => CreateMessageApiRequestCreateMessageApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

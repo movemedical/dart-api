@@ -167,7 +167,7 @@ class _$UpdateSalesOrderHeaderApiResponseActions
   _$UpdateSalesOrderHeaderApiResponseActions._(this.$options)
       : $replace = $options.action<UpdateSalesOrderHeaderApiResponse>(
             '\$replace', (a) => a?.$replace),
-        canDo = $options.actionField<bool>(
+        canDo = $options.field<bool>(
             'canDo', (a) => a?.canDo, (s) => s?.canDo, (p, b) => p?.canDo = b),
         super._();
 
@@ -201,9 +201,6 @@ class _$UpdateSalesOrderHeaderApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateSalesOrderHeaderApiResponseUpdateSalesOrderHeaderApiResponseActions> get $serializer => UpdateSalesOrderHeaderApiResponseUpdateSalesOrderHeaderApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

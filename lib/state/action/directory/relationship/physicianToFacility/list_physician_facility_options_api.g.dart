@@ -119,9 +119,6 @@ class _$ListPhysicianFacilityOptionsApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListPhysicianFacilityOptionsApi> get $serializer => CommandStateListPhysicianFacilityOptionsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

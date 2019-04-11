@@ -163,7 +163,7 @@ class _$RemovePresenceApiRequestActions
   _$RemovePresenceApiRequestActions._(this.$options)
       : $replace = $options.action<RemovePresenceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        objectId = $options.actionField<String>('objectId', (a) => a?.objectId,
+        objectId = $options.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
         super._();
 
@@ -196,9 +196,6 @@ class _$RemovePresenceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RemovePresenceApiRequestRemovePresenceApiRequestActions> get $serializer => RemovePresenceApiRequestRemovePresenceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

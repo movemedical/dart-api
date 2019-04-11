@@ -206,10 +206,9 @@ class _$ListWebServiceLogsApiResponseActions
   _$ListWebServiceLogsApiResponseActions._(this.$options)
       : $replace = $options.action<ListWebServiceLogsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data =
-            $options.actionField<BuiltList<ListWebServiceLogsApiWebServiceLog>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options.field<BuiltList<ListWebServiceLogsApiWebServiceLog>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -244,9 +243,6 @@ class _$ListWebServiceLogsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListWebServiceLogsApiResponseListWebServiceLogsApiResponseActions> get $serializer => ListWebServiceLogsApiResponseListWebServiceLogsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

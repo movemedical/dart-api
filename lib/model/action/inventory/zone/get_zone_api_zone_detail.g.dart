@@ -367,34 +367,28 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
   _$GetZoneApiZoneDetailActions._(this.$options)
       : $replace = $options.action<GetZoneApiZoneDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        facilityName = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        facilityName = $options.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        zoneDescription = $options.actionField<String>(
+        zoneDescription = $options.field<String>(
             'zoneDescription',
             (a) => a?.zoneDescription,
             (s) => s?.zoneDescription,
             (p, b) => p?.zoneDescription = b),
-        isActive = $options.actionField<bool>('isActive', (a) => a?.isActive,
+        isActive = $options.field<bool>('isActive', (a) => a?.isActive,
             (s) => s?.isActive, (p, b) => p?.isActive = b),
-        type = $options.actionField<ZoneType>(
+        type = $options.field<ZoneType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        sourceable = $options.actionField<bool>(
-            'sourceable',
-            (a) => a?.sourceable,
-            (s) => s?.sourceable,
-            (p, b) => p?.sourceable = b),
+        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+            (s) => s?.sourceable, (p, b) => p?.sourceable = b),
         editAllowed = GetZoneApiDisplayRuleActions(() => $options.stateful<
                 GetZoneApiDisplayRule,
                 GetZoneApiDisplayRuleBuilder,
@@ -456,9 +450,6 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
     super.$middleware(middleware);
     editAllowed.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetZoneApiZoneDetailGetZoneApiZoneDetailActions> get $serializer => GetZoneApiZoneDetailGetZoneApiZoneDetailActions.serializer;
 
   FullType _$fullType;
   @override

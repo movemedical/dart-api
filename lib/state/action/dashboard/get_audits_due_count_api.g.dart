@@ -112,9 +112,6 @@ class _$GetAuditsDueCountApi extends GetAuditsDueCountApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetAuditsDueCountApi> get $serializer => CommandStateGetAuditsDueCountApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

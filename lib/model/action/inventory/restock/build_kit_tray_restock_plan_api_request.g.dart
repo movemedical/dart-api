@@ -173,7 +173,7 @@ class _$BuildKitTrayRestockPlanApiRequestActions
   _$BuildKitTrayRestockPlanApiRequestActions._(this.$options)
       : $replace = $options.action<BuildKitTrayRestockPlanApiRequest>(
             '\$replace', (a) => a?.$replace),
-        kitTrayStockIdOrStockSummaryId = $options.actionField<String>(
+        kitTrayStockIdOrStockSummaryId = $options.field<String>(
             'kitTrayStockIdOrStockSummaryId',
             (a) => a?.kitTrayStockIdOrStockSummaryId,
             (s) => s?.kitTrayStockIdOrStockSummaryId,
@@ -210,9 +210,6 @@ class _$BuildKitTrayRestockPlanApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildKitTrayRestockPlanApiRequestBuildKitTrayRestockPlanApiRequestActions> get $serializer => BuildKitTrayRestockPlanApiRequestBuildKitTrayRestockPlanApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

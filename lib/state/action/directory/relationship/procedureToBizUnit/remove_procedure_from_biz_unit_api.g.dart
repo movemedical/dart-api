@@ -108,9 +108,6 @@ class _$RemoveProcedureFromBizUnitApi extends RemoveProcedureFromBizUnitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveProcedureFromBizUnitApi> get $serializer => CommandStateRemoveProcedureFromBizUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

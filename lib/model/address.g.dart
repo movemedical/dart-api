@@ -388,34 +388,28 @@ class _$AddressActions extends AddressActions {
 
   _$AddressActions._(this.$options)
       : $replace = $options.action<Address>('\$replace', (a) => a?.$replace),
-        attn = $options.actionField<String>(
+        attn = $options.field<String>(
             'attn', (a) => a?.attn, (s) => s?.attn, (p, b) => p?.attn = b),
-        line1 = $options.actionField<String>(
+        line1 = $options.field<String>(
             'line1', (a) => a?.line1, (s) => s?.line1, (p, b) => p?.line1 = b),
-        line2 = $options.actionField<String>(
+        line2 = $options.field<String>(
             'line2', (a) => a?.line2, (s) => s?.line2, (p, b) => p?.line2 = b),
-        line3 = $options.actionField<String>(
+        line3 = $options.field<String>(
             'line3', (a) => a?.line3, (s) => s?.line3, (p, b) => p?.line3 = b),
-        city = $options.actionField<String>(
+        city = $options.field<String>(
             'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        county = $options.actionField<String>('county', (a) => a?.county,
+        county = $options.field<String>('county', (a) => a?.county,
             (s) => s?.county, (p, b) => p?.county = b),
-        state = $options.actionField<String>(
+        state = $options.field<String>(
             'state', (a) => a?.state, (s) => s?.state, (p, b) => p?.state = b),
-        postalCode = $options.actionField<String>(
-            'postalCode',
-            (a) => a?.postalCode,
-            (s) => s?.postalCode,
-            (p, b) => p?.postalCode = b),
-        country = $options.actionField<String>('country', (a) => a?.country,
+        postalCode = $options.field<String>('postalCode', (a) => a?.postalCode,
+            (s) => s?.postalCode, (p, b) => p?.postalCode = b),
+        country = $options.field<String>('country', (a) => a?.country,
             (s) => s?.country, (p, b) => p?.country = b),
-        latitude = $options.actionField<double>('latitude', (a) => a?.latitude,
+        latitude = $options.field<double>('latitude', (a) => a?.latitude,
             (s) => s?.latitude, (p, b) => p?.latitude = b),
-        longitude = $options.actionField<double>(
-            'longitude',
-            (a) => a?.longitude,
-            (s) => s?.longitude,
-            (p, b) => p?.longitude = b),
+        longitude = $options.field<double>('longitude', (a) => a?.longitude,
+            (s) => s?.longitude, (p, b) => p?.longitude = b),
         super._();
 
   factory _$AddressActions(AddressActionsOptions options) =>
@@ -465,9 +459,6 @@ class _$AddressActions extends AddressActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddressAddressActions> get $serializer => AddressAddressActions.serializer;
 
   FullType _$fullType;
   @override

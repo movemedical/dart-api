@@ -205,7 +205,7 @@ class _$ListLocationJournalsApiRequestActions
   _$ListLocationJournalsApiRequestActions._(this.$options)
       : $replace = $options.action<ListLocationJournalsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockSnapshotId = $options.actionField<String>(
+        stockSnapshotId = $options.field<String>(
             'stockSnapshotId',
             (a) => a?.stockSnapshotId,
             (s) => s?.stockSnapshotId,
@@ -259,9 +259,6 @@ class _$ListLocationJournalsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLocationJournalsApiRequestListLocationJournalsApiRequestActions> get $serializer => ListLocationJournalsApiRequestListLocationJournalsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

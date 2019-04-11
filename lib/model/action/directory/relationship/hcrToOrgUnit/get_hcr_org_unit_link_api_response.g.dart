@@ -236,9 +236,6 @@ class _$GetHcrOrgUnitLinkApiResponseActions
     detailedOrgUnitLink.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetHcrOrgUnitLinkApiResponseGetHcrOrgUnitLinkApiResponseActions> get $serializer => GetHcrOrgUnitLinkApiResponseGetHcrOrgUnitLinkApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

@@ -461,12 +461,12 @@ class _$ListAuditItemsApiAuditItemActions
   _$ListAuditItemsApiAuditItemActions._(this.$options)
       : $replace = $options.action<ListAuditItemsApiAuditItem>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<AuditItemStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<AuditItemStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
@@ -495,27 +495,27 @@ class _$ListAuditItemsApiAuditItemActions
             (s) => s?.expirationInfo,
             (b) => b?.expirationInfo,
             (parent, builder) => parent?.expirationInfo = builder)),
-        unknownItemNumber = $options.actionField<String>(
+        unknownItemNumber = $options.field<String>(
             'unknownItemNumber',
             (a) => a?.unknownItemNumber,
             (s) => s?.unknownItemNumber,
             (p, b) => p?.unknownItemNumber = b),
-        unknownLotSerialNumber = $options.actionField<String>(
+        unknownLotSerialNumber = $options.field<String>(
             'unknownLotSerialNumber',
             (a) => a?.unknownLotSerialNumber,
             (s) => s?.unknownLotSerialNumber,
             (p, b) => p?.unknownLotSerialNumber = b),
-        quantityExpected = $options.actionField<int>(
+        quantityExpected = $options.field<int>(
             'quantityExpected',
             (a) => a?.quantityExpected,
             (s) => s?.quantityExpected,
             (p, b) => p?.quantityExpected = b),
-        quantityCounted = $options.actionField<int>(
+        quantityCounted = $options.field<int>(
             'quantityCounted',
             (a) => a?.quantityCounted,
             (s) => s?.quantityCounted,
             (p, b) => p?.quantityCounted = b),
-        diff = $options.actionField<int>(
+        diff = $options.field<int>(
             'diff', (a) => a?.diff, (s) => s?.diff, (p, b) => p?.diff = b),
         super._();
 
@@ -579,9 +579,6 @@ class _$ListAuditItemsApiAuditItemActions
     shouldBeAtLocation.$middleware(middleware);
     expirationInfo.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditItemsApiAuditItemListAuditItemsApiAuditItemActions> get $serializer => ListAuditItemsApiAuditItemListAuditItemsApiAuditItemActions.serializer;
 
   FullType _$fullType;
   @override

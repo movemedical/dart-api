@@ -169,7 +169,7 @@ class _$CreateDeliveryScheduleProfileApiResponseActions
   _$CreateDeliveryScheduleProfileApiResponseActions._(this.$options)
       : $replace = $options.action<CreateDeliveryScheduleProfileApiResponse>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -203,9 +203,6 @@ class _$CreateDeliveryScheduleProfileApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateDeliveryScheduleProfileApiResponseCreateDeliveryScheduleProfileApiResponseActions> get $serializer => CreateDeliveryScheduleProfileApiResponseCreateDeliveryScheduleProfileApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

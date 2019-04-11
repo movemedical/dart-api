@@ -206,14 +206,13 @@ class _$CreateAuditEntriesApiRequestActions
   _$CreateAuditEntriesApiRequestActions._(this.$options)
       : $replace = $options.action<CreateAuditEntriesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        entries =
-            $options.actionField<BuiltList<CreateAuditEntriesApiAuditEntry>>(
-                'entries',
-                (a) => a?.entries,
-                (s) => s?.entries,
-                (p, b) => p?.entries = b),
+        entries = $options.field<BuiltList<CreateAuditEntriesApiAuditEntry>>(
+            'entries',
+            (a) => a?.entries,
+            (s) => s?.entries,
+            (p, b) => p?.entries = b),
         super._();
 
   factory _$CreateAuditEntriesApiRequestActions(
@@ -247,9 +246,6 @@ class _$CreateAuditEntriesApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateAuditEntriesApiRequestCreateAuditEntriesApiRequestActions> get $serializer => CreateAuditEntriesApiRequestCreateAuditEntriesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

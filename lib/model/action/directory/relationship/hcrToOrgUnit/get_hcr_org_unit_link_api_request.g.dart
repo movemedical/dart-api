@@ -168,7 +168,7 @@ class _$GetHcrOrgUnitLinkApiRequestActions
   _$GetHcrOrgUnitLinkApiRequestActions._(this.$options)
       : $replace = $options.action<GetHcrOrgUnitLinkApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrToOrgUnitId = $options.actionField<String>(
+        hcrToOrgUnitId = $options.field<String>(
             'hcrToOrgUnitId',
             (a) => a?.hcrToOrgUnitId,
             (s) => s?.hcrToOrgUnitId,
@@ -204,9 +204,6 @@ class _$GetHcrOrgUnitLinkApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetHcrOrgUnitLinkApiRequestGetHcrOrgUnitLinkApiRequestActions> get $serializer => GetHcrOrgUnitLinkApiRequestGetHcrOrgUnitLinkApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

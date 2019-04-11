@@ -220,9 +220,9 @@ class _$ListNotesApiRequestActions extends ListNotesApiRequestActions {
   _$ListNotesApiRequestActions._(this.$options)
       : $replace = $options.action<ListNotesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        attrId = $options.actionField<String>('attrId', (a) => a?.attrId,
+        attrId = $options.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        noteIds = $options.actionField<BuiltList<String>>('noteIds',
+        noteIds = $options.field<BuiltList<String>>('noteIds',
             (a) => a?.noteIds, (s) => s?.noteIds, (p, b) => p?.noteIds = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -273,9 +273,6 @@ class _$ListNotesApiRequestActions extends ListNotesApiRequestActions {
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListNotesApiRequestListNotesApiRequestActions> get $serializer => ListNotesApiRequestListNotesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

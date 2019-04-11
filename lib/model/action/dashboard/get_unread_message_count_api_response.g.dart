@@ -167,7 +167,7 @@ class _$GetUnreadMessageCountApiResponseActions
   _$GetUnreadMessageCountApiResponseActions._(this.$options)
       : $replace = $options.action<GetUnreadMessageCountApiResponse>(
             '\$replace', (a) => a?.$replace),
-        count = $options.actionField<int>(
+        count = $options.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -201,9 +201,6 @@ class _$GetUnreadMessageCountApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUnreadMessageCountApiResponseGetUnreadMessageCountApiResponseActions> get $serializer => GetUnreadMessageCountApiResponseGetUnreadMessageCountApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

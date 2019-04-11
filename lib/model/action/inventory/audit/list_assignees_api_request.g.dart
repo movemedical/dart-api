@@ -252,7 +252,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
   _$ListAssigneesApiRequestActions._(this.$options)
       : $replace = $options.action<ListAssigneesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -273,7 +273,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
                 (s) => s?.sortBy,
                 (b) => b?.sortBy,
                 (parent, builder) => parent?.sortBy = builder)),
-        sortDescending = $options.actionField<bool>(
+        sortDescending = $options.field<bool>(
             'sortDescending',
             (a) => a?.sortDescending,
             (s) => s?.sortDescending,
@@ -322,9 +322,6 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
     paging.$middleware(middleware);
     sortBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAssigneesApiRequestListAssigneesApiRequestActions> get $serializer => ListAssigneesApiRequestListAssigneesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

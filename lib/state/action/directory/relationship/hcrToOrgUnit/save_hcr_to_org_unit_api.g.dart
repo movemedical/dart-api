@@ -97,9 +97,6 @@ class _$SaveHcrToOrgUnitApi extends SaveHcrToOrgUnitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSaveHcrToOrgUnitApi> get $serializer => CommandStateSaveHcrToOrgUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

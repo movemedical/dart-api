@@ -168,7 +168,7 @@ class _$CreateConversationApiResponseActions
   _$CreateConversationApiResponseActions._(this.$options)
       : $replace = $options.action<CreateConversationApiResponse>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -204,9 +204,6 @@ class _$CreateConversationApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateConversationApiResponseCreateConversationApiResponseActions> get $serializer => CreateConversationApiResponseCreateConversationApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

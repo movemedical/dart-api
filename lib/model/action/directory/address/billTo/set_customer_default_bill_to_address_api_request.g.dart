@@ -195,12 +195,9 @@ class _$SetCustomerDefaultBillToAddressApiRequestActions
   _$SetCustomerDefaultBillToAddressApiRequestActions._(this.$options)
       : $replace = $options.action<SetCustomerDefaultBillToAddressApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        billToAddressId = $options.actionField<String>(
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        billToAddressId = $options.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
@@ -239,9 +236,6 @@ class _$SetCustomerDefaultBillToAddressApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SetCustomerDefaultBillToAddressApiRequestSetCustomerDefaultBillToAddressApiRequestActions> get $serializer => SetCustomerDefaultBillToAddressApiRequestSetCustomerDefaultBillToAddressApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

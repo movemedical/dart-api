@@ -156,7 +156,7 @@ class _$DeleteNoteApiRequestActions extends DeleteNoteApiRequestActions {
   _$DeleteNoteApiRequestActions._(this.$options)
       : $replace = $options.action<DeleteNoteApiRequest>(
             '\$replace', (a) => a?.$replace),
-        noteId = $options.actionField<String>('noteId', (a) => a?.noteId,
+        noteId = $options.field<String>('noteId', (a) => a?.noteId,
             (s) => s?.noteId, (p, b) => p?.noteId = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$DeleteNoteApiRequestActions extends DeleteNoteApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DeleteNoteApiRequestDeleteNoteApiRequestActions> get $serializer => DeleteNoteApiRequestDeleteNoteApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

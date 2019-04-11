@@ -243,18 +243,15 @@ class _$InProgressBuildVerifyActions extends InProgressBuildVerifyActions {
   _$InProgressBuildVerifyActions._(this.$options)
       : $replace = $options.action<InProgressBuildVerify>(
             '\$replace', (a) => a?.$replace),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userDisplay = $options.actionField<String>(
+        userDisplay = $options.field<String>(
             'userDisplay',
             (a) => a?.userDisplay,
             (s) => s?.userDisplay,
             (p, b) => p?.userDisplay = b),
-        timestamp = $options.actionField<DateTime>(
-            'timestamp',
-            (a) => a?.timestamp,
-            (s) => s?.timestamp,
-            (p, b) => p?.timestamp = b),
+        timestamp = $options.field<DateTime>('timestamp', (a) => a?.timestamp,
+            (s) => s?.timestamp, (p, b) => p?.timestamp = b),
         buildVerifyResponse = BuildVerifyApiResponseActions(() =>
             $options.stateful<
                     BuildVerifyApiResponse,
@@ -307,9 +304,6 @@ class _$InProgressBuildVerifyActions extends InProgressBuildVerifyActions {
     super.$middleware(middleware);
     buildVerifyResponse.$middleware(middleware);
   }
-
-// @override
-// Serializer<InProgressBuildVerifyInProgressBuildVerifyActions> get $serializer => InProgressBuildVerifyInProgressBuildVerifyActions.serializer;
 
   FullType _$fullType;
   @override

@@ -205,7 +205,7 @@ class _$ListChildLoanLinesApiRequestActions
   _$ListChildLoanLinesApiRequestActions._(this.$options)
       : $replace = $options.action<ListChildLoanLinesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        parentLoanLineId = $options.actionField<String>(
+        parentLoanLineId = $options.field<String>(
             'parentLoanLineId',
             (a) => a?.parentLoanLineId,
             (s) => s?.parentLoanLineId,
@@ -258,9 +258,6 @@ class _$ListChildLoanLinesApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListChildLoanLinesApiRequestListChildLoanLinesApiRequestActions> get $serializer => ListChildLoanLinesApiRequestListChildLoanLinesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

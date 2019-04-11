@@ -185,9 +185,9 @@ class _$RemoveDelegateApiRequestActions
   _$RemoveDelegateApiRequestActions._(this.$options)
       : $replace = $options.action<RemoveDelegateApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<DirectoryNonPersonType>(
+        type = $options.field<DirectoryNonPersonType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         super._();
 
@@ -222,9 +222,6 @@ class _$RemoveDelegateApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RemoveDelegateApiRequestRemoveDelegateApiRequestActions> get $serializer => RemoveDelegateApiRequestRemoveDelegateApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

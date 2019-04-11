@@ -111,9 +111,6 @@ class _$SendOrderToErpApi extends SendOrderToErpApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSendOrderToErpApi> get $serializer => CommandStateSendOrderToErpApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -194,11 +194,11 @@ class _$AttributableObjectActions extends AttributableObjectActions {
   _$AttributableObjectActions._(this.$options)
       : $replace = $options.action<AttributableObject>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<AttributableType>(
+        type = $options.field<AttributableType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -237,9 +237,6 @@ class _$AttributableObjectActions extends AttributableObjectActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AttributableObjectAttributableObjectActions> get $serializer => AttributableObjectAttributableObjectActions.serializer;
 
   FullType _$fullType;
   @override

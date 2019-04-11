@@ -188,12 +188,12 @@ class _$CaseEventUpdatePushMessageActions
   _$CaseEventUpdatePushMessageActions._(this.$options)
       : $replace = $options.action<CaseEventUpdatePushMessage>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        updateType = $options.actionField<CaseEventUpdateType>(
+        updateType = $options.field<CaseEventUpdateType>(
             'updateType',
             (a) => a?.updateType,
             (s) => s?.updateType,
@@ -231,9 +231,6 @@ class _$CaseEventUpdatePushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CaseEventUpdatePushMessageCaseEventUpdatePushMessageActions> get $serializer => CaseEventUpdatePushMessageCaseEventUpdatePushMessageActions.serializer;
 
   FullType _$fullType;
   @override

@@ -171,7 +171,7 @@ class _$RequestShipmentPackingListDocApiResponseActions
   _$RequestShipmentPackingListDocApiResponseActions._(this.$options)
       : $replace = $options.action<RequestShipmentPackingListDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -208,9 +208,6 @@ class _$RequestShipmentPackingListDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestShipmentPackingListDocApiResponseRequestShipmentPackingListDocApiResponseActions> get $serializer => RequestShipmentPackingListDocApiResponseRequestShipmentPackingListDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

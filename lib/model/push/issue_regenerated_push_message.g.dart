@@ -145,9 +145,6 @@ class _$IssueRegeneratedPushMessageActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<IssueRegeneratedPushMessageIssueRegeneratedPushMessageActions> get $serializer => IssueRegeneratedPushMessageIssueRegeneratedPushMessageActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

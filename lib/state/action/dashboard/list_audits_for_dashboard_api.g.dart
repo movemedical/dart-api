@@ -114,9 +114,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListAuditsForDashboardApi> get $serializer => CommandStateListAuditsForDashboardApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

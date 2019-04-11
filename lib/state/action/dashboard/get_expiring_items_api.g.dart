@@ -112,9 +112,6 @@ class _$GetExpiringItemsApi extends GetExpiringItemsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetExpiringItemsApi> get $serializer => CommandStateGetExpiringItemsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

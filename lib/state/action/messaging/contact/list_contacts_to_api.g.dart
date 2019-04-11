@@ -111,9 +111,6 @@ class _$ListContactsToApi extends ListContactsToApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListContactsToApi> get $serializer => CommandStateListContactsToApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

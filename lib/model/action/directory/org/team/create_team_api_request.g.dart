@@ -339,16 +339,13 @@ class _$CreateTeamApiRequestActions extends CreateTeamApiRequestActions {
   _$CreateTeamApiRequestActions._(this.$options)
       : $replace = $options.action<CreateTeamApiRequest>(
             '\$replace', (a) => a?.$replace),
-        opsTeam = $options.actionField<bool>('opsTeam', (a) => a?.opsTeam,
+        opsTeam = $options.field<bool>('opsTeam', (a) => a?.opsTeam,
             (s) => s?.opsTeam, (p, b) => p?.opsTeam = b),
-        salesTeam = $options.actionField<bool>('salesTeam', (a) => a?.salesTeam,
+        salesTeam = $options.field<bool>('salesTeam', (a) => a?.salesTeam,
             (s) => s?.salesTeam, (p, b) => p?.salesTeam = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        name = $options.actionField<String>(
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -357,15 +354,12 @@ class _$CreateTeamApiRequestActions extends CreateTeamApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
         super._();
 
   factory _$CreateTeamApiRequestActions(
@@ -416,9 +410,6 @@ class _$CreateTeamApiRequestActions extends CreateTeamApiRequestActions {
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateTeamApiRequestCreateTeamApiRequestActions> get $serializer => CreateTeamApiRequestCreateTeamApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

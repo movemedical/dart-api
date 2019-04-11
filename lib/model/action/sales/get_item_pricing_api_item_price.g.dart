@@ -306,27 +306,23 @@ class _$GetItemPricingApiItemPriceActions
   _$GetItemPricingApiItemPriceActions._(this.$options)
       : $replace = $options.action<GetItemPricingApiItemPrice>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        contractPrice = $options.actionField<double>(
+        contractPrice = $options.field<double>(
             'contractPrice',
             (a) => a?.contractPrice,
             (s) => s?.contractPrice,
             (p, b) => p?.contractPrice = b),
-        listPrice = $options.actionField<double>(
-            'listPrice',
-            (a) => a?.listPrice,
-            (s) => s?.listPrice,
-            (p, b) => p?.listPrice = b),
-        currency = $options.actionField<CurrencyType>('currency',
-            (a) => a?.currency, (s) => s?.currency, (p, b) => p?.currency = b),
-        pricingInfoList =
-            $options.actionField<BuiltList<GetItemPricingApiPriceInfo>>(
-                'pricingInfoList',
-                (a) => a?.pricingInfoList,
-                (s) => s?.pricingInfoList,
-                (p, b) => p?.pricingInfoList = b),
-        caseUsageDisposition = $options.actionField<CaseUsageDisposition>(
+        listPrice = $options.field<double>('listPrice', (a) => a?.listPrice,
+            (s) => s?.listPrice, (p, b) => p?.listPrice = b),
+        currency = $options.field<CurrencyType>('currency', (a) => a?.currency,
+            (s) => s?.currency, (p, b) => p?.currency = b),
+        pricingInfoList = $options.field<BuiltList<GetItemPricingApiPriceInfo>>(
+            'pricingInfoList',
+            (a) => a?.pricingInfoList,
+            (s) => s?.pricingInfoList,
+            (p, b) => p?.pricingInfoList = b),
+        caseUsageDisposition = $options.field<CaseUsageDisposition>(
             'caseUsageDisposition',
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
@@ -372,9 +368,6 @@ class _$GetItemPricingApiItemPriceActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemPricingApiItemPriceGetItemPricingApiItemPriceActions> get $serializer => GetItemPricingApiItemPriceGetItemPricingApiItemPriceActions.serializer;
 
   FullType _$fullType;
   @override

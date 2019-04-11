@@ -276,12 +276,12 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
   _$ListSalesOrgUnitItemCategoryLinksApiRequestActions._(this.$options)
       : $replace = $options.action<ListSalesOrgUnitItemCategoryLinksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        salesOrgUnitId = $options.actionField<String>(
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        includeInherited = $options.actionField<bool>(
+        includeInherited = $options.field<bool>(
             'includeInherited',
             (a) => a?.includeInherited,
             (s) => s?.includeInherited,
@@ -353,9 +353,6 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSalesOrgUnitItemCategoryLinksApiRequestListSalesOrgUnitItemCategoryLinksApiRequestActions> get $serializer => ListSalesOrgUnitItemCategoryLinksApiRequestListSalesOrgUnitItemCategoryLinksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

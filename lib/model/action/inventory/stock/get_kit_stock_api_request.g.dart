@@ -185,12 +185,12 @@ class _$GetKitStockApiRequestActions extends GetKitStockApiRequestActions {
   _$GetKitStockApiRequestActions._(this.$options)
       : $replace = $options.action<GetKitStockApiRequest>(
             '\$replace', (a) => a?.$replace),
-        kitStockIdOrStockSummaryId = $options.actionField<String>(
+        kitStockIdOrStockSummaryId = $options.field<String>(
             'kitStockIdOrStockSummaryId',
             (a) => a?.kitStockIdOrStockSummaryId,
             (s) => s?.kitStockIdOrStockSummaryId,
             (p, b) => p?.kitStockIdOrStockSummaryId = b),
-        skipPresence = $options.actionField<bool>(
+        skipPresence = $options.field<bool>(
             'skipPresence',
             (a) => a?.skipPresence,
             (s) => s?.skipPresence,
@@ -227,9 +227,6 @@ class _$GetKitStockApiRequestActions extends GetKitStockApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetKitStockApiRequestGetKitStockApiRequestActions> get $serializer => GetKitStockApiRequestGetKitStockApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

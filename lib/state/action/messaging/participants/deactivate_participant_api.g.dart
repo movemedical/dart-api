@@ -105,9 +105,6 @@ class _$DeactivateParticipantApi extends DeactivateParticipantApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeactivateParticipantApi> get $serializer => CommandStateDeactivateParticipantApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

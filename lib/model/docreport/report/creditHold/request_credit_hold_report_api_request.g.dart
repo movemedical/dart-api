@@ -338,24 +338,24 @@ class _$RequestCreditHoldReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        userIdsToEmail = $options.actionField<BuiltList<String>>(
+        userIdsToEmail = $options.field<BuiltList<String>>(
             'userIdsToEmail',
             (a) => a?.userIdsToEmail,
             (s) => s?.userIdsToEmail,
@@ -408,9 +408,6 @@ class _$RequestCreditHoldReportApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestCreditHoldReportApiRequestRequestCreditHoldReportApiRequestActions> get $serializer => RequestCreditHoldReportApiRequestRequestCreditHoldReportApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

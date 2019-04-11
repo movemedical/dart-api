@@ -292,29 +292,29 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
   _$ListInvoicesForSalesOrderApiInvoiceActions._(this.$options)
       : $replace = $options.action<ListInvoicesForSalesOrderApiInvoice>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        invoiceNumber = $options.actionField<int>(
+        invoiceNumber = $options.field<int>(
             'invoiceNumber',
             (a) => a?.invoiceNumber,
             (s) => s?.invoiceNumber,
             (p, b) => p?.invoiceNumber = b),
-        invoiceDate = $options.actionField<DateTime>(
+        invoiceDate = $options.field<DateTime>(
             'invoiceDate',
             (a) => a?.invoiceDate,
             (s) => s?.invoiceDate,
             (p, b) => p?.invoiceDate = b),
-        invoiceCreationDate = $options.actionField<DateTime>(
+        invoiceCreationDate = $options.field<DateTime>(
             'invoiceCreationDate',
             (a) => a?.invoiceCreationDate,
             (s) => s?.invoiceCreationDate,
             (p, b) => p?.invoiceCreationDate = b),
-        erpOrderNumber = $options.actionField<String>(
+        erpOrderNumber = $options.field<String>(
             'erpOrderNumber',
             (a) => a?.erpOrderNumber,
             (s) => s?.erpOrderNumber,
             (p, b) => p?.erpOrderNumber = b),
-        erpInvoiceNumber = $options.actionField<String>(
+        erpInvoiceNumber = $options.field<String>(
             'erpInvoiceNumber',
             (a) => a?.erpInvoiceNumber,
             (s) => s?.erpInvoiceNumber,
@@ -361,9 +361,6 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListInvoicesForSalesOrderApiInvoiceListInvoicesForSalesOrderApiInvoiceActions> get $serializer => ListInvoicesForSalesOrderApiInvoiceListInvoicesForSalesOrderApiInvoiceActions.serializer;
 
   FullType _$fullType;
   @override

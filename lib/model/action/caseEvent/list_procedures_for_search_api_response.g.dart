@@ -209,10 +209,9 @@ class _$ListProceduresForSearchApiResponseActions
   _$ListProceduresForSearchApiResponseActions._(this.$options)
       : $replace = $options.action<ListProceduresForSearchApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options
-            .actionField<BuiltList<ListProceduresForSearchApiProcedure>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options.field<BuiltList<ListProceduresForSearchApiProcedure>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -248,9 +247,6 @@ class _$ListProceduresForSearchApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProceduresForSearchApiResponseListProceduresForSearchApiResponseActions> get $serializer => ListProceduresForSearchApiResponseListProceduresForSearchApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

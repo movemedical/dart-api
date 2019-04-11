@@ -243,19 +243,19 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
   _$UpdateImportLogErrorApiImportLogErrorActions._(this.$options)
       : $replace = $options.action<UpdateImportLogErrorApiImportLogError>(
             '\$replace', (a) => a?.$replace),
-        importLogErrorId = $options.actionField<String>(
+        importLogErrorId = $options.field<String>(
             'importLogErrorId',
             (a) => a?.importLogErrorId,
             (s) => s?.importLogErrorId,
             (p, b) => p?.importLogErrorId = b),
-        updatedData = $options.actionField<String>(
+        updatedData = $options.field<String>(
             'updatedData',
             (a) => a?.updatedData,
             (s) => s?.updatedData,
             (p, b) => p?.updatedData = b),
-        ignore = $options.actionField<bool>('ignore', (a) => a?.ignore,
+        ignore = $options.field<bool>('ignore', (a) => a?.ignore,
             (s) => s?.ignore, (p, b) => p?.ignore = b),
-        resolutionMessage = $options.actionField<String>(
+        resolutionMessage = $options.field<String>(
             'resolutionMessage',
             (a) => a?.resolutionMessage,
             (s) => s?.resolutionMessage,
@@ -298,9 +298,6 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateImportLogErrorApiImportLogErrorUpdateImportLogErrorApiImportLogErrorActions> get $serializer => UpdateImportLogErrorApiImportLogErrorUpdateImportLogErrorApiImportLogErrorActions.serializer;
 
   FullType _$fullType;
   @override

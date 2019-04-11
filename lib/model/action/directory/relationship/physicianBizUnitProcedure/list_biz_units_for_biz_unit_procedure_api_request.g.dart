@@ -245,7 +245,7 @@ class _$ListBizUnitsForBizUnitProcedureApiRequestActions
   _$ListBizUnitsForBizUnitProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<ListBizUnitsForBizUnitProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -310,9 +310,6 @@ class _$ListBizUnitsForBizUnitProcedureApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListBizUnitsForBizUnitProcedureApiRequestListBizUnitsForBizUnitProcedureApiRequestActions> get $serializer => ListBizUnitsForBizUnitProcedureApiRequestListBizUnitsForBizUnitProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

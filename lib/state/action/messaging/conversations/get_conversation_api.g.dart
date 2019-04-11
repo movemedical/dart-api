@@ -112,9 +112,6 @@ class _$GetConversationApi extends GetConversationApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetConversationApi> get $serializer => CommandStateGetConversationApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

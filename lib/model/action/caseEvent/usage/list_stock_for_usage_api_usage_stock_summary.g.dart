@@ -401,9 +401,9 @@ class _$ListStockForUsageApiUsageStockSummaryActions
   _$ListStockForUsageApiUsageStockSummaryActions._(this.$options)
       : $replace = $options.action<ListStockForUsageApiUsageStockSummary>(
             '\$replace', (a) => a?.$replace),
-        key = $options.actionField<String>(
+        key = $options.field<String>(
             'key', (a) => a?.key, (s) => s?.key, (p, b) => p?.key = b),
-        stockIds = $options.actionField<BuiltList<String>>('stockIds',
+        stockIds = $options.field<BuiltList<String>>('stockIds',
             (a) => a?.stockIds, (s) => s?.stockIds, (p, b) => p?.stockIds = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
@@ -433,12 +433,12 @@ class _$ListStockForUsageApiUsageStockSummaryActions
             (s) => s?.inventoryType,
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
-        attributeLabel = $options.actionField<String>(
+        attributeLabel = $options.field<String>(
             'attributeLabel',
             (a) => a?.attributeLabel,
             (s) => s?.attributeLabel,
             (p, b) => p?.attributeLabel = b),
-        attributeValue = $options.actionField<String>(
+        attributeValue = $options.field<String>(
             'attributeValue',
             (a) => a?.attributeValue,
             (s) => s?.attributeValue,
@@ -510,9 +510,6 @@ class _$ListStockForUsageApiUsageStockSummaryActions
     inventoryType.$middleware(middleware);
     responsibleParty.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForUsageApiUsageStockSummaryListStockForUsageApiUsageStockSummaryActions> get $serializer => ListStockForUsageApiUsageStockSummaryListStockForUsageApiUsageStockSummaryActions.serializer;
 
   FullType _$fullType;
   @override

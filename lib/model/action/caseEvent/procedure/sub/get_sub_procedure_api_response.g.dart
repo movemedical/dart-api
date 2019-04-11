@@ -229,9 +229,6 @@ class _$GetSubProcedureApiResponseActions
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetSubProcedureApiResponseGetSubProcedureApiResponseActions> get $serializer => GetSubProcedureApiResponseGetSubProcedureApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSubProcedureApiResponse);

@@ -116,9 +116,6 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetItemLotSerialHistoryApi> get $serializer => CommandStateGetItemLotSerialHistoryApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

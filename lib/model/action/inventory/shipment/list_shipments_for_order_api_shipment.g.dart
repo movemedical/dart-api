@@ -308,12 +308,12 @@ class _$ListShipmentsForOrderApiShipmentActions
   _$ListShipmentsForOrderApiShipmentActions._(this.$options)
       : $replace = $options.action<ListShipmentsForOrderApiShipment>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<ShipmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         order = OrderHeaderLiteActions(() => $options.stateful<OrderHeaderLite,
                 OrderHeaderLiteBuilder, OrderHeaderLiteActions>(
             'order',
@@ -385,9 +385,6 @@ class _$ListShipmentsForOrderApiShipmentActions
     fromLocation.$middleware(middleware);
     toLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListShipmentsForOrderApiShipmentListShipmentsForOrderApiShipmentActions> get $serializer => ListShipmentsForOrderApiShipmentListShipmentsForOrderApiShipmentActions.serializer;
 
   FullType _$fullType;
   @override

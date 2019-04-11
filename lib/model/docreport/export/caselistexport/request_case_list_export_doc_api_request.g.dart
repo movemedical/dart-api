@@ -248,8 +248,8 @@ class _$RequestCaseListExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
         listCaseEventsRequest = ListCaseEventsApiRequestActions(() =>
             $options.stateful<
                     ListCaseEventsApiRequest,
@@ -303,9 +303,6 @@ class _$RequestCaseListExportDocApiRequestActions
     docReport.$middleware(middleware);
     listCaseEventsRequest.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestCaseListExportDocApiRequestRequestCaseListExportDocApiRequestActions> get $serializer => RequestCaseListExportDocApiRequestRequestCaseListExportDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

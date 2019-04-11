@@ -224,9 +224,6 @@ class _$SaveTeamToOrgUnitApiRequestActions
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<SaveTeamToOrgUnitApiRequestSaveTeamToOrgUnitApiRequestActions> get $serializer => SaveTeamToOrgUnitApiRequestSaveTeamToOrgUnitApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

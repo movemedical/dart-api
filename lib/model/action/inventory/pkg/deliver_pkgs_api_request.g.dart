@@ -178,7 +178,7 @@ class _$DeliverPkgsApiRequestActions extends DeliverPkgsApiRequestActions {
   _$DeliverPkgsApiRequestActions._(this.$options)
       : $replace = $options.action<DeliverPkgsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        deliverRequests = $options.actionField<BuiltList<DeliverPkgApiRequest>>(
+        deliverRequests = $options.field<BuiltList<DeliverPkgApiRequest>>(
             'deliverRequests',
             (a) => a?.deliverRequests,
             (s) => s?.deliverRequests,
@@ -213,9 +213,6 @@ class _$DeliverPkgsApiRequestActions extends DeliverPkgsApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DeliverPkgsApiRequestDeliverPkgsApiRequestActions> get $serializer => DeliverPkgsApiRequestDeliverPkgsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

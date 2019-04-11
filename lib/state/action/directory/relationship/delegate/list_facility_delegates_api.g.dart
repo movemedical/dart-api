@@ -113,9 +113,6 @@ class _$ListFacilityDelegatesApi extends ListFacilityDelegatesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListFacilityDelegatesApi> get $serializer => CommandStateListFacilityDelegatesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

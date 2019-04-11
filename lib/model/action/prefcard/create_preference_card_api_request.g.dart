@@ -288,29 +288,29 @@ class _$CreatePreferenceCardApiRequestActions
   _$CreatePreferenceCardApiRequestActions._(this.$options)
       : $replace = $options.action<CreatePreferenceCardApiRequest>(
             '\$replace', (a) => a?.$replace),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        techniqueId = $options.actionField<String>(
+        techniqueId = $options.field<String>(
             'techniqueId',
             (a) => a?.techniqueId,
             (s) => s?.techniqueId,
             (p, b) => p?.techniqueId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.actionField<String>(
+        subProcedureId = $options.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
@@ -357,9 +357,6 @@ class _$CreatePreferenceCardApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePreferenceCardApiRequestCreatePreferenceCardApiRequestActions> get $serializer => CreatePreferenceCardApiRequestCreatePreferenceCardApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

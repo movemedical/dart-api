@@ -157,7 +157,7 @@ class _$SubmitAuditApiRequestActions extends SubmitAuditApiRequestActions {
   _$SubmitAuditApiRequestActions._(this.$options)
       : $replace = $options.action<SubmitAuditApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -189,9 +189,6 @@ class _$SubmitAuditApiRequestActions extends SubmitAuditApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SubmitAuditApiRequestSubmitAuditApiRequestActions> get $serializer => SubmitAuditApiRequestSubmitAuditApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

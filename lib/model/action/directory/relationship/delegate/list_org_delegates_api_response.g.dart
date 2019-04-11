@@ -204,9 +204,9 @@ class _$ListOrgDelegatesApiResponseActions
   _$ListOrgDelegatesApiResponseActions._(this.$options)
       : $replace = $options.action<ListOrgDelegatesApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<Delegate>>(
+        data = $options.field<BuiltList<Delegate>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -241,9 +241,6 @@ class _$ListOrgDelegatesApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgDelegatesApiResponseListOrgDelegatesApiResponseActions> get $serializer => ListOrgDelegatesApiResponseListOrgDelegatesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

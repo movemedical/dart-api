@@ -306,14 +306,14 @@ class _$ListCaseRequirementsApiItemRequestActions
   _$ListCaseRequirementsApiItemRequestActions._(this.$options)
       : $replace = $options.action<ListCaseRequirementsApiItemRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        quantityRequested = $options.actionField<int>(
+        quantityRequested = $options.field<int>(
             'quantityRequested',
             (a) => a?.quantityRequested,
             (s) => s?.quantityRequested,
             (p, b) => p?.quantityRequested = b),
-        quantityOnHand = $options.actionField<int>(
+        quantityOnHand = $options.field<int>(
             'quantityOnHand',
             (a) => a?.quantityOnHand,
             (s) => s?.quantityOnHand,
@@ -325,9 +325,9 @@ class _$ListCaseRequirementsApiItemRequestActions
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        source = $options.actionField<CaseRequirementSource>('source',
+        source = $options.field<CaseRequirementSource>('source',
             (a) => a?.source, (s) => s?.source, (p, b) => p?.source = b),
-        sourceId = $options.actionField<String>('sourceId', (a) => a?.sourceId,
+        sourceId = $options.field<String>('sourceId', (a) => a?.sourceId,
             (s) => s?.sourceId, (p, b) => p?.sourceId = b),
         super._();
 
@@ -377,9 +377,6 @@ class _$ListCaseRequirementsApiItemRequestActions
     super.$middleware(middleware);
     stockItem.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseRequirementsApiItemRequestListCaseRequirementsApiItemRequestActions> get $serializer => ListCaseRequirementsApiItemRequestListCaseRequirementsApiItemRequestActions.serializer;
 
   FullType _$fullType;
   @override

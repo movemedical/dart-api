@@ -238,19 +238,19 @@ class _$CloneCaseEventApiRequestActions
   _$CloneCaseEventApiRequestActions._(this.$options)
       : $replace = $options.action<CloneCaseEventApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        surgeryDate = $options.actionField<DateTime>(
+        surgeryDate = $options.field<DateTime>(
             'surgeryDate',
             (a) => a?.surgeryDate,
             (s) => s?.surgeryDate,
             (p, b) => p?.surgeryDate = b),
-        eventTimeUnknown = $options.actionField<bool>(
+        eventTimeUnknown = $options.field<bool>(
             'eventTimeUnknown',
             (a) => a?.eventTimeUnknown,
             (s) => s?.eventTimeUnknown,
             (p, b) => p?.eventTimeUnknown = b),
-        cloneRequirements = $options.actionField<bool>(
+        cloneRequirements = $options.field<bool>(
             'cloneRequirements',
             (a) => a?.cloneRequirements,
             (s) => s?.cloneRequirements,
@@ -292,9 +292,6 @@ class _$CloneCaseEventApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CloneCaseEventApiRequestCloneCaseEventApiRequestActions> get $serializer => CloneCaseEventApiRequestCloneCaseEventApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -259,12 +259,12 @@ class _$ListAuditsApiAuditLiteActions extends ListAuditsApiAuditLiteActions {
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        daysUntilDue = $options.actionField<int>(
+        daysUntilDue = $options.field<int>(
             'daysUntilDue',
             (a) => a?.daysUntilDue,
             (s) => s?.daysUntilDue,
             (p, b) => p?.daysUntilDue = b),
-        displayDaysUntilDue = $options.actionField<bool>(
+        displayDaysUntilDue = $options.field<bool>(
             'displayDaysUntilDue',
             (a) => a?.displayDaysUntilDue,
             (s) => s?.displayDaysUntilDue,
@@ -313,9 +313,6 @@ class _$ListAuditsApiAuditLiteActions extends ListAuditsApiAuditLiteActions {
     audit.$middleware(middleware);
     location.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditsApiAuditLiteListAuditsApiAuditLiteActions> get $serializer => ListAuditsApiAuditLiteListAuditsApiAuditLiteActions.serializer;
 
   FullType _$fullType;
   @override

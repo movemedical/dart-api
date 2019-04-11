@@ -214,21 +214,15 @@ class _$HistoryEventDisplayRecordDetailActions
   _$HistoryEventDisplayRecordDetailActions._(this.$options)
       : $replace = $options.action<HistoryEventDisplayRecordDetail>(
             '\$replace', (a) => a?.$replace),
-        fieldName = $options.actionField<String>(
-            'fieldName',
-            (a) => a?.fieldName,
-            (s) => s?.fieldName,
-            (p, b) => p?.fieldName = b),
-        valueBefore = $options.actionField<String>(
+        fieldName = $options.field<String>('fieldName', (a) => a?.fieldName,
+            (s) => s?.fieldName, (p, b) => p?.fieldName = b),
+        valueBefore = $options.field<String>(
             'valueBefore',
             (a) => a?.valueBefore,
             (s) => s?.valueBefore,
             (p, b) => p?.valueBefore = b),
-        valueAfter = $options.actionField<String>(
-            'valueAfter',
-            (a) => a?.valueAfter,
-            (s) => s?.valueAfter,
-            (p, b) => p?.valueAfter = b),
+        valueAfter = $options.field<String>('valueAfter', (a) => a?.valueAfter,
+            (s) => s?.valueAfter, (p, b) => p?.valueAfter = b),
         super._();
 
   factory _$HistoryEventDisplayRecordDetailActions(
@@ -265,9 +259,6 @@ class _$HistoryEventDisplayRecordDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<HistoryEventDisplayRecordDetailHistoryEventDisplayRecordDetailActions> get $serializer => HistoryEventDisplayRecordDetailHistoryEventDisplayRecordDetailActions.serializer;
 
   FullType _$fullType;
   @override

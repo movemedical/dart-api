@@ -155,7 +155,7 @@ class _$CreateOrgApiResponseActions extends CreateOrgApiResponseActions {
   _$CreateOrgApiResponseActions._(this.$options)
       : $replace = $options.action<CreateOrgApiResponse>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -187,9 +187,6 @@ class _$CreateOrgApiResponseActions extends CreateOrgApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateOrgApiResponseCreateOrgApiResponseActions> get $serializer => CreateOrgApiResponseCreateOrgApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

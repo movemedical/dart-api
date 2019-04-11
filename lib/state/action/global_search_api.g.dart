@@ -108,9 +108,6 @@ class _$GlobalSearchApi extends GlobalSearchApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGlobalSearchApi> get $serializer => CommandStateGlobalSearchApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

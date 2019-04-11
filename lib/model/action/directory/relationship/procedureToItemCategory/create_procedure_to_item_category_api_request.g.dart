@@ -218,17 +218,17 @@ class _$CreateProcedureToItemCategoryApiRequestActions
   _$CreateProcedureToItemCategoryApiRequestActions._(this.$options)
       : $replace = $options.action<CreateProcedureToItemCategoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemCategoryId = $options.actionField<String>(
+        itemCategoryId = $options.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        subProcedureId = $options.actionField<String>(
+        subProcedureId = $options.field<String>(
             'subProcedureId',
             (a) => a?.subProcedureId,
             (s) => s?.subProcedureId,
@@ -269,9 +269,6 @@ class _$CreateProcedureToItemCategoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateProcedureToItemCategoryApiRequestCreateProcedureToItemCategoryApiRequestActions> get $serializer => CreateProcedureToItemCategoryApiRequestCreateProcedureToItemCategoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

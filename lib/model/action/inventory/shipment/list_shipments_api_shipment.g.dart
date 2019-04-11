@@ -427,21 +427,18 @@ class _$ListShipmentsApiShipmentActions
   _$ListShipmentsApiShipmentActions._(this.$options)
       : $replace = $options.action<ListShipmentsApiShipment>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        created = $options.actionField<DateTime>('created', (a) => a?.created,
+        created = $options.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<ShipmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        orderNumber = $options.actionField<int>(
-            'orderNumber',
-            (a) => a?.orderNumber,
-            (s) => s?.orderNumber,
-            (p, b) => p?.orderNumber = b),
+        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
+        orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
+            (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
         fromLocation = LocationActions(() =>
             $options.stateful<Location, LocationBuilder, LocationActions>(
                 'fromLocation',
@@ -456,14 +453,14 @@ class _$ListShipmentsApiShipmentActions
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        carrier = $options.actionField<MoveShippingCarrier>('carrier',
+        carrier = $options.field<MoveShippingCarrier>('carrier',
             (a) => a?.carrier, (s) => s?.carrier, (p, b) => p?.carrier = b),
-        shippingServiceName = $options.actionField<String>(
+        shippingServiceName = $options.field<String>(
             'shippingServiceName',
             (a) => a?.shippingServiceName,
             (s) => s?.shippingServiceName,
             (p, b) => p?.shippingServiceName = b),
-        deliverWindowEnd = $options.actionField<DateTime>(
+        deliverWindowEnd = $options.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
@@ -526,9 +523,6 @@ class _$ListShipmentsApiShipmentActions
     fromLocation.$middleware(middleware);
     toLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListShipmentsApiShipmentListShipmentsApiShipmentActions> get $serializer => ListShipmentsApiShipmentListShipmentsApiShipmentActions.serializer;
 
   FullType _$fullType;
   @override

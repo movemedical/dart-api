@@ -212,12 +212,12 @@ class _$AdjustStockQuantityApiRequestActions
       : $replace = $options.action<AdjustStockQuantityApiRequest>(
             '\$replace', (a) => a?.$replace),
         adjustments =
-            $options.actionField<BuiltList<AdjustStockQuantityApiAdjustment>>(
+            $options.field<BuiltList<AdjustStockQuantityApiAdjustment>>(
                 'adjustments',
                 (a) => a?.adjustments,
                 (s) => s?.adjustments,
                 (p, b) => p?.adjustments = b),
-        adjustmentNote = $options.actionField<String>(
+        adjustmentNote = $options.field<String>(
             'adjustmentNote',
             (a) => a?.adjustmentNote,
             (s) => s?.adjustmentNote,
@@ -255,9 +255,6 @@ class _$AdjustStockQuantityApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AdjustStockQuantityApiRequestAdjustStockQuantityApiRequestActions> get $serializer => AdjustStockQuantityApiRequestAdjustStockQuantityApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

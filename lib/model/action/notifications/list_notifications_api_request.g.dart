@@ -203,7 +203,7 @@ class _$ListNotificationsApiRequestActions
   _$ListNotificationsApiRequestActions._(this.$options)
       : $replace = $options.action<ListNotificationsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        read = $options.actionField<bool>(
+        read = $options.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -253,9 +253,6 @@ class _$ListNotificationsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListNotificationsApiRequestListNotificationsApiRequestActions> get $serializer => ListNotificationsApiRequestListNotificationsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

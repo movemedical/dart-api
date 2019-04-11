@@ -232,13 +232,13 @@ class _$UpdateConversationApiRequestActions
   _$UpdateConversationApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateConversationApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        stop = $options.actionField<bool>(
+        stop = $options.field<bool>(
             'stop', (a) => a?.stop, (s) => s?.stop, (p, b) => p?.stop = b),
-        purpose = $options.actionField<String>('purpose', (a) => a?.purpose,
+        purpose = $options.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        urgency = $options.actionField<DateTime>('urgency', (a) => a?.urgency,
+        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
         super._();
 
@@ -277,9 +277,6 @@ class _$UpdateConversationApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateConversationApiRequestUpdateConversationApiRequestActions> get $serializer => UpdateConversationApiRequestUpdateConversationApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

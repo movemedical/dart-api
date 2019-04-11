@@ -169,7 +169,7 @@ class _$RequestAuditItemExportDocApiResponseActions
   _$RequestAuditItemExportDocApiResponseActions._(this.$options)
       : $replace = $options.action<RequestAuditItemExportDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -206,9 +206,6 @@ class _$RequestAuditItemExportDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestAuditItemExportDocApiResponseRequestAuditItemExportDocApiResponseActions> get $serializer => RequestAuditItemExportDocApiResponseRequestAuditItemExportDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

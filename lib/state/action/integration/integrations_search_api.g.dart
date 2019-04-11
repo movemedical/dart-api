@@ -112,9 +112,6 @@ class _$IntegrationsSearchApi extends IntegrationsSearchApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateIntegrationsSearchApi> get $serializer => CommandStateIntegrationsSearchApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

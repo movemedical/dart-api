@@ -804,7 +804,7 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
   _$GetHcrApiHcrDetailActions._(this.$options)
       : $replace = $options.action<GetHcrApiHcrDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         customer = ListCustomersApiCustomerDetailsActions(() =>
             $options.stateful<
@@ -816,15 +816,15 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
                 (s) => s?.customer,
                 (b) => b?.customer,
                 (parent, builder) => parent?.customer = builder)),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        hcrType = $options.actionField<HcrType>('hcrType', (a) => a?.hcrType,
+        hcrType = $options.field<HcrType>('hcrType', (a) => a?.hcrType,
             (s) => s?.hcrType, (p, b) => p?.hcrType = b),
-        hcrReference = $options.actionField<String>(
+        hcrReference = $options.field<String>(
             'hcrReference',
             (a) => a?.hcrReference,
             (s) => s?.hcrReference,
@@ -864,65 +864,56 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        workingHomeId = $options.actionField<String>(
+        workingHomeId = $options.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingHomeName = $options.actionField<String>(
+        workingHomeName = $options.field<String>(
             'workingHomeName',
             (a) => a?.workingHomeName,
             (s) => s?.workingHomeName,
             (p, b) => p?.workingHomeName = b),
-        workingAtId = $options.actionField<String>(
+        workingAtId = $options.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
             (p, b) => p?.workingAtId = b),
-        workingAtName = $options.actionField<String>(
+        workingAtName = $options.field<String>(
             'workingAtName',
             (a) => a?.workingAtName,
             (s) => s?.workingAtName,
             (p, b) => p?.workingAtName = b),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        userPerspective = $options.actionField<UserPerspective>(
+        userPerspective = $options.field<UserPerspective>(
             'userPerspective',
             (a) => a?.userPerspective,
             (s) => s?.userPerspective,
             (p, b) => p?.userPerspective = b),
-        userStatus = $options.actionField<UserStatus>(
+        userStatus = $options.field<UserStatus>(
             'userStatus',
             (a) => a?.userStatus,
             (s) => s?.userStatus,
             (p, b) => p?.userStatus = b),
-        userLocked = $options.actionField<bool>(
-            'userLocked',
-            (a) => a?.userLocked,
-            (s) => s?.userLocked,
-            (p, b) => p?.userLocked = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        userLocked = $options.field<bool>('userLocked', (a) => a?.userLocked,
+            (s) => s?.userLocked, (p, b) => p?.userLocked = b),
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        directoryAdmin = $options.actionField<bool>(
+        directoryAdmin = $options.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
             (p, b) => p?.directoryAdmin = b),
-        phiAllowed = $options.actionField<bool>(
-            'phiAllowed',
-            (a) => a?.phiAllowed,
-            (s) => s?.phiAllowed,
-            (p, b) => p?.phiAllowed = b),
-        lastVisibilityUpdateDate = $options.actionField<DateTime>(
+        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+            (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
+        lastVisibilityUpdateDate = $options.field<DateTime>(
             'lastVisibilityUpdateDate',
             (a) => a?.lastVisibilityUpdateDate,
             (s) => s?.lastVisibilityUpdateDate,
@@ -1020,9 +1011,6 @@ class _$GetHcrApiHcrDetailActions extends GetHcrApiHcrDetailActions {
     mobilePhoneNumber.$middleware(middleware);
     faxNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetHcrApiHcrDetailGetHcrApiHcrDetailActions> get $serializer => GetHcrApiHcrDetailGetHcrApiHcrDetailActions.serializer;
 
   FullType _$fullType;
   @override

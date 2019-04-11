@@ -268,9 +268,6 @@ class _$GetAdjustmentApiResponseActions
     displayRules.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetAdjustmentApiResponseGetAdjustmentApiResponseActions> get $serializer => GetAdjustmentApiResponseGetAdjustmentApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAdjustmentApiResponse);

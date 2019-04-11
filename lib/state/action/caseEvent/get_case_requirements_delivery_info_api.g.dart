@@ -122,9 +122,6 @@ class _$GetCaseRequirementsDeliveryInfoApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetCaseRequirementsDeliveryInfoApi> get $serializer => CommandStateGetCaseRequirementsDeliveryInfoApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

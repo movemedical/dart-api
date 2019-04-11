@@ -112,9 +112,6 @@ class _$GetSubProcedureApi extends GetSubProcedureApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetSubProcedureApi> get $serializer => CommandStateGetSubProcedureApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -168,7 +168,7 @@ class _$ConversationUpdatedPushMessageActions
   _$ConversationUpdatedPushMessageActions._(this.$options)
       : $replace = $options.action<ConversationUpdatedPushMessage>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
@@ -205,9 +205,6 @@ class _$ConversationUpdatedPushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConversationUpdatedPushMessageConversationUpdatedPushMessageActions> get $serializer => ConversationUpdatedPushMessageConversationUpdatedPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

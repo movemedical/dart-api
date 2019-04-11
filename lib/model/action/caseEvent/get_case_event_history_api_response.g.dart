@@ -186,7 +186,7 @@ class _$GetCaseEventHistoryApiResponseActions
   _$GetCaseEventHistoryApiResponseActions._(this.$options)
       : $replace = $options.action<GetCaseEventHistoryApiResponse>(
             '\$replace', (a) => a?.$replace),
-        historyEvents = $options.actionField<BuiltList<HistoryEventDisplay>>(
+        historyEvents = $options.field<BuiltList<HistoryEventDisplay>>(
             'historyEvents',
             (a) => a?.historyEvents,
             (s) => s?.historyEvents,
@@ -223,9 +223,6 @@ class _$GetCaseEventHistoryApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventHistoryApiResponseGetCaseEventHistoryApiResponseActions> get $serializer => GetCaseEventHistoryApiResponseGetCaseEventHistoryApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

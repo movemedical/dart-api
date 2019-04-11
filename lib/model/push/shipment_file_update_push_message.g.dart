@@ -245,20 +245,17 @@ class _$ShipmentFileUpdatePushMessageActions
   _$ShipmentFileUpdatePushMessageActions._(this.$options)
       : $replace = $options.action<ShipmentFileUpdatePushMessage>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
         updateType =
-            $options.actionField<ShipmentFileUpdatePushMessageFileUpdateType>(
+            $options.field<ShipmentFileUpdatePushMessageFileUpdateType>(
                 'updateType',
                 (a) => a?.updateType,
                 (s) => s?.updateType,
                 (p, b) => p?.updateType = b),
-        percentUploadedDecimalForm = $options.actionField<double>(
+        percentUploadedDecimalForm = $options.field<double>(
             'percentUploadedDecimalForm',
             (a) => a?.percentUploadedDecimalForm,
             (s) => s?.percentUploadedDecimalForm,
@@ -300,9 +297,6 @@ class _$ShipmentFileUpdatePushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ShipmentFileUpdatePushMessageShipmentFileUpdatePushMessageActions> get $serializer => ShipmentFileUpdatePushMessageShipmentFileUpdatePushMessageActions.serializer;
 
   FullType _$fullType;
   @override

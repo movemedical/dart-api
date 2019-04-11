@@ -331,36 +331,33 @@ class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
   _$AddHcrMatrixApiRequestActions._(this.$options)
       : $replace = $options.action<AddHcrMatrixApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        allFacilities = $options.actionField<bool>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        allFacilities = $options.field<bool>(
             'allFacilities',
             (a) => a?.allFacilities,
             (s) => s?.allFacilities,
             (p, b) => p?.allFacilities = b),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        allPhysicians = $options.actionField<bool>(
+        allPhysicians = $options.field<bool>(
             'allPhysicians',
             (a) => a?.allPhysicians,
             (s) => s?.allPhysicians,
             (p, b) => p?.allPhysicians = b),
-        procedureId = $options.actionField<String>(
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        allProcedures = $options.actionField<bool>(
+        allProcedures = $options.field<bool>(
             'allProcedures',
             (a) => a?.allProcedures,
             (s) => s?.allProcedures,
@@ -410,9 +407,6 @@ class _$AddHcrMatrixApiRequestActions extends AddHcrMatrixApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddHcrMatrixApiRequestAddHcrMatrixApiRequestActions> get $serializer => AddHcrMatrixApiRequestAddHcrMatrixApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

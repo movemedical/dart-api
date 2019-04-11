@@ -199,7 +199,7 @@ class _$ConsumerActions extends ConsumerActions {
 
   _$ConsumerActions._(this.$options)
       : $replace = $options.action<Consumer>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -208,7 +208,7 @@ class _$ConsumerActions extends ConsumerActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -249,9 +249,6 @@ class _$ConsumerActions extends ConsumerActions {
     super.$middleware(middleware);
     name.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConsumerConsumerActions> get $serializer => ConsumerConsumerActions.serializer;
 
   FullType _$fullType;
   @override

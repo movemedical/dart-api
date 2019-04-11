@@ -662,98 +662,92 @@ class _$ListIntegrationIssuesApiIssueActions
   _$ListIntegrationIssuesApiIssueActions._(this.$options)
       : $replace = $options.action<ListIntegrationIssuesApiIssue>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        issueNumber = $options.actionField<int>(
-            'issueNumber',
-            (a) => a?.issueNumber,
-            (s) => s?.issueNumber,
-            (p, b) => p?.issueNumber = b),
-        issueGroup = $options.actionField<String>(
-            'issueGroup',
-            (a) => a?.issueGroup,
-            (s) => s?.issueGroup,
-            (p, b) => p?.issueGroup = b),
-        createdDate = $options.actionField<DateTime>(
+        issueNumber = $options.field<int>('issueNumber', (a) => a?.issueNumber,
+            (s) => s?.issueNumber, (p, b) => p?.issueNumber = b),
+        issueGroup = $options.field<String>('issueGroup', (a) => a?.issueGroup,
+            (s) => s?.issueGroup, (p, b) => p?.issueGroup = b),
+        createdDate = $options.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        issueType = $options.actionField<IntegrationType>(
+        issueType = $options.field<IntegrationType>(
             'issueType',
             (a) => a?.issueType,
             (s) => s?.issueType,
             (p, b) => p?.issueType = b),
-        integrationReferenceId = $options.actionField<String>(
+        integrationReferenceId = $options.field<String>(
             'integrationReferenceId',
             (a) => a?.integrationReferenceId,
             (s) => s?.integrationReferenceId,
             (p, b) => p?.integrationReferenceId = b),
-        integrationReferenceKey = $options.actionField<String>(
+        integrationReferenceKey = $options.field<String>(
             'integrationReferenceKey',
             (a) => a?.integrationReferenceKey,
             (s) => s?.integrationReferenceKey,
             (p, b) => p?.integrationReferenceKey = b),
-        logReferenceId = $options.actionField<String>(
+        logReferenceId = $options.field<String>(
             'logReferenceId',
             (a) => a?.logReferenceId,
             (s) => s?.logReferenceId,
             (p, b) => p?.logReferenceId = b),
-        status = $options.actionField<IntegrationIssueStatus>('status',
+        status = $options.field<IntegrationIssueStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        assignedDate = $options.actionField<DateTime>(
+        assignedDate = $options.field<DateTime>(
             'assignedDate',
             (a) => a?.assignedDate,
             (s) => s?.assignedDate,
             (p, b) => p?.assignedDate = b),
-        assignedToUser = $options.actionField<String>(
+        assignedToUser = $options.field<String>(
             'assignedToUser',
             (a) => a?.assignedToUser,
             (s) => s?.assignedToUser,
             (p, b) => p?.assignedToUser = b),
-        assignedToUserName = $options.actionField<String>(
+        assignedToUserName = $options.field<String>(
             'assignedToUserName',
             (a) => a?.assignedToUserName,
             (s) => s?.assignedToUserName,
             (p, b) => p?.assignedToUserName = b),
-        resolvedDate = $options.actionField<DateTime>(
+        resolvedDate = $options.field<DateTime>(
             'resolvedDate',
             (a) => a?.resolvedDate,
             (s) => s?.resolvedDate,
             (p, b) => p?.resolvedDate = b),
-        resolvedByUserId = $options.actionField<String>(
+        resolvedByUserId = $options.field<String>(
             'resolvedByUserId',
             (a) => a?.resolvedByUserId,
             (s) => s?.resolvedByUserId,
             (p, b) => p?.resolvedByUserId = b),
-        resolvedByUserName = $options.actionField<String>(
+        resolvedByUserName = $options.field<String>(
             'resolvedByUserName',
             (a) => a?.resolvedByUserName,
             (s) => s?.resolvedByUserName,
             (p, b) => p?.resolvedByUserName = b),
-        resolutionMessage = $options.actionField<String>(
+        resolutionMessage = $options.field<String>(
             'resolutionMessage',
             (a) => a?.resolutionMessage,
             (s) => s?.resolutionMessage,
             (p, b) => p?.resolutionMessage = b),
-        regenerateFileId = $options.actionField<String>(
+        regenerateFileId = $options.field<String>(
             'regenerateFileId',
             (a) => a?.regenerateFileId,
             (s) => s?.regenerateFileId,
             (p, b) => p?.regenerateFileId = b),
-        regenFileName = $options.actionField<String>(
+        regenFileName = $options.field<String>(
             'regenFileName',
             (a) => a?.regenFileName,
             (s) => s?.regenFileName,
             (p, b) => p?.regenFileName = b),
-        regenFileContentType = $options.actionField<String>(
+        regenFileContentType = $options.field<String>(
             'regenFileContentType',
             (a) => a?.regenFileContentType,
             (s) => s?.regenFileContentType,
             (p, b) => p?.regenFileContentType = b),
-        editedErrors = $options.actionField<bool>(
+        editedErrors = $options.field<bool>(
             'editedErrors',
             (a) => a?.editedErrors,
             (s) => s?.editedErrors,
@@ -829,9 +823,6 @@ class _$ListIntegrationIssuesApiIssueActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListIntegrationIssuesApiIssueListIntegrationIssuesApiIssueActions> get $serializer => ListIntegrationIssuesApiIssueListIntegrationIssuesApiIssueActions.serializer;
 
   FullType _$fullType;
   @override

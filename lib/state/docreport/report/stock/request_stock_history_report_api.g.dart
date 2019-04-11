@@ -108,9 +108,6 @@ class _$RequestStockHistoryReportApi extends RequestStockHistoryReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestStockHistoryReportApi> get $serializer => CommandStateRequestStockHistoryReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

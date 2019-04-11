@@ -324,31 +324,31 @@ class _$UpdateDeliveryScheduleProfileApiRequestActions
   _$UpdateDeliveryScheduleProfileApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateDeliveryScheduleProfileApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        instrumentDeliveryLeadTimeDays = $options.actionField<int>(
+        instrumentDeliveryLeadTimeDays = $options.field<int>(
             'instrumentDeliveryLeadTimeDays',
             (a) => a?.instrumentDeliveryLeadTimeDays,
             (s) => s?.instrumentDeliveryLeadTimeDays,
             (p, b) => p?.instrumentDeliveryLeadTimeDays = b),
-        instrumentDeliveryLeadTimeHours = $options.actionField<int>(
+        instrumentDeliveryLeadTimeHours = $options.field<int>(
             'instrumentDeliveryLeadTimeHours',
             (a) => a?.instrumentDeliveryLeadTimeHours,
             (s) => s?.instrumentDeliveryLeadTimeHours,
             (p, b) => p?.instrumentDeliveryLeadTimeHours = b),
-        implantDeliveryLeadTimeDays = $options.actionField<int>(
+        implantDeliveryLeadTimeDays = $options.field<int>(
             'implantDeliveryLeadTimeDays',
             (a) => a?.implantDeliveryLeadTimeDays,
             (s) => s?.implantDeliveryLeadTimeDays,
             (p, b) => p?.implantDeliveryLeadTimeDays = b),
-        implantDeliveryLeadTimeHours = $options.actionField<int>(
+        implantDeliveryLeadTimeHours = $options.field<int>(
             'implantDeliveryLeadTimeHours',
             (a) => a?.implantDeliveryLeadTimeHours,
             (s) => s?.implantDeliveryLeadTimeHours,
             (p, b) => p?.implantDeliveryLeadTimeHours = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -394,9 +394,6 @@ class _$UpdateDeliveryScheduleProfileApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateDeliveryScheduleProfileApiRequestUpdateDeliveryScheduleProfileApiRequestActions> get $serializer => UpdateDeliveryScheduleProfileApiRequestUpdateDeliveryScheduleProfileApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

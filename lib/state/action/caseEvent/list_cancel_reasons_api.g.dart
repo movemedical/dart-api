@@ -112,9 +112,6 @@ class _$ListCancelReasonsApi extends ListCancelReasonsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListCancelReasonsApi> get $serializer => CommandStateListCancelReasonsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

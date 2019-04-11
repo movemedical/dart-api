@@ -226,14 +226,14 @@ class _$ListStockForSourcingMatrixApiResponseActions
   _$ListStockForSourcingMatrixApiResponseActions._(this.$options)
       : $replace = $options.action<ListStockForSourcingMatrixApiResponse>(
             '\$replace', (a) => a?.$replace),
-        locations = $options.actionField<
-                BuiltList<ListStockForSourcingMatrixApiSourcingLocation>>(
-            'locations',
-            (a) => a?.locations,
-            (s) => s?.locations,
-            (p, b) => p?.locations = b),
+        locations = $options
+            .field<BuiltList<ListStockForSourcingMatrixApiSourcingLocation>>(
+                'locations',
+                (a) => a?.locations,
+                (s) => s?.locations,
+                (p, b) => p?.locations = b),
         items = $options
-            .actionField<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>(
+            .field<BuiltList<ListStockForSourcingMatrixApiSourcingLine>>(
                 'items',
                 (a) => a?.items,
                 (s) => s?.items,
@@ -272,9 +272,6 @@ class _$ListStockForSourcingMatrixApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForSourcingMatrixApiResponseListStockForSourcingMatrixApiResponseActions> get $serializer => ListStockForSourcingMatrixApiResponseListStockForSourcingMatrixApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

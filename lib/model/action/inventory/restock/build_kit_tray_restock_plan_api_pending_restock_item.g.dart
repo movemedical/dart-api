@@ -320,28 +320,25 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
       : $replace =
             $options.action<BuildKitTrayRestockPlanApiPendingRestockItem>(
                 '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        description = $options.actionField<String>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        orderDisplay = $options.actionField<String>(
+        orderDisplay = $options.field<String>(
             'orderDisplay',
             (a) => a?.orderDisplay,
             (s) => s?.orderDisplay,
             (p, b) => p?.orderDisplay = b),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        pickDisplay = $options.actionField<String>(
+        pickDisplay = $options.field<String>(
             'pickDisplay',
             (a) => a?.pickDisplay,
             (s) => s?.pickDisplay,
@@ -390,9 +387,6 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildKitTrayRestockPlanApiPendingRestockItemBuildKitTrayRestockPlanApiPendingRestockItemActions> get $serializer => BuildKitTrayRestockPlanApiPendingRestockItemBuildKitTrayRestockPlanApiPendingRestockItemActions.serializer;
 
   FullType _$fullType;
   @override

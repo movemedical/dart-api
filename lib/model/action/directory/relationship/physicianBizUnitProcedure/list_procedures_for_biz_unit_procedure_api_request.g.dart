@@ -301,17 +301,14 @@ class _$ListProceduresForBizUnitProcedureApiRequestActions
   _$ListProceduresForBizUnitProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<ListProceduresForBizUnitProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -382,9 +379,6 @@ class _$ListProceduresForBizUnitProcedureApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProceduresForBizUnitProcedureApiRequestListProceduresForBizUnitProcedureApiRequestActions> get $serializer => ListProceduresForBizUnitProcedureApiRequestListProceduresForBizUnitProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

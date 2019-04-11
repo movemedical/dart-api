@@ -97,9 +97,6 @@ class _$AddParticipantsApi extends AddParticipantsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddParticipantsApi> get $serializer => CommandStateAddParticipantsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

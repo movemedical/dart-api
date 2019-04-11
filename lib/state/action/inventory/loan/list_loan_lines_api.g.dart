@@ -111,9 +111,6 @@ class _$ListLoanLinesApi extends ListLoanLinesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListLoanLinesApi> get $serializer => CommandStateListLoanLinesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

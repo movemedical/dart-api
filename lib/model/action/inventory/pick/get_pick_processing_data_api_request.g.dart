@@ -168,11 +168,8 @@ class _$GetPickProcessingDataApiRequestActions
   _$GetPickProcessingDataApiRequestActions._(this.$options)
       : $replace = $options.action<GetPickProcessingDataApiRequest>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
         super._();
 
   factory _$GetPickProcessingDataApiRequestActions(
@@ -205,9 +202,6 @@ class _$GetPickProcessingDataApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPickProcessingDataApiRequestGetPickProcessingDataApiRequestActions> get $serializer => GetPickProcessingDataApiRequestGetPickProcessingDataApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$DecommissionKitApi extends DecommissionKitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDecommissionKitApi> get $serializer => CommandStateDecommissionKitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -229,7 +229,7 @@ class _$RequestPendingPoReportApiResponseActions
   _$RequestPendingPoReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestPendingPoReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -291,9 +291,6 @@ class _$RequestPendingPoReportApiResponseActions
     hcrTeam.$middleware(middleware);
     hospital.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestPendingPoReportApiResponseRequestPendingPoReportApiResponseActions> get $serializer => RequestPendingPoReportApiResponseRequestPendingPoReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

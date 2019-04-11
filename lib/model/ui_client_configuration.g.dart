@@ -280,23 +280,23 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
   _$UiClientConfigurationActions._(this.$options)
       : $replace = $options.action<UiClientConfiguration>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        configType = $options.actionField<UiClientConfigurationType>(
+        configType = $options.field<UiClientConfigurationType>(
             'configType',
             (a) => a?.configType,
             (s) => s?.configType,
             (p, b) => p?.configType = b),
-        valueBool = $options.actionField<bool>('valueBool', (a) => a?.valueBool,
+        valueBool = $options.field<bool>('valueBool', (a) => a?.valueBool,
             (s) => s?.valueBool, (p, b) => p?.valueBool = b),
-        valueString = $options.actionField<String>(
+        valueString = $options.field<String>(
             'valueString',
             (a) => a?.valueString,
             (s) => s?.valueString,
             (p, b) => p?.valueString = b),
-        valueLong = $options.actionField<int>('valueLong', (a) => a?.valueLong,
+        valueLong = $options.field<int>('valueLong', (a) => a?.valueLong,
             (s) => s?.valueLong, (p, b) => p?.valueLong = b),
-        valueDouble = $options.actionField<double>(
+        valueDouble = $options.field<double>(
             'valueDouble',
             (a) => a?.valueDouble,
             (s) => s?.valueDouble,
@@ -341,9 +341,6 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UiClientConfigurationUiClientConfigurationActions> get $serializer => UiClientConfigurationUiClientConfigurationActions.serializer;
 
   FullType _$fullType;
   @override

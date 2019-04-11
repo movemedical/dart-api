@@ -156,7 +156,7 @@ class _$UnlockUserApiRequestActions extends UnlockUserApiRequestActions {
   _$UnlockUserApiRequestActions._(this.$options)
       : $replace = $options.action<UnlockUserApiRequest>(
             '\$replace', (a) => a?.$replace),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$UnlockUserApiRequestActions extends UnlockUserApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UnlockUserApiRequestUnlockUserApiRequestActions> get $serializer => UnlockUserApiRequestUnlockUserApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

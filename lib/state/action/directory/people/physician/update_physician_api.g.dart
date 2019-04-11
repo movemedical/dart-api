@@ -97,9 +97,6 @@ class _$UpdatePhysicianApi extends UpdatePhysicianApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdatePhysicianApi> get $serializer => CommandStateUpdatePhysicianApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

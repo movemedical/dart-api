@@ -413,38 +413,38 @@ class _$ListConversationsApiRequestActions
   _$ListConversationsApiRequestActions._(this.$options)
       : $replace = $options.action<ListConversationsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        archived = $options.actionField<bool>('archived', (a) => a?.archived,
+        archived = $options.field<bool>('archived', (a) => a?.archived,
             (s) => s?.archived, (p, b) => p?.archived = b),
-        stopped = $options.actionField<bool>('stopped', (a) => a?.stopped,
+        stopped = $options.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
-        unread = $options.actionField<bool>('unread', (a) => a?.unread,
+        unread = $options.field<bool>('unread', (a) => a?.unread,
             (s) => s?.unread, (p, b) => p?.unread = b),
-        contactIds = $options.actionField<BuiltList<String>>(
+        contactIds = $options.field<BuiltList<String>>(
             'contactIds',
             (a) => a?.contactIds,
             (s) => s?.contactIds,
             (p, b) => p?.contactIds = b),
-        urgencyStartDate = $options.actionField<DateTime>(
+        urgencyStartDate = $options.field<DateTime>(
             'urgencyStartDate',
             (a) => a?.urgencyStartDate,
             (s) => s?.urgencyStartDate,
             (p, b) => p?.urgencyStartDate = b),
-        urgencyEndDate = $options.actionField<DateTime>(
+        urgencyEndDate = $options.field<DateTime>(
             'urgencyEndDate',
             (a) => a?.urgencyEndDate,
             (s) => s?.urgencyEndDate,
             (p, b) => p?.urgencyEndDate = b),
-        attributableType = $options.actionField<AttributableType>(
+        attributableType = $options.field<AttributableType>(
             'attributableType',
             (a) => a?.attributableType,
             (s) => s?.attributableType,
             (p, b) => p?.attributableType = b),
-        attributableId = $options.actionField<String>(
+        attributableId = $options.field<String>(
             'attributableId',
             (a) => a?.attributableId,
             (s) => s?.attributableId,
             (p, b) => p?.attributableId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -510,9 +510,6 @@ class _$ListConversationsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListConversationsApiRequestListConversationsApiRequestActions> get $serializer => ListConversationsApiRequestListConversationsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

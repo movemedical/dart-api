@@ -360,23 +360,21 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
                 (s) => s?.defaultOpsOrgUnit,
                 (b) => b?.defaultOpsOrgUnit,
                 (parent, builder) => parent?.defaultOpsOrgUnit = builder)),
-        bizUnits = $options.actionField<BuiltList<GetUiSetupAllApiBizUnit>>(
+        bizUnits = $options.field<BuiltList<GetUiSetupAllApiBizUnit>>(
             'bizUnits',
             (a) => a?.bizUnits,
             (s) => s?.bizUnits,
             (p, b) => p?.bizUnits = b),
-        invOnlyOrgUnits =
-            $options.actionField<BuiltList<GetUiSetupAllApiOrgUnit>>(
-                'invOnlyOrgUnits',
-                (a) => a?.invOnlyOrgUnits,
-                (s) => s?.invOnlyOrgUnits,
-                (p, b) => p?.invOnlyOrgUnits = b),
-        fullAccessOrgUnits =
-            $options.actionField<BuiltList<GetUiSetupAllApiOrgUnit>>(
-                'fullAccessOrgUnits',
-                (a) => a?.fullAccessOrgUnits,
-                (s) => s?.fullAccessOrgUnits,
-                (p, b) => p?.fullAccessOrgUnits = b),
+        invOnlyOrgUnits = $options.field<BuiltList<GetUiSetupAllApiOrgUnit>>(
+            'invOnlyOrgUnits',
+            (a) => a?.invOnlyOrgUnits,
+            (s) => s?.invOnlyOrgUnits,
+            (p, b) => p?.invOnlyOrgUnits = b),
+        fullAccessOrgUnits = $options.field<BuiltList<GetUiSetupAllApiOrgUnit>>(
+            'fullAccessOrgUnits',
+            (a) => a?.fullAccessOrgUnits,
+            (s) => s?.fullAccessOrgUnits,
+            (p, b) => p?.fullAccessOrgUnits = b),
         super._();
 
   factory _$GetUiSetupAllApiOrgInfoActions(
@@ -426,9 +424,6 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
     defaultSalesOrgUnit.$middleware(middleware);
     defaultOpsOrgUnit.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiOrgInfoGetUiSetupAllApiOrgInfoActions> get $serializer => GetUiSetupAllApiOrgInfoGetUiSetupAllApiOrgInfoActions.serializer;
 
   FullType _$fullType;
   @override

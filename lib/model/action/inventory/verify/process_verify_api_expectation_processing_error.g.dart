@@ -197,12 +197,12 @@ class _$ProcessVerifyApiExpectationProcessingErrorActions
   _$ProcessVerifyApiExpectationProcessingErrorActions._(this.$options)
       : $replace = $options.action<ProcessVerifyApiExpectationProcessingError>(
             '\$replace', (a) => a?.$replace),
-        expectationId = $options.actionField<String>(
+        expectationId = $options.field<String>(
             'expectationId',
             (a) => a?.expectationId,
             (s) => s?.expectationId,
             (p, b) => p?.expectationId = b),
-        error = $options.actionField<String>(
+        error = $options.field<String>(
             'error', (a) => a?.error, (s) => s?.error, (p, b) => p?.error = b),
         super._();
 
@@ -238,9 +238,6 @@ class _$ProcessVerifyApiExpectationProcessingErrorActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessVerifyApiExpectationProcessingErrorProcessVerifyApiExpectationProcessingErrorActions> get $serializer => ProcessVerifyApiExpectationProcessingErrorProcessVerifyApiExpectationProcessingErrorActions.serializer;
 
   FullType _$fullType;
   @override

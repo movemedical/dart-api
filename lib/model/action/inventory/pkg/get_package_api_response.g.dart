@@ -276,17 +276,16 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
             (s) => s?.uiSchema,
             (b) => b?.uiSchema,
             (parent, builder) => parent?.uiSchema = builder)),
-        customDocs = $options.actionField<BuiltList<CustomDoc>>(
+        customDocs = $options.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
             (p, b) => p?.customDocs = b),
-        attributes =
-            $options.actionField<BuiltList<GetPackageApiPackageAttribute>>(
-                'attributes',
-                (a) => a?.attributes,
-                (s) => s?.attributes,
-                (p, b) => p?.attributes = b),
+        attributes = $options.field<BuiltList<GetPackageApiPackageAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
         super._();
 
   factory _$GetPackageApiResponseActions(
@@ -330,9 +329,6 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
     pkg.$middleware(middleware);
     uiSchema.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPackageApiResponseGetPackageApiResponseActions> get $serializer => GetPackageApiResponseGetPackageApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -197,12 +197,12 @@ class _$ListCalendarSubscriptionsApiResponseActions
   _$ListCalendarSubscriptionsApiResponseActions._(this.$options)
       : $replace = $options.action<ListCalendarSubscriptionsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        subscriptions = $options.actionField<
-                BuiltList<ListCalendarSubscriptionsApiCalendarSubscription>>(
-            'subscriptions',
-            (a) => a?.subscriptions,
-            (s) => s?.subscriptions,
-            (p, b) => p?.subscriptions = b),
+        subscriptions = $options
+            .field<BuiltList<ListCalendarSubscriptionsApiCalendarSubscription>>(
+                'subscriptions',
+                (a) => a?.subscriptions,
+                (s) => s?.subscriptions,
+                (p, b) => p?.subscriptions = b),
         super._();
 
   factory _$ListCalendarSubscriptionsApiResponseActions(
@@ -235,9 +235,6 @@ class _$ListCalendarSubscriptionsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCalendarSubscriptionsApiResponseListCalendarSubscriptionsApiResponseActions> get $serializer => ListCalendarSubscriptionsApiResponseListCalendarSubscriptionsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

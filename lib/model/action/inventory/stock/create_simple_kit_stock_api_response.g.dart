@@ -170,7 +170,7 @@ class _$CreateSimpleKitStockApiResponseActions
   _$CreateSimpleKitStockApiResponseActions._(this.$options)
       : $replace = $options.action<CreateSimpleKitStockApiResponse>(
             '\$replace', (a) => a?.$replace),
-        stockSummaryKey = $options.actionField<String>(
+        stockSummaryKey = $options.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
@@ -207,9 +207,6 @@ class _$CreateSimpleKitStockApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateSimpleKitStockApiResponseCreateSimpleKitStockApiResponseActions> get $serializer => CreateSimpleKitStockApiResponseCreateSimpleKitStockApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

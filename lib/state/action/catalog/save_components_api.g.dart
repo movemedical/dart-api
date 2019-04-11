@@ -96,9 +96,6 @@ class _$SaveComponentsApi extends SaveComponentsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSaveComponentsApi> get $serializer => CommandStateSaveComponentsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -339,33 +339,30 @@ class _$GetConversationApiParticipantActions
   _$GetConversationApiParticipantActions._(this.$options)
       : $replace = $options.action<GetConversationApiParticipant>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        behalfOfParticipantId = $options.actionField<String>(
+        behalfOfParticipantId = $options.field<String>(
             'behalfOfParticipantId',
             (a) => a?.behalfOfParticipantId,
             (s) => s?.behalfOfParticipantId,
             (p, b) => p?.behalfOfParticipantId = b),
-        canDeactivate = $options.actionField<bool>(
+        canDeactivate = $options.field<bool>(
             'canDeactivate',
             (a) => a?.canDeactivate,
             (s) => s?.canDeactivate,
             (p, b) => p?.canDeactivate = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        archived = $options.actionField<bool>('archived', (a) => a?.archived,
+        archived = $options.field<bool>('archived', (a) => a?.archived,
             (s) => s?.archived, (p, b) => p?.archived = b),
-        contactId = $options.actionField<String>(
-            'contactId',
-            (a) => a?.contactId,
-            (s) => s?.contactId,
-            (p, b) => p?.contactId = b),
-        displayText = $options.actionField<String>(
+        contactId = $options.field<String>('contactId', (a) => a?.contactId,
+            (s) => s?.contactId, (p, b) => p?.contactId = b),
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        initials = $options.actionField<String>('initials', (a) => a?.initials,
+        initials = $options.field<String>('initials', (a) => a?.initials,
             (s) => s?.initials, (p, b) => p?.initials = b),
         super._();
 
@@ -412,9 +409,6 @@ class _$GetConversationApiParticipantActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetConversationApiParticipantGetConversationApiParticipantActions> get $serializer => GetConversationApiParticipantGetConversationApiParticipantActions.serializer;
 
   FullType _$fullType;
   @override

@@ -170,7 +170,7 @@ class _$CreatePreferenceCardApiResponseActions
   _$CreatePreferenceCardApiResponseActions._(this.$options)
       : $replace = $options.action<CreatePreferenceCardApiResponse>(
             '\$replace', (a) => a?.$replace),
-        preferenceCardId = $options.actionField<String>(
+        preferenceCardId = $options.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
@@ -207,9 +207,6 @@ class _$CreatePreferenceCardApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePreferenceCardApiResponseCreatePreferenceCardApiResponseActions> get $serializer => CreatePreferenceCardApiResponseCreatePreferenceCardApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -231,7 +231,7 @@ class _$ListTeamMembersApiRequestActions
   _$ListTeamMembersApiRequestActions._(this.$options)
       : $replace = $options.action<ListTeamMembersApiRequest>(
             '\$replace', (a) => a?.$replace),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -294,9 +294,6 @@ class _$ListTeamMembersApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListTeamMembersApiRequestListTeamMembersApiRequestActions> get $serializer => ListTeamMembersApiRequestListTeamMembersApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

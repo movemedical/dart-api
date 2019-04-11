@@ -119,9 +119,6 @@ class _$ListDeliveryScheduleProfilesApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListDeliveryScheduleProfilesApi> get $serializer => CommandStateListDeliveryScheduleProfilesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -230,9 +230,6 @@ class _$ListAuditsForDashboardApiRequestActions
     paging.$middleware(middleware);
   }
 
-// @override
-// Serializer<ListAuditsForDashboardApiRequestListAuditsForDashboardApiRequestActions> get $serializer => ListAuditsForDashboardApiRequestListAuditsForDashboardApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

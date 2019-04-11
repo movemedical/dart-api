@@ -270,29 +270,26 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
   _$OrgUnitLinkActions._(this.$options)
       : $replace =
             $options.action<OrgUnitLink>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        orgUnitName = $options.actionField<String>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        orgUnitName = $options.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        ouAccessType = $options.actionField<OuAccessType>(
+        ouAccessType = $options.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        numberOfPermissionsSet = $options.actionField<int>(
+        numberOfPermissionsSet = $options.field<int>(
             'numberOfPermissionsSet',
             (a) => a?.numberOfPermissionsSet,
             (s) => s?.numberOfPermissionsSet,
             (p, b) => p?.numberOfPermissionsSet = b),
-        numberOfInventoryTypes = $options.actionField<int>(
+        numberOfInventoryTypes = $options.field<int>(
             'numberOfInventoryTypes',
             (a) => a?.numberOfInventoryTypes,
             (s) => s?.numberOfInventoryTypes,
@@ -336,9 +333,6 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrgUnitLinkOrgUnitLinkActions> get $serializer => OrgUnitLinkOrgUnitLinkActions.serializer;
 
   FullType _$fullType;
   @override

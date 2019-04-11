@@ -180,12 +180,11 @@ class _$CompletePicksApiRequestActions extends CompletePicksApiRequestActions {
   _$CompletePicksApiRequestActions._(this.$options)
       : $replace = $options.action<CompletePicksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        completeRequests =
-            $options.actionField<BuiltList<CompletePickApiRequest>>(
-                'completeRequests',
-                (a) => a?.completeRequests,
-                (s) => s?.completeRequests,
-                (p, b) => p?.completeRequests = b),
+        completeRequests = $options.field<BuiltList<CompletePickApiRequest>>(
+            'completeRequests',
+            (a) => a?.completeRequests,
+            (s) => s?.completeRequests,
+            (p, b) => p?.completeRequests = b),
         super._();
 
   factory _$CompletePicksApiRequestActions(
@@ -217,9 +216,6 @@ class _$CompletePicksApiRequestActions extends CompletePicksApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CompletePicksApiRequestCompletePicksApiRequestActions> get $serializer => CompletePicksApiRequestCompletePicksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

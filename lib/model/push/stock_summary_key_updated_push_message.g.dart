@@ -168,7 +168,7 @@ class _$StockSummaryKeyUpdatedPushMessageActions
   _$StockSummaryKeyUpdatedPushMessageActions._(this.$options)
       : $replace = $options.action<StockSummaryKeyUpdatedPushMessage>(
             '\$replace', (a) => a?.$replace),
-        deleted = $options.actionField<bool>('deleted', (a) => a?.deleted,
+        deleted = $options.field<bool>('deleted', (a) => a?.deleted,
             (s) => s?.deleted, (p, b) => p?.deleted = b),
         super._();
 
@@ -202,9 +202,6 @@ class _$StockSummaryKeyUpdatedPushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<StockSummaryKeyUpdatedPushMessageStockSummaryKeyUpdatedPushMessageActions> get $serializer => StockSummaryKeyUpdatedPushMessageStockSummaryKeyUpdatedPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

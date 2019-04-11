@@ -215,17 +215,14 @@ class _$AssignKitContainerApiRequestActions
   _$AssignKitContainerApiRequestActions._(this.$options)
       : $replace = $options.action<AssignKitContainerApiRequest>(
             '\$replace', (a) => a?.$replace),
-        kitStockId = $options.actionField<String>(
-            'kitStockId',
-            (a) => a?.kitStockId,
-            (s) => s?.kitStockId,
-            (p, b) => p?.kitStockId = b),
-        containerStockId = $options.actionField<String>(
+        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+            (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
+        containerStockId = $options.field<String>(
             'containerStockId',
             (a) => a?.containerStockId,
             (s) => s?.containerStockId,
             (p, b) => p?.containerStockId = b),
-        kitContainerDefId = $options.actionField<String>(
+        kitContainerDefId = $options.field<String>(
             'kitContainerDefId',
             (a) => a?.kitContainerDefId,
             (s) => s?.kitContainerDefId,
@@ -265,9 +262,6 @@ class _$AssignKitContainerApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AssignKitContainerApiRequestAssignKitContainerApiRequestActions> get $serializer => AssignKitContainerApiRequestAssignKitContainerApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

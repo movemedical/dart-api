@@ -120,9 +120,6 @@ class _$ListBizUnitInventoryTypeLinksApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListBizUnitInventoryTypeLinksApi> get $serializer => CommandStateListBizUnitInventoryTypeLinksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

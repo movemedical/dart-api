@@ -163,7 +163,7 @@ class _$RunCustomActionApiResponseActions
   _$RunCustomActionApiResponseActions._(this.$options)
       : $replace = $options.action<RunCustomActionApiResponse>(
             '\$replace', (a) => a?.$replace),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -196,9 +196,6 @@ class _$RunCustomActionApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RunCustomActionApiResponseRunCustomActionApiResponseActions> get $serializer => RunCustomActionApiResponseRunCustomActionApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

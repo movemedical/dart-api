@@ -253,17 +253,17 @@ class _$ListDelegateOptionsApiRequestActions
   _$ListDelegateOptionsApiRequestActions._(this.$options)
       : $replace = $options.action<ListDelegateOptionsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        nonPersonType = $options.actionField<DirectoryNonPersonType>(
+        nonPersonType = $options.field<DirectoryNonPersonType>(
             'nonPersonType',
             (a) => a?.nonPersonType,
             (s) => s?.nonPersonType,
             (p, b) => p?.nonPersonType = b),
-        nonPersonId = $options.actionField<String>(
+        nonPersonId = $options.field<String>(
             'nonPersonId',
             (a) => a?.nonPersonId,
             (s) => s?.nonPersonId,
             (p, b) => p?.nonPersonId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -317,9 +317,6 @@ class _$ListDelegateOptionsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListDelegateOptionsApiRequestListDelegateOptionsApiRequestActions> get $serializer => ListDelegateOptionsApiRequestListDelegateOptionsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

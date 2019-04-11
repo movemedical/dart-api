@@ -189,9 +189,9 @@ class _$GetGeneratedDocReportUrlsApiNamedUrlActions
   _$GetGeneratedDocReportUrlsApiNamedUrlActions._(this.$options)
       : $replace = $options.action<GetGeneratedDocReportUrlsApiNamedUrl>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -227,9 +227,6 @@ class _$GetGeneratedDocReportUrlsApiNamedUrlActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetGeneratedDocReportUrlsApiNamedUrlGetGeneratedDocReportUrlsApiNamedUrlActions> get $serializer => GetGeneratedDocReportUrlsApiNamedUrlGetGeneratedDocReportUrlsApiNamedUrlActions.serializer;
 
   FullType _$fullType;
   @override

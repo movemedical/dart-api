@@ -213,14 +213,14 @@ class _$ShipmentLiteActions extends ShipmentLiteActions {
   _$ShipmentLiteActions._(this.$options)
       : $replace =
             $options.action<ShipmentLite>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        created = $options.actionField<DateTime>('created', (a) => a?.created,
+        created = $options.field<DateTime>('created', (a) => a?.created,
             (s) => s?.created, (p, b) => p?.created = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<ShipmentStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<ShipmentStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         super._();
 
   factory _$ShipmentLiteActions(ShipmentLiteActionsOptions options) =>
@@ -256,9 +256,6 @@ class _$ShipmentLiteActions extends ShipmentLiteActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ShipmentLiteShipmentLiteActions> get $serializer => ShipmentLiteShipmentLiteActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateHoldReasonApi> get $serializer => CommandStateUpdateHoldReasonApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

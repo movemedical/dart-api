@@ -634,19 +634,19 @@ class _$ListStockSnapshotsApiSnapshotActions
   _$ListStockSnapshotsApiSnapshotActions._(this.$options)
       : $replace = $options.action<ListStockSnapshotsApiSnapshot>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        transactionType = $options.actionField<StockTransactionType>(
+        transactionType = $options.field<StockTransactionType>(
             'transactionType',
             (a) => a?.transactionType,
             (s) => s?.transactionType,
             (p, b) => p?.transactionType = b),
-        transactionReferenceType = $options.actionField<StockReferenceType>(
+        transactionReferenceType = $options.field<StockReferenceType>(
             'transactionReferenceType',
             (a) => a?.transactionReferenceType,
             (s) => s?.transactionReferenceType,
             (p, b) => p?.transactionReferenceType = b),
-        transactionReferenceId = $options.actionField<String>(
+        transactionReferenceId = $options.field<String>(
             'transactionReferenceId',
             (a) => a?.transactionReferenceId,
             (s) => s?.transactionReferenceId,
@@ -709,23 +709,20 @@ class _$ListStockSnapshotsApiSnapshotActions
                 (s) => s?.kit,
                 (b) => b?.kit,
                 (parent, builder) => parent?.kit = builder)),
-        kitContainerDefId = $options.actionField<String>(
+        kitContainerDefId = $options.field<String>(
             'kitContainerDefId',
             (a) => a?.kitContainerDefId,
             (s) => s?.kitContainerDefId,
             (p, b) => p?.kitContainerDefId = b),
-        pickId = $options.actionField<String>('pickId', (a) => a?.pickId,
+        pickId = $options.field<String>('pickId', (a) => a?.pickId,
             (s) => s?.pickId, (p, b) => p?.pickId = b),
-        lostFound = $options.actionField<LostFound>(
-            'lostFound',
-            (a) => a?.lostFound,
-            (s) => s?.lostFound,
-            (p, b) => p?.lostFound = b),
-        onHold = $options.actionField<bool>('onHold', (a) => a?.onHold,
+        lostFound = $options.field<LostFound>('lostFound', (a) => a?.lostFound,
+            (s) => s?.lostFound, (p, b) => p?.lostFound = b),
+        onHold = $options.field<bool>('onHold', (a) => a?.onHold,
             (s) => s?.onHold, (p, b) => p?.onHold = b),
-        start = $options.actionField<DateTime>(
+        start = $options.field<DateTime>(
             'start', (a) => a?.start, (s) => s?.start, (p, b) => p?.start = b),
-        end = $options.actionField<DateTime>(
+        end = $options.field<DateTime>(
             'end', (a) => a?.end, (s) => s?.end, (p, b) => p?.end = b),
         super._();
 
@@ -805,9 +802,6 @@ class _$ListStockSnapshotsApiSnapshotActions
     caseEvent.$middleware(middleware);
     kit.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockSnapshotsApiSnapshotListStockSnapshotsApiSnapshotActions> get $serializer => ListStockSnapshotsApiSnapshotListStockSnapshotsApiSnapshotActions.serializer;
 
   FullType _$fullType;
   @override

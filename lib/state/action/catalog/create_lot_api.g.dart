@@ -107,9 +107,6 @@ class _$CreateLotApi extends CreateLotApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateLotApi> get $serializer => CommandStateCreateLotApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

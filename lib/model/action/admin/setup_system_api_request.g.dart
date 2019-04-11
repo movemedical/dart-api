@@ -651,85 +651,82 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
   _$SetupSystemApiRequestActions._(this.$options)
       : $replace = $options.action<SetupSystemApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        orgReference = $options.actionField<String>(
+        orgReference = $options.field<String>(
             'orgReference',
             (a) => a?.orgReference,
             (s) => s?.orgReference,
             (p, b) => p?.orgReference = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        orgUnitName = $options.actionField<String>(
+        orgUnitName = $options.field<String>(
             'orgUnitName',
             (a) => a?.orgUnitName,
             (s) => s?.orgUnitName,
             (p, b) => p?.orgUnitName = b),
-        orgUnitParentId = $options.actionField<String>(
+        orgUnitParentId = $options.field<String>(
             'orgUnitParentId',
             (a) => a?.orgUnitParentId,
             (s) => s?.orgUnitParentId,
             (p, b) => p?.orgUnitParentId = b),
-        orgUnitReference = $options.actionField<String>(
+        orgUnitReference = $options.field<String>(
             'orgUnitReference',
             (a) => a?.orgUnitReference,
             (s) => s?.orgUnitReference,
             (p, b) => p?.orgUnitReference = b),
-        fileLocation = $options.actionField<String>(
+        fileLocation = $options.field<String>(
             'fileLocation',
             (a) => a?.fileLocation,
             (s) => s?.fileLocation,
             (p, b) => p?.fileLocation = b),
-        addressLine1 = $options.actionField<String>(
+        addressLine1 = $options.field<String>(
             'addressLine1',
             (a) => a?.addressLine1,
             (s) => s?.addressLine1,
             (p, b) => p?.addressLine1 = b),
-        addressLine2 = $options.actionField<String>(
+        addressLine2 = $options.field<String>(
             'addressLine2',
             (a) => a?.addressLine2,
             (s) => s?.addressLine2,
             (p, b) => p?.addressLine2 = b),
-        addressLine3 = $options.actionField<String>(
+        addressLine3 = $options.field<String>(
             'addressLine3',
             (a) => a?.addressLine3,
             (s) => s?.addressLine3,
             (p, b) => p?.addressLine3 = b),
-        addressCity = $options.actionField<String>(
+        addressCity = $options.field<String>(
             'addressCity',
             (a) => a?.addressCity,
             (s) => s?.addressCity,
             (p, b) => p?.addressCity = b),
-        addressCounty = $options.actionField<String>(
+        addressCounty = $options.field<String>(
             'addressCounty',
             (a) => a?.addressCounty,
             (s) => s?.addressCounty,
             (p, b) => p?.addressCounty = b),
-        addressState = $options.actionField<String>(
+        addressState = $options.field<String>(
             'addressState',
             (a) => a?.addressState,
             (s) => s?.addressState,
             (p, b) => p?.addressState = b),
-        addressPostalCode = $options.actionField<String>(
+        addressPostalCode = $options.field<String>(
             'addressPostalCode',
             (a) => a?.addressPostalCode,
             (s) => s?.addressPostalCode,
             (p, b) => p?.addressPostalCode = b),
-        addressCountry = $options.actionField<String>(
+        addressCountry = $options.field<String>(
             'addressCountry',
             (a) => a?.addressCountry,
             (s) => s?.addressCountry,
             (p, b) => p?.addressCountry = b),
-        inventoryEnabled = $options.actionField<bool>(
+        inventoryEnabled = $options.field<bool>(
             'inventoryEnabled',
             (a) => a?.inventoryEnabled,
             (s) => s?.inventoryEnabled,
             (p, b) => p?.inventoryEnabled = b),
-        erpEnabled = $options.actionField<bool>(
-            'erpEnabled',
-            (a) => a?.erpEnabled,
-            (s) => s?.erpEnabled,
-            (p, b) => p?.erpEnabled = b),
+        erpEnabled = $options.field<bool>('erpEnabled', (a) => a?.erpEnabled,
+            (s) => s?.erpEnabled, (p, b) => p?.erpEnabled = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
                 'email',
@@ -737,7 +734,7 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        password = $options.actionField<String>('password', (a) => a?.password,
+        password = $options.field<String>('password', (a) => a?.password,
             (s) => s?.password, (p, b) => p?.password = b),
         personName = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -821,9 +818,6 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
     email.$middleware(middleware);
     personName.$middleware(middleware);
   }
-
-// @override
-// Serializer<SetupSystemApiRequestSetupSystemApiRequestActions> get $serializer => SetupSystemApiRequestSetupSystemApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

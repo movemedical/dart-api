@@ -222,9 +222,6 @@ class _$SaveAeToOrgUnitApiRequestActions
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<SaveAeToOrgUnitApiRequestSaveAeToOrgUnitApiRequestActions> get $serializer => SaveAeToOrgUnitApiRequestSaveAeToOrgUnitApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveAeToOrgUnitApiRequest);

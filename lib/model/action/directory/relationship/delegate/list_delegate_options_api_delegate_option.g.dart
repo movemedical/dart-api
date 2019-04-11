@@ -248,11 +248,11 @@ class _$ListDelegateOptionsApiDelegateOptionActions
   _$ListDelegateOptionsApiDelegateOptionActions._(this.$options)
       : $replace = $options.action<ListDelegateOptionsApiDelegateOption>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<DelegateType>(
+        type = $options.field<DelegateType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -305,9 +305,6 @@ class _$ListDelegateOptionsApiDelegateOptionActions
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListDelegateOptionsApiDelegateOptionListDelegateOptionsApiDelegateOptionActions> get $serializer => ListDelegateOptionsApiDelegateOptionListDelegateOptionsApiDelegateOptionActions.serializer;
 
   FullType _$fullType;
   @override

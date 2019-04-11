@@ -108,9 +108,6 @@ class _$CreatePhysicianForFacilityApi extends CreatePhysicianForFacilityApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreatePhysicianForFacilityApi> get $serializer => CommandStateCreatePhysicianForFacilityApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

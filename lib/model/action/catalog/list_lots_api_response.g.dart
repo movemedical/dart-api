@@ -191,9 +191,9 @@ class _$ListLotsApiResponseActions extends ListLotsApiResponseActions {
   _$ListLotsApiResponseActions._(this.$options)
       : $replace = $options.action<ListLotsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<Lot>>(
+        data = $options.field<BuiltList<Lot>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -227,9 +227,6 @@ class _$ListLotsApiResponseActions extends ListLotsApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLotsApiResponseListLotsApiResponseActions> get $serializer => ListLotsApiResponseListLotsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -97,9 +97,6 @@ class _$RescheduleEventApi extends RescheduleEventApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRescheduleEventApi> get $serializer => CommandStateRescheduleEventApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

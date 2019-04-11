@@ -167,7 +167,7 @@ class _$RequestOnHandReportApiResponseActions
   _$RequestOnHandReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestOnHandReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -204,9 +204,6 @@ class _$RequestOnHandReportApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestOnHandReportApiResponseRequestOnHandReportApiResponseActions> get $serializer => RequestOnHandReportApiResponseRequestOnHandReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

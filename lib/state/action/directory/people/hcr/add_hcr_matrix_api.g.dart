@@ -92,9 +92,6 @@ class _$AddHcrMatrixApi extends AddHcrMatrixApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAddHcrMatrixApi> get $serializer => CommandStateAddHcrMatrixApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -162,7 +162,7 @@ class _$CreateFacilityApiResponseActions
   _$CreateFacilityApiResponseActions._(this.$options)
       : $replace = $options.action<CreateFacilityApiResponse>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$CreateFacilityApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateFacilityApiResponseCreateFacilityApiResponseActions> get $serializer => CreateFacilityApiResponseCreateFacilityApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

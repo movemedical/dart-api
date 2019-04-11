@@ -200,7 +200,7 @@ class _$ListContactsFromApiRequestActions
   _$ListContactsFromApiRequestActions._(this.$options)
       : $replace = $options.action<ListContactsFromApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -250,9 +250,6 @@ class _$ListContactsFromApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListContactsFromApiRequestListContactsFromApiRequestActions> get $serializer => ListContactsFromApiRequestListContactsFromApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

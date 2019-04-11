@@ -439,12 +439,12 @@ class _$ListIntegrationIssuesApiRequestActions
   _$ListIntegrationIssuesApiRequestActions._(this.$options)
       : $replace = $options.action<ListIntegrationIssuesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        integrationReferenceId = $options.actionField<String>(
+        integrationReferenceId = $options.field<String>(
             'integrationReferenceId',
             (a) => a?.integrationReferenceId,
             (s) => s?.integrationReferenceId,
             (p, b) => p?.integrationReferenceId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         createdDateRange = DateRangeActions(() =>
             $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
@@ -453,30 +453,24 @@ class _$ListIntegrationIssuesApiRequestActions
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
-        issueType = $options.actionField<IntegrationType>(
+        issueType = $options.field<IntegrationType>(
             'issueType',
             (a) => a?.issueType,
             (s) => s?.issueType,
             (p, b) => p?.issueType = b),
-        status = $options.actionField<IntegrationIssueStatus>('status',
+        status = $options.field<IntegrationIssueStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        issueGroup = $options.actionField<String>(
-            'issueGroup',
-            (a) => a?.issueGroup,
-            (s) => s?.issueGroup,
-            (p, b) => p?.issueGroup = b),
-        numberGreaterThan = $options.actionField<int>(
+        issueGroup = $options.field<String>('issueGroup', (a) => a?.issueGroup,
+            (s) => s?.issueGroup, (p, b) => p?.issueGroup = b),
+        numberGreaterThan = $options.field<int>(
             'numberGreaterThan',
             (a) => a?.numberGreaterThan,
             (s) => s?.numberGreaterThan,
             (p, b) => p?.numberGreaterThan = b),
-        sortBy = $options.actionField<ListIntegrationIssuesApiSortBy>('sortBy',
+        sortBy = $options.field<ListIntegrationIssuesApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
-        descending = $options.actionField<bool>(
-            'descending',
-            (a) => a?.descending,
-            (s) => s?.descending,
-            (p, b) => p?.descending = b),
+        descending = $options.field<bool>('descending', (a) => a?.descending,
+            (s) => s?.descending, (p, b) => p?.descending = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -486,7 +480,7 @@ class _$ListIntegrationIssuesApiRequestActions
             (s) => s?.paging,
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
-        export = $options.actionField<bool>('export', (a) => a?.export,
+        export = $options.field<bool>('export', (a) => a?.export,
             (s) => s?.export, (p, b) => p?.export = b),
         super._();
 
@@ -547,9 +541,6 @@ class _$ListIntegrationIssuesApiRequestActions
     createdDateRange.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListIntegrationIssuesApiRequestListIntegrationIssuesApiRequestActions> get $serializer => ListIntegrationIssuesApiRequestListIntegrationIssuesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

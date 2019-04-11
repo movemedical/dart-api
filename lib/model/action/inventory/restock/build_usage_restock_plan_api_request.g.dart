@@ -229,11 +229,11 @@ class _$BuildUsageRestockPlanApiRequestActions
   _$BuildUsageRestockPlanApiRequestActions._(this.$options)
       : $replace = $options.action<BuildUsageRestockPlanApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        usages = $options.actionField<BuiltList<BuildUsageRestockPlanApiUsage>>(
+        usages = $options.field<BuiltList<BuildUsageRestockPlanApiUsage>>(
             'usages',
             (a) => a?.usages,
             (s) => s?.usages,
@@ -274,9 +274,6 @@ class _$BuildUsageRestockPlanApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildUsageRestockPlanApiRequestBuildUsageRestockPlanApiRequestActions> get $serializer => BuildUsageRestockPlanApiRequestBuildUsageRestockPlanApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

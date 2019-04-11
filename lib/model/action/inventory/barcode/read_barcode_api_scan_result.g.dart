@@ -360,7 +360,7 @@ class _$ReadBarcodeApiScanResultActions
   _$ReadBarcodeApiScanResultActions._(this.$options)
       : $replace = $options.action<ReadBarcodeApiScanResult>(
             '\$replace', (a) => a?.$replace),
-        itemDetails = $options.actionField<BuiltList<ReadBarcodeApiItemChoice>>(
+        itemDetails = $options.field<BuiltList<ReadBarcodeApiItemChoice>>(
             'itemDetails',
             (a) => a?.itemDetails,
             (s) => s?.itemDetails,
@@ -375,7 +375,7 @@ class _$ReadBarcodeApiScanResultActions
                 (s) => s?.kitItemDetails,
                 (b) => b?.kitItemDetails,
                 (parent, builder) => parent?.kitItemDetails = builder)),
-        kitToteContainers = $options.actionField<BuiltList<StockContainer>>(
+        kitToteContainers = $options.field<BuiltList<StockContainer>>(
             'kitToteContainers',
             (a) => a?.kitToteContainers,
             (s) => s?.kitToteContainers,
@@ -403,12 +403,11 @@ class _$ReadBarcodeApiScanResultActions
             (s) => s?.shipment,
             (b) => b?.shipment,
             (parent, builder) => parent?.shipment = builder)),
-        shipmentPackages =
-            $options.actionField<BuiltList<ReadBarcodeApiPackage>>(
-                'shipmentPackages',
-                (a) => a?.shipmentPackages,
-                (s) => s?.shipmentPackages,
-                (p, b) => p?.shipmentPackages = b),
+        shipmentPackages = $options.field<BuiltList<ReadBarcodeApiPackage>>(
+            'shipmentPackages',
+            (a) => a?.shipmentPackages,
+            (s) => s?.shipmentPackages,
+            (p, b) => p?.shipmentPackages = b),
         super._();
 
   factory _$ReadBarcodeApiScanResultActions(
@@ -461,9 +460,6 @@ class _$ReadBarcodeApiScanResultActions
     pack.$middleware(middleware);
     shipment.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcodeApiScanResultReadBarcodeApiScanResultActions> get $serializer => ReadBarcodeApiScanResultReadBarcodeApiScanResultActions.serializer;
 
   FullType _$fullType;
   @override

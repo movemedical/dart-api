@@ -165,7 +165,7 @@ class _$FireOrderPushMessageApiRequestActions
   _$FireOrderPushMessageApiRequestActions._(this.$options)
       : $replace = $options.action<FireOrderPushMessageApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$FireOrderPushMessageApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FireOrderPushMessageApiRequestFireOrderPushMessageApiRequestActions> get $serializer => FireOrderPushMessageApiRequestFireOrderPushMessageApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

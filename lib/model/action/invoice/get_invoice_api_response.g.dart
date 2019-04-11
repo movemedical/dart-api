@@ -262,9 +262,6 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
     displayRules.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetInvoiceApiResponseGetInvoiceApiResponseActions> get $serializer => GetInvoiceApiResponseGetInvoiceApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiResponse);

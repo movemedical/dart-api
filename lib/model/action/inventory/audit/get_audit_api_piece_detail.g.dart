@@ -181,13 +181,10 @@ class _$GetAuditApiPieceDetailActions extends GetAuditApiPieceDetailActions {
   _$GetAuditApiPieceDetailActions._(this.$options)
       : $replace = $options.action<GetAuditApiPieceDetail>(
             '\$replace', (a) => a?.$replace),
-        pieceQty = $options.actionField<int>('pieceQty', (a) => a?.pieceQty,
+        pieceQty = $options.field<int>('pieceQty', (a) => a?.pieceQty,
             (s) => s?.pieceQty, (p, b) => p?.pieceQty = b),
-        totalPrice = $options.actionField<double>(
-            'totalPrice',
-            (a) => a?.totalPrice,
-            (s) => s?.totalPrice,
-            (p, b) => p?.totalPrice = b),
+        totalPrice = $options.field<double>('totalPrice', (a) => a?.totalPrice,
+            (s) => s?.totalPrice, (p, b) => p?.totalPrice = b),
         super._();
 
   factory _$GetAuditApiPieceDetailActions(
@@ -221,9 +218,6 @@ class _$GetAuditApiPieceDetailActions extends GetAuditApiPieceDetailActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAuditApiPieceDetailGetAuditApiPieceDetailActions> get $serializer => GetAuditApiPieceDetailGetAuditApiPieceDetailActions.serializer;
 
   FullType _$fullType;
   @override

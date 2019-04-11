@@ -236,9 +236,6 @@ class _$GetShippingServiceApiResponseActions
     shippingService.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetShippingServiceApiResponseGetShippingServiceApiResponseActions> get $serializer => GetShippingServiceApiResponseGetShippingServiceApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

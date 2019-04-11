@@ -188,9 +188,9 @@ class _$GetIntegrationIssueApiDisplayUserActions
   _$GetIntegrationIssueApiDisplayUserActions._(this.$options)
       : $replace = $options.action<GetIntegrationIssueApiDisplayUser>(
             '\$replace', (a) => a?.$replace),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -226,9 +226,6 @@ class _$GetIntegrationIssueApiDisplayUserActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetIntegrationIssueApiDisplayUserGetIntegrationIssueApiDisplayUserActions> get $serializer => GetIntegrationIssueApiDisplayUserGetIntegrationIssueApiDisplayUserActions.serializer;
 
   FullType _$fullType;
   @override

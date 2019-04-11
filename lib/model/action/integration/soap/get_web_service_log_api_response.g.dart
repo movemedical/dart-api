@@ -236,9 +236,6 @@ class _$GetWebServiceLogApiResponseActions
     webServiceLogDetail.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetWebServiceLogApiResponseGetWebServiceLogApiResponseActions> get $serializer => GetWebServiceLogApiResponseGetWebServiceLogApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

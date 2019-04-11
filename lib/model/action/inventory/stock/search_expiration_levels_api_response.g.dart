@@ -188,8 +188,8 @@ class _$SearchExpirationLevelsApiResponseActions
   _$SearchExpirationLevelsApiResponseActions._(this.$options)
       : $replace = $options.action<SearchExpirationLevelsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        levels = $options
-            .actionField<BuiltList<SearchExpirationLevelsApiExpirationLevel>>(
+        levels =
+            $options.field<BuiltList<SearchExpirationLevelsApiExpirationLevel>>(
                 'levels',
                 (a) => a?.levels,
                 (s) => s?.levels,
@@ -226,9 +226,6 @@ class _$SearchExpirationLevelsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchExpirationLevelsApiResponseSearchExpirationLevelsApiResponseActions> get $serializer => SearchExpirationLevelsApiResponseSearchExpirationLevelsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -184,9 +184,9 @@ class _$RefreshPresenceApiRequestActions
   _$RefreshPresenceApiRequestActions._(this.$options)
       : $replace = $options.action<RefreshPresenceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        objectId = $options.actionField<String>('objectId', (a) => a?.objectId,
+        objectId = $options.field<String>('objectId', (a) => a?.objectId,
             (s) => s?.objectId, (p, b) => p?.objectId = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
         super._();
 
@@ -221,9 +221,6 @@ class _$RefreshPresenceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RefreshPresenceApiRequestRefreshPresenceApiRequestActions> get $serializer => RefreshPresenceApiRequestRefreshPresenceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

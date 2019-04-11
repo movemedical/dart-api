@@ -117,9 +117,6 @@ class _$GetOrderReasonSpecificationApi extends GetOrderReasonSpecificationApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetOrderReasonSpecificationApi> get $serializer => CommandStateGetOrderReasonSpecificationApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

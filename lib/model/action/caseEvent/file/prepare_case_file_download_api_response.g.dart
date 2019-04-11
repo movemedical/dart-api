@@ -168,7 +168,7 @@ class _$PrepareCaseFileDownloadApiResponseActions
   _$PrepareCaseFileDownloadApiResponseActions._(this.$options)
       : $replace = $options.action<PrepareCaseFileDownloadApiResponse>(
             '\$replace', (a) => a?.$replace),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -202,9 +202,6 @@ class _$PrepareCaseFileDownloadApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareCaseFileDownloadApiResponsePrepareCaseFileDownloadApiResponseActions> get $serializer => PrepareCaseFileDownloadApiResponsePrepareCaseFileDownloadApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

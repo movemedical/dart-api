@@ -181,12 +181,11 @@ class _$ListPkgContentsApiResponseActions
   _$ListPkgContentsApiResponseActions._(this.$options)
       : $replace = $options.action<ListPkgContentsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        contents =
-            $options.actionField<BuiltList<ListPkgContentsApiContentItem>>(
-                'contents',
-                (a) => a?.contents,
-                (s) => s?.contents,
-                (p, b) => p?.contents = b),
+        contents = $options.field<BuiltList<ListPkgContentsApiContentItem>>(
+            'contents',
+            (a) => a?.contents,
+            (s) => s?.contents,
+            (p, b) => p?.contents = b),
         super._();
 
   factory _$ListPkgContentsApiResponseActions(
@@ -218,9 +217,6 @@ class _$ListPkgContentsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPkgContentsApiResponseListPkgContentsApiResponseActions> get $serializer => ListPkgContentsApiResponseListPkgContentsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

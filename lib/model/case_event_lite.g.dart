@@ -218,17 +218,17 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
   _$CaseEventLiteActions._(this.$options)
       : $replace =
             $options.action<CaseEventLite>('\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        eventId = $options.actionField<String>('eventId', (a) => a?.eventId,
+        eventId = $options.field<String>('eventId', (a) => a?.eventId,
             (s) => s?.eventId, (p, b) => p?.eventId = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<CaseEventStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
+        status = $options.field<CaseEventStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
         super._();
 
   factory _$CaseEventLiteActions(CaseEventLiteActionsOptions options) =>
@@ -264,9 +264,6 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CaseEventLiteCaseEventLiteActions> get $serializer => CaseEventLiteCaseEventLiteActions.serializer;
 
   FullType _$fullType;
   @override

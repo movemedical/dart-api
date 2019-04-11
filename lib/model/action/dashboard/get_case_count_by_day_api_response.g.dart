@@ -184,7 +184,7 @@ class _$GetCaseCountByDayApiResponseActions
   _$GetCaseCountByDayApiResponseActions._(this.$options)
       : $replace = $options.action<GetCaseCountByDayApiResponse>(
             '\$replace', (a) => a?.$replace),
-        counts = $options.actionField<BuiltList<GetCaseCountByDayApiCaseCount>>(
+        counts = $options.field<BuiltList<GetCaseCountByDayApiCaseCount>>(
             'counts',
             (a) => a?.counts,
             (s) => s?.counts,
@@ -220,9 +220,6 @@ class _$GetCaseCountByDayApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseCountByDayApiResponseGetCaseCountByDayApiResponseActions> get $serializer => GetCaseCountByDayApiResponseGetCaseCountByDayApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -246,21 +246,21 @@ class _$ItemVersionActions extends ItemVersionActions {
   _$ItemVersionActions._(this.$options)
       : $replace =
             $options.action<ItemVersion>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        version = $options.actionField<String>('version', (a) => a?.version,
+        version = $options.field<String>('version', (a) => a?.version,
             (s) => s?.version, (p, b) => p?.version = b),
-        startManufactureDate = $options.actionField<DateTime>(
+        startManufactureDate = $options.field<DateTime>(
             'startManufactureDate',
             (a) => a?.startManufactureDate,
             (s) => s?.startManufactureDate,
             (p, b) => p?.startManufactureDate = b),
-        endManufactureDate = $options.actionField<DateTime>(
+        endManufactureDate = $options.field<DateTime>(
             'endManufactureDate',
             (a) => a?.endManufactureDate,
             (s) => s?.endManufactureDate,
             (p, b) => p?.endManufactureDate = b),
-        definedContainers = $options.actionField<bool>(
+        definedContainers = $options.field<bool>(
             'definedContainers',
             (a) => a?.definedContainers,
             (s) => s?.definedContainers,
@@ -302,9 +302,6 @@ class _$ItemVersionActions extends ItemVersionActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ItemVersionItemVersionActions> get $serializer => ItemVersionItemVersionActions.serializer;
 
   FullType _$fullType;
   @override

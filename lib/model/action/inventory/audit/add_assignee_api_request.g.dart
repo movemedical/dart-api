@@ -198,9 +198,9 @@ class _$AddAssigneeApiRequestActions extends AddAssigneeApiRequestActions {
   _$AddAssigneeApiRequestActions._(this.$options)
       : $replace = $options.action<AddAssigneeApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        assignees = $options.actionField<BuiltList<AddAssigneeApiAssignee>>(
+        assignees = $options.field<BuiltList<AddAssigneeApiAssignee>>(
             'assignees',
             (a) => a?.assignees,
             (s) => s?.assignees,
@@ -237,9 +237,6 @@ class _$AddAssigneeApiRequestActions extends AddAssigneeApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddAssigneeApiRequestAddAssigneeApiRequestActions> get $serializer => AddAssigneeApiRequestAddAssigneeApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

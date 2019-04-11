@@ -321,23 +321,23 @@ class _$GetUiSetupAllApiResponseActions
   _$GetUiSetupAllApiResponseActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiResponse>(
             '\$replace', (a) => a?.$replace),
-        inventoryEnabled = $options.actionField<bool>(
+        inventoryEnabled = $options.field<bool>(
             'inventoryEnabled',
             (a) => a?.inventoryEnabled,
             (s) => s?.inventoryEnabled,
             (p, b) => p?.inventoryEnabled = b),
-        stockAutoSearch = $options.actionField<bool>(
+        stockAutoSearch = $options.field<bool>(
             'stockAutoSearch',
             (a) => a?.stockAutoSearch,
             (s) => s?.stockAutoSearch,
             (p, b) => p?.stockAutoSearch = b),
-        tempPhysicianEnabled = $options.actionField<bool>(
+        tempPhysicianEnabled = $options.field<bool>(
             'tempPhysicianEnabled',
             (a) => a?.tempPhysicianEnabled,
             (s) => s?.tempPhysicianEnabled,
             (p, b) => p?.tempPhysicianEnabled = b),
         invTransferTypes =
-            $options.actionField<BuiltList<GetUiSetupAllApiInvTransferType>>(
+            $options.field<BuiltList<GetUiSetupAllApiInvTransferType>>(
                 'invTransferTypes',
                 (a) => a?.invTransferTypes,
                 (s) => s?.invTransferTypes,
@@ -351,7 +351,7 @@ class _$GetUiSetupAllApiResponseActions
             (s) => s?.user,
             (b) => b?.user,
             (parent, builder) => parent?.user = builder)),
-        uiConfigs = $options.actionField<BuiltList<UiClientConfiguration>>(
+        uiConfigs = $options.field<BuiltList<UiClientConfiguration>>(
             'uiConfigs',
             (a) => a?.uiConfigs,
             (s) => s?.uiConfigs,
@@ -403,9 +403,6 @@ class _$GetUiSetupAllApiResponseActions
     super.$middleware(middleware);
     user.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupAllApiResponseGetUiSetupAllApiResponseActions> get $serializer => GetUiSetupAllApiResponseGetUiSetupAllApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

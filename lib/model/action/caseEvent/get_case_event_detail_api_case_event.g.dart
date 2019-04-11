@@ -847,12 +847,12 @@ class _$GetCaseEventDetailApiCaseEventActions
   _$GetCaseEventDetailApiCaseEventActions._(this.$options)
       : $replace = $options.action<GetCaseEventDetailApiCaseEvent>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        status = $options.actionField<CaseEventStatus>('status',
-            (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        bodySide = $options.actionField<BodySide>('bodySide',
-            (a) => a?.bodySide, (s) => s?.bodySide, (p, b) => p?.bodySide = b),
+        status = $options.field<CaseEventStatus>('status', (a) => a?.status,
+            (s) => s?.status, (p, b) => p?.status = b),
+        bodySide = $options.field<BodySide>('bodySide', (a) => a?.bodySide,
+            (s) => s?.bodySide, (p, b) => p?.bodySide = b),
         caseType = CaseTypeActions(() =>
             $options.stateful<CaseType, CaseTypeBuilder, CaseTypeActions>(
                 'caseType',
@@ -895,7 +895,7 @@ class _$GetCaseEventDetailApiCaseEventActions
                 (s) => s?.physician,
                 (b) => b?.physician,
                 (parent, builder) => parent?.physician = builder)),
-        physicianTemp = $options.actionField<String>(
+        physicianTemp = $options.field<String>(
             'physicianTemp',
             (a) => a?.physicianTemp,
             (s) => s?.physicianTemp,
@@ -975,22 +975,22 @@ class _$GetCaseEventDetailApiCaseEventActions
                 (s) => s?.secondaryInsurance,
                 (b) => b?.secondaryInsurance,
                 (parent, builder) => parent?.secondaryInsurance = builder)),
-        linkedOrders = $options.actionField<BuiltList<OrderHeaderLite>>(
+        linkedOrders = $options.field<BuiltList<OrderHeaderLite>>(
             'linkedOrders',
             (a) => a?.linkedOrders,
             (s) => s?.linkedOrders,
             (p, b) => p?.linkedOrders = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        requirementsDeliverBy = $options.actionField<DateTime>(
+        requirementsDeliverBy = $options.field<DateTime>(
             'requirementsDeliverBy',
             (a) => a?.requirementsDeliverBy,
             (s) => s?.requirementsDeliverBy,
             (p, b) => p?.requirementsDeliverBy = b),
-        requirementsDeliverToAttn = $options.actionField<String>(
+        requirementsDeliverToAttn = $options.field<String>(
             'requirementsDeliverToAttn',
             (a) => a?.requirementsDeliverToAttn,
             (s) => s?.requirementsDeliverToAttn,
@@ -1117,9 +1117,6 @@ class _$GetCaseEventDetailApiCaseEventActions
     requirementsDeliverToAddress.$middleware(middleware);
     requirementsDeliverToOverrideAddress.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiCaseEventGetCaseEventDetailApiCaseEventActions> get $serializer => GetCaseEventDetailApiCaseEventGetCaseEventDetailApiCaseEventActions.serializer;
 
   FullType _$fullType;
   @override

@@ -117,9 +117,6 @@ class _$RemoveProcedureFromItemCategoryApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRemoveProcedureFromItemCategoryApi> get $serializer => CommandStateRemoveProcedureFromItemCategoryApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

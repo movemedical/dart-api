@@ -198,9 +198,9 @@ class _$GetOrderReasonSpecificationApiOrderReasonDocActions
       : $replace =
             $options.action<GetOrderReasonSpecificationApiOrderReasonDoc>(
                 '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        doc = $options.actionField<String>(
+        doc = $options.field<String>(
             'doc', (a) => a?.doc, (s) => s?.doc, (p, b) => p?.doc = b),
         super._();
 
@@ -236,9 +236,6 @@ class _$GetOrderReasonSpecificationApiOrderReasonDocActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrderReasonSpecificationApiOrderReasonDocGetOrderReasonSpecificationApiOrderReasonDocActions> get $serializer => GetOrderReasonSpecificationApiOrderReasonDocGetOrderReasonSpecificationApiOrderReasonDocActions.serializer;
 
   FullType _$fullType;
   @override

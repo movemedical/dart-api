@@ -80,9 +80,6 @@ class _$ShipPkgApi extends ShipPkgApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateShipPkgApi> get $serializer => CommandStateShipPkgApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -212,11 +212,11 @@ class _$GetItemLotSerialHistoryApiRequestActions
   _$GetItemLotSerialHistoryApiRequestActions._(this.$options)
       : $replace = $options.action<GetItemLotSerialHistoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        lotId = $options.actionField<String>(
+        lotId = $options.field<String>(
             'lotId', (a) => a?.lotId, (s) => s?.lotId, (p, b) => p?.lotId = b),
-        serialId = $options.actionField<String>('serialId', (a) => a?.serialId,
+        serialId = $options.field<String>('serialId', (a) => a?.serialId,
             (s) => s?.serialId, (p, b) => p?.serialId = b),
         super._();
 
@@ -254,9 +254,6 @@ class _$GetItemLotSerialHistoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetItemLotSerialHistoryApiRequestGetItemLotSerialHistoryApiRequestActions> get $serializer => GetItemLotSerialHistoryApiRequestGetItemLotSerialHistoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

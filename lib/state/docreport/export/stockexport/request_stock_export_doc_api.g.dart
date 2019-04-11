@@ -113,9 +113,6 @@ class _$RequestStockExportDocApi extends RequestStockExportDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestStockExportDocApi> get $serializer => CommandStateRequestStockExportDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

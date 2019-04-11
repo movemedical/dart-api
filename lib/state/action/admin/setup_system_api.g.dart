@@ -108,9 +108,6 @@ class _$SetupSystemApi extends SetupSystemApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSetupSystemApi> get $serializer => CommandStateSetupSystemApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

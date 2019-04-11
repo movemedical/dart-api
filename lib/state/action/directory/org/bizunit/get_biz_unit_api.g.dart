@@ -108,9 +108,6 @@ class _$GetBizUnitApi extends GetBizUnitApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetBizUnitApi> get $serializer => CommandStateGetBizUnitApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -208,13 +208,13 @@ class _$HcrTeamActions extends HcrTeamActions {
 
   _$HcrTeamActions._(this.$options)
       : $replace = $options.action<HcrTeam>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        ouId = $options.actionField<String>(
+        ouId = $options.field<String>(
             'ouId', (a) => a?.ouId, (s) => s?.ouId, (p, b) => p?.ouId = b),
-        type = $options.actionField<HcrTeamType>(
+        type = $options.field<HcrTeamType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -254,9 +254,6 @@ class _$HcrTeamActions extends HcrTeamActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<HcrTeamHcrTeamActions> get $serializer => HcrTeamHcrTeamActions.serializer;
 
   FullType _$fullType;
   @override

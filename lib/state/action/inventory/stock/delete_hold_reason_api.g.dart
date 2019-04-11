@@ -97,9 +97,6 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateDeleteHoldReasonApi> get $serializer => CommandStateDeleteHoldReasonApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

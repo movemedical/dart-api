@@ -166,7 +166,7 @@ class _$GetAdjustmentApiDisplayRulesActions
   _$GetAdjustmentApiDisplayRulesActions._(this.$options)
       : $replace = $options.action<GetAdjustmentApiDisplayRules>(
             '\$replace', (a) => a?.$replace),
-        confirm = $options.actionField<bool>('confirm', (a) => a?.confirm,
+        confirm = $options.field<bool>('confirm', (a) => a?.confirm,
             (s) => s?.confirm, (p, b) => p?.confirm = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$GetAdjustmentApiDisplayRulesActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAdjustmentApiDisplayRulesGetAdjustmentApiDisplayRulesActions> get $serializer => GetAdjustmentApiDisplayRulesGetAdjustmentApiDisplayRulesActions.serializer;
 
   FullType _$fullType;
   @override

@@ -111,9 +111,6 @@ class _$SearchHcrTeamsApi extends SearchHcrTeamsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSearchHcrTeamsApi> get $serializer => CommandStateSearchHcrTeamsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

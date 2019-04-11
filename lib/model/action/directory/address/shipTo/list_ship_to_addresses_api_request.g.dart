@@ -394,31 +394,25 @@ class _$ListShipToAddressesApiRequestActions
   _$ListShipToAddressesApiRequestActions._(this.$options)
       : $replace = $options.action<ListShipToAddressesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        linkedToCustomer = $options.actionField<bool>(
+        linkedToCustomer = $options.field<bool>(
             'linkedToCustomer',
             (a) => a?.linkedToCustomer,
             (s) => s?.linkedToCustomer,
             (p, b) => p?.linkedToCustomer = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        scopeToLocationVizibility = $options.actionField<bool>(
+        scopeToLocationVizibility = $options.field<bool>(
             'scopeToLocationVizibility',
             (a) => a?.scopeToLocationVizibility,
             (s) => s?.scopeToLocationVizibility,
@@ -496,9 +490,6 @@ class _$ListShipToAddressesApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListShipToAddressesApiRequestListShipToAddressesApiRequestActions> get $serializer => ListShipToAddressesApiRequestListShipToAddressesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

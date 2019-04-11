@@ -179,12 +179,12 @@ class _$FindPatientApiRequestActions extends FindPatientApiRequestActions {
   _$FindPatientApiRequestActions._(this.$options)
       : $replace = $options.action<FindPatientApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hsFacilityId = $options.actionField<String>(
+        hsFacilityId = $options.field<String>(
             'hsFacilityId',
             (a) => a?.hsFacilityId,
             (s) => s?.hsFacilityId,
             (p, b) => p?.hsFacilityId = b),
-        mrn = $options.actionField<String>(
+        mrn = $options.field<String>(
             'mrn', (a) => a?.mrn, (s) => s?.mrn, (p, b) => p?.mrn = b),
         super._();
 
@@ -218,9 +218,6 @@ class _$FindPatientApiRequestActions extends FindPatientApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FindPatientApiRequestFindPatientApiRequestActions> get $serializer => FindPatientApiRequestFindPatientApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

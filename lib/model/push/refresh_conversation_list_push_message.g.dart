@@ -148,9 +148,6 @@ class _$RefreshConversationListPushMessageActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<RefreshConversationListPushMessageRefreshConversationListPushMessageActions> get $serializer => RefreshConversationListPushMessageRefreshConversationListPushMessageActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

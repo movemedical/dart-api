@@ -233,19 +233,15 @@ class _$ListCaseRequirementsApiResponseActions
   _$ListCaseRequirementsApiResponseActions._(this.$options)
       : $replace = $options.action<ListCaseRequirementsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data =
-            $options.actionField<BuiltList<ListCaseRequirementsApiItemRequest>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        editRequirements = $options.actionField<bool>(
+        data = $options.field<BuiltList<ListCaseRequirementsApiItemRequest>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        editRequirements = $options.field<bool>(
             'editRequirements',
             (a) => a?.editRequirements,
             (s) => s?.editRequirements,
             (p, b) => p?.editRequirements = b),
-        confirmCase = $options.actionField<bool>(
-            'confirmCase',
-            (a) => a?.confirmCase,
-            (s) => s?.confirmCase,
-            (p, b) => p?.confirmCase = b),
+        confirmCase = $options.field<bool>('confirmCase', (a) => a?.confirmCase,
+            (s) => s?.confirmCase, (p, b) => p?.confirmCase = b),
         super._();
 
   factory _$ListCaseRequirementsApiResponseActions(
@@ -282,9 +278,6 @@ class _$ListCaseRequirementsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseRequirementsApiResponseListCaseRequirementsApiResponseActions> get $serializer => ListCaseRequirementsApiResponseListCaseRequirementsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

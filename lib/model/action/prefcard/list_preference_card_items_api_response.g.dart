@@ -196,12 +196,12 @@ class _$ListPreferenceCardItemsApiResponseActions
   _$ListPreferenceCardItemsApiResponseActions._(this.$options)
       : $replace = $options.action<ListPreferenceCardItemsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        preferenceCardItems = $options.actionField<
-                BuiltList<ListPreferenceCardItemsApiPreferenceCardItem>>(
-            'preferenceCardItems',
-            (a) => a?.preferenceCardItems,
-            (s) => s?.preferenceCardItems,
-            (p, b) => p?.preferenceCardItems = b),
+        preferenceCardItems = $options
+            .field<BuiltList<ListPreferenceCardItemsApiPreferenceCardItem>>(
+                'preferenceCardItems',
+                (a) => a?.preferenceCardItems,
+                (s) => s?.preferenceCardItems,
+                (p, b) => p?.preferenceCardItems = b),
         super._();
 
   factory _$ListPreferenceCardItemsApiResponseActions(
@@ -234,9 +234,6 @@ class _$ListPreferenceCardItemsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPreferenceCardItemsApiResponseListPreferenceCardItemsApiResponseActions> get $serializer => ListPreferenceCardItemsApiResponseListPreferenceCardItemsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

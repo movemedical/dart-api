@@ -111,9 +111,6 @@ class _$CreateMessageApi extends CreateMessageApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateMessageApi> get $serializer => CommandStateCreateMessageApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

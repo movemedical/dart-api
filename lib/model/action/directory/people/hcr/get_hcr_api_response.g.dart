@@ -210,9 +210,6 @@ class _$GetHcrApiResponseActions extends GetHcrApiResponseActions {
     detail.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetHcrApiResponseGetHcrApiResponseActions> get $serializer => GetHcrApiResponseGetHcrApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetHcrApiResponse);

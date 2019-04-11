@@ -608,23 +608,20 @@ class _$GetCustomerApiCustomerDetailActions
   _$GetCustomerApiCustomerDetailActions._(this.$options)
       : $replace = $options.action<GetCustomerApiCustomerDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        number = $options.actionField<String>('number', (a) => a?.number,
+        number = $options.field<String>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        hsOrgId = $options.actionField<String>('hsOrgId', (a) => a?.hsOrgId,
+        hsOrgId = $options.field<String>('hsOrgId', (a) => a?.hsOrgId,
             (s) => s?.hsOrgId, (p, b) => p?.hsOrgId = b),
-        hsOrgName = $options.actionField<String>(
-            'hsOrgName',
-            (a) => a?.hsOrgName,
-            (s) => s?.hsOrgName,
-            (p, b) => p?.hsOrgName = b),
+        hsOrgName = $options.field<String>('hsOrgName', (a) => a?.hsOrgName,
+            (s) => s?.hsOrgName, (p, b) => p?.hsOrgName = b),
         defaultShipTo = CustomerAddressActions(() => $options.stateful<
                 CustomerAddress,
                 CustomerAddressBuilder,
@@ -643,7 +640,7 @@ class _$GetCustomerApiCustomerDetailActions
             (s) => s?.defaultBillTo,
             (b) => b?.defaultBillTo,
             (parent, builder) => parent?.defaultBillTo = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -659,33 +656,27 @@ class _$GetCustomerApiCustomerDetailActions
                 (s) => s?.phoneNumber,
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        publicListing = $options.actionField<bool>(
+        publicListing = $options.field<bool>(
             'publicListing',
             (a) => a?.publicListing,
             (s) => s?.publicListing,
             (p, b) => p?.publicListing = b),
-        creditHold = $options.actionField<bool>(
-            'creditHold',
-            (a) => a?.creditHold,
-            (s) => s?.creditHold,
-            (p, b) => p?.creditHold = b),
-        paymentTerms = $options.actionField<String>(
+        creditHold = $options.field<bool>('creditHold', (a) => a?.creditHold,
+            (s) => s?.creditHold, (p, b) => p?.creditHold = b),
+        paymentTerms = $options.field<String>(
             'paymentTerms',
             (a) => a?.paymentTerms,
             (s) => s?.paymentTerms,
             (p, b) => p?.paymentTerms = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        moveManaged = $options.actionField<bool>(
-            'moveManaged',
-            (a) => a?.moveManaged,
-            (s) => s?.moveManaged,
-            (p, b) => p?.moveManaged = b),
+        moveManaged = $options.field<bool>('moveManaged', (a) => a?.moveManaged,
+            (s) => s?.moveManaged, (p, b) => p?.moveManaged = b),
         super._();
 
   factory _$GetCustomerApiCustomerDetailActions(
@@ -760,9 +751,6 @@ class _$GetCustomerApiCustomerDetailActions
     email.$middleware(middleware);
     phoneNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCustomerApiCustomerDetailGetCustomerApiCustomerDetailActions> get $serializer => GetCustomerApiCustomerDetailGetCustomerApiCustomerDetailActions.serializer;
 
   FullType _$fullType;
   @override

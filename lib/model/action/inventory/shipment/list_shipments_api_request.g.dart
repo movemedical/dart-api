@@ -463,17 +463,14 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   _$ListShipmentsApiRequestActions._(this.$options)
       : $replace = $options.action<ListShipmentsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        shipmentNumber = $options.actionField<String>(
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        shipmentNumber = $options.field<String>(
             'shipmentNumber',
             (a) => a?.shipmentNumber,
             (s) => s?.shipmentNumber,
             (p, b) => p?.shipmentNumber = b),
-        orderNumber = $options.actionField<String>(
+        orderNumber = $options.field<String>(
             'orderNumber',
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
@@ -485,23 +482,23 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
-        status = $options.actionField<BuiltList<ShipmentStatus>>('status',
+        status = $options.field<BuiltList<ShipmentStatus>>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        fromLocationId = $options.actionField<String>(
+        fromLocationId = $options.field<String>(
             'fromLocationId',
             (a) => a?.fromLocationId,
             (s) => s?.fromLocationId,
             (p, b) => p?.fromLocationId = b),
-        toLocationId = $options.actionField<String>(
+        toLocationId = $options.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
             (p, b) => p?.toLocationId = b),
-        carrier = $options.actionField<MoveShippingCarrier>('carrier',
+        carrier = $options.field<MoveShippingCarrier>('carrier',
             (a) => a?.carrier, (s) => s?.carrier, (p, b) => p?.carrier = b),
-        openPicks = $options.actionField<bool>('openPicks', (a) => a?.openPicks,
+        openPicks = $options.field<bool>('openPicks', (a) => a?.openPicks,
             (s) => s?.openPicks, (p, b) => p?.openPicks = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -583,9 +580,6 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListShipmentsApiRequestListShipmentsApiRequestActions> get $serializer => ListShipmentsApiRequestListShipmentsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

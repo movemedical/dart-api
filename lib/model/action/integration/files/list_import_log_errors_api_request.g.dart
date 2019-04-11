@@ -256,17 +256,17 @@ class _$ListImportLogErrorsApiRequestActions
   _$ListImportLogErrorsApiRequestActions._(this.$options)
       : $replace = $options.action<ListImportLogErrorsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        importLogFileId = $options.actionField<String>(
+        importLogFileId = $options.field<String>(
             'importLogFileId',
             (a) => a?.importLogFileId,
             (s) => s?.importLogFileId,
             (p, b) => p?.importLogFileId = b),
-        integrationIssueId = $options.actionField<String>(
+        integrationIssueId = $options.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
             (p, b) => p?.integrationIssueId = b),
-        skipped = $options.actionField<bool>('skipped', (a) => a?.skipped,
+        skipped = $options.field<bool>('skipped', (a) => a?.skipped,
             (s) => s?.skipped, (p, b) => p?.skipped = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -320,9 +320,6 @@ class _$ListImportLogErrorsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListImportLogErrorsApiRequestListImportLogErrorsApiRequestActions> get $serializer => ListImportLogErrorsApiRequestListImportLogErrorsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

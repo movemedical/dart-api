@@ -274,26 +274,26 @@ class _$FacilityOptionActions extends FacilityOptionActions {
   _$FacilityOptionActions._(this.$options)
       : $replace =
             $options.action<FacilityOption>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        facilityType = $options.actionField<FacilityType>(
+        facilityType = $options.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        accountNumber = $options.actionField<String>(
+        accountNumber = $options.field<String>(
             'accountNumber',
             (a) => a?.accountNumber,
             (s) => s?.accountNumber,
             (p, b) => p?.accountNumber = b),
-        addressCity = $options.actionField<String>(
+        addressCity = $options.field<String>(
             'addressCity',
             (a) => a?.addressCity,
             (s) => s?.addressCity,
             (p, b) => p?.addressCity = b),
-        addressState = $options.actionField<String>(
+        addressState = $options.field<String>(
             'addressState',
             (a) => a?.addressState,
             (s) => s?.addressState,
@@ -337,9 +337,6 @@ class _$FacilityOptionActions extends FacilityOptionActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FacilityOptionFacilityOptionActions> get $serializer => FacilityOptionFacilityOptionActions.serializer;
 
   FullType _$fullType;
   @override

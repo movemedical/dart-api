@@ -267,27 +267,24 @@ class _$ListStockForUsageApiCreateOrderDataActions
   _$ListStockForUsageApiCreateOrderDataActions._(this.$options)
       : $replace = $options.action<ListStockForUsageApiCreateOrderData>(
             '\$replace', (a) => a?.$replace),
-        hcrTeamType = $options.actionField<HcrTeamType>(
+        hcrTeamType = $options.field<HcrTeamType>(
             'hcrTeamType',
             (a) => a?.hcrTeamType,
             (s) => s?.hcrTeamType,
             (p, b) => p?.hcrTeamType = b),
-        hcrTeamId = $options.actionField<String>(
-            'hcrTeamId',
-            (a) => a?.hcrTeamId,
-            (s) => s?.hcrTeamId,
-            (p, b) => p?.hcrTeamId = b),
-        salesOrgUnitId = $options.actionField<String>(
+        hcrTeamId = $options.field<String>('hcrTeamId', (a) => a?.hcrTeamId,
+            (s) => s?.hcrTeamId, (p, b) => p?.hcrTeamId = b),
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        toLocationType = $options.actionField<LocationType>(
+        toLocationType = $options.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        toLocationId = $options.actionField<String>(
+        toLocationId = $options.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
@@ -332,9 +329,6 @@ class _$ListStockForUsageApiCreateOrderDataActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForUsageApiCreateOrderDataListStockForUsageApiCreateOrderDataActions> get $serializer => ListStockForUsageApiCreateOrderDataListStockForUsageApiCreateOrderDataActions.serializer;
 
   FullType _$fullType;
   @override

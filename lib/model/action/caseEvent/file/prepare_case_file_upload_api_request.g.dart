@@ -315,31 +315,31 @@ class _$PrepareCaseFileUploadApiRequestActions
   _$PrepareCaseFileUploadApiRequestActions._(this.$options)
       : $replace = $options.action<PrepareCaseFileUploadApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
-        fileDescription = $options.actionField<String>(
+        fileDescription = $options.field<String>(
             'fileDescription',
             (a) => a?.fileDescription,
             (s) => s?.fileDescription,
             (p, b) => p?.fileDescription = b),
-        fileType = $options.actionField<CaseFileType>('fileType',
-            (a) => a?.fileType, (s) => s?.fileType, (p, b) => p?.fileType = b),
-        estimatedSizeKb = $options.actionField<int>(
+        fileType = $options.field<CaseFileType>('fileType', (a) => a?.fileType,
+            (s) => s?.fileType, (p, b) => p?.fileType = b),
+        estimatedSizeKb = $options.field<int>(
             'estimatedSizeKb',
             (a) => a?.estimatedSizeKb,
             (s) => s?.estimatedSizeKb,
             (p, b) => p?.estimatedSizeKb = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        visibility = $options.actionField<Visibility>(
+        visibility = $options.field<Visibility>(
             'visibility',
             (a) => a?.visibility,
             (s) => s?.visibility,
@@ -388,9 +388,6 @@ class _$PrepareCaseFileUploadApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareCaseFileUploadApiRequestPrepareCaseFileUploadApiRequestActions> get $serializer => PrepareCaseFileUploadApiRequestPrepareCaseFileUploadApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

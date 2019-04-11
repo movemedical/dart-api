@@ -302,23 +302,20 @@ class _$RequestUnreconciledCaseUsageReportApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        hcrOrTeamId = $options.actionField<String>(
+        hcrOrTeamId = $options.field<String>(
             'hcrOrTeamId',
             (a) => a?.hcrOrTeamId,
             (s) => s?.hcrOrTeamId,
             (p, b) => p?.hcrOrTeamId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
         super._();
 
   factory _$RequestUnreconciledCaseUsageReportApiRequestActions(
@@ -365,9 +362,6 @@ class _$RequestUnreconciledCaseUsageReportApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestUnreconciledCaseUsageReportApiRequestRequestUnreconciledCaseUsageReportApiRequestActions> get $serializer => RequestUnreconciledCaseUsageReportApiRequestRequestUnreconciledCaseUsageReportApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

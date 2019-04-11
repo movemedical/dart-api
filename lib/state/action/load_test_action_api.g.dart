@@ -111,9 +111,6 @@ class _$LoadTestActionApi extends LoadTestActionApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateLoadTestActionApi> get $serializer => CommandStateLoadTestActionApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

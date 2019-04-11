@@ -205,7 +205,7 @@ class _$PrepareFacilityFileUploadApiResponseActions
   _$PrepareFacilityFileUploadApiResponseActions._(this.$options)
       : $replace = $options.action<PrepareFacilityFileUploadApiResponse>(
             '\$replace', (a) => a?.$replace),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         file = FileDetailActions(() =>
             $options.stateful<FileDetail, FileDetailBuilder, FileDetailActions>(
@@ -254,9 +254,6 @@ class _$PrepareFacilityFileUploadApiResponseActions
     super.$middleware(middleware);
     file.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareFacilityFileUploadApiResponsePrepareFacilityFileUploadApiResponseActions> get $serializer => PrepareFacilityFileUploadApiResponsePrepareFacilityFileUploadApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

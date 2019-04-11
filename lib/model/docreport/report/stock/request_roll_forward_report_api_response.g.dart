@@ -358,7 +358,7 @@ class _$RequestRollForwardReportApiResponseActions
   _$RequestRollForwardReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestRollForwardReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -390,14 +390,11 @@ class _$RequestRollForwardReportApiResponseActions
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
         super._();
 
@@ -454,9 +451,6 @@ class _$RequestRollForwardReportApiResponseActions
     lot.$middleware(middleware);
     serial.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestRollForwardReportApiResponseRequestRollForwardReportApiResponseActions> get $serializer => RequestRollForwardReportApiResponseRequestRollForwardReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

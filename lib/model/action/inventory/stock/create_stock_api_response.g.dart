@@ -161,7 +161,7 @@ class _$CreateStockApiResponseActions extends CreateStockApiResponseActions {
   _$CreateStockApiResponseActions._(this.$options)
       : $replace = $options.action<CreateStockApiResponse>(
             '\$replace', (a) => a?.$replace),
-        stockSummaryKey = $options.actionField<String>(
+        stockSummaryKey = $options.field<String>(
             'stockSummaryKey',
             (a) => a?.stockSummaryKey,
             (s) => s?.stockSummaryKey,
@@ -197,9 +197,6 @@ class _$CreateStockApiResponseActions extends CreateStockApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateStockApiResponseCreateStockApiResponseActions> get $serializer => CreateStockApiResponseCreateStockApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

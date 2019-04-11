@@ -201,9 +201,9 @@ class _$RemoveAssigneesApiRequestActions
   _$RemoveAssigneesApiRequestActions._(this.$options)
       : $replace = $options.action<RemoveAssigneesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        ids = $options.actionField<BuiltList<String>>(
+        ids = $options.field<BuiltList<String>>(
             'ids', (a) => a?.ids, (s) => s?.ids, (p, b) => p?.ids = b),
         super._();
 
@@ -238,9 +238,6 @@ class _$RemoveAssigneesApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RemoveAssigneesApiRequestRemoveAssigneesApiRequestActions> get $serializer => RemoveAssigneesApiRequestRemoveAssigneesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

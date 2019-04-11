@@ -105,9 +105,6 @@ class _$CaseUsagePoRequestDocApi extends CaseUsagePoRequestDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCaseUsagePoRequestDocApi> get $serializer => CommandStateCaseUsagePoRequestDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

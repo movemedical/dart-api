@@ -247,16 +247,16 @@ class _$BuildVerifyApiExtraEnteredLineOptionActions
   _$BuildVerifyApiExtraEnteredLineOptionActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiExtraEnteredLineOption>(
             '\$replace', (a) => a?.$replace),
-        type = $options.actionField<BuildVerifyApiExtraEnteredLineOptionType>(
+        type = $options.field<BuildVerifyApiExtraEnteredLineOptionType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        otherExpectationMatchId = $options.actionField<String>(
+        otherExpectationMatchId = $options.field<String>(
             'otherExpectationMatchId',
             (a) => a?.otherExpectationMatchId,
             (s) => s?.otherExpectationMatchId,
             (p, b) => p?.otherExpectationMatchId = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        swappedOutExpectedStockId = $options.actionField<String>(
+        swappedOutExpectedStockId = $options.field<String>(
             'swappedOutExpectedStockId',
             (a) => a?.swappedOutExpectedStockId,
             (s) => s?.swappedOutExpectedStockId,
@@ -299,9 +299,6 @@ class _$BuildVerifyApiExtraEnteredLineOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiExtraEnteredLineOptionBuildVerifyApiExtraEnteredLineOptionActions> get $serializer => BuildVerifyApiExtraEnteredLineOptionBuildVerifyApiExtraEnteredLineOptionActions.serializer;
 
   FullType _$fullType;
   @override

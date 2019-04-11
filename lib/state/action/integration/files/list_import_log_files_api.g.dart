@@ -112,9 +112,6 @@ class _$ListImportLogFilesApi extends ListImportLogFilesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListImportLogFilesApi> get $serializer => CommandStateListImportLogFilesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

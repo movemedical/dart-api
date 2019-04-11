@@ -206,7 +206,7 @@ class _$ListAssociationJournalsApiRequestActions
   _$ListAssociationJournalsApiRequestActions._(this.$options)
       : $replace = $options.action<ListAssociationJournalsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockSnapshotId = $options.actionField<String>(
+        stockSnapshotId = $options.field<String>(
             'stockSnapshotId',
             (a) => a?.stockSnapshotId,
             (s) => s?.stockSnapshotId,
@@ -260,9 +260,6 @@ class _$ListAssociationJournalsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAssociationJournalsApiRequestListAssociationJournalsApiRequestActions> get $serializer => ListAssociationJournalsApiRequestListAssociationJournalsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

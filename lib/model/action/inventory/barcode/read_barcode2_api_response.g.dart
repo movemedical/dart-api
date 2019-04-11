@@ -604,21 +604,21 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
   _$ReadBarcode2ApiResponseActions._(this.$options)
       : $replace = $options.action<ReadBarcode2ApiResponse>(
             '\$replace', (a) => a?.$replace),
-        readType = $options.actionField<ReadBarcode2ApiReadType>('readType',
+        readType = $options.field<ReadBarcode2ApiReadType>('readType',
             (a) => a?.readType, (s) => s?.readType, (p, b) => p?.readType = b),
-        reconciledBarcodes = $options.actionField<BuiltList<String>>(
+        reconciledBarcodes = $options.field<BuiltList<String>>(
             'reconciledBarcodes',
             (a) => a?.reconciledBarcodes,
             (s) => s?.reconciledBarcodes,
             (p, b) => p?.reconciledBarcodes = b),
-        unreconciledBarcodes = $options.actionField<BuiltList<String>>(
+        unreconciledBarcodes = $options.field<BuiltList<String>>(
             'unreconciledBarcodes',
             (a) => a?.unreconciledBarcodes,
             (s) => s?.unreconciledBarcodes,
             (p, b) => p?.unreconciledBarcodes = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        complete = $options.actionField<bool>('complete', (a) => a?.complete,
+        complete = $options.field<bool>('complete', (a) => a?.complete,
             (s) => s?.complete, (p, b) => p?.complete = b),
         item = ItemActions(() =>
             $options.stateful<Item, ItemBuilder, ItemActions>(
@@ -627,7 +627,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
                 (s) => s?.item,
                 (b) => b?.item,
                 (parent, builder) => parent?.item = builder)),
-        unknownItem = $options.actionField<String>(
+        unknownItem = $options.field<String>(
             'unknownItem',
             (a) => a?.unknownItem,
             (s) => s?.unknownItem,
@@ -638,11 +638,8 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
             (s) => s?.lot,
             (b) => b?.lot,
             (parent, builder) => parent?.lot = builder)),
-        unknownLot = $options.actionField<String>(
-            'unknownLot',
-            (a) => a?.unknownLot,
-            (s) => s?.unknownLot,
-            (p, b) => p?.unknownLot = b),
+        unknownLot = $options.field<String>('unknownLot', (a) => a?.unknownLot,
+            (s) => s?.unknownLot, (p, b) => p?.unknownLot = b),
         serial = SerialActions(() =>
             $options.stateful<Serial, SerialBuilder, SerialActions>(
                 'serial',
@@ -650,7 +647,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
                 (s) => s?.serial,
                 (b) => b?.serial,
                 (parent, builder) => parent?.serial = builder)),
-        unknownSerial = $options.actionField<String>(
+        unknownSerial = $options.field<String>(
             'unknownSerial',
             (a) => a?.unknownSerial,
             (s) => s?.unknownSerial,
@@ -771,9 +768,6 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
     kitItem.$middleware(middleware);
     kitSerial.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcode2ApiResponseReadBarcode2ApiResponseActions> get $serializer => ReadBarcode2ApiResponseReadBarcode2ApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

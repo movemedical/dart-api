@@ -141,9 +141,6 @@ class _$UiSetupUpdatedPushMessageActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<UiSetupUpdatedPushMessageUiSetupUpdatedPushMessageActions> get $serializer => UiSetupUpdatedPushMessageUiSetupUpdatedPushMessageActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(UiSetupUpdatedPushMessage);

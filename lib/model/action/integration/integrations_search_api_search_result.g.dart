@@ -239,16 +239,16 @@ class _$IntegrationsSearchApiSearchResultActions
   _$IntegrationsSearchApiSearchResultActions._(this.$options)
       : $replace = $options.action<IntegrationsSearchApiSearchResult>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<IntegrationsSearchApiResultType>(
+        type = $options.field<IntegrationsSearchApiResultType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
             (p, b) => p?.displayText = b),
-        erpReferenceNumber = $options.actionField<String>(
+        erpReferenceNumber = $options.field<String>(
             'erpReferenceNumber',
             (a) => a?.erpReferenceNumber,
             (s) => s?.erpReferenceNumber,
@@ -291,9 +291,6 @@ class _$IntegrationsSearchApiSearchResultActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<IntegrationsSearchApiSearchResultIntegrationsSearchApiSearchResultActions> get $serializer => IntegrationsSearchApiSearchResultIntegrationsSearchApiSearchResultActions.serializer;
 
   FullType _$fullType;
   @override

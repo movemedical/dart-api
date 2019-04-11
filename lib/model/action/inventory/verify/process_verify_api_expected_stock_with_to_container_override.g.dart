@@ -225,7 +225,7 @@ class _$ProcessVerifyApiExpectedStockWithToContainerOverrideActions
       : $replace = $options
             .action<ProcessVerifyApiExpectedStockWithToContainerOverride>(
                 '\$replace', (a) => a?.$replace),
-        expectedStockId = $options.actionField<String>(
+        expectedStockId = $options.field<String>(
             'expectedStockId',
             (a) => a?.expectedStockId,
             (s) => s?.expectedStockId,
@@ -281,9 +281,6 @@ class _$ProcessVerifyApiExpectedStockWithToContainerOverrideActions
     super.$middleware(middleware);
     toContainer.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessVerifyApiExpectedStockWithToContainerOverrideProcessVerifyApiExpectedStockWithToContainerOverrideActions> get $serializer => ProcessVerifyApiExpectedStockWithToContainerOverrideProcessVerifyApiExpectedStockWithToContainerOverrideActions.serializer;
 
   FullType _$fullType;
   @override

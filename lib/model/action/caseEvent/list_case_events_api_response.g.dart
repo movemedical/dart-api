@@ -202,9 +202,9 @@ class _$ListCaseEventsApiResponseActions
   _$ListCaseEventsApiResponseActions._(this.$options)
       : $replace = $options.action<ListCaseEventsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListCaseEventsApiCaseEvent>>(
+        data = $options.field<BuiltList<ListCaseEventsApiCaseEvent>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -239,9 +239,6 @@ class _$ListCaseEventsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseEventsApiResponseListCaseEventsApiResponseActions> get $serializer => ListCaseEventsApiResponseListCaseEventsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

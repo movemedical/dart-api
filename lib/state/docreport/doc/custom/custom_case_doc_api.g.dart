@@ -111,9 +111,6 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCustomCaseDocApi> get $serializer => CommandStateCustomCaseDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

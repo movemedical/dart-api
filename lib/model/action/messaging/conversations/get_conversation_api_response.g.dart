@@ -392,28 +392,27 @@ class _$GetConversationApiResponseActions
   _$GetConversationApiResponseActions._(this.$options)
       : $replace = $options.action<GetConversationApiResponse>(
             '\$replace', (a) => a?.$replace),
-        urgency = $options.actionField<DateTime>('urgency', (a) => a?.urgency,
+        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
-        purpose = $options.actionField<String>('purpose', (a) => a?.purpose,
+        purpose = $options.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        stopped = $options.actionField<bool>('stopped', (a) => a?.stopped,
+        stopped = $options.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
-        defaultParticipantId = $options.actionField<String>(
+        defaultParticipantId = $options.field<String>(
             'defaultParticipantId',
             (a) => a?.defaultParticipantId,
             (s) => s?.defaultParticipantId,
             (p, b) => p?.defaultParticipantId = b),
-        participants =
-            $options.actionField<BuiltList<GetConversationApiParticipant>>(
-                'participants',
-                (a) => a?.participants,
-                (s) => s?.participants,
-                (p, b) => p?.participants = b),
-        links = $options.actionField<BuiltList<AttributableObject>>(
+        participants = $options.field<BuiltList<GetConversationApiParticipant>>(
+            'participants',
+            (a) => a?.participants,
+            (s) => s?.participants,
+            (p, b) => p?.participants = b),
+        links = $options.field<BuiltList<AttributableObject>>(
             'links', (a) => a?.links, (s) => s?.links, (p, b) => p?.links = b),
-        messages = $options.actionField<BuiltList<Message>>('messages',
+        messages = $options.field<BuiltList<Message>>('messages',
             (a) => a?.messages, (s) => s?.messages, (p, b) => p?.messages = b),
-        moreMessages = $options.actionField<bool>(
+        moreMessages = $options.field<bool>(
             'moreMessages',
             (a) => a?.moreMessages,
             (s) => s?.moreMessages,
@@ -481,9 +480,6 @@ class _$GetConversationApiResponseActions
     super.$middleware(middleware);
     displayRules.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetConversationApiResponseGetConversationApiResponseActions> get $serializer => GetConversationApiResponseGetConversationApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

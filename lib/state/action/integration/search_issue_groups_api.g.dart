@@ -112,9 +112,6 @@ class _$SearchIssueGroupsApi extends SearchIssueGroupsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSearchIssueGroupsApi> get $serializer => CommandStateSearchIssueGroupsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

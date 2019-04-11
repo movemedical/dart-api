@@ -242,24 +242,18 @@ class _$HospitalActions extends HospitalActions {
 
   _$HospitalActions._(this.$options)
       : $replace = $options.action<Hospital>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        displayName = $options.actionField<String>(
+        displayName = $options.field<String>(
             'displayName',
             (a) => a?.displayName,
             (s) => s?.displayName,
             (p, b) => p?.displayName = b),
-        creditHold = $options.actionField<bool>(
-            'creditHold',
-            (a) => a?.creditHold,
-            (s) => s?.creditHold,
-            (p, b) => p?.creditHold = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        timezone = $options.actionField<String>('timezone', (a) => a?.timezone,
+        creditHold = $options.field<bool>('creditHold', (a) => a?.creditHold,
+            (s) => s?.creditHold, (p, b) => p?.creditHold = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        timezone = $options.field<String>('timezone', (a) => a?.timezone,
             (s) => s?.timezone, (p, b) => p?.timezone = b),
         super._();
 
@@ -298,9 +292,6 @@ class _$HospitalActions extends HospitalActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<HospitalHospitalActions> get $serializer => HospitalHospitalActions.serializer;
 
   FullType _$fullType;
   @override

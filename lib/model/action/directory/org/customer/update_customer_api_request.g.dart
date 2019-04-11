@@ -449,24 +449,21 @@ class _$UpdateCustomerApiRequestActions
   _$UpdateCustomerApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateCustomerApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        idOverride = $options.actionField<String>(
-            'idOverride',
-            (a) => a?.idOverride,
-            (s) => s?.idOverride,
-            (p, b) => p?.idOverride = b),
-        customerNumber = $options.actionField<String>(
+        idOverride = $options.field<String>('idOverride', (a) => a?.idOverride,
+            (s) => s?.idOverride, (p, b) => p?.idOverride = b),
+        customerNumber = $options.field<String>(
             'customerNumber',
             (a) => a?.customerNumber,
             (s) => s?.customerNumber,
             (p, b) => p?.customerNumber = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -482,21 +479,15 @@ class _$UpdateCustomerApiRequestActions
                 (s) => s?.phoneNumber,
                 (b) => b?.phoneNumber,
                 (parent, builder) => parent?.phoneNumber = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        creditHold = $options.actionField<bool>(
-            'creditHold',
-            (a) => a?.creditHold,
-            (s) => s?.creditHold,
-            (p, b) => p?.creditHold = b),
-        moveManaged = $options.actionField<bool>(
-            'moveManaged',
-            (a) => a?.moveManaged,
-            (s) => s?.moveManaged,
-            (p, b) => p?.moveManaged = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        creditHold = $options.field<bool>('creditHold', (a) => a?.creditHold,
+            (s) => s?.creditHold, (p, b) => p?.creditHold = b),
+        moveManaged = $options.field<bool>('moveManaged', (a) => a?.moveManaged,
+            (s) => s?.moveManaged, (p, b) => p?.moveManaged = b),
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publicVisible = $options.actionField<bool>(
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
@@ -561,9 +552,6 @@ class _$UpdateCustomerApiRequestActions
     email.$middleware(middleware);
     phoneNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateCustomerApiRequestUpdateCustomerApiRequestActions> get $serializer => UpdateCustomerApiRequestUpdateCustomerApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

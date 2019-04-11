@@ -326,14 +326,14 @@ class _$ListTeamMembersApiTeamMemberActions
   _$ListTeamMembersApiTeamMemberActions._(this.$options)
       : $replace = $options.action<ListTeamMembersApiTeamMember>(
             '\$replace', (a) => a?.$replace),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        linkedType = $options.actionField<ContactType>(
+        linkedType = $options.field<ContactType>(
             'linkedType',
             (a) => a?.linkedType,
             (s) => s?.linkedType,
             (p, b) => p?.linkedType = b),
-        generalLinkedType = $options.actionField<GeneralContactType>(
+        generalLinkedType = $options.field<GeneralContactType>(
             'generalLinkedType',
             (a) => a?.generalLinkedType,
             (s) => s?.generalLinkedType,
@@ -345,14 +345,14 @@ class _$ListTeamMembersApiTeamMemberActions
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -403,9 +403,6 @@ class _$ListTeamMembersApiTeamMemberActions
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListTeamMembersApiTeamMemberListTeamMembersApiTeamMemberActions> get $serializer => ListTeamMembersApiTeamMemberListTeamMembersApiTeamMemberActions.serializer;
 
   FullType _$fullType;
   @override

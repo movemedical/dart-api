@@ -163,7 +163,7 @@ class _$FacilityUpdatedPushMessageActions
   _$FacilityUpdatedPushMessageActions._(this.$options)
       : $replace = $options.action<FacilityUpdatedPushMessage>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -196,9 +196,6 @@ class _$FacilityUpdatedPushMessageActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FacilityUpdatedPushMessageFacilityUpdatedPushMessageActions> get $serializer => FacilityUpdatedPushMessageFacilityUpdatedPushMessageActions.serializer;
 
   FullType _$fullType;
   @override

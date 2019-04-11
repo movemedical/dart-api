@@ -179,9 +179,9 @@ class _$CreateZoneApiResponseActions extends CreateZoneApiResponseActions {
   _$CreateZoneApiResponseActions._(this.$options)
       : $replace = $options.action<CreateZoneApiResponse>(
             '\$replace', (a) => a?.$replace),
-        zoneId = $options.actionField<String>('zoneId', (a) => a?.zoneId,
+        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        binId = $options.actionField<String>(
+        binId = $options.field<String>(
             'binId', (a) => a?.binId, (s) => s?.binId, (p, b) => p?.binId = b),
         super._();
 
@@ -215,9 +215,6 @@ class _$CreateZoneApiResponseActions extends CreateZoneApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateZoneApiResponseCreateZoneApiResponseActions> get $serializer => CreateZoneApiResponseCreateZoneApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

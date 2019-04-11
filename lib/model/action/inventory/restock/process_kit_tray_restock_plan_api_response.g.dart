@@ -216,9 +216,9 @@ class _$ProcessKitTrayRestockPlanApiResponseActions
   _$ProcessKitTrayRestockPlanApiResponseActions._(this.$options)
       : $replace = $options.action<ProcessKitTrayRestockPlanApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orderIds = $options.actionField<BuiltList<String>>('orderIds',
+        orderIds = $options.field<BuiltList<String>>('orderIds',
             (a) => a?.orderIds, (s) => s?.orderIds, (p, b) => p?.orderIds = b),
-        pickIds = $options.actionField<BuiltList<String>>('pickIds',
+        pickIds = $options.field<BuiltList<String>>('pickIds',
             (a) => a?.pickIds, (s) => s?.pickIds, (p, b) => p?.pickIds = b),
         super._();
 
@@ -254,9 +254,6 @@ class _$ProcessKitTrayRestockPlanApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessKitTrayRestockPlanApiResponseProcessKitTrayRestockPlanApiResponseActions> get $serializer => ProcessKitTrayRestockPlanApiResponseProcessKitTrayRestockPlanApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

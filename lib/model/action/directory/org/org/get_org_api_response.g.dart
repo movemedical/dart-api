@@ -223,12 +223,9 @@ class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
             (s) => s?.data,
             (b) => b?.data,
             (parent, builder) => parent?.data = builder)),
-        editAllowed = $options.actionField<bool>(
-            'editAllowed',
-            (a) => a?.editAllowed,
-            (s) => s?.editAllowed,
-            (p, b) => p?.editAllowed = b),
-        relationAddRemoveAllowed = $options.actionField<bool>(
+        editAllowed = $options.field<bool>('editAllowed', (a) => a?.editAllowed,
+            (s) => s?.editAllowed, (p, b) => p?.editAllowed = b),
+        relationAddRemoveAllowed = $options.field<bool>(
             'relationAddRemoveAllowed',
             (a) => a?.relationAddRemoveAllowed,
             (s) => s?.relationAddRemoveAllowed,
@@ -272,9 +269,6 @@ class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
     super.$middleware(middleware);
     data.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrgApiResponseGetOrgApiResponseActions> get $serializer => GetOrgApiResponseGetOrgApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

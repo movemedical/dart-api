@@ -97,9 +97,6 @@ class _$ConfirmAdjustmentApi extends ConfirmAdjustmentApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateConfirmAdjustmentApi> get $serializer => CommandStateConfirmAdjustmentApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

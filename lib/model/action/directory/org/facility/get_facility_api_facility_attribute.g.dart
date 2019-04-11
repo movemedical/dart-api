@@ -188,9 +188,9 @@ class _$GetFacilityApiFacilityAttributeActions
   _$GetFacilityApiFacilityAttributeActions._(this.$options)
       : $replace = $options.action<GetFacilityApiFacilityAttribute>(
             '\$replace', (a) => a?.$replace),
-        label = $options.actionField<String>(
+        label = $options.field<String>(
             'label', (a) => a?.label, (s) => s?.label, (p, b) => p?.label = b),
-        value = $options.actionField<String>(
+        value = $options.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
         super._();
 
@@ -226,9 +226,6 @@ class _$GetFacilityApiFacilityAttributeActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetFacilityApiFacilityAttributeGetFacilityApiFacilityAttributeActions> get $serializer => GetFacilityApiFacilityAttributeGetFacilityApiFacilityAttributeActions.serializer;
 
   FullType _$fullType;
   @override

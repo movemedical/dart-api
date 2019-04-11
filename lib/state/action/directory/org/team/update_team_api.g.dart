@@ -89,9 +89,6 @@ class _$UpdateTeamApi extends UpdateTeamApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateTeamApi> get $serializer => CommandStateUpdateTeamApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

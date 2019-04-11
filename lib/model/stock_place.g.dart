@@ -391,9 +391,6 @@ class _$StockPlaceActions extends StockPlaceActions {
     container.$middleware(middleware);
   }
 
-// @override
-// Serializer<StockPlaceStockPlaceActions> get $serializer => StockPlaceStockPlaceActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(StockPlace);

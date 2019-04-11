@@ -112,9 +112,6 @@ class _$GetCaseEventDetailApi extends GetCaseEventDetailApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetCaseEventDetailApi> get $serializer => CommandStateGetCaseEventDetailApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

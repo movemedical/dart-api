@@ -81,9 +81,6 @@ class _$EditItemApi extends EditItemApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateEditItemApi> get $serializer => CommandStateEditItemApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

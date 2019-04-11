@@ -161,13 +161,10 @@ class _$TagActions extends TagActions {
 
   _$TagActions._(this.$options)
       : $replace = $options.action<Tag>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        tagNumber = $options.actionField<String>(
-            'tagNumber',
-            (a) => a?.tagNumber,
-            (s) => s?.tagNumber,
-            (p, b) => p?.tagNumber = b),
+        tagNumber = $options.field<String>('tagNumber', (a) => a?.tagNumber,
+            (s) => s?.tagNumber, (p, b) => p?.tagNumber = b),
         super._();
 
   factory _$TagActions(TagActionsOptions options) => _$TagActions._(options());
@@ -198,9 +195,6 @@ class _$TagActions extends TagActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<TagTagActions> get $serializer => TagTagActions.serializer;
 
   FullType _$fullType;
   @override

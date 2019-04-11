@@ -795,9 +795,9 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
   _$ListCaseUsageApiUsageActions._(this.$options)
       : $replace = $options.action<ListCaseUsageApiUsage>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         stockPlace = StockPlaceActions(() =>
             $options.stateful<StockPlace, StockPlaceBuilder, StockPlaceActions>(
@@ -813,12 +813,12 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
             (s) => s?.inventoryType,
             (b) => b?.inventoryType,
             (parent, builder) => parent?.inventoryType = builder)),
-        caseUsageOrderId = $options.actionField<String>(
+        caseUsageOrderId = $options.field<String>(
             'caseUsageOrderId',
             (a) => a?.caseUsageOrderId,
             (s) => s?.caseUsageOrderId,
             (p, b) => p?.caseUsageOrderId = b),
-        caseUsageConstructId = $options.actionField<String>(
+        caseUsageConstructId = $options.field<String>(
             'caseUsageConstructId',
             (a) => a?.caseUsageConstructId,
             (s) => s?.caseUsageConstructId,
@@ -830,26 +830,26 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
-        price = $options.actionField<double>(
+        price = $options.field<double>(
             'price', (a) => a?.price, (s) => s?.price, (p, b) => p?.price = b),
-        overridePrice = $options.actionField<double>(
+        overridePrice = $options.field<double>(
             'overridePrice',
             (a) => a?.overridePrice,
             (s) => s?.overridePrice,
             (p, b) => p?.overridePrice = b),
-        hasOverridePrice = $options.actionField<bool>(
+        hasOverridePrice = $options.field<bool>(
             'hasOverridePrice',
             (a) => a?.hasOverridePrice,
             (s) => s?.hasOverridePrice,
             (p, b) => p?.hasOverridePrice = b),
-        disposition = $options.actionField<CaseUsageDisposition>(
+        disposition = $options.field<CaseUsageDisposition>(
             'disposition',
             (a) => a?.disposition,
             (s) => s?.disposition,
             (p, b) => p?.disposition = b),
-        note = $options.actionField<String>(
+        note = $options.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
-        doNotRestock = $options.actionField<bool>(
+        doNotRestock = $options.field<bool>(
             'doNotRestock',
             (a) => a?.doNotRestock,
             (s) => s?.doNotRestock,
@@ -861,12 +861,12 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
                 (s) => s?.replenishLocation,
                 (b) => b?.replenishLocation,
                 (parent, builder) => parent?.replenishLocation = builder)),
-        replenishByDate = $options.actionField<DateTime>(
+        replenishByDate = $options.field<DateTime>(
             'replenishByDate',
             (a) => a?.replenishByDate,
             (s) => s?.replenishByDate,
             (p, b) => p?.replenishByDate = b),
-        restockDeliverToAttn = $options.actionField<String>(
+        restockDeliverToAttn = $options.field<String>(
             'restockDeliverToAttn',
             (a) => a?.restockDeliverToAttn,
             (s) => s?.restockDeliverToAttn,
@@ -897,31 +897,28 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
             (s) => s?.restockShippingService,
             (b) => b?.restockShippingService,
             (parent, builder) => parent?.restockShippingService = builder)),
-        captureType = $options.actionField<ItemCaptureType>(
+        captureType = $options.field<ItemCaptureType>(
             'captureType',
             (a) => a?.captureType,
             (s) => s?.captureType,
             (p, b) => p?.captureType = b),
-        unknownItemNumber = $options.actionField<String>(
+        unknownItemNumber = $options.field<String>(
             'unknownItemNumber',
             (a) => a?.unknownItemNumber,
             (s) => s?.unknownItemNumber,
             (p, b) => p?.unknownItemNumber = b),
-        unknownLotNumber = $options.actionField<String>(
+        unknownLotNumber = $options.field<String>(
             'unknownLotNumber',
             (a) => a?.unknownLotNumber,
             (s) => s?.unknownLotNumber,
             (p, b) => p?.unknownLotNumber = b),
-        unknownSerialNumber = $options.actionField<String>(
+        unknownSerialNumber = $options.field<String>(
             'unknownSerialNumber',
             (a) => a?.unknownSerialNumber,
             (s) => s?.unknownSerialNumber,
             (p, b) => p?.unknownSerialNumber = b),
-        rawBarcode = $options.actionField<String>(
-            'rawBarcode',
-            (a) => a?.rawBarcode,
-            (s) => s?.rawBarcode,
-            (p, b) => p?.rawBarcode = b),
+        rawBarcode = $options.field<String>('rawBarcode', (a) => a?.rawBarcode,
+            (s) => s?.rawBarcode, (p, b) => p?.rawBarcode = b),
         responsibleParty = ResponsiblePartyActions(() => $options.stateful<
                 ResponsibleParty,
                 ResponsiblePartyBuilder,
@@ -1022,9 +1019,6 @@ class _$ListCaseUsageApiUsageActions extends ListCaseUsageApiUsageActions {
     restockShippingService.$middleware(middleware);
     responsibleParty.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseUsageApiUsageListCaseUsageApiUsageActions> get $serializer => ListCaseUsageApiUsageListCaseUsageApiUsageActions.serializer;
 
   FullType _$fullType;
   @override

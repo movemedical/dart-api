@@ -107,9 +107,6 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateAssignIntegrationIssueApi> get $serializer => CommandStateAssignIntegrationIssueApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

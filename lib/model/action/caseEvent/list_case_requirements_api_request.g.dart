@@ -207,7 +207,7 @@ class _$ListCaseRequirementsApiRequestActions
   _$ListCaseRequirementsApiRequestActions._(this.$options)
       : $replace = $options.action<ListCaseRequirementsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
         orderBy = OrderByParamsActions<ListCaseRequirementsApiOrderBy>(() =>
             $options.stateful<
@@ -259,9 +259,6 @@ class _$ListCaseRequirementsApiRequestActions
     super.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseRequirementsApiRequestListCaseRequirementsApiRequestActions> get $serializer => ListCaseRequirementsApiRequestListCaseRequirementsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

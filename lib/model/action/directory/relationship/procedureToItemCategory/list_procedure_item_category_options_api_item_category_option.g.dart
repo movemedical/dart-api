@@ -306,23 +306,23 @@ class _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions
       : $replace = $options
             .action<ListProcedureItemCategoryOptionsApiItemCategoryOption>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        rootCategoryId = $options.actionField<String>(
+        rootCategoryId = $options.field<String>(
             'rootCategoryId',
             (a) => a?.rootCategoryId,
             (s) => s?.rootCategoryId,
             (p, b) => p?.rootCategoryId = b),
-        parentCategoryId = $options.actionField<String>(
+        parentCategoryId = $options.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.actionField<String>(
+        code = $options.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
-        bottom = $options.actionField<bool>('bottom', (a) => a?.bottom,
+        bottom = $options.field<bool>('bottom', (a) => a?.bottom,
             (s) => s?.bottom, (p, b) => p?.bottom = b),
         super._();
 
@@ -368,9 +368,6 @@ class _$ListProcedureItemCategoryOptionsApiItemCategoryOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProcedureItemCategoryOptionsApiItemCategoryOptionListProcedureItemCategoryOptionsApiItemCategoryOptionActions> get $serializer => ListProcedureItemCategoryOptionsApiItemCategoryOptionListProcedureItemCategoryOptionsApiItemCategoryOptionActions.serializer;
 
   FullType _$fullType;
   @override

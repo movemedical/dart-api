@@ -279,29 +279,26 @@ class _$CreateLotApiRequestActions extends CreateLotApiRequestActions {
   _$CreateLotApiRequestActions._(this.$options)
       : $replace = $options.action<CreateLotApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotNumber = $options.actionField<String>(
-            'lotNumber',
-            (a) => a?.lotNumber,
-            (s) => s?.lotNumber,
-            (p, b) => p?.lotNumber = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        lotNumber = $options.field<String>('lotNumber', (a) => a?.lotNumber,
+            (s) => s?.lotNumber, (p, b) => p?.lotNumber = b),
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        expirationDate = $options.actionField<DateTime>(
+        expirationDate = $options.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        manufactureDate = $options.actionField<DateTime>(
+        manufactureDate = $options.field<DateTime>(
             'manufactureDate',
             (a) => a?.manufactureDate,
             (s) => s?.manufactureDate,
             (p, b) => p?.manufactureDate = b),
-        manufacturedQuantity = $options.actionField<int>(
+        manufacturedQuantity = $options.field<int>(
             'manufacturedQuantity',
             (a) => a?.manufacturedQuantity,
             (s) => s?.manufacturedQuantity,
@@ -346,9 +343,6 @@ class _$CreateLotApiRequestActions extends CreateLotApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateLotApiRequestCreateLotApiRequestActions> get $serializer => CreateLotApiRequestCreateLotApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

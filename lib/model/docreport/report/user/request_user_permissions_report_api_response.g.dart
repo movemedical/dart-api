@@ -171,7 +171,7 @@ class _$RequestUserPermissionsReportApiResponseActions
   _$RequestUserPermissionsReportApiResponseActions._(this.$options)
       : $replace = $options.action<RequestUserPermissionsReportApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -208,9 +208,6 @@ class _$RequestUserPermissionsReportApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestUserPermissionsReportApiResponseRequestUserPermissionsReportApiResponseActions> get $serializer => RequestUserPermissionsReportApiResponseRequestUserPermissionsReportApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

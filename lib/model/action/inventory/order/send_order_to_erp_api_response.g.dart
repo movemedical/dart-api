@@ -212,17 +212,14 @@ class _$SendOrderToErpApiResponseActions
   _$SendOrderToErpApiResponseActions._(this.$options)
       : $replace = $options.action<SendOrderToErpApiResponse>(
             '\$replace', (a) => a?.$replace),
-        validationPassed = $options.actionField<bool>(
+        validationPassed = $options.field<bool>(
             'validationPassed',
             (a) => a?.validationPassed,
             (s) => s?.validationPassed,
             (p, b) => p?.validationPassed = b),
-        soapSuccess = $options.actionField<bool>(
-            'soapSuccess',
-            (a) => a?.soapSuccess,
-            (s) => s?.soapSuccess,
-            (p, b) => p?.soapSuccess = b),
-        erpOrderReference = $options.actionField<String>(
+        soapSuccess = $options.field<bool>('soapSuccess', (a) => a?.soapSuccess,
+            (s) => s?.soapSuccess, (p, b) => p?.soapSuccess = b),
+        erpOrderReference = $options.field<String>(
             'erpOrderReference',
             (a) => a?.erpOrderReference,
             (s) => s?.erpOrderReference,
@@ -262,9 +259,6 @@ class _$SendOrderToErpApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SendOrderToErpApiResponseSendOrderToErpApiResponseActions> get $serializer => SendOrderToErpApiResponseSendOrderToErpApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

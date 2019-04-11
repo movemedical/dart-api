@@ -164,7 +164,7 @@ class _$CreateCaseEventApiResponseActions
   _$CreateCaseEventApiResponseActions._(this.$options)
       : $replace = $options.action<CreateCaseEventApiResponse>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -200,9 +200,6 @@ class _$CreateCaseEventApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCaseEventApiResponseCreateCaseEventApiResponseActions> get $serializer => CreateCaseEventApiResponseCreateCaseEventApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

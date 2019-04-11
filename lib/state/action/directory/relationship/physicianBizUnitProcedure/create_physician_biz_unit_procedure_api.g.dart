@@ -117,9 +117,6 @@ class _$CreatePhysicianBizUnitProcedureApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreatePhysicianBizUnitProcedureApi> get $serializer => CommandStateCreatePhysicianBizUnitProcedureApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

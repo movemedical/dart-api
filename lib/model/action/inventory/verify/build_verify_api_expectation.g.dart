@@ -422,18 +422,18 @@ class _$BuildVerifyApiExpectationActions
   _$BuildVerifyApiExpectationActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiExpectation>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<BuildVerifyApiExpectationType>(
+        type = $options.field<BuildVerifyApiExpectationType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        verifyNow = $options.actionField<bool>('verifyNow', (a) => a?.verifyNow,
+        verifyNow = $options.field<bool>('verifyNow', (a) => a?.verifyNow,
             (s) => s?.verifyNow, (p, b) => p?.verifyNow = b),
-        kitContainer = $options.actionField<bool>(
+        kitContainer = $options.field<bool>(
             'kitContainer',
             (a) => a?.kitContainer,
             (s) => s?.kitContainer,
             (p, b) => p?.kitContainer = b),
-        loaded = $options.actionField<bool>('loaded', (a) => a?.loaded,
+        loaded = $options.field<bool>('loaded', (a) => a?.loaded,
             (s) => s?.loaded, (p, b) => p?.loaded = b),
         fromLocation = LocationActions(() =>
             $options.stateful<Location, LocationBuilder, LocationActions>(
@@ -451,19 +451,17 @@ class _$BuildVerifyApiExpectationActions
             (s) => s?.toContainerOverride,
             (b) => b?.toContainerOverride,
             (parent, builder) => parent?.toContainerOverride = builder)),
-        expectedStocks =
-            $options.actionField<BuiltList<BuildVerifyApiExpectedStock>>(
-                'expectedStocks',
-                (a) => a?.expectedStocks,
-                (s) => s?.expectedStocks,
-                (p, b) => p?.expectedStocks = b),
-        enteredLines =
-            $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
-                'enteredLines',
-                (a) => a?.enteredLines,
-                (s) => s?.enteredLines,
-                (p, b) => p?.enteredLines = b),
-        children = $options.actionField<BuiltList<BuildVerifyApiExpectation>>(
+        expectedStocks = $options.field<BuiltList<BuildVerifyApiExpectedStock>>(
+            'expectedStocks',
+            (a) => a?.expectedStocks,
+            (s) => s?.expectedStocks,
+            (p, b) => p?.expectedStocks = b),
+        enteredLines = $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
+            'enteredLines',
+            (a) => a?.enteredLines,
+            (s) => s?.enteredLines,
+            (p, b) => p?.enteredLines = b),
+        children = $options.field<BuiltList<BuildVerifyApiExpectation>>(
             'children',
             (a) => a?.children,
             (s) => s?.children,
@@ -524,9 +522,6 @@ class _$BuildVerifyApiExpectationActions
     fromLocation.$middleware(middleware);
     toContainerOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiExpectationBuildVerifyApiExpectationActions> get $serializer => BuildVerifyApiExpectationBuildVerifyApiExpectationActions.serializer;
 
   FullType _$fullType;
   @override

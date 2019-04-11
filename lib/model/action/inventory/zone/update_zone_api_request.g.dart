@@ -278,27 +278,21 @@ class _$UpdateZoneApiRequestActions extends UpdateZoneApiRequestActions {
   _$UpdateZoneApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateZoneApiRequest>(
             '\$replace', (a) => a?.$replace),
-        zoneId = $options.actionField<String>('zoneId', (a) => a?.zoneId,
+        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        sourceable = $options.actionField<bool>(
-            'sourceable',
-            (a) => a?.sourceable,
-            (s) => s?.sourceable,
-            (p, b) => p?.sourceable = b),
-        receivable = $options.actionField<bool>(
-            'receivable',
-            (a) => a?.receivable,
-            (s) => s?.receivable,
-            (p, b) => p?.receivable = b),
+        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+            (s) => s?.sourceable, (p, b) => p?.sourceable = b),
+        receivable = $options.field<bool>('receivable', (a) => a?.receivable,
+            (s) => s?.receivable, (p, b) => p?.receivable = b),
         super._();
 
   factory _$UpdateZoneApiRequestActions(
@@ -339,9 +333,6 @@ class _$UpdateZoneApiRequestActions extends UpdateZoneApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateZoneApiRequestUpdateZoneApiRequestActions> get $serializer => UpdateZoneApiRequestUpdateZoneApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

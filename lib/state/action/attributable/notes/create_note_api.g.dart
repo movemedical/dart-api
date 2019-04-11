@@ -108,9 +108,6 @@ class _$CreateNoteApi extends CreateNoteApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateNoteApi> get $serializer => CommandStateCreateNoteApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

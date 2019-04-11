@@ -620,7 +620,7 @@ class _$BuildKitTrayRestockPlanApiResponseActions
   _$BuildKitTrayRestockPlanApiResponseActions._(this.$options)
       : $replace = $options.action<BuildKitTrayRestockPlanApiResponse>(
             '\$replace', (a) => a?.$replace),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         shippingService = ShippingServiceActions(() => $options.stateful<
                 ShippingService,
@@ -631,12 +631,12 @@ class _$BuildKitTrayRestockPlanApiResponseActions
             (s) => s?.shippingService,
             (b) => b?.shippingService,
             (parent, builder) => parent?.shippingService = builder)),
-        system = $options.actionField<BuildKitTrayRestockPlanApiRestockSystem>(
+        system = $options.field<BuildKitTrayRestockPlanApiRestockSystem>(
             'system',
             (a) => a?.system,
             (s) => s?.system,
             (p, b) => p?.system = b),
-        requirePo = $options.actionField<bool>('requirePo', (a) => a?.requirePo,
+        requirePo = $options.field<bool>('requirePo', (a) => a?.requirePo,
             (s) => s?.requirePo, (p, b) => p?.requirePo = b),
         usingExistingOrder = OrderHeaderLiteActions(() => $options.stateful<
                 OrderHeaderLite,
@@ -672,48 +672,48 @@ class _$BuildKitTrayRestockPlanApiResponseActions
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
         restockByDateType =
-            $options.actionField<BuildKitTrayRestockPlanApiRestockByDateType>(
+            $options.field<BuildKitTrayRestockPlanApiRestockByDateType>(
                 'restockByDateType',
                 (a) => a?.restockByDateType,
                 (s) => s?.restockByDateType,
                 (p, b) => p?.restockByDateType = b),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        allowUserOverrideSystem = $options.actionField<bool>(
+        allowUserOverrideSystem = $options.field<bool>(
             'allowUserOverrideSystem',
             (a) => a?.allowUserOverrideSystem,
             (s) => s?.allowUserOverrideSystem,
             (p, b) => p?.allowUserOverrideSystem = b),
-        allowUserOverrideLocation = $options.actionField<bool>(
+        allowUserOverrideLocation = $options.field<bool>(
             'allowUserOverrideLocation',
             (a) => a?.allowUserOverrideLocation,
             (s) => s?.allowUserOverrideLocation,
             (p, b) => p?.allowUserOverrideLocation = b),
-        allowUserOverrideDeliverTo = $options.actionField<bool>(
+        allowUserOverrideDeliverTo = $options.field<bool>(
             'allowUserOverrideDeliverTo',
             (a) => a?.allowUserOverrideDeliverTo,
             (s) => s?.allowUserOverrideDeliverTo,
             (p, b) => p?.allowUserOverrideDeliverTo = b),
-        allowUserOverrideDateOrShippingService = $options.actionField<bool>(
+        allowUserOverrideDateOrShippingService = $options.field<bool>(
             'allowUserOverrideDateOrShippingService',
             (a) => a?.allowUserOverrideDateOrShippingService,
             (s) => s?.allowUserOverrideDateOrShippingService,
             (p, b) => p?.allowUserOverrideDateOrShippingService = b),
-        restockItems = $options
-            .actionField<BuiltList<BuildKitTrayRestockPlanApiRestockItem>>(
+        restockItems =
+            $options.field<BuiltList<BuildKitTrayRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
                 (p, b) => p?.restockItems = b),
-        pendingRestockItems = $options.actionField<
-                BuiltList<BuildKitTrayRestockPlanApiPendingRestockItem>>(
-            'pendingRestockItems',
-            (a) => a?.pendingRestockItems,
-            (s) => s?.pendingRestockItems,
-            (p, b) => p?.pendingRestockItems = b),
+        pendingRestockItems = $options
+            .field<BuiltList<BuildKitTrayRestockPlanApiPendingRestockItem>>(
+                'pendingRestockItems',
+                (a) => a?.pendingRestockItems,
+                (s) => s?.pendingRestockItems,
+                (p, b) => p?.pendingRestockItems = b),
         super._();
 
   factory _$BuildKitTrayRestockPlanApiResponseActions(
@@ -786,9 +786,6 @@ class _$BuildKitTrayRestockPlanApiResponseActions
     deliverToAddress.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildKitTrayRestockPlanApiResponseBuildKitTrayRestockPlanApiResponseActions> get $serializer => BuildKitTrayRestockPlanApiResponseBuildKitTrayRestockPlanApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

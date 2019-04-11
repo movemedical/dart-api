@@ -111,9 +111,6 @@ class _$ListComponentsApi extends ListComponentsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListComponentsApi> get $serializer => CommandStateListComponentsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

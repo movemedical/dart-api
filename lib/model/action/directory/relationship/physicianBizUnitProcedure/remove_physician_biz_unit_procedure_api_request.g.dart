@@ -175,7 +175,7 @@ class _$RemovePhysicianBizUnitProcedureApiRequestActions
   _$RemovePhysicianBizUnitProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<RemovePhysicianBizUnitProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        physicianBizUnitProcedureId = $options.actionField<String>(
+        physicianBizUnitProcedureId = $options.field<String>(
             'physicianBizUnitProcedureId',
             (a) => a?.physicianBizUnitProcedureId,
             (s) => s?.physicianBizUnitProcedureId,
@@ -212,9 +212,6 @@ class _$RemovePhysicianBizUnitProcedureApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RemovePhysicianBizUnitProcedureApiRequestRemovePhysicianBizUnitProcedureApiRequestActions> get $serializer => RemovePhysicianBizUnitProcedureApiRequestRemovePhysicianBizUnitProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

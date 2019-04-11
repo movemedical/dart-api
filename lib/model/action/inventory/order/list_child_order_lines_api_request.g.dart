@@ -205,7 +205,7 @@ class _$ListChildOrderLinesApiRequestActions
   _$ListChildOrderLinesApiRequestActions._(this.$options)
       : $replace = $options.action<ListChildOrderLinesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        parentOrderLineId = $options.actionField<String>(
+        parentOrderLineId = $options.field<String>(
             'parentOrderLineId',
             (a) => a?.parentOrderLineId,
             (s) => s?.parentOrderLineId,
@@ -258,9 +258,6 @@ class _$ListChildOrderLinesApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListChildOrderLinesApiRequestListChildOrderLinesApiRequestActions> get $serializer => ListChildOrderLinesApiRequestListChildOrderLinesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

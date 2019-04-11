@@ -107,9 +107,6 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateMoveStockWithinLocationApi> get $serializer => CommandStateMoveStockWithinLocationApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

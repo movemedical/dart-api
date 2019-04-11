@@ -116,9 +116,6 @@ class _$ListBizUnitLinkedOrgUnitsApi extends ListBizUnitLinkedOrgUnitsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListBizUnitLinkedOrgUnitsApi> get $serializer => CommandStateListBizUnitLinkedOrgUnitsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -227,11 +227,11 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionActions
       : $replace = $options
             .action<ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOption>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.actionField<String>(
+        code = $options.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
         super._();
 
@@ -272,9 +272,6 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionActions> get $serializer => ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionListSalesOrgUnitItemCategoryOptionsApiItemCategoryOptionActions.serializer;
 
   FullType _$fullType;
   @override

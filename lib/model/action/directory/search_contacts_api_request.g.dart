@@ -347,35 +347,32 @@ class _$SearchContactsApiRequestActions
   _$SearchContactsApiRequestActions._(this.$options)
       : $replace = $options.action<SearchContactsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        contactTypes = $options.actionField<BuiltList<GeneralContactType>>(
+        contactTypes = $options.field<BuiltList<GeneralContactType>>(
             'contactTypes',
             (a) => a?.contactTypes,
             (s) => s?.contactTypes,
             (p, b) => p?.contactTypes = b),
-        contactIds = $options.actionField<BuiltList<String>>(
+        contactIds = $options.field<BuiltList<String>>(
             'contactIds',
             (a) => a?.contactIds,
             (s) => s?.contactIds,
             (p, b) => p?.contactIds = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        openSearch = $options.actionField<bool>(
-            'openSearch',
-            (a) => a?.openSearch,
-            (s) => s?.openSearch,
-            (p, b) => p?.openSearch = b),
+        openSearch = $options.field<bool>('openSearch', (a) => a?.openSearch,
+            (s) => s?.openSearch, (p, b) => p?.openSearch = b),
         super._();
 
   factory _$SearchContactsApiRequestActions(
@@ -419,9 +416,6 @@ class _$SearchContactsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchContactsApiRequestSearchContactsApiRequestActions> get $serializer => SearchContactsApiRequestSearchContactsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

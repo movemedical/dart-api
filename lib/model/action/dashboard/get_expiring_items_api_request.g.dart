@@ -183,7 +183,7 @@ class _$GetExpiringItemsApiRequestActions
   _$GetExpiringItemsApiRequestActions._(this.$options)
       : $replace = $options.action<GetExpiringItemsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        expirationLevelIds = $options.actionField<BuiltList<String>>(
+        expirationLevelIds = $options.field<BuiltList<String>>(
             'expirationLevelIds',
             (a) => a?.expirationLevelIds,
             (s) => s?.expirationLevelIds,
@@ -219,9 +219,6 @@ class _$GetExpiringItemsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetExpiringItemsApiRequestGetExpiringItemsApiRequestActions> get $serializer => GetExpiringItemsApiRequestGetExpiringItemsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

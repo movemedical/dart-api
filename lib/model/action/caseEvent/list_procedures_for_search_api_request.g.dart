@@ -289,16 +289,15 @@ class _$ListProceduresForSearchApiRequestActions
   _$ListProceduresForSearchApiRequestActions._(this.$options)
       : $replace = $options.action<ListProceduresForSearchApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        export = $options.actionField<bool>('export', (a) => a?.export,
+        export = $options.field<bool>('export', (a) => a?.export,
             (s) => s?.export, (p, b) => p?.export = b),
-        activeChoice =
-            $options.actionField<ListProceduresForSearchApiActiveStatus>(
-                'activeChoice',
-                (a) => a?.activeChoice,
-                (s) => s?.activeChoice,
-                (p, b) => p?.activeChoice = b),
+        activeChoice = $options.field<ListProceduresForSearchApiActiveStatus>(
+            'activeChoice',
+            (a) => a?.activeChoice,
+            (s) => s?.activeChoice,
+            (p, b) => p?.activeChoice = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -365,9 +364,6 @@ class _$ListProceduresForSearchApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListProceduresForSearchApiRequestListProceduresForSearchApiRequestActions> get $serializer => ListProceduresForSearchApiRequestListProceduresForSearchApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -352,9 +352,9 @@ class _$BuildVerifyApiPotentialExpectationActions
   _$BuildVerifyApiPotentialExpectationActions._(this.$options)
       : $replace = $options.action<BuildVerifyApiPotentialExpectation>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<BuildVerifyApiExpectationType>(
+        type = $options.field<BuildVerifyApiExpectationType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         fromLocation = LocationActions(() =>
             $options.stateful<Location, LocationBuilder, LocationActions>(
@@ -363,24 +363,23 @@ class _$BuildVerifyApiPotentialExpectationActions
                 (s) => s?.fromLocation,
                 (b) => b?.fromLocation,
                 (parent, builder) => parent?.fromLocation = builder)),
-        expectedStocks =
-            $options.actionField<BuiltList<BuildVerifyApiExpectedStock>>(
-                'expectedStocks',
-                (a) => a?.expectedStocks,
-                (s) => s?.expectedStocks,
-                (p, b) => p?.expectedStocks = b),
-        matches = $options.actionField<BuiltList<BuildVerifyApiEnteredLine>>(
+        expectedStocks = $options.field<BuiltList<BuildVerifyApiExpectedStock>>(
+            'expectedStocks',
+            (a) => a?.expectedStocks,
+            (s) => s?.expectedStocks,
+            (p, b) => p?.expectedStocks = b),
+        matches = $options.field<BuiltList<BuildVerifyApiEnteredLine>>(
             'matches',
             (a) => a?.matches,
             (s) => s?.matches,
             (p, b) => p?.matches = b),
-        omitDisabled = $options.actionField<bool>(
+        omitDisabled = $options.field<bool>(
             'omitDisabled',
             (a) => a?.omitDisabled,
             (s) => s?.omitDisabled,
             (p, b) => p?.omitDisabled = b),
         children =
-            $options.actionField<BuiltList<BuildVerifyApiPotentialExpectation>>(
+            $options.field<BuiltList<BuildVerifyApiPotentialExpectation>>(
                 'children',
                 (a) => a?.children,
                 (s) => s?.children,
@@ -435,9 +434,6 @@ class _$BuildVerifyApiPotentialExpectationActions
     super.$middleware(middleware);
     fromLocation.$middleware(middleware);
   }
-
-// @override
-// Serializer<BuildVerifyApiPotentialExpectationBuildVerifyApiPotentialExpectationActions> get $serializer => BuildVerifyApiPotentialExpectationBuildVerifyApiPotentialExpectationActions.serializer;
 
   FullType _$fullType;
   @override

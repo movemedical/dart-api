@@ -107,9 +107,6 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateEditCaseEventSchedulingApi> get $serializer => CommandStateEditCaseEventSchedulingApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

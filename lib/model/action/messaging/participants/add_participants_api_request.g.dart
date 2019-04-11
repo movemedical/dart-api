@@ -205,12 +205,12 @@ class _$AddParticipantsApiRequestActions
   _$AddParticipantsApiRequestActions._(this.$options)
       : $replace = $options.action<AddParticipantsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        conversationId = $options.actionField<String>(
+        conversationId = $options.field<String>(
             'conversationId',
             (a) => a?.conversationId,
             (s) => s?.conversationId,
             (p, b) => p?.conversationId = b),
-        contactIds = $options.actionField<BuiltList<String>>(
+        contactIds = $options.field<BuiltList<String>>(
             'contactIds',
             (a) => a?.contactIds,
             (s) => s?.contactIds,
@@ -248,9 +248,6 @@ class _$AddParticipantsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddParticipantsApiRequestAddParticipantsApiRequestActions> get $serializer => AddParticipantsApiRequestAddParticipantsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

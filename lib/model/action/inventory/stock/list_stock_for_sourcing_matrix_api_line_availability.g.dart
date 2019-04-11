@@ -221,12 +221,12 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
       : $replace =
             $options.action<ListStockForSourcingMatrixApiLineAvailability>(
                 '\$replace', (a) => a?.$replace),
-        locationKey = $options.actionField<String>(
+        locationKey = $options.field<String>(
             'locationKey',
             (a) => a?.locationKey,
             (s) => s?.locationKey,
             (p, b) => p?.locationKey = b),
-        availableStockIds = $options.actionField<BuiltList<String>>(
+        availableStockIds = $options.field<BuiltList<String>>(
             'availableStockIds',
             (a) => a?.availableStockIds,
             (s) => s?.availableStockIds,
@@ -266,9 +266,6 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockForSourcingMatrixApiLineAvailabilityListStockForSourcingMatrixApiLineAvailabilityActions> get $serializer => ListStockForSourcingMatrixApiLineAvailabilityListStockForSourcingMatrixApiLineAvailabilityActions.serializer;
 
   FullType _$fullType;
   @override

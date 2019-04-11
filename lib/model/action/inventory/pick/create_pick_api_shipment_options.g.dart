@@ -307,27 +307,24 @@ class _$CreatePickApiShipmentOptionsActions
   _$CreatePickApiShipmentOptionsActions._(this.$options)
       : $replace = $options.action<CreatePickApiShipmentOptions>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
-        shippingServiceId = $options.actionField<String>(
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        skipProxyShipment = $options.actionField<bool>(
+        skipProxyShipment = $options.field<bool>(
             'skipProxyShipment',
             (a) => a?.skipProxyShipment,
             (s) => s?.skipProxyShipment,
             (p, b) => p?.skipProxyShipment = b),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -387,9 +384,6 @@ class _$CreatePickApiShipmentOptionsActions
     super.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePickApiShipmentOptionsCreatePickApiShipmentOptionsActions> get $serializer => CreatePickApiShipmentOptionsCreatePickApiShipmentOptionsActions.serializer;
 
   FullType _$fullType;
   @override

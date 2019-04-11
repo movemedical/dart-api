@@ -221,9 +221,6 @@ class _$GetProcedureApiResponseActions extends GetProcedureApiResponseActions {
     data.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetProcedureApiResponseGetProcedureApiResponseActions> get $serializer => GetProcedureApiResponseGetProcedureApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetProcedureApiResponse);

@@ -157,7 +157,7 @@ class _$CancelAuditApiRequestActions extends CancelAuditApiRequestActions {
   _$CancelAuditApiRequestActions._(this.$options)
       : $replace = $options.action<CancelAuditApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -189,9 +189,6 @@ class _$CancelAuditApiRequestActions extends CancelAuditApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CancelAuditApiRequestCancelAuditApiRequestActions> get $serializer => CancelAuditApiRequestCancelAuditApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -511,15 +511,15 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
   _$GetLoanApiLoanActions._(this.$options)
       : $replace =
             $options.action<GetLoanApiLoan>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        status = $options.actionField<LoanStatus>('status', (a) => a?.status,
+        status = $options.field<LoanStatus>('status', (a) => a?.status,
             (s) => s?.status, (p, b) => p?.status = b),
-        reason = $options.actionField<LoanReason>('reason', (a) => a?.reason,
+        reason = $options.field<LoanReason>('reason', (a) => a?.reason,
             (s) => s?.reason, (p, b) => p?.reason = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
@@ -552,7 +552,7 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
                 (s) => s?.salesOrgUnit,
                 (b) => b?.salesOrgUnit,
                 (parent, builder) => parent?.salesOrgUnit = builder)),
-        deliverToAttn = $options.actionField<String>(
+        deliverToAttn = $options.field<String>(
             'deliverToAttn',
             (a) => a?.deliverToAttn,
             (s) => s?.deliverToAttn,
@@ -573,9 +573,9 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
                 (s) => s?.deliverToOverride,
                 (b) => b?.deliverToOverride,
                 (parent, builder) => parent?.deliverToOverride = builder)),
-        orders = $options.actionField<BuiltList<OrderHeaderLite>>('orders',
+        orders = $options.field<BuiltList<OrderHeaderLite>>('orders',
             (a) => a?.orders, (s) => s?.orders, (p, b) => p?.orders = b),
-        cases = $options.actionField<BuiltList<CaseEventLite>>(
+        cases = $options.field<BuiltList<CaseEventLite>>(
             'cases', (a) => a?.cases, (s) => s?.cases, (p, b) => p?.cases = b),
         super._();
 
@@ -643,9 +643,6 @@ class _$GetLoanApiLoanActions extends GetLoanApiLoanActions {
     deliverTo.$middleware(middleware);
     deliverToOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetLoanApiLoanGetLoanApiLoanActions> get $serializer => GetLoanApiLoanGetLoanApiLoanActions.serializer;
 
   FullType _$fullType;
   @override

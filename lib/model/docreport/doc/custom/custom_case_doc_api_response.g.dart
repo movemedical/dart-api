@@ -164,7 +164,7 @@ class _$CustomCaseDocApiResponseActions
   _$CustomCaseDocApiResponseActions._(this.$options)
       : $replace = $options.action<CustomCaseDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -200,9 +200,6 @@ class _$CustomCaseDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomCaseDocApiResponseCustomCaseDocApiResponseActions> get $serializer => CustomCaseDocApiResponseCustomCaseDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -169,11 +169,8 @@ class _$GetCustomerRelationshipsApiRequestActions
   _$GetCustomerRelationshipsApiRequestActions._(this.$options)
       : $replace = $options.action<GetCustomerRelationshipsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
         super._();
 
   factory _$GetCustomerRelationshipsApiRequestActions(
@@ -206,9 +203,6 @@ class _$GetCustomerRelationshipsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCustomerRelationshipsApiRequestGetCustomerRelationshipsApiRequestActions> get $serializer => GetCustomerRelationshipsApiRequestGetCustomerRelationshipsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

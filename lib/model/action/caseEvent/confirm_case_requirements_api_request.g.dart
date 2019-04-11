@@ -168,7 +168,7 @@ class _$ConfirmCaseRequirementsApiRequestActions
   _$ConfirmCaseRequirementsApiRequestActions._(this.$options)
       : $replace = $options.action<ConfirmCaseRequirementsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -205,9 +205,6 @@ class _$ConfirmCaseRequirementsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ConfirmCaseRequirementsApiRequestConfirmCaseRequirementsApiRequestActions> get $serializer => ConfirmCaseRequirementsApiRequestConfirmCaseRequirementsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

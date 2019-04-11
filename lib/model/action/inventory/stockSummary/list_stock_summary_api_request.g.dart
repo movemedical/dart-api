@@ -1003,83 +1003,83 @@ class _$ListStockSummaryApiRequestActions
   _$ListStockSummaryApiRequestActions._(this.$options)
       : $replace = $options.action<ListStockSummaryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        inventoryTypeIds = $options.actionField<BuiltList<String>>(
+        inventoryTypeIds = $options.field<BuiltList<String>>(
             'inventoryTypeIds',
             (a) => a?.inventoryTypeIds,
             (s) => s?.inventoryTypeIds,
             (p, b) => p?.inventoryTypeIds = b),
-        moveItemClasses = $options.actionField<BuiltList<MoveItemClass>>(
+        moveItemClasses = $options.field<BuiltList<MoveItemClass>>(
             'moveItemClasses',
             (a) => a?.moveItemClasses,
             (s) => s?.moveItemClasses,
             (p, b) => p?.moveItemClasses = b),
-        moveItemTypes = $options.actionField<BuiltList<MoveItemType>>(
+        moveItemTypes = $options.field<BuiltList<MoveItemType>>(
             'moveItemTypes',
             (a) => a?.moveItemTypes,
             (s) => s?.moveItemTypes,
             (p, b) => p?.moveItemTypes = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        itemVersionIds = $options.actionField<BuiltList<String>>(
+        itemVersionIds = $options.field<BuiltList<String>>(
             'itemVersionIds',
             (a) => a?.itemVersionIds,
             (s) => s?.itemVersionIds,
             (p, b) => p?.itemVersionIds = b),
-        serialIds = $options.actionField<BuiltList<String>>(
+        serialIds = $options.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        lotIds = $options.actionField<BuiltList<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        responsiblePartyIds = $options.actionField<BuiltList<String>>(
+        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        responsiblePartyIds = $options.field<BuiltList<String>>(
             'responsiblePartyIds',
             (a) => a?.responsiblePartyIds,
             (s) => s?.responsiblePartyIds,
             (p, b) => p?.responsiblePartyIds = b),
-        homeLocationIds = $options.actionField<BuiltList<String>>(
+        homeLocationIds = $options.field<BuiltList<String>>(
             'homeLocationIds',
             (a) => a?.homeLocationIds,
             (s) => s?.homeLocationIds,
             (p, b) => p?.homeLocationIds = b),
-        locationIds = $options.actionField<BuiltList<String>>(
+        locationIds = $options.field<BuiltList<String>>(
             'locationIds',
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
-        locationTypes = $options.actionField<BuiltList<LocationType>>(
+        locationTypes = $options.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
             (s) => s?.locationTypes,
             (p, b) => p?.locationTypes = b),
-        facilityTypes = $options.actionField<BuiltList<FacilityType>>(
+        facilityTypes = $options.field<BuiltList<FacilityType>>(
             'facilityTypes',
             (a) => a?.facilityTypes,
             (s) => s?.facilityTypes,
             (p, b) => p?.facilityTypes = b),
-        containerIds = $options.actionField<BuiltList<String>>(
+        containerIds = $options.field<BuiltList<String>>(
             'containerIds',
             (a) => a?.containerIds,
             (s) => s?.containerIds,
             (p, b) => p?.containerIds = b),
-        loanIds = $options.actionField<BuiltList<String>>('loanIds',
+        loanIds = $options.field<BuiltList<String>>('loanIds',
             (a) => a?.loanIds, (s) => s?.loanIds, (p, b) => p?.loanIds = b),
-        itemCategoryIds = $options.actionField<BuiltList<String>>(
+        itemCategoryIds = $options.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
             (p, b) => p?.itemCategoryIds = b),
-        orgUnitIds = $options.actionField<BuiltList<String>>(
+        orgUnitIds = $options.field<BuiltList<String>>(
             'orgUnitIds',
             (a) => a?.orgUnitIds,
             (s) => s?.orgUnitIds,
             (p, b) => p?.orgUnitIds = b),
-        expiresInDays = $options.actionField<int>(
+        expiresInDays = $options.field<int>(
             'expiresInDays',
             (a) => a?.expiresInDays,
             (s) => s?.expiresInDays,
@@ -1091,47 +1091,44 @@ class _$ListStockSummaryApiRequestActions
                 (s) => s?.expirationDateRange,
                 (b) => b?.expirationDateRange,
                 (parent, builder) => parent?.expirationDateRange = builder)),
-        onlyWithinExpirationLevels = $options.actionField<bool>(
+        onlyWithinExpirationLevels = $options.field<bool>(
             'onlyWithinExpirationLevels',
             (a) => a?.onlyWithinExpirationLevels,
             (s) => s?.onlyWithinExpirationLevels,
             (p, b) => p?.onlyWithinExpirationLevels = b),
-        expirationLevelIds = $options.actionField<BuiltList<String>>(
+        expirationLevelIds = $options.field<BuiltList<String>>(
             'expirationLevelIds',
             (a) => a?.expirationLevelIds,
             (s) => s?.expirationLevelIds,
             (p, b) => p?.expirationLevelIds = b),
-        searchText = $options.actionField<String>(
-            'searchText',
-            (a) => a?.searchText,
-            (s) => s?.searchText,
-            (p, b) => p?.searchText = b),
-        excludeInTransit = $options.actionField<bool>(
+        searchText = $options.field<String>('searchText', (a) => a?.searchText,
+            (s) => s?.searchText, (p, b) => p?.searchText = b),
+        excludeInTransit = $options.field<bool>(
             'excludeInTransit',
             (a) => a?.excludeInTransit,
             (s) => s?.excludeInTransit,
             (p, b) => p?.excludeInTransit = b),
-        excludeHomeLocation = $options.actionField<bool>(
+        excludeHomeLocation = $options.field<bool>(
             'excludeHomeLocation',
             (a) => a?.excludeHomeLocation,
             (s) => s?.excludeHomeLocation,
             (p, b) => p?.excludeHomeLocation = b),
-        excludeKitStocks = $options.actionField<bool>(
+        excludeKitStocks = $options.field<bool>(
             'excludeKitStocks',
             (a) => a?.excludeKitStocks,
             (s) => s?.excludeKitStocks,
             (p, b) => p?.excludeKitStocks = b),
-        excludeKitContainersAndContents = $options.actionField<bool>(
+        excludeKitContainersAndContents = $options.field<bool>(
             'excludeKitContainersAndContents',
             (a) => a?.excludeKitContainersAndContents,
             (s) => s?.excludeKitContainersAndContents,
             (p, b) => p?.excludeKitContainersAndContents = b),
-        demandLoanOnly = $options.actionField<bool>(
+        demandLoanOnly = $options.field<bool>(
             'demandLoanOnly',
             (a) => a?.demandLoanOnly,
             (s) => s?.demandLoanOnly,
             (p, b) => p?.demandLoanOnly = b),
-        forExport = $options.actionField<bool>('forExport', (a) => a?.forExport,
+        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
             (s) => s?.forExport, (p, b) => p?.forExport = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -1249,9 +1246,6 @@ class _$ListStockSummaryApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListStockSummaryApiRequestListStockSummaryApiRequestActions> get $serializer => ListStockSummaryApiRequestListStockSummaryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

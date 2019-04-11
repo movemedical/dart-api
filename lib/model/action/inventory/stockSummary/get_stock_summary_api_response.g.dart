@@ -308,9 +308,6 @@ class _$GetStockSummaryApiResponseActions
     getStockResponse.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetStockSummaryApiResponseGetStockSummaryApiResponseActions> get $serializer => GetStockSummaryApiResponseGetStockSummaryApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockSummaryApiResponse);

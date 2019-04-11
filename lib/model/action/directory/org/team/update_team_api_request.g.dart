@@ -388,18 +388,15 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
   _$UpdateTeamApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateTeamApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        opsTeam = $options.actionField<bool>('opsTeam', (a) => a?.opsTeam,
+        opsTeam = $options.field<bool>('opsTeam', (a) => a?.opsTeam,
             (s) => s?.opsTeam, (p, b) => p?.opsTeam = b),
-        salesTeam = $options.actionField<bool>('salesTeam', (a) => a?.salesTeam,
+        salesTeam = $options.field<bool>('salesTeam', (a) => a?.salesTeam,
             (s) => s?.salesTeam, (p, b) => p?.salesTeam = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        name = $options.actionField<String>(
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -408,20 +405,17 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        publiclyVisible = $options.actionField<bool>(
+        publiclyVisible = $options.field<bool>(
             'publiclyVisible',
             (a) => a?.publiclyVisible,
             (s) => s?.publiclyVisible,
             (p, b) => p?.publiclyVisible = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
         super._();
 
   factory _$UpdateTeamApiRequestActions(
@@ -476,9 +470,6 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateTeamApiRequestUpdateTeamApiRequestActions> get $serializer => UpdateTeamApiRequestUpdateTeamApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

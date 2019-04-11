@@ -108,9 +108,6 @@ class _$GetInvoiceApi extends GetInvoiceApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateGetInvoiceApi> get $serializer => CommandStateGetInvoiceApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

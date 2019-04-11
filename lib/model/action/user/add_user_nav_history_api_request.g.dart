@@ -237,19 +237,19 @@ class _$AddUserNavHistoryApiRequestActions
   _$AddUserNavHistoryApiRequestActions._(this.$options)
       : $replace = $options.action<AddUserNavHistoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        deviceType = $options.actionField<DeviceType>(
+        deviceType = $options.field<DeviceType>(
             'deviceType',
             (a) => a?.deviceType,
             (s) => s?.deviceType,
             (p, b) => p?.deviceType = b),
-        place = $options.actionField<Place>(
+        place = $options.field<Place>(
             'place', (a) => a?.place, (s) => s?.place, (p, b) => p?.place = b),
-        referenceId = $options.actionField<String>(
+        referenceId = $options.field<String>(
             'referenceId',
             (a) => a?.referenceId,
             (s) => s?.referenceId,
             (p, b) => p?.referenceId = b),
-        referenceString = $options.actionField<String>(
+        referenceString = $options.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
@@ -291,9 +291,6 @@ class _$AddUserNavHistoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AddUserNavHistoryApiRequestAddUserNavHistoryApiRequestActions> get $serializer => AddUserNavHistoryApiRequestAddUserNavHistoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

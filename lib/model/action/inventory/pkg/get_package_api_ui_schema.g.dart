@@ -185,12 +185,12 @@ class _$GetPackageApiUiSchemaActions extends GetPackageApiUiSchemaActions {
   _$GetPackageApiUiSchemaActions._(this.$options)
       : $replace = $options.action<GetPackageApiUiSchema>(
             '\$replace', (a) => a?.$replace),
-        updateTrackingNumber = $options.actionField<bool>(
+        updateTrackingNumber = $options.field<bool>(
             'updateTrackingNumber',
             (a) => a?.updateTrackingNumber,
             (s) => s?.updateTrackingNumber,
             (p, b) => p?.updateTrackingNumber = b),
-        printPackingList = $options.actionField<bool>(
+        printPackingList = $options.field<bool>(
             'printPackingList',
             (a) => a?.printPackingList,
             (s) => s?.printPackingList,
@@ -227,9 +227,6 @@ class _$GetPackageApiUiSchemaActions extends GetPackageApiUiSchemaActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPackageApiUiSchemaGetPackageApiUiSchemaActions> get $serializer => GetPackageApiUiSchemaGetPackageApiUiSchemaActions.serializer;
 
   FullType _$fullType;
   @override

@@ -149,7 +149,7 @@ class _$GetZoneApiRequestActions extends GetZoneApiRequestActions {
   _$GetZoneApiRequestActions._(this.$options)
       : $replace =
             $options.action<GetZoneApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -180,9 +180,6 @@ class _$GetZoneApiRequestActions extends GetZoneApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetZoneApiRequestGetZoneApiRequestActions> get $serializer => GetZoneApiRequestGetZoneApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

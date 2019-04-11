@@ -520,22 +520,19 @@ class _$CreateStockOrderApiRequestActions
   _$CreateStockOrderApiRequestActions._(this.$options)
       : $replace = $options.action<CreateStockOrderApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        opsOrgUnitId = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        opsOrgUnitId = $options.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
             (p, b) => p?.opsOrgUnitId = b),
-        salesOrgUnitid = $options.actionField<String>(
+        salesOrgUnitid = $options.field<String>(
             'salesOrgUnitid',
             (a) => a?.salesOrgUnitid,
             (s) => s?.salesOrgUnitid,
             (p, b) => p?.salesOrgUnitid = b),
-        orderReasonId = $options.actionField<String>(
+        orderReasonId = $options.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
@@ -547,14 +544,14 @@ class _$CreateStockOrderApiRequestActions
                 (s) => s?.toLocation,
                 (b) => b?.toLocation,
                 (parent, builder) => parent?.toLocation = builder)),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        shipToAddressId = $options.actionField<String>(
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -574,20 +571,17 @@ class _$CreateStockOrderApiRequestActions
                 (s) => s?.deliveryWindow,
                 (b) => b?.deliveryWindow,
                 (parent, builder) => parent?.deliveryWindow = builder)),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
         orderCustomFieldValues =
-            $options.actionField<BuiltList<OrderCustomFieldValue>>(
+            $options.field<BuiltList<OrderCustomFieldValue>>(
                 'orderCustomFieldValues',
                 (a) => a?.orderCustomFieldValues,
                 (s) => s?.orderCustomFieldValues,
@@ -657,9 +651,6 @@ class _$CreateStockOrderApiRequestActions
     deliverToAddressOverride.$middleware(middleware);
     deliveryWindow.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateStockOrderApiRequestCreateStockOrderApiRequestActions> get $serializer => CreateStockOrderApiRequestCreateStockOrderApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -187,12 +187,9 @@ class _$GetUiSetupMobileApiRequestActions
   _$GetUiSetupMobileApiRequestActions._(this.$options)
       : $replace = $options.action<GetUiSetupMobileApiRequest>(
             '\$replace', (a) => a?.$replace),
-        appVersion = $options.actionField<String>(
-            'appVersion',
-            (a) => a?.appVersion,
-            (s) => s?.appVersion,
-            (p, b) => p?.appVersion = b),
-        platformVersion = $options.actionField<String>(
+        appVersion = $options.field<String>('appVersion', (a) => a?.appVersion,
+            (s) => s?.appVersion, (p, b) => p?.appVersion = b),
+        platformVersion = $options.field<String>(
             'platformVersion',
             (a) => a?.platformVersion,
             (s) => s?.platformVersion,
@@ -230,9 +227,6 @@ class _$GetUiSetupMobileApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetUiSetupMobileApiRequestGetUiSetupMobileApiRequestActions> get $serializer => GetUiSetupMobileApiRequestGetUiSetupMobileApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

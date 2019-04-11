@@ -208,14 +208,14 @@ class _$MessageMessageParticipantActions
   _$MessageMessageParticipantActions._(this.$options)
       : $replace = $options.action<MessageMessageParticipant>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        participantId = $options.actionField<String>(
+        participantId = $options.field<String>(
             'participantId',
             (a) => a?.participantId,
             (s) => s?.participantId,
             (p, b) => p?.participantId = b),
-        read = $options.actionField<bool>(
+        read = $options.field<bool>(
             'read', (a) => a?.read, (s) => s?.read, (p, b) => p?.read = b),
         super._();
 
@@ -252,9 +252,6 @@ class _$MessageMessageParticipantActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MessageMessageParticipantMessageMessageParticipantActions> get $serializer => MessageMessageParticipantMessageMessageParticipantActions.serializer;
 
   FullType _$fullType;
   @override

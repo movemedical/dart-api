@@ -459,52 +459,49 @@ class _$ListCaseFilesApiCaseFileActions
   _$ListCaseFilesApiCaseFileActions._(this.$options)
       : $replace = $options.action<ListCaseFilesApiCaseFile>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        fileId = $options.actionField<String>('fileId', (a) => a?.fileId,
+        fileId = $options.field<String>('fileId', (a) => a?.fileId,
             (s) => s?.fileId, (p, b) => p?.fileId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        fileType = $options.actionField<CaseFileType>('fileType',
-            (a) => a?.fileType, (s) => s?.fileType, (p, b) => p?.fileType = b),
-        uploadedByName = $options.actionField<String>(
+        fileType = $options.field<CaseFileType>('fileType', (a) => a?.fileType,
+            (s) => s?.fileType, (p, b) => p?.fileType = b),
+        uploadedByName = $options.field<String>(
             'uploadedByName',
             (a) => a?.uploadedByName,
             (s) => s?.uploadedByName,
             (p, b) => p?.uploadedByName = b),
-        uploadedByInitials = $options.actionField<String>(
+        uploadedByInitials = $options.field<String>(
             'uploadedByInitials',
             (a) => a?.uploadedByInitials,
             (s) => s?.uploadedByInitials,
             (p, b) => p?.uploadedByInitials = b),
-        createdDate = $options.actionField<DateTime>(
+        createdDate = $options.field<DateTime>(
             'createdDate',
             (a) => a?.createdDate,
             (s) => s?.createdDate,
             (p, b) => p?.createdDate = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        uploaded = $options.actionField<bool>('uploaded', (a) => a?.uploaded,
+        uploaded = $options.field<bool>('uploaded', (a) => a?.uploaded,
             (s) => s?.uploaded, (p, b) => p?.uploaded = b),
-        orgVisible = $options.actionField<bool>(
-            'orgVisible',
-            (a) => a?.orgVisible,
-            (s) => s?.orgVisible,
-            (p, b) => p?.orgVisible = b),
-        publicVisible = $options.actionField<bool>(
+        orgVisible = $options.field<bool>('orgVisible', (a) => a?.orgVisible,
+            (s) => s?.orgVisible, (p, b) => p?.orgVisible = b),
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        ownerOrgUnitName = $options.actionField<String>(
+        ownerOrgUnitName = $options.field<String>(
             'ownerOrgUnitName',
             (a) => a?.ownerOrgUnitName,
             (s) => s?.ownerOrgUnitName,
@@ -564,9 +561,6 @@ class _$ListCaseFilesApiCaseFileActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseFilesApiCaseFileListCaseFilesApiCaseFileActions> get $serializer => ListCaseFilesApiCaseFileListCaseFilesApiCaseFileActions.serializer;
 
   FullType _$fullType;
   @override

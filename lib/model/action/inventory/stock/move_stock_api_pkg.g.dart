@@ -351,48 +351,45 @@ class _$MoveStockApiPkgActions extends MoveStockApiPkgActions {
   _$MoveStockApiPkgActions._(this.$options)
       : $replace =
             $options.action<MoveStockApiPkg>('\$replace', (a) => a?.$replace),
-        processingLevel = $options.actionField<MoveStockApiProcessingLevel>(
+        processingLevel = $options.field<MoveStockApiProcessingLevel>(
             'processingLevel',
             (a) => a?.processingLevel,
             (s) => s?.processingLevel,
             (p, b) => p?.processingLevel = b),
-        toteStockId = $options.actionField<String>(
+        toteStockId = $options.field<String>(
             'toteStockId',
             (a) => a?.toteStockId,
             (s) => s?.toteStockId,
             (p, b) => p?.toteStockId = b),
-        toteStockSummaryKey = $options.actionField<String>(
+        toteStockSummaryKey = $options.field<String>(
             'toteStockSummaryKey',
             (a) => a?.toteStockSummaryKey,
             (s) => s?.toteStockSummaryKey,
             (p, b) => p?.toteStockSummaryKey = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        trackingNumber = $options.actionField<String>(
+        trackingNumber = $options.field<String>(
             'trackingNumber',
             (a) => a?.trackingNumber,
             (s) => s?.trackingNumber,
             (p, b) => p?.trackingNumber = b),
-        orderLineId = $options.actionField<String>(
+        orderLineId = $options.field<String>(
             'orderLineId',
             (a) => a?.orderLineId,
             (s) => s?.orderLineId,
             (p, b) => p?.orderLineId = b),
-        pkgId = $options.actionField<String>(
+        pkgId = $options.field<String>(
             'pkgId', (a) => a?.pkgId, (s) => s?.pkgId, (p, b) => p?.pkgId = b),
-        stocks = $options.actionField<BuiltList<MoveStockApiMovingStock>>(
-            'stocks',
-            (a) => a?.stocks,
-            (s) => s?.stocks,
-            (p, b) => p?.stocks = b),
+        stocks = $options.field<BuiltList<MoveStockApiMovingStock>>('stocks',
+            (a) => a?.stocks, (s) => s?.stocks, (p, b) => p?.stocks = b),
         super._();
 
   factory _$MoveStockApiPkgActions(MoveStockApiPkgActionsOptions options) =>
@@ -438,9 +435,6 @@ class _$MoveStockApiPkgActions extends MoveStockApiPkgActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockApiPkgMoveStockApiPkgActions> get $serializer => MoveStockApiPkgMoveStockApiPkgActions.serializer;
 
   FullType _$fullType;
   @override

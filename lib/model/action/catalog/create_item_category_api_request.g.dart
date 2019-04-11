@@ -264,21 +264,18 @@ class _$CreateItemCategoryApiRequestActions
   _$CreateItemCategoryApiRequestActions._(this.$options)
       : $replace = $options.action<CreateItemCategoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        opsOuId = $options.actionField<String>('opsOuId', (a) => a?.opsOuId,
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        opsOuId = $options.field<String>('opsOuId', (a) => a?.opsOuId,
             (s) => s?.opsOuId, (p, b) => p?.opsOuId = b),
-        parentCategoryId = $options.actionField<String>(
+        parentCategoryId = $options.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        code = $options.actionField<String>(
+        code = $options.field<String>(
             'code', (a) => a?.code, (s) => s?.code, (p, b) => p?.code = b),
         super._();
 
@@ -319,9 +316,6 @@ class _$CreateItemCategoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateItemCategoryApiRequestCreateItemCategoryApiRequestActions> get $serializer => CreateItemCategoryApiRequestCreateItemCategoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

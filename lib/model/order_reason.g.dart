@@ -394,11 +394,11 @@ class _$OrderReasonActions extends OrderReasonActions {
   _$OrderReasonActions._(this.$options)
       : $replace =
             $options.action<OrderReason>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        reasonGroup = $options.actionField<OrderReasonGroup>(
+        reasonGroup = $options.field<OrderReasonGroup>(
             'reasonGroup',
             (a) => a?.reasonGroup,
             (s) => s?.reasonGroup,
@@ -410,12 +410,11 @@ class _$OrderReasonActions extends OrderReasonActions {
             (s) => s?.toInventoryType,
             (b) => b?.toInventoryType,
             (parent, builder) => parent?.toInventoryType = builder)),
-        salesOrderInventorySource =
-            $options.actionField<SalesOrderInventorySource>(
-                'salesOrderInventorySource',
-                (a) => a?.salesOrderInventorySource,
-                (s) => s?.salesOrderInventorySource,
-                (p, b) => p?.salesOrderInventorySource = b),
+        salesOrderInventorySource = $options.field<SalesOrderInventorySource>(
+            'salesOrderInventorySource',
+            (a) => a?.salesOrderInventorySource,
+            (s) => s?.salesOrderInventorySource,
+            (p, b) => p?.salesOrderInventorySource = b),
         defaultShippingService = ShippingServiceActions(() => $options.stateful<
                 ShippingService,
                 ShippingServiceBuilder,
@@ -425,22 +424,22 @@ class _$OrderReasonActions extends OrderReasonActions {
             (s) => s?.defaultShippingService,
             (b) => b?.defaultShippingService,
             (parent, builder) => parent?.defaultShippingService = builder)),
-        approvalRequired = $options.actionField<bool>(
+        approvalRequired = $options.field<bool>(
             'approvalRequired',
             (a) => a?.approvalRequired,
             (s) => s?.approvalRequired,
             (p, b) => p?.approvalRequired = b),
-        changesResponsibleParty = $options.actionField<bool>(
+        changesResponsibleParty = $options.field<bool>(
             'changesResponsibleParty',
             (a) => a?.changesResponsibleParty,
             (s) => s?.changesResponsibleParty,
             (p, b) => p?.changesResponsibleParty = b),
-        changesHomeLocation = $options.actionField<bool>(
+        changesHomeLocation = $options.field<bool>(
             'changesHomeLocation',
             (a) => a?.changesHomeLocation,
             (s) => s?.changesHomeLocation,
             (p, b) => p?.changesHomeLocation = b),
-        creditCardAllowed = $options.actionField<bool>(
+        creditCardAllowed = $options.field<bool>(
             'creditCardAllowed',
             (a) => a?.creditCardAllowed,
             (s) => s?.creditCardAllowed,
@@ -499,9 +498,6 @@ class _$OrderReasonActions extends OrderReasonActions {
     toInventoryType.$middleware(middleware);
     defaultShippingService.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrderReasonOrderReasonActions> get $serializer => OrderReasonOrderReasonActions.serializer;
 
   FullType _$fullType;
   @override

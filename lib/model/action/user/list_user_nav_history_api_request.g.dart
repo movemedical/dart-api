@@ -188,12 +188,12 @@ class _$ListUserNavHistoryApiRequestActions
   _$ListUserNavHistoryApiRequestActions._(this.$options)
       : $replace = $options.action<ListUserNavHistoryApiRequest>(
             '\$replace', (a) => a?.$replace),
-        deviceType = $options.actionField<DeviceType>(
+        deviceType = $options.field<DeviceType>(
             'deviceType',
             (a) => a?.deviceType,
             (s) => s?.deviceType,
             (p, b) => p?.deviceType = b),
-        place = $options.actionField<Place>(
+        place = $options.field<Place>(
             'place', (a) => a?.place, (s) => s?.place, (p, b) => p?.place = b),
         super._();
 
@@ -228,9 +228,6 @@ class _$ListUserNavHistoryApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUserNavHistoryApiRequestListUserNavHistoryApiRequestActions> get $serializer => ListUserNavHistoryApiRequestListUserNavHistoryApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

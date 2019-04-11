@@ -342,21 +342,15 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
   _$ListRelatedDeliverToAddressesApiRequestActions._(this.$options)
       : $replace = $options.action<ListRelatedDeliverToAddressesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -428,9 +422,6 @@ class _$ListRelatedDeliverToAddressesApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListRelatedDeliverToAddressesApiRequestListRelatedDeliverToAddressesApiRequestActions> get $serializer => ListRelatedDeliverToAddressesApiRequestListRelatedDeliverToAddressesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

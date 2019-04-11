@@ -173,12 +173,9 @@ class _$SkipErpApiRequestActions extends SkipErpApiRequestActions {
   _$SkipErpApiRequestActions._(this.$options)
       : $replace =
             $options.action<SkipErpApiRequest>('\$replace', (a) => a?.$replace),
-        erpOrderId = $options.actionField<String>(
-            'erpOrderId',
-            (a) => a?.erpOrderId,
-            (s) => s?.erpOrderId,
-            (p, b) => p?.erpOrderId = b),
-        erpReference = $options.actionField<String>(
+        erpOrderId = $options.field<String>('erpOrderId', (a) => a?.erpOrderId,
+            (s) => s?.erpOrderId, (p, b) => p?.erpOrderId = b),
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
@@ -214,9 +211,6 @@ class _$SkipErpApiRequestActions extends SkipErpApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SkipErpApiRequestSkipErpApiRequestActions> get $serializer => SkipErpApiRequestSkipErpApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

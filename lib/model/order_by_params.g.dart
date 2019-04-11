@@ -188,9 +188,9 @@ class _$OrderByParamsActions<F> extends OrderByParamsActions<F> {
   _$OrderByParamsActions._(this.$options)
       : $replace =
             $options.action<OrderByParams<F>>('\$replace', (a) => a?.$replace),
-        field = $options.actionField<F>(
+        field = $options.field<F>(
             'field', (a) => a?.field, (s) => s?.field, (p, b) => p?.field = b),
-        direction = $options.actionField<OrderByDirection>(
+        direction = $options.field<OrderByDirection>(
             'direction',
             (a) => a?.direction,
             (s) => s?.direction,
@@ -226,9 +226,6 @@ class _$OrderByParamsActions<F> extends OrderByParamsActions<F> {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<OrderByParamsOrderByParamsActions<F>> get $serializer => OrderByParamsOrderByParamsActions<F>.serializer;
 
   FullType _$fullType;
   @override

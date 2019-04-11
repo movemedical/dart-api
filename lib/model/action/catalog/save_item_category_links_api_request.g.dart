@@ -208,9 +208,9 @@ class _$SaveItemCategoryLinksApiRequestActions
   _$SaveItemCategoryLinksApiRequestActions._(this.$options)
       : $replace = $options.action<SaveItemCategoryLinksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        itemCategoryIds = $options.actionField<BuiltList<String>>(
+        itemCategoryIds = $options.field<BuiltList<String>>(
             'itemCategoryIds',
             (a) => a?.itemCategoryIds,
             (s) => s?.itemCategoryIds,
@@ -249,9 +249,6 @@ class _$SaveItemCategoryLinksApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SaveItemCategoryLinksApiRequestSaveItemCategoryLinksApiRequestActions> get $serializer => SaveItemCategoryLinksApiRequestSaveItemCategoryLinksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

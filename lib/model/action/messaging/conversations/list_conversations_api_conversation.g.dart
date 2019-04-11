@@ -481,49 +481,49 @@ class _$ListConversationsApiConversationActions
   _$ListConversationsApiConversationActions._(this.$options)
       : $replace = $options.action<ListConversationsApiConversation>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        urgency = $options.actionField<DateTime>('urgency', (a) => a?.urgency,
+        urgency = $options.field<DateTime>('urgency', (a) => a?.urgency,
             (s) => s?.urgency, (p, b) => p?.urgency = b),
-        purpose = $options.actionField<String>('purpose', (a) => a?.purpose,
+        purpose = $options.field<String>('purpose', (a) => a?.purpose,
             (s) => s?.purpose, (p, b) => p?.purpose = b),
-        allParticipantsDisplayText = $options.actionField<String>(
+        allParticipantsDisplayText = $options.field<String>(
             'allParticipantsDisplayText',
             (a) => a?.allParticipantsDisplayText,
             (s) => s?.allParticipantsDisplayText,
             (p, b) => p?.allParticipantsDisplayText = b),
-        stopped = $options.actionField<bool>('stopped', (a) => a?.stopped,
+        stopped = $options.field<bool>('stopped', (a) => a?.stopped,
             (s) => s?.stopped, (p, b) => p?.stopped = b),
-        archived = $options.actionField<bool>('archived', (a) => a?.archived,
+        archived = $options.field<bool>('archived', (a) => a?.archived,
             (s) => s?.archived, (p, b) => p?.archived = b),
-        unread = $options.actionField<int>('unread', (a) => a?.unread,
+        unread = $options.field<int>('unread', (a) => a?.unread,
             (s) => s?.unread, (p, b) => p?.unread = b),
-        lastSenderId = $options.actionField<String>(
+        lastSenderId = $options.field<String>(
             'lastSenderId',
             (a) => a?.lastSenderId,
             (s) => s?.lastSenderId,
             (p, b) => p?.lastSenderId = b),
-        lastSenderInitials = $options.actionField<String>(
+        lastSenderInitials = $options.field<String>(
             'lastSenderInitials',
             (a) => a?.lastSenderInitials,
             (s) => s?.lastSenderInitials,
             (p, b) => p?.lastSenderInitials = b),
-        lastSenderDisplayText = $options.actionField<String>(
+        lastSenderDisplayText = $options.field<String>(
             'lastSenderDisplayText',
             (a) => a?.lastSenderDisplayText,
             (s) => s?.lastSenderDisplayText,
             (p, b) => p?.lastSenderDisplayText = b),
-        lastMessagePreview = $options.actionField<String>(
+        lastMessagePreview = $options.field<String>(
             'lastMessagePreview',
             (a) => a?.lastMessagePreview,
             (s) => s?.lastMessagePreview,
             (p, b) => p?.lastMessagePreview = b),
-        lastMessageSentDate = $options.actionField<DateTime>(
+        lastMessageSentDate = $options.field<DateTime>(
             'lastMessageSentDate',
             (a) => a?.lastMessageSentDate,
             (s) => s?.lastMessageSentDate,
             (p, b) => p?.lastMessageSentDate = b),
-        links = $options.actionField<BuiltList<AttributableObject>>(
+        links = $options.field<BuiltList<AttributableObject>>(
             'links', (a) => a?.links, (s) => s?.links, (p, b) => p?.links = b),
         super._();
 
@@ -581,9 +581,6 @@ class _$ListConversationsApiConversationActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListConversationsApiConversationListConversationsApiConversationActions> get $serializer => ListConversationsApiConversationListConversationsApiConversationActions.serializer;
 
   FullType _$fullType;
   @override

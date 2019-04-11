@@ -564,20 +564,20 @@ class _$HcrActions extends HcrActions {
 
   _$HcrActions._(this.$options)
       : $replace = $options.action<Hcr>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        hcpType = $options.actionField<HcrType>('hcpType', (a) => a?.hcpType,
+        hcpType = $options.field<HcrType>('hcpType', (a) => a?.hcpType,
             (s) => s?.hcpType, (p, b) => p?.hcpType = b),
-        workingHomeId = $options.actionField<String>(
+        workingHomeId = $options.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.actionField<String>(
+        workingAtId = $options.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
@@ -617,26 +617,23 @@ class _$HcrActions extends HcrActions {
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        defaultDeliverToAddressId = $options.actionField<String>(
+        defaultDeliverToAddressId = $options.field<String>(
             'defaultDeliverToAddressId',
             (a) => a?.defaultDeliverToAddressId,
             (s) => s?.defaultDeliverToAddressId,
             (p, b) => p?.defaultDeliverToAddressId = b),
-        hcrReference = $options.actionField<String>(
+        hcrReference = $options.field<String>(
             'hcrReference',
             (a) => a?.hcrReference,
             (s) => s?.hcrReference,
             (p, b) => p?.hcrReference = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
         super._();
 
@@ -708,9 +705,6 @@ class _$HcrActions extends HcrActions {
     mobilePhoneNumber.$middleware(middleware);
     faxNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<HcrHcrActions> get $serializer => HcrHcrActions.serializer;
 
   FullType _$fullType;
   @override

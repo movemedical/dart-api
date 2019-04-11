@@ -287,19 +287,19 @@ class _$ListHcrColleagueOptionsApiColleagueOptionActions
   _$ListHcrColleagueOptionsApiColleagueOptionActions._(this.$options)
       : $replace = $options.action<ListHcrColleagueOptionsApiColleagueOption>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        colleagueHcrId = $options.actionField<String>(
+        colleagueHcrId = $options.field<String>(
             'colleagueHcrId',
             (a) => a?.colleagueHcrId,
             (s) => s?.colleagueHcrId,
             (p, b) => p?.colleagueHcrId = b),
-        colleagueHcrType = $options.actionField<HcrType>(
+        colleagueHcrType = $options.field<HcrType>(
             'colleagueHcrType',
             (a) => a?.colleagueHcrType,
             (s) => s?.colleagueHcrType,
             (p, b) => p?.colleagueHcrType = b),
-        colleagueName = $options.actionField<String>(
+        colleagueName = $options.field<String>(
             'colleagueName',
             (a) => a?.colleagueName,
             (s) => s?.colleagueName,
@@ -357,9 +357,6 @@ class _$ListHcrColleagueOptionsApiColleagueOptionActions
     super.$middleware(middleware);
     colleagueEmail.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHcrColleagueOptionsApiColleagueOptionListHcrColleagueOptionsApiColleagueOptionActions> get $serializer => ListHcrColleagueOptionsApiColleagueOptionListHcrColleagueOptionsApiColleagueOptionActions.serializer;
 
   FullType _$fullType;
   @override

@@ -80,9 +80,6 @@ class _$SkipErpApi extends SkipErpApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSkipErpApi> get $serializer => CommandStateSkipErpApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

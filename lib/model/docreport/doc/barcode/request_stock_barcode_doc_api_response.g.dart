@@ -168,7 +168,7 @@ class _$RequestStockBarcodeDocApiResponseActions
   _$RequestStockBarcodeDocApiResponseActions._(this.$options)
       : $replace = $options.action<RequestStockBarcodeDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -205,9 +205,6 @@ class _$RequestStockBarcodeDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestStockBarcodeDocApiResponseRequestStockBarcodeDocApiResponseActions> get $serializer => RequestStockBarcodeDocApiResponseRequestStockBarcodeDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

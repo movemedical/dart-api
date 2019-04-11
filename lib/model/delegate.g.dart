@@ -272,13 +272,13 @@ class _$DelegateActions extends DelegateActions {
 
   _$DelegateActions._(this.$options)
       : $replace = $options.action<Delegate>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<DelegateType>(
+        type = $options.field<DelegateType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         email = EmailActions(() =>
             $options.stateful<Email, EmailBuilder, EmailActions>(
@@ -287,7 +287,7 @@ class _$DelegateActions extends DelegateActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -334,9 +334,6 @@ class _$DelegateActions extends DelegateActions {
     super.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<DelegateDelegateActions> get $serializer => DelegateDelegateActions.serializer;
 
   FullType _$fullType;
   @override

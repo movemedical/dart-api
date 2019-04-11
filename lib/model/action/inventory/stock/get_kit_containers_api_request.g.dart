@@ -187,12 +187,9 @@ class _$GetKitContainersApiRequestActions
   _$GetKitContainersApiRequestActions._(this.$options)
       : $replace = $options.action<GetKitContainersApiRequest>(
             '\$replace', (a) => a?.$replace),
-        kitStockId = $options.actionField<String>(
-            'kitStockId',
-            (a) => a?.kitStockId,
-            (s) => s?.kitStockId,
-            (p, b) => p?.kitStockId = b),
-        kitStockSummaryId = $options.actionField<String>(
+        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+            (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
+        kitStockSummaryId = $options.field<String>(
             'kitStockSummaryId',
             (a) => a?.kitStockSummaryId,
             (s) => s?.kitStockSummaryId,
@@ -230,9 +227,6 @@ class _$GetKitContainersApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetKitContainersApiRequestGetKitContainersApiRequestActions> get $serializer => GetKitContainersApiRequestGetKitContainersApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

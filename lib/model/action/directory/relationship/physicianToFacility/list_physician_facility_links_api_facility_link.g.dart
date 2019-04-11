@@ -272,27 +272,24 @@ class _$ListPhysicianFacilityLinksApiFacilityLinkActions
   _$ListPhysicianFacilityLinksApiFacilityLinkActions._(this.$options)
       : $replace = $options.action<ListPhysicianFacilityLinksApiFacilityLink>(
             '\$replace', (a) => a?.$replace),
-        physicianToFacilityId = $options.actionField<String>(
+        physicianToFacilityId = $options.field<String>(
             'physicianToFacilityId',
             (a) => a?.physicianToFacilityId,
             (s) => s?.physicianToFacilityId,
             (p, b) => p?.physicianToFacilityId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        facilityName = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        facilityName = $options.field<String>(
             'facilityName',
             (a) => a?.facilityName,
             (s) => s?.facilityName,
             (p, b) => p?.facilityName = b),
-        facilityType = $options.actionField<FacilityType>(
+        facilityType = $options.field<FacilityType>(
             'facilityType',
             (a) => a?.facilityType,
             (s) => s?.facilityType,
             (p, b) => p?.facilityType = b),
-        facilityActive = $options.actionField<bool>(
+        facilityActive = $options.field<bool>(
             'facilityActive',
             (a) => a?.facilityActive,
             (s) => s?.facilityActive,
@@ -337,9 +334,6 @@ class _$ListPhysicianFacilityLinksApiFacilityLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPhysicianFacilityLinksApiFacilityLinkListPhysicianFacilityLinksApiFacilityLinkActions> get $serializer => ListPhysicianFacilityLinksApiFacilityLinkListPhysicianFacilityLinksApiFacilityLinkActions.serializer;
 
   FullType _$fullType;
   @override

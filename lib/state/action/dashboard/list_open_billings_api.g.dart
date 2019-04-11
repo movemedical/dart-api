@@ -112,9 +112,6 @@ class _$ListOpenBillingsApi extends ListOpenBillingsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListOpenBillingsApi> get $serializer => CommandStateListOpenBillingsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

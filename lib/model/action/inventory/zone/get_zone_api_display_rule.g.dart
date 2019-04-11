@@ -158,11 +158,8 @@ class _$GetZoneApiDisplayRuleActions extends GetZoneApiDisplayRuleActions {
   _$GetZoneApiDisplayRuleActions._(this.$options)
       : $replace = $options.action<GetZoneApiDisplayRule>(
             '\$replace', (a) => a?.$replace),
-        editAllowed = $options.actionField<bool>(
-            'editAllowed',
-            (a) => a?.editAllowed,
-            (s) => s?.editAllowed,
-            (p, b) => p?.editAllowed = b),
+        editAllowed = $options.field<bool>('editAllowed', (a) => a?.editAllowed,
+            (s) => s?.editAllowed, (p, b) => p?.editAllowed = b),
         super._();
 
   factory _$GetZoneApiDisplayRuleActions(
@@ -193,9 +190,6 @@ class _$GetZoneApiDisplayRuleActions extends GetZoneApiDisplayRuleActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetZoneApiDisplayRuleGetZoneApiDisplayRuleActions> get $serializer => GetZoneApiDisplayRuleGetZoneApiDisplayRuleActions.serializer;
 
   FullType _$fullType;
   @override

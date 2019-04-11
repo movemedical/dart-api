@@ -289,19 +289,19 @@ class _$AuditOuputFormApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        orderReasonDocId = $options.actionField<String>(
+        orderReasonDocId = $options.field<String>(
             'orderReasonDocId',
             (a) => a?.orderReasonDocId,
             (s) => s?.orderReasonDocId,
             (p, b) => p?.orderReasonDocId = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -348,9 +348,6 @@ class _$AuditOuputFormApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<AuditOuputFormApiRequestAuditOuputFormApiRequestActions> get $serializer => AuditOuputFormApiRequestAuditOuputFormApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

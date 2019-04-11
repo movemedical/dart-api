@@ -171,7 +171,7 @@ class _$DeleteCalendarSubscriptionApiRequestActions
   _$DeleteCalendarSubscriptionApiRequestActions._(this.$options)
       : $replace = $options.action<DeleteCalendarSubscriptionApiRequest>(
             '\$replace', (a) => a?.$replace),
-        subscriptionId = $options.actionField<String>(
+        subscriptionId = $options.field<String>(
             'subscriptionId',
             (a) => a?.subscriptionId,
             (s) => s?.subscriptionId,
@@ -208,9 +208,6 @@ class _$DeleteCalendarSubscriptionApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DeleteCalendarSubscriptionApiRequestDeleteCalendarSubscriptionApiRequestActions> get $serializer => DeleteCalendarSubscriptionApiRequestDeleteCalendarSubscriptionApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -96,9 +96,6 @@ class _$CloseAuditItemApi extends CloseAuditItemApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCloseAuditItemApi> get $serializer => CommandStateCloseAuditItemApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

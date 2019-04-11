@@ -215,14 +215,14 @@ class _$GetConversationApiDisplayRulesActions
   _$GetConversationApiDisplayRulesActions._(this.$options)
       : $replace = $options.action<GetConversationApiDisplayRules>(
             '\$replace', (a) => a?.$replace),
-        canStop = $options.actionField<bool>('canStop', (a) => a?.canStop,
+        canStop = $options.field<bool>('canStop', (a) => a?.canStop,
             (s) => s?.canStop, (p, b) => p?.canStop = b),
-        canAddMessage = $options.actionField<bool>(
+        canAddMessage = $options.field<bool>(
             'canAddMessage',
             (a) => a?.canAddMessage,
             (s) => s?.canAddMessage,
             (p, b) => p?.canAddMessage = b),
-        canAddParticipants = $options.actionField<bool>(
+        canAddParticipants = $options.field<bool>(
             'canAddParticipants',
             (a) => a?.canAddParticipants,
             (s) => s?.canAddParticipants,
@@ -263,9 +263,6 @@ class _$GetConversationApiDisplayRulesActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetConversationApiDisplayRulesGetConversationApiDisplayRulesActions> get $serializer => GetConversationApiDisplayRulesGetConversationApiDisplayRulesActions.serializer;
 
   FullType _$fullType;
   @override

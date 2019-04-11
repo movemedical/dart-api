@@ -107,9 +107,6 @@ class _$CreateDeliverToAddressApi extends CreateDeliverToAddressApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateDeliverToAddressApi> get $serializer => CommandStateCreateDeliverToAddressApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

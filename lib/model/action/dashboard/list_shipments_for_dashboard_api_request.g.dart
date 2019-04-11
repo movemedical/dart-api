@@ -232,9 +232,6 @@ class _$ListShipmentsForDashboardApiRequestActions
     paging.$middleware(middleware);
   }
 
-// @override
-// Serializer<ListShipmentsForDashboardApiRequestListShipmentsForDashboardApiRequestActions> get $serializer => ListShipmentsForDashboardApiRequestListShipmentsForDashboardApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

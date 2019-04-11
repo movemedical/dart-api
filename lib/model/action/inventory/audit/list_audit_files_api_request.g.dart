@@ -231,7 +231,7 @@ class _$ListAuditFilesApiRequestActions
   _$ListAuditFilesApiRequestActions._(this.$options)
       : $replace = $options.action<ListAuditFilesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -294,9 +294,6 @@ class _$ListAuditFilesApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditFilesApiRequestListAuditFilesApiRequestActions> get $serializer => ListAuditFilesApiRequestListAuditFilesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

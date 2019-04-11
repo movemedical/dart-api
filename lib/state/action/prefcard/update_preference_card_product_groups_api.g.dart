@@ -119,9 +119,6 @@ class _$UpdatePreferenceCardProductGroupsApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdatePreferenceCardProductGroupsApi> get $serializer => CommandStateUpdatePreferenceCardProductGroupsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -209,7 +209,7 @@ class _$ListItemCategoriesLinkedToItemApiRequestActions
   _$ListItemCategoriesLinkedToItemApiRequestActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesLinkedToItemApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -260,9 +260,6 @@ class _$ListItemCategoriesLinkedToItemApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesLinkedToItemApiRequestListItemCategoriesLinkedToItemApiRequestActions> get $serializer => ListItemCategoriesLinkedToItemApiRequestListItemCategoriesLinkedToItemApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

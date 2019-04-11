@@ -112,9 +112,6 @@ class _$ListInventoryTypesApi extends ListInventoryTypesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListInventoryTypesApi> get $serializer => CommandStateListInventoryTypesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

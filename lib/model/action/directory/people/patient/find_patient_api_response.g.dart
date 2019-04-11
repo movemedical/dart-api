@@ -175,7 +175,7 @@ class _$FindPatientApiResponseActions extends FindPatientApiResponseActions {
   _$FindPatientApiResponseActions._(this.$options)
       : $replace = $options.action<FindPatientApiResponse>(
             '\$replace', (a) => a?.$replace),
-        patients = $options.actionField<BuiltList<Patient>>('patients',
+        patients = $options.field<BuiltList<Patient>>('patients',
             (a) => a?.patients, (s) => s?.patients, (p, b) => p?.patients = b),
         super._();
 
@@ -208,9 +208,6 @@ class _$FindPatientApiResponseActions extends FindPatientApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FindPatientApiResponseFindPatientApiResponseActions> get $serializer => FindPatientApiResponseFindPatientApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

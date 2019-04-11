@@ -354,35 +354,26 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
   _$ListZonesApiZoneDetailActions._(this.$options)
       : $replace = $options.action<ListZonesApiZoneDetail>(
             '\$replace', (a) => a?.$replace),
-        zoneId = $options.actionField<String>('zoneId', (a) => a?.zoneId,
+        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
             (s) => s?.zoneId, (p, b) => p?.zoneId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        name = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        type = $options.actionField<ZoneType>(
+        type = $options.field<ZoneType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        sourceable = $options.actionField<bool>(
-            'sourceable',
-            (a) => a?.sourceable,
-            (s) => s?.sourceable,
-            (p, b) => p?.sourceable = b),
-        receivable = $options.actionField<bool>(
-            'receivable',
-            (a) => a?.receivable,
-            (s) => s?.receivable,
-            (p, b) => p?.receivable = b),
-        hasBin = $options.actionField<bool>('hasBin', (a) => a?.hasBin,
+        sourceable = $options.field<bool>('sourceable', (a) => a?.sourceable,
+            (s) => s?.sourceable, (p, b) => p?.sourceable = b),
+        receivable = $options.field<bool>('receivable', (a) => a?.receivable,
+            (s) => s?.receivable, (p, b) => p?.receivable = b),
+        hasBin = $options.field<bool>('hasBin', (a) => a?.hasBin,
             (s) => s?.hasBin, (p, b) => p?.hasBin = b),
         super._();
 
@@ -431,9 +422,6 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListZonesApiZoneDetailListZonesApiZoneDetailActions> get $serializer => ListZonesApiZoneDetailListZonesApiZoneDetailActions.serializer;
 
   FullType _$fullType;
   @override

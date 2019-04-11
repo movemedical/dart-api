@@ -210,13 +210,13 @@ class _$TeamOptionActions extends TeamOptionActions {
 
   _$TeamOptionActions._(this.$options)
       : $replace = $options.action<TeamOption>('\$replace', (a) => a?.$replace),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamName = $options.actionField<String>('teamName', (a) => a?.teamName,
+        teamName = $options.field<String>('teamName', (a) => a?.teamName,
             (s) => s?.teamName, (p, b) => p?.teamName = b),
-        ops = $options.actionField<bool>(
+        ops = $options.field<bool>(
             'ops', (a) => a?.ops, (s) => s?.ops, (p, b) => p?.ops = b),
-        sales = $options.actionField<bool>(
+        sales = $options.field<bool>(
             'sales', (a) => a?.sales, (s) => s?.sales, (p, b) => p?.sales = b),
         super._();
 
@@ -253,9 +253,6 @@ class _$TeamOptionActions extends TeamOptionActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<TeamOptionTeamOptionActions> get $serializer => TeamOptionTeamOptionActions.serializer;
 
   FullType _$fullType;
   @override

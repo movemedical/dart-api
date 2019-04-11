@@ -214,9 +214,6 @@ class _$MoveStockApiRequestActions extends MoveStockApiRequestActions {
     order.$middleware(middleware);
   }
 
-// @override
-// Serializer<MoveStockApiRequestMoveStockApiRequestActions> get $serializer => MoveStockApiRequestMoveStockApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(MoveStockApiRequest);

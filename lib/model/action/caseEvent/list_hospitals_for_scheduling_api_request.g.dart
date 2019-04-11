@@ -433,48 +433,42 @@ class _$ListHospitalsForSchedulingApiRequestActions
   _$ListHospitalsForSchedulingApiRequestActions._(this.$options)
       : $replace = $options.action<ListHospitalsForSchedulingApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hospitalIds = $options.actionField<BuiltList<String>>(
+        hospitalIds = $options.field<BuiltList<String>>(
             'hospitalIds',
             (a) => a?.hospitalIds,
             (s) => s?.hospitalIds,
             (p, b) => p?.hospitalIds = b),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        healthSystemId = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        healthSystemId = $options.field<String>(
             'healthSystemId',
             (a) => a?.healthSystemId,
             (s) => s?.healthSystemId,
             (p, b) => p?.healthSystemId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        procedureId = $options.actionField<String>(
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        procedureId = $options.field<String>(
             'procedureId',
             (a) => a?.procedureId,
             (s) => s?.procedureId,
             (p, b) => p?.procedureId = b),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        forCreateCase = $options.actionField<bool>(
+        forCreateCase = $options.field<bool>(
             'forCreateCase',
             (a) => a?.forCreateCase,
             (s) => s?.forCreateCase,
             (p, b) => p?.forCreateCase = b),
-        skipCache = $options.actionField<bool>('skipCache', (a) => a?.skipCache,
+        skipCache = $options.field<bool>('skipCache', (a) => a?.skipCache,
             (s) => s?.skipCache, (p, b) => p?.skipCache = b),
         super._();
 
@@ -528,9 +522,6 @@ class _$ListHospitalsForSchedulingApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHospitalsForSchedulingApiRequestListHospitalsForSchedulingApiRequestActions> get $serializer => ListHospitalsForSchedulingApiRequestListHospitalsForSchedulingApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

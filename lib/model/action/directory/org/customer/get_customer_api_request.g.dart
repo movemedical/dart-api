@@ -156,7 +156,7 @@ class _$GetCustomerApiRequestActions extends GetCustomerApiRequestActions {
   _$GetCustomerApiRequestActions._(this.$options)
       : $replace = $options.action<GetCustomerApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$GetCustomerApiRequestActions extends GetCustomerApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCustomerApiRequestGetCustomerApiRequestActions> get $serializer => GetCustomerApiRequestGetCustomerApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -165,7 +165,7 @@ class _$FinalizeCaseUsageApiRequestActions
   _$FinalizeCaseUsageApiRequestActions._(this.$options)
       : $replace = $options.action<FinalizeCaseUsageApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$FinalizeCaseUsageApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<FinalizeCaseUsageApiRequestFinalizeCaseUsageApiRequestActions> get $serializer => FinalizeCaseUsageApiRequestFinalizeCaseUsageApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

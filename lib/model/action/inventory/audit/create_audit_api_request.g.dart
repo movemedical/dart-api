@@ -503,66 +503,63 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
   _$CreateAuditApiRequestActions._(this.$options)
       : $replace = $options.action<CreateAuditApiRequest>(
             '\$replace', (a) => a?.$replace),
-        referenceString = $options.actionField<String>(
+        referenceString = $options.field<String>(
             'referenceString',
             (a) => a?.referenceString,
             (s) => s?.referenceString,
             (p, b) => p?.referenceString = b),
-        countType = $options.actionField<AuditCountType>(
+        countType = $options.field<AuditCountType>(
             'countType',
             (a) => a?.countType,
             (s) => s?.countType,
             (p, b) => p?.countType = b),
-        type = $options.actionField<AuditType>(
+        type = $options.field<AuditType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        countingBins = $options.actionField<bool>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        countingBins = $options.field<bool>(
             'countingBins',
             (a) => a?.countingBins,
             (s) => s?.countingBins,
             (p, b) => p?.countingBins = b),
-        toteContentsRequired = $options.actionField<bool>(
+        toteContentsRequired = $options.field<bool>(
             'toteContentsRequired',
             (a) => a?.toteContentsRequired,
             (s) => s?.toteContentsRequired,
             (p, b) => p?.toteContentsRequired = b),
-        kitToteContentsRequired = $options.actionField<bool>(
+        kitToteContentsRequired = $options.field<bool>(
             'kitToteContentsRequired',
             (a) => a?.kitToteContentsRequired,
             (s) => s?.kitToteContentsRequired,
             (p, b) => p?.kitToteContentsRequired = b),
-        pkgContentsRequired = $options.actionField<bool>(
+        pkgContentsRequired = $options.field<bool>(
             'pkgContentsRequired',
             (a) => a?.pkgContentsRequired,
             (s) => s?.pkgContentsRequired,
             (p, b) => p?.pkgContentsRequired = b),
-        trayContentsRequired = $options.actionField<bool>(
+        trayContentsRequired = $options.field<bool>(
             'trayContentsRequired',
             (a) => a?.trayContentsRequired,
             (s) => s?.trayContentsRequired,
             (p, b) => p?.trayContentsRequired = b),
-        scheduledWindowStart = $options.actionField<DateTime>(
+        scheduledWindowStart = $options.field<DateTime>(
             'scheduledWindowStart',
             (a) => a?.scheduledWindowStart,
             (s) => s?.scheduledWindowStart,
             (p, b) => p?.scheduledWindowStart = b),
-        scheduledWindowEnd = $options.actionField<DateTime>(
+        scheduledWindowEnd = $options.field<DateTime>(
             'scheduledWindowEnd',
             (a) => a?.scheduledWindowEnd,
             (s) => s?.scheduledWindowEnd,
             (p, b) => p?.scheduledWindowEnd = b),
-        blind = $options.actionField<bool>(
+        blind = $options.field<bool>(
             'blind', (a) => a?.blind, (s) => s?.blind, (p, b) => p?.blind = b),
-        categoryIds = $options.actionField<BuiltList<String>>(
+        categoryIds = $options.field<BuiltList<String>>(
             'categoryIds',
             (a) => a?.categoryIds,
             (s) => s?.categoryIds,
@@ -623,9 +620,6 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateAuditApiRequestCreateAuditApiRequestActions> get $serializer => CreateAuditApiRequestCreateAuditApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

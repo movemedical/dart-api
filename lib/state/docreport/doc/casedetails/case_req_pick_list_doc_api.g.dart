@@ -98,9 +98,6 @@ class _$CaseReqPickListDocApi extends CaseReqPickListDocApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCaseReqPickListDocApi> get $serializer => CommandStateCaseReqPickListDocApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

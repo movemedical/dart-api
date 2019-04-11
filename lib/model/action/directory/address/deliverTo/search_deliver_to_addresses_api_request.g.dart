@@ -358,25 +358,19 @@ class _$SearchDeliverToAddressesApiRequestActions
   _$SearchDeliverToAddressesApiRequestActions._(this.$options)
       : $replace = $options.action<SearchDeliverToAddressesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        facilityId = $options.actionField<String>(
-            'facilityId',
-            (a) => a?.facilityId,
-            (s) => s?.facilityId,
-            (p, b) => p?.facilityId = b),
-        customerId = $options.actionField<String>(
-            'customerId',
-            (a) => a?.customerId,
-            (s) => s?.customerId,
-            (p, b) => p?.customerId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        customerId = $options.field<String>('customerId', (a) => a?.customerId,
+            (s) => s?.customerId, (p, b) => p?.customerId = b),
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        showExtendedDeliverTos = $options.actionField<bool>(
+        showExtendedDeliverTos = $options.field<bool>(
             'showExtendedDeliverTos',
             (a) => a?.showExtendedDeliverTos,
             (s) => s?.showExtendedDeliverTos,
@@ -443,9 +437,6 @@ class _$SearchDeliverToAddressesApiRequestActions
     super.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchDeliverToAddressesApiRequestSearchDeliverToAddressesApiRequestActions> get $serializer => SearchDeliverToAddressesApiRequestSearchDeliverToAddressesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

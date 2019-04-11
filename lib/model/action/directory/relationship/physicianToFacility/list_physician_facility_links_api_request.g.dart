@@ -264,12 +264,12 @@ class _$ListPhysicianFacilityLinksApiRequestActions
   _$ListPhysicianFacilityLinksApiRequestActions._(this.$options)
       : $replace = $options.action<ListPhysicianFacilityLinksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -335,9 +335,6 @@ class _$ListPhysicianFacilityLinksApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPhysicianFacilityLinksApiRequestListPhysicianFacilityLinksApiRequestActions> get $serializer => ListPhysicianFacilityLinksApiRequestListPhysicianFacilityLinksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

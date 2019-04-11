@@ -250,24 +250,21 @@ class _$ReadBarcodeApiLotActions extends ReadBarcodeApiLotActions {
   _$ReadBarcodeApiLotActions._(this.$options)
       : $replace =
             $options.action<ReadBarcodeApiLot>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemVersionId = $options.actionField<String>(
+        itemVersionId = $options.field<String>(
             'itemVersionId',
             (a) => a?.itemVersionId,
             (s) => s?.itemVersionId,
             (p, b) => p?.itemVersionId = b),
-        lotNumber = $options.actionField<String>(
-            'lotNumber',
-            (a) => a?.lotNumber,
-            (s) => s?.lotNumber,
-            (p, b) => p?.lotNumber = b),
-        expirationDate = $options.actionField<DateTime>(
+        lotNumber = $options.field<String>('lotNumber', (a) => a?.lotNumber,
+            (s) => s?.lotNumber, (p, b) => p?.lotNumber = b),
+        expirationDate = $options.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -306,9 +303,6 @@ class _$ReadBarcodeApiLotActions extends ReadBarcodeApiLotActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ReadBarcodeApiLotReadBarcodeApiLotActions> get $serializer => ReadBarcodeApiLotReadBarcodeApiLotActions.serializer;
 
   FullType _$fullType;
   @override

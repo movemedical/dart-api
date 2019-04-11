@@ -256,19 +256,19 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
       : $replace =
             $options.action<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        inventoryTypeName = $options.actionField<String>(
+        inventoryTypeName = $options.field<String>(
             'inventoryTypeName',
             (a) => a?.inventoryTypeName,
             (s) => s?.inventoryTypeName,
             (p, b) => p?.inventoryTypeName = b),
-        inventoryTypeActive = $options.actionField<bool>(
+        inventoryTypeActive = $options.field<bool>(
             'inventoryTypeActive',
             (a) => a?.inventoryTypeActive,
             (s) => s?.inventoryTypeActive,
@@ -312,9 +312,6 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListBizUnitInventoryTypeLinksApiInventoryTypeLinkListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions> get $serializer => ListBizUnitInventoryTypeLinksApiInventoryTypeLinkListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions.serializer;
 
   FullType _$fullType;
   @override

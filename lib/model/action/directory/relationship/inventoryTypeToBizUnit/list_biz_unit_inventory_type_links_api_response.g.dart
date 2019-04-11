@@ -218,10 +218,10 @@ class _$ListBizUnitInventoryTypeLinksApiResponseActions
   _$ListBizUnitInventoryTypeLinksApiResponseActions._(this.$options)
       : $replace = $options.action<ListBizUnitInventoryTypeLinksApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<
+        data = $options.field<
                 BuiltList<ListBizUnitInventoryTypeLinksApiInventoryTypeLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -257,9 +257,6 @@ class _$ListBizUnitInventoryTypeLinksApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListBizUnitInventoryTypeLinksApiResponseListBizUnitInventoryTypeLinksApiResponseActions> get $serializer => ListBizUnitInventoryTypeLinksApiResponseListBizUnitInventoryTypeLinksApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

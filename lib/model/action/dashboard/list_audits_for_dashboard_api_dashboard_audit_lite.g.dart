@@ -275,12 +275,12 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        daysUntilDue = $options.actionField<int>(
+        daysUntilDue = $options.field<int>(
             'daysUntilDue',
             (a) => a?.daysUntilDue,
             (s) => s?.daysUntilDue,
             (p, b) => p?.daysUntilDue = b),
-        displayDaysUntilDue = $options.actionField<bool>(
+        displayDaysUntilDue = $options.field<bool>(
             'displayDaysUntilDue',
             (a) => a?.displayDaysUntilDue,
             (s) => s?.displayDaysUntilDue,
@@ -330,9 +330,6 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
     audit.$middleware(middleware);
     location.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditsForDashboardApiDashboardAuditLiteListAuditsForDashboardApiDashboardAuditLiteActions> get $serializer => ListAuditsForDashboardApiDashboardAuditLiteListAuditsForDashboardApiDashboardAuditLiteActions.serializer;
 
   FullType _$fullType;
   @override

@@ -149,7 +149,7 @@ class _$GetOrgApiRequestActions extends GetOrgApiRequestActions {
   _$GetOrgApiRequestActions._(this.$options)
       : $replace =
             $options.action<GetOrgApiRequest>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         super._();
 
@@ -180,9 +180,6 @@ class _$GetOrgApiRequestActions extends GetOrgApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrgApiRequestGetOrgApiRequestActions> get $serializer => GetOrgApiRequestGetOrgApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

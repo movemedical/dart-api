@@ -215,9 +215,6 @@ class _$GetMessageApiResponseActions extends GetMessageApiResponseActions {
     message.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetMessageApiResponseGetMessageApiResponseActions> get $serializer => GetMessageApiResponseGetMessageApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetMessageApiResponse);

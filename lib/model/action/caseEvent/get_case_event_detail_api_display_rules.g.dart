@@ -415,51 +415,42 @@ class _$GetCaseEventDetailApiDisplayRulesActions
   _$GetCaseEventDetailApiDisplayRulesActions._(this.$options)
       : $replace = $options.action<GetCaseEventDetailApiDisplayRules>(
             '\$replace', (a) => a?.$replace),
-        confirmCase = $options.actionField<bool>(
-            'confirmCase',
-            (a) => a?.confirmCase,
-            (s) => s?.confirmCase,
-            (p, b) => p?.confirmCase = b),
-        confirmUsage = $options.actionField<bool>(
+        confirmCase = $options.field<bool>('confirmCase', (a) => a?.confirmCase,
+            (s) => s?.confirmCase, (p, b) => p?.confirmCase = b),
+        confirmUsage = $options.field<bool>(
             'confirmUsage',
             (a) => a?.confirmUsage,
             (s) => s?.confirmUsage,
             (p, b) => p?.confirmUsage = b),
-        editRequirements = $options.actionField<bool>(
+        editRequirements = $options.field<bool>(
             'editRequirements',
             (a) => a?.editRequirements,
             (s) => s?.editRequirements,
             (p, b) => p?.editRequirements = b),
-        reschedule = $options.actionField<bool>(
-            'reschedule',
-            (a) => a?.reschedule,
-            (s) => s?.reschedule,
-            (p, b) => p?.reschedule = b),
-        cancel = $options.actionField<bool>('cancel', (a) => a?.cancel,
+        reschedule = $options.field<bool>('reschedule', (a) => a?.reschedule,
+            (s) => s?.reschedule, (p, b) => p?.reschedule = b),
+        cancel = $options.field<bool>('cancel', (a) => a?.cancel,
             (s) => s?.cancel, (p, b) => p?.cancel = b),
-        editUsage = $options.actionField<bool>('editUsage', (a) => a?.editUsage,
+        editUsage = $options.field<bool>('editUsage', (a) => a?.editUsage,
             (s) => s?.editUsage, (p, b) => p?.editUsage = b),
-        schedulingEditFull = $options.actionField<bool>(
+        schedulingEditFull = $options.field<bool>(
             'schedulingEditFull',
             (a) => a?.schedulingEditFull,
             (s) => s?.schedulingEditFull,
             (p, b) => p?.schedulingEditFull = b),
-        schedulingEditPartial = $options.actionField<bool>(
+        schedulingEditPartial = $options.field<bool>(
             'schedulingEditPartial',
             (a) => a?.schedulingEditPartial,
             (s) => s?.schedulingEditPartial,
             (p, b) => p?.schedulingEditPartial = b),
-        editPatient = $options.actionField<bool>(
-            'editPatient',
-            (a) => a?.editPatient,
-            (s) => s?.editPatient,
-            (p, b) => p?.editPatient = b),
-        editDeliverTo = $options.actionField<bool>(
+        editPatient = $options.field<bool>('editPatient', (a) => a?.editPatient,
+            (s) => s?.editPatient, (p, b) => p?.editPatient = b),
+        editDeliverTo = $options.field<bool>(
             'editDeliverTo',
             (a) => a?.editDeliverTo,
             (s) => s?.editDeliverTo,
             (p, b) => p?.editDeliverTo = b),
-        moveBackToPlanning = $options.actionField<bool>(
+        moveBackToPlanning = $options.field<bool>(
             'moveBackToPlanning',
             (a) => a?.moveBackToPlanning,
             (s) => s?.moveBackToPlanning,
@@ -516,9 +507,6 @@ class _$GetCaseEventDetailApiDisplayRulesActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseEventDetailApiDisplayRulesGetCaseEventDetailApiDisplayRulesActions> get $serializer => GetCaseEventDetailApiDisplayRulesGetCaseEventDetailApiDisplayRulesActions.serializer;
 
   FullType _$fullType;
   @override

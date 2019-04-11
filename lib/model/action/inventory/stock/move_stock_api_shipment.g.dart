@@ -331,22 +331,22 @@ class _$MoveStockApiShipmentActions extends MoveStockApiShipmentActions {
   _$MoveStockApiShipmentActions._(this.$options)
       : $replace = $options.action<MoveStockApiShipment>(
             '\$replace', (a) => a?.$replace),
-        fromLocationType = $options.actionField<LocationType>(
+        fromLocationType = $options.field<LocationType>(
             'fromLocationType',
             (a) => a?.fromLocationType,
             (s) => s?.fromLocationType,
             (p, b) => p?.fromLocationType = b),
-        fromLocationId = $options.actionField<String>(
+        fromLocationId = $options.field<String>(
             'fromLocationId',
             (a) => a?.fromLocationId,
             (s) => s?.fromLocationId,
             (p, b) => p?.fromLocationId = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -359,12 +359,12 @@ class _$MoveStockApiShipmentActions extends MoveStockApiShipmentActions {
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        packages = $options.actionField<BuiltList<MoveStockApiPkg>>('packages',
+        packages = $options.field<BuiltList<MoveStockApiPkg>>('packages',
             (a) => a?.packages, (s) => s?.packages, (p, b) => p?.packages = b),
         super._();
 
@@ -414,9 +414,6 @@ class _$MoveStockApiShipmentActions extends MoveStockApiShipmentActions {
     super.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockApiShipmentMoveStockApiShipmentActions> get $serializer => MoveStockApiShipmentMoveStockApiShipmentActions.serializer;
 
   FullType _$fullType;
   @override

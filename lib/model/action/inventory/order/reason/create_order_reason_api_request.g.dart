@@ -395,44 +395,40 @@ class _$CreateOrderReasonApiRequestActions
   _$CreateOrderReasonApiRequestActions._(this.$options)
       : $replace = $options.action<CreateOrderReasonApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        name = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        reasonGroup = $options.actionField<OrderReasonGroup>(
+        reasonGroup = $options.field<OrderReasonGroup>(
             'reasonGroup',
             (a) => a?.reasonGroup,
             (s) => s?.reasonGroup,
             (p, b) => p?.reasonGroup = b),
-        approvalRequired = $options.actionField<bool>(
+        approvalRequired = $options.field<bool>(
             'approvalRequired',
             (a) => a?.approvalRequired,
             (s) => s?.approvalRequired,
             (p, b) => p?.approvalRequired = b),
-        erp = $options.actionField<bool>(
+        erp = $options.field<bool>(
             'erp', (a) => a?.erp, (s) => s?.erp, (p, b) => p?.erp = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        salesOrderInventorySource =
-            $options.actionField<SalesOrderInventorySource>(
-                'salesOrderInventorySource',
-                (a) => a?.salesOrderInventorySource,
-                (s) => s?.salesOrderInventorySource,
-                (p, b) => p?.salesOrderInventorySource = b),
-        changesResponsibleParty = $options.actionField<bool>(
+        salesOrderInventorySource = $options.field<SalesOrderInventorySource>(
+            'salesOrderInventorySource',
+            (a) => a?.salesOrderInventorySource,
+            (s) => s?.salesOrderInventorySource,
+            (p, b) => p?.salesOrderInventorySource = b),
+        changesResponsibleParty = $options.field<bool>(
             'changesResponsibleParty',
             (a) => a?.changesResponsibleParty,
             (s) => s?.changesResponsibleParty,
             (p, b) => p?.changesResponsibleParty = b),
-        changesHomeLocation = $options.actionField<bool>(
+        changesHomeLocation = $options.field<bool>(
             'changesHomeLocation',
             (a) => a?.changesHomeLocation,
             (s) => s?.changesHomeLocation,
             (p, b) => p?.changesHomeLocation = b),
-        toInventoryTypeId = $options.actionField<String>(
+        toInventoryTypeId = $options.field<String>(
             'toInventoryTypeId',
             (a) => a?.toInventoryTypeId,
             (s) => s?.toInventoryTypeId,
@@ -486,9 +482,6 @@ class _$CreateOrderReasonApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateOrderReasonApiRequestCreateOrderReasonApiRequestActions> get $serializer => CreateOrderReasonApiRequestCreateOrderReasonApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

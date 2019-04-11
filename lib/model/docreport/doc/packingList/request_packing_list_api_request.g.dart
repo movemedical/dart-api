@@ -167,11 +167,8 @@ class _$RequestPackingListApiRequestActions
   _$RequestPackingListApiRequestActions._(this.$options)
       : $replace = $options.action<RequestPackingListApiRequest>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
         super._();
 
   factory _$RequestPackingListApiRequestActions(
@@ -203,9 +200,6 @@ class _$RequestPackingListApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestPackingListApiRequestRequestPackingListApiRequestActions> get $serializer => RequestPackingListApiRequestRequestPackingListApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

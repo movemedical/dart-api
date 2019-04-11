@@ -172,7 +172,7 @@ class _$GetCaseRequirementsDeliveryInfoApiRequestActions
   _$GetCaseRequirementsDeliveryInfoApiRequestActions._(this.$options)
       : $replace = $options.action<GetCaseRequirementsDeliveryInfoApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -209,9 +209,6 @@ class _$GetCaseRequirementsDeliveryInfoApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetCaseRequirementsDeliveryInfoApiRequestGetCaseRequirementsDeliveryInfoApiRequestActions> get $serializer => GetCaseRequirementsDeliveryInfoApiRequestGetCaseRequirementsDeliveryInfoApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

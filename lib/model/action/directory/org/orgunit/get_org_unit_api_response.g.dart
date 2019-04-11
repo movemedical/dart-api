@@ -220,9 +220,6 @@ class _$GetOrgUnitApiResponseActions extends GetOrgUnitApiResponseActions {
     details.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetOrgUnitApiResponseGetOrgUnitApiResponseActions> get $serializer => GetOrgUnitApiResponseGetOrgUnitApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetOrgUnitApiResponse);

@@ -238,19 +238,19 @@ class _$CreateShippingServiceApiRequestActions
   _$CreateShippingServiceApiRequestActions._(this.$options)
       : $replace = $options.action<CreateShippingServiceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        daysInTransit = $options.actionField<int>(
+        daysInTransit = $options.field<int>(
             'daysInTransit',
             (a) => a?.daysInTransit,
             (s) => s?.daysInTransit,
             (p, b) => p?.daysInTransit = b),
-        hoursInTransit = $options.actionField<int>(
+        hoursInTransit = $options.field<int>(
             'hoursInTransit',
             (a) => a?.hoursInTransit,
             (s) => s?.hoursInTransit,
             (p, b) => p?.hoursInTransit = b),
-        erpCode = $options.actionField<String>('erpCode', (a) => a?.erpCode,
+        erpCode = $options.field<String>('erpCode', (a) => a?.erpCode,
             (s) => s?.erpCode, (p, b) => p?.erpCode = b),
         super._();
 
@@ -290,9 +290,6 @@ class _$CreateShippingServiceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateShippingServiceApiRequestCreateShippingServiceApiRequestActions> get $serializer => CreateShippingServiceApiRequestCreateShippingServiceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

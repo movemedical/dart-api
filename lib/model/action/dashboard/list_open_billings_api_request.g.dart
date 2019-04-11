@@ -141,9 +141,6 @@ class _$ListOpenBillingsApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<ListOpenBillingsApiRequestListOpenBillingsApiRequestActions> get $serializer => ListOpenBillingsApiRequestListOpenBillingsApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOpenBillingsApiRequest);

@@ -289,23 +289,23 @@ class _$UpdateShippingServiceApiRequestActions
   _$UpdateShippingServiceApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateShippingServiceApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        daysInTransit = $options.actionField<int>(
+        daysInTransit = $options.field<int>(
             'daysInTransit',
             (a) => a?.daysInTransit,
             (s) => s?.daysInTransit,
             (p, b) => p?.daysInTransit = b),
-        hoursInTransit = $options.actionField<int>(
+        hoursInTransit = $options.field<int>(
             'hoursInTransit',
             (a) => a?.hoursInTransit,
             (s) => s?.hoursInTransit,
             (p, b) => p?.hoursInTransit = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        erpCode = $options.actionField<String>('erpCode', (a) => a?.erpCode,
+        erpCode = $options.field<String>('erpCode', (a) => a?.erpCode,
             (s) => s?.erpCode, (p, b) => p?.erpCode = b),
         super._();
 
@@ -349,9 +349,6 @@ class _$UpdateShippingServiceApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateShippingServiceApiRequestUpdateShippingServiceApiRequestActions> get $serializer => UpdateShippingServiceApiRequestUpdateShippingServiceApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

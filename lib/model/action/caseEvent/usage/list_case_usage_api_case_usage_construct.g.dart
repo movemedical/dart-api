@@ -267,21 +267,21 @@ class _$ListCaseUsageApiCaseUsageConstructActions
   _$ListCaseUsageApiCaseUsageConstructActions._(this.$options)
       : $replace = $options.action<ListCaseUsageApiCaseUsageConstruct>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        priceConstructId = $options.actionField<String>(
+        priceConstructId = $options.field<String>(
             'priceConstructId',
             (a) => a?.priceConstructId,
             (s) => s?.priceConstructId,
             (p, b) => p?.priceConstructId = b),
-        priceConstructNumber = $options.actionField<String>(
+        priceConstructNumber = $options.field<String>(
             'priceConstructNumber',
             (a) => a?.priceConstructNumber,
             (s) => s?.priceConstructNumber,
             (p, b) => p?.priceConstructNumber = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -326,9 +326,6 @@ class _$ListCaseUsageApiCaseUsageConstructActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseUsageApiCaseUsageConstructListCaseUsageApiCaseUsageConstructActions> get $serializer => ListCaseUsageApiCaseUsageConstructListCaseUsageApiCaseUsageConstructActions.serializer;
 
   FullType _$fullType;
   @override

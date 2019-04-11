@@ -171,7 +171,7 @@ class _$PrepareIntegrationFileDownloadApiResponseActions
   _$PrepareIntegrationFileDownloadApiResponseActions._(this.$options)
       : $replace = $options.action<PrepareIntegrationFileDownloadApiResponse>(
             '\$replace', (a) => a?.$replace),
-        url = $options.actionField<String>(
+        url = $options.field<String>(
             'url', (a) => a?.url, (s) => s?.url, (p, b) => p?.url = b),
         super._();
 
@@ -205,9 +205,6 @@ class _$PrepareIntegrationFileDownloadApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PrepareIntegrationFileDownloadApiResponsePrepareIntegrationFileDownloadApiResponseActions> get $serializer => PrepareIntegrationFileDownloadApiResponsePrepareIntegrationFileDownloadApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

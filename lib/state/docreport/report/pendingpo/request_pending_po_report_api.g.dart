@@ -107,9 +107,6 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestPendingPoReportApi> get $serializer => CommandStateRequestPendingPoReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

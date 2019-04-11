@@ -225,17 +225,14 @@ class _$SetupSystemApiResponseActions extends SetupSystemApiResponseActions {
   _$SetupSystemApiResponseActions._(this.$options)
       : $replace = $options.action<SetupSystemApiResponse>(
             '\$replace', (a) => a?.$replace),
-        aeId = $options.actionField<String>(
+        aeId = $options.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        userId = $options.actionField<String>('userId', (a) => a?.userId,
+        userId = $options.field<String>('userId', (a) => a?.userId,
             (s) => s?.userId, (p, b) => p?.userId = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
         super._();
 
   factory _$SetupSystemApiResponseActions(
@@ -273,9 +270,6 @@ class _$SetupSystemApiResponseActions extends SetupSystemApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SetupSystemApiResponseSetupSystemApiResponseActions> get $serializer => SetupSystemApiResponseSetupSystemApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

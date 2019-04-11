@@ -116,9 +116,6 @@ class _$ProcessKitTrayRestockPlanApi extends ProcessKitTrayRestockPlanApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateProcessKitTrayRestockPlanApi> get $serializer => CommandStateProcessKitTrayRestockPlanApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

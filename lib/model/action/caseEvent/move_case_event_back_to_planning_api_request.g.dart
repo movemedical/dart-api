@@ -169,7 +169,7 @@ class _$MoveCaseEventBackToPlanningApiRequestActions
   _$MoveCaseEventBackToPlanningApiRequestActions._(this.$options)
       : $replace = $options.action<MoveCaseEventBackToPlanningApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -206,9 +206,6 @@ class _$MoveCaseEventBackToPlanningApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveCaseEventBackToPlanningApiRequestMoveCaseEventBackToPlanningApiRequestActions> get $serializer => MoveCaseEventBackToPlanningApiRequestMoveCaseEventBackToPlanningApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

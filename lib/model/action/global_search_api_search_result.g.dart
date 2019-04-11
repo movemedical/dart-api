@@ -211,11 +211,11 @@ class _$GlobalSearchApiSearchResultActions
   _$GlobalSearchApiSearchResultActions._(this.$options)
       : $replace = $options.action<GlobalSearchApiSearchResult>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        type = $options.actionField<GlobalSearchApiType>(
+        type = $options.field<GlobalSearchApiType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        displayText = $options.actionField<String>(
+        displayText = $options.field<String>(
             'displayText',
             (a) => a?.displayText,
             (s) => s?.displayText,
@@ -255,9 +255,6 @@ class _$GlobalSearchApiSearchResultActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GlobalSearchApiSearchResultGlobalSearchApiSearchResultActions> get $serializer => GlobalSearchApiSearchResultGlobalSearchApiSearchResultActions.serializer;
 
   FullType _$fullType;
   @override

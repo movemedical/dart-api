@@ -111,9 +111,6 @@ class _$CloneCaseEventApi extends CloneCaseEventApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCloneCaseEventApi> get $serializer => CommandStateCloneCaseEventApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

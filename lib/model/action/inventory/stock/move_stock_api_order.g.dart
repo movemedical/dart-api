@@ -901,119 +901,119 @@ class _$MoveStockApiOrderActions extends MoveStockApiOrderActions {
   _$MoveStockApiOrderActions._(this.$options)
       : $replace =
             $options.action<MoveStockApiOrder>('\$replace', (a) => a?.$replace),
-        loanId = $options.actionField<String>('loanId', (a) => a?.loanId,
+        loanId = $options.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
-        orderReasonId = $options.actionField<String>(
+        orderReasonId = $options.field<String>(
             'orderReasonId',
             (a) => a?.orderReasonId,
             (s) => s?.orderReasonId,
             (p, b) => p?.orderReasonId = b),
-        toLocationType = $options.actionField<LocationType>(
+        toLocationType = $options.field<LocationType>(
             'toLocationType',
             (a) => a?.toLocationType,
             (s) => s?.toLocationType,
             (p, b) => p?.toLocationType = b),
-        toLocationId = $options.actionField<String>(
+        toLocationId = $options.field<String>(
             'toLocationId',
             (a) => a?.toLocationId,
             (s) => s?.toLocationId,
             (p, b) => p?.toLocationId = b),
-        opsOrgUnitId = $options.actionField<String>(
+        opsOrgUnitId = $options.field<String>(
             'opsOrgUnitId',
             (a) => a?.opsOrgUnitId,
             (s) => s?.opsOrgUnitId,
             (p, b) => p?.opsOrgUnitId = b),
-        salesOrgUnitId = $options.actionField<String>(
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
             (p, b) => p?.salesOrgUnitId = b),
-        toInventoryTypeId = $options.actionField<String>(
+        toInventoryTypeId = $options.field<String>(
             'toInventoryTypeId',
             (a) => a?.toInventoryTypeId,
             (s) => s?.toInventoryTypeId,
             (p, b) => p?.toInventoryTypeId = b),
-        toResponsiblePartyType = $options.actionField<ResponsiblePartyType>(
+        toResponsiblePartyType = $options.field<ResponsiblePartyType>(
             'toResponsiblePartyType',
             (a) => a?.toResponsiblePartyType,
             (s) => s?.toResponsiblePartyType,
             (p, b) => p?.toResponsiblePartyType = b),
-        toResponsiblePartyId = $options.actionField<String>(
+        toResponsiblePartyId = $options.field<String>(
             'toResponsiblePartyId',
             (a) => a?.toResponsiblePartyId,
             (s) => s?.toResponsiblePartyId,
             (p, b) => p?.toResponsiblePartyId = b),
-        toHomeLocationType = $options.actionField<LocationType>(
+        toHomeLocationType = $options.field<LocationType>(
             'toHomeLocationType',
             (a) => a?.toHomeLocationType,
             (s) => s?.toHomeLocationType,
             (p, b) => p?.toHomeLocationType = b),
-        toHomeLocationId = $options.actionField<String>(
+        toHomeLocationId = $options.field<String>(
             'toHomeLocationId',
             (a) => a?.toHomeLocationId,
             (s) => s?.toHomeLocationId,
             (p, b) => p?.toHomeLocationId = b),
-        erpReference = $options.actionField<String>(
+        erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
             (s) => s?.erpReference,
             (p, b) => p?.erpReference = b),
-        transferTypeId = $options.actionField<String>(
+        transferTypeId = $options.field<String>(
             'transferTypeId',
             (a) => a?.transferTypeId,
             (s) => s?.transferTypeId,
             (p, b) => p?.transferTypeId = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        proxyLocationType = $options.actionField<LocationType>(
+        proxyLocationType = $options.field<LocationType>(
             'proxyLocationType',
             (a) => a?.proxyLocationType,
             (s) => s?.proxyLocationType,
             (p, b) => p?.proxyLocationType = b),
-        proxyLocationId = $options.actionField<String>(
+        proxyLocationId = $options.field<String>(
             'proxyLocationId',
             (a) => a?.proxyLocationId,
             (s) => s?.proxyLocationId,
             (p, b) => p?.proxyLocationId = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
             (p, b) => p?.toContainerId = b),
-        sourceStartDate = $options.actionField<DateTime>(
+        sourceStartDate = $options.field<DateTime>(
             'sourceStartDate',
             (a) => a?.sourceStartDate,
             (s) => s?.sourceStartDate,
             (p, b) => p?.sourceStartDate = b),
-        deliverWindowStart = $options.actionField<DateTime>(
+        deliverWindowStart = $options.field<DateTime>(
             'deliverWindowStart',
             (a) => a?.deliverWindowStart,
             (s) => s?.deliverWindowStart,
             (p, b) => p?.deliverWindowStart = b),
-        deliverWindowEnd = $options.actionField<DateTime>(
+        deliverWindowEnd = $options.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
-        loanServiceEndDate = $options.actionField<DateTime>(
+        loanServiceEndDate = $options.field<DateTime>(
             'loanServiceEndDate',
             (a) => a?.loanServiceEndDate,
             (s) => s?.loanServiceEndDate,
             (p, b) => p?.loanServiceEndDate = b),
-        fulfillmentCutoffDate = $options.actionField<DateTime>(
+        fulfillmentCutoffDate = $options.field<DateTime>(
             'fulfillmentCutoffDate',
             (a) => a?.fulfillmentCutoffDate,
             (s) => s?.fulfillmentCutoffDate,
             (p, b) => p?.fulfillmentCutoffDate = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -1026,29 +1026,26 @@ class _$MoveStockApiOrderActions extends MoveStockApiOrderActions {
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        shipToAddressId = $options.actionField<String>(
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        expirationCutoff = $options.actionField<DateTime>(
+        expirationCutoff = $options.field<DateTime>(
             'expirationCutoff',
             (a) => a?.expirationCutoff,
             (s) => s?.expirationCutoff,
             (p, b) => p?.expirationCutoff = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        email = $options.actionField<String>(
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
-        shipments = $options.actionField<BuiltList<MoveStockApiShipment>>(
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
+        shipments = $options.field<BuiltList<MoveStockApiShipment>>(
             'shipments',
             (a) => a?.shipments,
             (s) => s?.shipments,
@@ -1148,9 +1145,6 @@ class _$MoveStockApiOrderActions extends MoveStockApiOrderActions {
     super.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockApiOrderMoveStockApiOrderActions> get $serializer => MoveStockApiOrderMoveStockApiOrderActions.serializer;
 
   FullType _$fullType;
   @override

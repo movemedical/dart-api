@@ -190,7 +190,7 @@ class _$ListLinesForSalesOrderApiResponseActions
       : $replace = $options.action<ListLinesForSalesOrderApiResponse>(
             '\$replace', (a) => a?.$replace),
         orderLines =
-            $options.actionField<BuiltList<ListLinesForSalesOrderApiOrderLine>>(
+            $options.field<BuiltList<ListLinesForSalesOrderApiOrderLine>>(
                 'orderLines',
                 (a) => a?.orderLines,
                 (s) => s?.orderLines,
@@ -227,9 +227,6 @@ class _$ListLinesForSalesOrderApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListLinesForSalesOrderApiResponseListLinesForSalesOrderApiResponseActions> get $serializer => ListLinesForSalesOrderApiResponseListLinesForSalesOrderApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

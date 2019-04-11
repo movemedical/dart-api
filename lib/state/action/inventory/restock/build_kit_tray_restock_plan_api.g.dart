@@ -116,9 +116,6 @@ class _$BuildKitTrayRestockPlanApi extends BuildKitTrayRestockPlanApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateBuildKitTrayRestockPlanApi> get $serializer => CommandStateBuildKitTrayRestockPlanApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

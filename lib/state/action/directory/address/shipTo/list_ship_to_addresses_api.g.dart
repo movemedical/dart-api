@@ -112,9 +112,6 @@ class _$ListShipToAddressesApi extends ListShipToAddressesApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListShipToAddressesApi> get $serializer => CommandStateListShipToAddressesApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -231,9 +231,6 @@ class _$GetImportLogDetailApiResponseActions
     importLog.$middleware(middleware);
   }
 
-// @override
-// Serializer<GetImportLogDetailApiResponseGetImportLogDetailApiResponseActions> get $serializer => GetImportLogDetailApiResponseGetImportLogDetailApiResponseActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

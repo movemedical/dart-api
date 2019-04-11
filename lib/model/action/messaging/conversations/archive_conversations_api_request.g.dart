@@ -207,12 +207,12 @@ class _$ArchiveConversationsApiRequestActions
   _$ArchiveConversationsApiRequestActions._(this.$options)
       : $replace = $options.action<ArchiveConversationsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        conversationIds = $options.actionField<BuiltList<String>>(
+        conversationIds = $options.field<BuiltList<String>>(
             'conversationIds',
             (a) => a?.conversationIds,
             (s) => s?.conversationIds,
             (p, b) => p?.conversationIds = b),
-        archive = $options.actionField<bool>('archive', (a) => a?.archive,
+        archive = $options.field<bool>('archive', (a) => a?.archive,
             (s) => s?.archive, (p, b) => p?.archive = b),
         super._();
 
@@ -248,9 +248,6 @@ class _$ArchiveConversationsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ArchiveConversationsApiRequestArchiveConversationsApiRequestActions> get $serializer => ArchiveConversationsApiRequestArchiveConversationsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -105,9 +105,6 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateSaveItemCategoryLinksApi> get $serializer => CommandStateSaveItemCategoryLinksApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

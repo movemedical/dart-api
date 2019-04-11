@@ -228,7 +228,7 @@ class _$ListCaseFilesApiRequestActions extends ListCaseFilesApiRequestActions {
   _$ListCaseFilesApiRequestActions._(this.$options)
       : $replace = $options.action<ListCaseFilesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
@@ -294,9 +294,6 @@ class _$ListCaseFilesApiRequestActions extends ListCaseFilesApiRequestActions {
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseFilesApiRequestListCaseFilesApiRequestActions> get $serializer => ListCaseFilesApiRequestListCaseFilesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

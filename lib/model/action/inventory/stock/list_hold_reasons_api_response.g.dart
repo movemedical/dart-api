@@ -203,9 +203,9 @@ class _$ListHoldReasonsApiResponseActions
   _$ListHoldReasonsApiResponseActions._(this.$options)
       : $replace = $options.action<ListHoldReasonsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.actionField<BuiltList<ListHoldReasonsApiHoldReason>>(
+        data = $options.field<BuiltList<ListHoldReasonsApiHoldReason>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -240,9 +240,6 @@ class _$ListHoldReasonsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHoldReasonsApiResponseListHoldReasonsApiResponseActions> get $serializer => ListHoldReasonsApiResponseListHoldReasonsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

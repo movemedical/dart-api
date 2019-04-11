@@ -367,47 +367,38 @@ class _$CreateSimpleKitStockApiRequestActions
   _$CreateSimpleKitStockApiRequestActions._(this.$options)
       : $replace = $options.action<CreateSimpleKitStockApiRequest>(
             '\$replace', (a) => a?.$replace),
-        inventoryTypeId = $options.actionField<String>(
+        inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
-        kitItemId = $options.actionField<String>(
-            'kitItemId',
-            (a) => a?.kitItemId,
-            (s) => s?.kitItemId,
-            (p, b) => p?.kitItemId = b),
-        toteItemId = $options.actionField<String>(
-            'toteItemId',
-            (a) => a?.toteItemId,
-            (s) => s?.toteItemId,
-            (p, b) => p?.toteItemId = b),
-        locationType = $options.actionField<LocationType>(
+        kitItemId = $options.field<String>('kitItemId', (a) => a?.kitItemId,
+            (s) => s?.kitItemId, (p, b) => p?.kitItemId = b),
+        toteItemId = $options.field<String>('toteItemId', (a) => a?.toteItemId,
+            (s) => s?.toteItemId, (p, b) => p?.toteItemId = b),
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
-        homeLocationType = $options.actionField<LocationType>(
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
+        homeLocationType = $options.field<LocationType>(
             'homeLocationType',
             (a) => a?.homeLocationType,
             (s) => s?.homeLocationType,
             (p, b) => p?.homeLocationType = b),
-        homeLocationId = $options.actionField<String>(
+        homeLocationId = $options.field<String>(
             'homeLocationId',
             (a) => a?.homeLocationId,
             (s) => s?.homeLocationId,
             (p, b) => p?.homeLocationId = b),
-        containerType = $options.actionField<StockContainerType>(
+        containerType = $options.field<StockContainerType>(
             'containerType',
             (a) => a?.containerType,
             (s) => s?.containerType,
             (p, b) => p?.containerType = b),
-        containerId = $options.actionField<String>(
+        containerId = $options.field<String>(
             'containerId',
             (a) => a?.containerId,
             (s) => s?.containerId,
@@ -460,9 +451,6 @@ class _$CreateSimpleKitStockApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateSimpleKitStockApiRequestCreateSimpleKitStockApiRequestActions> get $serializer => CreateSimpleKitStockApiRequestCreateSimpleKitStockApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

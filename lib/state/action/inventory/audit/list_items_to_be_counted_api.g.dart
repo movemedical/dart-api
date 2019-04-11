@@ -112,9 +112,6 @@ class _$ListItemsToBeCountedApi extends ListItemsToBeCountedApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListItemsToBeCountedApi> get $serializer => CommandStateListItemsToBeCountedApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -234,16 +234,13 @@ class _$CreateCustomerQualifierApiRequestActions
   _$CreateCustomerQualifierApiRequestActions._(this.$options)
       : $replace = $options.action<CreateCustomerQualifierApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
-        type = $options.actionField<CustomerQualifierType>(
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
+        type = $options.field<CustomerQualifierType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
-        value = $options.actionField<String>(
+        value = $options.field<String>(
             'value', (a) => a?.value, (s) => s?.value, (p, b) => p?.value = b),
-        priority = $options.actionField<int>('priority', (a) => a?.priority,
+        priority = $options.field<int>('priority', (a) => a?.priority,
             (s) => s?.priority, (p, b) => p?.priority = b),
         super._();
 
@@ -283,9 +280,6 @@ class _$CreateCustomerQualifierApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCustomerQualifierApiRequestCreateCustomerQualifierApiRequestActions> get $serializer => CreateCustomerQualifierApiRequestCreateCustomerQualifierApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

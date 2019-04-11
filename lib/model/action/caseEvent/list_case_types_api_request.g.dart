@@ -252,14 +252,14 @@ class _$ListCaseTypesApiRequestActions extends ListCaseTypesApiRequestActions {
   _$ListCaseTypesApiRequestActions._(this.$options)
       : $replace = $options.action<ListCaseTypesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -313,9 +313,6 @@ class _$ListCaseTypesApiRequestActions extends ListCaseTypesApiRequestActions {
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCaseTypesApiRequestListCaseTypesApiRequestActions> get $serializer => ListCaseTypesApiRequestListCaseTypesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

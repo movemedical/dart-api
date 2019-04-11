@@ -424,32 +424,32 @@ class _$ListAuditItemsApiRequestActions
   _$ListAuditItemsApiRequestActions._(this.$options)
       : $replace = $options.action<ListAuditItemsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        number = $options.actionField<int>('number', (a) => a?.number,
+        number = $options.field<int>('number', (a) => a?.number,
             (s) => s?.number, (p, b) => p?.number = b),
-        itemIds = $options.actionField<BuiltList<String>>('itemIds',
+        itemIds = $options.field<BuiltList<String>>('itemIds',
             (a) => a?.itemIds, (s) => s?.itemIds, (p, b) => p?.itemIds = b),
-        lotIds = $options.actionField<BuiltList<String>>('lotIds',
-            (a) => a?.lotIds, (s) => s?.lotIds, (p, b) => p?.lotIds = b),
-        serialIds = $options.actionField<BuiltList<String>>(
+        lotIds = $options.field<BuiltList<String>>('lotIds', (a) => a?.lotIds,
+            (s) => s?.lotIds, (p, b) => p?.lotIds = b),
+        serialIds = $options.field<BuiltList<String>>(
             'serialIds',
             (a) => a?.serialIds,
             (s) => s?.serialIds,
             (p, b) => p?.serialIds = b),
-        containerIds = $options.actionField<BuiltList<String>>(
+        containerIds = $options.field<BuiltList<String>>(
             'containerIds',
             (a) => a?.containerIds,
             (s) => s?.containerIds,
             (p, b) => p?.containerIds = b),
-        includeClosed = $options.actionField<bool>(
+        includeClosed = $options.field<bool>(
             'includeClosed',
             (a) => a?.includeClosed,
             (s) => s?.includeClosed,
             (p, b) => p?.includeClosed = b),
-        hasDiff = $options.actionField<bool>('hasDiff', (a) => a?.hasDiff,
+        hasDiff = $options.field<bool>('hasDiff', (a) => a?.hasDiff,
             (s) => s?.hasDiff, (p, b) => p?.hasDiff = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -515,9 +515,6 @@ class _$ListAuditItemsApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditItemsApiRequestListAuditItemsApiRequestActions> get $serializer => ListAuditItemsApiRequestListAuditItemsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

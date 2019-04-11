@@ -215,11 +215,11 @@ class _$ListBizUnitsForBizUnitProcedureApiBizUnitActions
   _$ListBizUnitsForBizUnitProcedureApiBizUnitActions._(this.$options)
       : $replace = $options.action<ListBizUnitsForBizUnitProcedureApiBizUnit>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
@@ -260,9 +260,6 @@ class _$ListBizUnitsForBizUnitProcedureApiBizUnitActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListBizUnitsForBizUnitProcedureApiBizUnitListBizUnitsForBizUnitProcedureApiBizUnitActions> get $serializer => ListBizUnitsForBizUnitProcedureApiBizUnitListBizUnitsForBizUnitProcedureApiBizUnitActions.serializer;
 
   FullType _$fullType;
   @override

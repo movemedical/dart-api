@@ -255,9 +255,9 @@ class _$ListHcrTeamLinksApiRequestActions
   _$ListHcrTeamLinksApiRequestActions._(this.$options)
       : $replace = $options.action<ListHcrTeamLinksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        hcrId = $options.actionField<String>(
+        hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -322,9 +322,6 @@ class _$ListHcrTeamLinksApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHcrTeamLinksApiRequestListHcrTeamLinksApiRequestActions> get $serializer => ListHcrTeamLinksApiRequestListHcrTeamLinksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

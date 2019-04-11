@@ -506,66 +506,51 @@ class _$ItemActions extends ItemActions {
 
   _$ItemActions._(this.$options)
       : $replace = $options.action<Item>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        sizeSequence = $options.actionField<int>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        sizeSequence = $options.field<int>(
             'sizeSequence',
             (a) => a?.sizeSequence,
             (s) => s?.sizeSequence,
             (p, b) => p?.sizeSequence = b),
-        skuNumber = $options.actionField<String>(
-            'skuNumber',
-            (a) => a?.skuNumber,
-            (s) => s?.skuNumber,
-            (p, b) => p?.skuNumber = b),
-        shortDescription = $options.actionField<String>(
+        skuNumber = $options.field<String>('skuNumber', (a) => a?.skuNumber,
+            (s) => s?.skuNumber, (p, b) => p?.skuNumber = b),
+        shortDescription = $options.field<String>(
             'shortDescription',
             (a) => a?.shortDescription,
             (s) => s?.shortDescription,
             (p, b) => p?.shortDescription = b),
-        longDescription = $options.actionField<String>(
+        longDescription = $options.field<String>(
             'longDescription',
             (a) => a?.longDescription,
             (s) => s?.longDescription,
             (p, b) => p?.longDescription = b),
-        itemClass = $options.actionField<String>(
-            'itemClass',
-            (a) => a?.itemClass,
-            (s) => s?.itemClass,
-            (p, b) => p?.itemClass = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        itemClass = $options.field<String>('itemClass', (a) => a?.itemClass,
+            (s) => s?.itemClass, (p, b) => p?.itemClass = b),
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        itemType = $options.actionField<String>('itemType', (a) => a?.itemType,
+        itemType = $options.field<String>('itemType', (a) => a?.itemType,
             (s) => s?.itemType, (p, b) => p?.itemType = b),
-        moveItemType = $options.actionField<MoveItemType>(
+        moveItemType = $options.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        lotTracked = $options.actionField<bool>(
-            'lotTracked',
-            (a) => a?.lotTracked,
-            (s) => s?.lotTracked,
-            (p, b) => p?.lotTracked = b),
-        serialTracked = $options.actionField<bool>(
+        lotTracked = $options.field<bool>('lotTracked', (a) => a?.lotTracked,
+            (s) => s?.lotTracked, (p, b) => p?.lotTracked = b),
+        serialTracked = $options.field<bool>(
             'serialTracked',
             (a) => a?.serialTracked,
             (s) => s?.serialTracked,
             (p, b) => p?.serialTracked = b),
-        listPrice = $options.actionField<double>(
-            'listPrice',
-            (a) => a?.listPrice,
-            (s) => s?.listPrice,
-            (p, b) => p?.listPrice = b),
-        currencyType = $options.actionField<CurrencyType>(
+        listPrice = $options.field<double>('listPrice', (a) => a?.listPrice,
+            (s) => s?.listPrice, (p, b) => p?.listPrice = b),
+        currencyType = $options.field<CurrencyType>(
             'currencyType',
             (a) => a?.currencyType,
             (s) => s?.currencyType,
@@ -640,9 +625,6 @@ class _$ItemActions extends ItemActions {
     super.$middleware(middleware);
     unitOfMeasure.$middleware(middleware);
   }
-
-// @override
-// Serializer<ItemItemActions> get $serializer => ItemItemActions.serializer;
 
   FullType _$fullType;
   @override

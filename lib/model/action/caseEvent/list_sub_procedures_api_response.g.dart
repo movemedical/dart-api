@@ -186,7 +186,7 @@ class _$ListSubProceduresApiResponseActions
   _$ListSubProceduresApiResponseActions._(this.$options)
       : $replace = $options.action<ListSubProceduresApiResponse>(
             '\$replace', (a) => a?.$replace),
-        subProcedures = $options.actionField<BuiltList<SubProcedure>>(
+        subProcedures = $options.field<BuiltList<SubProcedure>>(
             'subProcedures',
             (a) => a?.subProcedures,
             (s) => s?.subProcedures,
@@ -222,9 +222,6 @@ class _$ListSubProceduresApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSubProceduresApiResponseListSubProceduresApiResponseActions> get $serializer => ListSubProceduresApiResponseListSubProceduresApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -113,9 +113,6 @@ class _$CreateProcedureToItemCategoryApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateProcedureToItemCategoryApi> get $serializer => CommandStateCreateProcedureToItemCategoryApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

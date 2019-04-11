@@ -112,9 +112,6 @@ class _$ListWebServiceLogsApi extends ListWebServiceLogsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListWebServiceLogsApi> get $serializer => CommandStateListWebServiceLogsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

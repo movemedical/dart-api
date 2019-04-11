@@ -206,10 +206,9 @@ class _$ListCancelReasonsApiResponseActions
   _$ListCancelReasonsApiResponseActions._(this.$options)
       : $replace = $options.action<ListCancelReasonsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data =
-            $options.actionField<BuiltList<ListCancelReasonsApiCancelReason>>(
-                'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        data = $options.field<BuiltList<ListCancelReasonsApiCancelReason>>(
+            'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -244,9 +243,6 @@ class _$ListCancelReasonsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCancelReasonsApiResponseListCancelReasonsApiResponseActions> get $serializer => ListCancelReasonsApiResponseListCancelReasonsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

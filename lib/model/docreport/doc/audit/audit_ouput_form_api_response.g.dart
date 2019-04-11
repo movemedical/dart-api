@@ -164,7 +164,7 @@ class _$AuditOuputFormApiResponseActions
   _$AuditOuputFormApiResponseActions._(this.$options)
       : $replace = $options.action<AuditOuputFormApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -200,9 +200,6 @@ class _$AuditOuputFormApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<AuditOuputFormApiResponseAuditOuputFormApiResponseActions> get $serializer => AuditOuputFormApiResponseAuditOuputFormApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -111,9 +111,6 @@ class _$ListHcrMatrixApi extends ListHcrMatrixApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListHcrMatrixApi> get $serializer => CommandStateListHcrMatrixApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

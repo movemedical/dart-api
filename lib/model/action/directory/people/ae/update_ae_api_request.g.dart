@@ -446,7 +446,7 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
   _$UpdateAeApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateAeApiRequest>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         name = PersonNameActions(() =>
             $options.stateful<PersonName, PersonNameBuilder, PersonNameActions>(
@@ -455,11 +455,8 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
                 (s) => s?.name,
                 (b) => b?.name,
                 (parent, builder) => parent?.name = builder)),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
         workPhoneNumber = PhoneNumberActions(() => $options
             .stateful<PhoneNumber, PhoneNumberBuilder, PhoneNumberActions>(
                 'workPhoneNumber',
@@ -488,18 +485,15 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        startDate = $options.actionField<DateTime>(
-            'startDate',
-            (a) => a?.startDate,
-            (s) => s?.startDate,
-            (p, b) => p?.startDate = b),
-        endDate = $options.actionField<DateTime>('endDate', (a) => a?.endDate,
+        startDate = $options.field<DateTime>('startDate', (a) => a?.startDate,
+            (s) => s?.startDate, (p, b) => p?.startDate = b),
+        endDate = $options.field<DateTime>('endDate', (a) => a?.endDate,
             (s) => s?.endDate, (p, b) => p?.endDate = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        directoryAdmin = $options.actionField<bool>(
+        directoryAdmin = $options.field<bool>(
             'directoryAdmin',
             (a) => a?.directoryAdmin,
             (s) => s?.directoryAdmin,
@@ -566,9 +560,6 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
     faxNumber.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateAeApiRequestUpdateAeApiRequestActions> get $serializer => UpdateAeApiRequestUpdateAeApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -157,7 +157,7 @@ class _$GlobalSearchApiRequestActions extends GlobalSearchApiRequestActions {
   _$GlobalSearchApiRequestActions._(this.$options)
       : $replace = $options.action<GlobalSearchApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -190,9 +190,6 @@ class _$GlobalSearchApiRequestActions extends GlobalSearchApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GlobalSearchApiRequestGlobalSearchApiRequestActions> get $serializer => GlobalSearchApiRequestGlobalSearchApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

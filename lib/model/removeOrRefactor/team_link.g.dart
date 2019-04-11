@@ -210,17 +210,14 @@ class _$TeamLinkActions extends TeamLinkActions {
 
   _$TeamLinkActions._(this.$options)
       : $replace = $options.action<TeamLink>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamName = $options.actionField<String>('teamName', (a) => a?.teamName,
+        teamName = $options.field<String>('teamName', (a) => a?.teamName,
             (s) => s?.teamName, (p, b) => p?.teamName = b),
-        teamActive = $options.actionField<bool>(
-            'teamActive',
-            (a) => a?.teamActive,
-            (s) => s?.teamActive,
-            (p, b) => p?.teamActive = b),
+        teamActive = $options.field<bool>('teamActive', (a) => a?.teamActive,
+            (s) => s?.teamActive, (p, b) => p?.teamActive = b),
         super._();
 
   factory _$TeamLinkActions(TeamLinkActionsOptions options) =>
@@ -256,9 +253,6 @@ class _$TeamLinkActions extends TeamLinkActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<TeamLinkTeamLinkActions> get $serializer => TeamLinkTeamLinkActions.serializer;
 
   FullType _$fullType;
   @override

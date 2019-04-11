@@ -166,7 +166,7 @@ class _$CreateSalesOrderApiResponseActions
   _$CreateSalesOrderApiResponseActions._(this.$options)
       : $replace = $options.action<CreateSalesOrderApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$CreateSalesOrderApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateSalesOrderApiResponseCreateSalesOrderApiResponseActions> get $serializer => CreateSalesOrderApiResponseCreateSalesOrderApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

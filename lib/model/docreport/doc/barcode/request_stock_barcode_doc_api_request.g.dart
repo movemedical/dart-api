@@ -186,7 +186,7 @@ class _$RequestStockBarcodeDocApiRequestActions
   _$RequestStockBarcodeDocApiRequestActions._(this.$options)
       : $replace = $options.action<RequestStockBarcodeDocApiRequest>(
             '\$replace', (a) => a?.$replace),
-        stockIds = $options.actionField<BuiltList<String>>('stockIds',
+        stockIds = $options.field<BuiltList<String>>('stockIds',
             (a) => a?.stockIds, (s) => s?.stockIds, (p, b) => p?.stockIds = b),
         super._();
 
@@ -220,9 +220,6 @@ class _$RequestStockBarcodeDocApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestStockBarcodeDocApiRequestRequestStockBarcodeDocApiRequestActions> get $serializer => RequestStockBarcodeDocApiRequestRequestStockBarcodeDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -418,14 +418,14 @@ class _$GetAuditApiAuditCountedSummaryActions
             (s) => s?.overage,
             (b) => b?.overage,
             (parent, builder) => parent?.overage = builder)),
-        matched = $options.actionField<bool>('matched', (a) => a?.matched,
+        matched = $options.field<bool>('matched', (a) => a?.matched,
             (s) => s?.matched, (p, b) => p?.matched = b),
-        totalQtyVariance = $options.actionField<int>(
+        totalQtyVariance = $options.field<int>(
             'totalQtyVariance',
             (a) => a?.totalQtyVariance,
             (s) => s?.totalQtyVariance,
             (p, b) => p?.totalQtyVariance = b),
-        totalPriceVariance = $options.actionField<double>(
+        totalPriceVariance = $options.field<double>(
             'totalPriceVariance',
             (a) => a?.totalPriceVariance,
             (s) => s?.totalPriceVariance,
@@ -486,9 +486,6 @@ class _$GetAuditApiAuditCountedSummaryActions
     shortage.$middleware(middleware);
     overage.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAuditApiAuditCountedSummaryGetAuditApiAuditCountedSummaryActions> get $serializer => GetAuditApiAuditCountedSummaryGetAuditApiAuditCountedSummaryActions.serializer;
 
   FullType _$fullType;
   @override

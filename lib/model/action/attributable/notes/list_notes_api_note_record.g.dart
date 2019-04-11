@@ -481,60 +481,54 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
   _$ListNotesApiNoteRecordActions._(this.$options)
       : $replace = $options.action<ListNotesApiNoteRecord>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        ownerOrgUnitId = $options.actionField<String>(
+        ownerOrgUnitId = $options.field<String>(
             'ownerOrgUnitId',
             (a) => a?.ownerOrgUnitId,
             (s) => s?.ownerOrgUnitId,
             (p, b) => p?.ownerOrgUnitId = b),
-        attrType = $options.actionField<AttributableType>('attrType',
+        attrType = $options.field<AttributableType>('attrType',
             (a) => a?.attrType, (s) => s?.attrType, (p, b) => p?.attrType = b),
-        attrId = $options.actionField<String>('attrId', (a) => a?.attrId,
+        attrId = $options.field<String>('attrId', (a) => a?.attrId,
             (s) => s?.attrId, (p, b) => p?.attrId = b),
-        orgVisible = $options.actionField<bool>(
-            'orgVisible',
-            (a) => a?.orgVisible,
-            (s) => s?.orgVisible,
-            (p, b) => p?.orgVisible = b),
-        publicVisible = $options.actionField<bool>(
+        orgVisible = $options.field<bool>('orgVisible', (a) => a?.orgVisible,
+            (s) => s?.orgVisible, (p, b) => p?.orgVisible = b),
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        noteValue = $options.actionField<String>(
-            'noteValue',
-            (a) => a?.noteValue,
-            (s) => s?.noteValue,
-            (p, b) => p?.noteValue = b),
-        createdById = $options.actionField<String>(
+        noteValue = $options.field<String>('noteValue', (a) => a?.noteValue,
+            (s) => s?.noteValue, (p, b) => p?.noteValue = b),
+        createdById = $options.field<String>(
             'createdById',
             (a) => a?.createdById,
             (s) => s?.createdById,
             (p, b) => p?.createdById = b),
-        dateCreated = $options.actionField<DateTime>(
+        dateCreated = $options.field<DateTime>(
             'dateCreated',
             (a) => a?.dateCreated,
             (s) => s?.dateCreated,
             (p, b) => p?.dateCreated = b),
-        createdByDisplayName = $options.actionField<String>(
+        createdByDisplayName = $options.field<String>(
             'createdByDisplayName',
             (a) => a?.createdByDisplayName,
             (s) => s?.createdByDisplayName,
             (p, b) => p?.createdByDisplayName = b),
-        ownerOrgUnitName = $options.actionField<String>(
+        ownerOrgUnitName = $options.field<String>(
             'ownerOrgUnitName',
             (a) => a?.ownerOrgUnitName,
             (s) => s?.ownerOrgUnitName,
             (p, b) => p?.ownerOrgUnitName = b),
-        ownerOrgUnitLabel = $options.actionField<String>(
+        ownerOrgUnitLabel = $options.field<String>(
             'ownerOrgUnitLabel',
             (a) => a?.ownerOrgUnitLabel,
             (s) => s?.ownerOrgUnitLabel,
             (p, b) => p?.ownerOrgUnitLabel = b),
-        createdByInitials = $options.actionField<String>(
+        createdByInitials = $options.field<String>(
             'createdByInitials',
             (a) => a?.createdByInitials,
             (s) => s?.createdByInitials,
@@ -596,9 +590,6 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListNotesApiNoteRecordListNotesApiNoteRecordActions> get $serializer => ListNotesApiNoteRecordListNotesApiNoteRecordActions.serializer;
 
   FullType _$fullType;
   @override

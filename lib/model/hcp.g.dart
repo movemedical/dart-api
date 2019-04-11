@@ -437,20 +437,20 @@ class _$HcpActions extends HcpActions {
 
   _$HcpActions._(this.$options)
       : $replace = $options.action<Hcp>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        hcpType = $options.actionField<HcpType>('hcpType', (a) => a?.hcpType,
+        hcpType = $options.field<HcpType>('hcpType', (a) => a?.hcpType,
             (s) => s?.hcpType, (p, b) => p?.hcpType = b),
-        workingHomeId = $options.actionField<String>(
+        workingHomeId = $options.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.actionField<String>(
+        workingAtId = $options.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
@@ -490,7 +490,7 @@ class _$HcpActions extends HcpActions {
                 (s) => s?.faxNumber,
                 (b) => b?.faxNumber,
                 (parent, builder) => parent?.faxNumber = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -552,9 +552,6 @@ class _$HcpActions extends HcpActions {
     mobilePhoneNumber.$middleware(middleware);
     faxNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<HcpHcpActions> get $serializer => HcpHcpActions.serializer;
 
   FullType _$fullType;
   @override

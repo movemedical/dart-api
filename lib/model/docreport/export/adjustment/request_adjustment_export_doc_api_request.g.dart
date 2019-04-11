@@ -250,8 +250,8 @@ class _$RequestAdjustmentExportDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
         listAdjustmentsRequest = ListAdjustmentsApiRequestActions(() =>
             $options.stateful<
                     ListAdjustmentsApiRequest,
@@ -305,9 +305,6 @@ class _$RequestAdjustmentExportDocApiRequestActions
     docReport.$middleware(middleware);
     listAdjustmentsRequest.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestAdjustmentExportDocApiRequestRequestAdjustmentExportDocApiRequestActions> get $serializer => RequestAdjustmentExportDocApiRequestRequestAdjustmentExportDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

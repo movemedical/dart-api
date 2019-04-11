@@ -280,24 +280,24 @@ class _$UpdatePreferenceCardItemsApiRequestActions
   _$UpdatePreferenceCardItemsApiRequestActions._(this.$options)
       : $replace = $options.action<UpdatePreferenceCardItemsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        preferenceCardId = $options.actionField<String>(
+        preferenceCardId = $options.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
             (p, b) => p?.preferenceCardId = b),
-        itemsToAdd = $options
-            .actionField<BuiltList<UpdatePreferenceCardItemsApiItemAdd>>(
+        itemsToAdd =
+            $options.field<BuiltList<UpdatePreferenceCardItemsApiItemAdd>>(
                 'itemsToAdd',
                 (a) => a?.itemsToAdd,
                 (s) => s?.itemsToAdd,
                 (p, b) => p?.itemsToAdd = b),
-        itemsToUpdate = $options
-            .actionField<BuiltList<UpdatePreferenceCardItemsApiItemUpdate>>(
+        itemsToUpdate =
+            $options.field<BuiltList<UpdatePreferenceCardItemsApiItemUpdate>>(
                 'itemsToUpdate',
                 (a) => a?.itemsToUpdate,
                 (s) => s?.itemsToUpdate,
                 (p, b) => p?.itemsToUpdate = b),
-        itemsToRemove = $options.actionField<BuiltList<String>>(
+        itemsToRemove = $options.field<BuiltList<String>>(
             'itemsToRemove',
             (a) => a?.itemsToRemove,
             (s) => s?.itemsToRemove,
@@ -340,9 +340,6 @@ class _$UpdatePreferenceCardItemsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdatePreferenceCardItemsApiRequestUpdatePreferenceCardItemsApiRequestActions> get $serializer => UpdatePreferenceCardItemsApiRequestUpdatePreferenceCardItemsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

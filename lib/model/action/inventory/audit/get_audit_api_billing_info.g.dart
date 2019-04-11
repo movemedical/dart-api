@@ -253,12 +253,9 @@ class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
   _$GetAuditApiBillingInfoActions._(this.$options)
       : $replace = $options.action<GetAuditApiBillingInfo>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        salesOrgUnitId = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        salesOrgUnitId = $options.field<String>(
             'salesOrgUnitId',
             (a) => a?.salesOrgUnitId,
             (s) => s?.salesOrgUnitId,
@@ -323,9 +320,6 @@ class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
     orderReason.$middleware(middleware);
     shipToAddress.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetAuditApiBillingInfoGetAuditApiBillingInfoActions> get $serializer => GetAuditApiBillingInfoGetAuditApiBillingInfoActions.serializer;
 
   FullType _$fullType;
   @override

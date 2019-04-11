@@ -113,9 +113,6 @@ class _$ListHcrOrgUnitOptionsApi extends ListHcrOrgUnitOptionsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListHcrOrgUnitOptionsApi> get $serializer => CommandStateListHcrOrgUnitOptionsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

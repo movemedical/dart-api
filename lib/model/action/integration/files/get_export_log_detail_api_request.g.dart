@@ -167,7 +167,7 @@ class _$GetExportLogDetailApiRequestActions
   _$GetExportLogDetailApiRequestActions._(this.$options)
       : $replace = $options.action<GetExportLogDetailApiRequest>(
             '\$replace', (a) => a?.$replace),
-        exportLogId = $options.actionField<String>(
+        exportLogId = $options.field<String>(
             'exportLogId',
             (a) => a?.exportLogId,
             (s) => s?.exportLogId,
@@ -203,9 +203,6 @@ class _$GetExportLogDetailApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetExportLogDetailApiRequestGetExportLogDetailApiRequestActions> get $serializer => GetExportLogDetailApiRequestGetExportLogDetailApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

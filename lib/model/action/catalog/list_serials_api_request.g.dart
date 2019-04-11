@@ -217,9 +217,9 @@ class _$ListSerialsApiRequestActions extends ListSerialsApiRequestActions {
   _$ListSerialsApiRequestActions._(this.$options)
       : $replace = $options.action<ListSerialsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -270,9 +270,6 @@ class _$ListSerialsApiRequestActions extends ListSerialsApiRequestActions {
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListSerialsApiRequestListSerialsApiRequestActions> get $serializer => ListSerialsApiRequestListSerialsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

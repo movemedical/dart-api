@@ -342,11 +342,11 @@ class _$GetSalesOrderApiCustomerDetailActions
   _$GetSalesOrderApiCustomerDetailActions._(this.$options)
       : $replace = $options.action<GetSalesOrderApiCustomerDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        customerReference = $options.actionField<String>(
+        customerReference = $options.field<String>(
             'customerReference',
             (a) => a?.customerReference,
             (s) => s?.customerReference,
@@ -438,9 +438,6 @@ class _$GetSalesOrderApiCustomerDetailActions
     deliverToAddress.$middleware(middleware);
     customerPhoneNumber.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetSalesOrderApiCustomerDetailGetSalesOrderApiCustomerDetailActions> get $serializer => GetSalesOrderApiCustomerDetailGetSalesOrderApiCustomerDetailActions.serializer;
 
   FullType _$fullType;
   @override

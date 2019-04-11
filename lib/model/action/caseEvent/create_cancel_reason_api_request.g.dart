@@ -165,7 +165,7 @@ class _$CreateCancelReasonApiRequestActions
   _$CreateCancelReasonApiRequestActions._(this.$options)
       : $replace = $options.action<CreateCancelReasonApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$CreateCancelReasonApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCancelReasonApiRequestCreateCancelReasonApiRequestActions> get $serializer => CreateCancelReasonApiRequestCreateCancelReasonApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

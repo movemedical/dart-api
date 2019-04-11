@@ -184,9 +184,9 @@ class _$CreateCaseTypeApiRequestActions
   _$CreateCaseTypeApiRequestActions._(this.$options)
       : $replace = $options.action<CreateCaseTypeApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -221,9 +221,6 @@ class _$CreateCaseTypeApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateCaseTypeApiRequestCreateCaseTypeApiRequestActions> get $serializer => CreateCaseTypeApiRequestCreateCaseTypeApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

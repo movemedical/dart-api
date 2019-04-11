@@ -108,9 +108,6 @@ class _$CreateTeamApi extends CreateTeamApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateTeamApi> get $serializer => CommandStateCreateTeamApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -96,9 +96,6 @@ class _$FinalizeUsageApi extends FinalizeUsageApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateFinalizeUsageApi> get $serializer => CommandStateFinalizeUsageApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

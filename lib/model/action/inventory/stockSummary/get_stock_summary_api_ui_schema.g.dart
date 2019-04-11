@@ -162,7 +162,7 @@ class _$GetStockSummaryApiUiSchemaActions
   _$GetStockSummaryApiUiSchemaActions._(this.$options)
       : $replace = $options.action<GetStockSummaryApiUiSchema>(
             '\$replace', (a) => a?.$replace),
-        adjust = $options.actionField<bool>('adjust', (a) => a?.adjust,
+        adjust = $options.field<bool>('adjust', (a) => a?.adjust,
             (s) => s?.adjust, (p, b) => p?.adjust = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$GetStockSummaryApiUiSchemaActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetStockSummaryApiUiSchemaGetStockSummaryApiUiSchemaActions> get $serializer => GetStockSummaryApiUiSchemaGetStockSummaryApiUiSchemaActions.serializer;
 
   FullType _$fullType;
   @override

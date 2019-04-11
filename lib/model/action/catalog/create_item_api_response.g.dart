@@ -157,7 +157,7 @@ class _$CreateItemApiResponseActions extends CreateItemApiResponseActions {
   _$CreateItemApiResponseActions._(this.$options)
       : $replace = $options.action<CreateItemApiResponse>(
             '\$replace', (a) => a?.$replace),
-        itemId = $options.actionField<String>('itemId', (a) => a?.itemId,
+        itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         super._();
 
@@ -189,9 +189,6 @@ class _$CreateItemApiResponseActions extends CreateItemApiResponseActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateItemApiResponseCreateItemApiResponseActions> get $serializer => CreateItemApiResponseCreateItemApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

@@ -315,7 +315,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
                 (s) => s?.pkgResponse,
                 (b) => b?.pkgResponse,
                 (parent, builder) => parent?.pkgResponse = builder)),
-        customDocs = $options.actionField<BuiltList<CustomDoc>>(
+        customDocs = $options.field<BuiltList<CustomDoc>>(
             'customDocs',
             (a) => a?.customDocs,
             (s) => s?.customDocs,
@@ -329,12 +329,11 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
             (s) => s?.displayRule,
             (b) => b?.displayRule,
             (parent, builder) => parent?.displayRule = builder)),
-        attributes =
-            $options.actionField<BuiltList<GetShipmentApiShipmentAttribute>>(
-                'attributes',
-                (a) => a?.attributes,
-                (s) => s?.attributes,
-                (p, b) => p?.attributes = b),
+        attributes = $options.field<BuiltList<GetShipmentApiShipmentAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
         super._();
 
   factory _$GetShipmentApiResponseActions(
@@ -382,9 +381,6 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
     pkgResponse.$middleware(middleware);
     displayRule.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetShipmentApiResponseGetShipmentApiResponseActions> get $serializer => GetShipmentApiResponseGetShipmentApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

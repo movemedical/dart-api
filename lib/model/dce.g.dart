@@ -328,18 +328,18 @@ class _$DceActions extends DceActions {
 
   _$DceActions._(this.$options)
       : $replace = $options.action<Dce>('\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgType = $options.actionField<OrgType>('orgType', (a) => a?.orgType,
+        orgType = $options.field<OrgType>('orgType', (a) => a?.orgType,
             (s) => s?.orgType, (p, b) => p?.orgType = b),
-        workingHomeId = $options.actionField<String>(
+        workingHomeId = $options.field<String>(
             'workingHomeId',
             (a) => a?.workingHomeId,
             (s) => s?.workingHomeId,
             (p, b) => p?.workingHomeId = b),
-        workingAtId = $options.actionField<String>(
+        workingAtId = $options.field<String>(
             'workingAtId',
             (a) => a?.workingAtId,
             (s) => s?.workingAtId,
@@ -358,7 +358,7 @@ class _$DceActions extends DceActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -409,9 +409,6 @@ class _$DceActions extends DceActions {
     name.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<DceDceActions> get $serializer => DceDceActions.serializer;
 
   FullType _$fullType;
   @override

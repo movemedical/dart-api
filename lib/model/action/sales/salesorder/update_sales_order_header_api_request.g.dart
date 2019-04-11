@@ -431,36 +431,36 @@ class _$UpdateSalesOrderHeaderApiRequestActions
   _$UpdateSalesOrderHeaderApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateSalesOrderHeaderApiRequest>(
             '\$replace', (a) => a?.$replace),
-        validateCanDo = $options.actionField<bool>(
+        validateCanDo = $options.field<bool>(
             'validateCanDo',
             (a) => a?.validateCanDo,
             (s) => s?.validateCanDo,
             (p, b) => p?.validateCanDo = b),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        billToAddressId = $options.actionField<String>(
+        billToAddressId = $options.field<String>(
             'billToAddressId',
             (a) => a?.billToAddressId,
             (s) => s?.billToAddressId,
             (p, b) => p?.billToAddressId = b),
-        shipToAddressId = $options.actionField<String>(
+        shipToAddressId = $options.field<String>(
             'shipToAddressId',
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
-        deliverWindowStart = $options.actionField<DateTime>(
+        deliverWindowStart = $options.field<DateTime>(
             'deliverWindowStart',
             (a) => a?.deliverWindowStart,
             (s) => s?.deliverWindowStart,
             (p, b) => p?.deliverWindowStart = b),
-        deliverWindowEnd = $options.actionField<DateTime>(
+        deliverWindowEnd = $options.field<DateTime>(
             'deliverWindowEnd',
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -473,12 +473,9 @@ class _$UpdateSalesOrderHeaderApiRequestActions
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        attention = $options.actionField<String>(
-            'attention',
-            (a) => a?.attention,
-            (s) => s?.attention,
-            (p, b) => p?.attention = b),
-        email = $options.actionField<String>(
+        attention = $options.field<String>('attention', (a) => a?.attention,
+            (s) => s?.attention, (p, b) => p?.attention = b),
+        email = $options.field<String>(
             'email', (a) => a?.email, (s) => s?.email, (p, b) => p?.email = b),
         super._();
 
@@ -538,9 +535,6 @@ class _$UpdateSalesOrderHeaderApiRequestActions
     super.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdateSalesOrderHeaderApiRequestUpdateSalesOrderHeaderApiRequestActions> get $serializer => UpdateSalesOrderHeaderApiRequestUpdateSalesOrderHeaderApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

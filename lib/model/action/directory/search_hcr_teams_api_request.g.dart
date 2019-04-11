@@ -441,47 +441,44 @@ class _$SearchHcrTeamsApiRequestActions
   _$SearchHcrTeamsApiRequestActions._(this.$options)
       : $replace = $options.action<SearchHcrTeamsApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
-        bizUnitIds = $options.actionField<BuiltList<String>>(
+        bizUnitIds = $options.field<BuiltList<String>>(
             'bizUnitIds',
             (a) => a?.bizUnitIds,
             (s) => s?.bizUnitIds,
             (p, b) => p?.bizUnitIds = b),
-        salesOuIds = $options.actionField<BuiltList<String>>(
+        salesOuIds = $options.field<BuiltList<String>>(
             'salesOuIds',
             (a) => a?.salesOuIds,
             (s) => s?.salesOuIds,
             (p, b) => p?.salesOuIds = b),
-        hcrIds = $options.actionField<BuiltList<String>>('hcrIds',
-            (a) => a?.hcrIds, (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
-        teamIds = $options.actionField<BuiltList<String>>('teamIds',
+        hcrIds = $options.field<BuiltList<String>>('hcrIds', (a) => a?.hcrIds,
+            (s) => s?.hcrIds, (p, b) => p?.hcrIds = b),
+        teamIds = $options.field<BuiltList<String>>('teamIds',
             (a) => a?.teamIds, (s) => s?.teamIds, (p, b) => p?.teamIds = b),
-        facilityIds = $options.actionField<BuiltList<String>>(
+        facilityIds = $options.field<BuiltList<String>>(
             'facilityIds',
             (a) => a?.facilityIds,
             (s) => s?.facilityIds,
             (p, b) => p?.facilityIds = b),
-        physicianIds = $options.actionField<BuiltList<String>>(
+        physicianIds = $options.field<BuiltList<String>>(
             'physicianIds',
             (a) => a?.physicianIds,
             (s) => s?.physicianIds,
             (p, b) => p?.physicianIds = b),
-        procedureIds = $options.actionField<BuiltList<String>>(
+        procedureIds = $options.field<BuiltList<String>>(
             'procedureIds',
             (a) => a?.procedureIds,
             (s) => s?.procedureIds,
             (p, b) => p?.procedureIds = b),
-        forCreateCase = $options.actionField<bool>(
+        forCreateCase = $options.field<bool>(
             'forCreateCase',
             (a) => a?.forCreateCase,
             (s) => s?.forCreateCase,
             (p, b) => p?.forCreateCase = b),
-        withSalesOU = $options.actionField<bool>(
-            'withSalesOU',
-            (a) => a?.withSalesOU,
-            (s) => s?.withSalesOU,
-            (p, b) => p?.withSalesOU = b),
+        withSalesOU = $options.field<bool>('withSalesOU', (a) => a?.withSalesOU,
+            (s) => s?.withSalesOU, (p, b) => p?.withSalesOU = b),
         super._();
 
   factory _$SearchHcrTeamsApiRequestActions(
@@ -531,9 +528,6 @@ class _$SearchHcrTeamsApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<SearchHcrTeamsApiRequestSearchHcrTeamsApiRequestActions> get $serializer => SearchHcrTeamsApiRequestSearchHcrTeamsApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

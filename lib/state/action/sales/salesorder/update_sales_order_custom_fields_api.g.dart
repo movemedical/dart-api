@@ -113,9 +113,6 @@ class _$UpdateSalesOrderCustomFieldsApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateUpdateSalesOrderCustomFieldsApi> get $serializer => CommandStateUpdateSalesOrderCustomFieldsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

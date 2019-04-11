@@ -492,54 +492,48 @@ class _$ListImportLogErrorsApiImportLogErrorActions
   _$ListImportLogErrorsApiImportLogErrorActions._(this.$options)
       : $replace = $options.action<ListImportLogErrorsApiImportLogError>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        importLogFileId = $options.actionField<String>(
+        importLogFileId = $options.field<String>(
             'importLogFileId',
             (a) => a?.importLogFileId,
             (s) => s?.importLogFileId,
             (p, b) => p?.importLogFileId = b),
-        integrationIssueId = $options.actionField<String>(
+        integrationIssueId = $options.field<String>(
             'integrationIssueId',
             (a) => a?.integrationIssueId,
             (s) => s?.integrationIssueId,
             (p, b) => p?.integrationIssueId = b),
-        integrationIssueNumber = $options.actionField<int>(
+        integrationIssueNumber = $options.field<int>(
             'integrationIssueNumber',
             (a) => a?.integrationIssueNumber,
             (s) => s?.integrationIssueNumber,
             (p, b) => p?.integrationIssueNumber = b),
-        row = $options.actionField<int>(
+        row = $options.field<int>(
             'row', (a) => a?.row, (s) => s?.row, (p, b) => p?.row = b),
-        column = $options.actionField<String>('column', (a) => a?.column,
+        column = $options.field<String>('column', (a) => a?.column,
             (s) => s?.column, (p, b) => p?.column = b),
-        columnData = $options.actionField<String>(
-            'columnData',
-            (a) => a?.columnData,
-            (s) => s?.columnData,
-            (p, b) => p?.columnData = b),
-        message = $options.actionField<String>('message', (a) => a?.message,
+        columnData = $options.field<String>('columnData', (a) => a?.columnData,
+            (s) => s?.columnData, (p, b) => p?.columnData = b),
+        message = $options.field<String>('message', (a) => a?.message,
             (s) => s?.message, (p, b) => p?.message = b),
-        data = $options.actionField<String>(
+        data = $options.field<String>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        updatedData = $options.actionField<String>(
+        updatedData = $options.field<String>(
             'updatedData',
             (a) => a?.updatedData,
             (s) => s?.updatedData,
             (p, b) => p?.updatedData = b),
-        status = $options.actionField<IntegrationLogErrorStatus>('status',
+        status = $options.field<IntegrationLogErrorStatus>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
-        resolutionMessage = $options.actionField<String>(
+        resolutionMessage = $options.field<String>(
             'resolutionMessage',
             (a) => a?.resolutionMessage,
             (s) => s?.resolutionMessage,
             (p, b) => p?.resolutionMessage = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        fileName = $options.actionField<String>('fileName', (a) => a?.fileName,
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        fileName = $options.field<String>('fileName', (a) => a?.fileName,
             (s) => s?.fileName, (p, b) => p?.fileName = b),
         super._();
 
@@ -599,9 +593,6 @@ class _$ListImportLogErrorsApiImportLogErrorActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListImportLogErrorsApiImportLogErrorListImportLogErrorsApiImportLogErrorActions> get $serializer => ListImportLogErrorsApiImportLogErrorListImportLogErrorsApiImportLogErrorActions.serializer;
 
   FullType _$fullType;
   @override

@@ -162,7 +162,7 @@ class _$CreateHoldReasonApiRequestActions
   _$CreateHoldReasonApiRequestActions._(this.$options)
       : $replace = $options.action<CreateHoldReasonApiRequest>(
             '\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         super._();
 
@@ -195,9 +195,6 @@ class _$CreateHoldReasonApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateHoldReasonApiRequestCreateHoldReasonApiRequestActions> get $serializer => CreateHoldReasonApiRequestCreateHoldReasonApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -165,7 +165,7 @@ class _$GetWebServiceLogApiRequestActions
   _$GetWebServiceLogApiRequestActions._(this.$options)
       : $replace = $options.action<GetWebServiceLogApiRequest>(
             '\$replace', (a) => a?.$replace),
-        webServiceLogId = $options.actionField<String>(
+        webServiceLogId = $options.field<String>(
             'webServiceLogId',
             (a) => a?.webServiceLogId,
             (s) => s?.webServiceLogId,
@@ -201,9 +201,6 @@ class _$GetWebServiceLogApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetWebServiceLogApiRequestGetWebServiceLogApiRequestActions> get $serializer => GetWebServiceLogApiRequestGetWebServiceLogApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

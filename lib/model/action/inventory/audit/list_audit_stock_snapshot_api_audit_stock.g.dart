@@ -192,9 +192,9 @@ class _$ListAuditStockSnapshotApiAuditStockActions
   _$ListAuditStockSnapshotApiAuditStockActions._(this.$options)
       : $replace = $options.action<ListAuditStockSnapshotApiAuditStock>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        affect = $options.actionField<AuditStockSnapshotAffect>('affect',
+        affect = $options.field<AuditStockSnapshotAffect>('affect',
             (a) => a?.affect, (s) => s?.affect, (p, b) => p?.affect = b),
         super._();
 
@@ -230,9 +230,6 @@ class _$ListAuditStockSnapshotApiAuditStockActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAuditStockSnapshotApiAuditStockListAuditStockSnapshotApiAuditStockActions> get $serializer => ListAuditStockSnapshotApiAuditStockListAuditStockSnapshotApiAuditStockActions.serializer;
 
   FullType _$fullType;
   @override

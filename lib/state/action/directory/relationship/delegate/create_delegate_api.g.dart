@@ -96,9 +96,6 @@ class _$CreateDelegateApi extends CreateDelegateApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCreateDelegateApi> get $serializer => CommandStateCreateDelegateApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

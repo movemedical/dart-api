@@ -225,12 +225,12 @@ class _$ListItemCategoriesApiResponseActions
       : $replace = $options.action<ListItemCategoriesApiResponse>(
             '\$replace', (a) => a?.$replace),
         itemCategories =
-            $options.actionField<BuiltList<ListItemCategoriesApiItemCategory>>(
+            $options.field<BuiltList<ListItemCategoriesApiItemCategory>>(
                 'itemCategories',
                 (a) => a?.itemCategories,
                 (s) => s?.itemCategories,
                 (p, b) => p?.itemCategories = b),
-        existingLinkedItemCategoryIds = $options.actionField<BuiltList<String>>(
+        existingLinkedItemCategoryIds = $options.field<BuiltList<String>>(
             'existingLinkedItemCategoryIds',
             (a) => a?.existingLinkedItemCategoryIds,
             (s) => s?.existingLinkedItemCategoryIds,
@@ -268,9 +268,6 @@ class _$ListItemCategoriesApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesApiResponseListItemCategoriesApiResponseActions> get $serializer => ListItemCategoriesApiResponseListItemCategoriesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

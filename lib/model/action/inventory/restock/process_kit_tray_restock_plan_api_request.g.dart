@@ -434,19 +434,19 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
   _$ProcessKitTrayRestockPlanApiRequestActions._(this.$options)
       : $replace = $options.action<ProcessKitTrayRestockPlanApiRequest>(
             '\$replace', (a) => a?.$replace),
-        kitTrayStockIdOrStockSummaryId = $options.actionField<String>(
+        kitTrayStockIdOrStockSummaryId = $options.field<String>(
             'kitTrayStockIdOrStockSummaryId',
             (a) => a?.kitTrayStockIdOrStockSummaryId,
             (s) => s?.kitTrayStockIdOrStockSummaryId,
             (p, b) => p?.kitTrayStockIdOrStockSummaryId = b),
-        system = $options.actionField<BuildKitTrayRestockPlanApiRestockSystem>(
+        system = $options.field<BuildKitTrayRestockPlanApiRestockSystem>(
             'system',
             (a) => a?.system,
             (s) => s?.system,
             (p, b) => p?.system = b),
-        poNumber = $options.actionField<String>('poNumber', (a) => a?.poNumber,
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
-        existingOrderId = $options.actionField<String>(
+        existingOrderId = $options.field<String>(
             'existingOrderId',
             (a) => a?.existingOrderId,
             (s) => s?.existingOrderId,
@@ -458,7 +458,7 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
-        deliverToAddressId = $options.actionField<String>(
+        deliverToAddressId = $options.field<String>(
             'deliverToAddressId',
             (a) => a?.deliverToAddressId,
             (s) => s?.deliverToAddressId,
@@ -471,18 +471,18 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
                 (b) => b?.deliverToAddressOverride,
                 (parent, builder) =>
                     parent?.deliverToAddressOverride = builder)),
-        deliverByDate = $options.actionField<DateTime>(
+        deliverByDate = $options.field<DateTime>(
             'deliverByDate',
             (a) => a?.deliverByDate,
             (s) => s?.deliverByDate,
             (p, b) => p?.deliverByDate = b),
-        shippingServiceId = $options.actionField<String>(
+        shippingServiceId = $options.field<String>(
             'shippingServiceId',
             (a) => a?.shippingServiceId,
             (s) => s?.shippingServiceId,
             (p, b) => p?.shippingServiceId = b),
-        restockItems = $options
-            .actionField<BuiltList<ProcessKitTrayRestockPlanApiRestockItem>>(
+        restockItems =
+            $options.field<BuiltList<ProcessKitTrayRestockPlanApiRestockItem>>(
                 'restockItems',
                 (a) => a?.restockItems,
                 (s) => s?.restockItems,
@@ -544,9 +544,6 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
     location.$middleware(middleware);
     deliverToAddressOverride.$middleware(middleware);
   }
-
-// @override
-// Serializer<ProcessKitTrayRestockPlanApiRequestProcessKitTrayRestockPlanApiRequestActions> get $serializer => ProcessKitTrayRestockPlanApiRequestProcessKitTrayRestockPlanApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

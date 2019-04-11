@@ -205,9 +205,9 @@ class _$CustomActionActions extends CustomActionActions {
   _$CustomActionActions._(this.$options)
       : $replace =
             $options.action<CustomAction>('\$replace', (a) => a?.$replace),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        argsDef = $options.actionField<String>('argsDef', (a) => a?.argsDef,
+        argsDef = $options.field<String>('argsDef', (a) => a?.argsDef,
             (s) => s?.argsDef, (p, b) => p?.argsDef = b),
         req = RunCustomActionApiRequestActions(() => $options.stateful<
                 RunCustomActionApiRequest,
@@ -257,9 +257,6 @@ class _$CustomActionActions extends CustomActionActions {
     super.$middleware(middleware);
     req.$middleware(middleware);
   }
-
-// @override
-// Serializer<CustomActionCustomActionActions> get $serializer => CustomActionCustomActionActions.serializer;
 
   FullType _$fullType;
   @override

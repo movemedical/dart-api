@@ -360,33 +360,30 @@ class _$GetProcedureApiProcedureDetailActions
   _$GetProcedureApiProcedureDetailActions._(this.$options)
       : $replace = $options.action<GetProcedureApiProcedureDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        orgId = $options.actionField<String>(
+        orgId = $options.field<String>(
             'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
-        orgName = $options.actionField<String>('orgName', (a) => a?.orgName,
+        orgName = $options.field<String>('orgName', (a) => a?.orgName,
             (s) => s?.orgName, (p, b) => p?.orgName = b),
-        icdCode = $options.actionField<String>('icdCode', (a) => a?.icdCode,
+        icdCode = $options.field<String>('icdCode', (a) => a?.icdCode,
             (s) => s?.icdCode, (p, b) => p?.icdCode = b),
-        description = $options.actionField<String>(
+        description = $options.field<String>(
             'description',
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
-        bodySideRequired = $options.actionField<bool>(
+        bodySideRequired = $options.field<bool>(
             'bodySideRequired',
             (a) => a?.bodySideRequired,
             (s) => s?.bodySideRequired,
             (p, b) => p?.bodySideRequired = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        allowDelete = $options.actionField<bool>(
-            'allowDelete',
-            (a) => a?.allowDelete,
-            (s) => s?.allowDelete,
-            (p, b) => p?.allowDelete = b),
+        allowDelete = $options.field<bool>('allowDelete', (a) => a?.allowDelete,
+            (s) => s?.allowDelete, (p, b) => p?.allowDelete = b),
         super._();
 
   factory _$GetProcedureApiProcedureDetailActions(
@@ -435,9 +432,6 @@ class _$GetProcedureApiProcedureDetailActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetProcedureApiProcedureDetailGetProcedureApiProcedureDetailActions> get $serializer => GetProcedureApiProcedureDetailGetProcedureApiProcedureDetailActions.serializer;
 
   FullType _$fullType;
   @override

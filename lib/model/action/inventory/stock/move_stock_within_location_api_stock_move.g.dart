@@ -241,19 +241,16 @@ class _$MoveStockWithinLocationApiStockMoveActions
   _$MoveStockWithinLocationApiStockMoveActions._(this.$options)
       : $replace = $options.action<MoveStockWithinLocationApiStockMove>(
             '\$replace', (a) => a?.$replace),
-        stockId = $options.actionField<String>('stockId', (a) => a?.stockId,
+        stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
-        summaryKey = $options.actionField<String>(
-            'summaryKey',
-            (a) => a?.summaryKey,
-            (s) => s?.summaryKey,
-            (p, b) => p?.summaryKey = b),
-        toContainerType = $options.actionField<StockContainerType>(
+        summaryKey = $options.field<String>('summaryKey', (a) => a?.summaryKey,
+            (s) => s?.summaryKey, (p, b) => p?.summaryKey = b),
+        toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
             (s) => s?.toContainerType,
             (p, b) => p?.toContainerType = b),
-        toContainerId = $options.actionField<String>(
+        toContainerId = $options.field<String>(
             'toContainerId',
             (a) => a?.toContainerId,
             (s) => s?.toContainerId,
@@ -296,9 +293,6 @@ class _$MoveStockWithinLocationApiStockMoveActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<MoveStockWithinLocationApiStockMoveMoveStockWithinLocationApiStockMoveActions> get $serializer => MoveStockWithinLocationApiStockMoveMoveStockWithinLocationApiStockMoveActions.serializer;
 
   FullType _$fullType;
   @override

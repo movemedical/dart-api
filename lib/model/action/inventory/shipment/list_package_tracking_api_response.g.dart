@@ -184,12 +184,11 @@ class _$ListPackageTrackingApiResponseActions
   _$ListPackageTrackingApiResponseActions._(this.$options)
       : $replace = $options.action<ListPackageTrackingApiResponse>(
             '\$replace', (a) => a?.$replace),
-        events = $options
-            .actionField<BuiltList<ListPackageTrackingApiTrackingEvent>>(
-                'events',
-                (a) => a?.events,
-                (s) => s?.events,
-                (p, b) => p?.events = b),
+        events = $options.field<BuiltList<ListPackageTrackingApiTrackingEvent>>(
+            'events',
+            (a) => a?.events,
+            (s) => s?.events,
+            (p, b) => p?.events = b),
         super._();
 
   factory _$ListPackageTrackingApiResponseActions(
@@ -222,9 +221,6 @@ class _$ListPackageTrackingApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPackageTrackingApiResponseListPackageTrackingApiResponseActions> get $serializer => ListPackageTrackingApiResponseListPackageTrackingApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

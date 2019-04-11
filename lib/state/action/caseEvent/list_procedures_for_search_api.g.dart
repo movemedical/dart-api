@@ -116,9 +116,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListProceduresForSearchApi> get $serializer => CommandStateListProceduresForSearchApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

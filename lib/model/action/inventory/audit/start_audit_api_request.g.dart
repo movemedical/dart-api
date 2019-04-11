@@ -156,7 +156,7 @@ class _$StartAuditApiRequestActions extends StartAuditApiRequestActions {
   _$StartAuditApiRequestActions._(this.$options)
       : $replace = $options.action<StartAuditApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.actionField<String>('auditId', (a) => a?.auditId,
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
             (s) => s?.auditId, (p, b) => p?.auditId = b),
         super._();
 
@@ -188,9 +188,6 @@ class _$StartAuditApiRequestActions extends StartAuditApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<StartAuditApiRequestStartAuditApiRequestActions> get $serializer => StartAuditApiRequestStartAuditApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

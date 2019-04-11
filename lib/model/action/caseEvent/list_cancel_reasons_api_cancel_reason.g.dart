@@ -233,17 +233,14 @@ class _$ListCancelReasonsApiCancelReasonActions
   _$ListCancelReasonsApiCancelReasonActions._(this.$options)
       : $replace = $options.action<ListCancelReasonsApiCancelReason>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        name = $options.actionField<String>(
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        allowDelete = $options.actionField<bool>(
-            'allowDelete',
-            (a) => a?.allowDelete,
-            (s) => s?.allowDelete,
-            (p, b) => p?.allowDelete = b),
+        allowDelete = $options.field<bool>('allowDelete', (a) => a?.allowDelete,
+            (s) => s?.allowDelete, (p, b) => p?.allowDelete = b),
         super._();
 
   factory _$ListCancelReasonsApiCancelReasonActions(
@@ -282,9 +279,6 @@ class _$ListCancelReasonsApiCancelReasonActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCancelReasonsApiCancelReasonListCancelReasonsApiCancelReasonActions> get $serializer => ListCancelReasonsApiCancelReasonListCancelReasonsApiCancelReasonActions.serializer;
 
   FullType _$fullType;
   @override

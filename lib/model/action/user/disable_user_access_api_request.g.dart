@@ -166,7 +166,7 @@ class _$DisableUserAccessApiRequestActions
   _$DisableUserAccessApiRequestActions._(this.$options)
       : $replace = $options.action<DisableUserAccessApiRequest>(
             '\$replace', (a) => a?.$replace),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
         super._();
 
@@ -199,9 +199,6 @@ class _$DisableUserAccessApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<DisableUserAccessApiRequestDisableUserAccessApiRequestActions> get $serializer => DisableUserAccessApiRequestDisableUserAccessApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -190,12 +190,12 @@ class _$ListItemCategoriesApiRequestActions
   _$ListItemCategoriesApiRequestActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        parentCategoryId = $options.actionField<String>(
+        parentCategoryId = $options.field<String>(
             'parentCategoryId',
             (a) => a?.parentCategoryId,
             (s) => s?.parentCategoryId,
             (p, b) => p?.parentCategoryId = b),
-        linkedItemId = $options.actionField<String>(
+        linkedItemId = $options.field<String>(
             'linkedItemId',
             (a) => a?.linkedItemId,
             (s) => s?.linkedItemId,
@@ -233,9 +233,6 @@ class _$ListItemCategoriesApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListItemCategoriesApiRequestListItemCategoriesApiRequestActions> get $serializer => ListItemCategoriesApiRequestListItemCategoriesApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

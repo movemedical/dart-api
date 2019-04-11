@@ -145,9 +145,6 @@ class _$CaseScheduleUpdatePushMessageActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<CaseScheduleUpdatePushMessageCaseScheduleUpdatePushMessageActions> get $serializer => CaseScheduleUpdatePushMessageCaseScheduleUpdatePushMessageActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

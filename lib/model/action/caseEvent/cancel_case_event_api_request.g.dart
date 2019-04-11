@@ -211,17 +211,17 @@ class _$CancelCaseEventApiRequestActions
   _$CancelCaseEventApiRequestActions._(this.$options)
       : $replace = $options.action<CancelCaseEventApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseEventId = $options.actionField<String>(
+        caseEventId = $options.field<String>(
             'caseEventId',
             (a) => a?.caseEventId,
             (s) => s?.caseEventId,
             (p, b) => p?.caseEventId = b),
-        cancelReasonId = $options.actionField<String>(
+        cancelReasonId = $options.field<String>(
             'cancelReasonId',
             (a) => a?.cancelReasonId,
             (s) => s?.cancelReasonId,
             (p, b) => p?.cancelReasonId = b),
-        note = $options.actionField<String>(
+        note = $options.field<String>(
             'note', (a) => a?.note, (s) => s?.note, (p, b) => p?.note = b),
         super._();
 
@@ -258,9 +258,6 @@ class _$CancelCaseEventApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CancelCaseEventApiRequestCancelCaseEventApiRequestActions> get $serializer => CancelCaseEventApiRequestCancelCaseEventApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

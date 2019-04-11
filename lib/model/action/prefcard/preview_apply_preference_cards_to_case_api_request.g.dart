@@ -282,25 +282,22 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
   _$PreviewApplyPreferenceCardsToCaseApiRequestActions._(this.$options)
       : $replace = $options.action<PreviewApplyPreferenceCardsToCaseApiRequest>(
             '\$replace', (a) => a?.$replace),
-        caseId = $options.actionField<String>('caseId', (a) => a?.caseId,
+        caseId = $options.field<String>('caseId', (a) => a?.caseId,
             (s) => s?.caseId, (p, b) => p?.caseId = b),
-        preferenceCardId = $options.actionField<String>(
+        preferenceCardId = $options.field<String>(
             'preferenceCardId',
             (a) => a?.preferenceCardId,
             (s) => s?.preferenceCardId,
             (p, b) => p?.preferenceCardId = b),
-        preferenceCardItems = $options.actionField<
+        preferenceCardItems = $options.field<
                 BuiltList<
                     PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>>(
             'preferenceCardItems',
             (a) => a?.preferenceCardItems,
             (s) => s?.preferenceCardItems,
             (p, b) => p?.preferenceCardItems = b),
-        deduplicate = $options.actionField<bool>(
-            'deduplicate',
-            (a) => a?.deduplicate,
-            (s) => s?.deduplicate,
-            (p, b) => p?.deduplicate = b),
+        deduplicate = $options.field<bool>('deduplicate', (a) => a?.deduplicate,
+            (s) => s?.deduplicate, (p, b) => p?.deduplicate = b),
         super._();
 
   factory _$PreviewApplyPreferenceCardsToCaseApiRequestActions(
@@ -339,9 +336,6 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PreviewApplyPreferenceCardsToCaseApiRequestPreviewApplyPreferenceCardsToCaseApiRequestActions> get $serializer => PreviewApplyPreferenceCardsToCaseApiRequestPreviewApplyPreferenceCardsToCaseApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

@@ -296,23 +296,17 @@ class _$RequestKitManifestDocApiRequestActions
             (s) => s?.docReport,
             (b) => b?.docReport,
             (parent, builder) => parent?.docReport = builder)),
-        format = $options.actionField<DocReportFormat>('format',
-            (a) => a?.format, (s) => s?.format, (p, b) => p?.format = b),
-        displayType = $options.actionField<DocReportDisplayType>(
+        format = $options.field<DocReportFormat>('format', (a) => a?.format,
+            (s) => s?.format, (p, b) => p?.format = b),
+        displayType = $options.field<DocReportDisplayType>(
             'displayType',
             (a) => a?.displayType,
             (s) => s?.displayType,
             (p, b) => p?.displayType = b),
-        kitStockId = $options.actionField<String>(
-            'kitStockId',
-            (a) => a?.kitStockId,
-            (s) => s?.kitStockId,
-            (p, b) => p?.kitStockId = b),
-        option = $options.actionField<RequestKitManifestDocApiReportOption>(
-            'option',
-            (a) => a?.option,
-            (s) => s?.option,
-            (p, b) => p?.option = b),
+        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+            (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
+        option = $options.field<RequestKitManifestDocApiReportOption>('option',
+            (a) => a?.option, (s) => s?.option, (p, b) => p?.option = b),
         super._();
 
   factory _$RequestKitManifestDocApiRequestActions(
@@ -359,9 +353,6 @@ class _$RequestKitManifestDocApiRequestActions
     super.$middleware(middleware);
     docReport.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestKitManifestDocApiRequestRequestKitManifestDocApiRequestActions> get $serializer => RequestKitManifestDocApiRequestRequestKitManifestDocApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

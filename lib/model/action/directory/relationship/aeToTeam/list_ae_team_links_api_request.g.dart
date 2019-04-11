@@ -254,9 +254,9 @@ class _$ListAeTeamLinksApiRequestActions
   _$ListAeTeamLinksApiRequestActions._(this.$options)
       : $replace = $options.action<ListAeTeamLinksApiRequest>(
             '\$replace', (a) => a?.$replace),
-        aeId = $options.actionField<String>(
+        aeId = $options.field<String>(
             'aeId', (a) => a?.aeId, (s) => s?.aeId, (p, b) => p?.aeId = b),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
@@ -321,9 +321,6 @@ class _$ListAeTeamLinksApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListAeTeamLinksApiRequestListAeTeamLinksApiRequestActions> get $serializer => ListAeTeamLinksApiRequestListAeTeamLinksApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

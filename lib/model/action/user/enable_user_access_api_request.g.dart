@@ -333,27 +333,24 @@ class _$EnableUserAccessApiRequestActions
   _$EnableUserAccessApiRequestActions._(this.$options)
       : $replace = $options.action<EnableUserAccessApiRequest>(
             '\$replace', (a) => a?.$replace),
-        linkedId = $options.actionField<String>('linkedId', (a) => a?.linkedId,
+        linkedId = $options.field<String>('linkedId', (a) => a?.linkedId,
             (s) => s?.linkedId, (p, b) => p?.linkedId = b),
-        password = $options.actionField<String>('password', (a) => a?.password,
+        password = $options.field<String>('password', (a) => a?.password,
             (s) => s?.password, (p, b) => p?.password = b),
-        phiAllowed = $options.actionField<bool>(
-            'phiAllowed',
-            (a) => a?.phiAllowed,
-            (s) => s?.phiAllowed,
-            (p, b) => p?.phiAllowed = b),
-        timeZone = $options.actionField<String>('timeZone', (a) => a?.timeZone,
+        phiAllowed = $options.field<bool>('phiAllowed', (a) => a?.phiAllowed,
+            (s) => s?.phiAllowed, (p, b) => p?.phiAllowed = b),
+        timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
-        locale = $options.actionField<MoveLocale>('locale', (a) => a?.locale,
+        locale = $options.field<MoveLocale>('locale', (a) => a?.locale,
             (s) => s?.locale, (p, b) => p?.locale = b),
-        moveDateRegion = $options.actionField<MoveDateRegion>(
+        moveDateRegion = $options.field<MoveDateRegion>(
             'moveDateRegion',
             (a) => a?.moveDateRegion,
             (s) => s?.moveDateRegion,
             (p, b) => p?.moveDateRegion = b),
-        ssoType = $options.actionField<SSOType>('ssoType', (a) => a?.ssoType,
+        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
             (s) => s?.ssoType, (p, b) => p?.ssoType = b),
-        ssoId = $options.actionField<String>(
+        ssoId = $options.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
         super._();
 
@@ -400,9 +397,6 @@ class _$EnableUserAccessApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<EnableUserAccessApiRequestEnableUserAccessApiRequestActions> get $serializer => EnableUserAccessApiRequestEnableUserAccessApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

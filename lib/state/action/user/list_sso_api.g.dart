@@ -105,9 +105,6 @@ class _$ListSSOApi extends ListSSOApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListSSOApi> get $serializer => CommandStateListSSOApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -213,9 +213,9 @@ class _$ListHcrColleagueOptionsApiResponseActions
       : $replace = $options.action<ListHcrColleagueOptionsApiResponse>(
             '\$replace', (a) => a?.$replace),
         data = $options
-            .actionField<BuiltList<ListHcrColleagueOptionsApiColleagueOption>>(
+            .field<BuiltList<ListHcrColleagueOptionsApiColleagueOption>>(
                 'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
-        moreData = $options.actionField<bool>('moreData', (a) => a?.moreData,
+        moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),
         super._();
 
@@ -251,9 +251,6 @@ class _$ListHcrColleagueOptionsApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListHcrColleagueOptionsApiResponseListHcrColleagueOptionsApiResponseActions> get $serializer => ListHcrColleagueOptionsApiResponseListHcrColleagueOptionsApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

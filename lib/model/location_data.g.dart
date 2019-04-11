@@ -171,16 +171,13 @@ class _$LocationDataActions extends LocationDataActions {
   _$LocationDataActions._(this.$options)
       : $replace =
             $options.action<LocationData>('\$replace', (a) => a?.$replace),
-        locationType = $options.actionField<LocationType>(
+        locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
             (s) => s?.locationType,
             (p, b) => p?.locationType = b),
-        locationId = $options.actionField<String>(
-            'locationId',
-            (a) => a?.locationId,
-            (s) => s?.locationId,
-            (p, b) => p?.locationId = b),
+        locationId = $options.field<String>('locationId', (a) => a?.locationId,
+            (s) => s?.locationId, (p, b) => p?.locationId = b),
         super._();
 
   factory _$LocationDataActions(LocationDataActionsOptions options) =>
@@ -212,9 +209,6 @@ class _$LocationDataActions extends LocationDataActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<LocationDataLocationDataActions> get $serializer => LocationDataLocationDataActions.serializer;
 
   FullType _$fullType;
   @override

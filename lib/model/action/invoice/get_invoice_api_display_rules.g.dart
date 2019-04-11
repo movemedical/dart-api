@@ -141,9 +141,6 @@ class _$GetInvoiceApiDisplayRulesActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<GetInvoiceApiDisplayRulesGetInvoiceApiDisplayRulesActions> get $serializer => GetInvoiceApiDisplayRulesGetInvoiceApiDisplayRulesActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiDisplayRules);

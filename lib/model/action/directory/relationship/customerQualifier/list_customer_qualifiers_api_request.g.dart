@@ -237,11 +237,8 @@ class _$ListCustomerQualifiersApiRequestActions
   _$ListCustomerQualifiersApiRequestActions._(this.$options)
       : $replace = $options.action<ListCustomerQualifiersApiRequest>(
             '\$replace', (a) => a?.$replace),
-        orgUnitId = $options.actionField<String>(
-            'orgUnitId',
-            (a) => a?.orgUnitId,
-            (s) => s?.orgUnitId,
-            (p, b) => p?.orgUnitId = b),
+        orgUnitId = $options.field<String>('orgUnitId', (a) => a?.orgUnitId,
+            (s) => s?.orgUnitId, (p, b) => p?.orgUnitId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -304,9 +301,6 @@ class _$ListCustomerQualifiersApiRequestActions
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListCustomerQualifiersApiRequestListCustomerQualifiersApiRequestActions> get $serializer => ListCustomerQualifiersApiRequestListCustomerQualifiersApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

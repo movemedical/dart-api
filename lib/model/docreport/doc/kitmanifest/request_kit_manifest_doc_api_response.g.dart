@@ -168,7 +168,7 @@ class _$RequestKitManifestDocApiResponseActions
   _$RequestKitManifestDocApiResponseActions._(this.$options)
       : $replace = $options.action<RequestKitManifestDocApiResponse>(
             '\$replace', (a) => a?.$replace),
-        docReportId = $options.actionField<String>(
+        docReportId = $options.field<String>(
             'docReportId',
             (a) => a?.docReportId,
             (s) => s?.docReportId,
@@ -205,9 +205,6 @@ class _$RequestKitManifestDocApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<RequestKitManifestDocApiResponseRequestKitManifestDocApiResponseActions> get $serializer => RequestKitManifestDocApiResponseRequestKitManifestDocApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

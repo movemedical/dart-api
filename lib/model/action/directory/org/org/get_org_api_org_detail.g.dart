@@ -336,16 +336,13 @@ class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
   _$GetOrgApiOrgDetailActions._(this.$options)
       : $replace = $options.action<GetOrgApiOrgDetail>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        reference = $options.actionField<String>(
-            'reference',
-            (a) => a?.reference,
-            (s) => s?.reference,
-            (p, b) => p?.reference = b),
-        name = $options.actionField<String>(
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
+        name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
-        type = $options.actionField<OrgType>(
+        type = $options.field<OrgType>(
             'type', (a) => a?.type, (s) => s?.type, (p, b) => p?.type = b),
         address = AddressActions(() =>
             $options.stateful<Address, AddressBuilder, AddressActions>(
@@ -361,12 +358,12 @@ class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
                 (s) => s?.email,
                 (b) => b?.email,
                 (parent, builder) => parent?.email = builder)),
-        publicVisible = $options.actionField<bool>(
+        publicVisible = $options.field<bool>(
             'publicVisible',
             (a) => a?.publicVisible,
             (s) => s?.publicVisible,
             (p, b) => p?.publicVisible = b),
-        active = $options.actionField<bool>('active', (a) => a?.active,
+        active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
@@ -419,9 +416,6 @@ class _$GetOrgApiOrgDetailActions extends GetOrgApiOrgDetailActions {
     address.$middleware(middleware);
     email.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetOrgApiOrgDetailGetOrgApiOrgDetailActions> get $serializer => GetOrgApiOrgDetailGetOrgApiOrgDetailActions.serializer;
 
   FullType _$fullType;
   @override

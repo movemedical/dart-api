@@ -273,27 +273,27 @@ class _$GetExpiringItemsApiExpirationLevelActions
   _$GetExpiringItemsApiExpirationLevelActions._(this.$options)
       : $replace = $options.action<GetExpiringItemsApiExpirationLevel>(
             '\$replace', (a) => a?.$replace),
-        expirationLevelId = $options.actionField<String>(
+        expirationLevelId = $options.field<String>(
             'expirationLevelId',
             (a) => a?.expirationLevelId,
             (s) => s?.expirationLevelId,
             (p, b) => p?.expirationLevelId = b),
-        expirationLevelName = $options.actionField<String>(
+        expirationLevelName = $options.field<String>(
             'expirationLevelName',
             (a) => a?.expirationLevelName,
             (s) => s?.expirationLevelName,
             (p, b) => p?.expirationLevelName = b),
-        expirationLevelSequence = $options.actionField<int>(
+        expirationLevelSequence = $options.field<int>(
             'expirationLevelSequence',
             (a) => a?.expirationLevelSequence,
             (s) => s?.expirationLevelSequence,
             (p, b) => p?.expirationLevelSequence = b),
-        expirationLevelColor = $options.actionField<ExpirationLevelColor>(
+        expirationLevelColor = $options.field<ExpirationLevelColor>(
             'expirationLevelColor',
             (a) => a?.expirationLevelColor,
             (s) => s?.expirationLevelColor,
             (p, b) => p?.expirationLevelColor = b),
-        quantityStockExpired = $options.actionField<int>(
+        quantityStockExpired = $options.field<int>(
             'quantityStockExpired',
             (a) => a?.quantityStockExpired,
             (s) => s?.quantityStockExpired,
@@ -338,9 +338,6 @@ class _$GetExpiringItemsApiExpirationLevelActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetExpiringItemsApiExpirationLevelGetExpiringItemsApiExpirationLevelActions> get $serializer => GetExpiringItemsApiExpirationLevelGetExpiringItemsApiExpirationLevelActions.serializer;
 
   FullType _$fullType;
   @override

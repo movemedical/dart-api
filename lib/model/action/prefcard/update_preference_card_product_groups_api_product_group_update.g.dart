@@ -284,24 +284,24 @@ class _$UpdatePreferenceCardProductGroupsApiProductGroupUpdateActions
       : $replace = $options
             .action<UpdatePreferenceCardProductGroupsApiProductGroupUpdate>(
                 '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        quantityPrimary = $options.actionField<int>(
+        quantityPrimary = $options.field<int>(
             'quantityPrimary',
             (a) => a?.quantityPrimary,
             (s) => s?.quantityPrimary,
             (p, b) => p?.quantityPrimary = b),
-        quantityPlusMinus1 = $options.actionField<int>(
+        quantityPlusMinus1 = $options.field<int>(
             'quantityPlusMinus1',
             (a) => a?.quantityPlusMinus1,
             (s) => s?.quantityPlusMinus1,
             (p, b) => p?.quantityPlusMinus1 = b),
-        quantityPlusMinus2 = $options.actionField<int>(
+        quantityPlusMinus2 = $options.field<int>(
             'quantityPlusMinus2',
             (a) => a?.quantityPlusMinus2,
             (s) => s?.quantityPlusMinus2,
             (p, b) => p?.quantityPlusMinus2 = b),
-        quantityPlusMinus3 = $options.actionField<int>(
+        quantityPlusMinus3 = $options.field<int>(
             'quantityPlusMinus3',
             (a) => a?.quantityPlusMinus3,
             (s) => s?.quantityPlusMinus3,
@@ -348,9 +348,6 @@ class _$UpdatePreferenceCardProductGroupsApiProductGroupUpdateActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<UpdatePreferenceCardProductGroupsApiProductGroupUpdateUpdatePreferenceCardProductGroupsApiProductGroupUpdateActions> get $serializer => UpdatePreferenceCardProductGroupsApiProductGroupUpdateUpdatePreferenceCardProductGroupsApiProductGroupUpdateActions.serializer;
 
   FullType _$fullType;
   @override

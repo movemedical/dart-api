@@ -97,9 +97,6 @@ class _$CancelBuildVerifyApi extends CancelBuildVerifyApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateCancelBuildVerifyApi> get $serializer => CommandStateCancelBuildVerifyApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

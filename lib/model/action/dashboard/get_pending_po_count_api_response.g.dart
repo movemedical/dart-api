@@ -165,7 +165,7 @@ class _$GetPendingPoCountApiResponseActions
   _$GetPendingPoCountApiResponseActions._(this.$options)
       : $replace = $options.action<GetPendingPoCountApiResponse>(
             '\$replace', (a) => a?.$replace),
-        count = $options.actionField<int>(
+        count = $options.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
         super._();
 
@@ -198,9 +198,6 @@ class _$GetPendingPoCountApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<GetPendingPoCountApiResponseGetPendingPoCountApiResponseActions> get $serializer => GetPendingPoCountApiResponseGetPendingPoCountApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

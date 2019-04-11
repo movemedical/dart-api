@@ -112,9 +112,6 @@ class _$ListPkgContentsApi extends ListPkgContentsApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListPkgContentsApi> get $serializer => CommandStateListPkgContentsApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

@@ -216,23 +216,20 @@ class _$PhoneNumberActions extends PhoneNumberActions {
   _$PhoneNumberActions._(this.$options)
       : $replace =
             $options.action<PhoneNumber>('\$replace', (a) => a?.$replace),
-        countryCode = $options.actionField<String>(
+        countryCode = $options.field<String>(
             'countryCode',
             (a) => a?.countryCode,
             (s) => s?.countryCode,
             (p, b) => p?.countryCode = b),
-        areaCode = $options.actionField<String>('areaCode', (a) => a?.areaCode,
+        areaCode = $options.field<String>('areaCode', (a) => a?.areaCode,
             (s) => s?.areaCode, (p, b) => p?.areaCode = b),
-        phoneNumber = $options.actionField<String>(
+        phoneNumber = $options.field<String>(
             'phoneNumber',
             (a) => a?.phoneNumber,
             (s) => s?.phoneNumber,
             (p, b) => p?.phoneNumber = b),
-        extension = $options.actionField<String>(
-            'extension',
-            (a) => a?.extension,
-            (s) => s?.extension,
-            (p, b) => p?.extension = b),
+        extension = $options.field<String>('extension', (a) => a?.extension,
+            (s) => s?.extension, (p, b) => p?.extension = b),
         super._();
 
   factory _$PhoneNumberActions(PhoneNumberActionsOptions options) =>
@@ -268,9 +265,6 @@ class _$PhoneNumberActions extends PhoneNumberActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<PhoneNumberPhoneNumberActions> get $serializer => PhoneNumberPhoneNumberActions.serializer;
 
   FullType _$fullType;
   @override

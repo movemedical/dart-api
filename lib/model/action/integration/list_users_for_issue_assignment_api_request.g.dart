@@ -169,7 +169,7 @@ class _$ListUsersForIssueAssignmentApiRequestActions
   _$ListUsersForIssueAssignmentApiRequestActions._(this.$options)
       : $replace = $options.action<ListUsersForIssueAssignmentApiRequest>(
             '\$replace', (a) => a?.$replace),
-        search = $options.actionField<String>('search', (a) => a?.search,
+        search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
         super._();
 
@@ -203,9 +203,6 @@ class _$ListUsersForIssueAssignmentApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListUsersForIssueAssignmentApiRequestListUsersForIssueAssignmentApiRequestActions> get $serializer => ListUsersForIssueAssignmentApiRequestListUsersForIssueAssignmentApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

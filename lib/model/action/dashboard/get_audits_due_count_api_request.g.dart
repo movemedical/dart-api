@@ -145,9 +145,6 @@ class _$GetAuditsDueCountApiRequestActions
         this.$replace,
       ]);
 
-// @override
-// Serializer<GetAuditsDueCountApiRequestGetAuditsDueCountApiRequestActions> get $serializer => GetAuditsDueCountApiRequestGetAuditsDueCountApiRequestActions.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType =>

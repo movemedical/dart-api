@@ -291,23 +291,23 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
   _$ListOrgUnitTeamLinksApiTeamLinkActions._(this.$options)
       : $replace = $options.action<ListOrgUnitTeamLinksApiTeamLink>(
             '\$replace', (a) => a?.$replace),
-        id = $options.actionField<String>(
+        id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
-        teamId = $options.actionField<String>('teamId', (a) => a?.teamId,
+        teamId = $options.field<String>('teamId', (a) => a?.teamId,
             (s) => s?.teamId, (p, b) => p?.teamId = b),
-        teamName = $options.actionField<String>('teamName', (a) => a?.teamName,
+        teamName = $options.field<String>('teamName', (a) => a?.teamName,
             (s) => s?.teamName, (p, b) => p?.teamName = b),
-        ouAccessType = $options.actionField<OuAccessType>(
+        ouAccessType = $options.field<OuAccessType>(
             'ouAccessType',
             (a) => a?.ouAccessType,
             (s) => s?.ouAccessType,
             (p, b) => p?.ouAccessType = b),
-        numberOfPermissionsSet = $options.actionField<int>(
+        numberOfPermissionsSet = $options.field<int>(
             'numberOfPermissionsSet',
             (a) => a?.numberOfPermissionsSet,
             (s) => s?.numberOfPermissionsSet,
             (p, b) => p?.numberOfPermissionsSet = b),
-        numberOfInventoryTypes = $options.actionField<int>(
+        numberOfInventoryTypes = $options.field<int>(
             'numberOfInventoryTypes',
             (a) => a?.numberOfInventoryTypes,
             (s) => s?.numberOfInventoryTypes,
@@ -354,9 +354,6 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListOrgUnitTeamLinksApiTeamLinkListOrgUnitTeamLinksApiTeamLinkActions> get $serializer => ListOrgUnitTeamLinksApiTeamLinkListOrgUnitTeamLinksApiTeamLinkActions.serializer;
 
   FullType _$fullType;
   @override

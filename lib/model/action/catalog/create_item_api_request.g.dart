@@ -654,99 +654,81 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
   _$CreateItemApiRequestActions._(this.$options)
       : $replace = $options.action<CreateItemApiRequest>(
             '\$replace', (a) => a?.$replace),
-        bizUnitId = $options.actionField<String>(
-            'bizUnitId',
-            (a) => a?.bizUnitId,
-            (s) => s?.bizUnitId,
-            (p, b) => p?.bizUnitId = b),
-        itemCategoryId = $options.actionField<String>(
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        itemCategoryId = $options.field<String>(
             'itemCategoryId',
             (a) => a?.itemCategoryId,
             (s) => s?.itemCategoryId,
             (p, b) => p?.itemCategoryId = b),
-        itemNumber = $options.actionField<String>(
-            'itemNumber',
-            (a) => a?.itemNumber,
-            (s) => s?.itemNumber,
-            (p, b) => p?.itemNumber = b),
-        sizeSequence = $options.actionField<int>(
+        itemNumber = $options.field<String>('itemNumber', (a) => a?.itemNumber,
+            (s) => s?.itemNumber, (p, b) => p?.itemNumber = b),
+        sizeSequence = $options.field<int>(
             'sizeSequence',
             (a) => a?.sizeSequence,
             (s) => s?.sizeSequence,
             (p, b) => p?.sizeSequence = b),
-        skuNumber = $options.actionField<String>(
-            'skuNumber',
-            (a) => a?.skuNumber,
-            (s) => s?.skuNumber,
-            (p, b) => p?.skuNumber = b),
-        longDescription = $options.actionField<String>(
+        skuNumber = $options.field<String>('skuNumber', (a) => a?.skuNumber,
+            (s) => s?.skuNumber, (p, b) => p?.skuNumber = b),
+        longDescription = $options.field<String>(
             'longDescription',
             (a) => a?.longDescription,
             (s) => s?.longDescription,
             (p, b) => p?.longDescription = b),
-        shortDescription = $options.actionField<String>(
+        shortDescription = $options.field<String>(
             'shortDescription',
             (a) => a?.shortDescription,
             (s) => s?.shortDescription,
             (p, b) => p?.shortDescription = b),
-        moveItemClass = $options.actionField<MoveItemClass>(
+        moveItemClass = $options.field<MoveItemClass>(
             'moveItemClass',
             (a) => a?.moveItemClass,
             (s) => s?.moveItemClass,
             (p, b) => p?.moveItemClass = b),
-        moveItemType = $options.actionField<MoveItemType>(
+        moveItemType = $options.field<MoveItemType>(
             'moveItemType',
             (a) => a?.moveItemType,
             (s) => s?.moveItemType,
             (p, b) => p?.moveItemType = b),
-        unitOfMeasureId = $options.actionField<String>(
+        unitOfMeasureId = $options.field<String>(
             'unitOfMeasureId',
             (a) => a?.unitOfMeasureId,
             (s) => s?.unitOfMeasureId,
             (p, b) => p?.unitOfMeasureId = b),
-        linkedToItemId = $options.actionField<String>(
+        linkedToItemId = $options.field<String>(
             'linkedToItemId',
             (a) => a?.linkedToItemId,
             (s) => s?.linkedToItemId,
             (p, b) => p?.linkedToItemId = b),
-        auditCode = $options.actionField<AuditCode>(
-            'auditCode',
-            (a) => a?.auditCode,
-            (s) => s?.auditCode,
-            (p, b) => p?.auditCode = b),
-        lotTracked = $options.actionField<bool>(
-            'lotTracked',
-            (a) => a?.lotTracked,
-            (s) => s?.lotTracked,
-            (p, b) => p?.lotTracked = b),
-        serialTracked = $options.actionField<bool>(
+        auditCode = $options.field<AuditCode>('auditCode', (a) => a?.auditCode,
+            (s) => s?.auditCode, (p, b) => p?.auditCode = b),
+        lotTracked = $options.field<bool>('lotTracked', (a) => a?.lotTracked,
+            (s) => s?.lotTracked, (p, b) => p?.lotTracked = b),
+        serialTracked = $options.field<bool>(
             'serialTracked',
             (a) => a?.serialTracked,
             (s) => s?.serialTracked,
             (p, b) => p?.serialTracked = b),
-        shippable = $options.actionField<bool>('shippable', (a) => a?.shippable,
+        shippable = $options.field<bool>('shippable', (a) => a?.shippable,
             (s) => s?.shippable, (p, b) => p?.shippable = b),
-        startManufactureDate = $options.actionField<DateTime>(
+        startManufactureDate = $options.field<DateTime>(
             'startManufactureDate',
             (a) => a?.startManufactureDate,
             (s) => s?.startManufactureDate,
             (p, b) => p?.startManufactureDate = b),
-        endManufactureDate = $options.actionField<DateTime>(
+        endManufactureDate = $options.field<DateTime>(
             'endManufactureDate',
             (a) => a?.endManufactureDate,
             (s) => s?.endManufactureDate,
             (p, b) => p?.endManufactureDate = b),
-        layerCount = $options.actionField<int>(
-            'layerCount',
-            (a) => a?.layerCount,
-            (s) => s?.layerCount,
-            (p, b) => p?.layerCount = b),
-        forceContainersOnDelivery = $options.actionField<bool>(
+        layerCount = $options.field<int>('layerCount', (a) => a?.layerCount,
+            (s) => s?.layerCount, (p, b) => p?.layerCount = b),
+        forceContainersOnDelivery = $options.field<bool>(
             'forceContainersOnDelivery',
             (a) => a?.forceContainersOnDelivery,
             (s) => s?.forceContainersOnDelivery,
             (p, b) => p?.forceContainersOnDelivery = b),
-        containers = $options.actionField<BuiltList<ItemSpec>>(
+        containers = $options.field<BuiltList<ItemSpec>>(
             'containers',
             (a) => a?.containers,
             (s) => s?.containers,
@@ -819,9 +801,6 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateItemApiRequestCreateItemApiRequestActions> get $serializer => CreateItemApiRequestCreateItemApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

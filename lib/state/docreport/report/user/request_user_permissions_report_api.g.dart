@@ -113,9 +113,6 @@ class _$RequestUserPermissionsReportApi
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateRequestUserPermissionsReportApi> get $serializer => CommandStateRequestUserPermissionsReportApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

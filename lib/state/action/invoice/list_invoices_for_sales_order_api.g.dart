@@ -116,9 +116,6 @@ class _$ListInvoicesForSalesOrderApi extends ListInvoicesForSalesOrderApi {
         this.$progress,
       ]);
 
-// @override
-// Serializer<CommandStateListInvoicesForSalesOrderApi> get $serializer => CommandStateListInvoicesForSalesOrderApi.serializer;
-
   FullType _$fullType;
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [

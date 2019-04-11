@@ -223,12 +223,12 @@ class _$CreatePhysicianBizUnitProcedureApiRequestActions
   _$CreatePhysicianBizUnitProcedureApiRequestActions._(this.$options)
       : $replace = $options.action<CreatePhysicianBizUnitProcedureApiRequest>(
             '\$replace', (a) => a?.$replace),
-        physicianId = $options.actionField<String>(
+        physicianId = $options.field<String>(
             'physicianId',
             (a) => a?.physicianId,
             (s) => s?.physicianId,
             (p, b) => p?.physicianId = b),
-        entries = $options.actionField<
+        entries = $options.field<
                 BuiltList<
                     CreatePhysicianBizUnitProcedureApiBizUnitProcedureEntry>>(
             'entries',
@@ -269,9 +269,6 @@ class _$CreatePhysicianBizUnitProcedureApiRequestActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreatePhysicianBizUnitProcedureApiRequestCreatePhysicianBizUnitProcedureApiRequestActions> get $serializer => CreatePhysicianBizUnitProcedureApiRequestCreatePhysicianBizUnitProcedureApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

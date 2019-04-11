@@ -205,11 +205,8 @@ class _$ListPackagesForShipmentApiRequestActions
   _$ListPackagesForShipmentApiRequestActions._(this.$options)
       : $replace = $options.action<ListPackagesForShipmentApiRequest>(
             '\$replace', (a) => a?.$replace),
-        shipmentId = $options.actionField<String>(
-            'shipmentId',
-            (a) => a?.shipmentId,
-            (s) => s?.shipmentId,
-            (p, b) => p?.shipmentId = b),
+        shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
+            (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -259,9 +256,6 @@ class _$ListPackagesForShipmentApiRequestActions
     super.$middleware(middleware);
     paging.$middleware(middleware);
   }
-
-// @override
-// Serializer<ListPackagesForShipmentApiRequestListPackagesForShipmentApiRequestActions> get $serializer => ListPackagesForShipmentApiRequestListPackagesForShipmentApiRequestActions.serializer;
 
   FullType _$fullType;
   @override

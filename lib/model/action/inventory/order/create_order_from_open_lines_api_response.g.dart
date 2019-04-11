@@ -169,7 +169,7 @@ class _$CreateOrderFromOpenLinesApiResponseActions
   _$CreateOrderFromOpenLinesApiResponseActions._(this.$options)
       : $replace = $options.action<CreateOrderFromOpenLinesApiResponse>(
             '\$replace', (a) => a?.$replace),
-        orderId = $options.actionField<String>('orderId', (a) => a?.orderId,
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
@@ -203,9 +203,6 @@ class _$CreateOrderFromOpenLinesApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<CreateOrderFromOpenLinesApiResponseCreateOrderFromOpenLinesApiResponseActions> get $serializer => CreateOrderFromOpenLinesApiResponseCreateOrderFromOpenLinesApiResponseActions.serializer;
 
   FullType _$fullType;
   @override

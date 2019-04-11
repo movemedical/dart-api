@@ -251,27 +251,27 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
   _$ExpirationInfoActions._(this.$options)
       : $replace =
             $options.action<ExpirationInfo>('\$replace', (a) => a?.$replace),
-        expirationDate = $options.actionField<DateTime>(
+        expirationDate = $options.field<DateTime>(
             'expirationDate',
             (a) => a?.expirationDate,
             (s) => s?.expirationDate,
             (p, b) => p?.expirationDate = b),
-        expiresInDays = $options.actionField<int>(
+        expiresInDays = $options.field<int>(
             'expiresInDays',
             (a) => a?.expiresInDays,
             (s) => s?.expiresInDays,
             (p, b) => p?.expiresInDays = b),
-        expirationLevelId = $options.actionField<String>(
+        expirationLevelId = $options.field<String>(
             'expirationLevelId',
             (a) => a?.expirationLevelId,
             (s) => s?.expirationLevelId,
             (p, b) => p?.expirationLevelId = b),
-        expirationLevelDisplay = $options.actionField<String>(
+        expirationLevelDisplay = $options.field<String>(
             'expirationLevelDisplay',
             (a) => a?.expirationLevelDisplay,
             (s) => s?.expirationLevelDisplay,
             (p, b) => p?.expirationLevelDisplay = b),
-        color = $options.actionField<ExpirationLevelColor>(
+        color = $options.field<ExpirationLevelColor>(
             'color', (a) => a?.color, (s) => s?.color, (p, b) => p?.color = b),
         super._();
 
@@ -310,9 +310,6 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
   }
-
-// @override
-// Serializer<ExpirationInfoExpirationInfoActions> get $serializer => ExpirationInfoExpirationInfoActions.serializer;
 
   FullType _$fullType;
   @override
