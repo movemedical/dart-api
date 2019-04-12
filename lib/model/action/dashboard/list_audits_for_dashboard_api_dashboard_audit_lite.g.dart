@@ -158,19 +158,27 @@ class ListAuditsForDashboardApiDashboardAuditLiteBuilder
   _$ListAuditsForDashboardApiDashboardAuditLite _$v;
 
   AuditBuilder _audit;
+
   AuditBuilder get audit => _$this._audit ??= new AuditBuilder();
+
   set audit(AuditBuilder audit) => _$this._audit = audit;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   int _daysUntilDue;
+
   int get daysUntilDue => _$this._daysUntilDue;
+
   set daysUntilDue(int daysUntilDue) => _$this._daysUntilDue = daysUntilDue;
 
   bool _displayDaysUntilDue;
+
   bool get displayDaysUntilDue => _$this._displayDaysUntilDue;
+
   set displayDaysUntilDue(bool displayDaysUntilDue) =>
       _$this._displayDaysUntilDue = displayDaysUntilDue;
 
@@ -300,6 +308,7 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
       ListAuditsForDashboardApiDashboardAuditLiteBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.audit,
@@ -307,6 +316,7 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -332,6 +342,7 @@ class _$ListAuditsForDashboardApiDashboardAuditLiteActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAuditsForDashboardApiDashboardAuditLite);

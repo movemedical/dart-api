@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'list_procedures_for_search_api_order_by.g.dart';
 
@@ -8,28 +8,31 @@ class ListProceduresForSearchApiOrderBy extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const ListProceduresForSearchApiOrderBy NAME = _$wireNAME;
   static const ListProceduresForSearchApiOrderBy DESC = _$wireDESC;
   static const ListProceduresForSearchApiOrderBy ACTIVE = _$wireACTIVE;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const ListProceduresForSearchApiOrderBy._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
-  static BuiltSet<ListProceduresForSearchApiOrderBy> get values => _$listProceduresForSearchApiOrderByValues;
-  
-  static ListProceduresForSearchApiOrderBy valueOf(String name) => _$listProceduresForSearchApiOrderByValueOf(name);
-  
+
+  static BuiltSet<ListProceduresForSearchApiOrderBy> get values =>
+      _$listProceduresForSearchApiOrderByValues;
+
+  static ListProceduresForSearchApiOrderBy valueOf(String name) =>
+      _$listProceduresForSearchApiOrderByValueOf(name);
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<ListProceduresForSearchApiOrderBy> get serializer => _$listProceduresForSearchApiOrderBySerializer;
+
+  static Serializer<ListProceduresForSearchApiOrderBy> get serializer =>
+      _$listProceduresForSearchApiOrderBySerializer;
 }

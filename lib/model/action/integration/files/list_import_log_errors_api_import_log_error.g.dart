@@ -334,63 +334,91 @@ class ListImportLogErrorsApiImportLogErrorBuilder
   _$ListImportLogErrorsApiImportLogError _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _importLogFileId;
+
   String get importLogFileId => _$this._importLogFileId;
+
   set importLogFileId(String importLogFileId) =>
       _$this._importLogFileId = importLogFileId;
 
   String _integrationIssueId;
+
   String get integrationIssueId => _$this._integrationIssueId;
+
   set integrationIssueId(String integrationIssueId) =>
       _$this._integrationIssueId = integrationIssueId;
 
   int _integrationIssueNumber;
+
   int get integrationIssueNumber => _$this._integrationIssueNumber;
+
   set integrationIssueNumber(int integrationIssueNumber) =>
       _$this._integrationIssueNumber = integrationIssueNumber;
 
   int _row;
+
   int get row => _$this._row;
+
   set row(int row) => _$this._row = row;
 
   String _column;
+
   String get column => _$this._column;
+
   set column(String column) => _$this._column = column;
 
   String _columnData;
+
   String get columnData => _$this._columnData;
+
   set columnData(String columnData) => _$this._columnData = columnData;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   String _data;
+
   String get data => _$this._data;
+
   set data(String data) => _$this._data = data;
 
   String _updatedData;
+
   String get updatedData => _$this._updatedData;
+
   set updatedData(String updatedData) => _$this._updatedData = updatedData;
 
   IntegrationLogErrorStatus _status;
+
   IntegrationLogErrorStatus get status => _$this._status;
+
   set status(IntegrationLogErrorStatus status) => _$this._status = status;
 
   String _resolutionMessage;
+
   String get resolutionMessage => _$this._resolutionMessage;
+
   set resolutionMessage(String resolutionMessage) =>
       _$this._resolutionMessage = resolutionMessage;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   ListImportLogErrorsApiImportLogErrorBuilder();
@@ -550,6 +578,7 @@ class _$ListImportLogErrorsApiImportLogErrorActions
       ListImportLogErrorsApiImportLogErrorBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -595,6 +624,7 @@ class _$ListImportLogErrorsApiImportLogErrorActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListImportLogErrorsApiImportLogError);

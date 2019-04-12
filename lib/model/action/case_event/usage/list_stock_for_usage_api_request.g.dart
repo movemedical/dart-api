@@ -415,90 +415,126 @@ class ListStockForUsageApiRequestBuilder
   _$ListStockForUsageApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListStockForUsageApiCreateOrderDataBuilder _createOrderData;
+
   ListStockForUsageApiCreateOrderDataBuilder get createOrderData =>
       _$this._createOrderData ??=
           new ListStockForUsageApiCreateOrderDataBuilder();
+
   set createOrderData(
           ListStockForUsageApiCreateOrderDataBuilder createOrderData) =>
       _$this._createOrderData = createOrderData;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _searchText;
+
   String get searchText => _$this._searchText;
+
   set searchText(String searchText) => _$this._searchText = searchText;
 
   ListBuilder<String> _categoryIds;
+
   ListBuilder<String> get categoryIds =>
       _$this._categoryIds ??= new ListBuilder<String>();
+
   set categoryIds(ListBuilder<String> categoryIds) =>
       _$this._categoryIds = categoryIds;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   MoveItemType _moveItemType;
+
   MoveItemType get moveItemType => _$this._moveItemType;
+
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   ListBuilder<String> _excludeStockIds;
+
   ListBuilder<String> get excludeStockIds =>
       _$this._excludeStockIds ??= new ListBuilder<String>();
+
   set excludeStockIds(ListBuilder<String> excludeStockIds) =>
       _$this._excludeStockIds = excludeStockIds;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListStockForUsageApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListStockForUsageApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListStockForUsageApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListStockForUsageApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -734,6 +770,7 @@ class _$ListStockForUsageApiRequestActions
       ListStockForUsageApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.createOrderData,
@@ -743,6 +780,7 @@ class _$ListStockForUsageApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -796,6 +834,7 @@ class _$ListStockForUsageApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForUsageApiRequest);

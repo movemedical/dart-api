@@ -101,7 +101,9 @@ class DeleteHcrMatrixApiRequestBuilder
   _$DeleteHcrMatrixApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DeleteHcrMatrixApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$DeleteHcrMatrixApiRequestActions
       DeleteHcrMatrixApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -197,6 +200,7 @@ class _$DeleteHcrMatrixApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(DeleteHcrMatrixApiRequest);
 }

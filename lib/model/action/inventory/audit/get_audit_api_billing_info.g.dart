@@ -152,23 +152,31 @@ class GetAuditApiBillingInfoBuilder
   _$GetAuditApiBillingInfo _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   OrderReasonBuilder _orderReason;
+
   OrderReasonBuilder get orderReason =>
       _$this._orderReason ??= new OrderReasonBuilder();
+
   set orderReason(OrderReasonBuilder orderReason) =>
       _$this._orderReason = orderReason;
 
   CustomerAddressBuilder _shipToAddress;
+
   CustomerAddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new CustomerAddressBuilder();
+
   set shipToAddress(CustomerAddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
@@ -290,6 +298,7 @@ class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
       GetAuditApiBillingInfoBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orderReason,
@@ -297,6 +306,7 @@ class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -322,6 +332,7 @@ class _$GetAuditApiBillingInfoActions extends GetAuditApiBillingInfoActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAuditApiBillingInfo);
 }

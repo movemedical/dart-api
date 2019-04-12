@@ -119,12 +119,16 @@ class ListRootOrgsApiResponseBuilder
   _$ListRootOrgsApiResponse _$v;
 
   ListBuilder<ListRootOrgsApiRootOrg> _data;
+
   ListBuilder<ListRootOrgsApiRootOrg> get data =>
       _$this._data ??= new ListBuilder<ListRootOrgsApiRootOrg>();
+
   set data(ListBuilder<ListRootOrgsApiRootOrg> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListRootOrgsApiResponseBuilder();
@@ -217,6 +221,7 @@ class _$ListRootOrgsApiResponseActions extends ListRootOrgsApiResponseActions {
       ListRootOrgsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -238,6 +243,7 @@ class _$ListRootOrgsApiResponseActions extends ListRootOrgsApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListRootOrgsApiResponse);
 }

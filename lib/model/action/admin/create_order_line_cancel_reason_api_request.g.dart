@@ -138,15 +138,21 @@ class CreateOrderLineCancelReasonApiRequestBuilder
   _$CreateOrderLineCancelReasonApiRequest _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
@@ -238,6 +244,7 @@ class _$CreateOrderLineCancelReasonApiRequestActions
       CreateOrderLineCancelReasonApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -261,6 +268,7 @@ class _$CreateOrderLineCancelReasonApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateOrderLineCancelReasonApiRequest);

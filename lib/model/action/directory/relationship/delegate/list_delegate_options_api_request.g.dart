@@ -154,21 +154,29 @@ class ListDelegateOptionsApiRequestBuilder
   _$ListDelegateOptionsApiRequest _$v;
 
   DirectoryNonPersonType _nonPersonType;
+
   DirectoryNonPersonType get nonPersonType => _$this._nonPersonType;
+
   set nonPersonType(DirectoryNonPersonType nonPersonType) =>
       _$this._nonPersonType = nonPersonType;
 
   String _nonPersonId;
+
   String get nonPersonId => _$this._nonPersonId;
+
   set nonPersonId(String nonPersonId) => _$this._nonPersonId = nonPersonId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListDelegateOptionsApiRequestBuilder();
@@ -288,12 +296,14 @@ class _$ListDelegateOptionsApiRequestActions
       ListDelegateOptionsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -319,6 +329,7 @@ class _$ListDelegateOptionsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListDelegateOptionsApiRequest);

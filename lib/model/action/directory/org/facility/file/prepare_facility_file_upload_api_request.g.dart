@@ -209,35 +209,49 @@ class PrepareFacilityFileUploadApiRequestBuilder
   _$PrepareFacilityFileUploadApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileDescription;
+
   String get fileDescription => _$this._fileDescription;
+
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   FacilityFileType _facilityFileType;
+
   FacilityFileType get facilityFileType => _$this._facilityFileType;
+
   set facilityFileType(FacilityFileType facilityFileType) =>
       _$this._facilityFileType = facilityFileType;
 
   int _estimatedSizeKb;
+
   int get estimatedSizeKb => _$this._estimatedSizeKb;
+
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   Visibility _visibility;
+
   Visibility get visibility => _$this._visibility;
+
   set visibility(Visibility visibility) => _$this._visibility = visibility;
 
   PrepareFacilityFileUploadApiRequestBuilder();
@@ -362,6 +376,7 @@ class _$PrepareFacilityFileUploadApiRequestActions
       PrepareFacilityFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -393,6 +408,7 @@ class _$PrepareFacilityFileUploadApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareFacilityFileUploadApiRequest);

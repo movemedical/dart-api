@@ -165,25 +165,35 @@ class UpdateLotApiRequestBuilder
   _$UpdateLotApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _lotNumber;
+
   String get lotNumber => _$this._lotNumber;
+
   set lotNumber(String lotNumber) => _$this._lotNumber = lotNumber;
 
   DateTime _expirationDate;
+
   DateTime get expirationDate => _$this._expirationDate;
+
   set expirationDate(DateTime expirationDate) =>
       _$this._expirationDate = expirationDate;
 
   DateTime _manufactureDate;
+
   DateTime get manufactureDate => _$this._manufactureDate;
+
   set manufactureDate(DateTime manufactureDate) =>
       _$this._manufactureDate = manufactureDate;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   UpdateLotApiRequestBuilder();
@@ -282,6 +292,7 @@ class _$UpdateLotApiRequestActions extends UpdateLotApiRequestActions {
   UpdateLotApiRequestBuilder $newBuilder() => UpdateLotApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -309,6 +320,7 @@ class _$UpdateLotApiRequestActions extends UpdateLotApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateLotApiRequest);
 }

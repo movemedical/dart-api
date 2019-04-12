@@ -137,15 +137,21 @@ class GetItemLotSerialHistoryApiRequestBuilder
   _$GetItemLotSerialHistoryApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   GetItemLotSerialHistoryApiRequestBuilder();
@@ -233,6 +239,7 @@ class _$GetItemLotSerialHistoryApiRequestActions
       GetItemLotSerialHistoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -256,6 +263,7 @@ class _$GetItemLotSerialHistoryApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetItemLotSerialHistoryApiRequest);

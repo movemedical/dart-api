@@ -182,27 +182,39 @@ class CreateOrgApiRequestBuilder
   _$CreateOrgApiRequest _$v;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   OrgType _type;
+
   OrgType get type => _$this._type;
+
   set type(OrgType type) => _$this._type = type;
 
   AddressBuilder _address;
+
   AddressBuilder get address => _$this._address ??= new AddressBuilder();
+
   set address(AddressBuilder address) => _$this._address = address;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   CreateOrgApiRequestBuilder();
@@ -325,6 +337,7 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
   CreateOrgApiRequestBuilder $newBuilder() => CreateOrgApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.address,
@@ -332,6 +345,7 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -361,6 +375,7 @@ class _$CreateOrgApiRequestActions extends CreateOrgApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateOrgApiRequest);
 }

@@ -136,16 +136,22 @@ class ListHCRForOrgUnitApiHcrLinkBuilder
   _$ListHCRForOrgUnitApiHcrLink _$v;
 
   HcrBuilder _hcr;
+
   HcrBuilder get hcr => _$this._hcr ??= new HcrBuilder();
+
   set hcr(HcrBuilder hcr) => _$this._hcr = hcr;
 
   String _relationshipTypeId;
+
   String get relationshipTypeId => _$this._relationshipTypeId;
+
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
   String _relationshipTypeName;
+
   String get relationshipTypeName => _$this._relationshipTypeName;
+
   set relationshipTypeName(String relationshipTypeName) =>
       _$this._relationshipTypeName = relationshipTypeName;
 
@@ -258,12 +264,14 @@ class _$ListHCRForOrgUnitApiHcrLinkActions
       ListHCRForOrgUnitApiHcrLinkBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.hcr,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -287,6 +295,7 @@ class _$ListHCRForOrgUnitApiHcrLinkActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHCRForOrgUnitApiHcrLink);

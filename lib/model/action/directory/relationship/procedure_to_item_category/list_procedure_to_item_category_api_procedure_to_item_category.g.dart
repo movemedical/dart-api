@@ -254,44 +254,62 @@ class ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder
   _$ListProcedureToItemCategoryApiProcedureToItemCategory _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _itemCategoryId;
+
   String get itemCategoryId => _$this._itemCategoryId;
+
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
   String _itemCategoryName;
+
   String get itemCategoryName => _$this._itemCategoryName;
+
   set itemCategoryName(String itemCategoryName) =>
       _$this._itemCategoryName = itemCategoryName;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _subProcedureName;
+
   String get subProcedureName => _$this._subProcedureName;
+
   set subProcedureName(String subProcedureName) =>
       _$this._subProcedureName = subProcedureName;
 
   String _reference1;
+
   String get reference1 => _$this._reference1;
+
   set reference1(String reference1) => _$this._reference1 = reference1;
 
   String _reference2;
+
   String get reference2 => _$this._reference2;
+
   set reference2(String reference2) => _$this._reference2 = reference2;
 
   ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder();
@@ -436,6 +454,7 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
       ListProcedureToItemCategoryApiProcedureToItemCategoryBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -471,6 +490,7 @@ class _$ListProcedureToItemCategoryApiProcedureToItemCategoryActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListProcedureToItemCategoryApiProcedureToItemCategory);

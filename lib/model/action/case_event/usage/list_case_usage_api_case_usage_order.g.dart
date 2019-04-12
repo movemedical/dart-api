@@ -190,29 +190,41 @@ class ListCaseUsageApiCaseUsageOrderBuilder
   _$ListCaseUsageApiCaseUsageOrder _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _referenceString;
+
   String get referenceString => _$this._referenceString;
+
   set referenceString(String referenceString) =>
       _$this._referenceString = referenceString;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   bool _closed;
+
   bool get closed => _$this._closed;
+
   set closed(bool closed) => _$this._closed = closed;
 
   CustomerAddressBuilder _billToAddress;
+
   CustomerAddressBuilder get billToAddress =>
       _$this._billToAddress ??= new CustomerAddressBuilder();
+
   set billToAddress(CustomerAddressBuilder billToAddress) =>
       _$this._billToAddress = billToAddress;
 
@@ -341,12 +353,14 @@ class _$ListCaseUsageApiCaseUsageOrderActions
       ListCaseUsageApiCaseUsageOrderBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.billToAddress,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -376,6 +390,7 @@ class _$ListCaseUsageApiCaseUsageOrderActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCaseUsageApiCaseUsageOrder);

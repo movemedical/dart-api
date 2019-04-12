@@ -283,55 +283,77 @@ class ListShipToAddressesApiRequestBuilder
   _$ListShipToAddressesApiRequest _$v;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _linkedToCustomer;
+
   bool get linkedToCustomer => _$this._linkedToCustomer;
+
   set linkedToCustomer(bool linkedToCustomer) =>
       _$this._linkedToCustomer = linkedToCustomer;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   bool _omitSubOrgUnits;
+
   bool get omitSubOrgUnits => _$this._omitSubOrgUnits;
+
   set omitSubOrgUnits(bool omitSubOrgUnits) =>
       _$this._omitSubOrgUnits = omitSubOrgUnits;
 
   bool _scopeToLocationVizibility;
+
   bool get scopeToLocationVizibility => _$this._scopeToLocationVizibility;
+
   set scopeToLocationVizibility(bool scopeToLocationVizibility) =>
       _$this._scopeToLocationVizibility = scopeToLocationVizibility;
 
   bool _showFacility;
+
   bool get showFacility => _$this._showFacility;
+
   set showFacility(bool showFacility) => _$this._showFacility = showFacility;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListShipToAddressesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListShipToAddressesApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListShipToAddressesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListShipToAddressesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -509,6 +531,7 @@ class _$ListShipToAddressesApiRequestActions
       ListShipToAddressesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -516,6 +539,7 @@ class _$ListShipToAddressesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -555,6 +579,7 @@ class _$ListShipToAddressesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListShipToAddressesApiRequest);

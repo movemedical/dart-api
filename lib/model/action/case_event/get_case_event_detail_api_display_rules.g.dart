@@ -351,69 +351,99 @@ class GetCaseEventDetailApiDisplayRulesBuilder
   _$GetCaseEventDetailApiDisplayRules _$v;
 
   bool _confirmCase;
+
   bool get confirmCase => _$this._confirmCase;
+
   set confirmCase(bool confirmCase) => _$this._confirmCase = confirmCase;
 
   bool _confirmUsage;
+
   bool get confirmUsage => _$this._confirmUsage;
+
   set confirmUsage(bool confirmUsage) => _$this._confirmUsage = confirmUsage;
 
   bool _editRequirements;
+
   bool get editRequirements => _$this._editRequirements;
+
   set editRequirements(bool editRequirements) =>
       _$this._editRequirements = editRequirements;
 
   bool _reschedule;
+
   bool get reschedule => _$this._reschedule;
+
   set reschedule(bool reschedule) => _$this._reschedule = reschedule;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _editUsage;
+
   bool get editUsage => _$this._editUsage;
+
   set editUsage(bool editUsage) => _$this._editUsage = editUsage;
 
   bool _schedulingEditFull;
+
   bool get schedulingEditFull => _$this._schedulingEditFull;
+
   set schedulingEditFull(bool schedulingEditFull) =>
       _$this._schedulingEditFull = schedulingEditFull;
 
   bool _schedulingEditPartial;
+
   bool get schedulingEditPartial => _$this._schedulingEditPartial;
+
   set schedulingEditPartial(bool schedulingEditPartial) =>
       _$this._schedulingEditPartial = schedulingEditPartial;
 
   bool _editPatient;
+
   bool get editPatient => _$this._editPatient;
+
   set editPatient(bool editPatient) => _$this._editPatient = editPatient;
 
   bool _editDeliverTo;
+
   bool get editDeliverTo => _$this._editDeliverTo;
+
   set editDeliverTo(bool editDeliverTo) =>
       _$this._editDeliverTo = editDeliverTo;
 
   bool _moveBackToPlanning;
+
   bool get moveBackToPlanning => _$this._moveBackToPlanning;
+
   set moveBackToPlanning(bool moveBackToPlanning) =>
       _$this._moveBackToPlanning = moveBackToPlanning;
 
   bool _billingCodes;
+
   bool get billingCodes => _$this._billingCodes;
+
   set billingCodes(bool billingCodes) => _$this._billingCodes = billingCodes;
 
   bool _overridePrice;
+
   bool get overridePrice => _$this._overridePrice;
+
   set overridePrice(bool overridePrice) =>
       _$this._overridePrice = overridePrice;
 
   bool _addPONumber;
+
   bool get addPONumber => _$this._addPONumber;
+
   set addPONumber(bool addPONumber) => _$this._addPONumber = addPONumber;
 
   bool _loanReturn;
+
   bool get loanReturn => _$this._loanReturn;
+
   set loanReturn(bool loanReturn) => _$this._loanReturn = loanReturn;
 
   GetCaseEventDetailApiDisplayRulesBuilder();
@@ -587,6 +617,7 @@ class _$GetCaseEventDetailApiDisplayRulesActions
       GetCaseEventDetailApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -634,6 +665,7 @@ class _$GetCaseEventDetailApiDisplayRulesActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCaseEventDetailApiDisplayRules);

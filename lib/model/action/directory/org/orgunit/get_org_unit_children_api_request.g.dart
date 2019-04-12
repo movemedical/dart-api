@@ -104,7 +104,9 @@ class GetOrgUnitChildrenApiRequestBuilder
   _$GetOrgUnitChildrenApiRequest _$v;
 
   String _parentId;
+
   String get parentId => _$this._parentId;
+
   set parentId(String parentId) => _$this._parentId = parentId;
 
   GetOrgUnitChildrenApiRequestBuilder();
@@ -182,6 +184,7 @@ class _$GetOrgUnitChildrenApiRequestActions
       GetOrgUnitChildrenApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -201,6 +204,7 @@ class _$GetOrgUnitChildrenApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetOrgUnitChildrenApiRequest);

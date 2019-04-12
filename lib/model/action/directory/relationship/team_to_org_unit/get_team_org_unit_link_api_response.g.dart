@@ -108,9 +108,11 @@ class GetTeamOrgUnitLinkApiResponseBuilder
   _$GetTeamOrgUnitLinkApiResponse _$v;
 
   GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder _detailedOrgUnitLink;
+
   GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder get detailedOrgUnitLink =>
       _$this._detailedOrgUnitLink ??=
           new GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder();
+
   set detailedOrgUnitLink(
           GetTeamOrgUnitLinkApiDetailedOrgUnitLinkBuilder
               detailedOrgUnitLink) =>
@@ -213,12 +215,14 @@ class _$GetTeamOrgUnitLinkApiResponseActions
       GetTeamOrgUnitLinkApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.detailedOrgUnitLink,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -238,6 +242,7 @@ class _$GetTeamOrgUnitLinkApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetTeamOrgUnitLinkApiResponse);

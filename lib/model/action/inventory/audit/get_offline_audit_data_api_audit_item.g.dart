@@ -507,115 +507,165 @@ class GetOfflineAuditDataApiAuditItemBuilder
   _$GetOfflineAuditDataApiAuditItem _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   int _auditItemNumber;
+
   int get auditItemNumber => _$this._auditItemNumber;
+
   set auditItemNumber(int auditItemNumber) =>
       _$this._auditItemNumber = auditItemNumber;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   DateTime _lotSerialExpirationDate;
+
   DateTime get lotSerialExpirationDate => _$this._lotSerialExpirationDate;
+
   set lotSerialExpirationDate(DateTime lotSerialExpirationDate) =>
       _$this._lotSerialExpirationDate = lotSerialExpirationDate;
 
   String _tagId;
+
   String get tagId => _$this._tagId;
+
   set tagId(String tagId) => _$this._tagId = tagId;
 
   String _containerString;
+
   String get containerString => _$this._containerString;
+
   set containerString(String containerString) =>
       _$this._containerString = containerString;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   bool _unknown;
+
   bool get unknown => _$this._unknown;
+
   set unknown(bool unknown) => _$this._unknown = unknown;
 
   String _unknownItemNumber;
+
   String get unknownItemNumber => _$this._unknownItemNumber;
+
   set unknownItemNumber(String unknownItemNumber) =>
       _$this._unknownItemNumber = unknownItemNumber;
 
   String _unknownLotSerialNumber;
+
   String get unknownLotSerialNumber => _$this._unknownLotSerialNumber;
+
   set unknownLotSerialNumber(String unknownLotSerialNumber) =>
       _$this._unknownLotSerialNumber = unknownLotSerialNumber;
 
   String _unknownScanValue;
+
   String get unknownScanValue => _$this._unknownScanValue;
+
   set unknownScanValue(String unknownScanValue) =>
       _$this._unknownScanValue = unknownScanValue;
 
   AuditItemStatus _status;
+
   AuditItemStatus get status => _$this._status;
+
   set status(AuditItemStatus status) => _$this._status = status;
 
   String _closedByUserId;
+
   String get closedByUserId => _$this._closedByUserId;
+
   set closedByUserId(String closedByUserId) =>
       _$this._closedByUserId = closedByUserId;
 
   DateTime _closeDate;
+
   DateTime get closeDate => _$this._closeDate;
+
   set closeDate(DateTime closeDate) => _$this._closeDate = closeDate;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   String _closeNote;
+
   String get closeNote => _$this._closeNote;
+
   set closeNote(String closeNote) => _$this._closeNote = closeNote;
 
   int _quantityDamaged;
+
   int get quantityDamaged => _$this._quantityDamaged;
+
   set quantityDamaged(int quantityDamaged) =>
       _$this._quantityDamaged = quantityDamaged;
 
   int _quantityCounted;
+
   int get quantityCounted => _$this._quantityCounted;
+
   set quantityCounted(int quantityCounted) =>
       _$this._quantityCounted = quantityCounted;
 
   int _quantityExpected;
+
   int get quantityExpected => _$this._quantityExpected;
+
   set quantityExpected(int quantityExpected) =>
       _$this._quantityExpected = quantityExpected;
 
   int _quantityDiff;
+
   int get quantityDiff => _$this._quantityDiff;
+
   set quantityDiff(int quantityDiff) => _$this._quantityDiff = quantityDiff;
 
   GetOfflineAuditDataApiAuditItemBuilder();
@@ -857,6 +907,7 @@ class _$GetOfflineAuditDataApiAuditItemActions
       GetOfflineAuditDataApiAuditItemBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -924,6 +975,7 @@ class _$GetOfflineAuditDataApiAuditItemActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetOfflineAuditDataApiAuditItem);

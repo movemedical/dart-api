@@ -156,22 +156,30 @@ class ListImportLogErrorsApiRequestBuilder
   _$ListImportLogErrorsApiRequest _$v;
 
   String _importLogFileId;
+
   String get importLogFileId => _$this._importLogFileId;
+
   set importLogFileId(String importLogFileId) =>
       _$this._importLogFileId = importLogFileId;
 
   String _integrationIssueId;
+
   String get integrationIssueId => _$this._integrationIssueId;
+
   set integrationIssueId(String integrationIssueId) =>
       _$this._integrationIssueId = integrationIssueId;
 
   bool _skipped;
+
   bool get skipped => _$this._skipped;
+
   set skipped(bool skipped) => _$this._skipped = skipped;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListImportLogErrorsApiRequestBuilder();
@@ -291,12 +299,14 @@ class _$ListImportLogErrorsApiRequestActions
       ListImportLogErrorsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -322,6 +332,7 @@ class _$ListImportLogErrorsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListImportLogErrorsApiRequest);

@@ -95,8 +95,10 @@ class GetHcrApiResponseBuilder
   _$GetHcrApiResponse _$v;
 
   GetHcrApiHcrDetailBuilder _detail;
+
   GetHcrApiHcrDetailBuilder get detail =>
       _$this._detail ??= new GetHcrApiHcrDetailBuilder();
+
   set detail(GetHcrApiHcrDetailBuilder detail) => _$this._detail = detail;
 
   GetHcrApiResponseBuilder();
@@ -186,12 +188,14 @@ class _$GetHcrApiResponseActions extends GetHcrApiResponseActions {
   GetHcrApiResponseBuilder $newBuilder() => GetHcrApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -211,6 +215,7 @@ class _$GetHcrApiResponseActions extends GetHcrApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetHcrApiResponse);
 }

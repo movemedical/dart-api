@@ -138,16 +138,22 @@ class UpdateMobileVersionDetailsApiRequestBuilder
   _$UpdateMobileVersionDetailsApiRequest _$v;
 
   MobilePlatform _platform;
+
   MobilePlatform get platform => _$this._platform;
+
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   String _latestVersion;
+
   String get latestVersion => _$this._latestVersion;
+
   set latestVersion(String latestVersion) =>
       _$this._latestVersion = latestVersion;
 
   String _appUrl;
+
   String get appUrl => _$this._appUrl;
+
   set appUrl(String appUrl) => _$this._appUrl = appUrl;
 
   UpdateMobileVersionDetailsApiRequestBuilder();
@@ -238,6 +244,7 @@ class _$UpdateMobileVersionDetailsApiRequestActions
       UpdateMobileVersionDetailsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -261,6 +268,7 @@ class _$UpdateMobileVersionDetailsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateMobileVersionDetailsApiRequest);

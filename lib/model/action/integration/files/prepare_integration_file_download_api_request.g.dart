@@ -108,7 +108,9 @@ class PrepareIntegrationFileDownloadApiRequestBuilder
   _$PrepareIntegrationFileDownloadApiRequest _$v;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   PrepareIntegrationFileDownloadApiRequestBuilder();
@@ -187,6 +189,7 @@ class _$PrepareIntegrationFileDownloadApiRequestActions
       PrepareIntegrationFileDownloadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,6 +209,7 @@ class _$PrepareIntegrationFileDownloadApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareIntegrationFileDownloadApiRequest);

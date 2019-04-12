@@ -114,11 +114,15 @@ class MoveOrgUnitApiRequestBuilder
   _$MoveOrgUnitApiRequest _$v;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _parentOrgUnitId;
+
   String get parentOrgUnitId => _$this._parentOrgUnitId;
+
   set parentOrgUnitId(String parentOrgUnitId) =>
       _$this._parentOrgUnitId = parentOrgUnitId;
 
@@ -201,6 +205,7 @@ class _$MoveOrgUnitApiRequestActions extends MoveOrgUnitApiRequestActions {
   MoveOrgUnitApiRequestBuilder $newBuilder() => MoveOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -222,6 +227,7 @@ class _$MoveOrgUnitApiRequestActions extends MoveOrgUnitApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(MoveOrgUnitApiRequest);
 }

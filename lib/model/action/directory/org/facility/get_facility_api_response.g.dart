@@ -101,8 +101,10 @@ class GetFacilityApiResponseBuilder
   _$GetFacilityApiResponse _$v;
 
   GetFacilityApiFacilityDetailBuilder _detail;
+
   GetFacilityApiFacilityDetailBuilder get detail =>
       _$this._detail ??= new GetFacilityApiFacilityDetailBuilder();
+
   set detail(GetFacilityApiFacilityDetailBuilder detail) =>
       _$this._detail = detail;
 
@@ -198,12 +200,14 @@ class _$GetFacilityApiResponseActions extends GetFacilityApiResponseActions {
       GetFacilityApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -223,6 +227,7 @@ class _$GetFacilityApiResponseActions extends GetFacilityApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetFacilityApiResponse);
 }

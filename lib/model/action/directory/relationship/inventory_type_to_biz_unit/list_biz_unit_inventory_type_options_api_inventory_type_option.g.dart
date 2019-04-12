@@ -133,11 +133,15 @@ class ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionBuilder
   _$ListBizUnitInventoryTypeOptionsApiInventoryTypeOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionBuilder();
@@ -228,6 +232,7 @@ class _$ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionActions
       ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,6 +254,7 @@ class _$ListBizUnitInventoryTypeOptionsApiInventoryTypeOptionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListBizUnitInventoryTypeOptionsApiInventoryTypeOption);

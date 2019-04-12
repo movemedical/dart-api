@@ -242,45 +242,61 @@ class ListContactsForSearchApiRequestBuilder
   _$ListContactsForSearchApiRequest _$v;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<GeneralContactType> _contactTypes;
+
   ListBuilder<GeneralContactType> get contactTypes =>
       _$this._contactTypes ??= new ListBuilder<GeneralContactType>();
+
   set contactTypes(ListBuilder<GeneralContactType> contactTypes) =>
       _$this._contactTypes = contactTypes;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _export;
+
   bool get export => _$this._export;
+
   set export(bool export) => _$this._export = export;
 
   ListContactsForSearchApiActiveStatus _activeChoice;
+
   ListContactsForSearchApiActiveStatus get activeChoice => _$this._activeChoice;
+
   set activeChoice(ListContactsForSearchApiActiveStatus activeChoice) =>
       _$this._activeChoice = activeChoice;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListContactsForSearchApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListContactsForSearchApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListContactsForSearchApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListContactsForSearchApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -445,6 +461,7 @@ class _$ListContactsForSearchApiRequestActions
       ListContactsForSearchApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -452,6 +469,7 @@ class _$ListContactsForSearchApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -485,6 +503,7 @@ class _$ListContactsForSearchApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListContactsForSearchApiRequest);

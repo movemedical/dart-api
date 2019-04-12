@@ -141,18 +141,24 @@ class ListCustomerQualifiersApiRequestBuilder
   _$ListCustomerQualifiersApiRequest _$v;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListCustomerQualifiersApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListCustomerQualifiersApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListCustomerQualifiersApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListCustomerQualifiersApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -273,6 +279,7 @@ class _$ListCustomerQualifiersApiRequestActions
       ListCustomerQualifiersApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -280,6 +287,7 @@ class _$ListCustomerQualifiersApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -303,6 +311,7 @@ class _$ListCustomerQualifiersApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCustomerQualifiersApiRequest);

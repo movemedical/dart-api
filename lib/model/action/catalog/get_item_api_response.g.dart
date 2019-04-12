@@ -224,44 +224,60 @@ class GetItemApiResponseBuilder
   _$GetItemApiResponse _$v;
 
   ItemBuilder _item;
+
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
+
   set item(ItemBuilder item) => _$this._item = item;
 
   BizUnitBuilder _bizUnit;
+
   BizUnitBuilder get bizUnit => _$this._bizUnit ??= new BizUnitBuilder();
+
   set bizUnit(BizUnitBuilder bizUnit) => _$this._bizUnit = bizUnit;
 
   UnitOfMeasureBuilder _unitOfMeasure;
+
   UnitOfMeasureBuilder get unitOfMeasure =>
       _$this._unitOfMeasure ??= new UnitOfMeasureBuilder();
+
   set unitOfMeasure(UnitOfMeasureBuilder unitOfMeasure) =>
       _$this._unitOfMeasure = unitOfMeasure;
 
   ListBuilder<ItemVersion> _versions;
+
   ListBuilder<ItemVersion> get versions =>
       _$this._versions ??= new ListBuilder<ItemVersion>();
+
   set versions(ListBuilder<ItemVersion> versions) =>
       _$this._versions = versions;
 
   ListBuilder<String> _gtins;
+
   ListBuilder<String> get gtins => _$this._gtins ??= new ListBuilder<String>();
+
   set gtins(ListBuilder<String> gtins) => _$this._gtins = gtins;
 
   ListBuilder<ListAttributesForItemApiItemAttribute> _itemAttributes;
+
   ListBuilder<ListAttributesForItemApiItemAttribute> get itemAttributes =>
       _$this._itemAttributes ??=
           new ListBuilder<ListAttributesForItemApiItemAttribute>();
+
   set itemAttributes(
           ListBuilder<ListAttributesForItemApiItemAttribute> itemAttributes) =>
       _$this._itemAttributes = itemAttributes;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   GetItemApiDisplayRuleBuilder _displayRule;
+
   GetItemApiDisplayRuleBuilder get displayRule =>
       _$this._displayRule ??= new GetItemApiDisplayRuleBuilder();
+
   set displayRule(GetItemApiDisplayRuleBuilder displayRule) =>
       _$this._displayRule = displayRule;
 
@@ -423,6 +439,7 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
   GetItemApiResponseBuilder $newBuilder() => GetItemApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
@@ -432,6 +449,7 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -465,6 +483,7 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetItemApiResponse);
 }

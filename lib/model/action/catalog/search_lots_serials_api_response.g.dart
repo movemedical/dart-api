@@ -125,12 +125,16 @@ class SearchLotsSerialsApiResponseBuilder
   _$SearchLotsSerialsApiResponse _$v;
 
   ListBuilder<Lot> _lots;
+
   ListBuilder<Lot> get lots => _$this._lots ??= new ListBuilder<Lot>();
+
   set lots(ListBuilder<Lot> lots) => _$this._lots = lots;
 
   ListBuilder<Serial> _serials;
+
   ListBuilder<Serial> get serials =>
       _$this._serials ??= new ListBuilder<Serial>();
+
   set serials(ListBuilder<Serial> serials) => _$this._serials = serials;
 
   SearchLotsSerialsApiResponseBuilder();
@@ -228,6 +232,7 @@ class _$SearchLotsSerialsApiResponseActions
       SearchLotsSerialsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,6 +254,7 @@ class _$SearchLotsSerialsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchLotsSerialsApiResponse);

@@ -121,11 +121,15 @@ class CreateBizUnitToOrgUnitApiRequestBuilder
   _$CreateBizUnitToOrgUnitApiRequest _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   CreateBizUnitToOrgUnitApiRequestBuilder();
@@ -209,6 +213,7 @@ class _$CreateBizUnitToOrgUnitApiRequestActions
       CreateBizUnitToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -230,6 +235,7 @@ class _$CreateBizUnitToOrgUnitApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateBizUnitToOrgUnitApiRequest);

@@ -120,12 +120,16 @@ class UpdateShipToAddressApiRequestBuilder
   _$UpdateShipToAddressApiRequest _$v;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   UpdateShipToAddressApiRequestBuilder();
@@ -211,6 +215,7 @@ class _$UpdateShipToAddressApiRequestActions
       UpdateShipToAddressApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -232,6 +237,7 @@ class _$UpdateShipToAddressApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateShipToAddressApiRequest);

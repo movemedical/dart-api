@@ -582,143 +582,203 @@ class SaveCaseUsagesApiUsageBuilder
   _$SaveCaseUsagesApiUsage _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _remove;
+
   bool get remove => _$this._remove;
+
   set remove(bool remove) => _$this._remove = remove;
 
   String _caseUsageOrderId;
+
   String get caseUsageOrderId => _$this._caseUsageOrderId;
+
   set caseUsageOrderId(String caseUsageOrderId) =>
       _$this._caseUsageOrderId = caseUsageOrderId;
 
   String _caseUsageConstructId;
+
   String get caseUsageConstructId => _$this._caseUsageConstructId;
+
   set caseUsageConstructId(String caseUsageConstructId) =>
       _$this._caseUsageConstructId = caseUsageConstructId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _itemNumber;
+
   String get itemNumber => _$this._itemNumber;
+
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _lotNumber;
+
   String get lotNumber => _$this._lotNumber;
+
   set lotNumber(String lotNumber) => _$this._lotNumber = lotNumber;
 
   String _serialNumber;
+
   String get serialNumber => _$this._serialNumber;
+
   set serialNumber(String serialNumber) => _$this._serialNumber = serialNumber;
 
   String _rawBarcodeData;
+
   String get rawBarcodeData => _$this._rawBarcodeData;
+
   set rawBarcodeData(String rawBarcodeData) =>
       _$this._rawBarcodeData = rawBarcodeData;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   CaseUsageDisposition _caseUsageDisposition;
+
   CaseUsageDisposition get caseUsageDisposition => _$this._caseUsageDisposition;
+
   set caseUsageDisposition(CaseUsageDisposition caseUsageDisposition) =>
       _$this._caseUsageDisposition = caseUsageDisposition;
 
   ItemCaptureType _usageCaptureType;
+
   ItemCaptureType get usageCaptureType => _$this._usageCaptureType;
+
   set usageCaptureType(ItemCaptureType usageCaptureType) =>
       _$this._usageCaptureType = usageCaptureType;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   String _note;
+
   String get note => _$this._note;
+
   set note(String note) => _$this._note = note;
 
   LocationHint _locationHint;
+
   LocationHint get locationHint => _$this._locationHint;
+
   set locationHint(LocationHint locationHint) =>
       _$this._locationHint = locationHint;
 
   ReplenishOption _replenishOption;
+
   ReplenishOption get replenishOption => _$this._replenishOption;
+
   set replenishOption(ReplenishOption replenishOption) =>
       _$this._replenishOption = replenishOption;
 
   LocationType _replenishLocationType;
+
   LocationType get replenishLocationType => _$this._replenishLocationType;
+
   set replenishLocationType(LocationType replenishLocationType) =>
       _$this._replenishLocationType = replenishLocationType;
 
   String _replenishLocationId;
+
   String get replenishLocationId => _$this._replenishLocationId;
+
   set replenishLocationId(String replenishLocationId) =>
       _$this._replenishLocationId = replenishLocationId;
 
   StockContainerType _replenishContainerType;
+
   StockContainerType get replenishContainerType =>
       _$this._replenishContainerType;
+
   set replenishContainerType(StockContainerType replenishContainerType) =>
       _$this._replenishContainerType = replenishContainerType;
 
   String _replenishContainerId;
+
   String get replenishContainerId => _$this._replenishContainerId;
+
   set replenishContainerId(String replenishContainerId) =>
       _$this._replenishContainerId = replenishContainerId;
 
   DateTime _replenishByDate;
+
   DateTime get replenishByDate => _$this._replenishByDate;
+
   set replenishByDate(DateTime replenishByDate) =>
       _$this._replenishByDate = replenishByDate;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _restockDeliverToAttn;
+
   String get restockDeliverToAttn => _$this._restockDeliverToAttn;
+
   set restockDeliverToAttn(String restockDeliverToAttn) =>
       _$this._restockDeliverToAttn = restockDeliverToAttn;
 
   String _restockDeliverToAddressId;
+
   String get restockDeliverToAddressId => _$this._restockDeliverToAddressId;
+
   set restockDeliverToAddressId(String restockDeliverToAddressId) =>
       _$this._restockDeliverToAddressId = restockDeliverToAddressId;
 
   AddressBuilder _restockDeliverToAddressOverride;
+
   AddressBuilder get restockDeliverToAddressOverride =>
       _$this._restockDeliverToAddressOverride ??= new AddressBuilder();
+
   set restockDeliverToAddressOverride(
           AddressBuilder restockDeliverToAddressOverride) =>
       _$this._restockDeliverToAddressOverride = restockDeliverToAddressOverride;
 
   bool _doNotRestock;
+
   bool get doNotRestock => _$this._doNotRestock;
+
   set doNotRestock(bool doNotRestock) => _$this._doNotRestock = doNotRestock;
 
   String _billingCodeId;
+
   String get billingCodeId => _$this._billingCodeId;
+
   set billingCodeId(String billingCodeId) =>
       _$this._billingCodeId = billingCodeId;
 
   double _overridePrice;
+
   double get overridePrice => _$this._overridePrice;
+
   set overridePrice(double overridePrice) =>
       _$this._overridePrice = overridePrice;
 
@@ -1018,12 +1078,14 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
       SaveCaseUsagesApiUsageBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.restockDeliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1101,6 +1163,7 @@ class _$SaveCaseUsagesApiUsageActions extends SaveCaseUsagesApiUsageActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveCaseUsagesApiUsage);
 }

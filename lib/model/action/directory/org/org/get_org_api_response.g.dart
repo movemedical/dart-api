@@ -127,16 +127,22 @@ class GetOrgApiResponseBuilder
   _$GetOrgApiResponse _$v;
 
   GetOrgApiOrgDetailBuilder _data;
+
   GetOrgApiOrgDetailBuilder get data =>
       _$this._data ??= new GetOrgApiOrgDetailBuilder();
+
   set data(GetOrgApiOrgDetailBuilder data) => _$this._data = data;
 
   bool _editAllowed;
+
   bool get editAllowed => _$this._editAllowed;
+
   set editAllowed(bool editAllowed) => _$this._editAllowed = editAllowed;
 
   bool _relationAddRemoveAllowed;
+
   bool get relationAddRemoveAllowed => _$this._relationAddRemoveAllowed;
+
   set relationAddRemoveAllowed(bool relationAddRemoveAllowed) =>
       _$this._relationAddRemoveAllowed = relationAddRemoveAllowed;
 
@@ -242,12 +248,14 @@ class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
   GetOrgApiResponseBuilder $newBuilder() => GetOrgApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -271,6 +279,7 @@ class _$GetOrgApiResponseActions extends GetOrgApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetOrgApiResponse);
 }

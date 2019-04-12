@@ -258,44 +258,62 @@ class ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailBuilder
   _$ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   int _instrumentDeliveryLeadTimeDays;
+
   int get instrumentDeliveryLeadTimeDays =>
       _$this._instrumentDeliveryLeadTimeDays;
+
   set instrumentDeliveryLeadTimeDays(int instrumentDeliveryLeadTimeDays) =>
       _$this._instrumentDeliveryLeadTimeDays = instrumentDeliveryLeadTimeDays;
 
   int _instrumentDeliveryLeadTimeHours;
+
   int get instrumentDeliveryLeadTimeHours =>
       _$this._instrumentDeliveryLeadTimeHours;
+
   set instrumentDeliveryLeadTimeHours(int instrumentDeliveryLeadTimeHours) =>
       _$this._instrumentDeliveryLeadTimeHours = instrumentDeliveryLeadTimeHours;
 
   int _implantDeliveryLeadTimeDays;
+
   int get implantDeliveryLeadTimeDays => _$this._implantDeliveryLeadTimeDays;
+
   set implantDeliveryLeadTimeDays(int implantDeliveryLeadTimeDays) =>
       _$this._implantDeliveryLeadTimeDays = implantDeliveryLeadTimeDays;
 
   int _implantDeliveryLeadTimeHours;
+
   int get implantDeliveryLeadTimeHours => _$this._implantDeliveryLeadTimeHours;
+
   set implantDeliveryLeadTimeHours(int implantDeliveryLeadTimeHours) =>
       _$this._implantDeliveryLeadTimeHours = implantDeliveryLeadTimeHours;
 
@@ -441,6 +459,7 @@ class _$ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailActions
           ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -476,6 +495,7 @@ class _$ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetailActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail);

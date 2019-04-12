@@ -140,18 +140,24 @@ class ListCaseRequirementsApiResponseBuilder
   _$ListCaseRequirementsApiResponse _$v;
 
   ListBuilder<ListCaseRequirementsApiItemRequest> _data;
+
   ListBuilder<ListCaseRequirementsApiItemRequest> get data =>
       _$this._data ??= new ListBuilder<ListCaseRequirementsApiItemRequest>();
+
   set data(ListBuilder<ListCaseRequirementsApiItemRequest> data) =>
       _$this._data = data;
 
   bool _editRequirements;
+
   bool get editRequirements => _$this._editRequirements;
+
   set editRequirements(bool editRequirements) =>
       _$this._editRequirements = editRequirements;
 
   bool _confirmCase;
+
   bool get confirmCase => _$this._confirmCase;
+
   set confirmCase(bool confirmCase) => _$this._confirmCase = confirmCase;
 
   ListCaseRequirementsApiResponseBuilder();
@@ -257,6 +263,7 @@ class _$ListCaseRequirementsApiResponseActions
       ListCaseRequirementsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -280,6 +287,7 @@ class _$ListCaseRequirementsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCaseRequirementsApiResponse);

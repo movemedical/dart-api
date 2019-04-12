@@ -124,14 +124,18 @@ class ListRelationshipTypesApiResponseBuilder
   _$ListRelationshipTypesApiResponse _$v;
 
   ListBuilder<ListRelationshipTypesApiOrgUnitRelationships> _data;
+
   ListBuilder<ListRelationshipTypesApiOrgUnitRelationships> get data =>
       _$this._data ??=
           new ListBuilder<ListRelationshipTypesApiOrgUnitRelationships>();
+
   set data(ListBuilder<ListRelationshipTypesApiOrgUnitRelationships> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListRelationshipTypesApiResponseBuilder();
@@ -230,6 +234,7 @@ class _$ListRelationshipTypesApiResponseActions
       ListRelationshipTypesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -251,6 +256,7 @@ class _$ListRelationshipTypesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListRelationshipTypesApiResponse);

@@ -184,27 +184,39 @@ class GetOrgUnitChildrenApiOrgUnitDetailBuilder
   _$GetOrgUnitChildrenApiOrgUnitDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   bool _ops;
+
   bool get ops => _$this._ops;
+
   set ops(bool ops) => _$this._ops = ops;
 
   bool _sales;
+
   bool get sales => _$this._sales;
+
   set sales(bool sales) => _$this._sales = sales;
 
   bool _hasChildren;
+
   bool get hasChildren => _$this._hasChildren;
+
   set hasChildren(bool hasChildren) => _$this._hasChildren = hasChildren;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   GetOrgUnitChildrenApiOrgUnitDetailBuilder();
@@ -309,6 +321,7 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
       GetOrgUnitChildrenApiOrgUnitDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -338,6 +351,7 @@ class _$GetOrgUnitChildrenApiOrgUnitDetailActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetOrgUnitChildrenApiOrgUnitDetail);

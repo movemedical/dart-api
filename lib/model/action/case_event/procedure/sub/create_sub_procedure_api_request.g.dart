@@ -168,23 +168,33 @@ class CreateSubProcedureApiRequestBuilder
   _$CreateSubProcedureApiRequest _$v;
 
   String _parentId;
+
   String get parentId => _$this._parentId;
+
   set parentId(String parentId) => _$this._parentId = parentId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _icdCode;
+
   String get icdCode => _$this._icdCode;
+
   set icdCode(String icdCode) => _$this._icdCode = icdCode;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   CreateSubProcedureApiRequestBuilder();
@@ -286,6 +296,7 @@ class _$CreateSubProcedureApiRequestActions
       CreateSubProcedureApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -313,6 +324,7 @@ class _$CreateSubProcedureApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateSubProcedureApiRequest);

@@ -132,17 +132,21 @@ class ListProcedureItemCategoryOptionsApiResponseBuilder
   _$ListProcedureItemCategoryOptionsApiResponse _$v;
 
   ListBuilder<ListProcedureItemCategoryOptionsApiItemCategoryOption> _data;
+
   ListBuilder<
       ListProcedureItemCategoryOptionsApiItemCategoryOption> get data => _$this
           ._data ??=
       new ListBuilder<ListProcedureItemCategoryOptionsApiItemCategoryOption>();
+
   set data(
           ListBuilder<ListProcedureItemCategoryOptionsApiItemCategoryOption>
               data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListProcedureItemCategoryOptionsApiResponseBuilder();
@@ -245,6 +249,7 @@ class _$ListProcedureItemCategoryOptionsApiResponseActions
       ListProcedureItemCategoryOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -266,6 +271,7 @@ class _$ListProcedureItemCategoryOptionsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListProcedureItemCategoryOptionsApiResponse);

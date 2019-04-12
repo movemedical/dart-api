@@ -119,11 +119,15 @@ class AddHcrToColleagueApiRequestBuilder
   _$AddHcrToColleagueApiRequest _$v;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _colleagueId;
+
   String get colleagueId => _$this._colleagueId;
+
   set colleagueId(String colleagueId) => _$this._colleagueId = colleagueId;
 
   AddHcrToColleagueApiRequestBuilder();
@@ -209,6 +213,7 @@ class _$AddHcrToColleagueApiRequestActions
       AddHcrToColleagueApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -230,6 +235,7 @@ class _$AddHcrToColleagueApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AddHcrToColleagueApiRequest);

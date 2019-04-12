@@ -294,60 +294,82 @@ class SearchHcrTeamsApiRequestBuilder
   _$SearchHcrTeamsApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _salesOuIds;
+
   ListBuilder<String> get salesOuIds =>
       _$this._salesOuIds ??= new ListBuilder<String>();
+
   set salesOuIds(ListBuilder<String> salesOuIds) =>
       _$this._salesOuIds = salesOuIds;
 
   ListBuilder<String> _hcrIds;
+
   ListBuilder<String> get hcrIds =>
       _$this._hcrIds ??= new ListBuilder<String>();
+
   set hcrIds(ListBuilder<String> hcrIds) => _$this._hcrIds = hcrIds;
 
   ListBuilder<String> _teamIds;
+
   ListBuilder<String> get teamIds =>
       _$this._teamIds ??= new ListBuilder<String>();
+
   set teamIds(ListBuilder<String> teamIds) => _$this._teamIds = teamIds;
 
   ListBuilder<String> _facilityIds;
+
   ListBuilder<String> get facilityIds =>
       _$this._facilityIds ??= new ListBuilder<String>();
+
   set facilityIds(ListBuilder<String> facilityIds) =>
       _$this._facilityIds = facilityIds;
 
   ListBuilder<String> _physicianIds;
+
   ListBuilder<String> get physicianIds =>
       _$this._physicianIds ??= new ListBuilder<String>();
+
   set physicianIds(ListBuilder<String> physicianIds) =>
       _$this._physicianIds = physicianIds;
 
   ListBuilder<String> _procedureIds;
+
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
+
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   bool _forCreateCase;
+
   bool get forCreateCase => _$this._forCreateCase;
+
   set forCreateCase(bool forCreateCase) =>
       _$this._forCreateCase = forCreateCase;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   bool _withSalesOU;
+
   bool get withSalesOU => _$this._withSalesOU;
+
   set withSalesOU(bool withSalesOU) => _$this._withSalesOU = withSalesOU;
 
   SearchHcrTeamsApiRequestBuilder();
@@ -522,6 +544,7 @@ class _$SearchHcrTeamsApiRequestActions
       SearchHcrTeamsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -561,6 +584,7 @@ class _$SearchHcrTeamsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SearchHcrTeamsApiRequest);
 }

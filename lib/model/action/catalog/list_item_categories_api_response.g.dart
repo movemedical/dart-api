@@ -129,16 +129,20 @@ class ListItemCategoriesApiResponseBuilder
   _$ListItemCategoriesApiResponse _$v;
 
   ListBuilder<ListItemCategoriesApiItemCategory> _itemCategories;
+
   ListBuilder<ListItemCategoriesApiItemCategory> get itemCategories =>
       _$this._itemCategories ??=
           new ListBuilder<ListItemCategoriesApiItemCategory>();
+
   set itemCategories(
           ListBuilder<ListItemCategoriesApiItemCategory> itemCategories) =>
       _$this._itemCategories = itemCategories;
 
   ListBuilder<String> _existingLinkedItemCategoryIds;
+
   ListBuilder<String> get existingLinkedItemCategoryIds =>
       _$this._existingLinkedItemCategoryIds ??= new ListBuilder<String>();
+
   set existingLinkedItemCategoryIds(
           ListBuilder<String> existingLinkedItemCategoryIds) =>
       _$this._existingLinkedItemCategoryIds = existingLinkedItemCategoryIds;
@@ -249,6 +253,7 @@ class _$ListItemCategoriesApiResponseActions
       ListItemCategoriesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -270,6 +275,7 @@ class _$ListItemCategoriesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListItemCategoriesApiResponse);

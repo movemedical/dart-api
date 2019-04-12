@@ -124,14 +124,18 @@ class ListAuditsForDashboardApiResponseBuilder
   _$ListAuditsForDashboardApiResponse _$v;
 
   ListBuilder<ListAuditsForDashboardApiDashboardAuditLite> _data;
+
   ListBuilder<ListAuditsForDashboardApiDashboardAuditLite> get data =>
       _$this._data ??=
           new ListBuilder<ListAuditsForDashboardApiDashboardAuditLite>();
+
   set data(ListBuilder<ListAuditsForDashboardApiDashboardAuditLite> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAuditsForDashboardApiResponseBuilder();
@@ -230,6 +234,7 @@ class _$ListAuditsForDashboardApiResponseActions
       ListAuditsForDashboardApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -251,6 +256,7 @@ class _$ListAuditsForDashboardApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAuditsForDashboardApiResponse);

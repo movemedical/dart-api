@@ -181,23 +181,33 @@ class ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder
   _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption _$v;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   bool _opsOrgUnit;
+
   bool get opsOrgUnit => _$this._opsOrgUnit;
+
   set opsOrgUnit(bool opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   bool _salesOrgUnit;
+
   bool get salesOrgUnit => _$this._salesOrgUnit;
+
   set salesOrgUnit(bool salesOrgUnit) => _$this._salesOrgUnit = salesOrgUnit;
 
   String _orgUnitLabel;
+
   String get orgUnitLabel => _$this._orgUnitLabel;
+
   set orgUnitLabel(String orgUnitLabel) => _$this._orgUnitLabel = orgUnitLabel;
 
   ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder();
@@ -310,6 +320,7 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
       ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -337,6 +348,7 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOptionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOrgUnitLinkOptionsForBizUnitApiOrgUnitOption);

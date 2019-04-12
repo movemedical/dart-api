@@ -123,15 +123,19 @@ class GetExpiringItemsApiResponseBuilder
   _$GetExpiringItemsApiResponse _$v;
 
   ListBuilder<GetExpiringItemsApiExpirationLevel> _expirationLevels;
+
   ListBuilder<GetExpiringItemsApiExpirationLevel> get expirationLevels =>
       _$this._expirationLevels ??=
           new ListBuilder<GetExpiringItemsApiExpirationLevel>();
+
   set expirationLevels(
           ListBuilder<GetExpiringItemsApiExpirationLevel> expirationLevels) =>
       _$this._expirationLevels = expirationLevels;
 
   bool _building;
+
   bool get building => _$this._building;
+
   set building(bool building) => _$this._building = building;
 
   GetExpiringItemsApiResponseBuilder();
@@ -232,6 +236,7 @@ class _$GetExpiringItemsApiResponseActions
       GetExpiringItemsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -253,6 +258,7 @@ class _$GetExpiringItemsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetExpiringItemsApiResponse);

@@ -157,22 +157,30 @@ class ListFacilityOrgUnitLinksApiRequestBuilder
   _$ListFacilityOrgUnitLinksApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListFacilityOrgUnitLinksApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListFacilityOrgUnitLinksApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListFacilityOrgUnitLinksApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListFacilityOrgUnitLinksApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
@@ -299,6 +307,7 @@ class _$ListFacilityOrgUnitLinksApiRequestActions
       ListFacilityOrgUnitLinksApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -306,6 +315,7 @@ class _$ListFacilityOrgUnitLinksApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -331,6 +341,7 @@ class _$ListFacilityOrgUnitLinksApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListFacilityOrgUnitLinksApiRequest);

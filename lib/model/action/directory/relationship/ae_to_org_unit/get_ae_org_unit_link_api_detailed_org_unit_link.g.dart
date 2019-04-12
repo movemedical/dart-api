@@ -409,81 +409,117 @@ class GetAeOrgUnitLinkApiDetailedOrgUnitLinkBuilder
   _$GetAeOrgUnitLinkApiDetailedOrgUnitLink _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   OuAccessType _ouAccessType;
+
   OuAccessType get ouAccessType => _$this._ouAccessType;
+
   set ouAccessType(OuAccessType ouAccessType) =>
       _$this._ouAccessType = ouAccessType;
 
   bool _createCase;
+
   bool get createCase => _$this._createCase;
+
   set createCase(bool createCase) => _$this._createCase = createCase;
 
   bool _editCase;
+
   bool get editCase => _$this._editCase;
+
   set editCase(bool editCase) => _$this._editCase = editCase;
 
   bool _processOrders;
+
   bool get processOrders => _$this._processOrders;
+
   set processOrders(bool processOrders) =>
       _$this._processOrders = processOrders;
 
   bool _manageCatalog;
+
   bool get manageCatalog => _$this._manageCatalog;
+
   set manageCatalog(bool manageCatalog) =>
       _$this._manageCatalog = manageCatalog;
 
   bool _manageUsers;
+
   bool get manageUsers => _$this._manageUsers;
+
   set manageUsers(bool manageUsers) => _$this._manageUsers = manageUsers;
 
   bool _createAudit;
+
   bool get createAudit => _$this._createAudit;
+
   set createAudit(bool createAudit) => _$this._createAudit = createAudit;
 
   bool _performAudit;
+
   bool get performAudit => _$this._performAudit;
+
   set performAudit(bool performAudit) => _$this._performAudit = performAudit;
 
   bool _manageAudit;
+
   bool get manageAudit => _$this._manageAudit;
+
   set manageAudit(bool manageAudit) => _$this._manageAudit = manageAudit;
 
   bool _requestLoan;
+
   bool get requestLoan => _$this._requestLoan;
+
   set requestLoan(bool requestLoan) => _$this._requestLoan = requestLoan;
 
   bool _approveLoan;
+
   bool get approveLoan => _$this._approveLoan;
+
   set approveLoan(bool approveLoan) => _$this._approveLoan = approveLoan;
 
   double _approveLoanMax;
+
   double get approveLoanMax => _$this._approveLoanMax;
+
   set approveLoanMax(double approveLoanMax) =>
       _$this._approveLoanMax = approveLoanMax;
 
   bool _manageZone;
+
   bool get manageZone => _$this._manageZone;
+
   set manageZone(bool manageZone) => _$this._manageZone = manageZone;
 
   bool _approveSalesOrder;
+
   bool get approveSalesOrder => _$this._approveSalesOrder;
+
   set approveSalesOrder(bool approveSalesOrder) =>
       _$this._approveSalesOrder = approveSalesOrder;
 
   ListBuilder<OuLinkToInventoryType> _inventoryTypeLinks;
+
   ListBuilder<OuLinkToInventoryType> get inventoryTypeLinks =>
       _$this._inventoryTypeLinks ??= new ListBuilder<OuLinkToInventoryType>();
+
   set inventoryTypeLinks(
           ListBuilder<OuLinkToInventoryType> inventoryTypeLinks) =>
       _$this._inventoryTypeLinks = inventoryTypeLinks;
@@ -689,6 +725,7 @@ class _$GetAeOrgUnitLinkApiDetailedOrgUnitLinkActions
       GetAeOrgUnitLinkApiDetailedOrgUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -742,6 +779,7 @@ class _$GetAeOrgUnitLinkApiDetailedOrgUnitLinkActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetAeOrgUnitLinkApiDetailedOrgUnitLink);

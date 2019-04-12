@@ -125,13 +125,17 @@ class AddInvTypesToBeCountedApiRequestBuilder
   _$AddInvTypesToBeCountedApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListBuilder<AddInvTypesToBeCountedApiInvTypeToCount> _invTypes;
+
   ListBuilder<AddInvTypesToBeCountedApiInvTypeToCount> get invTypes =>
       _$this._invTypes ??=
           new ListBuilder<AddInvTypesToBeCountedApiInvTypeToCount>();
+
   set invTypes(ListBuilder<AddInvTypesToBeCountedApiInvTypeToCount> invTypes) =>
       _$this._invTypes = invTypes;
 
@@ -234,6 +238,7 @@ class _$AddInvTypesToBeCountedApiRequestActions
       AddInvTypesToBeCountedApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,6 +260,7 @@ class _$AddInvTypesToBeCountedApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AddInvTypesToBeCountedApiRequest);

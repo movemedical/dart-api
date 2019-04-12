@@ -152,22 +152,30 @@ class ListAssigneesApiRequestBuilder
   _$ListAssigneesApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListAssigneesApiOrderBy> _sortBy;
+
   OrderByParamsBuilder<ListAssigneesApiOrderBy> get sortBy =>
       _$this._sortBy ??= new OrderByParamsBuilder<ListAssigneesApiOrderBy>();
+
   set sortBy(OrderByParamsBuilder<ListAssigneesApiOrderBy> sortBy) =>
       _$this._sortBy = sortBy;
 
   bool _sortDescending;
+
   bool get sortDescending => _$this._sortDescending;
+
   set sortDescending(bool sortDescending) =>
       _$this._sortDescending = sortDescending;
 
@@ -292,6 +300,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
       ListAssigneesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -299,6 +308,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -324,6 +334,7 @@ class _$ListAssigneesApiRequestActions extends ListAssigneesApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAssigneesApiRequest);
 }

@@ -104,7 +104,9 @@ class RemoveHcrToOrgUnitApiRequestBuilder
   _$RemoveHcrToOrgUnitApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   RemoveHcrToOrgUnitApiRequestBuilder();
@@ -181,6 +183,7 @@ class _$RemoveHcrToOrgUnitApiRequestActions
       RemoveHcrToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -200,6 +203,7 @@ class _$RemoveHcrToOrgUnitApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RemoveHcrToOrgUnitApiRequest);

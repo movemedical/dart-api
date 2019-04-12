@@ -165,21 +165,29 @@ class ListBizUnitInventoryTypeLinksApiInventoryTypeLinkBuilder
   _$ListBizUnitInventoryTypeLinksApiInventoryTypeLink _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _inventoryTypeName;
+
   String get inventoryTypeName => _$this._inventoryTypeName;
+
   set inventoryTypeName(String inventoryTypeName) =>
       _$this._inventoryTypeName = inventoryTypeName;
 
   bool _inventoryTypeActive;
+
   bool get inventoryTypeActive => _$this._inventoryTypeActive;
+
   set inventoryTypeActive(bool inventoryTypeActive) =>
       _$this._inventoryTypeActive = inventoryTypeActive;
 
@@ -289,6 +297,7 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
       ListBizUnitInventoryTypeLinksApiInventoryTypeLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -314,6 +323,7 @@ class _$ListBizUnitInventoryTypeLinksApiInventoryTypeLinkActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListBizUnitInventoryTypeLinksApiInventoryTypeLink);

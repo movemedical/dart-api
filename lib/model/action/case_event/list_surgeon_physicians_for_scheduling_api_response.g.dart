@@ -115,8 +115,10 @@ class ListSurgeonPhysiciansForSchedulingApiResponseBuilder
   _$ListSurgeonPhysiciansForSchedulingApiResponse _$v;
 
   ListBuilder<Physician> _physicians;
+
   ListBuilder<Physician> get physicians =>
       _$this._physicians ??= new ListBuilder<Physician>();
+
   set physicians(ListBuilder<Physician> physicians) =>
       _$this._physicians = physicians;
 
@@ -219,6 +221,7 @@ class _$ListSurgeonPhysiciansForSchedulingApiResponseActions
       ListSurgeonPhysiciansForSchedulingApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -238,6 +241,7 @@ class _$ListSurgeonPhysiciansForSchedulingApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListSurgeonPhysiciansForSchedulingApiResponse);

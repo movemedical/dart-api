@@ -261,49 +261,69 @@ class SaveDceToOrgUnitApiRequestBuilder
   _$SaveDceToOrgUnitApiRequest _$v;
 
   String _directLinkIdOverride;
+
   String get directLinkIdOverride => _$this._directLinkIdOverride;
+
   set directLinkIdOverride(String directLinkIdOverride) =>
       _$this._directLinkIdOverride = directLinkIdOverride;
 
   String _userRoleId;
+
   String get userRoleId => _$this._userRoleId;
+
   set userRoleId(String userRoleId) => _$this._userRoleId = userRoleId;
 
   String _dceId;
+
   String get dceId => _$this._dceId;
+
   set dceId(String dceId) => _$this._dceId = dceId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   bool _processOrders;
+
   bool get processOrders => _$this._processOrders;
+
   set processOrders(bool processOrders) =>
       _$this._processOrders = processOrders;
 
   bool _manageCatalog;
+
   bool get manageCatalog => _$this._manageCatalog;
+
   set manageCatalog(bool manageCatalog) =>
       _$this._manageCatalog = manageCatalog;
 
   bool _createAudit;
+
   bool get createAudit => _$this._createAudit;
+
   set createAudit(bool createAudit) => _$this._createAudit = createAudit;
 
   bool _manageAudit;
+
   bool get manageAudit => _$this._manageAudit;
+
   set manageAudit(bool manageAudit) => _$this._manageAudit = manageAudit;
 
   bool _processAudit;
+
   bool get processAudit => _$this._processAudit;
+
   set processAudit(bool processAudit) => _$this._processAudit = processAudit;
 
   ListBuilder<SaveDceToOrgUnitApiInventoryTypePermission>
       _inventoryTypePermissions;
+
   ListBuilder<SaveDceToOrgUnitApiInventoryTypePermission>
       get inventoryTypePermissions => _$this._inventoryTypePermissions ??=
           new ListBuilder<SaveDceToOrgUnitApiInventoryTypePermission>();
+
   set inventoryTypePermissions(
           ListBuilder<SaveDceToOrgUnitApiInventoryTypePermission>
               inventoryTypePermissions) =>
@@ -460,6 +480,7 @@ class _$SaveDceToOrgUnitApiRequestActions
       SaveDceToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -497,6 +518,7 @@ class _$SaveDceToOrgUnitApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveDceToOrgUnitApiRequest);
 }

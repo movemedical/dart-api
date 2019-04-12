@@ -106,8 +106,10 @@ class GetImportLogDetailApiResponseBuilder
   _$GetImportLogDetailApiResponse _$v;
 
   GetImportLogDetailApiImportLogBuilder _importLog;
+
   GetImportLogDetailApiImportLogBuilder get importLog =>
       _$this._importLog ??= new GetImportLogDetailApiImportLogBuilder();
+
   set importLog(GetImportLogDetailApiImportLogBuilder importLog) =>
       _$this._importLog = importLog;
 
@@ -207,12 +209,14 @@ class _$GetImportLogDetailApiResponseActions
       GetImportLogDetailApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.importLog,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -232,6 +236,7 @@ class _$GetImportLogDetailApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetImportLogDetailApiResponse);

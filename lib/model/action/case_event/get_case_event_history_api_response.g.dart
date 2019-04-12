@@ -108,8 +108,10 @@ class GetCaseEventHistoryApiResponseBuilder
   _$GetCaseEventHistoryApiResponse _$v;
 
   ListBuilder<HistoryEventDisplay> _historyEvents;
+
   ListBuilder<HistoryEventDisplay> get historyEvents =>
       _$this._historyEvents ??= new ListBuilder<HistoryEventDisplay>();
+
   set historyEvents(ListBuilder<HistoryEventDisplay> historyEvents) =>
       _$this._historyEvents = historyEvents;
 
@@ -206,6 +208,7 @@ class _$GetCaseEventHistoryApiResponseActions
       GetCaseEventHistoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,6 +228,7 @@ class _$GetCaseEventHistoryApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCaseEventHistoryApiResponse);

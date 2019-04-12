@@ -105,7 +105,9 @@ class GetHcrOrgUnitLinkApiRequestBuilder
   _$GetHcrOrgUnitLinkApiRequest _$v;
 
   String _hcrToOrgUnitId;
+
   String get hcrToOrgUnitId => _$this._hcrToOrgUnitId;
+
   set hcrToOrgUnitId(String hcrToOrgUnitId) =>
       _$this._hcrToOrgUnitId = hcrToOrgUnitId;
 
@@ -187,6 +189,7 @@ class _$GetHcrOrgUnitLinkApiRequestActions
       GetHcrOrgUnitLinkApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,6 +209,7 @@ class _$GetHcrOrgUnitLinkApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetHcrOrgUnitLinkApiRequest);

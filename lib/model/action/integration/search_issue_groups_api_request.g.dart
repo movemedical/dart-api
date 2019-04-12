@@ -104,7 +104,9 @@ class SearchIssueGroupsApiRequestBuilder
   _$SearchIssueGroupsApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   SearchIssueGroupsApiRequestBuilder();
@@ -181,6 +183,7 @@ class _$SearchIssueGroupsApiRequestActions
       SearchIssueGroupsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -200,6 +203,7 @@ class _$SearchIssueGroupsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchIssueGroupsApiRequest);

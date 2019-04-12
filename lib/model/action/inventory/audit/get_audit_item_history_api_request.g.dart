@@ -105,7 +105,9 @@ class GetAuditItemHistoryApiRequestBuilder
   _$GetAuditItemHistoryApiRequest _$v;
 
   String _auditItemId;
+
   String get auditItemId => _$this._auditItemId;
+
   set auditItemId(String auditItemId) => _$this._auditItemId = auditItemId;
 
   GetAuditItemHistoryApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$GetAuditItemHistoryApiRequestActions
       GetAuditItemHistoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -205,6 +208,7 @@ class _$GetAuditItemHistoryApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetAuditItemHistoryApiRequest);

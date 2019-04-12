@@ -446,100 +446,142 @@ class ListIntegrationIssuesApiIssueBuilder
   _$ListIntegrationIssuesApiIssue _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _issueNumber;
+
   int get issueNumber => _$this._issueNumber;
+
   set issueNumber(int issueNumber) => _$this._issueNumber = issueNumber;
 
   String _issueGroup;
+
   String get issueGroup => _$this._issueGroup;
+
   set issueGroup(String issueGroup) => _$this._issueGroup = issueGroup;
 
   DateTime _createdDate;
+
   DateTime get createdDate => _$this._createdDate;
+
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   IntegrationType _issueType;
+
   IntegrationType get issueType => _$this._issueType;
+
   set issueType(IntegrationType issueType) => _$this._issueType = issueType;
 
   String _integrationReferenceId;
+
   String get integrationReferenceId => _$this._integrationReferenceId;
+
   set integrationReferenceId(String integrationReferenceId) =>
       _$this._integrationReferenceId = integrationReferenceId;
 
   String _integrationReferenceKey;
+
   String get integrationReferenceKey => _$this._integrationReferenceKey;
+
   set integrationReferenceKey(String integrationReferenceKey) =>
       _$this._integrationReferenceKey = integrationReferenceKey;
 
   String _logReferenceId;
+
   String get logReferenceId => _$this._logReferenceId;
+
   set logReferenceId(String logReferenceId) =>
       _$this._logReferenceId = logReferenceId;
 
   IntegrationIssueStatus _status;
+
   IntegrationIssueStatus get status => _$this._status;
+
   set status(IntegrationIssueStatus status) => _$this._status = status;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   DateTime _assignedDate;
+
   DateTime get assignedDate => _$this._assignedDate;
+
   set assignedDate(DateTime assignedDate) =>
       _$this._assignedDate = assignedDate;
 
   String _assignedToUser;
+
   String get assignedToUser => _$this._assignedToUser;
+
   set assignedToUser(String assignedToUser) =>
       _$this._assignedToUser = assignedToUser;
 
   String _assignedToUserName;
+
   String get assignedToUserName => _$this._assignedToUserName;
+
   set assignedToUserName(String assignedToUserName) =>
       _$this._assignedToUserName = assignedToUserName;
 
   DateTime _resolvedDate;
+
   DateTime get resolvedDate => _$this._resolvedDate;
+
   set resolvedDate(DateTime resolvedDate) =>
       _$this._resolvedDate = resolvedDate;
 
   String _resolvedByUserId;
+
   String get resolvedByUserId => _$this._resolvedByUserId;
+
   set resolvedByUserId(String resolvedByUserId) =>
       _$this._resolvedByUserId = resolvedByUserId;
 
   String _resolvedByUserName;
+
   String get resolvedByUserName => _$this._resolvedByUserName;
+
   set resolvedByUserName(String resolvedByUserName) =>
       _$this._resolvedByUserName = resolvedByUserName;
 
   String _resolutionMessage;
+
   String get resolutionMessage => _$this._resolutionMessage;
+
   set resolutionMessage(String resolutionMessage) =>
       _$this._resolutionMessage = resolutionMessage;
 
   String _regenerateFileId;
+
   String get regenerateFileId => _$this._regenerateFileId;
+
   set regenerateFileId(String regenerateFileId) =>
       _$this._regenerateFileId = regenerateFileId;
 
   String _regenFileName;
+
   String get regenFileName => _$this._regenFileName;
+
   set regenFileName(String regenFileName) =>
       _$this._regenFileName = regenFileName;
 
   String _regenFileContentType;
+
   String get regenFileContentType => _$this._regenFileContentType;
+
   set regenFileContentType(String regenFileContentType) =>
       _$this._regenFileContentType = regenFileContentType;
 
   bool _editedErrors;
+
   bool get editedErrors => _$this._editedErrors;
+
   set editedErrors(bool editedErrors) => _$this._editedErrors = editedErrors;
 
   ListIntegrationIssuesApiIssueBuilder();
@@ -766,6 +808,7 @@ class _$ListIntegrationIssuesApiIssueActions
       ListIntegrationIssuesApiIssueBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -825,6 +868,7 @@ class _$ListIntegrationIssuesApiIssueActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListIntegrationIssuesApiIssue);

@@ -114,11 +114,15 @@ class FindPatientApiRequestBuilder
   _$FindPatientApiRequest _$v;
 
   String _hsFacilityId;
+
   String get hsFacilityId => _$this._hsFacilityId;
+
   set hsFacilityId(String hsFacilityId) => _$this._hsFacilityId = hsFacilityId;
 
   String _mrn;
+
   String get mrn => _$this._mrn;
+
   set mrn(String mrn) => _$this._mrn = mrn;
 
   FindPatientApiRequestBuilder();
@@ -199,6 +203,7 @@ class _$FindPatientApiRequestActions extends FindPatientApiRequestActions {
   FindPatientApiRequestBuilder $newBuilder() => FindPatientApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -220,6 +225,7 @@ class _$FindPatientApiRequestActions extends FindPatientApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(FindPatientApiRequest);
 }

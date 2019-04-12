@@ -105,7 +105,9 @@ class RemoveCustomerQualifierApiRequestBuilder
   _$RemoveCustomerQualifierApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   RemoveCustomerQualifierApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$RemoveCustomerQualifierApiRequestActions
       RemoveCustomerQualifierApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$RemoveCustomerQualifierApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RemoveCustomerQualifierApiRequest);

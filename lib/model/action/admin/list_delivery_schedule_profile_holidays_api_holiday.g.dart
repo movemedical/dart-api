@@ -247,39 +247,57 @@ class ListDeliveryScheduleProfileHolidaysApiHolidayBuilder
   _$ListDeliveryScheduleProfileHolidaysApiHoliday _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _profileId;
+
   String get profileId => _$this._profileId;
+
   set profileId(String profileId) => _$this._profileId = profileId;
 
   String _profileName;
+
   String get profileName => _$this._profileName;
+
   set profileName(String profileName) => _$this._profileName = profileName;
 
   String _parentId;
+
   String get parentId => _$this._parentId;
+
   set parentId(String parentId) => _$this._parentId = parentId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   int _month;
+
   int get month => _$this._month;
+
   set month(int month) => _$this._month = month;
 
   int _day;
+
   int get day => _$this._day;
+
   set day(int day) => _$this._day = day;
 
   int _year;
+
   int get year => _$this._year;
+
   set year(int year) => _$this._year = year;
 
   DateTime _date;
+
   DateTime get date => _$this._date;
+
   set date(DateTime date) => _$this._date = date;
 
   ListDeliveryScheduleProfileHolidaysApiHolidayBuilder();
@@ -406,6 +424,7 @@ class _$ListDeliveryScheduleProfileHolidaysApiHolidayActions
       ListDeliveryScheduleProfileHolidaysApiHolidayBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -441,6 +460,7 @@ class _$ListDeliveryScheduleProfileHolidaysApiHolidayActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListDeliveryScheduleProfileHolidaysApiHoliday);

@@ -93,7 +93,9 @@ class GetOrgApiRequestBuilder
   _$GetOrgApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   GetOrgApiRequestBuilder();
@@ -163,6 +165,7 @@ class _$GetOrgApiRequestActions extends GetOrgApiRequestActions {
   GetOrgApiRequestBuilder $newBuilder() => GetOrgApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -182,6 +185,7 @@ class _$GetOrgApiRequestActions extends GetOrgApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetOrgApiRequest);
 }

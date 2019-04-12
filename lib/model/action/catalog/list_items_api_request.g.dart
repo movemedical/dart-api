@@ -370,81 +370,111 @@ class ListItemsApiRequestBuilder
   _$ListItemsApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _procedureIds;
+
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
+
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   ListBuilder<String> _subProcedureIds;
+
   ListBuilder<String> get subProcedureIds =>
       _$this._subProcedureIds ??= new ListBuilder<String>();
+
   set subProcedureIds(ListBuilder<String> subProcedureIds) =>
       _$this._subProcedureIds = subProcedureIds;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<MoveItemType> _moveItemTypes;
+
   ListBuilder<MoveItemType> get moveItemTypes =>
       _$this._moveItemTypes ??= new ListBuilder<MoveItemType>();
+
   set moveItemTypes(ListBuilder<MoveItemType> moveItemTypes) =>
       _$this._moveItemTypes = moveItemTypes;
 
   ListBuilder<MoveItemClass> _moveItemClasses;
+
   ListBuilder<MoveItemClass> get moveItemClasses =>
       _$this._moveItemClasses ??= new ListBuilder<MoveItemClass>();
+
   set moveItemClasses(ListBuilder<MoveItemClass> moveItemClasses) =>
       _$this._moveItemClasses = moveItemClasses;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _canStock;
+
   bool get canStock => _$this._canStock;
+
   set canStock(bool canStock) => _$this._canStock = canStock;
 
   bool _canSell;
+
   bool get canSell => _$this._canSell;
+
   set canSell(bool canSell) => _$this._canSell = canSell;
 
   bool _includeListPrice;
+
   bool get includeListPrice => _$this._includeListPrice;
+
   set includeListPrice(bool includeListPrice) =>
       _$this._includeListPrice = includeListPrice;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListItemsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListItemsApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListItemsApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListItemsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -659,6 +689,7 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
   ListItemsApiRequestBuilder $newBuilder() => ListItemsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -666,6 +697,7 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -713,6 +745,7 @@ class _$ListItemsApiRequestActions extends ListItemsApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListItemsApiRequest);
 }

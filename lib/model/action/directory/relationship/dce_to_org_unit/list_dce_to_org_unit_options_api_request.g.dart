@@ -156,22 +156,30 @@ class ListDceToOrgUnitOptionsApiRequestBuilder
   _$ListDceToOrgUnitOptionsApiRequest _$v;
 
   String _dceId;
+
   String get dceId => _$this._dceId;
+
   set dceId(String dceId) => _$this._dceId = dceId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListDceToOrgUnitOptionsApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListDceToOrgUnitOptionsApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListDceToOrgUnitOptionsApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListDceToOrgUnitOptionsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
@@ -298,6 +306,7 @@ class _$ListDceToOrgUnitOptionsApiRequestActions
       ListDceToOrgUnitOptionsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -305,6 +314,7 @@ class _$ListDceToOrgUnitOptionsApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -330,6 +340,7 @@ class _$ListDceToOrgUnitOptionsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListDceToOrgUnitOptionsApiRequest);

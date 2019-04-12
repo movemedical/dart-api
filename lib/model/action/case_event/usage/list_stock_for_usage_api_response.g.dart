@@ -123,13 +123,17 @@ class ListStockForUsageApiResponseBuilder
   _$ListStockForUsageApiResponse _$v;
 
   ListBuilder<ListStockForUsageApiUsageStockSummary> _data;
+
   ListBuilder<ListStockForUsageApiUsageStockSummary> get data =>
       _$this._data ??= new ListBuilder<ListStockForUsageApiUsageStockSummary>();
+
   set data(ListBuilder<ListStockForUsageApiUsageStockSummary> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListStockForUsageApiResponseBuilder();
@@ -225,6 +229,7 @@ class _$ListStockForUsageApiResponseActions
       ListStockForUsageApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -246,6 +251,7 @@ class _$ListStockForUsageApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForUsageApiResponse);

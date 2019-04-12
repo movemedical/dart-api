@@ -161,23 +161,31 @@ class ListOrgUnitLinkOptionsForBizUnitApiRequestBuilder
   _$ListOrgUnitLinkOptionsForBizUnitApiRequest _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListOrgUnitLinkOptionsForBizUnitApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<
       ListOrgUnitLinkOptionsForBizUnitApiOrderBy> get orderBy => _$this
           ._orderBy ??=
       new OrderByParamsBuilder<ListOrgUnitLinkOptionsForBizUnitApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListOrgUnitLinkOptionsForBizUnitApiOrderBy>
               orderBy) =>
@@ -312,6 +320,7 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiRequestActions
       ListOrgUnitLinkOptionsForBizUnitApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -319,6 +328,7 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -344,6 +354,7 @@ class _$ListOrgUnitLinkOptionsForBizUnitApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOrgUnitLinkOptionsForBizUnitApiRequest);

@@ -251,44 +251,64 @@ class UpdateTeamApiRequestBuilder
   _$UpdateTeamApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _opsTeam;
+
   bool get opsTeam => _$this._opsTeam;
+
   set opsTeam(bool opsTeam) => _$this._opsTeam = opsTeam;
 
   bool _salesTeam;
+
   bool get salesTeam => _$this._salesTeam;
+
   set salesTeam(bool salesTeam) => _$this._salesTeam = salesTeam;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _publiclyVisible;
+
   bool get publiclyVisible => _$this._publiclyVisible;
+
   set publiclyVisible(bool publiclyVisible) =>
       _$this._publiclyVisible = publiclyVisible;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   UpdateTeamApiRequestBuilder();
@@ -429,12 +449,14 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
   UpdateTeamApiRequestBuilder $newBuilder() => UpdateTeamApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -472,6 +494,7 @@ class _$UpdateTeamApiRequestActions extends UpdateTeamApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateTeamApiRequest);
 }

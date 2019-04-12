@@ -126,14 +126,18 @@ class ListOrgUnitFacilityLinksApiResponseBuilder
   _$ListOrgUnitFacilityLinksApiResponse _$v;
 
   ListBuilder<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink> _data;
+
   ListBuilder<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink> get data =>
       _$this._data ??=
           new ListBuilder<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink>();
+
   set data(ListBuilder<ListOrgUnitFacilityLinksApiOrgUnitFacilityLink> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListOrgUnitFacilityLinksApiResponseBuilder();
@@ -232,6 +236,7 @@ class _$ListOrgUnitFacilityLinksApiResponseActions
       ListOrgUnitFacilityLinksApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -253,6 +258,7 @@ class _$ListOrgUnitFacilityLinksApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOrgUnitFacilityLinksApiResponse);

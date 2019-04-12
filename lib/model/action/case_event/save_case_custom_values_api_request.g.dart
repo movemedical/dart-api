@@ -123,12 +123,16 @@ class SaveCaseCustomValuesApiRequestBuilder
   _$SaveCaseCustomValuesApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   ListBuilder<CaseCustomFieldValue> _customFieldValues;
+
   ListBuilder<CaseCustomFieldValue> get customFieldValues =>
       _$this._customFieldValues ??= new ListBuilder<CaseCustomFieldValue>();
+
   set customFieldValues(ListBuilder<CaseCustomFieldValue> customFieldValues) =>
       _$this._customFieldValues = customFieldValues;
 
@@ -233,6 +237,7 @@ class _$SaveCaseCustomValuesApiRequestActions
       SaveCaseCustomValuesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -254,6 +259,7 @@ class _$SaveCaseCustomValuesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SaveCaseCustomValuesApiRequest);

@@ -152,22 +152,30 @@ class ListHcrTeamLinksApiRequestBuilder
   _$ListHcrTeamLinksApiRequest _$v;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListHcrTeamLinksApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListHcrTeamLinksApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListHcrTeamLinksApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListHcrTeamLinksApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -292,6 +300,7 @@ class _$ListHcrTeamLinksApiRequestActions
       ListHcrTeamLinksApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -299,6 +308,7 @@ class _$ListHcrTeamLinksApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -324,6 +334,7 @@ class _$ListHcrTeamLinksApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListHcrTeamLinksApiRequest);
 }

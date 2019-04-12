@@ -108,8 +108,10 @@ class CreateAuditEntriesApiResponseBuilder
   _$CreateAuditEntriesApiResponse _$v;
 
   ListBuilder<String> _failureReferences;
+
   ListBuilder<String> get failureReferences =>
       _$this._failureReferences ??= new ListBuilder<String>();
+
   set failureReferences(ListBuilder<String> failureReferences) =>
       _$this._failureReferences = failureReferences;
 
@@ -205,6 +207,7 @@ class _$CreateAuditEntriesApiResponseActions
       CreateAuditEntriesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -224,6 +227,7 @@ class _$CreateAuditEntriesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateAuditEntriesApiResponse);

@@ -131,17 +131,23 @@ class ListNotesApiRequestBuilder
   _$ListNotesApiRequest _$v;
 
   String _attrId;
+
   String get attrId => _$this._attrId;
+
   set attrId(String attrId) => _$this._attrId = attrId;
 
   ListBuilder<String> _noteIds;
+
   ListBuilder<String> get noteIds =>
       _$this._noteIds ??= new ListBuilder<String>();
+
   set noteIds(ListBuilder<String> noteIds) => _$this._noteIds = noteIds;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListNotesApiRequestBuilder();
@@ -246,12 +252,14 @@ class _$ListNotesApiRequestActions extends ListNotesApiRequestActions {
   ListNotesApiRequestBuilder $newBuilder() => ListNotesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -275,6 +283,7 @@ class _$ListNotesApiRequestActions extends ListNotesApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListNotesApiRequest);
 }

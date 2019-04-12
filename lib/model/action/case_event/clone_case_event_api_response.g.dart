@@ -102,7 +102,9 @@ class CloneCaseEventApiResponseBuilder
   _$CloneCaseEventApiResponse _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   CloneCaseEventApiResponseBuilder();
@@ -183,6 +185,7 @@ class _$CloneCaseEventApiResponseActions
       CloneCaseEventApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$CloneCaseEventApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CloneCaseEventApiResponse);
 }

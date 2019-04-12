@@ -105,7 +105,9 @@ class GetIntegrationIssueApiRequestBuilder
   _$GetIntegrationIssueApiRequest _$v;
 
   String _integrationIssueId;
+
   String get integrationIssueId => _$this._integrationIssueId;
+
   set integrationIssueId(String integrationIssueId) =>
       _$this._integrationIssueId = integrationIssueId;
 
@@ -188,6 +190,7 @@ class _$GetIntegrationIssueApiRequestActions
       GetIntegrationIssueApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -207,6 +210,7 @@ class _$GetIntegrationIssueApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetIntegrationIssueApiRequest);

@@ -206,36 +206,50 @@ class CreateCaseEventApiInsuranceBuilder
   _$CreateCaseEventApiInsurance _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _policyNumber;
+
   String get policyNumber => _$this._policyNumber;
+
   set policyNumber(String policyNumber) => _$this._policyNumber = policyNumber;
 
   String _groupNumber;
+
   String get groupNumber => _$this._groupNumber;
+
   set groupNumber(String groupNumber) => _$this._groupNumber = groupNumber;
 
   PhoneNumberBuilder _phoneNumber;
+
   PhoneNumberBuilder get phoneNumber =>
       _$this._phoneNumber ??= new PhoneNumberBuilder();
+
   set phoneNumber(PhoneNumberBuilder phoneNumber) =>
       _$this._phoneNumber = phoneNumber;
 
   PersonNameBuilder _subscriberName;
+
   PersonNameBuilder get subscriberName =>
       _$this._subscriberName ??= new PersonNameBuilder();
+
   set subscriberName(PersonNameBuilder subscriberName) =>
       _$this._subscriberName = subscriberName;
 
   String _subscriberRelation;
+
   String get subscriberRelation => _$this._subscriberRelation;
+
   set subscriberRelation(String subscriberRelation) =>
       _$this._subscriberRelation = subscriberRelation;
 
   DateTime _subscriberDateOfBirth;
+
   DateTime get subscriberDateOfBirth => _$this._subscriberDateOfBirth;
+
   set subscriberDateOfBirth(DateTime subscriberDateOfBirth) =>
       _$this._subscriberDateOfBirth = subscriberDateOfBirth;
 
@@ -382,6 +396,7 @@ class _$CreateCaseEventApiInsuranceActions
       CreateCaseEventApiInsuranceBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.phoneNumber,
@@ -389,6 +404,7 @@ class _$CreateCaseEventApiInsuranceActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -420,6 +436,7 @@ class _$CreateCaseEventApiInsuranceActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateCaseEventApiInsurance);

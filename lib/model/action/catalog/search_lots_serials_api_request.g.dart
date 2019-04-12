@@ -119,11 +119,15 @@ class SearchLotsSerialsApiRequestBuilder
   _$SearchLotsSerialsApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   SearchLotsSerialsApiRequestBuilder();
@@ -205,6 +209,7 @@ class _$SearchLotsSerialsApiRequestActions
       SearchLotsSerialsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -226,6 +231,7 @@ class _$SearchLotsSerialsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchLotsSerialsApiRequest);

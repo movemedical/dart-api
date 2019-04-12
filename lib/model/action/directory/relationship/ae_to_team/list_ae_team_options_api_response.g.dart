@@ -121,12 +121,16 @@ class ListAeTeamOptionsApiResponseBuilder
   _$ListAeTeamOptionsApiResponse _$v;
 
   ListBuilder<TeamOption> _data;
+
   ListBuilder<TeamOption> get data =>
       _$this._data ??= new ListBuilder<TeamOption>();
+
   set data(ListBuilder<TeamOption> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAeTeamOptionsApiResponseBuilder();
@@ -222,6 +226,7 @@ class _$ListAeTeamOptionsApiResponseActions
       ListAeTeamOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -243,6 +248,7 @@ class _$ListAeTeamOptionsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAeTeamOptionsApiResponse);

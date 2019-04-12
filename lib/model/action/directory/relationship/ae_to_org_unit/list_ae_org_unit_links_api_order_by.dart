@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'list_ae_org_unit_links_api_order_by.g.dart';
 
@@ -8,26 +8,29 @@ class ListAeOrgUnitLinksApiOrderBy extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const ListAeOrgUnitLinksApiOrderBy NAME = _$wireNAME;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const ListAeOrgUnitLinksApiOrderBy._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
-  static BuiltSet<ListAeOrgUnitLinksApiOrderBy> get values => _$listAeOrgUnitLinksApiOrderByValues;
-  
-  static ListAeOrgUnitLinksApiOrderBy valueOf(String name) => _$listAeOrgUnitLinksApiOrderByValueOf(name);
-  
+
+  static BuiltSet<ListAeOrgUnitLinksApiOrderBy> get values =>
+      _$listAeOrgUnitLinksApiOrderByValues;
+
+  static ListAeOrgUnitLinksApiOrderBy valueOf(String name) =>
+      _$listAeOrgUnitLinksApiOrderByValueOf(name);
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<ListAeOrgUnitLinksApiOrderBy> get serializer => _$listAeOrgUnitLinksApiOrderBySerializer;
+
+  static Serializer<ListAeOrgUnitLinksApiOrderBy> get serializer =>
+      _$listAeOrgUnitLinksApiOrderBySerializer;
 }

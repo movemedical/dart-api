@@ -119,12 +119,16 @@ class ListCaseFilesApiResponseBuilder
   _$ListCaseFilesApiResponse _$v;
 
   ListBuilder<ListCaseFilesApiCaseFile> _data;
+
   ListBuilder<ListCaseFilesApiCaseFile> get data =>
       _$this._data ??= new ListBuilder<ListCaseFilesApiCaseFile>();
+
   set data(ListBuilder<ListCaseFilesApiCaseFile> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListCaseFilesApiResponseBuilder();
@@ -220,6 +224,7 @@ class _$ListCaseFilesApiResponseActions
       ListCaseFilesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,6 +246,7 @@ class _$ListCaseFilesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListCaseFilesApiResponse);
 }

@@ -117,11 +117,15 @@ class RemoveDelegateApiRequestBuilder
   _$RemoveDelegateApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DirectoryNonPersonType _type;
+
   DirectoryNonPersonType get type => _$this._type;
+
   set type(DirectoryNonPersonType type) => _$this._type = type;
 
   RemoveDelegateApiRequestBuilder();
@@ -203,6 +207,7 @@ class _$RemoveDelegateApiRequestActions
       RemoveDelegateApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -224,6 +229,7 @@ class _$RemoveDelegateApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(RemoveDelegateApiRequest);
 }

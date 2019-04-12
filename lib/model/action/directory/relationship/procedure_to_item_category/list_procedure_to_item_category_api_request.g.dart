@@ -196,32 +196,44 @@ class ListProcedureToItemCategoryApiRequestBuilder
   _$ListProcedureToItemCategoryApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   String _itemCategoryId;
+
   String get itemCategoryId => _$this._itemCategoryId;
+
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListProcedureToItemCategoryApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListProcedureToItemCategoryApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListProcedureToItemCategoryApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListProcedureToItemCategoryApiOrderBy>
               orderBy) =>
@@ -370,6 +382,7 @@ class _$ListProcedureToItemCategoryApiRequestActions
       ListProcedureToItemCategoryApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -377,6 +390,7 @@ class _$ListProcedureToItemCategoryApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -406,6 +420,7 @@ class _$ListProcedureToItemCategoryApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListProcedureToItemCategoryApiRequest);

@@ -105,8 +105,10 @@ class GetAuditHistoryApiResponseBuilder
   _$GetAuditHistoryApiResponse _$v;
 
   ListBuilder<HistoryEventDisplay> _historyEvents;
+
   ListBuilder<HistoryEventDisplay> get historyEvents =>
       _$this._historyEvents ??= new ListBuilder<HistoryEventDisplay>();
+
   set historyEvents(ListBuilder<HistoryEventDisplay> historyEvents) =>
       _$this._historyEvents = historyEvents;
 
@@ -202,6 +204,7 @@ class _$GetAuditHistoryApiResponseActions
       GetAuditHistoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -221,6 +224,7 @@ class _$GetAuditHistoryApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAuditHistoryApiResponse);
 }

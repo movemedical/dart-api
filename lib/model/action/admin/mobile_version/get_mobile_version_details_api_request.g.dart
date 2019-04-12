@@ -106,7 +106,9 @@ class GetMobileVersionDetailsApiRequestBuilder
   _$GetMobileVersionDetailsApiRequest _$v;
 
   MobilePlatform _platform;
+
   MobilePlatform get platform => _$this._platform;
+
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   GetMobileVersionDetailsApiRequestBuilder();
@@ -185,6 +187,7 @@ class _$GetMobileVersionDetailsApiRequestActions
       GetMobileVersionDetailsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -204,6 +207,7 @@ class _$GetMobileVersionDetailsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetMobileVersionDetailsApiRequest);

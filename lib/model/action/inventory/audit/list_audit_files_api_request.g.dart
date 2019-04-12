@@ -136,17 +136,23 @@ class ListAuditFilesApiRequestBuilder
   _$ListAuditFilesApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListAuditFilesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListAuditFilesApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListAuditFilesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListAuditFilesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -266,6 +272,7 @@ class _$ListAuditFilesApiRequestActions
       ListAuditFilesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -273,6 +280,7 @@ class _$ListAuditFilesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -296,6 +304,7 @@ class _$ListAuditFilesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditFilesApiRequest);
 }

@@ -143,15 +143,21 @@ class ListOrgUnitPhysicianOptionsApiPhysicianOptionBuilder
   _$ListOrgUnitPhysicianOptionsApiPhysicianOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   PhysicianType _physicianType;
+
   PhysicianType get physicianType => _$this._physicianType;
+
   set physicianType(PhysicianType physicianType) =>
       _$this._physicianType = physicianType;
 
@@ -247,6 +253,7 @@ class _$ListOrgUnitPhysicianOptionsApiPhysicianOptionActions
       ListOrgUnitPhysicianOptionsApiPhysicianOptionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -270,6 +277,7 @@ class _$ListOrgUnitPhysicianOptionsApiPhysicianOptionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOrgUnitPhysicianOptionsApiPhysicianOption);

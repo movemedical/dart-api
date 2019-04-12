@@ -122,13 +122,17 @@ class ListHCRForOrgUnitApiResponseBuilder
   _$ListHCRForOrgUnitApiResponse _$v;
 
   ListBuilder<ListHCRForOrgUnitApiHcrLink> _data;
+
   ListBuilder<ListHCRForOrgUnitApiHcrLink> get data =>
       _$this._data ??= new ListBuilder<ListHCRForOrgUnitApiHcrLink>();
+
   set data(ListBuilder<ListHCRForOrgUnitApiHcrLink> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHCRForOrgUnitApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListHCRForOrgUnitApiResponseActions
       ListHCRForOrgUnitApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -245,6 +250,7 @@ class _$ListHCRForOrgUnitApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHCRForOrgUnitApiResponse);

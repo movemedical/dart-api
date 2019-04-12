@@ -180,30 +180,40 @@ class GetIntegrationIssueApiResponseBuilder
   _$GetIntegrationIssueApiResponse _$v;
 
   GetIntegrationIssueApiIssueBuilder _issue;
+
   GetIntegrationIssueApiIssueBuilder get issue =>
       _$this._issue ??= new GetIntegrationIssueApiIssueBuilder();
+
   set issue(GetIntegrationIssueApiIssueBuilder issue) => _$this._issue = issue;
 
   GetIntegrationIssueApiDisplayUserBuilder _assignedToUser;
+
   GetIntegrationIssueApiDisplayUserBuilder get assignedToUser =>
       _$this._assignedToUser ??= new GetIntegrationIssueApiDisplayUserBuilder();
+
   set assignedToUser(GetIntegrationIssueApiDisplayUserBuilder assignedToUser) =>
       _$this._assignedToUser = assignedToUser;
 
   GetIntegrationIssueApiDisplayUserBuilder _resolvedByUser;
+
   GetIntegrationIssueApiDisplayUserBuilder get resolvedByUser =>
       _$this._resolvedByUser ??= new GetIntegrationIssueApiDisplayUserBuilder();
+
   set resolvedByUser(GetIntegrationIssueApiDisplayUserBuilder resolvedByUser) =>
       _$this._resolvedByUser = resolvedByUser;
 
   String _nextOpenIssueId;
+
   String get nextOpenIssueId => _$this._nextOpenIssueId;
+
   set nextOpenIssueId(String nextOpenIssueId) =>
       _$this._nextOpenIssueId = nextOpenIssueId;
 
   GetIntegrationIssueApiIssueUiSchemaBuilder _uiSchema;
+
   GetIntegrationIssueApiIssueUiSchemaBuilder get uiSchema =>
       _$this._uiSchema ??= new GetIntegrationIssueApiIssueUiSchemaBuilder();
+
   set uiSchema(GetIntegrationIssueApiIssueUiSchemaBuilder uiSchema) =>
       _$this._uiSchema = uiSchema;
 
@@ -358,6 +368,7 @@ class _$GetIntegrationIssueApiResponseActions
       GetIntegrationIssueApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.issue,
@@ -367,6 +378,7 @@ class _$GetIntegrationIssueApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -394,6 +406,7 @@ class _$GetIntegrationIssueApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetIntegrationIssueApiResponse);

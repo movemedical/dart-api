@@ -104,7 +104,9 @@ class RemoveCacheKeysApiRequestBuilder
   _$RemoveCacheKeysApiRequest _$v;
 
   ListBuilder<String> _keys;
+
   ListBuilder<String> get keys => _$this._keys ??= new ListBuilder<String>();
+
   set keys(ListBuilder<String> keys) => _$this._keys = keys;
 
   RemoveCacheKeysApiRequestBuilder();
@@ -194,6 +196,7 @@ class _$RemoveCacheKeysApiRequestActions
       RemoveCacheKeysApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -213,6 +216,7 @@ class _$RemoveCacheKeysApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(RemoveCacheKeysApiRequest);
 }

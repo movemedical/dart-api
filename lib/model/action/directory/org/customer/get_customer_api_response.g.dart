@@ -101,8 +101,10 @@ class GetCustomerApiResponseBuilder
   _$GetCustomerApiResponse _$v;
 
   GetCustomerApiCustomerDetailBuilder _data;
+
   GetCustomerApiCustomerDetailBuilder get data =>
       _$this._data ??= new GetCustomerApiCustomerDetailBuilder();
+
   set data(GetCustomerApiCustomerDetailBuilder data) => _$this._data = data;
 
   GetCustomerApiResponseBuilder();
@@ -196,12 +198,14 @@ class _$GetCustomerApiResponseActions extends GetCustomerApiResponseActions {
       GetCustomerApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -221,6 +225,7 @@ class _$GetCustomerApiResponseActions extends GetCustomerApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetCustomerApiResponse);
 }

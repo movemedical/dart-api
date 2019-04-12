@@ -102,8 +102,10 @@ class GetProcedureApiResponseBuilder
   _$GetProcedureApiResponse _$v;
 
   GetProcedureApiProcedureDetailBuilder _data;
+
   GetProcedureApiProcedureDetailBuilder get data =>
       _$this._data ??= new GetProcedureApiProcedureDetailBuilder();
+
   set data(GetProcedureApiProcedureDetailBuilder data) => _$this._data = data;
 
   GetProcedureApiResponseBuilder();
@@ -197,12 +199,14 @@ class _$GetProcedureApiResponseActions extends GetProcedureApiResponseActions {
       GetProcedureApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -222,6 +226,7 @@ class _$GetProcedureApiResponseActions extends GetProcedureApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetProcedureApiResponse);
 }

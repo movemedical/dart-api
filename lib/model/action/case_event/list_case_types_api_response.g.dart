@@ -118,12 +118,16 @@ class ListCaseTypesApiResponseBuilder
   _$ListCaseTypesApiResponse _$v;
 
   ListBuilder<CaseType> _data;
+
   ListBuilder<CaseType> get data =>
       _$this._data ??= new ListBuilder<CaseType>();
+
   set data(ListBuilder<CaseType> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListCaseTypesApiResponseBuilder();
@@ -219,6 +223,7 @@ class _$ListCaseTypesApiResponseActions
       ListCaseTypesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -240,6 +245,7 @@ class _$ListCaseTypesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListCaseTypesApiResponse);
 }

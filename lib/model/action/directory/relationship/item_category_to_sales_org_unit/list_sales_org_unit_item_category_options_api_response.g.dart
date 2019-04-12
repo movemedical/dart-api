@@ -135,16 +135,20 @@ class ListSalesOrgUnitItemCategoryOptionsApiResponseBuilder
   _$ListSalesOrgUnitItemCategoryOptionsApiResponse _$v;
 
   ListBuilder<ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOption> _data;
+
   ListBuilder<ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOption>
       get data => _$this._data ??= new ListBuilder<
           ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOption>();
+
   set data(
           ListBuilder<ListSalesOrgUnitItemCategoryOptionsApiItemCategoryOption>
               data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListSalesOrgUnitItemCategoryOptionsApiResponseBuilder();
@@ -250,6 +254,7 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiResponseActions
       ListSalesOrgUnitItemCategoryOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -271,6 +276,7 @@ class _$ListSalesOrgUnitItemCategoryOptionsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListSalesOrgUnitItemCategoryOptionsApiResponse);

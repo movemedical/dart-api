@@ -434,90 +434,130 @@ class SetupSystemApiRequestBuilder
   _$SetupSystemApiRequest _$v;
 
   String _orgName;
+
   String get orgName => _$this._orgName;
+
   set orgName(String orgName) => _$this._orgName = orgName;
 
   String _orgReference;
+
   String get orgReference => _$this._orgReference;
+
   set orgReference(String orgReference) => _$this._orgReference = orgReference;
 
   OrgType _orgType;
+
   OrgType get orgType => _$this._orgType;
+
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   String _orgUnitParentId;
+
   String get orgUnitParentId => _$this._orgUnitParentId;
+
   set orgUnitParentId(String orgUnitParentId) =>
       _$this._orgUnitParentId = orgUnitParentId;
 
   String _orgUnitReference;
+
   String get orgUnitReference => _$this._orgUnitReference;
+
   set orgUnitReference(String orgUnitReference) =>
       _$this._orgUnitReference = orgUnitReference;
 
   String _fileLocation;
+
   String get fileLocation => _$this._fileLocation;
+
   set fileLocation(String fileLocation) => _$this._fileLocation = fileLocation;
 
   String _addressLine1;
+
   String get addressLine1 => _$this._addressLine1;
+
   set addressLine1(String addressLine1) => _$this._addressLine1 = addressLine1;
 
   String _addressLine2;
+
   String get addressLine2 => _$this._addressLine2;
+
   set addressLine2(String addressLine2) => _$this._addressLine2 = addressLine2;
 
   String _addressLine3;
+
   String get addressLine3 => _$this._addressLine3;
+
   set addressLine3(String addressLine3) => _$this._addressLine3 = addressLine3;
 
   String _addressCity;
+
   String get addressCity => _$this._addressCity;
+
   set addressCity(String addressCity) => _$this._addressCity = addressCity;
 
   String _addressCounty;
+
   String get addressCounty => _$this._addressCounty;
+
   set addressCounty(String addressCounty) =>
       _$this._addressCounty = addressCounty;
 
   String _addressState;
+
   String get addressState => _$this._addressState;
+
   set addressState(String addressState) => _$this._addressState = addressState;
 
   String _addressPostalCode;
+
   String get addressPostalCode => _$this._addressPostalCode;
+
   set addressPostalCode(String addressPostalCode) =>
       _$this._addressPostalCode = addressPostalCode;
 
   String _addressCountry;
+
   String get addressCountry => _$this._addressCountry;
+
   set addressCountry(String addressCountry) =>
       _$this._addressCountry = addressCountry;
 
   bool _inventoryEnabled;
+
   bool get inventoryEnabled => _$this._inventoryEnabled;
+
   set inventoryEnabled(bool inventoryEnabled) =>
       _$this._inventoryEnabled = inventoryEnabled;
 
   bool _erpEnabled;
+
   bool get erpEnabled => _$this._erpEnabled;
+
   set erpEnabled(bool erpEnabled) => _$this._erpEnabled = erpEnabled;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _password;
+
   String get password => _$this._password;
+
   set password(String password) => _$this._password = password;
 
   PersonNameBuilder _personName;
+
   PersonNameBuilder get personName =>
       _$this._personName ??= new PersonNameBuilder();
+
   set personName(PersonNameBuilder personName) =>
       _$this._personName = personName;
 
@@ -756,6 +796,7 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
   SetupSystemApiRequestBuilder $newBuilder() => SetupSystemApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
@@ -763,6 +804,7 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -820,6 +862,7 @@ class _$SetupSystemApiRequestActions extends SetupSystemApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SetupSystemApiRequest);
 }

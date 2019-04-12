@@ -103,7 +103,9 @@ class SearchHcrTeamsApiResponseBuilder
   _$SearchHcrTeamsApiResponse _$v;
 
   ListBuilder<HcrTeam> _data;
+
   ListBuilder<HcrTeam> get data => _$this._data ??= new ListBuilder<HcrTeam>();
+
   set data(ListBuilder<HcrTeam> data) => _$this._data = data;
 
   SearchHcrTeamsApiResponseBuilder();
@@ -193,6 +195,7 @@ class _$SearchHcrTeamsApiResponseActions
       SearchHcrTeamsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -212,6 +215,7 @@ class _$SearchHcrTeamsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SearchHcrTeamsApiResponse);
 }

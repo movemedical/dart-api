@@ -149,19 +149,27 @@ class UpdateItemCategoryApiRequestBuilder
   _$UpdateItemCategoryApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _code;
+
   String get code => _$this._code;
+
   set code(String code) => _$this._code = code;
 
   bool _delete;
+
   bool get delete => _$this._delete;
+
   set delete(bool delete) => _$this._delete = delete;
 
   UpdateItemCategoryApiRequestBuilder();
@@ -252,6 +260,7 @@ class _$UpdateItemCategoryApiRequestActions
       UpdateItemCategoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -277,6 +286,7 @@ class _$UpdateItemCategoryApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateItemCategoryApiRequest);

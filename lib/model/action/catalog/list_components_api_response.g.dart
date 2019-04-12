@@ -138,17 +138,23 @@ class ListComponentsApiResponseBuilder
   _$ListComponentsApiResponse _$v;
 
   ListBuilder<ListComponentsApiComponent> _data;
+
   ListBuilder<ListComponentsApiComponent> get data =>
       _$this._data ??= new ListBuilder<ListComponentsApiComponent>();
+
   set data(ListBuilder<ListComponentsApiComponent> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBuilder<ListComponentsApiContainerLite> _containers;
+
   ListBuilder<ListComponentsApiContainerLite> get containers =>
       _$this._containers ??= new ListBuilder<ListComponentsApiContainerLite>();
+
   set containers(ListBuilder<ListComponentsApiContainerLite> containers) =>
       _$this._containers = containers;
 
@@ -257,6 +263,7 @@ class _$ListComponentsApiResponseActions
       ListComponentsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -280,6 +287,7 @@ class _$ListComponentsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListComponentsApiResponse);
 }

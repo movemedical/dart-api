@@ -273,50 +273,72 @@ class ListAuditFilesApiAuditFileBuilder
   _$ListAuditFilesApiAuditFile _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   AuditFileType _fileType;
+
   AuditFileType get fileType => _$this._fileType;
+
   set fileType(AuditFileType fileType) => _$this._fileType = fileType;
 
   String _uploadedByName;
+
   String get uploadedByName => _$this._uploadedByName;
+
   set uploadedByName(String uploadedByName) =>
       _$this._uploadedByName = uploadedByName;
 
   String _uploadedByInitials;
+
   String get uploadedByInitials => _$this._uploadedByInitials;
+
   set uploadedByInitials(String uploadedByInitials) =>
       _$this._uploadedByInitials = uploadedByInitials;
 
   DateTime _createdDate;
+
   DateTime get createdDate => _$this._createdDate;
+
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _uploaded;
+
   bool get uploaded => _$this._uploaded;
+
   set uploaded(bool uploaded) => _$this._uploaded = uploaded;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   String _ownerOrgUnitName;
+
   String get ownerOrgUnitName => _$this._ownerOrgUnitName;
+
   set ownerOrgUnitName(String ownerOrgUnitName) =>
       _$this._ownerOrgUnitName = ownerOrgUnitName;
 
@@ -464,6 +486,7 @@ class _$ListAuditFilesApiAuditFileActions
       ListAuditFilesApiAuditFileBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -503,6 +526,7 @@ class _$ListAuditFilesApiAuditFileActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditFilesApiAuditFile);
 }

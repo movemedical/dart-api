@@ -105,7 +105,9 @@ class GetDceOrgUnitLinkApiRequestBuilder
   _$GetDceOrgUnitLinkApiRequest _$v;
 
   String _dceToOrgUnitId;
+
   String get dceToOrgUnitId => _$this._dceToOrgUnitId;
+
   set dceToOrgUnitId(String dceToOrgUnitId) =>
       _$this._dceToOrgUnitId = dceToOrgUnitId;
 
@@ -187,6 +189,7 @@ class _$GetDceOrgUnitLinkApiRequestActions
       GetDceOrgUnitLinkApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,6 +209,7 @@ class _$GetDceOrgUnitLinkApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetDceOrgUnitLinkApiRequest);

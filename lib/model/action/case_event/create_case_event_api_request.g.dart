@@ -584,144 +584,204 @@ class CreateCaseEventApiRequestBuilder
   _$CreateCaseEventApiRequest _$v;
 
   String _caseTypeId;
+
   String get caseTypeId => _$this._caseTypeId;
+
   set caseTypeId(String caseTypeId) => _$this._caseTypeId = caseTypeId;
 
   DateTime _surgeryDate;
+
   DateTime get surgeryDate => _$this._surgeryDate;
+
   set surgeryDate(DateTime surgeryDate) => _$this._surgeryDate = surgeryDate;
 
   bool _eventTimeUnknown;
+
   bool get eventTimeUnknown => _$this._eventTimeUnknown;
+
   set eventTimeUnknown(bool eventTimeUnknown) =>
       _$this._eventTimeUnknown = eventTimeUnknown;
 
   int _eventDuration;
+
   int get eventDuration => _$this._eventDuration;
+
   set eventDuration(int eventDuration) => _$this._eventDuration = eventDuration;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _salesOuId;
+
   String get salesOuId => _$this._salesOuId;
+
   set salesOuId(String salesOuId) => _$this._salesOuId = salesOuId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _surgeonPhysicianId;
+
   String get surgeonPhysicianId => _$this._surgeonPhysicianId;
+
   set surgeonPhysicianId(String surgeonPhysicianId) =>
       _$this._surgeonPhysicianId = surgeonPhysicianId;
 
   String _surgeonPhysicianTemp;
+
   String get surgeonPhysicianTemp => _$this._surgeonPhysicianTemp;
+
   set surgeonPhysicianTemp(String surgeonPhysicianTemp) =>
       _$this._surgeonPhysicianTemp = surgeonPhysicianTemp;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _coverageId;
+
   String get coverageId => _$this._coverageId;
+
   set coverageId(String coverageId) => _$this._coverageId = coverageId;
 
   BodySide _bodySide;
+
   BodySide get bodySide => _$this._bodySide;
+
   set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
 
   String _patientId;
+
   String get patientId => _$this._patientId;
+
   set patientId(String patientId) => _$this._patientId = patientId;
 
   PersonNameBuilder _patientName;
+
   PersonNameBuilder get patientName =>
       _$this._patientName ??= new PersonNameBuilder();
+
   set patientName(PersonNameBuilder patientName) =>
       _$this._patientName = patientName;
 
   String _patientMrn;
+
   String get patientMrn => _$this._patientMrn;
+
   set patientMrn(String patientMrn) => _$this._patientMrn = patientMrn;
 
   DateTime _patientDob;
+
   DateTime get patientDob => _$this._patientDob;
+
   set patientDob(DateTime patientDob) => _$this._patientDob = patientDob;
 
   Gender _patientGender;
+
   Gender get patientGender => _$this._patientGender;
+
   set patientGender(Gender patientGender) =>
       _$this._patientGender = patientGender;
 
   double _heightMeasurement;
+
   double get heightMeasurement => _$this._heightMeasurement;
+
   set heightMeasurement(double heightMeasurement) =>
       _$this._heightMeasurement = heightMeasurement;
 
   LengthMeasurementType _heightMeasurementType;
+
   LengthMeasurementType get heightMeasurementType =>
       _$this._heightMeasurementType;
+
   set heightMeasurementType(LengthMeasurementType heightMeasurementType) =>
       _$this._heightMeasurementType = heightMeasurementType;
 
   double _weightMeasurement;
+
   double get weightMeasurement => _$this._weightMeasurement;
+
   set weightMeasurement(double weightMeasurement) =>
       _$this._weightMeasurement = weightMeasurement;
 
   WeightMeasurementType _weightMeasurementType;
+
   WeightMeasurementType get weightMeasurementType =>
       _$this._weightMeasurementType;
+
   set weightMeasurementType(WeightMeasurementType weightMeasurementType) =>
       _$this._weightMeasurementType = weightMeasurementType;
 
   Ethnicity _ethnicity;
+
   Ethnicity get ethnicity => _$this._ethnicity;
+
   set ethnicity(Ethnicity ethnicity) => _$this._ethnicity = ethnicity;
 
   CreateCaseEventApiInsuranceBuilder _primaryInsurance;
+
   CreateCaseEventApiInsuranceBuilder get primaryInsurance =>
       _$this._primaryInsurance ??= new CreateCaseEventApiInsuranceBuilder();
+
   set primaryInsurance(CreateCaseEventApiInsuranceBuilder primaryInsurance) =>
       _$this._primaryInsurance = primaryInsurance;
 
   CreateCaseEventApiInsuranceBuilder _secondaryInsurance;
+
   CreateCaseEventApiInsuranceBuilder get secondaryInsurance =>
       _$this._secondaryInsurance ??= new CreateCaseEventApiInsuranceBuilder();
+
   set secondaryInsurance(
           CreateCaseEventApiInsuranceBuilder secondaryInsurance) =>
       _$this._secondaryInsurance = secondaryInsurance;
 
   CaseEventStatus _fastForward;
+
   CaseEventStatus get fastForward => _$this._fastForward;
+
   set fastForward(CaseEventStatus fastForward) =>
       _$this._fastForward = fastForward;
 
   String _procedureDesc;
+
   String get procedureDesc => _$this._procedureDesc;
+
   set procedureDesc(String procedureDesc) =>
       _$this._procedureDesc = procedureDesc;
 
   ListBuilder<CaseCustomValue> _customFieldValues;
+
   ListBuilder<CaseCustomValue> get customFieldValues =>
       _$this._customFieldValues ??= new ListBuilder<CaseCustomValue>();
+
   set customFieldValues(ListBuilder<CaseCustomValue> customFieldValues) =>
       _$this._customFieldValues = customFieldValues;
 
@@ -1036,6 +1096,7 @@ class _$CreateCaseEventApiRequestActions
       CreateCaseEventApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.patientName,
@@ -1044,6 +1105,7 @@ class _$CreateCaseEventApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1121,6 +1183,7 @@ class _$CreateCaseEventApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateCaseEventApiRequest);
 }

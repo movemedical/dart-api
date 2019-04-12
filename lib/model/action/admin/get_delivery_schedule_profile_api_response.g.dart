@@ -113,9 +113,11 @@ class GetDeliveryScheduleProfileApiResponseBuilder
 
   GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder
       _deliveryScheduleProfile;
+
   GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder
       get deliveryScheduleProfile => _$this._deliveryScheduleProfile ??=
           new GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder();
+
   set deliveryScheduleProfile(
           GetDeliveryScheduleProfileApiDeliveryScheduleProfileDetailBuilder
               deliveryScheduleProfile) =>
@@ -224,12 +226,14 @@ class _$GetDeliveryScheduleProfileApiResponseActions
       GetDeliveryScheduleProfileApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliveryScheduleProfile,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,6 +253,7 @@ class _$GetDeliveryScheduleProfileApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetDeliveryScheduleProfileApiResponse);

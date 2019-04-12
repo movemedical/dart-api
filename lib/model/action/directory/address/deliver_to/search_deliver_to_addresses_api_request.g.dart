@@ -231,39 +231,55 @@ class SearchDeliverToAddressesApiRequestBuilder
   _$SearchDeliverToAddressesApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   ListBuilder<String> _hcrIds;
+
   ListBuilder<String> get hcrIds =>
       _$this._hcrIds ??= new ListBuilder<String>();
+
   set hcrIds(ListBuilder<String> hcrIds) => _$this._hcrIds = hcrIds;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _showExtendedDeliverTos;
+
   bool get showExtendedDeliverTos => _$this._showExtendedDeliverTos;
+
   set showExtendedDeliverTos(bool showExtendedDeliverTos) =>
       _$this._showExtendedDeliverTos = showExtendedDeliverTos;
 
   OrderByParamsBuilder<SearchDeliverToAddressesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<SearchDeliverToAddressesApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<SearchDeliverToAddressesApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<SearchDeliverToAddressesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
@@ -407,12 +423,14 @@ class _$SearchDeliverToAddressesApiRequestActions
       SearchDeliverToAddressesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orderBy,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -446,6 +464,7 @@ class _$SearchDeliverToAddressesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchDeliverToAddressesApiRequest);

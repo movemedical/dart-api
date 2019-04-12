@@ -125,13 +125,17 @@ class ListProceduresForSearchApiResponseBuilder
   _$ListProceduresForSearchApiResponse _$v;
 
   ListBuilder<ListProceduresForSearchApiProcedure> _data;
+
   ListBuilder<ListProceduresForSearchApiProcedure> get data =>
       _$this._data ??= new ListBuilder<ListProceduresForSearchApiProcedure>();
+
   set data(ListBuilder<ListProceduresForSearchApiProcedure> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListProceduresForSearchApiResponseBuilder();
@@ -228,6 +232,7 @@ class _$ListProceduresForSearchApiResponseActions
       ListProceduresForSearchApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,6 +254,7 @@ class _$ListProceduresForSearchApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListProceduresForSearchApiResponse);

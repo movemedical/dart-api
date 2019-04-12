@@ -109,8 +109,10 @@ class SearchDeliverToAddressesApiResponseBuilder
   _$SearchDeliverToAddressesApiResponse _$v;
 
   ListBuilder<CustomerAddress> _data;
+
   ListBuilder<CustomerAddress> get data =>
       _$this._data ??= new ListBuilder<CustomerAddress>();
+
   set data(ListBuilder<CustomerAddress> data) => _$this._data = data;
 
   SearchDeliverToAddressesApiResponseBuilder();
@@ -202,6 +204,7 @@ class _$SearchDeliverToAddressesApiResponseActions
       SearchDeliverToAddressesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -221,6 +224,7 @@ class _$SearchDeliverToAddressesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchDeliverToAddressesApiResponse);

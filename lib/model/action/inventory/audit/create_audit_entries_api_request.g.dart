@@ -107,8 +107,10 @@ class CreateAuditEntriesApiRequestBuilder
   _$CreateAuditEntriesApiRequest _$v;
 
   ListBuilder<CreateAuditEntriesApiAuditEntry> _entries;
+
   ListBuilder<CreateAuditEntriesApiAuditEntry> get entries =>
       _$this._entries ??= new ListBuilder<CreateAuditEntriesApiAuditEntry>();
+
   set entries(ListBuilder<CreateAuditEntriesApiAuditEntry> entries) =>
       _$this._entries = entries;
 
@@ -203,6 +205,7 @@ class _$CreateAuditEntriesApiRequestActions
       CreateAuditEntriesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -222,6 +225,7 @@ class _$CreateAuditEntriesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateAuditEntriesApiRequest);

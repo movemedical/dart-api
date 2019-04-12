@@ -1,51 +1,59 @@
+import 'dart:core';
+
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
-import 'dart:core';
-
 part 'find_patient_api_request.g.dart';
 
-abstract class FindPatientApiRequest implements Built<FindPatientApiRequest, FindPatientApiRequestBuilder> {
+abstract class FindPatientApiRequest
+    implements Built<FindPatientApiRequest, FindPatientApiRequestBuilder> {
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
-  
+
   @nullable
   String get hsFacilityId;
-  
+
   @nullable
   String get mrn;
-  
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
-  
+
   FindPatientApiRequest._();
-  
-  factory FindPatientApiRequest([updates(FindPatientApiRequestBuilder b)]) = _$FindPatientApiRequest;
-  
+
+  factory FindPatientApiRequest([updates(FindPatientApiRequestBuilder b)]) =
+      _$FindPatientApiRequest;
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<FindPatientApiRequest> get serializer => _$findPatientApiRequestSerializer;
+
+  static Serializer<FindPatientApiRequest> get serializer =>
+      _$findPatientApiRequestSerializer;
 }
 
-abstract class FindPatientApiRequestActions extends ModelActions<FindPatientApiRequest, FindPatientApiRequestBuilder, FindPatientApiRequestActions> {
+abstract class FindPatientApiRequestActions extends ModelActions<
+    FindPatientApiRequest,
+    FindPatientApiRequestBuilder,
+    FindPatientApiRequestActions> {
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
-  
+
   FieldDispatcher<String> get hsFacilityId;
-  
+
   FieldDispatcher<String> get mrn;
-  
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
-  
+
   FindPatientApiRequestActions._();
-  
-  factory FindPatientApiRequestActions(FindPatientApiRequestActionsOptions options) => _$FindPatientApiRequestActions(options);
+
+  factory FindPatientApiRequestActions(
+          FindPatientApiRequestActionsOptions options) =>
+      _$FindPatientApiRequestActions(options);
 }

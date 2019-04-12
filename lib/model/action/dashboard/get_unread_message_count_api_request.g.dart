@@ -141,6 +141,7 @@ class _$GetUnreadMessageCountApiRequestActions
       GetUnreadMessageCountApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -148,6 +149,7 @@ class _$GetUnreadMessageCountApiRequestActions
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetUnreadMessageCountApiRequest);

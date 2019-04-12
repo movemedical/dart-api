@@ -114,9 +114,11 @@ class GetCaseCustomFieldsForCreateApiResponseBuilder
   _$GetCaseCustomFieldsForCreateApiResponse _$v;
 
   ListBuilder<GetCaseCustomFieldsForCreateApiCaseCustomFieldData> _customFields;
+
   ListBuilder<GetCaseCustomFieldsForCreateApiCaseCustomFieldData>
       get customFields => _$this._customFields ??=
           new ListBuilder<GetCaseCustomFieldsForCreateApiCaseCustomFieldData>();
+
   set customFields(
           ListBuilder<GetCaseCustomFieldsForCreateApiCaseCustomFieldData>
               customFields) =>
@@ -220,6 +222,7 @@ class _$GetCaseCustomFieldsForCreateApiResponseActions
       GetCaseCustomFieldsForCreateApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -239,6 +242,7 @@ class _$GetCaseCustomFieldsForCreateApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCaseCustomFieldsForCreateApiResponse);

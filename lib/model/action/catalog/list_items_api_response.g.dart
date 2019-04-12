@@ -116,11 +116,15 @@ class ListItemsApiResponseBuilder
   _$ListItemsApiResponse _$v;
 
   ListBuilder<Item> _data;
+
   ListBuilder<Item> get data => _$this._data ??= new ListBuilder<Item>();
+
   set data(ListBuilder<Item> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListItemsApiResponseBuilder();
@@ -212,6 +216,7 @@ class _$ListItemsApiResponseActions extends ListItemsApiResponseActions {
   ListItemsApiResponseBuilder $newBuilder() => ListItemsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -233,6 +238,7 @@ class _$ListItemsApiResponseActions extends ListItemsApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListItemsApiResponse);
 }

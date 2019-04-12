@@ -114,9 +114,11 @@ class GetCustomerRelationshipsApiResponseBuilder
 
   ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>
       _customerRelationships;
+
   ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>
       get customerRelationships => _$this._customerRelationships ??=
           new ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>();
+
   set customerRelationships(
           ListBuilder<GetCustomerRelationshipsApiCustomerRelationship>
               customerRelationships) =>
@@ -218,6 +220,7 @@ class _$GetCustomerRelationshipsApiResponseActions
       GetCustomerRelationshipsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -237,6 +240,7 @@ class _$GetCustomerRelationshipsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCustomerRelationshipsApiResponse);

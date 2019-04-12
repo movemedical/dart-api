@@ -186,28 +186,40 @@ class CreateBizUnitApiRequestBuilder
   _$CreateBizUnitApiRequest _$v;
 
   String _key;
+
   String get key => _$this._key;
+
   set key(String key) => _$this._key = key;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   bool _publicListing;
+
   bool get publicListing => _$this._publicListing;
+
   set publicListing(bool publicListing) =>
       _$this._publicListing = publicListing;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   CreateBizUnitApiRequestBuilder();
@@ -332,12 +344,14 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
       CreateBizUnitApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -367,6 +381,7 @@ class _$CreateBizUnitApiRequestActions extends CreateBizUnitApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateBizUnitApiRequest);
 }

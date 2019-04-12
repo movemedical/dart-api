@@ -367,68 +367,100 @@ class CreateShipToAddressApiRequestBuilder
   _$CreateShipToAddressApiRequest _$v;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _customerReference;
+
   String get customerReference => _$this._customerReference;
+
   set customerReference(String customerReference) =>
       _$this._customerReference = customerReference;
 
   String _customerKey;
+
   String get customerKey => _$this._customerKey;
+
   set customerKey(String customerKey) => _$this._customerKey = customerKey;
 
   String _reference1;
+
   String get reference1 => _$this._reference1;
+
   set reference1(String reference1) => _$this._reference1 = reference1;
 
   String _reference2;
+
   String get reference2 => _$this._reference2;
+
   set reference2(String reference2) => _$this._reference2 = reference2;
 
   String _line1;
+
   String get line1 => _$this._line1;
+
   set line1(String line1) => _$this._line1 = line1;
 
   String _line2;
+
   String get line2 => _$this._line2;
+
   set line2(String line2) => _$this._line2 = line2;
 
   String _line3;
+
   String get line3 => _$this._line3;
+
   set line3(String line3) => _$this._line3 = line3;
 
   String _city;
+
   String get city => _$this._city;
+
   set city(String city) => _$this._city = city;
 
   String _county;
+
   String get county => _$this._county;
+
   set county(String county) => _$this._county = county;
 
   String _state;
+
   String get state => _$this._state;
+
   set state(String state) => _$this._state = state;
 
   String _postalCode;
+
   String get postalCode => _$this._postalCode;
+
   set postalCode(String postalCode) => _$this._postalCode = postalCode;
 
   String _country;
+
   String get country => _$this._country;
+
   set country(String country) => _$this._country = country;
 
   double _latitude;
+
   double get latitude => _$this._latitude;
+
   set latitude(double latitude) => _$this._latitude = latitude;
 
   double _longitude;
+
   double get longitude => _$this._longitude;
+
   set longitude(double longitude) => _$this._longitude = longitude;
 
   CreateShipToAddressApiRequestBuilder();
@@ -588,6 +620,7 @@ class _$CreateShipToAddressApiRequestActions
       CreateShipToAddressApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -637,6 +670,7 @@ class _$CreateShipToAddressApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateShipToAddressApiRequest);

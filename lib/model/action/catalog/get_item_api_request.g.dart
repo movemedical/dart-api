@@ -94,7 +94,9 @@ class GetItemApiRequestBuilder
   _$GetItemApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   GetItemApiRequestBuilder();
@@ -164,6 +166,7 @@ class _$GetItemApiRequestActions extends GetItemApiRequestActions {
   GetItemApiRequestBuilder $newBuilder() => GetItemApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -183,6 +186,7 @@ class _$GetItemApiRequestActions extends GetItemApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetItemApiRequest);
 }

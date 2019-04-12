@@ -123,11 +123,15 @@ class ListUsersForIssueAssignmentApiDisplayUserBuilder
   _$ListUsersForIssueAssignmentApiDisplayUser _$v;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   ListUsersForIssueAssignmentApiDisplayUserBuilder();
@@ -212,6 +216,7 @@ class _$ListUsersForIssueAssignmentApiDisplayUserActions
       ListUsersForIssueAssignmentApiDisplayUserBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -233,6 +238,7 @@ class _$ListUsersForIssueAssignmentApiDisplayUserActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUsersForIssueAssignmentApiDisplayUser);

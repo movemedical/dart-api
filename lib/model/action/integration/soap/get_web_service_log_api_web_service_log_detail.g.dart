@@ -155,20 +155,28 @@ class GetWebServiceLogApiWebServiceLogDetailBuilder
   _$GetWebServiceLogApiWebServiceLogDetail _$v;
 
   String _interfaceKey;
+
   String get interfaceKey => _$this._interfaceKey;
+
   set interfaceKey(String interfaceKey) => _$this._interfaceKey = interfaceKey;
 
   String _outcomeMessage;
+
   String get outcomeMessage => _$this._outcomeMessage;
+
   set outcomeMessage(String outcomeMessage) =>
       _$this._outcomeMessage = outcomeMessage;
 
   String _request;
+
   String get request => _$this._request;
+
   set request(String request) => _$this._request = request;
 
   String _response;
+
   String get response => _$this._response;
+
   set response(String response) => _$this._response = response;
 
   GetWebServiceLogApiWebServiceLogDetailBuilder();
@@ -269,6 +277,7 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
       GetWebServiceLogApiWebServiceLogDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -294,6 +303,7 @@ class _$GetWebServiceLogApiWebServiceLogDetailActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetWebServiceLogApiWebServiceLogDetail);

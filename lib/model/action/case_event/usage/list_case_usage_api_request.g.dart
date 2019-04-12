@@ -116,11 +116,15 @@ class ListCaseUsageApiRequestBuilder
   _$ListCaseUsageApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   ListCaseUsageApiRequestBuilder();
@@ -199,6 +203,7 @@ class _$ListCaseUsageApiRequestActions extends ListCaseUsageApiRequestActions {
       ListCaseUsageApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -220,6 +225,7 @@ class _$ListCaseUsageApiRequestActions extends ListCaseUsageApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListCaseUsageApiRequest);
 }

@@ -140,15 +140,21 @@ class ListRelationshipTypesForOrgUnitApiRequestBuilder
   _$ListRelationshipTypesForOrgUnitApiRequest _$v;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   RelationshipLinkType _linkType;
+
   RelationshipLinkType get linkType => _$this._linkType;
+
   set linkType(RelationshipLinkType linkType) => _$this._linkType = linkType;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListRelationshipTypesForOrgUnitApiRequestBuilder();
@@ -237,6 +243,7 @@ class _$ListRelationshipTypesForOrgUnitApiRequestActions
       ListRelationshipTypesForOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -260,6 +267,7 @@ class _$ListRelationshipTypesForOrgUnitApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListRelationshipTypesForOrgUnitApiRequest);

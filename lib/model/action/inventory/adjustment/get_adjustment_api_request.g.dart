@@ -116,11 +116,15 @@ class GetAdjustmentApiRequestBuilder
   _$GetAdjustmentApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetAdjustmentApiRequestBuilder();
@@ -202,6 +206,7 @@ class _$GetAdjustmentApiRequestActions extends GetAdjustmentApiRequestActions {
       GetAdjustmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -223,6 +228,7 @@ class _$GetAdjustmentApiRequestActions extends GetAdjustmentApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAdjustmentApiRequest);
 }

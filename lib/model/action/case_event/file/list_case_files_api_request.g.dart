@@ -136,17 +136,23 @@ class ListCaseFilesApiRequestBuilder
   _$ListCaseFilesApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListCaseFilesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListCaseFilesApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListCaseFilesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListCaseFilesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -266,6 +272,7 @@ class _$ListCaseFilesApiRequestActions extends ListCaseFilesApiRequestActions {
       ListCaseFilesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -273,6 +280,7 @@ class _$ListCaseFilesApiRequestActions extends ListCaseFilesApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -296,6 +304,7 @@ class _$ListCaseFilesApiRequestActions extends ListCaseFilesApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListCaseFilesApiRequest);
 }

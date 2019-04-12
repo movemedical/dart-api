@@ -148,19 +148,27 @@ class UpdateCaseTypeApiRequestBuilder
   _$UpdateCaseTypeApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   UpdateCaseTypeApiRequestBuilder();
@@ -251,6 +259,7 @@ class _$UpdateCaseTypeApiRequestActions
       UpdateCaseTypeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -276,6 +285,7 @@ class _$UpdateCaseTypeApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateCaseTypeApiRequest);
 }

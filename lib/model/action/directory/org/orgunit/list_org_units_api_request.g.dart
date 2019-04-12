@@ -219,37 +219,53 @@ class ListOrgUnitsApiRequestBuilder
   _$ListOrgUnitsApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   bool _includeFullAccess;
+
   bool get includeFullAccess => _$this._includeFullAccess;
+
   set includeFullAccess(bool includeFullAccess) =>
       _$this._includeFullAccess = includeFullAccess;
 
   bool _includeInventoryOnly;
+
   bool get includeInventoryOnly => _$this._includeInventoryOnly;
+
   set includeInventoryOnly(bool includeInventoryOnly) =>
       _$this._includeInventoryOnly = includeInventoryOnly;
 
   bool _includeSales;
+
   bool get includeSales => _$this._includeSales;
+
   set includeSales(bool includeSales) => _$this._includeSales = includeSales;
 
   bool _includeOps;
+
   bool get includeOps => _$this._includeOps;
+
   set includeOps(bool includeOps) => _$this._includeOps = includeOps;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   ListOrgUnitsApiRequestBuilder();
@@ -369,6 +385,7 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
       ListOrgUnitsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -402,6 +419,7 @@ class _$ListOrgUnitsApiRequestActions extends ListOrgUnitsApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOrgUnitsApiRequest);
 }

@@ -95,8 +95,10 @@ class GetDceApiResponseBuilder
   _$GetDceApiResponse _$v;
 
   GetDceApiDceDetailBuilder _detail;
+
   GetDceApiDceDetailBuilder get detail =>
       _$this._detail ??= new GetDceApiDceDetailBuilder();
+
   set detail(GetDceApiDceDetailBuilder detail) => _$this._detail = detail;
 
   GetDceApiResponseBuilder();
@@ -186,12 +188,14 @@ class _$GetDceApiResponseActions extends GetDceApiResponseActions {
   GetDceApiResponseBuilder $newBuilder() => GetDceApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -211,6 +215,7 @@ class _$GetDceApiResponseActions extends GetDceApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetDceApiResponse);
 }

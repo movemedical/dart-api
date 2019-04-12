@@ -107,7 +107,9 @@ class ListUsersForIssueAssignmentApiRequestBuilder
   _$ListUsersForIssueAssignmentApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   ListUsersForIssueAssignmentApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$ListUsersForIssueAssignmentApiRequestActions
       ListUsersForIssueAssignmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -205,6 +208,7 @@ class _$ListUsersForIssueAssignmentApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUsersForIssueAssignmentApiRequest);

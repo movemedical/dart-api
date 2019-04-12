@@ -164,25 +164,33 @@ class ListSalesOrgUnitItemCategoryLinksApiRequestBuilder
   _$ListSalesOrgUnitItemCategoryLinksApiRequest _$v;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   bool _includeInherited;
+
   bool get includeInherited => _$this._includeInherited;
+
   set includeInherited(bool includeInherited) =>
       _$this._includeInherited = includeInherited;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListSalesOrgUnitItemCategoryLinksApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<
       ListSalesOrgUnitItemCategoryLinksApiOrderBy> get orderBy => _$this
           ._orderBy ??=
       new OrderByParamsBuilder<ListSalesOrgUnitItemCategoryLinksApiOrderBy>();
+
   set orderBy(
           OrderByParamsBuilder<ListSalesOrgUnitItemCategoryLinksApiOrderBy>
               orderBy) =>
@@ -323,6 +331,7 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
       ListSalesOrgUnitItemCategoryLinksApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -330,6 +339,7 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -355,6 +365,7 @@ class _$ListSalesOrgUnitItemCategoryLinksApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListSalesOrgUnitItemCategoryLinksApiRequest);

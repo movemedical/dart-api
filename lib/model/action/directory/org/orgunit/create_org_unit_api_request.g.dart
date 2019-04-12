@@ -399,80 +399,116 @@ class CreateOrgUnitApiRequestBuilder
   _$CreateOrgUnitApiRequest _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   String _parentId;
+
   String get parentId => _$this._parentId;
+
   set parentId(String parentId) => _$this._parentId = parentId;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   String _publicName;
+
   String get publicName => _$this._publicName;
+
   set publicName(String publicName) => _$this._publicName = publicName;
 
   bool _salesOrgUnit;
+
   bool get salesOrgUnit => _$this._salesOrgUnit;
+
   set salesOrgUnit(bool salesOrgUnit) => _$this._salesOrgUnit = salesOrgUnit;
 
   bool _opsOrgUnit;
+
   bool get opsOrgUnit => _$this._opsOrgUnit;
+
   set opsOrgUnit(bool opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   bool _signUpAllowed;
+
   bool get signUpAllowed => _$this._signUpAllowed;
+
   set signUpAllowed(bool signUpAllowed) =>
       _$this._signUpAllowed = signUpAllowed;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _label;
+
   String get label => _$this._label;
+
   set label(String label) => _$this._label = label;
 
   String _schema;
+
   String get schema => _$this._schema;
+
   set schema(String schema) => _$this._schema = schema;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _publicListing;
+
   bool get publicListing => _$this._publicListing;
+
   set publicListing(bool publicListing) =>
       _$this._publicListing = publicListing;
 
   bool _allowRemoteUsage;
+
   bool get allowRemoteUsage => _$this._allowRemoteUsage;
+
   set allowRemoteUsage(bool allowRemoteUsage) =>
       _$this._allowRemoteUsage = allowRemoteUsage;
 
   bool _allowMixedInventoryTypeUsage;
+
   bool get allowMixedInventoryTypeUsage => _$this._allowMixedInventoryTypeUsage;
+
   set allowMixedInventoryTypeUsage(bool allowMixedInventoryTypeUsage) =>
       _$this._allowMixedInventoryTypeUsage = allowMixedInventoryTypeUsage;
 
   int _fulfillmentLeadTimeHours;
+
   int get fulfillmentLeadTimeHours => _$this._fulfillmentLeadTimeHours;
+
   set fulfillmentLeadTimeHours(int fulfillmentLeadTimeHours) =>
       _$this._fulfillmentLeadTimeHours = fulfillmentLeadTimeHours;
 
   int _requirementsLeadTimeHours;
+
   int get requirementsLeadTimeHours => _$this._requirementsLeadTimeHours;
+
   set requirementsLeadTimeHours(int requirementsLeadTimeHours) =>
       _$this._requirementsLeadTimeHours = requirementsLeadTimeHours;
 
@@ -679,12 +715,14 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
       CreateOrgUnitApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -738,6 +776,7 @@ class _$CreateOrgUnitApiRequestActions extends CreateOrgUnitApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateOrgUnitApiRequest);
 }

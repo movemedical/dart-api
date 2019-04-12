@@ -174,24 +174,34 @@ class UpdateCustomerQualifierApiRequestBuilder
   _$UpdateCustomerQualifierApiRequest _$v;
 
   String _customerQualifierId;
+
   String get customerQualifierId => _$this._customerQualifierId;
+
   set customerQualifierId(String customerQualifierId) =>
       _$this._customerQualifierId = customerQualifierId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   CustomerQualifierType _type;
+
   CustomerQualifierType get type => _$this._type;
+
   set type(CustomerQualifierType type) => _$this._type = type;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   int _priority;
+
   int get priority => _$this._priority;
+
   set priority(int priority) => _$this._priority = priority;
 
   UpdateCustomerQualifierApiRequestBuilder();
@@ -294,6 +304,7 @@ class _$UpdateCustomerQualifierApiRequestActions
       UpdateCustomerQualifierApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -321,6 +332,7 @@ class _$UpdateCustomerQualifierApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateCustomerQualifierApiRequest);

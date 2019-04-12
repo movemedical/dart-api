@@ -136,16 +136,22 @@ class CreateDelegateApiRequestBuilder
   _$CreateDelegateApiRequest _$v;
 
   DirectoryNonPersonType _linkType;
+
   DirectoryNonPersonType get linkType => _$this._linkType;
+
   set linkType(DirectoryNonPersonType linkType) => _$this._linkType = linkType;
 
   String _linkId;
+
   String get linkId => _$this._linkId;
+
   set linkId(String linkId) => _$this._linkId = linkId;
 
   ListBuilder<CreateDelegateApiDelegate> _delegates;
+
   ListBuilder<CreateDelegateApiDelegate> get delegates =>
       _$this._delegates ??= new ListBuilder<CreateDelegateApiDelegate>();
+
   set delegates(ListBuilder<CreateDelegateApiDelegate> delegates) =>
       _$this._delegates = delegates;
 
@@ -251,6 +257,7 @@ class _$CreateDelegateApiRequestActions
       CreateDelegateApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -274,6 +281,7 @@ class _$CreateDelegateApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateDelegateApiRequest);
 }

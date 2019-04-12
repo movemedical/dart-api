@@ -119,12 +119,16 @@ class ListAuditFilesApiResponseBuilder
   _$ListAuditFilesApiResponse _$v;
 
   ListBuilder<ListAuditFilesApiAuditFile> _data;
+
   ListBuilder<ListAuditFilesApiAuditFile> get data =>
       _$this._data ??= new ListBuilder<ListAuditFilesApiAuditFile>();
+
   set data(ListBuilder<ListAuditFilesApiAuditFile> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAuditFilesApiResponseBuilder();
@@ -220,6 +224,7 @@ class _$ListAuditFilesApiResponseActions
       ListAuditFilesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,6 +246,7 @@ class _$ListAuditFilesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditFilesApiResponse);
 }

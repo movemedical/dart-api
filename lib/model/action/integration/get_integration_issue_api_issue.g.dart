@@ -261,46 +261,66 @@ class GetIntegrationIssueApiIssueBuilder
   _$GetIntegrationIssueApiIssue _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _issueNumber;
+
   int get issueNumber => _$this._issueNumber;
+
   set issueNumber(int issueNumber) => _$this._issueNumber = issueNumber;
 
   String _logReferenceId;
+
   String get logReferenceId => _$this._logReferenceId;
+
   set logReferenceId(String logReferenceId) =>
       _$this._logReferenceId = logReferenceId;
 
   IntegrationIssueStatus _status;
+
   IntegrationIssueStatus get status => _$this._status;
+
   set status(IntegrationIssueStatus status) => _$this._status = status;
 
   IntegrationType _issueType;
+
   IntegrationType get issueType => _$this._issueType;
+
   set issueType(IntegrationType issueType) => _$this._issueType = issueType;
 
   String _issueGroup;
+
   String get issueGroup => _$this._issueGroup;
+
   set issueGroup(String issueGroup) => _$this._issueGroup = issueGroup;
 
   DateTime _createdDate;
+
   DateTime get createdDate => _$this._createdDate;
+
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   DateTime _assignedDate;
+
   DateTime get assignedDate => _$this._assignedDate;
+
   set assignedDate(DateTime assignedDate) =>
       _$this._assignedDate = assignedDate;
 
   DateTime _resolvedDate;
+
   DateTime get resolvedDate => _$this._resolvedDate;
+
   set resolvedDate(DateTime resolvedDate) =>
       _$this._resolvedDate = resolvedDate;
 
   String _regenerateFileId;
+
   String get regenerateFileId => _$this._regenerateFileId;
+
   set regenerateFileId(String regenerateFileId) =>
       _$this._regenerateFileId = regenerateFileId;
 
@@ -443,6 +463,7 @@ class _$GetIntegrationIssueApiIssueActions
       GetIntegrationIssueApiIssueBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -480,6 +501,7 @@ class _$GetIntegrationIssueApiIssueActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetIntegrationIssueApiIssue);

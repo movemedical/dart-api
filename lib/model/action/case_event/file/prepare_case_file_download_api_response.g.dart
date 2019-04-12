@@ -106,7 +106,9 @@ class PrepareCaseFileDownloadApiResponseBuilder
   _$PrepareCaseFileDownloadApiResponse _$v;
 
   String _url;
+
   String get url => _$this._url;
+
   set url(String url) => _$this._url = url;
 
   PrepareCaseFileDownloadApiResponseBuilder();
@@ -185,6 +187,7 @@ class _$PrepareCaseFileDownloadApiResponseActions
       PrepareCaseFileDownloadApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -204,6 +207,7 @@ class _$PrepareCaseFileDownloadApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareCaseFileDownloadApiResponse);

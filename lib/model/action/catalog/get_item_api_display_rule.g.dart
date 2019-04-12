@@ -99,7 +99,9 @@ class GetItemApiDisplayRuleBuilder
   _$GetItemApiDisplayRule _$v;
 
   bool _editAllowed;
+
   bool get editAllowed => _$this._editAllowed;
+
   set editAllowed(bool editAllowed) => _$this._editAllowed = editAllowed;
 
   GetItemApiDisplayRuleBuilder();
@@ -173,6 +175,7 @@ class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
   GetItemApiDisplayRuleBuilder $newBuilder() => GetItemApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -192,6 +195,7 @@ class _$GetItemApiDisplayRuleActions extends GetItemApiDisplayRuleActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetItemApiDisplayRule);
 }

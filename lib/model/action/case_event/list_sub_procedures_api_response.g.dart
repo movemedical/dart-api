@@ -108,8 +108,10 @@ class ListSubProceduresApiResponseBuilder
   _$ListSubProceduresApiResponse _$v;
 
   ListBuilder<SubProcedure> _subProcedures;
+
   ListBuilder<SubProcedure> get subProcedures =>
       _$this._subProcedures ??= new ListBuilder<SubProcedure>();
+
   set subProcedures(ListBuilder<SubProcedure> subProcedures) =>
       _$this._subProcedures = subProcedures;
 
@@ -205,6 +207,7 @@ class _$ListSubProceduresApiResponseActions
       ListSubProceduresApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -224,6 +227,7 @@ class _$ListSubProceduresApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListSubProceduresApiResponse);

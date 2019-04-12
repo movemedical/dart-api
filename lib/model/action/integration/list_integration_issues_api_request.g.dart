@@ -285,52 +285,74 @@ class ListIntegrationIssuesApiRequestBuilder
   _$ListIntegrationIssuesApiRequest _$v;
 
   String _integrationReferenceId;
+
   String get integrationReferenceId => _$this._integrationReferenceId;
+
   set integrationReferenceId(String integrationReferenceId) =>
       _$this._integrationReferenceId = integrationReferenceId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   DateRangeBuilder _createdDateRange;
+
   DateRangeBuilder get createdDateRange =>
       _$this._createdDateRange ??= new DateRangeBuilder();
+
   set createdDateRange(DateRangeBuilder createdDateRange) =>
       _$this._createdDateRange = createdDateRange;
 
   IntegrationType _issueType;
+
   IntegrationType get issueType => _$this._issueType;
+
   set issueType(IntegrationType issueType) => _$this._issueType = issueType;
 
   IntegrationIssueStatus _status;
+
   IntegrationIssueStatus get status => _$this._status;
+
   set status(IntegrationIssueStatus status) => _$this._status = status;
 
   String _issueGroup;
+
   String get issueGroup => _$this._issueGroup;
+
   set issueGroup(String issueGroup) => _$this._issueGroup = issueGroup;
 
   int _numberGreaterThan;
+
   int get numberGreaterThan => _$this._numberGreaterThan;
+
   set numberGreaterThan(int numberGreaterThan) =>
       _$this._numberGreaterThan = numberGreaterThan;
 
   ListIntegrationIssuesApiSortBy _sortBy;
+
   ListIntegrationIssuesApiSortBy get sortBy => _$this._sortBy;
+
   set sortBy(ListIntegrationIssuesApiSortBy sortBy) => _$this._sortBy = sortBy;
 
   bool _descending;
+
   bool get descending => _$this._descending;
+
   set descending(bool descending) => _$this._descending = descending;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   bool _export;
+
   bool get export => _$this._export;
+
   set export(bool export) => _$this._export = export;
 
   ListIntegrationIssuesApiRequestBuilder();
@@ -497,6 +519,7 @@ class _$ListIntegrationIssuesApiRequestActions
       ListIntegrationIssuesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.createdDateRange,
@@ -504,6 +527,7 @@ class _$ListIntegrationIssuesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -543,6 +567,7 @@ class _$ListIntegrationIssuesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListIntegrationIssuesApiRequest);

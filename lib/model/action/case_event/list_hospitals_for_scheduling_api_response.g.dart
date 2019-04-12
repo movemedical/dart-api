@@ -109,8 +109,10 @@ class ListHospitalsForSchedulingApiResponseBuilder
   _$ListHospitalsForSchedulingApiResponse _$v;
 
   ListBuilder<Hospital> _hospitals;
+
   ListBuilder<Hospital> get hospitals =>
       _$this._hospitals ??= new ListBuilder<Hospital>();
+
   set hospitals(ListBuilder<Hospital> hospitals) =>
       _$this._hospitals = hospitals;
 
@@ -209,6 +211,7 @@ class _$ListHospitalsForSchedulingApiResponseActions
       ListHospitalsForSchedulingApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,6 +231,7 @@ class _$ListHospitalsForSchedulingApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHospitalsForSchedulingApiResponse);

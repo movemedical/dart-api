@@ -121,11 +121,15 @@ class ListAuditItemStockApiAuditStockBuilder
   _$ListAuditItemStockApiAuditStock _$v;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   AuditStockOutcome _outcome;
+
   AuditStockOutcome get outcome => _$this._outcome;
+
   set outcome(AuditStockOutcome outcome) => _$this._outcome = outcome;
 
   ListAuditItemStockApiAuditStockBuilder();
@@ -209,6 +213,7 @@ class _$ListAuditItemStockApiAuditStockActions
       ListAuditItemStockApiAuditStockBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -230,6 +235,7 @@ class _$ListAuditItemStockApiAuditStockActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAuditItemStockApiAuditStock);

@@ -152,19 +152,27 @@ class ListDelegateOptionsApiDelegateOptionBuilder
   _$ListDelegateOptionsApiDelegateOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DelegateType _type;
+
   DelegateType get type => _$this._type;
+
   set type(DelegateType type) => _$this._type = type;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   EmailBuilder _email;
+
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
+
   set email(EmailBuilder email) => _$this._email = email;
 
   ListDelegateOptionsApiDelegateOptionBuilder();
@@ -276,12 +284,14 @@ class _$ListDelegateOptionsApiDelegateOptionActions
       ListDelegateOptionsApiDelegateOptionBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -307,6 +317,7 @@ class _$ListDelegateOptionsApiDelegateOptionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListDelegateOptionsApiDelegateOption);

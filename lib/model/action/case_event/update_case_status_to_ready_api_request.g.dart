@@ -106,7 +106,9 @@ class UpdateCaseStatusToReadyApiRequestBuilder
   _$UpdateCaseStatusToReadyApiRequest _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   UpdateCaseStatusToReadyApiRequestBuilder();
@@ -188,6 +190,7 @@ class _$UpdateCaseStatusToReadyApiRequestActions
       UpdateCaseStatusToReadyApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -207,6 +210,7 @@ class _$UpdateCaseStatusToReadyApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateCaseStatusToReadyApiRequest);

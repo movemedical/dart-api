@@ -178,24 +178,34 @@ class SaveTeamToOrgUnitApiInventoryTypePermissionBuilder
   _$SaveTeamToOrgUnitApiInventoryTypePermission _$v;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   bool _view;
+
   bool get view => _$this._view;
+
   set view(bool view) => _$this._view = view;
 
   bool _source;
+
   bool get source => _$this._source;
+
   set source(bool source) => _$this._source = source;
 
   bool _reconcile;
+
   bool get reconcile => _$this._reconcile;
+
   set reconcile(bool reconcile) => _$this._reconcile = reconcile;
 
   bool _admin;
+
   bool get admin => _$this._admin;
+
   set admin(bool admin) => _$this._admin = admin;
 
   SaveTeamToOrgUnitApiInventoryTypePermissionBuilder();
@@ -299,6 +309,7 @@ class _$SaveTeamToOrgUnitApiInventoryTypePermissionActions
       SaveTeamToOrgUnitApiInventoryTypePermissionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -326,6 +337,7 @@ class _$SaveTeamToOrgUnitApiInventoryTypePermissionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SaveTeamToOrgUnitApiInventoryTypePermission);

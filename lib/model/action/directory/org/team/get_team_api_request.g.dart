@@ -93,7 +93,9 @@ class GetTeamApiRequestBuilder
   _$GetTeamApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   GetTeamApiRequestBuilder();
@@ -163,6 +165,7 @@ class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
   GetTeamApiRequestBuilder $newBuilder() => GetTeamApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -182,6 +185,7 @@ class _$GetTeamApiRequestActions extends GetTeamApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetTeamApiRequest);
 }

@@ -311,57 +311,83 @@ class EditCaseEventSchedulingApiRequestBuilder
   _$EditCaseEventSchedulingApiRequest _$v;
 
   String _caseTypeId;
+
   String get caseTypeId => _$this._caseTypeId;
+
   set caseTypeId(String caseTypeId) => _$this._caseTypeId = caseTypeId;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _salesOuId;
+
   String get salesOuId => _$this._salesOuId;
+
   set salesOuId(String salesOuId) => _$this._salesOuId = salesOuId;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianTemp;
+
   String get physicianTemp => _$this._physicianTemp;
+
   set physicianTemp(String physicianTemp) =>
       _$this._physicianTemp = physicianTemp;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _coverageId;
+
   String get coverageId => _$this._coverageId;
+
   set coverageId(String coverageId) => _$this._coverageId = coverageId;
 
   BodySide _bodySide;
+
   BodySide get bodySide => _$this._bodySide;
+
   set bodySide(BodySide bodySide) => _$this._bodySide = bodySide;
 
   String _procedureDesc;
+
   String get procedureDesc => _$this._procedureDesc;
+
   set procedureDesc(String procedureDesc) =>
       _$this._procedureDesc = procedureDesc;
 
@@ -520,6 +546,7 @@ class _$EditCaseEventSchedulingApiRequestActions
       EditCaseEventSchedulingApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -563,6 +590,7 @@ class _$EditCaseEventSchedulingApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(EditCaseEventSchedulingApiRequest);

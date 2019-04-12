@@ -108,9 +108,11 @@ class IntegrationsSearchApiResponseBuilder
   _$IntegrationsSearchApiResponse _$v;
 
   ListBuilder<IntegrationsSearchApiSearchResult> _searchResults;
+
   ListBuilder<IntegrationsSearchApiSearchResult> get searchResults =>
       _$this._searchResults ??=
           new ListBuilder<IntegrationsSearchApiSearchResult>();
+
   set searchResults(
           ListBuilder<IntegrationsSearchApiSearchResult> searchResults) =>
       _$this._searchResults = searchResults;
@@ -209,6 +211,7 @@ class _$IntegrationsSearchApiResponseActions
       IntegrationsSearchApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,6 +231,7 @@ class _$IntegrationsSearchApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(IntegrationsSearchApiResponse);

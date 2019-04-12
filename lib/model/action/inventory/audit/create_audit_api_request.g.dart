@@ -329,68 +329,96 @@ class CreateAuditApiRequestBuilder
   _$CreateAuditApiRequest _$v;
 
   String _referenceString;
+
   String get referenceString => _$this._referenceString;
+
   set referenceString(String referenceString) =>
       _$this._referenceString = referenceString;
 
   AuditCountType _countType;
+
   AuditCountType get countType => _$this._countType;
+
   set countType(AuditCountType countType) => _$this._countType = countType;
 
   AuditType _type;
+
   AuditType get type => _$this._type;
+
   set type(AuditType type) => _$this._type = type;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   bool _countingBins;
+
   bool get countingBins => _$this._countingBins;
+
   set countingBins(bool countingBins) => _$this._countingBins = countingBins;
 
   bool _toteContentsRequired;
+
   bool get toteContentsRequired => _$this._toteContentsRequired;
+
   set toteContentsRequired(bool toteContentsRequired) =>
       _$this._toteContentsRequired = toteContentsRequired;
 
   bool _kitToteContentsRequired;
+
   bool get kitToteContentsRequired => _$this._kitToteContentsRequired;
+
   set kitToteContentsRequired(bool kitToteContentsRequired) =>
       _$this._kitToteContentsRequired = kitToteContentsRequired;
 
   bool _pkgContentsRequired;
+
   bool get pkgContentsRequired => _$this._pkgContentsRequired;
+
   set pkgContentsRequired(bool pkgContentsRequired) =>
       _$this._pkgContentsRequired = pkgContentsRequired;
 
   bool _trayContentsRequired;
+
   bool get trayContentsRequired => _$this._trayContentsRequired;
+
   set trayContentsRequired(bool trayContentsRequired) =>
       _$this._trayContentsRequired = trayContentsRequired;
 
   DateTime _scheduledWindowStart;
+
   DateTime get scheduledWindowStart => _$this._scheduledWindowStart;
+
   set scheduledWindowStart(DateTime scheduledWindowStart) =>
       _$this._scheduledWindowStart = scheduledWindowStart;
 
   DateTime _scheduledWindowEnd;
+
   DateTime get scheduledWindowEnd => _$this._scheduledWindowEnd;
+
   set scheduledWindowEnd(DateTime scheduledWindowEnd) =>
       _$this._scheduledWindowEnd = scheduledWindowEnd;
 
   bool _blind;
+
   bool get blind => _$this._blind;
+
   set blind(bool blind) => _$this._blind = blind;
 
   ListBuilder<String> _categoryIds;
+
   ListBuilder<String> get categoryIds =>
       _$this._categoryIds ??= new ListBuilder<String>();
+
   set categoryIds(ListBuilder<String> categoryIds) =>
       _$this._categoryIds = categoryIds;
 
@@ -577,6 +605,7 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
   CreateAuditApiRequestBuilder $newBuilder() => CreateAuditApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -622,6 +651,7 @@ class _$CreateAuditApiRequestActions extends CreateAuditApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateAuditApiRequest);
 }

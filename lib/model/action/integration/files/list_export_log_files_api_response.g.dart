@@ -122,13 +122,17 @@ class ListExportLogFilesApiResponseBuilder
   _$ListExportLogFilesApiResponse _$v;
 
   ListBuilder<ListExportLogFilesApiExportLogFile> _data;
+
   ListBuilder<ListExportLogFilesApiExportLogFile> get data =>
       _$this._data ??= new ListBuilder<ListExportLogFilesApiExportLogFile>();
+
   set data(ListBuilder<ListExportLogFilesApiExportLogFile> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListExportLogFilesApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListExportLogFilesApiResponseActions
       ListExportLogFilesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -245,6 +250,7 @@ class _$ListExportLogFilesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListExportLogFilesApiResponse);

@@ -204,34 +204,48 @@ class SaveComponentsApiComponentBuilder
   _$SaveComponentsApiComponent _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   SaveComponentsApiItemSpecIdsBuilder _itemSpec;
+
   SaveComponentsApiItemSpecIdsBuilder get itemSpec =>
       _$this._itemSpec ??= new SaveComponentsApiItemSpecIdsBuilder();
+
   set itemSpec(SaveComponentsApiItemSpecIdsBuilder itemSpec) =>
       _$this._itemSpec = itemSpec;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   bool _remove;
+
   bool get remove => _$this._remove;
+
   set remove(bool remove) => _$this._remove = remove;
 
   int _minimumQuantity;
+
   int get minimumQuantity => _$this._minimumQuantity;
+
   set minimumQuantity(int minimumQuantity) =>
       _$this._minimumQuantity = minimumQuantity;
 
   int _placementInSequence;
+
   int get placementInSequence => _$this._placementInSequence;
+
   set placementInSequence(int placementInSequence) =>
       _$this._placementInSequence = placementInSequence;
 
@@ -370,12 +384,14 @@ class _$SaveComponentsApiComponentActions
       SaveComponentsApiComponentBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.itemSpec,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -407,6 +423,7 @@ class _$SaveComponentsApiComponentActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveComponentsApiComponent);
 }

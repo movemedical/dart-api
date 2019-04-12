@@ -136,17 +136,23 @@ class ListTeamMembersApiRequestBuilder
   _$ListTeamMembersApiRequest _$v;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListTeamMembersApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListTeamMembersApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListTeamMembersApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListTeamMembersApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -266,6 +272,7 @@ class _$ListTeamMembersApiRequestActions
       ListTeamMembersApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -273,6 +280,7 @@ class _$ListTeamMembersApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -296,6 +304,7 @@ class _$ListTeamMembersApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListTeamMembersApiRequest);
 }
