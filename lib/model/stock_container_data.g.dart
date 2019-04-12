@@ -109,16 +109,12 @@ class StockContainerDataBuilder
   _$StockContainerData _$v;
 
   StockContainerType _containerType;
-
   StockContainerType get containerType => _$this._containerType;
-
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
-
   String get containerId => _$this._containerId;
-
   set containerId(String containerId) => _$this._containerId = containerId;
 
   StockContainerDataBuilder();
@@ -201,7 +197,6 @@ class _$StockContainerDataActions extends StockContainerDataActions {
   StockContainerDataBuilder $newBuilder() => StockContainerDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -223,7 +218,6 @@ class _$StockContainerDataActions extends StockContainerDataActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(StockContainerData);
 }

@@ -122,15 +122,11 @@ class ResolveFoundStockApiRequestBuilder
   _$ResolveFoundStockApiRequest _$v;
 
   String _foundStockId;
-
   String get foundStockId => _$this._foundStockId;
-
   set foundStockId(String foundStockId) => _$this._foundStockId = foundStockId;
 
   int _resolveWithStockNumber;
-
   int get resolveWithStockNumber => _$this._resolveWithStockNumber;
-
   set resolveWithStockNumber(int resolveWithStockNumber) =>
       _$this._resolveWithStockNumber = resolveWithStockNumber;
 
@@ -221,7 +217,6 @@ class _$ResolveFoundStockApiRequestActions
       ResolveFoundStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -243,7 +238,6 @@ class _$ResolveFoundStockApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ResolveFoundStockApiRequest);

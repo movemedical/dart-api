@@ -126,18 +126,14 @@ class UpdateImportLogErrorApiRequestBuilder
   _$UpdateImportLogErrorApiRequest _$v;
 
   String _integrationIssueId;
-
   String get integrationIssueId => _$this._integrationIssueId;
-
   set integrationIssueId(String integrationIssueId) =>
       _$this._integrationIssueId = integrationIssueId;
 
   ListBuilder<UpdateImportLogErrorApiImportLogError> _importLogErrors;
-
   ListBuilder<UpdateImportLogErrorApiImportLogError> get importLogErrors =>
       _$this._importLogErrors ??=
           new ListBuilder<UpdateImportLogErrorApiImportLogError>();
-
   set importLogErrors(
           ListBuilder<UpdateImportLogErrorApiImportLogError> importLogErrors) =>
       _$this._importLogErrors = importLogErrors;
@@ -245,7 +241,6 @@ class _$UpdateImportLogErrorApiRequestActions
       UpdateImportLogErrorApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -267,7 +262,6 @@ class _$UpdateImportLogErrorApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateImportLogErrorApiRequest);

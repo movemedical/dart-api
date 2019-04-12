@@ -10,8 +10,8 @@ part 'delete_hcr_matrix_api.g.dart';
 abstract class DeleteHcrMatrixApi extends ApiDispatcher<
     DeleteHcrMatrixApiRequest,
     DeleteHcrMatrixApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteHcrMatrixApi> {
   @override
   String get path => 'v1/directory/people/hcr/hcr_matrix/delete';

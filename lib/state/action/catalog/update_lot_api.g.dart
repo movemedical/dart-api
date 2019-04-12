@@ -10,56 +10,57 @@ part of 'update_lot_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>,
     UpdateLotApi> UpdateLotApiOptions();
 
 class _$UpdateLotApi extends UpdateLotApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>,
       UpdateLotApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>> $replace;
+          CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>>
+      $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>,
           UpdateLotApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>,
           UpdateLotApi, Command<ApiCommand<UpdateLotApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>,
-          UpdateLotApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>,
+          UpdateLotApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>,
           UpdateLotApi, CommandProgress>> $progress;
 
   _$UpdateLotApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateLotApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>,
+            CommandPayload<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>,
                 UpdateLotApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateLotApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateLotApi,
                     Command<ApiCommand<UpdateLotApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateLotApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateLotApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateLotApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateLotApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -68,17 +69,16 @@ class _$UpdateLotApi extends UpdateLotApi {
       _$UpdateLotApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>
       get $initial =>
-          CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>();
+          CommandState<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateLotApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<UpdateLotApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<UpdateLotApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -90,11 +90,10 @@ class _$UpdateLotApi extends UpdateLotApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateLotApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -102,7 +101,8 @@ class _$UpdateLotApi extends UpdateLotApi {
       ApiCommand<UpdateLotApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -112,12 +112,12 @@ class _$UpdateLotApi extends UpdateLotApi {
       UpdateLotApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateLotApiRequest> get commandPayloadSerializer =>
       UpdateLotApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

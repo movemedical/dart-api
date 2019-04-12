@@ -107,9 +107,7 @@ class GetOrderReasonSpecificationApiRequestBuilder
   _$GetOrderReasonSpecificationApiRequest _$v;
 
   String _orderReasonId;
-
   String get orderReasonId => _$this._orderReasonId;
-
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
@@ -193,7 +191,6 @@ class _$GetOrderReasonSpecificationApiRequestActions
       GetOrderReasonSpecificationApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -213,7 +210,6 @@ class _$GetOrderReasonSpecificationApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetOrderReasonSpecificationApiRequest);

@@ -10,8 +10,8 @@ part 'remove_containers_to_be_counted_api.g.dart';
 abstract class RemoveContainersToBeCountedApi extends ApiDispatcher<
     RemoveContainersToBeCountedApiRequest,
     RemoveContainersToBeCountedApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveContainersToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/remove_containers_to_be_counted';

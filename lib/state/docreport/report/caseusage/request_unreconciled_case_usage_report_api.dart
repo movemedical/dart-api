@@ -10,8 +10,8 @@ part 'request_unreconciled_case_usage_report_api.g.dart';
 abstract class RequestUnreconciledCaseUsageReportApi extends ApiDispatcher<
     RequestUnreconciledCaseUsageReportApiRequest,
     RequestUnreconciledCaseUsageReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestUnreconciledCaseUsageReportApi> {
   @override
   String get path => 'v1/docreport/unreconciled_case_usage';

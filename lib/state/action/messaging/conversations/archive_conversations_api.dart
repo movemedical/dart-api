@@ -10,8 +10,8 @@ part 'archive_conversations_api.g.dart';
 abstract class ArchiveConversationsApi extends ApiDispatcher<
     ArchiveConversationsApiRequest,
     ArchiveConversationsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ArchiveConversationsApi> {
   @override
   String get path => 'v1/messaging/conversations/archive';

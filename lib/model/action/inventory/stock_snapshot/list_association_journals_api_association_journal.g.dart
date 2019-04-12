@@ -250,63 +250,45 @@ class ListAssociationJournalsApiAssociationJournalBuilder
   _$ListAssociationJournalsApiAssociationJournal _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   DateTime _date;
-
   DateTime get date => _$this._date;
-
   set date(DateTime date) => _$this._date = date;
 
   StockTransactionType _stockTransactionType;
-
   StockTransactionType get stockTransactionType => _$this._stockTransactionType;
-
   set stockTransactionType(StockTransactionType stockTransactionType) =>
       _$this._stockTransactionType = stockTransactionType;
 
   AssociationType _associationType;
-
   AssociationType get associationType => _$this._associationType;
-
   set associationType(AssociationType associationType) =>
       _$this._associationType = associationType;
 
   String _associationId;
-
   String get associationId => _$this._associationId;
-
   set associationId(String associationId) =>
       _$this._associationId = associationId;
 
   int _quantityChange;
-
   int get quantityChange => _$this._quantityChange;
-
   set quantityChange(int quantityChange) =>
       _$this._quantityChange = quantityChange;
 
   StockReferenceType _transactionReferenceType;
-
   StockReferenceType get transactionReferenceType =>
       _$this._transactionReferenceType;
-
   set transactionReferenceType(StockReferenceType transactionReferenceType) =>
       _$this._transactionReferenceType = transactionReferenceType;
 
   String _transactionReferenceId;
-
   String get transactionReferenceId => _$this._transactionReferenceId;
-
   set transactionReferenceId(String transactionReferenceId) =>
       _$this._transactionReferenceId = transactionReferenceId;
 
@@ -447,7 +429,6 @@ class _$ListAssociationJournalsApiAssociationJournalActions
       ListAssociationJournalsApiAssociationJournalBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -483,7 +464,6 @@ class _$ListAssociationJournalsApiAssociationJournalActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAssociationJournalsApiAssociationJournal);

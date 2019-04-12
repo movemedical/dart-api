@@ -10,8 +10,8 @@ part 'create_bill_to_address_api.g.dart';
 abstract class CreateBillToAddressApi extends ApiDispatcher<
     CreateBillToAddressApiRequest,
     CreateBillToAddressApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateBillToAddressApi> {
   @override
   String get path => 'v1/directory/address/bill_to/create';

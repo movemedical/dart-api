@@ -105,9 +105,7 @@ class UnregisterMobileDeviceApiRequestBuilder
   _$UnregisterMobileDeviceApiRequest _$v;
 
   String _token;
-
   String get token => _$this._token;
-
   set token(String token) => _$this._token = token;
 
   UnregisterMobileDeviceApiRequestBuilder();
@@ -186,7 +184,6 @@ class _$UnregisterMobileDeviceApiRequestActions
       UnregisterMobileDeviceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,7 +203,6 @@ class _$UnregisterMobileDeviceApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UnregisterMobileDeviceApiRequest);

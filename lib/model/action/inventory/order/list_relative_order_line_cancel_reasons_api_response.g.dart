@@ -134,11 +134,9 @@ class ListRelativeOrderLineCancelReasonsApiResponseBuilder
   _$ListRelativeOrderLineCancelReasonsApiResponse _$v;
 
   ListBuilder<ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason> _data;
-
   ListBuilder<ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason>
       get data => _$this._data ??= new ListBuilder<
           ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason>();
-
   set data(
           ListBuilder<
                   ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason>
@@ -146,9 +144,7 @@ class ListRelativeOrderLineCancelReasonsApiResponseBuilder
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListRelativeOrderLineCancelReasonsApiResponseBuilder();
@@ -255,7 +251,6 @@ class _$ListRelativeOrderLineCancelReasonsApiResponseActions
       ListRelativeOrderLineCancelReasonsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -277,7 +272,6 @@ class _$ListRelativeOrderLineCancelReasonsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListRelativeOrderLineCancelReasonsApiResponse);

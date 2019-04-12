@@ -107,9 +107,7 @@ class ListReservationsForStockApiRequestBuilder
   _$ListReservationsForStockApiRequest _$v;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   ListReservationsForStockApiRequestBuilder();
@@ -188,7 +186,6 @@ class _$ListReservationsForStockApiRequestActions
       ListReservationsForStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,7 +205,6 @@ class _$ListReservationsForStockApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListReservationsForStockApiRequest);

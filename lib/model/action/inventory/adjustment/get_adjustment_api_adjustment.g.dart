@@ -403,123 +403,87 @@ class GetAdjustmentApiAdjustmentBuilder
   _$GetAdjustmentApiAdjustment _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   AdjustmentStatus _status;
-
   AdjustmentStatus get status => _$this._status;
-
   set status(AdjustmentStatus status) => _$this._status = status;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   StockPlaceBuilder _stockPlace;
-
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
-
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   DateTime _adjustedDate;
-
   DateTime get adjustedDate => _$this._adjustedDate;
-
   set adjustedDate(DateTime adjustedDate) =>
       _$this._adjustedDate = adjustedDate;
 
   AdjustmentReason _reason;
-
   AdjustmentReason get reason => _$this._reason;
-
   set reason(AdjustmentReason reason) => _$this._reason = reason;
 
   String _adjustedByUserId;
-
   String get adjustedByUserId => _$this._adjustedByUserId;
-
   set adjustedByUserId(String adjustedByUserId) =>
       _$this._adjustedByUserId = adjustedByUserId;
 
   String _adjustedByUserDisplayName;
-
   String get adjustedByUserDisplayName => _$this._adjustedByUserDisplayName;
-
   set adjustedByUserDisplayName(String adjustedByUserDisplayName) =>
       _$this._adjustedByUserDisplayName = adjustedByUserDisplayName;
 
   String _erpReferenceNumber;
-
   String get erpReferenceNumber => _$this._erpReferenceNumber;
-
   set erpReferenceNumber(String erpReferenceNumber) =>
       _$this._erpReferenceNumber = erpReferenceNumber;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   int _qtyChange;
-
   int get qtyChange => _$this._qtyChange;
-
   set qtyChange(int qtyChange) => _$this._qtyChange = qtyChange;
 
   AdjustmentReferenceType _referenceType;
-
   AdjustmentReferenceType get referenceType => _$this._referenceType;
-
   set referenceType(AdjustmentReferenceType referenceType) =>
       _$this._referenceType = referenceType;
 
   String _referenceId;
-
   String get referenceId => _$this._referenceId;
-
   set referenceId(String referenceId) => _$this._referenceId = referenceId;
 
   String _referenceDisplayText;
-
   String get referenceDisplayText => _$this._referenceDisplayText;
-
   set referenceDisplayText(String referenceDisplayText) =>
       _$this._referenceDisplayText = referenceDisplayText;
 
   String _reference2Id;
-
   String get reference2Id => _$this._reference2Id;
-
   set reference2Id(String reference2Id) => _$this._reference2Id = reference2Id;
 
   String _reference2DisplayText;
-
   String get reference2DisplayText => _$this._reference2DisplayText;
-
   set reference2DisplayText(String reference2DisplayText) =>
       _$this._reference2DisplayText = reference2DisplayText;
 
   String _note;
-
   String get note => _$this._note;
-
   set note(String note) => _$this._note = note;
 
   GetAdjustmentApiAdjustmentBuilder();
@@ -743,7 +707,6 @@ class _$GetAdjustmentApiAdjustmentActions
       GetAdjustmentApiAdjustmentBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -752,7 +715,6 @@ class _$GetAdjustmentApiAdjustmentActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -806,7 +768,6 @@ class _$GetAdjustmentApiAdjustmentActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAdjustmentApiAdjustment);
 }

@@ -126,17 +126,13 @@ class AssignIntegrationIssueApiRequestBuilder
   _$AssignIntegrationIssueApiRequest _$v;
 
   ListBuilder<String> _integrationIssueIds;
-
   ListBuilder<String> get integrationIssueIds =>
       _$this._integrationIssueIds ??= new ListBuilder<String>();
-
   set integrationIssueIds(ListBuilder<String> integrationIssueIds) =>
       _$this._integrationIssueIds = integrationIssueIds;
 
   String _assignUserId;
-
   String get assignUserId => _$this._assignUserId;
-
   set assignUserId(String assignUserId) => _$this._assignUserId = assignUserId;
 
   AssignIntegrationIssueApiRequestBuilder();
@@ -240,7 +236,6 @@ class _$AssignIntegrationIssueApiRequestActions
       AssignIntegrationIssueApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -262,7 +257,6 @@ class _$AssignIntegrationIssueApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AssignIntegrationIssueApiRequest);

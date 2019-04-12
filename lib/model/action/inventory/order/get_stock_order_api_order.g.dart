@@ -682,260 +682,188 @@ class GetStockOrderApiOrderBuilder
   _$GetStockOrderApiOrder _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   DateTime _createdDate;
-
   DateTime get createdDate => _$this._createdDate;
-
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   String _createdBy;
-
   String get createdBy => _$this._createdBy;
-
   set createdBy(String createdBy) => _$this._createdBy = createdBy;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   OrderStatus _status;
-
   OrderStatus get status => _$this._status;
-
   set status(OrderStatus status) => _$this._status = status;
 
   String _email;
-
   String get email => _$this._email;
-
   set email(String email) => _$this._email = email;
 
   String _attention;
-
   String get attention => _$this._attention;
-
   set attention(String attention) => _$this._attention = attention;
 
   OrderReasonBuilder _orderReason;
-
   OrderReasonBuilder get orderReason =>
       _$this._orderReason ??= new OrderReasonBuilder();
-
   set orderReason(OrderReasonBuilder orderReason) =>
       _$this._orderReason = orderReason;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationBuilder _location;
-
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
-
   set location(LocationBuilder location) => _$this._location = location;
 
   DateRangeBuilder _deliveryWindow;
-
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
-
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   DateTime _sourceStartDate;
-
   DateTime get sourceStartDate => _$this._sourceStartDate;
-
   set sourceStartDate(DateTime sourceStartDate) =>
       _$this._sourceStartDate = sourceStartDate;
 
   DateTime _expirationCutoff;
-
   DateTime get expirationCutoff => _$this._expirationCutoff;
-
   set expirationCutoff(DateTime expirationCutoff) =>
       _$this._expirationCutoff = expirationCutoff;
 
   ShippingServiceBuilder _shippingService;
-
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
-
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   OrgUnitBuilder _opsOrgUnit;
-
   OrgUnitBuilder get opsOrgUnit => _$this._opsOrgUnit ??= new OrgUnitBuilder();
-
   set opsOrgUnit(OrgUnitBuilder opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   OrgUnitBuilder _salesOrgUnit;
-
   OrgUnitBuilder get salesOrgUnit =>
       _$this._salesOrgUnit ??= new OrgUnitBuilder();
-
   set salesOrgUnit(OrgUnitBuilder salesOrgUnit) =>
       _$this._salesOrgUnit = salesOrgUnit;
 
   LoanLiteBuilder _loan;
-
   LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
-
   set loan(LoanLiteBuilder loan) => _$this._loan = loan;
 
   LoanLiteBuilder _rootLoan;
-
   LoanLiteBuilder get rootLoan => _$this._rootLoan ??= new LoanLiteBuilder();
-
   set rootLoan(LoanLiteBuilder rootLoan) => _$this._rootLoan = rootLoan;
 
   OrderHeaderLiteBuilder _parentOrder;
-
   OrderHeaderLiteBuilder get parentOrder =>
       _$this._parentOrder ??= new OrderHeaderLiteBuilder();
-
   set parentOrder(OrderHeaderLiteBuilder parentOrder) =>
       _$this._parentOrder = parentOrder;
 
   OrderHeaderLiteBuilder _restockForOrder;
-
   OrderHeaderLiteBuilder get restockForOrder =>
       _$this._restockForOrder ??= new OrderHeaderLiteBuilder();
-
   set restockForOrder(OrderHeaderLiteBuilder restockForOrder) =>
       _$this._restockForOrder = restockForOrder;
 
   ListBuilder<OrderHeaderLite> _childOrders;
-
   ListBuilder<OrderHeaderLite> get childOrders =>
       _$this._childOrders ??= new ListBuilder<OrderHeaderLite>();
-
   set childOrders(ListBuilder<OrderHeaderLite> childOrders) =>
       _$this._childOrders = childOrders;
 
   ListBuilder<OrderHeaderLite> _restockOrders;
-
   ListBuilder<OrderHeaderLite> get restockOrders =>
       _$this._restockOrders ??= new ListBuilder<OrderHeaderLite>();
-
   set restockOrders(ListBuilder<OrderHeaderLite> restockOrders) =>
       _$this._restockOrders = restockOrders;
 
   ListBuilder<CaseEventLite> _caseEvents;
-
   ListBuilder<CaseEventLite> get caseEvents =>
       _$this._caseEvents ??= new ListBuilder<CaseEventLite>();
-
   set caseEvents(ListBuilder<CaseEventLite> caseEvents) =>
       _$this._caseEvents = caseEvents;
 
   CustomerAddressBuilder _shipToAddress;
-
   CustomerAddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new CustomerAddressBuilder();
-
   set shipToAddress(CustomerAddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
   String _deliverToAttn;
-
   String get deliverToAttn => _$this._deliverToAttn;
-
   set deliverToAttn(String deliverToAttn) =>
       _$this._deliverToAttn = deliverToAttn;
 
   CustomerAddressBuilder _deliverToAddress;
-
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
-
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   AddressBuilder _deliverToOverride;
-
   AddressBuilder get deliverToOverride =>
       _$this._deliverToOverride ??= new AddressBuilder();
-
   set deliverToOverride(AddressBuilder deliverToOverride) =>
       _$this._deliverToOverride = deliverToOverride;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _erpReference;
-
   String get erpReference => _$this._erpReference;
-
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   ListBuilder<GetStockOrderApiValidationMsg> _validationMsgs;
-
   ListBuilder<GetStockOrderApiValidationMsg> get validationMsgs =>
       _$this._validationMsgs ??=
           new ListBuilder<GetStockOrderApiValidationMsg>();
-
   set validationMsgs(
           ListBuilder<GetStockOrderApiValidationMsg> validationMsgs) =>
       _$this._validationMsgs = validationMsgs;
 
   InventoryTypeBuilder _toInventoryType;
-
   InventoryTypeBuilder get toInventoryType =>
       _$this._toInventoryType ??= new InventoryTypeBuilder();
-
   set toInventoryType(InventoryTypeBuilder toInventoryType) =>
       _$this._toInventoryType = toInventoryType;
 
   LocationBuilder _toHomeLocation;
-
   LocationBuilder get toHomeLocation =>
       _$this._toHomeLocation ??= new LocationBuilder();
-
   set toHomeLocation(LocationBuilder toHomeLocation) =>
       _$this._toHomeLocation = toHomeLocation;
 
   ResponsiblePartyBuilder _toResponsibleParty;
-
   ResponsiblePartyBuilder get toResponsibleParty =>
       _$this._toResponsibleParty ??= new ResponsiblePartyBuilder();
-
   set toResponsibleParty(ResponsiblePartyBuilder toResponsibleParty) =>
       _$this._toResponsibleParty = toResponsibleParty;
 
   String _kitTrayStockId;
-
   String get kitTrayStockId => _$this._kitTrayStockId;
-
   set kitTrayStockId(String kitTrayStockId) =>
       _$this._kitTrayStockId = kitTrayStockId;
 
   StockItemBuilder _restockingKitTray;
-
   StockItemBuilder get restockingKitTray =>
       _$this._restockingKitTray ??= new StockItemBuilder();
-
   set restockingKitTray(StockItemBuilder restockingKitTray) =>
       _$this._restockingKitTray = restockingKitTray;
 
   String _lastWebServiceLogId;
-
   String get lastWebServiceLogId => _$this._lastWebServiceLogId;
-
   set lastWebServiceLogId(String lastWebServiceLogId) =>
       _$this._lastWebServiceLogId = lastWebServiceLogId;
 
@@ -1379,7 +1307,6 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   GetStockOrderApiOrderBuilder $newBuilder() => GetStockOrderApiOrderBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orderReason,
@@ -1402,7 +1329,6 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1492,7 +1418,6 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockOrderApiOrder);
 }

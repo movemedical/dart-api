@@ -649,64 +649,46 @@ class ApiStateBuilder implements Builder<ApiState, ApiStateBuilder> {
   _$ApiState _$v;
 
   String _url;
-
   String get url => _$this._url;
-
   set url(String url) => _$this._url = url;
 
   String _wsUrl;
-
   String get wsUrl => _$this._wsUrl;
-
   set wsUrl(String wsUrl) => _$this._wsUrl = wsUrl;
 
   String _appVersion;
-
   String get appVersion => _$this._appVersion;
-
   set appVersion(String appVersion) => _$this._appVersion = appVersion;
 
   String _platformVersion;
-
   String get platformVersion => _$this._platformVersion;
-
   set platformVersion(String platformVersion) =>
       _$this._platformVersion = platformVersion;
 
   DateTime _wsConnected;
-
   DateTime get wsConnected => _$this._wsConnected;
-
   set wsConnected(DateTime wsConnected) => _$this._wsConnected = wsConnected;
 
   DateTime _wsDisconnected;
-
   DateTime get wsDisconnected => _$this._wsDisconnected;
-
   set wsDisconnected(DateTime wsDisconnected) =>
       _$this._wsDisconnected = wsDisconnected;
 
   String _wsError;
-
   String get wsError => _$this._wsError;
-
   set wsError(String wsError) => _$this._wsError = wsError;
 
   LoginResponseBuilder _activeLogin;
-
   LoginResponseBuilder get activeLogin =>
       _$this._activeLogin ??= new LoginResponseBuilder();
-
   set activeLogin(LoginResponseBuilder activeLogin) =>
       _$this._activeLogin = activeLogin;
 
   CommandStateBuilder<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>
       _loginCommand;
-
   CommandStateBuilder<ApiCommand<LoginRequest>, ApiResult<LoginResponse>>
       get loginCommand => _$this._loginCommand ??= new CommandStateBuilder<
           ApiCommand<LoginRequest>, ApiResult<LoginResponse>>();
-
   set loginCommand(
           CommandStateBuilder<ApiCommand<LoginRequest>,
                   ApiResult<LoginResponse>>
@@ -714,22 +696,18 @@ class ApiStateBuilder implements Builder<ApiState, ApiStateBuilder> {
       _$this._loginCommand = loginCommand;
 
   GetUiSetupMobileApiResponseBuilder _activeSetup;
-
   GetUiSetupMobileApiResponseBuilder get activeSetup =>
       _$this._activeSetup ??= new GetUiSetupMobileApiResponseBuilder();
-
   set activeSetup(GetUiSetupMobileApiResponseBuilder activeSetup) =>
       _$this._activeSetup = activeSetup;
 
   CommandStateBuilder<ApiCommand<GetUiSetupMobileApiRequest>,
       ApiResult<GetUiSetupMobileApiResponse>> _setupCommand;
-
   CommandStateBuilder<ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>
       get setupCommand => _$this._setupCommand ??= new CommandStateBuilder<
           ApiCommand<GetUiSetupMobileApiRequest>,
           ApiResult<GetUiSetupMobileApiResponse>>();
-
   set setupCommand(
           CommandStateBuilder<ApiCommand<GetUiSetupMobileApiRequest>,
                   ApiResult<GetUiSetupMobileApiResponse>>
@@ -872,21 +850,15 @@ class ApiCommandBuilder<REQ>
   _$ApiCommand<REQ> _$v;
 
   String _path;
-
   String get path => _$this._path;
-
   set path(String path) => _$this._path = path;
 
   bool _unsecured;
-
   bool get unsecured => _$this._unsecured;
-
   set unsecured(bool unsecured) => _$this._unsecured = unsecured;
 
   REQ _payload;
-
   REQ get payload => _$this._payload;
-
   set payload(REQ payload) => _$this._payload = payload;
 
   ApiCommandBuilder();
@@ -991,27 +963,19 @@ class ApiResultBuilder<RESP>
   _$ApiResult<RESP> _$v;
 
   ApiResultCode _code;
-
   ApiResultCode get code => _$this._code;
-
   set code(ApiResultCode code) => _$this._code = code;
 
   int _statusCode;
-
   int get statusCode => _$this._statusCode;
-
   set statusCode(int statusCode) => _$this._statusCode = statusCode;
 
   String _message;
-
   String get message => _$this._message;
-
   set message(String message) => _$this._message = message;
 
   RESP _value;
-
   RESP get value => _$this._value;
-
   set value(RESP value) => _$this._value = value;
 
   ApiResultBuilder();
@@ -1100,21 +1064,15 @@ class LoginRequestBuilder
   _$LoginRequest _$v;
 
   String _email;
-
   String get email => _$this._email;
-
   set email(String email) => _$this._email = email;
 
   String _password;
-
   String get password => _$this._password;
-
   set password(String password) => _$this._password = password;
 
   String _session;
-
   String get session => _$this._session;
-
   set session(String session) => _$this._session = session;
 
   LoginRequestBuilder();
@@ -1222,36 +1180,26 @@ class LoginResponseBuilder
   _$LoginResponse _$v;
 
   DateTime _moveSessionExpires;
-
   DateTime get moveSessionExpires => _$this._moveSessionExpires;
-
   set moveSessionExpires(DateTime moveSessionExpires) =>
       _$this._moveSessionExpires = moveSessionExpires;
 
   String _moveSessionId;
-
   String get moveSessionId => _$this._moveSessionId;
-
   set moveSessionId(String moveSessionId) =>
       _$this._moveSessionId = moveSessionId;
 
   String _moveUserId;
-
   String get moveUserId => _$this._moveUserId;
-
   set moveUserId(String moveUserId) => _$this._moveUserId = moveUserId;
 
   String _moveWebsocketEndpoint;
-
   String get moveWebsocketEndpoint => _$this._moveWebsocketEndpoint;
-
   set moveWebsocketEndpoint(String moveWebsocketEndpoint) =>
       _$this._moveWebsocketEndpoint = moveWebsocketEndpoint;
 
   bool _pendingMfa;
-
   bool get pendingMfa => _$this._pendingMfa;
-
   set pendingMfa(bool pendingMfa) => _$this._pendingMfa = pendingMfa;
 
   LoginResponseBuilder();
@@ -1395,7 +1343,6 @@ class _$ApiActions extends ApiActions {
   ApiStateBuilder $newBuilder() => ApiStateBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.push,
@@ -1404,7 +1351,6 @@ class _$ApiActions extends ApiActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1446,7 +1392,6 @@ class _$ApiActions extends ApiActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ApiState);
 }
@@ -1484,7 +1429,6 @@ class _$LoginRequestActions extends LoginRequestActions {
   LoginRequestBuilder $newBuilder() => LoginRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1508,7 +1452,6 @@ class _$LoginRequestActions extends LoginRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(LoginRequest);
 }
@@ -1583,7 +1526,6 @@ class _$LoginDispatcher extends LoginDispatcher {
           ApiResult<LoginResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1595,7 +1537,6 @@ class _$LoginDispatcher extends LoginDispatcher {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(LoginRequest)]),

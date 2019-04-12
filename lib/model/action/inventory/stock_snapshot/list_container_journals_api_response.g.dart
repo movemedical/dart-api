@@ -124,18 +124,14 @@ class ListContainerJournalsApiResponseBuilder
   _$ListContainerJournalsApiResponse _$v;
 
   ListBuilder<ListContainerJournalsApiContainerJournal> _data;
-
   ListBuilder<ListContainerJournalsApiContainerJournal> get data =>
       _$this._data ??=
           new ListBuilder<ListContainerJournalsApiContainerJournal>();
-
   set data(ListBuilder<ListContainerJournalsApiContainerJournal> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListContainerJournalsApiResponseBuilder();
@@ -234,7 +230,6 @@ class _$ListContainerJournalsApiResponseActions
       ListContainerJournalsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -256,7 +251,6 @@ class _$ListContainerJournalsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListContainerJournalsApiResponse);

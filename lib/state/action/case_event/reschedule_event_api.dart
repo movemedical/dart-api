@@ -10,8 +10,8 @@ part 'reschedule_event_api.g.dart';
 abstract class RescheduleEventApi extends ApiDispatcher<
     RescheduleEventApiRequest,
     RescheduleEventApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RescheduleEventApi> {
   @override
   String get path => 'v1/case_event/reschedule';

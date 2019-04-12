@@ -215,49 +215,35 @@ class ListPreferenceCardItemsApiPreferenceCardItemBuilder
   _$ListPreferenceCardItemsApiPreferenceCardItem _$v;
 
   String _preferenceCardItemId;
-
   String get preferenceCardItemId => _$this._preferenceCardItemId;
-
   set preferenceCardItemId(String preferenceCardItemId) =>
       _$this._preferenceCardItemId = preferenceCardItemId;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemNumber;
-
   String get itemNumber => _$this._itemNumber;
-
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _itemDescription;
-
   String get itemDescription => _$this._itemDescription;
-
   set itemDescription(String itemDescription) =>
       _$this._itemDescription = itemDescription;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   MoveItemType _moveItemType;
-
   MoveItemType get moveItemType => _$this._moveItemType;
-
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   int _quantity;
-
   int get quantity => _$this._quantity;
-
   set quantity(int quantity) => _$this._quantity = quantity;
 
   ListPreferenceCardItemsApiPreferenceCardItemBuilder();
@@ -381,7 +367,6 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
       ListPreferenceCardItemsApiPreferenceCardItemBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -413,7 +398,6 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPreferenceCardItemsApiPreferenceCardItem);

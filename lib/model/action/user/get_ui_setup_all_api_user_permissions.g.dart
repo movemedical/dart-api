@@ -315,85 +315,59 @@ class GetUiSetupAllApiUserPermissionsBuilder
   _$GetUiSetupAllApiUserPermissions _$v;
 
   bool _directoryAdmin;
-
   bool get directoryAdmin => _$this._directoryAdmin;
-
   set directoryAdmin(bool directoryAdmin) =>
       _$this._directoryAdmin = directoryAdmin;
 
   bool _manageCatalog;
-
   bool get manageCatalog => _$this._manageCatalog;
-
   set manageCatalog(bool manageCatalog) =>
       _$this._manageCatalog = manageCatalog;
 
   bool _phiAllowed;
-
   bool get phiAllowed => _$this._phiAllowed;
-
   set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
 
   bool _createCase;
-
   bool get createCase => _$this._createCase;
-
   set createCase(bool createCase) => _$this._createCase = createCase;
 
   bool _manageUsers;
-
   bool get manageUsers => _$this._manageUsers;
-
   set manageUsers(bool manageUsers) => _$this._manageUsers = manageUsers;
 
   bool _orgAdmin;
-
   bool get orgAdmin => _$this._orgAdmin;
-
   set orgAdmin(bool orgAdmin) => _$this._orgAdmin = orgAdmin;
 
   bool _createStock;
-
   bool get createStock => _$this._createStock;
-
   set createStock(bool createStock) => _$this._createStock = createStock;
 
   bool _createSalesOrder;
-
   bool get createSalesOrder => _$this._createSalesOrder;
-
   set createSalesOrder(bool createSalesOrder) =>
       _$this._createSalesOrder = createSalesOrder;
 
   bool _createStockOrder;
-
   bool get createStockOrder => _$this._createStockOrder;
-
   set createStockOrder(bool createStockOrder) =>
       _$this._createStockOrder = createStockOrder;
 
   bool _createAudit;
-
   bool get createAudit => _$this._createAudit;
-
   set createAudit(bool createAudit) => _$this._createAudit = createAudit;
 
   bool _getPricing;
-
   bool get getPricing => _$this._getPricing;
-
   set getPricing(bool getPricing) => _$this._getPricing = getPricing;
 
   bool _requestLoan;
-
   bool get requestLoan => _$this._requestLoan;
-
   set requestLoan(bool requestLoan) => _$this._requestLoan = requestLoan;
 
   bool _createLoan;
-
   bool get createLoan => _$this._createLoan;
-
   set createLoan(bool createLoan) => _$this._createLoan = createLoan;
 
   GetUiSetupAllApiUserPermissionsBuilder();
@@ -545,7 +519,6 @@ class _$GetUiSetupAllApiUserPermissionsActions
       GetUiSetupAllApiUserPermissionsBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -589,7 +562,6 @@ class _$GetUiSetupAllApiUserPermissionsActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetUiSetupAllApiUserPermissions);

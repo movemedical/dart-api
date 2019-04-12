@@ -112,11 +112,9 @@ class ListCalendarSubscriptionsApiResponseBuilder
   _$ListCalendarSubscriptionsApiResponse _$v;
 
   ListBuilder<ListCalendarSubscriptionsApiCalendarSubscription> _subscriptions;
-
   ListBuilder<ListCalendarSubscriptionsApiCalendarSubscription>
       get subscriptions => _$this._subscriptions ??=
           new ListBuilder<ListCalendarSubscriptionsApiCalendarSubscription>();
-
   set subscriptions(
           ListBuilder<ListCalendarSubscriptionsApiCalendarSubscription>
               subscriptions) =>
@@ -220,7 +218,6 @@ class _$ListCalendarSubscriptionsApiResponseActions
       ListCalendarSubscriptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -240,7 +237,6 @@ class _$ListCalendarSubscriptionsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCalendarSubscriptionsApiResponse);

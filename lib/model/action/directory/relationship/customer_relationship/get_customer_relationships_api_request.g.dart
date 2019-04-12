@@ -107,9 +107,7 @@ class GetCustomerRelationshipsApiRequestBuilder
   _$GetCustomerRelationshipsApiRequest _$v;
 
   String _customerId;
-
   String get customerId => _$this._customerId;
-
   set customerId(String customerId) => _$this._customerId = customerId;
 
   GetCustomerRelationshipsApiRequestBuilder();
@@ -188,7 +186,6 @@ class _$GetCustomerRelationshipsApiRequestActions
       GetCustomerRelationshipsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,7 +205,6 @@ class _$GetCustomerRelationshipsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCustomerRelationshipsApiRequest);

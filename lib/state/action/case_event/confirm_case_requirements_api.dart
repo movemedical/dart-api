@@ -10,8 +10,8 @@ part 'confirm_case_requirements_api.g.dart';
 abstract class ConfirmCaseRequirementsApi extends ApiDispatcher<
     ConfirmCaseRequirementsApiRequest,
     ConfirmCaseRequirementsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ConfirmCaseRequirementsApi> {
   @override
   String get path => 'v1/case_event/requirement/confirm';

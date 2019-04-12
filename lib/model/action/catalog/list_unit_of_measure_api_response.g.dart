@@ -122,16 +122,12 @@ class ListUnitOfMeasureApiResponseBuilder
   _$ListUnitOfMeasureApiResponse _$v;
 
   ListBuilder<UnitOfMeasure> _data;
-
   ListBuilder<UnitOfMeasure> get data =>
       _$this._data ??= new ListBuilder<UnitOfMeasure>();
-
   set data(ListBuilder<UnitOfMeasure> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListUnitOfMeasureApiResponseBuilder();
@@ -227,7 +223,6 @@ class _$ListUnitOfMeasureApiResponseActions
       ListUnitOfMeasureApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,7 +244,6 @@ class _$ListUnitOfMeasureApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUnitOfMeasureApiResponse);

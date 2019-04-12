@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/audit/edit_audit_api_requ
 part 'edit_audit_api.g.dart';
 
 abstract class EditAuditApi extends ApiDispatcher<EditAuditApiRequest,
-    EditAuditApiRequestBuilder, Empty, EmptyBuilder, EditAuditApi> {
+    EditAuditApiRequestBuilder, Nothing, NothingBuilder, EditAuditApi> {
   @override
   String get path => 'v1/inventory/audit/edit_audit';
 

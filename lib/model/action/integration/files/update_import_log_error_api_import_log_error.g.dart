@@ -157,28 +157,20 @@ class UpdateImportLogErrorApiImportLogErrorBuilder
   _$UpdateImportLogErrorApiImportLogError _$v;
 
   String _importLogErrorId;
-
   String get importLogErrorId => _$this._importLogErrorId;
-
   set importLogErrorId(String importLogErrorId) =>
       _$this._importLogErrorId = importLogErrorId;
 
   String _updatedData;
-
   String get updatedData => _$this._updatedData;
-
   set updatedData(String updatedData) => _$this._updatedData = updatedData;
 
   bool _ignore;
-
   bool get ignore => _$this._ignore;
-
   set ignore(bool ignore) => _$this._ignore = ignore;
 
   String _resolutionMessage;
-
   String get resolutionMessage => _$this._resolutionMessage;
-
   set resolutionMessage(String resolutionMessage) =>
       _$this._resolutionMessage = resolutionMessage;
 
@@ -283,7 +275,6 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
       UpdateImportLogErrorApiImportLogErrorBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -309,7 +300,6 @@ class _$UpdateImportLogErrorApiImportLogErrorActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateImportLogErrorApiImportLogError);

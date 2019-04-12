@@ -150,25 +150,19 @@ class ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder
   _$ListItemCategoriesLinkedToItemApiLinkedCategoryPath _$v;
 
   String _itemCategoryId;
-
   String get itemCategoryId => _$this._itemCategoryId;
-
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
   String _itemCategoryName;
-
   String get itemCategoryName => _$this._itemCategoryName;
-
   set itemCategoryName(String itemCategoryName) =>
       _$this._itemCategoryName = itemCategoryName;
 
   ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder _nextPath;
-
   ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder get nextPath =>
       _$this._nextPath ??=
           new ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder();
-
   set nextPath(
           ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder
               nextPath) =>
@@ -292,7 +286,6 @@ class _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions
       ListItemCategoriesLinkedToItemApiLinkedCategoryPathBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -316,7 +309,6 @@ class _$ListItemCategoriesLinkedToItemApiLinkedCategoryPathActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListItemCategoriesLinkedToItemApiLinkedCategoryPath);

@@ -153,24 +153,18 @@ class ListStockForSourcingMatrixApiLineAvailabilityBuilder
   _$ListStockForSourcingMatrixApiLineAvailability _$v;
 
   String _locationKey;
-
   String get locationKey => _$this._locationKey;
-
   set locationKey(String locationKey) => _$this._locationKey = locationKey;
 
   ListBuilder<String> _availableStockIds;
-
   ListBuilder<String> get availableStockIds =>
       _$this._availableStockIds ??= new ListBuilder<String>();
-
   set availableStockIds(ListBuilder<String> availableStockIds) =>
       _$this._availableStockIds = availableStockIds;
 
   ListBuilder<String> _availableQuestionableStockIds;
-
   ListBuilder<String> get availableQuestionableStockIds =>
       _$this._availableQuestionableStockIds ??= new ListBuilder<String>();
-
   set availableQuestionableStockIds(
           ListBuilder<String> availableQuestionableStockIds) =>
       _$this._availableQuestionableStockIds = availableQuestionableStockIds;
@@ -294,7 +288,6 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
       ListStockForSourcingMatrixApiLineAvailabilityBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -318,7 +311,6 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForSourcingMatrixApiLineAvailability);

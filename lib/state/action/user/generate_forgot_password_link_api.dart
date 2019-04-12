@@ -10,8 +10,8 @@ part 'generate_forgot_password_link_api.g.dart';
 abstract class GenerateForgotPasswordLinkApi extends ApiDispatcher<
     GenerateForgotPasswordLinkApiRequest,
     GenerateForgotPasswordLinkApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     GenerateForgotPasswordLinkApi> {
   @override
   String get path => 'nsapi/v1/user/generate_forgot_password_token';

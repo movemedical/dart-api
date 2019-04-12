@@ -10,8 +10,8 @@ part 'refresh_presence_api.g.dart';
 abstract class RefreshPresenceApi extends ApiDispatcher<
     RefreshPresenceApiRequest,
     RefreshPresenceApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RefreshPresenceApi> {
   @override
   String get path => 'v1/user/presence/refresh';

@@ -10,64 +10,65 @@ part of 'commission_tags_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<CommissionTagsApiRequest>,
+        ApiResult<Nothing>>,
     CommissionTagsApi> CommissionTagsApiOptions();
 
 class _$CommissionTagsApi extends CommissionTagsApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CommissionTagsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommissionTagsApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<CommissionTagsApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>,
           CommissionTagsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CommissionTagsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           CommissionTagsApi,
           Command<ApiCommand<CommissionTagsApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>,
-          CommissionTagsApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>,
+          CommissionTagsApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>,
           CommissionTagsApi, CommandProgress>> $progress;
 
   _$CommissionTagsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CommissionTagsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CommissionTagsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CommissionTagsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CommissionTagsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CommissionTagsApi,
                     Command<ApiCommand<CommissionTagsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<CommissionTagsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CommissionTagsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CommissionTagsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CommissionTagsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -76,17 +77,16 @@ class _$CommissionTagsApi extends CommissionTagsApi {
       _$CommissionTagsApi._(options());
 
   @override
-  CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<CommissionTagsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CommissionTagsApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<CommissionTagsApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<CommissionTagsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,11 +98,10 @@ class _$CommissionTagsApi extends CommissionTagsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CommissionTagsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -110,7 +109,8 @@ class _$CommissionTagsApi extends CommissionTagsApi {
       ApiCommand<CommissionTagsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -120,12 +120,12 @@ class _$CommissionTagsApi extends CommissionTagsApi {
       CommissionTagsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<CommissionTagsApiRequest> get commandPayloadSerializer =>
       CommissionTagsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -11,47 +11,47 @@ part of 'update_preference_card_product_groups_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdatePreferenceCardProductGroupsApi> UpdatePreferenceCardProductGroupsApiOptions();
 
 class _$UpdatePreferenceCardProductGroupsApi
     extends UpdatePreferenceCardProductGroupsApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdatePreferenceCardProductGroupsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdatePreferenceCardProductGroupsApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               UpdatePreferenceCardProductGroupsApi,
               Command<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdatePreferenceCardProductGroupsApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdatePreferenceCardProductGroupsApi,
           CommandProgress>> $progress;
 
@@ -59,17 +59,17 @@ class _$UpdatePreferenceCardProductGroupsApi
       : $replace = $options.action<
             CommandState<
                 ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdatePreferenceCardProductGroupsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdatePreferenceCardProductGroupsApi,
                     Command<
                         ApiCommand<
@@ -78,14 +78,14 @@ class _$UpdatePreferenceCardProductGroupsApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdatePreferenceCardProductGroupsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdatePreferenceCardProductGroupsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -96,20 +96,19 @@ class _$UpdatePreferenceCardProductGroupsApi
 
   @override
   CommandState<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -121,12 +120,11 @@ class _$UpdatePreferenceCardProductGroupsApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand,
             [FullType(UpdatePreferenceCardProductGroupsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -135,7 +133,8 @@ class _$UpdatePreferenceCardProductGroupsApi
           ApiCommand<UpdatePreferenceCardProductGroupsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -146,7 +145,7 @@ class _$UpdatePreferenceCardProductGroupsApi
           UpdatePreferenceCardProductGroupsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdatePreferenceCardProductGroupsApiRequest>
@@ -154,5 +153,5 @@ class _$UpdatePreferenceCardProductGroupsApi
           UpdatePreferenceCardProductGroupsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

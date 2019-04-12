@@ -10,8 +10,8 @@ part 'deliver_packages2_api.g.dart';
 abstract class DeliverPackages2Api extends ApiDispatcher<
     DeliverPackages2ApiRequest,
     DeliverPackages2ApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeliverPackages2Api> {
   @override
   String get path => 'v1/inventory/pkg/deliver2';

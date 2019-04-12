@@ -1,8 +1,6 @@
-import 'package:modux/modux.dart';
 import 'package:movemedical_api/command.dart';
-import 'package:test/test.dart';
-
 import 'package:movemedical_api/model/action/user/get_ui_setup_mobile_api_response.dart';
+import 'package:test/test.dart';
 
 import 's.ser.dart';
 import 'store_io.dart';

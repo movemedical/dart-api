@@ -122,16 +122,12 @@ class ListFacilityDelegatesApiResponseBuilder
   _$ListFacilityDelegatesApiResponse _$v;
 
   ListBuilder<Delegate> _data;
-
   ListBuilder<Delegate> get data =>
       _$this._data ??= new ListBuilder<Delegate>();
-
   set data(ListBuilder<Delegate> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListFacilityDelegatesApiResponseBuilder();
@@ -228,7 +224,6 @@ class _$ListFacilityDelegatesApiResponseActions
       ListFacilityDelegatesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$ListFacilityDelegatesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListFacilityDelegatesApiResponse);

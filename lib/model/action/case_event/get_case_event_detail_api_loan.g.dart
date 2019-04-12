@@ -186,39 +186,27 @@ class GetCaseEventDetailApiLoanBuilder
   _$GetCaseEventDetailApiLoan _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _loanNumber;
-
   int get loanNumber => _$this._loanNumber;
-
   set loanNumber(int loanNumber) => _$this._loanNumber = loanNumber;
 
   LoanStatus _loanStatus;
-
   LoanStatus get loanStatus => _$this._loanStatus;
-
   set loanStatus(LoanStatus loanStatus) => _$this._loanStatus = loanStatus;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   int _orderNumber;
-
   int get orderNumber => _$this._orderNumber;
-
   set orderNumber(int orderNumber) => _$this._orderNumber = orderNumber;
 
   OrderStatus _orderStatus;
-
   OrderStatus get orderStatus => _$this._orderStatus;
-
   set orderStatus(OrderStatus orderStatus) => _$this._orderStatus = orderStatus;
 
   GetCaseEventDetailApiLoanBuilder();
@@ -328,7 +316,6 @@ class _$GetCaseEventDetailApiLoanActions
       GetCaseEventDetailApiLoanBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -358,7 +345,6 @@ class _$GetCaseEventDetailApiLoanActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetCaseEventDetailApiLoan);
 }

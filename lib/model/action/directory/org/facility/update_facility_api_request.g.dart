@@ -593,213 +593,151 @@ class UpdateFacilityApiRequestBuilder
   _$UpdateFacilityApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   FacilityType _facilityType;
-
   FacilityType get facilityType => _$this._facilityType;
-
   set facilityType(FacilityType facilityType) =>
       _$this._facilityType = facilityType;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   PersonNameBuilder _contactName;
-
   PersonNameBuilder get contactName =>
       _$this._contactName ??= new PersonNameBuilder();
-
   set contactName(PersonNameBuilder contactName) =>
       _$this._contactName = contactName;
 
   PhoneNumberBuilder _contactPhone;
-
   PhoneNumberBuilder get contactPhone =>
       _$this._contactPhone ??= new PhoneNumberBuilder();
-
   set contactPhone(PhoneNumberBuilder contactPhone) =>
       _$this._contactPhone = contactPhone;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   CaseLoaningMethodology _caseLoaningMethodology;
-
   CaseLoaningMethodology get caseLoaningMethodology =>
       _$this._caseLoaningMethodology;
-
   set caseLoaningMethodology(CaseLoaningMethodology caseLoaningMethodology) =>
       _$this._caseLoaningMethodology = caseLoaningMethodology;
 
   RestockType _restockType;
-
   RestockType get restockType => _$this._restockType;
-
   set restockType(RestockType restockType) => _$this._restockType = restockType;
 
   bool _binManaged;
-
   bool get binManaged => _$this._binManaged;
-
   set binManaged(bool binManaged) => _$this._binManaged = binManaged;
 
   bool _autoPutAway;
-
   bool get autoPutAway => _$this._autoPutAway;
-
   set autoPutAway(bool autoPutAway) => _$this._autoPutAway = autoPutAway;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   String _opsScheduleProfileId;
-
   String get opsScheduleProfileId => _$this._opsScheduleProfileId;
-
   set opsScheduleProfileId(String opsScheduleProfileId) =>
       _$this._opsScheduleProfileId = opsScheduleProfileId;
 
   String _deliveryScheduleProfileId;
-
   String get deliveryScheduleProfileId => _$this._deliveryScheduleProfileId;
-
   set deliveryScheduleProfileId(String deliveryScheduleProfileId) =>
       _$this._deliveryScheduleProfileId = deliveryScheduleProfileId;
 
   String _courierProfileId;
-
   String get courierProfileId => _$this._courierProfileId;
-
   set courierProfileId(String courierProfileId) =>
       _$this._courierProfileId = courierProfileId;
 
   int _lagTime;
-
   int get lagTime => _$this._lagTime;
-
   set lagTime(int lagTime) => _$this._lagTime = lagTime;
 
   bool _splitImplantsAndInstruments;
-
   bool get splitImplantsAndInstruments => _$this._splitImplantsAndInstruments;
-
   set splitImplantsAndInstruments(bool splitImplantsAndInstruments) =>
       _$this._splitImplantsAndInstruments = splitImplantsAndInstruments;
 
   int _turnTimeInMinutes;
-
   int get turnTimeInMinutes => _$this._turnTimeInMinutes;
-
   set turnTimeInMinutes(int turnTimeInMinutes) =>
       _$this._turnTimeInMinutes = turnTimeInMinutes;
 
   LoanSplitMethod _loanSplitMethod;
-
   LoanSplitMethod get loanSplitMethod => _$this._loanSplitMethod;
-
   set loanSplitMethod(LoanSplitMethod loanSplitMethod) =>
       _$this._loanSplitMethod = loanSplitMethod;
 
   bool _optimizeLoans;
-
   bool get optimizeLoans => _$this._optimizeLoans;
-
   set optimizeLoans(bool optimizeLoans) =>
       _$this._optimizeLoans = optimizeLoans;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   bool _publicVisible;
-
   bool get publicVisible => _$this._publicVisible;
-
   set publicVisible(bool publicVisible) =>
       _$this._publicVisible = publicVisible;
 
   String _customerId;
-
   String get customerId => _$this._customerId;
-
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _shipToAddressId;
-
   String get shipToAddressId => _$this._shipToAddressId;
-
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   AddressBuilder _shipToAddress;
-
   AddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new AddressBuilder();
-
   set shipToAddress(AddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
   String _shipToAddressCustomerKey;
-
   String get shipToAddressCustomerKey => _$this._shipToAddressCustomerKey;
-
   set shipToAddressCustomerKey(String shipToAddressCustomerKey) =>
       _$this._shipToAddressCustomerKey = shipToAddressCustomerKey;
 
   String _shipToReference_1;
-
   String get shipToReference_1 => _$this._shipToReference_1;
-
   set shipToReference_1(String shipToReference_1) =>
       _$this._shipToReference_1 = shipToReference_1;
 
   String _shipToReference_2;
-
   String get shipToReference_2 => _$this._shipToReference_2;
-
   set shipToReference_2(String shipToReference_2) =>
       _$this._shipToReference_2 = shipToReference_2;
 
   String _defaultBillToAddressId;
-
   String get defaultBillToAddressId => _$this._defaultBillToAddressId;
-
   set defaultBillToAddressId(String defaultBillToAddressId) =>
       _$this._defaultBillToAddressId = defaultBillToAddressId;
 
   String _defaultDeliverToAddressId;
-
   String get defaultDeliverToAddressId => _$this._defaultDeliverToAddressId;
-
   set defaultDeliverToAddressId(String defaultDeliverToAddressId) =>
       _$this._defaultDeliverToAddressId = defaultDeliverToAddressId;
 
   AddressBuilder _defaultDeliverToAddress;
-
   AddressBuilder get defaultDeliverToAddress =>
       _$this._defaultDeliverToAddress ??= new AddressBuilder();
-
   set defaultDeliverToAddress(AddressBuilder defaultDeliverToAddress) =>
       _$this._defaultDeliverToAddress = defaultDeliverToAddress;
 
@@ -1130,7 +1068,6 @@ class _$UpdateFacilityApiRequestActions
       UpdateFacilityApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.contactName,
@@ -1141,7 +1078,6 @@ class _$UpdateFacilityApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1221,7 +1157,6 @@ class _$UpdateFacilityApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateFacilityApiRequest);
 }

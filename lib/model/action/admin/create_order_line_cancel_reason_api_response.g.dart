@@ -107,9 +107,7 @@ class CreateOrderLineCancelReasonApiResponseBuilder
   _$CreateOrderLineCancelReasonApiResponse _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   CreateOrderLineCancelReasonApiResponseBuilder();
@@ -188,7 +186,6 @@ class _$CreateOrderLineCancelReasonApiResponseActions
       CreateOrderLineCancelReasonApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,7 +205,6 @@ class _$CreateOrderLineCancelReasonApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateOrderLineCancelReasonApiResponse);

@@ -174,35 +174,25 @@ class ListCaseUsageApiCaseUsageConstructBuilder
   _$ListCaseUsageApiCaseUsageConstruct _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _priceConstructId;
-
   String get priceConstructId => _$this._priceConstructId;
-
   set priceConstructId(String priceConstructId) =>
       _$this._priceConstructId = priceConstructId;
 
   String _priceConstructNumber;
-
   String get priceConstructNumber => _$this._priceConstructNumber;
-
   set priceConstructNumber(String priceConstructNumber) =>
       _$this._priceConstructNumber = priceConstructNumber;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   ListCaseUsageApiCaseUsageConstructBuilder();
@@ -311,7 +301,6 @@ class _$ListCaseUsageApiCaseUsageConstructActions
       ListCaseUsageApiCaseUsageConstructBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -339,7 +328,6 @@ class _$ListCaseUsageApiCaseUsageConstructActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCaseUsageApiCaseUsageConstruct);

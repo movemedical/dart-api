@@ -423,126 +423,88 @@ class SaveAeToOrgUnitApiRequestBuilder
   _$SaveAeToOrgUnitApiRequest _$v;
 
   String _directLinkIdOverride;
-
   String get directLinkIdOverride => _$this._directLinkIdOverride;
-
   set directLinkIdOverride(String directLinkIdOverride) =>
       _$this._directLinkIdOverride = directLinkIdOverride;
 
   String _userRoleId;
-
   String get userRoleId => _$this._userRoleId;
-
   set userRoleId(String userRoleId) => _$this._userRoleId = userRoleId;
 
   String _aeId;
-
   String get aeId => _$this._aeId;
-
   set aeId(String aeId) => _$this._aeId = aeId;
 
   String _orgUnitId;
-
   String get orgUnitId => _$this._orgUnitId;
-
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   OuAccessType _ouAccessType;
-
   OuAccessType get ouAccessType => _$this._ouAccessType;
-
   set ouAccessType(OuAccessType ouAccessType) =>
       _$this._ouAccessType = ouAccessType;
 
   bool _createCase;
-
   bool get createCase => _$this._createCase;
-
   set createCase(bool createCase) => _$this._createCase = createCase;
 
   bool _editCase;
-
   bool get editCase => _$this._editCase;
-
   set editCase(bool editCase) => _$this._editCase = editCase;
 
   bool _processOrders;
-
   bool get processOrders => _$this._processOrders;
-
   set processOrders(bool processOrders) =>
       _$this._processOrders = processOrders;
 
   bool _manageCatalog;
-
   bool get manageCatalog => _$this._manageCatalog;
-
   set manageCatalog(bool manageCatalog) =>
       _$this._manageCatalog = manageCatalog;
 
   bool _manageUsers;
-
   bool get manageUsers => _$this._manageUsers;
-
   set manageUsers(bool manageUsers) => _$this._manageUsers = manageUsers;
 
   bool _manageAudit;
-
   bool get manageAudit => _$this._manageAudit;
-
   set manageAudit(bool manageAudit) => _$this._manageAudit = manageAudit;
 
   bool _performAudit;
-
   bool get performAudit => _$this._performAudit;
-
   set performAudit(bool performAudit) => _$this._performAudit = performAudit;
 
   bool _requestLoan;
-
   bool get requestLoan => _$this._requestLoan;
-
   set requestLoan(bool requestLoan) => _$this._requestLoan = requestLoan;
 
   bool _approveLoan;
-
   bool get approveLoan => _$this._approveLoan;
-
   set approveLoan(bool approveLoan) => _$this._approveLoan = approveLoan;
 
   double _approveLoanMax;
-
   double get approveLoanMax => _$this._approveLoanMax;
-
   set approveLoanMax(double approveLoanMax) =>
       _$this._approveLoanMax = approveLoanMax;
 
   bool _createAudit;
-
   bool get createAudit => _$this._createAudit;
-
   set createAudit(bool createAudit) => _$this._createAudit = createAudit;
 
   bool _manageZone;
-
   bool get manageZone => _$this._manageZone;
-
   set manageZone(bool manageZone) => _$this._manageZone = manageZone;
 
   bool _approveSalesOrders;
-
   bool get approveSalesOrders => _$this._approveSalesOrders;
-
   set approveSalesOrders(bool approveSalesOrders) =>
       _$this._approveSalesOrders = approveSalesOrders;
 
   ListBuilder<SaveAeToOrgUnitApiInventoryTypePermission>
       _inventoryTypePermissions;
-
   ListBuilder<SaveAeToOrgUnitApiInventoryTypePermission>
       get inventoryTypePermissions => _$this._inventoryTypePermissions ??=
           new ListBuilder<SaveAeToOrgUnitApiInventoryTypePermission>();
-
   set inventoryTypePermissions(
           ListBuilder<SaveAeToOrgUnitApiInventoryTypePermission>
               inventoryTypePermissions) =>
@@ -753,7 +715,6 @@ class _$SaveAeToOrgUnitApiRequestActions
       SaveAeToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -809,7 +770,6 @@ class _$SaveAeToOrgUnitApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveAeToOrgUnitApiRequest);
 }

@@ -10,8 +10,8 @@ part 'save_case_requirements_api.g.dart';
 abstract class SaveCaseRequirementsApi extends ApiDispatcher<
     SaveCaseRequirementsApiRequest,
     SaveCaseRequirementsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveCaseRequirementsApi> {
   @override
   String get path => 'v1/case_event/requirement/save';

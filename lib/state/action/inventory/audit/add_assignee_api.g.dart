@@ -10,57 +10,61 @@ part of 'add_assignee_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>,
     AddAssigneeApi> AddAssigneeApiOptions();
 
 class _$AddAssigneeApi extends AddAssigneeApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>,
+          ApiResult<Nothing>>,
       AddAssigneeApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>,
           AddAssigneeApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>,
           AddAssigneeApi, Command<ApiCommand<AddAssigneeApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>,
-          AddAssigneeApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>,
+          AddAssigneeApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>,
           AddAssigneeApi, CommandProgress>> $progress;
 
   _$AddAssigneeApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddAssigneeApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>,
-                AddAssigneeApi, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<AddAssigneeApiRequest>,
+                ApiResult<Nothing>,
+                AddAssigneeApi,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddAssigneeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddAssigneeApi,
                     Command<ApiCommand<AddAssigneeApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AddAssigneeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddAssigneeApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddAssigneeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddAssigneeApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -69,17 +73,16 @@ class _$AddAssigneeApi extends AddAssigneeApi {
       _$AddAssigneeApi._(options());
 
   @override
-  CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>
       get $initial =>
-          CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>();
+          CommandState<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<AddAssigneeApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -91,11 +94,10 @@ class _$AddAssigneeApi extends AddAssigneeApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddAssigneeApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -103,7 +105,8 @@ class _$AddAssigneeApi extends AddAssigneeApi {
       ApiCommand<AddAssigneeApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -113,12 +116,12 @@ class _$AddAssigneeApi extends AddAssigneeApi {
       AddAssigneeApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AddAssigneeApiRequest> get commandPayloadSerializer =>
       AddAssigneeApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

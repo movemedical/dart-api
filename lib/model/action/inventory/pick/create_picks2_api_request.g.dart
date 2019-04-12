@@ -118,16 +118,12 @@ class CreatePicks2ApiRequestBuilder
   _$CreatePicks2ApiRequest _$v;
 
   String _requestId;
-
   String get requestId => _$this._requestId;
-
   set requestId(String requestId) => _$this._requestId = requestId;
 
   ListBuilder<CreatePicks2ApiPickRequest> _pickRequests;
-
   ListBuilder<CreatePicks2ApiPickRequest> get pickRequests =>
       _$this._pickRequests ??= new ListBuilder<CreatePicks2ApiPickRequest>();
-
   set pickRequests(ListBuilder<CreatePicks2ApiPickRequest> pickRequests) =>
       _$this._pickRequests = pickRequests;
 
@@ -224,7 +220,6 @@ class _$CreatePicks2ApiRequestActions extends CreatePicks2ApiRequestActions {
       CreatePicks2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -246,7 +241,6 @@ class _$CreatePicks2ApiRequestActions extends CreatePicks2ApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreatePicks2ApiRequest);
 }

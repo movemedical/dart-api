@@ -10,8 +10,8 @@ part 'add_item_categories_to_be_counted_api.g.dart';
 abstract class AddItemCategoriesToBeCountedApi extends ApiDispatcher<
     AddItemCategoriesToBeCountedApiRequest,
     AddItemCategoriesToBeCountedApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddItemCategoriesToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/add_item_categories_to_be_counted';

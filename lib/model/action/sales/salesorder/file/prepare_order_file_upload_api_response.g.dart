@@ -120,15 +120,11 @@ class PrepareOrderFileUploadApiResponseBuilder
   _$PrepareOrderFileUploadApiResponse _$v;
 
   String _url;
-
   String get url => _$this._url;
-
   set url(String url) => _$this._url = url;
 
   FileDetailBuilder _file;
-
   FileDetailBuilder get file => _$this._file ??= new FileDetailBuilder();
-
   set file(FileDetailBuilder file) => _$this._file = file;
 
   PrepareOrderFileUploadApiResponseBuilder();
@@ -230,14 +226,12 @@ class _$PrepareOrderFileUploadApiResponseActions
       PrepareOrderFileUploadApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.file,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -259,7 +253,6 @@ class _$PrepareOrderFileUploadApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareOrderFileUploadApiResponse);

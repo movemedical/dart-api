@@ -155,28 +155,20 @@ class ListInvTypesToBeCountedApiInvTypeToCountBuilder
   _$ListInvTypesToBeCountedApiInvTypeToCount _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _inventoryTypeId;
-
   String get inventoryTypeId => _$this._inventoryTypeId;
-
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   int _sequence;
-
   int get sequence => _$this._sequence;
-
   set sequence(int sequence) => _$this._sequence = sequence;
 
   String _inventoryTypeName;
-
   String get inventoryTypeName => _$this._inventoryTypeName;
-
   set inventoryTypeName(String inventoryTypeName) =>
       _$this._inventoryTypeName = inventoryTypeName;
 
@@ -278,7 +270,6 @@ class _$ListInvTypesToBeCountedApiInvTypeToCountActions
       ListInvTypesToBeCountedApiInvTypeToCountBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -304,7 +295,6 @@ class _$ListInvTypesToBeCountedApiInvTypeToCountActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListInvTypesToBeCountedApiInvTypeToCount);

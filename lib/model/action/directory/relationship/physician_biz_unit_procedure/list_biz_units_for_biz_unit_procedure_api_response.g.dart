@@ -129,18 +129,14 @@ class ListBizUnitsForBizUnitProcedureApiResponseBuilder
   _$ListBizUnitsForBizUnitProcedureApiResponse _$v;
 
   ListBuilder<ListBizUnitsForBizUnitProcedureApiBizUnit> _data;
-
   ListBuilder<ListBizUnitsForBizUnitProcedureApiBizUnit> get data =>
       _$this._data ??=
           new ListBuilder<ListBizUnitsForBizUnitProcedureApiBizUnit>();
-
   set data(ListBuilder<ListBizUnitsForBizUnitProcedureApiBizUnit> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBizUnitsForBizUnitProcedureApiResponseBuilder();
@@ -242,7 +238,6 @@ class _$ListBizUnitsForBizUnitProcedureApiResponseActions
       ListBizUnitsForBizUnitProcedureApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -264,7 +259,6 @@ class _$ListBizUnitsForBizUnitProcedureApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBizUnitsForBizUnitProcedureApiResponse);

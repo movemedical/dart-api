@@ -10,68 +10,72 @@ part of 'update_ship_to_address_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateShipToAddressApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateShipToAddressApi> UpdateShipToAddressApiOptions();
 
 class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<UpdateShipToAddressApiRequest>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateShipToAddressApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>, UpdateShipToAddressApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateShipToAddressApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateShipToAddressApi,
           Command<ApiCommand<UpdateShipToAddressApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateShipToAddressApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>, UpdateShipToAddressApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<UpdateShipToAddressApiRequest>,
+          ApiResult<Nothing>,
+          UpdateShipToAddressApi,
+          CommandProgress>> $progress;
 
   _$UpdateShipToAddressApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateShipToAddressApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateShipToAddressApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateShipToAddressApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateShipToAddressApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateShipToAddressApi,
                     Command<ApiCommand<UpdateShipToAddressApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateShipToAddressApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateShipToAddressApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateShipToAddressApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateShipToAddressApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -80,18 +84,17 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
       _$UpdateShipToAddressApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateShipToAddressApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -103,11 +106,10 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateShipToAddressApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -115,7 +117,8 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
       ApiCommand<UpdateShipToAddressApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -125,12 +128,12 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
       UpdateShipToAddressApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateShipToAddressApiRequest> get commandPayloadSerializer =>
       UpdateShipToAddressApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

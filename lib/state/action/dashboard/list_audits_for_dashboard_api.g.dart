@@ -104,7 +104,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
           ApiResult<ListAuditsForDashboardApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -116,7 +115,6 @@ class _$ListAuditsForDashboardApi extends ListAuditsForDashboardApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListAuditsForDashboardApiRequest)]),

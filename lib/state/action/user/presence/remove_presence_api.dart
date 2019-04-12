@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/user/presence/remove_presence_api_r
 
 part 'remove_presence_api.g.dart';
 
-abstract class RemovePresenceApi extends ApiDispatcher<RemovePresenceApiRequest,
-    RemovePresenceApiRequestBuilder, Empty, EmptyBuilder, RemovePresenceApi> {
+abstract class RemovePresenceApi extends ApiDispatcher<
+    RemovePresenceApiRequest,
+    RemovePresenceApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    RemovePresenceApi> {
   @override
   String get path => 'v1/user/presence/remove';
 

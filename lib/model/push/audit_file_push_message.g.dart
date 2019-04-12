@@ -150,28 +150,20 @@ class AuditFilePushMessageBuilder
   _$AuditFilePushMessage _$v;
 
   String _auditFileId;
-
   String get auditFileId => _$this._auditFileId;
-
   set auditFileId(String auditFileId) => _$this._auditFileId = auditFileId;
 
   String _fileId;
-
   String get fileId => _$this._fileId;
-
   set fileId(String fileId) => _$this._fileId = fileId;
 
   AuditFilePushMessageFileUpdateType _updateType;
-
   AuditFilePushMessageFileUpdateType get updateType => _$this._updateType;
-
   set updateType(AuditFilePushMessageFileUpdateType updateType) =>
       _$this._updateType = updateType;
 
   double _percentUploadedDecimalForm;
-
   double get percentUploadedDecimalForm => _$this._percentUploadedDecimalForm;
-
   set percentUploadedDecimalForm(double percentUploadedDecimalForm) =>
       _$this._percentUploadedDecimalForm = percentUploadedDecimalForm;
 
@@ -271,7 +263,6 @@ class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
   AuditFilePushMessageBuilder $newBuilder() => AuditFilePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -297,7 +288,6 @@ class _$AuditFilePushMessageActions extends AuditFilePushMessageActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AuditFilePushMessage);
 }

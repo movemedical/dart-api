@@ -110,11 +110,9 @@ class ListMobileVersionBlacklistApiResponseBuilder
   _$ListMobileVersionBlacklistApiResponse _$v;
 
   ListBuilder<ListMobileVersionBlacklistApiBlacklistedVersion> _data;
-
   ListBuilder<ListMobileVersionBlacklistApiBlacklistedVersion> get data =>
       _$this._data ??=
           new ListBuilder<ListMobileVersionBlacklistApiBlacklistedVersion>();
-
   set data(ListBuilder<ListMobileVersionBlacklistApiBlacklistedVersion> data) =>
       _$this._data = data;
 
@@ -211,7 +209,6 @@ class _$ListMobileVersionBlacklistApiResponseActions
       ListMobileVersionBlacklistApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -231,7 +228,6 @@ class _$ListMobileVersionBlacklistApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListMobileVersionBlacklistApiResponse);

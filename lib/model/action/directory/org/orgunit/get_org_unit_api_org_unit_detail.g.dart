@@ -612,207 +612,143 @@ class GetOrgUnitApiOrgUnitDetailBuilder
   _$GetOrgUnitApiOrgUnitDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
-
   OrgType get orgType => _$this._orgType;
-
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgName;
-
   String get orgName => _$this._orgName;
-
   set orgName(String orgName) => _$this._orgName = orgName;
 
   String _parentOuId;
-
   String get parentOuId => _$this._parentOuId;
-
   set parentOuId(String parentOuId) => _$this._parentOuId = parentOuId;
 
   String _parentOuName;
-
   String get parentOuName => _$this._parentOuName;
-
   set parentOuName(String parentOuName) => _$this._parentOuName = parentOuName;
 
   String _parentOuPublicName;
-
   String get parentOuPublicName => _$this._parentOuPublicName;
-
   set parentOuPublicName(String parentOuPublicName) =>
       _$this._parentOuPublicName = parentOuPublicName;
 
   String _rootOuId;
-
   String get rootOuId => _$this._rootOuId;
-
   set rootOuId(String rootOuId) => _$this._rootOuId = rootOuId;
 
   String _rootOuName;
-
   String get rootOuName => _$this._rootOuName;
-
   set rootOuName(String rootOuName) => _$this._rootOuName = rootOuName;
 
   String _rootOuPublicName;
-
   String get rootOuPublicName => _$this._rootOuPublicName;
-
   set rootOuPublicName(String rootOuPublicName) =>
       _$this._rootOuPublicName = rootOuPublicName;
 
   String _opsOuId;
-
   String get opsOuId => _$this._opsOuId;
-
   set opsOuId(String opsOuId) => _$this._opsOuId = opsOuId;
 
   String _opsOuName;
-
   String get opsOuName => _$this._opsOuName;
-
   set opsOuName(String opsOuName) => _$this._opsOuName = opsOuName;
 
   String _opsOuPublicName;
-
   String get opsOuPublicName => _$this._opsOuPublicName;
-
   set opsOuPublicName(String opsOuPublicName) =>
       _$this._opsOuPublicName = opsOuPublicName;
 
   String _ouReference;
-
   String get ouReference => _$this._ouReference;
-
   set ouReference(String ouReference) => _$this._ouReference = ouReference;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _publicName;
-
   String get publicName => _$this._publicName;
-
   set publicName(String publicName) => _$this._publicName = publicName;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   bool _salesOu;
-
   bool get salesOu => _$this._salesOu;
-
   set salesOu(bool salesOu) => _$this._salesOu = salesOu;
 
   bool _opsOu;
-
   bool get opsOu => _$this._opsOu;
-
   set opsOu(bool opsOu) => _$this._opsOu = opsOu;
 
   bool _signUpAllowed;
-
   bool get signUpAllowed => _$this._signUpAllowed;
-
   set signUpAllowed(bool signUpAllowed) =>
       _$this._signUpAllowed = signUpAllowed;
 
   bool _publicListing;
-
   bool get publicListing => _$this._publicListing;
-
   set publicListing(bool publicListing) =>
       _$this._publicListing = publicListing;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   String _label;
-
   String get label => _$this._label;
-
   set label(String label) => _$this._label = label;
 
   String _schema;
-
   String get schema => _$this._schema;
-
   set schema(String schema) => _$this._schema = schema;
 
   bool _bottom;
-
   bool get bottom => _$this._bottom;
-
   set bottom(bool bottom) => _$this._bottom = bottom;
 
   int _fulfillmentLeadTimeHours;
-
   int get fulfillmentLeadTimeHours => _$this._fulfillmentLeadTimeHours;
-
   set fulfillmentLeadTimeHours(int fulfillmentLeadTimeHours) =>
       _$this._fulfillmentLeadTimeHours = fulfillmentLeadTimeHours;
 
   int _requirementsLeadTimeHours;
-
   int get requirementsLeadTimeHours => _$this._requirementsLeadTimeHours;
-
   set requirementsLeadTimeHours(int requirementsLeadTimeHours) =>
       _$this._requirementsLeadTimeHours = requirementsLeadTimeHours;
 
   bool _allowRemoteUsage;
-
   bool get allowRemoteUsage => _$this._allowRemoteUsage;
-
   set allowRemoteUsage(bool allowRemoteUsage) =>
       _$this._allowRemoteUsage = allowRemoteUsage;
 
   bool _allowMixedInventoryTypeUsage;
-
   bool get allowMixedInventoryTypeUsage => _$this._allowMixedInventoryTypeUsage;
-
   set allowMixedInventoryTypeUsage(bool allowMixedInventoryTypeUsage) =>
       _$this._allowMixedInventoryTypeUsage = allowMixedInventoryTypeUsage;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ListBuilder<OrgUnitAttribute> _attributes;
-
   ListBuilder<OrgUnitAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<OrgUnitAttribute>();
-
   set attributes(ListBuilder<OrgUnitAttribute> attributes) =>
       _$this._attributes = attributes;
 
   ListBuilder<AttributeContact> _attributeContacts;
-
   ListBuilder<AttributeContact> get attributeContacts =>
       _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
-
   set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
       _$this._attributeContacts = attributeContacts;
 
@@ -1112,14 +1048,12 @@ class _$GetOrgUnitApiOrgUnitDetailActions
       GetOrgUnitApiOrgUnitDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1201,7 +1135,6 @@ class _$GetOrgUnitApiOrgUnitDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetOrgUnitApiOrgUnitDetail);
 }

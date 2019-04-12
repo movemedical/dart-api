@@ -10,65 +10,68 @@ part of 'add_hcr_to_colleague_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AddHcrToColleagueApi> AddHcrToColleagueApiOptions();
 
 class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AddHcrToColleagueApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
-          AddHcrToColleagueApi, String>> $cancel;
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>,
+          ApiResult<Nothing>, AddHcrToColleagueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddHcrToColleagueApi,
           Command<ApiCommand<AddHcrToColleagueApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
-          AddHcrToColleagueApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<
+          ApiCommand<AddHcrToColleagueApiRequest>,
+          ApiResult<Nothing>,
+          AddHcrToColleagueApi,
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>,
-          AddHcrToColleagueApi, CommandProgress>> $progress;
+      CommandPayload<ApiCommand<AddHcrToColleagueApiRequest>,
+          ApiResult<Nothing>, AddHcrToColleagueApi, CommandProgress>> $progress;
 
   _$AddHcrToColleagueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddHcrToColleagueApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddHcrToColleagueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddHcrToColleagueApi,
                     Command<ApiCommand<AddHcrToColleagueApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AddHcrToColleagueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddHcrToColleagueApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddHcrToColleagueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddHcrToColleagueApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +80,17 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
       _$AddHcrToColleagueApi._(options());
 
   @override
-  CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<AddHcrToColleagueApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<AddHcrToColleagueApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AddHcrToColleagueApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +102,10 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddHcrToColleagueApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +113,8 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
       ApiCommand<AddHcrToColleagueApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +124,12 @@ class _$AddHcrToColleagueApi extends AddHcrToColleagueApi {
       AddHcrToColleagueApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AddHcrToColleagueApiRequest> get commandPayloadSerializer =>
       AddHcrToColleagueApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

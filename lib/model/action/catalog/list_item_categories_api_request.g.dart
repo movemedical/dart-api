@@ -137,22 +137,16 @@ class ListItemCategoriesApiRequestBuilder
   _$ListItemCategoriesApiRequest _$v;
 
   String _parentCategoryId;
-
   String get parentCategoryId => _$this._parentCategoryId;
-
   set parentCategoryId(String parentCategoryId) =>
       _$this._parentCategoryId = parentCategoryId;
 
   String _linkedItemId;
-
   String get linkedItemId => _$this._linkedItemId;
-
   set linkedItemId(String linkedItemId) => _$this._linkedItemId = linkedItemId;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   ListItemCategoriesApiRequestBuilder();
@@ -250,7 +244,6 @@ class _$ListItemCategoriesApiRequestActions
       ListItemCategoriesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -274,7 +267,6 @@ class _$ListItemCategoriesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListItemCategoriesApiRequest);

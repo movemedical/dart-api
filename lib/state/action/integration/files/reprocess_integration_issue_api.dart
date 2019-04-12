@@ -10,8 +10,8 @@ part 'reprocess_integration_issue_api.g.dart';
 abstract class ReprocessIntegrationIssueApi extends ApiDispatcher<
     ReprocessIntegrationIssueApiRequest,
     ReprocessIntegrationIssueApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ReprocessIntegrationIssueApi> {
   @override
   String get path => 'v1/integration/files/reprocess_integration_issue';

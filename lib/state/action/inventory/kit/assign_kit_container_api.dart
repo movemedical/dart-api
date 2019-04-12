@@ -10,8 +10,8 @@ part 'assign_kit_container_api.g.dart';
 abstract class AssignKitContainerApi extends ApiDispatcher<
     AssignKitContainerApiRequest,
     AssignKitContainerApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AssignKitContainerApi> {
   @override
   String get path => 'v1/inventory/kit/assignKitContainers';

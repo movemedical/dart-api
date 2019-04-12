@@ -10,65 +10,65 @@ part of 'remove_hcr_to_team_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RemoveHcrToTeamApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RemoveHcrToTeamApi> RemoveHcrToTeamApiOptions();
 
 class _$RemoveHcrToTeamApi extends RemoveHcrToTeamApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveHcrToTeamApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RemoveHcrToTeamApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<RemoveHcrToTeamApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>,
           RemoveHcrToTeamApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveHcrToTeamApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveHcrToTeamApi,
           Command<ApiCommand<RemoveHcrToTeamApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>,
-          RemoveHcrToTeamApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>,
+          RemoveHcrToTeamApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>,
           RemoveHcrToTeamApi, CommandProgress>> $progress;
 
   _$RemoveHcrToTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveHcrToTeamApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToTeamApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveHcrToTeamApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveHcrToTeamApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveHcrToTeamApi,
                     Command<ApiCommand<RemoveHcrToTeamApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveHcrToTeamApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveHcrToTeamApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveHcrToTeamApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveHcrToTeamApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,16 @@ class _$RemoveHcrToTeamApi extends RemoveHcrToTeamApi {
       _$RemoveHcrToTeamApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RemoveHcrToTeamApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RemoveHcrToTeamApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +98,10 @@ class _$RemoveHcrToTeamApi extends RemoveHcrToTeamApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveHcrToTeamApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +109,8 @@ class _$RemoveHcrToTeamApi extends RemoveHcrToTeamApi {
       ApiCommand<RemoveHcrToTeamApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +120,12 @@ class _$RemoveHcrToTeamApi extends RemoveHcrToTeamApi {
       RemoveHcrToTeamApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RemoveHcrToTeamApiRequest> get commandPayloadSerializer =>
       RemoveHcrToTeamApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

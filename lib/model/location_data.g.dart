@@ -106,16 +106,12 @@ class LocationDataBuilder
   _$LocationData _$v;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationDataBuilder();
@@ -194,7 +190,6 @@ class _$LocationDataActions extends LocationDataActions {
   LocationDataBuilder $newBuilder() => LocationDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -216,7 +211,6 @@ class _$LocationDataActions extends LocationDataActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(LocationData);
 }

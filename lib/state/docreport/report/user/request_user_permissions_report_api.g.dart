@@ -11,60 +11,60 @@ part of 'request_user_permissions_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestUserPermissionsReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestUserPermissionsReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestUserPermissionsReportApi> RequestUserPermissionsReportApiOptions();
 
 class _$RequestUserPermissionsReportApi
     extends RequestUserPermissionsReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestUserPermissionsReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>, RequestUserPermissionsReportApi, String>> $cancel;
+          ApiResult<Nothing>, RequestUserPermissionsReportApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RequestUserPermissionsReportApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               RequestUserPermissionsReportApi,
               Command<ApiCommand<RequestUserPermissionsReportApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestUserPermissionsReportApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestUserPermissionsReportApi,
           CommandProgress>> $progress;
 
   _$RequestUserPermissionsReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestUserPermissionsReportApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestUserPermissionsReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestUserPermissionsReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestUserPermissionsReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestUserPermissionsReportApi,
                     Command<
                         ApiCommand<RequestUserPermissionsReportApiRequest>>>>(
@@ -72,14 +72,14 @@ class _$RequestUserPermissionsReportApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestUserPermissionsReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestUserPermissionsReportApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestUserPermissionsReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestUserPermissionsReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -90,20 +90,19 @@ class _$RequestUserPermissionsReportApi
 
   @override
   CommandState<ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RequestUserPermissionsReportApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -115,12 +114,11 @@ class _$RequestUserPermissionsReportApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(RequestUserPermissionsReportApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -129,7 +127,8 @@ class _$RequestUserPermissionsReportApi
           ApiCommand<RequestUserPermissionsReportApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -139,7 +138,7 @@ class _$RequestUserPermissionsReportApi
       RequestUserPermissionsReportApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestUserPermissionsReportApiRequest>
@@ -147,5 +146,5 @@ class _$RequestUserPermissionsReportApi
           RequestUserPermissionsReportApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

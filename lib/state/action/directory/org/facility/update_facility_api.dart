@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/directory/org/facility/update_facil
 
 part 'update_facility_api.g.dart';
 
-abstract class UpdateFacilityApi extends ApiDispatcher<UpdateFacilityApiRequest,
-    UpdateFacilityApiRequestBuilder, Empty, EmptyBuilder, UpdateFacilityApi> {
+abstract class UpdateFacilityApi extends ApiDispatcher<
+    UpdateFacilityApiRequest,
+    UpdateFacilityApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    UpdateFacilityApi> {
   @override
   String get path => 'v1/directory/org/facility/update';
 

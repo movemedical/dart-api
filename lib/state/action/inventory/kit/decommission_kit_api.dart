@@ -10,8 +10,8 @@ part 'decommission_kit_api.g.dart';
 abstract class DecommissionKitApi extends ApiDispatcher<
     DecommissionKitApiRequest,
     DecommissionKitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DecommissionKitApi> {
   @override
   String get path => 'v1/inventory/kit/decommission';

@@ -10,8 +10,8 @@ part 'update_order_line_cancel_reason_api.g.dart';
 abstract class UpdateOrderLineCancelReasonApi extends ApiDispatcher<
     UpdateOrderLineCancelReasonApiRequest,
     UpdateOrderLineCancelReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateOrderLineCancelReasonApi> {
   @override
   String get path => 'v1/admin/order_line_cancel_reason/update';

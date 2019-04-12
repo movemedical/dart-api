@@ -116,11 +116,9 @@ class ListQuestionableTraySummaryApiResponseBuilder
 
   ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>
       _questionableSummaryList;
-
   ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>
       get questionableSummaryList => _$this._questionableSummaryList ??=
           new ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>();
-
   set questionableSummaryList(
           ListBuilder<ListQuestionableTraySummaryApiQuestionableSummary>
               questionableSummaryList) =>
@@ -224,7 +222,6 @@ class _$ListQuestionableTraySummaryApiResponseActions
       ListQuestionableTraySummaryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -244,7 +241,6 @@ class _$ListQuestionableTraySummaryApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListQuestionableTraySummaryApiResponse);

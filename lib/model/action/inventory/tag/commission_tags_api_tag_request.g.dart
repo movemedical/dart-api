@@ -223,54 +223,38 @@ class CommissionTagsApiTagRequestBuilder
   _$CommissionTagsApiTagRequest _$v;
 
   String _tagNumber;
-
   String get tagNumber => _$this._tagNumber;
-
   set tagNumber(String tagNumber) => _$this._tagNumber = tagNumber;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
-
   String get itemVersionId => _$this._itemVersionId;
-
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
-
   String get lotId => _$this._lotId;
-
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
-
   String get serialId => _$this._serialId;
-
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _associatedStockId;
-
   String get associatedStockId => _$this._associatedStockId;
-
   set associatedStockId(String associatedStockId) =>
       _$this._associatedStockId = associatedStockId;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   CommissionTagsApiTagRequestBuilder();
@@ -393,7 +377,6 @@ class _$CommissionTagsApiTagRequestActions
       CommissionTagsApiTagRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -427,7 +410,6 @@ class _$CommissionTagsApiTagRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CommissionTagsApiTagRequest);

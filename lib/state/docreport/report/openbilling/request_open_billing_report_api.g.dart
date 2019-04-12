@@ -11,72 +11,72 @@ part of 'request_open_billing_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestOpenBillingReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestOpenBillingReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestOpenBillingReportApi> RequestOpenBillingReportApiOptions();
 
 class _$RequestOpenBillingReportApi extends RequestOpenBillingReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestOpenBillingReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>, RequestOpenBillingReportApi, String>> $cancel;
+          ApiResult<Nothing>, RequestOpenBillingReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestOpenBillingReportApi,
           Command<ApiCommand<RequestOpenBillingReportApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestOpenBillingReportApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestOpenBillingReportApi,
           CommandProgress>> $progress;
 
   _$RequestOpenBillingReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestOpenBillingReportApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestOpenBillingReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestOpenBillingReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestOpenBillingReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestOpenBillingReportApi,
                     Command<ApiCommand<RequestOpenBillingReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestOpenBillingReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestOpenBillingReportApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestOpenBillingReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestOpenBillingReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$RequestOpenBillingReportApi extends RequestOpenBillingReportApi {
       _$RequestOpenBillingReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestOpenBillingReportApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RequestOpenBillingReportApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<RequestOpenBillingReportApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestOpenBillingReportApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestOpenBillingReportApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestOpenBillingReportApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestOpenBillingReportApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$RequestOpenBillingReportApi extends RequestOpenBillingReportApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestOpenBillingReportApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$RequestOpenBillingReportApi extends RequestOpenBillingReportApi {
       ApiCommand<RequestOpenBillingReportApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$RequestOpenBillingReportApi extends RequestOpenBillingReportApi {
       RequestOpenBillingReportApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestOpenBillingReportApiRequest> get commandPayloadSerializer =>
       RequestOpenBillingReportApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

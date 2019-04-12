@@ -10,8 +10,8 @@ part 'request_consignment_request_report_api.g.dart';
 abstract class RequestConsignmentRequestReportApi extends ApiDispatcher<
     RequestConsignmentRequestReportApiRequest,
     RequestConsignmentRequestReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestConsignmentRequestReportApi> {
   @override
   String get path => 'v1/doc/loan_request/consignment_export';

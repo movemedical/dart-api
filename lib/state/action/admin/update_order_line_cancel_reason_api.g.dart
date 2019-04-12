@@ -11,58 +11,58 @@ part of 'update_order_line_cancel_reason_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateOrderLineCancelReasonApi> UpdateOrderLineCancelReasonApiOptions();
 
 class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateOrderLineCancelReasonApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>, UpdateOrderLineCancelReasonApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateOrderLineCancelReasonApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateOrderLineCancelReasonApi,
           Command<ApiCommand<UpdateOrderLineCancelReasonApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateOrderLineCancelReasonApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateOrderLineCancelReasonApi,
           CommandProgress>> $progress;
 
   _$UpdateOrderLineCancelReasonApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateOrderLineCancelReasonApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateOrderLineCancelReasonApi,
                     Command<
                         ApiCommand<UpdateOrderLineCancelReasonApiRequest>>>>(
@@ -70,14 +70,14 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateOrderLineCancelReasonApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateOrderLineCancelReasonApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -88,20 +88,19 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
 
   @override
   CommandState<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<UpdateOrderLineCancelReasonApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -113,11 +112,10 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateOrderLineCancelReasonApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -126,7 +124,8 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
           ApiCommand<UpdateOrderLineCancelReasonApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -136,7 +135,7 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
       UpdateOrderLineCancelReasonApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateOrderLineCancelReasonApiRequest>
@@ -144,5 +143,5 @@ class _$UpdateOrderLineCancelReasonApi extends UpdateOrderLineCancelReasonApi {
           UpdateOrderLineCancelReasonApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

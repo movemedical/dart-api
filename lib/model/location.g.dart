@@ -227,60 +227,42 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   _$Location _$v;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   FacilityType _facilityType;
-
   FacilityType get facilityType => _$this._facilityType;
-
   set facilityType(FacilityType facilityType) =>
       _$this._facilityType = facilityType;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   String _customerId;
-
   String get customerId => _$this._customerId;
-
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _displayText;
-
   String get displayText => _$this._displayText;
-
   set displayText(String displayText) => _$this._displayText = displayText;
 
   int _displayPriority;
-
   int get displayPriority => _$this._displayPriority;
-
   set displayPriority(int displayPriority) =>
       _$this._displayPriority = displayPriority;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   bool _favorite;
-
   bool get favorite => _$this._favorite;
-
   set favorite(bool favorite) => _$this._favorite = favorite;
 
   double _distance;
-
   double get distance => _$this._distance;
-
   set distance(double distance) => _$this._distance = distance;
 
   LocationBuilder();
@@ -403,7 +385,6 @@ class _$LocationActions extends LocationActions {
   LocationBuilder $newBuilder() => LocationBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -439,7 +420,6 @@ class _$LocationActions extends LocationActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Location);
 }

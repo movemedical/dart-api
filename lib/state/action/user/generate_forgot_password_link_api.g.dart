@@ -11,72 +11,72 @@ part of 'generate_forgot_password_link_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     GenerateForgotPasswordLinkApi> GenerateForgotPasswordLinkApiOptions();
 
 class _$GenerateForgotPasswordLinkApi extends GenerateForgotPasswordLinkApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       GenerateForgotPasswordLinkApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>, GenerateForgotPasswordLinkApi, String>> $cancel;
+          ApiResult<Nothing>, GenerateForgotPasswordLinkApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           GenerateForgotPasswordLinkApi,
           Command<ApiCommand<GenerateForgotPasswordLinkApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           GenerateForgotPasswordLinkApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           GenerateForgotPasswordLinkApi,
           CommandProgress>> $progress;
 
   _$GenerateForgotPasswordLinkApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 GenerateForgotPasswordLinkApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     GenerateForgotPasswordLinkApi,
                     Command<ApiCommand<GenerateForgotPasswordLinkApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     GenerateForgotPasswordLinkApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 GenerateForgotPasswordLinkApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -87,18 +87,19 @@ class _$GenerateForgotPasswordLinkApi extends GenerateForgotPasswordLinkApi {
 
   @override
   CommandState<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<GenerateForgotPasswordLinkApiRequest>, ApiResult<Empty>>();
+          ApiCommand<GenerateForgotPasswordLinkApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<GenerateForgotPasswordLinkApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<GenerateForgotPasswordLinkApiRequest>, ApiResult<Empty>>();
+          ApiCommand<GenerateForgotPasswordLinkApiRequest>,
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -110,11 +111,10 @@ class _$GenerateForgotPasswordLinkApi extends GenerateForgotPasswordLinkApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(GenerateForgotPasswordLinkApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -122,7 +122,8 @@ class _$GenerateForgotPasswordLinkApi extends GenerateForgotPasswordLinkApi {
       ApiCommand<GenerateForgotPasswordLinkApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -132,7 +133,7 @@ class _$GenerateForgotPasswordLinkApi extends GenerateForgotPasswordLinkApi {
       GenerateForgotPasswordLinkApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<GenerateForgotPasswordLinkApiRequest>
@@ -140,5 +141,5 @@ class _$GenerateForgotPasswordLinkApi extends GenerateForgotPasswordLinkApi {
           GenerateForgotPasswordLinkApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

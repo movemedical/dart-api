@@ -10,72 +10,73 @@ part of 'fire_order_push_message_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<FireOrderPushMessageApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     FireOrderPushMessageApi> FireOrderPushMessageApiOptions();
 
 class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       FireOrderPushMessageApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>, FireOrderPushMessageApi, String>> $cancel;
+          ApiResult<Nothing>, FireOrderPushMessageApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           FireOrderPushMessageApi,
           Command<ApiCommand<FireOrderPushMessageApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           FireOrderPushMessageApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           FireOrderPushMessageApi,
           CommandProgress>> $progress;
 
   _$FireOrderPushMessageApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<FireOrderPushMessageApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 FireOrderPushMessageApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<FireOrderPushMessageApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     FireOrderPushMessageApi,
                     Command<ApiCommand<FireOrderPushMessageApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<FireOrderPushMessageApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     FireOrderPushMessageApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<FireOrderPushMessageApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 FireOrderPushMessageApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
       _$FireOrderPushMessageApi._(options());
 
   @override
-  CommandState<ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<FireOrderPushMessageApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Empty>>();
+          ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(FireOrderPushMessageApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
       ApiCommand<FireOrderPushMessageApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
       FireOrderPushMessageApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<FireOrderPushMessageApiRequest> get commandPayloadSerializer =>
       FireOrderPushMessageApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

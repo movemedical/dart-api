@@ -106,10 +106,8 @@ class GetFoundInventoryTypeApiResponseBuilder
   _$GetFoundInventoryTypeApiResponse _$v;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
@@ -208,14 +206,12 @@ class _$GetFoundInventoryTypeApiResponseActions
       GetFoundInventoryTypeApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.inventoryType,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -235,7 +231,6 @@ class _$GetFoundInventoryTypeApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetFoundInventoryTypeApiResponse);

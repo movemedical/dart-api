@@ -113,15 +113,11 @@ class GetInvoiceApiRequestBuilder
   _$GetInvoiceApiRequest _$v;
 
   String _invoiceId;
-
   String get invoiceId => _$this._invoiceId;
-
   set invoiceId(String invoiceId) => _$this._invoiceId = invoiceId;
 
   bool _skipPresence;
-
   bool get skipPresence => _$this._skipPresence;
-
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetInvoiceApiRequestBuilder();
@@ -203,7 +199,6 @@ class _$GetInvoiceApiRequestActions extends GetInvoiceApiRequestActions {
   GetInvoiceApiRequestBuilder $newBuilder() => GetInvoiceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,7 +220,6 @@ class _$GetInvoiceApiRequestActions extends GetInvoiceApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiRequest);
 }

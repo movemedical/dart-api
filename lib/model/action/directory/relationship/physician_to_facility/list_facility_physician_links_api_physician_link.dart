@@ -1,8 +1,8 @@
-import 'dart:core';
-
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+
+import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/physician_type.dart';
 
 part 'list_facility_physician_links_api_physician_link.g.dart';

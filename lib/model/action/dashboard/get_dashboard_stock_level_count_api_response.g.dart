@@ -108,9 +108,7 @@ class GetDashboardStockLevelCountApiResponseBuilder
   _$GetDashboardStockLevelCountApiResponse _$v;
 
   int _count;
-
   int get count => _$this._count;
-
   set count(int count) => _$this._count = count;
 
   GetDashboardStockLevelCountApiResponseBuilder();
@@ -189,7 +187,6 @@ class _$GetDashboardStockLevelCountApiResponseActions
       GetDashboardStockLevelCountApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -209,7 +206,6 @@ class _$GetDashboardStockLevelCountApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetDashboardStockLevelCountApiResponse);

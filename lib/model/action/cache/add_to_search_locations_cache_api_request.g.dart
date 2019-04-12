@@ -143,24 +143,18 @@ class AddToSearchLocationsCacheApiRequestBuilder
   _$AddToSearchLocationsCacheApiRequest _$v;
 
   ListBuilder<Location> _locations;
-
   ListBuilder<Location> get locations =>
       _$this._locations ??= new ListBuilder<Location>();
-
   set locations(ListBuilder<Location> locations) =>
       _$this._locations = locations;
 
   bool _locationVizScoped;
-
   bool get locationVizScoped => _$this._locationVizScoped;
-
   set locationVizScoped(bool locationVizScoped) =>
       _$this._locationVizScoped = locationVizScoped;
 
   SearchLocationsApiSearchLocationsPurpose _purpose;
-
   SearchLocationsApiSearchLocationsPurpose get purpose => _$this._purpose;
-
   set purpose(SearchLocationsApiSearchLocationsPurpose purpose) =>
       _$this._purpose = purpose;
 
@@ -273,7 +267,6 @@ class _$AddToSearchLocationsCacheApiRequestActions
       AddToSearchLocationsCacheApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -297,7 +290,6 @@ class _$AddToSearchLocationsCacheApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AddToSearchLocationsCacheApiRequest);

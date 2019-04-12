@@ -120,16 +120,12 @@ class ListExportLogFilesApiRequestBuilder
   _$ListExportLogFilesApiRequest _$v;
 
   String _exportLogId;
-
   String get exportLogId => _$this._exportLogId;
-
   set exportLogId(String exportLogId) => _$this._exportLogId = exportLogId;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListExportLogFilesApiRequestBuilder();
@@ -235,14 +231,12 @@ class _$ListExportLogFilesApiRequestActions
       ListExportLogFilesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -264,7 +258,6 @@ class _$ListExportLogFilesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListExportLogFilesApiRequest);

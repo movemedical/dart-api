@@ -10,8 +10,8 @@ part 'resolve_found_stock_api.g.dart';
 abstract class ResolveFoundStockApi extends ApiDispatcher<
     ResolveFoundStockApiRequest,
     ResolveFoundStockApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ResolveFoundStockApi> {
   @override
   String get path => 'v1/inventory/stock/resolve_found';

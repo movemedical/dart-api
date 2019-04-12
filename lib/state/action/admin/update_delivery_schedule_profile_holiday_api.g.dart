@@ -11,35 +11,35 @@ part of 'update_delivery_schedule_profile_holiday_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<
         ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateDeliveryScheduleProfileHolidayApi> UpdateDeliveryScheduleProfileHolidayApiOptions();
 
 class _$UpdateDeliveryScheduleProfileHolidayApi
     extends UpdateDeliveryScheduleProfileHolidayApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateDeliveryScheduleProfileHolidayApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateDeliveryScheduleProfileHolidayApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               UpdateDeliveryScheduleProfileHolidayApi,
               Command<
                   ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>>>>
@@ -47,13 +47,13 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateDeliveryScheduleProfileHolidayApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateDeliveryScheduleProfileHolidayApi,
           CommandProgress>> $progress;
 
@@ -61,17 +61,17 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
       : $replace = $options.action<
             CommandState<
                 ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateDeliveryScheduleProfileHolidayApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateDeliveryScheduleProfileHolidayApi,
                     Command<
                         ApiCommand<
@@ -80,14 +80,14 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateDeliveryScheduleProfileHolidayApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateDeliveryScheduleProfileHolidayApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -98,21 +98,20 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
 
   @override
   CommandState<ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<UpdateDeliveryScheduleProfileHolidayApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -124,12 +123,11 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand,
             [FullType(UpdateDeliveryScheduleProfileHolidayApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -139,7 +137,8 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
               .toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -150,7 +149,7 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
           UpdateDeliveryScheduleProfileHolidayApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateDeliveryScheduleProfileHolidayApiRequest>
@@ -158,5 +157,5 @@ class _$UpdateDeliveryScheduleProfileHolidayApi
           UpdateDeliveryScheduleProfileHolidayApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

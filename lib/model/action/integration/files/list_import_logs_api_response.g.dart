@@ -119,16 +119,12 @@ class ListImportLogsApiResponseBuilder
   _$ListImportLogsApiResponse _$v;
 
   ListBuilder<ListImportLogsApiImportLog> _data;
-
   ListBuilder<ListImportLogsApiImportLog> get data =>
       _$this._data ??= new ListBuilder<ListImportLogsApiImportLog>();
-
   set data(ListBuilder<ListImportLogsApiImportLog> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListImportLogsApiResponseBuilder();
@@ -224,7 +220,6 @@ class _$ListImportLogsApiResponseActions
       ListImportLogsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -246,7 +241,6 @@ class _$ListImportLogsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListImportLogsApiResponse);
 }

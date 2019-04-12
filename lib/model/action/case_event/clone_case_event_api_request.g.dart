@@ -152,28 +152,20 @@ class CloneCaseEventApiRequestBuilder
   _$CloneCaseEventApiRequest _$v;
 
   String _caseId;
-
   String get caseId => _$this._caseId;
-
   set caseId(String caseId) => _$this._caseId = caseId;
 
   DateTime _surgeryDate;
-
   DateTime get surgeryDate => _$this._surgeryDate;
-
   set surgeryDate(DateTime surgeryDate) => _$this._surgeryDate = surgeryDate;
 
   bool _eventTimeUnknown;
-
   bool get eventTimeUnknown => _$this._eventTimeUnknown;
-
   set eventTimeUnknown(bool eventTimeUnknown) =>
       _$this._eventTimeUnknown = eventTimeUnknown;
 
   bool _cloneRequirements;
-
   bool get cloneRequirements => _$this._cloneRequirements;
-
   set cloneRequirements(bool cloneRequirements) =>
       _$this._cloneRequirements = cloneRequirements;
 
@@ -277,7 +269,6 @@ class _$CloneCaseEventApiRequestActions
       CloneCaseEventApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -303,7 +294,6 @@ class _$CloneCaseEventApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CloneCaseEventApiRequest);
 }

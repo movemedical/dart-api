@@ -136,21 +136,15 @@ class CreatePickFinishedPushMessageBuilder
   _$CreatePickFinishedPushMessage _$v;
 
   String _requestId;
-
   String get requestId => _$this._requestId;
-
   set requestId(String requestId) => _$this._requestId = requestId;
 
   bool _success;
-
   bool get success => _$this._success;
-
   set success(bool success) => _$this._success = success;
 
   String _failureMsg;
-
   String get failureMsg => _$this._failureMsg;
-
   set failureMsg(String failureMsg) => _$this._failureMsg = failureMsg;
 
   CreatePickFinishedPushMessageBuilder();
@@ -237,7 +231,6 @@ class _$CreatePickFinishedPushMessageActions
       CreatePickFinishedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -261,7 +254,6 @@ class _$CreatePickFinishedPushMessageActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreatePickFinishedPushMessage);

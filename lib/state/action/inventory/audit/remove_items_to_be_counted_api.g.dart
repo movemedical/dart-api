@@ -11,72 +11,72 @@ part of 'remove_items_to_be_counted_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RemoveItemsToBeCountedApi> RemoveItemsToBeCountedApiOptions();
 
 class _$RemoveItemsToBeCountedApi extends RemoveItemsToBeCountedApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RemoveItemsToBeCountedApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>, RemoveItemsToBeCountedApi, String>> $cancel;
+          ApiResult<Nothing>, RemoveItemsToBeCountedApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveItemsToBeCountedApi,
           Command<ApiCommand<RemoveItemsToBeCountedApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveItemsToBeCountedApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveItemsToBeCountedApi,
           CommandProgress>> $progress;
 
   _$RemoveItemsToBeCountedApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemsToBeCountedApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveItemsToBeCountedApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveItemsToBeCountedApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveItemsToBeCountedApi,
                     Command<ApiCommand<RemoveItemsToBeCountedApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveItemsToBeCountedApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveItemsToBeCountedApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemsToBeCountedApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveItemsToBeCountedApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$RemoveItemsToBeCountedApi extends RemoveItemsToBeCountedApi {
       _$RemoveItemsToBeCountedApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveItemsToBeCountedApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveItemsToBeCountedApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RemoveItemsToBeCountedApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$RemoveItemsToBeCountedApi extends RemoveItemsToBeCountedApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveItemsToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$RemoveItemsToBeCountedApi extends RemoveItemsToBeCountedApi {
       ApiCommand<RemoveItemsToBeCountedApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$RemoveItemsToBeCountedApi extends RemoveItemsToBeCountedApi {
       RemoveItemsToBeCountedApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RemoveItemsToBeCountedApiRequest> get commandPayloadSerializer =>
       RemoveItemsToBeCountedApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -99,9 +99,7 @@ class CreateItemApiResponseBuilder
   _$CreateItemApiResponse _$v;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   CreateItemApiResponseBuilder();
@@ -174,7 +172,6 @@ class _$CreateItemApiResponseActions extends CreateItemApiResponseActions {
   CreateItemApiResponseBuilder $newBuilder() => CreateItemApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -194,7 +191,6 @@ class _$CreateItemApiResponseActions extends CreateItemApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateItemApiResponse);
 }

@@ -114,11 +114,9 @@ class ListPreferenceCardItemsApiResponseBuilder
 
   ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>
       _preferenceCardItems;
-
   ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>
       get preferenceCardItems => _$this._preferenceCardItems ??=
           new ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>();
-
   set preferenceCardItems(
           ListBuilder<ListPreferenceCardItemsApiPreferenceCardItem>
               preferenceCardItems) =>
@@ -219,7 +217,6 @@ class _$ListPreferenceCardItemsApiResponseActions
       ListPreferenceCardItemsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -239,7 +236,6 @@ class _$ListPreferenceCardItemsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPreferenceCardItemsApiResponse);

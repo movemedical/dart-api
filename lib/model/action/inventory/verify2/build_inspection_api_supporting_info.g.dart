@@ -456,135 +456,99 @@ class BuildInspectionApiSupportingInfoBuilder
   _$BuildInspectionApiSupportingInfo _$v;
 
   ListBuilder<StockData> _stocks;
-
   ListBuilder<StockData> get stocks =>
       _$this._stocks ??= new ListBuilder<StockData>();
-
   set stocks(ListBuilder<StockData> stocks) => _$this._stocks = stocks;
 
   ListBuilder<Item> _items;
-
   ListBuilder<Item> get items => _$this._items ??= new ListBuilder<Item>();
-
   set items(ListBuilder<Item> items) => _$this._items = items;
 
   ListBuilder<Lot> _lots;
-
   ListBuilder<Lot> get lots => _$this._lots ??= new ListBuilder<Lot>();
-
   set lots(ListBuilder<Lot> lots) => _$this._lots = lots;
 
   ListBuilder<Serial> _serials;
-
   ListBuilder<Serial> get serials =>
       _$this._serials ??= new ListBuilder<Serial>();
-
   set serials(ListBuilder<Serial> serials) => _$this._serials = serials;
 
   ListBuilder<Location> _locations;
-
   ListBuilder<Location> get locations =>
       _$this._locations ??= new ListBuilder<Location>();
-
   set locations(ListBuilder<Location> locations) =>
       _$this._locations = locations;
 
   ListBuilder<StockContainer> _containers;
-
   ListBuilder<StockContainer> get containers =>
       _$this._containers ??= new ListBuilder<StockContainer>();
-
   set containers(ListBuilder<StockContainer> containers) =>
       _$this._containers = containers;
 
   ListBuilder<InventoryType> _inventoryTypes;
-
   ListBuilder<InventoryType> get inventoryTypes =>
       _$this._inventoryTypes ??= new ListBuilder<InventoryType>();
-
   set inventoryTypes(ListBuilder<InventoryType> inventoryTypes) =>
       _$this._inventoryTypes = inventoryTypes;
 
   ListBuilder<LoanLite> _loans;
-
   ListBuilder<LoanLite> get loans =>
       _$this._loans ??= new ListBuilder<LoanLite>();
-
   set loans(ListBuilder<LoanLite> loans) => _$this._loans = loans;
 
   ListBuilder<CaseEventLite> _cases;
-
   ListBuilder<CaseEventLite> get cases =>
       _$this._cases ??= new ListBuilder<CaseEventLite>();
-
   set cases(ListBuilder<CaseEventLite> cases) => _$this._cases = cases;
 
   ListBuilder<Pkg> _pkgs;
-
   ListBuilder<Pkg> get pkgs => _$this._pkgs ??= new ListBuilder<Pkg>();
-
   set pkgs(ListBuilder<Pkg> pkgs) => _$this._pkgs = pkgs;
 
   ListBuilder<Bin> _bins;
-
   ListBuilder<Bin> get bins => _$this._bins ??= new ListBuilder<Bin>();
-
   set bins(ListBuilder<Bin> bins) => _$this._bins = bins;
 
   ListBuilder<ShipmentLite> _shipments;
-
   ListBuilder<ShipmentLite> get shipments =>
       _$this._shipments ??= new ListBuilder<ShipmentLite>();
-
   set shipments(ListBuilder<ShipmentLite> shipments) =>
       _$this._shipments = shipments;
 
   ListBuilder<OrderReason> _orderReasons;
-
   ListBuilder<OrderReason> get orderReasons =>
       _$this._orderReasons ??= new ListBuilder<OrderReason>();
-
   set orderReasons(ListBuilder<OrderReason> orderReasons) =>
       _$this._orderReasons = orderReasons;
 
   ListBuilder<BuildInspectionApiStockHold> _stockHolds;
-
   ListBuilder<BuildInspectionApiStockHold> get stockHolds =>
       _$this._stockHolds ??= new ListBuilder<BuildInspectionApiStockHold>();
-
   set stockHolds(ListBuilder<BuildInspectionApiStockHold> stockHolds) =>
       _$this._stockHolds = stockHolds;
 
   ListBuilder<BuildInspectionApiLotHold> _lotHolds;
-
   ListBuilder<BuildInspectionApiLotHold> get lotHolds =>
       _$this._lotHolds ??= new ListBuilder<BuildInspectionApiLotHold>();
-
   set lotHolds(ListBuilder<BuildInspectionApiLotHold> lotHolds) =>
       _$this._lotHolds = lotHolds;
 
   ListBuilder<BuildInspectionApiSerialHold> _serialHolds;
-
   ListBuilder<BuildInspectionApiSerialHold> get serialHolds =>
       _$this._serialHolds ??= new ListBuilder<BuildInspectionApiSerialHold>();
-
   set serialHolds(ListBuilder<BuildInspectionApiSerialHold> serialHolds) =>
       _$this._serialHolds = serialHolds;
 
   ListBuilder<ExpirationInfo> _expirationInfos;
-
   ListBuilder<ExpirationInfo> get expirationInfos =>
       _$this._expirationInfos ??= new ListBuilder<ExpirationInfo>();
-
   set expirationInfos(ListBuilder<ExpirationInfo> expirationInfos) =>
       _$this._expirationInfos = expirationInfos;
 
   ListBuilder<BuildInspectionApiTrayStandardImageFile> _trayStandardImageFiles;
-
   ListBuilder<BuildInspectionApiTrayStandardImageFile>
       get trayStandardImageFiles => _$this._trayStandardImageFiles ??=
           new ListBuilder<BuildInspectionApiTrayStandardImageFile>();
-
   set trayStandardImageFiles(
           ListBuilder<BuildInspectionApiTrayStandardImageFile>
               trayStandardImageFiles) =>
@@ -831,7 +795,6 @@ class _$BuildInspectionApiSupportingInfoActions
       BuildInspectionApiSupportingInfoBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -885,7 +848,6 @@ class _$BuildInspectionApiSupportingInfoActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiSupportingInfo);

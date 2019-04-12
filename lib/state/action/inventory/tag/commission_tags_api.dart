@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/inventory/tag/commission_tags_api_r
 
 part 'commission_tags_api.g.dart';
 
-abstract class CommissionTagsApi extends ApiDispatcher<CommissionTagsApiRequest,
-    CommissionTagsApiRequestBuilder, Empty, EmptyBuilder, CommissionTagsApi> {
+abstract class CommissionTagsApi extends ApiDispatcher<
+    CommissionTagsApiRequest,
+    CommissionTagsApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    CommissionTagsApi> {
   @override
   String get path => 'v1/inventory/tag/commission';
 

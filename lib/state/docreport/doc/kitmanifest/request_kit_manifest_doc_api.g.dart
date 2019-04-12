@@ -10,72 +10,73 @@ part of 'request_kit_manifest_doc_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestKitManifestDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestKitManifestDocApi> RequestKitManifestDocApiOptions();
 
 class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestKitManifestDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>, RequestKitManifestDocApi, String>> $cancel;
+          ApiResult<Nothing>, RequestKitManifestDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestKitManifestDocApi,
           Command<ApiCommand<RequestKitManifestDocApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestKitManifestDocApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestKitManifestDocApi,
           CommandProgress>> $progress;
 
   _$RequestKitManifestDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestKitManifestDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestKitManifestDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestKitManifestDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestKitManifestDocApi,
                     Command<ApiCommand<RequestKitManifestDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestKitManifestDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestKitManifestDocApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestKitManifestDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestKitManifestDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
       _$RequestKitManifestDocApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestKitManifestDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestKitManifestDocApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestKitManifestDocApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
       ApiCommand<RequestKitManifestDocApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$RequestKitManifestDocApi extends RequestKitManifestDocApi {
       RequestKitManifestDocApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestKitManifestDocApiRequest> get commandPayloadSerializer =>
       RequestKitManifestDocApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

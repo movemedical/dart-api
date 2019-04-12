@@ -10,8 +10,8 @@ part 'request_user_permissions_report_api.g.dart';
 abstract class RequestUserPermissionsReportApi extends ApiDispatcher<
     RequestUserPermissionsReportApiRequest,
     RequestUserPermissionsReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestUserPermissionsReportApi> {
   @override
   String get path => 'v1/docreport/user_permissions';

@@ -10,8 +10,8 @@ part 'update_import_log_error_api.g.dart';
 abstract class UpdateImportLogErrorApi extends ApiDispatcher<
     UpdateImportLogErrorApiRequest,
     UpdateImportLogErrorApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateImportLogErrorApi> {
   @override
   String get path => 'v1/integration/files/update_import_log_error';

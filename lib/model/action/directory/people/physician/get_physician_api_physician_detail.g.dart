@@ -353,102 +353,72 @@ class GetPhysicianApiPhysicianDetailBuilder
   _$GetPhysicianApiPhysicianDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   PhysicianType _physicianType;
-
   PhysicianType get physicianType => _$this._physicianType;
-
   set physicianType(PhysicianType physicianType) =>
       _$this._physicianType = physicianType;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _workPhoneNumber;
-
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
-
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
-
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
-
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   String _reference1;
-
   String get reference1 => _$this._reference1;
-
   set reference1(String reference1) => _$this._reference1 = reference1;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   String _npi;
-
   String get npi => _$this._npi;
-
   set npi(String npi) => _$this._npi = npi;
 
   String _userId;
-
   String get userId => _$this._userId;
-
   set userId(String userId) => _$this._userId = userId;
 
   UserPerspective _userPerspective;
-
   UserPerspective get userPerspective => _$this._userPerspective;
-
   set userPerspective(UserPerspective userPerspective) =>
       _$this._userPerspective = userPerspective;
 
   UserStatus _userStatus;
-
   UserStatus get userStatus => _$this._userStatus;
-
   set userStatus(UserStatus userStatus) => _$this._userStatus = userStatus;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   ListBuilder<PhysicianAttribute> _attributes;
-
   ListBuilder<PhysicianAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<PhysicianAttribute>();
-
   set attributes(ListBuilder<PhysicianAttribute> attributes) =>
       _$this._attributes = attributes;
 
   ListBuilder<AttributeContact> _attributeContacts;
-
   ListBuilder<AttributeContact> get attributeContacts =>
       _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
-
   set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
       _$this._attributeContacts = attributeContacts;
 
@@ -658,7 +628,6 @@ class _$GetPhysicianApiPhysicianDetailActions
       GetPhysicianApiPhysicianDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -668,7 +637,6 @@ class _$GetPhysicianApiPhysicianDetailActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -716,7 +684,6 @@ class _$GetPhysicianApiPhysicianDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetPhysicianApiPhysicianDetail);

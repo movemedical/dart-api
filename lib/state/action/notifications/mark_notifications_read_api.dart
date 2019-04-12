@@ -10,8 +10,8 @@ part 'mark_notifications_read_api.g.dart';
 abstract class MarkNotificationsReadApi extends ApiDispatcher<
     MarkNotificationsReadApiRequest,
     MarkNotificationsReadApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     MarkNotificationsReadApi> {
   @override
   String get path => 'v1/notifications/mark_as_read';

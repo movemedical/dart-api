@@ -11,72 +11,72 @@ part of 'request_roll_forward_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestRollForwardReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestRollForwardReportApi> RequestRollForwardReportApiOptions();
 
 class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestRollForwardReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>, RequestRollForwardReportApi, String>> $cancel;
+          ApiResult<Nothing>, RequestRollForwardReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestRollForwardReportApi,
           Command<ApiCommand<RequestRollForwardReportApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestRollForwardReportApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestRollForwardReportApi,
           CommandProgress>> $progress;
 
   _$RequestRollForwardReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestRollForwardReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestRollForwardReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestRollForwardReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestRollForwardReportApi,
                     Command<ApiCommand<RequestRollForwardReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestRollForwardReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestRollForwardReportApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestRollForwardReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestRollForwardReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
       _$RequestRollForwardReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RequestRollForwardReportApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestRollForwardReportApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestRollForwardReportApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestRollForwardReportApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
       ApiCommand<RequestRollForwardReportApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$RequestRollForwardReportApi extends RequestRollForwardReportApi {
       RequestRollForwardReportApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestRollForwardReportApiRequest> get commandPayloadSerializer =>
       RequestRollForwardReportApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

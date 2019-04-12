@@ -10,8 +10,8 @@ part 'update_customer_qualifier_api.g.dart';
 abstract class UpdateCustomerQualifierApi extends ApiDispatcher<
     UpdateCustomerQualifierApiRequest,
     UpdateCustomerQualifierApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCustomerQualifierApi> {
   @override
   String get path => 'v1/directory/relationship/customer_qualifier/update';

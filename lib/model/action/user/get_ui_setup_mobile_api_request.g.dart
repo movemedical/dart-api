@@ -186,42 +186,30 @@ class GetUiSetupMobileApiRequestBuilder
   _$GetUiSetupMobileApiRequest _$v;
 
   String _appVersion;
-
   String get appVersion => _$this._appVersion;
-
   set appVersion(String appVersion) => _$this._appVersion = appVersion;
 
   MobilePlatform _platform;
-
   MobilePlatform get platform => _$this._platform;
-
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   String _platformVersion;
-
   String get platformVersion => _$this._platformVersion;
-
   set platformVersion(String platformVersion) =>
       _$this._platformVersion = platformVersion;
 
   String _pushNotificationToken;
-
   String get pushNotificationToken => _$this._pushNotificationToken;
-
   set pushNotificationToken(String pushNotificationToken) =>
       _$this._pushNotificationToken = pushNotificationToken;
 
   String _existingDeviceId;
-
   String get existingDeviceId => _$this._existingDeviceId;
-
   set existingDeviceId(String existingDeviceId) =>
       _$this._existingDeviceId = existingDeviceId;
 
   bool _useSandboxPushNotifications;
-
   bool get useSandboxPushNotifications => _$this._useSandboxPushNotifications;
-
   set useSandboxPushNotifications(bool useSandboxPushNotifications) =>
       _$this._useSandboxPushNotifications = useSandboxPushNotifications;
 
@@ -338,7 +326,6 @@ class _$GetUiSetupMobileApiRequestActions
       GetUiSetupMobileApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -368,7 +355,6 @@ class _$GetUiSetupMobileApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetUiSetupMobileApiRequest);
 }

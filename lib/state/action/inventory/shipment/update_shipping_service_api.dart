@@ -10,8 +10,8 @@ part 'update_shipping_service_api.g.dart';
 abstract class UpdateShippingServiceApi extends ApiDispatcher<
     UpdateShippingServiceApiRequest,
     UpdateShippingServiceApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateShippingServiceApi> {
   @override
   String get path => 'v1/inventory/shipment/shipping_service/update';

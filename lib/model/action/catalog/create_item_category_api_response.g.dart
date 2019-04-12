@@ -105,9 +105,7 @@ class CreateItemCategoryApiResponseBuilder
   _$CreateItemCategoryApiResponse _$v;
 
   String _itemCategoryId;
-
   String get itemCategoryId => _$this._itemCategoryId;
-
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
@@ -189,7 +187,6 @@ class _$CreateItemCategoryApiResponseActions
       CreateItemCategoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -209,7 +206,6 @@ class _$CreateItemCategoryApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateItemCategoryApiResponse);

@@ -105,10 +105,8 @@ class ListIssueGroupsApiResponseBuilder
   _$ListIssueGroupsApiResponse _$v;
 
   ListBuilder<String> _issueGroups;
-
   ListBuilder<String> get issueGroups =>
       _$this._issueGroups ??= new ListBuilder<String>();
-
   set issueGroups(ListBuilder<String> issueGroups) =>
       _$this._issueGroups = issueGroups;
 
@@ -204,7 +202,6 @@ class _$ListIssueGroupsApiResponseActions
       ListIssueGroupsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -224,7 +221,6 @@ class _$ListIssueGroupsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListIssueGroupsApiResponse);
 }

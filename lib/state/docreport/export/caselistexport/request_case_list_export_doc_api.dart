@@ -10,8 +10,8 @@ part 'request_case_list_export_doc_api.g.dart';
 abstract class RequestCaseListExportDocApi extends ApiDispatcher<
     RequestCaseListExportDocApiRequest,
     RequestCaseListExportDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestCaseListExportDocApi> {
   @override
   String get path => 'v1/docreport/export/caseListExport';

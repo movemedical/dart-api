@@ -195,45 +195,33 @@ class SaveCaseUsagesApiRequestBuilder
   _$SaveCaseUsagesApiRequest _$v;
 
   String _caseId;
-
   String get caseId => _$this._caseId;
-
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   bool _usageComplete;
-
   bool get usageComplete => _$this._usageComplete;
-
   set usageComplete(bool usageComplete) =>
       _$this._usageComplete = usageComplete;
 
   ListBuilder<SaveCaseUsagesApiUsage> _usages;
-
   ListBuilder<SaveCaseUsagesApiUsage> get usages =>
       _$this._usages ??= new ListBuilder<SaveCaseUsagesApiUsage>();
-
   set usages(ListBuilder<SaveCaseUsagesApiUsage> usages) =>
       _$this._usages = usages;
 
   ListBuilder<SaveCaseUsagesApiUsageOrder> _orders;
-
   ListBuilder<SaveCaseUsagesApiUsageOrder> get orders =>
       _$this._orders ??= new ListBuilder<SaveCaseUsagesApiUsageOrder>();
-
   set orders(ListBuilder<SaveCaseUsagesApiUsageOrder> orders) =>
       _$this._orders = orders;
 
   ListBuilder<String> _orderIdsToDelete;
-
   ListBuilder<String> get orderIdsToDelete =>
       _$this._orderIdsToDelete ??= new ListBuilder<String>();
-
   set orderIdsToDelete(ListBuilder<String> orderIdsToDelete) =>
       _$this._orderIdsToDelete = orderIdsToDelete;
 
@@ -364,7 +352,6 @@ class _$SaveCaseUsagesApiRequestActions
       SaveCaseUsagesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -394,7 +381,6 @@ class _$SaveCaseUsagesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveCaseUsagesApiRequest);
 }

@@ -10,60 +10,64 @@ part of 'approve_order_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>>,
     ApproveOrderApi> ApproveOrderApiOptions();
 
 class _$ApproveOrderApi extends ApproveOrderApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>,
+          ApiResult<Nothing>>,
       ApproveOrderApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>,
           ApproveOrderApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ApproveOrderApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ApproveOrderApi,
           Command<ApiCommand<ApproveOrderApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-          ApproveOrderApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>,
+          ApproveOrderApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>,
           ApproveOrderApi, CommandProgress>> $progress;
 
   _$ApproveOrderApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ApproveOrderApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>,
-                ApproveOrderApi, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<ApproveOrderApiRequest>,
+                ApiResult<Nothing>,
+                ApproveOrderApi,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ApproveOrderApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ApproveOrderApi,
                     Command<ApiCommand<ApproveOrderApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ApproveOrderApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ApproveOrderApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ApproveOrderApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ApproveOrderApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -72,17 +76,16 @@ class _$ApproveOrderApi extends ApproveOrderApi {
       _$ApproveOrderApi._(options());
 
   @override
-  CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>
-      get $initial =>
-          CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>();
+  CommandState<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>>
+      get $initial => CommandState<ApiCommand<ApproveOrderApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<ApproveOrderApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -94,11 +97,10 @@ class _$ApproveOrderApi extends ApproveOrderApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ApproveOrderApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -106,7 +108,8 @@ class _$ApproveOrderApi extends ApproveOrderApi {
       ApiCommand<ApproveOrderApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -116,12 +119,12 @@ class _$ApproveOrderApi extends ApproveOrderApi {
       ApproveOrderApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ApproveOrderApiRequest> get commandPayloadSerializer =>
       ApproveOrderApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -238,57 +238,39 @@ class ListZonesApiZoneDetailBuilder
   _$ListZonesApiZoneDetail _$v;
 
   String _zoneId;
-
   String get zoneId => _$this._zoneId;
-
   set zoneId(String zoneId) => _$this._zoneId = zoneId;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ZoneType _type;
-
   ZoneType get type => _$this._type;
-
   set type(ZoneType type) => _$this._type = type;
 
   bool _sourceable;
-
   bool get sourceable => _$this._sourceable;
-
   set sourceable(bool sourceable) => _$this._sourceable = sourceable;
 
   bool _receivable;
-
   bool get receivable => _$this._receivable;
-
   set receivable(bool receivable) => _$this._receivable = receivable;
 
   bool _hasBin;
-
   bool get hasBin => _$this._hasBin;
-
   set hasBin(bool hasBin) => _$this._hasBin = hasBin;
 
   ListZonesApiZoneDetailBuilder();
@@ -407,7 +389,6 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
       ListZonesApiZoneDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -443,7 +424,6 @@ class _$ListZonesApiZoneDetailActions extends ListZonesApiZoneDetailActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListZonesApiZoneDetail);
 }

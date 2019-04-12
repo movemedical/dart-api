@@ -10,8 +10,8 @@ part 'remove_customer_qualifier_api.g.dart';
 abstract class RemoveCustomerQualifierApi extends ApiDispatcher<
     RemoveCustomerQualifierApiRequest,
     RemoveCustomerQualifierApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveCustomerQualifierApi> {
   @override
   String get path => 'v1/directory/relationship/customer_qualifier/remove';

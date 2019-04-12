@@ -10,8 +10,8 @@ part 'cancel_order_lines_api.g.dart';
 abstract class CancelOrderLinesApi extends ApiDispatcher<
     CancelOrderLinesApiRequest,
     CancelOrderLinesApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CancelOrderLinesApi> {
   @override
   String get path => 'v1/inventory/order/cancel_order_lines';

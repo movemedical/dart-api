@@ -10,57 +10,57 @@ part of 'delete_note_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>,
     DeleteNoteApi> DeleteNoteApiOptions();
 
 class _$DeleteNoteApi extends DeleteNoteApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>,
       DeleteNoteApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
           DeleteNoteApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
           DeleteNoteApi, Command<ApiCommand<DeleteNoteApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
-          DeleteNoteApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
+          DeleteNoteApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
           DeleteNoteApi, CommandProgress>> $progress;
 
   _$DeleteNoteApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteNoteApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>,
+            CommandPayload<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>,
                 DeleteNoteApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteNoteApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteNoteApi,
                     Command<ApiCommand<DeleteNoteApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteNoteApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteNoteApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteNoteApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteNoteApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -69,17 +69,16 @@ class _$DeleteNoteApi extends DeleteNoteApi {
       _$DeleteNoteApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>
       get $initial =>
-          CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>();
+          CommandState<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<DeleteNoteApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -91,11 +90,10 @@ class _$DeleteNoteApi extends DeleteNoteApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteNoteApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -103,7 +101,8 @@ class _$DeleteNoteApi extends DeleteNoteApi {
       ApiCommand<DeleteNoteApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -113,12 +112,12 @@ class _$DeleteNoteApi extends DeleteNoteApi {
       DeleteNoteApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DeleteNoteApiRequest> get commandPayloadSerializer =>
       DeleteNoteApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

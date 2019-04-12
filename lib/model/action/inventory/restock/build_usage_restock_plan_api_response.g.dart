@@ -109,11 +109,9 @@ class BuildUsageRestockPlanApiResponseBuilder
   _$BuildUsageRestockPlanApiResponse _$v;
 
   ListBuilder<BuildUsageRestockPlanApiRestockItem> _restockItems;
-
   ListBuilder<BuildUsageRestockPlanApiRestockItem> get restockItems =>
       _$this._restockItems ??=
           new ListBuilder<BuildUsageRestockPlanApiRestockItem>();
-
   set restockItems(
           ListBuilder<BuildUsageRestockPlanApiRestockItem> restockItems) =>
       _$this._restockItems = restockItems;
@@ -213,7 +211,6 @@ class _$BuildUsageRestockPlanApiResponseActions
       BuildUsageRestockPlanApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -233,7 +230,6 @@ class _$BuildUsageRestockPlanApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildUsageRestockPlanApiResponse);

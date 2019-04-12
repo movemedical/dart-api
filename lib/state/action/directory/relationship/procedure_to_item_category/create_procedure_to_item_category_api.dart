@@ -10,8 +10,8 @@ part 'create_procedure_to_item_category_api.g.dart';
 abstract class CreateProcedureToItemCategoryApi extends ApiDispatcher<
     CreateProcedureToItemCategoryApiRequest,
     CreateProcedureToItemCategoryApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateProcedureToItemCategoryApi> {
   @override
   String get path =>

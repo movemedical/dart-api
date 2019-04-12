@@ -115,15 +115,11 @@ class AddHcrToTeamApiRequestBuilder
   _$AddHcrToTeamApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _teamId;
-
   String get teamId => _$this._teamId;
-
   set teamId(String teamId) => _$this._teamId = teamId;
 
   AddHcrToTeamApiRequestBuilder();
@@ -202,7 +198,6 @@ class _$AddHcrToTeamApiRequestActions extends AddHcrToTeamApiRequestActions {
       AddHcrToTeamApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -224,7 +219,6 @@ class _$AddHcrToTeamApiRequestActions extends AddHcrToTeamApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AddHcrToTeamApiRequest);
 }

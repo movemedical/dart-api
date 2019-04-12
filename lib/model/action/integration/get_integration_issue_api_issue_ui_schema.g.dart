@@ -191,39 +191,27 @@ class GetIntegrationIssueApiIssueUiSchemaBuilder
   _$GetIntegrationIssueApiIssueUiSchema _$v;
 
   bool _assign;
-
   bool get assign => _$this._assign;
-
   set assign(bool assign) => _$this._assign = assign;
 
   bool _markResolved;
-
   bool get markResolved => _$this._markResolved;
-
   set markResolved(bool markResolved) => _$this._markResolved = markResolved;
 
   bool _regenerate;
-
   bool get regenerate => _$this._regenerate;
-
   set regenerate(bool regenerate) => _$this._regenerate = regenerate;
 
   bool _reprocess;
-
   bool get reprocess => _$this._reprocess;
-
   set reprocess(bool reprocess) => _$this._reprocess = reprocess;
 
   bool _reopen;
-
   bool get reopen => _$this._reopen;
-
   set reopen(bool reopen) => _$this._reopen = reopen;
 
   bool _requeueImportJob;
-
   bool get requeueImportJob => _$this._requeueImportJob;
-
   set requeueImportJob(bool requeueImportJob) =>
       _$this._requeueImportJob = requeueImportJob;
 
@@ -335,7 +323,6 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
       GetIntegrationIssueApiIssueUiSchemaBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -365,7 +352,6 @@ class _$GetIntegrationIssueApiIssueUiSchemaActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetIntegrationIssueApiIssueUiSchema);

@@ -106,7 +106,6 @@ class _$PrepareShipmntFileUploadApi extends PrepareShipmntFileUploadApi {
           ApiResult<PrepareShipmntFileUploadApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -118,7 +117,6 @@ class _$PrepareShipmntFileUploadApi extends PrepareShipmntFileUploadApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(PrepareShipmntFileUploadApiRequest)]),

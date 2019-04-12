@@ -158,34 +158,24 @@ class BizUnitLinkBuilder implements Builder<BizUnitLink, BizUnitLinkBuilder> {
   _$BizUnitLink _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _bizUnitId;
-
   String get bizUnitId => _$this._bizUnitId;
-
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _bizUnitName;
-
   String get bizUnitName => _$this._bizUnitName;
-
   set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
 
   String _bizUnitDescription;
-
   String get bizUnitDescription => _$this._bizUnitDescription;
-
   set bizUnitDescription(String bizUnitDescription) =>
       _$this._bizUnitDescription = bizUnitDescription;
 
   bool _bizUnitActive;
-
   bool get bizUnitActive => _$this._bizUnitActive;
-
   set bizUnitActive(bool bizUnitActive) =>
       _$this._bizUnitActive = bizUnitActive;
 
@@ -287,7 +277,6 @@ class _$BizUnitLinkActions extends BizUnitLinkActions {
   BizUnitLinkBuilder $newBuilder() => BizUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -315,7 +304,6 @@ class _$BizUnitLinkActions extends BizUnitLinkActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(BizUnitLink);
 }

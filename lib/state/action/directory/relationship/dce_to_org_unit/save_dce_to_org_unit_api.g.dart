@@ -10,65 +10,65 @@ part of 'save_dce_to_org_unit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<SaveDceToOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     SaveDceToOrgUnitApi> SaveDceToOrgUnitApiOptions();
 
 class _$SaveDceToOrgUnitApi extends SaveDceToOrgUnitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SaveDceToOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       SaveDceToOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>,
           SaveDceToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveDceToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveDceToOrgUnitApi,
           Command<ApiCommand<SaveDceToOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>,
-          SaveDceToOrgUnitApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>,
+          SaveDceToOrgUnitApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>,
           SaveDceToOrgUnitApi, CommandProgress>> $progress;
 
   _$SaveDceToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveDceToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveDceToOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SaveDceToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveDceToOrgUnitApi,
                     Command<ApiCommand<SaveDceToOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<SaveDceToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveDceToOrgUnitApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveDceToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveDceToOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,17 @@ class _$SaveDceToOrgUnitApi extends SaveDceToOrgUnitApi {
       _$SaveDceToOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<SaveDceToOrgUnitApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<SaveDceToOrgUnitApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Empty>>();
+          ApiCommand<SaveDceToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +99,10 @@ class _$SaveDceToOrgUnitApi extends SaveDceToOrgUnitApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveDceToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +110,8 @@ class _$SaveDceToOrgUnitApi extends SaveDceToOrgUnitApi {
       ApiCommand<SaveDceToOrgUnitApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +121,12 @@ class _$SaveDceToOrgUnitApi extends SaveDceToOrgUnitApi {
       SaveDceToOrgUnitApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<SaveDceToOrgUnitApiRequest> get commandPayloadSerializer =>
       SaveDceToOrgUnitApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

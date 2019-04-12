@@ -10,8 +10,8 @@ part 'save_case_custom_values_api.g.dart';
 abstract class SaveCaseCustomValuesApi extends ApiDispatcher<
     SaveCaseCustomValuesApiRequest,
     SaveCaseCustomValuesApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveCaseCustomValuesApi> {
   @override
   String get path => 'v1/case_event/save_case_custom_values';

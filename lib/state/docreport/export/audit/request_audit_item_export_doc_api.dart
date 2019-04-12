@@ -10,8 +10,8 @@ part 'request_audit_item_export_doc_api.g.dart';
 abstract class RequestAuditItemExportDocApi extends ApiDispatcher<
     RequestAuditItemExportDocApiRequest,
     RequestAuditItemExportDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestAuditItemExportDocApi> {
   @override
   String get path => 'v1/docreport/export/audit_items';

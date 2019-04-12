@@ -282,81 +282,59 @@ class ListStockForUsageApiUsageStockSummaryBuilder
   _$ListStockForUsageApiUsageStockSummary _$v;
 
   String _key;
-
   String get key => _$this._key;
-
   set key(String key) => _$this._key = key;
 
   ListBuilder<String> _stockIds;
-
   ListBuilder<String> get stockIds =>
       _$this._stockIds ??= new ListBuilder<String>();
-
   set stockIds(ListBuilder<String> stockIds) => _$this._stockIds = stockIds;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   StockPlaceBuilder _place;
-
   StockPlaceBuilder get place => _$this._place ??= new StockPlaceBuilder();
-
   set place(StockPlaceBuilder place) => _$this._place = place;
 
   ExpirationInfoBuilder _expirationInfo;
-
   ExpirationInfoBuilder get expirationInfo =>
       _$this._expirationInfo ??= new ExpirationInfoBuilder();
-
   set expirationInfo(ExpirationInfoBuilder expirationInfo) =>
       _$this._expirationInfo = expirationInfo;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   LoanLiteBuilder _demandLoan;
-
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
-
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   LoanLiteBuilder _consignmentLoan;
-
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
-
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
   String _attributeLabel;
-
   String get attributeLabel => _$this._attributeLabel;
-
   set attributeLabel(String attributeLabel) =>
       _$this._attributeLabel = attributeLabel;
 
   String _attributeValue;
-
   String get attributeValue => _$this._attributeValue;
-
   set attributeValue(String attributeValue) =>
       _$this._attributeValue = attributeValue;
 
   ResponsiblePartyBuilder _responsibleParty;
-
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
-
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
@@ -560,7 +538,6 @@ class _$ListStockForUsageApiUsageStockSummaryActions
       ListStockForUsageApiUsageStockSummaryBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -573,7 +550,6 @@ class _$ListStockForUsageApiUsageStockSummaryActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -613,7 +589,6 @@ class _$ListStockForUsageApiUsageStockSummaryActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForUsageApiUsageStockSummary);

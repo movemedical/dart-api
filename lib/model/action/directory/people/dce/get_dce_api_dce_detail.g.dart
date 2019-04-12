@@ -374,108 +374,74 @@ class GetDceApiDceDetailBuilder
   _$GetDceApiDceDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
-
   OrgType get orgType => _$this._orgType;
-
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgName;
-
   String get orgName => _$this._orgName;
-
   set orgName(String orgName) => _$this._orgName = orgName;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _reference;
-
   String get reference => _$this._reference;
-
   set reference(String reference) => _$this._reference = reference;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   String _workingHomeId;
-
   String get workingHomeId => _$this._workingHomeId;
-
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingHomeName;
-
   String get workingHomeName => _$this._workingHomeName;
-
   set workingHomeName(String workingHomeName) =>
       _$this._workingHomeName = workingHomeName;
 
   String _workingAtId;
-
   String get workingAtId => _$this._workingAtId;
-
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   String _workingAtName;
-
   String get workingAtName => _$this._workingAtName;
-
   set workingAtName(String workingAtName) =>
       _$this._workingAtName = workingAtName;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   String _userId;
-
   String get userId => _$this._userId;
-
   set userId(String userId) => _$this._userId = userId;
 
   UserStatus _userStatus;
-
   UserStatus get userStatus => _$this._userStatus;
-
   set userStatus(UserStatus userStatus) => _$this._userStatus = userStatus;
 
   bool _userLocked;
-
   bool get userLocked => _$this._userLocked;
-
   set userLocked(bool userLocked) => _$this._userLocked = userLocked;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _phiAllowed;
-
   bool get phiAllowed => _$this._phiAllowed;
-
   set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
 
   GetDceApiDceDetailBuilder();
@@ -669,7 +635,6 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
   GetDceApiDceDetailBuilder $newBuilder() => GetDceApiDceDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -677,7 +642,6 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -729,7 +693,6 @@ class _$GetDceApiDceDetailActions extends GetDceApiDceDetailActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetDceApiDceDetail);
 }

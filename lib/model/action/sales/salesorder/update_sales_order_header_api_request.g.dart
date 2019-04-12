@@ -277,77 +277,55 @@ class UpdateSalesOrderHeaderApiRequestBuilder
   _$UpdateSalesOrderHeaderApiRequest _$v;
 
   bool _validateCanDo;
-
   bool get validateCanDo => _$this._validateCanDo;
-
   set validateCanDo(bool validateCanDo) =>
       _$this._validateCanDo = validateCanDo;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _billToAddressId;
-
   String get billToAddressId => _$this._billToAddressId;
-
   set billToAddressId(String billToAddressId) =>
       _$this._billToAddressId = billToAddressId;
 
   String _shipToAddressId;
-
   String get shipToAddressId => _$this._shipToAddressId;
-
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   DateTime _deliverWindowStart;
-
   DateTime get deliverWindowStart => _$this._deliverWindowStart;
-
   set deliverWindowStart(DateTime deliverWindowStart) =>
       _$this._deliverWindowStart = deliverWindowStart;
 
   DateTime _deliverWindowEnd;
-
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
-
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
   String _deliverToAddressId;
-
   String get deliverToAddressId => _$this._deliverToAddressId;
-
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
-
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
-
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _attention;
-
   String get attention => _$this._attention;
-
   set attention(String attention) => _$this._attention = attention;
 
   String _email;
-
   String get email => _$this._email;
-
   set email(String email) => _$this._email = email;
 
   UpdateSalesOrderHeaderApiRequestBuilder();
@@ -514,14 +492,12 @@ class _$UpdateSalesOrderHeaderApiRequestActions
       UpdateSalesOrderHeaderApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -561,7 +537,6 @@ class _$UpdateSalesOrderHeaderApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateSalesOrderHeaderApiRequest);

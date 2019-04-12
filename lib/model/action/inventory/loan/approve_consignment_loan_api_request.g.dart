@@ -120,15 +120,11 @@ class ApproveConsignmentLoanApiRequestBuilder
   _$ApproveConsignmentLoanApiRequest _$v;
 
   String _loanId;
-
   String get loanId => _$this._loanId;
-
   set loanId(String loanId) => _$this._loanId = loanId;
 
   bool _approve;
-
   bool get approve => _$this._approve;
-
   set approve(bool approve) => _$this._approve = approve;
 
   ApproveConsignmentLoanApiRequestBuilder();
@@ -212,7 +208,6 @@ class _$ApproveConsignmentLoanApiRequestActions
       ApproveConsignmentLoanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -234,7 +229,6 @@ class _$ApproveConsignmentLoanApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ApproveConsignmentLoanApiRequest);

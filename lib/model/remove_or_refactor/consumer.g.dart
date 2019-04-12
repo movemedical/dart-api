@@ -118,21 +118,15 @@ class ConsumerBuilder implements Builder<Consumer, ConsumerBuilder> {
   _$Consumer _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ConsumerBuilder();
@@ -228,14 +222,12 @@ class _$ConsumerActions extends ConsumerActions {
   ConsumerBuilder $newBuilder() => ConsumerBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -259,7 +251,6 @@ class _$ConsumerActions extends ConsumerActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Consumer);
 }

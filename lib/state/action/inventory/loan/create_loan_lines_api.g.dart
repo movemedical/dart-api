@@ -10,65 +10,65 @@ part of 'create_loan_lines_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<CreateLoanLinesApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CreateLoanLinesApi> CreateLoanLinesApiOptions();
 
 class _$CreateLoanLinesApi extends CreateLoanLinesApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CreateLoanLinesApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CreateLoanLinesApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<CreateLoanLinesApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>,
           CreateLoanLinesApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateLoanLinesApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           CreateLoanLinesApi,
           Command<ApiCommand<CreateLoanLinesApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>,
-          CreateLoanLinesApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>,
+          CreateLoanLinesApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>,
           CreateLoanLinesApi, CommandProgress>> $progress;
 
   _$CreateLoanLinesApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreateLoanLinesApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateLoanLinesApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CreateLoanLinesApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CreateLoanLinesApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CreateLoanLinesApi,
                     Command<ApiCommand<CreateLoanLinesApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<CreateLoanLinesApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CreateLoanLinesApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateLoanLinesApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CreateLoanLinesApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,16 @@ class _$CreateLoanLinesApi extends CreateLoanLinesApi {
       _$CreateLoanLinesApi._(options());
 
   @override
-  CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<CreateLoanLinesApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Empty>>();
+          ApiCommand<CreateLoanLinesApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +98,10 @@ class _$CreateLoanLinesApi extends CreateLoanLinesApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateLoanLinesApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +109,8 @@ class _$CreateLoanLinesApi extends CreateLoanLinesApi {
       ApiCommand<CreateLoanLinesApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +120,12 @@ class _$CreateLoanLinesApi extends CreateLoanLinesApi {
       CreateLoanLinesApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<CreateLoanLinesApiRequest> get commandPayloadSerializer =>
       CreateLoanLinesApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

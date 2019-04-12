@@ -102,7 +102,6 @@ class _$CreateConversationApi extends CreateConversationApi {
           ApiResult<CreateConversationApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -114,7 +113,6 @@ class _$CreateConversationApi extends CreateConversationApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateConversationApiRequest)]),

@@ -136,22 +136,16 @@ class SubmitSalesOrderApiResponseBuilder
   _$SubmitSalesOrderApiResponse _$v;
 
   bool _validationPassed;
-
   bool get validationPassed => _$this._validationPassed;
-
   set validationPassed(bool validationPassed) =>
       _$this._validationPassed = validationPassed;
 
   bool _soapSuccess;
-
   bool get soapSuccess => _$this._soapSuccess;
-
   set soapSuccess(bool soapSuccess) => _$this._soapSuccess = soapSuccess;
 
   String _erpOrderReference;
-
   String get erpOrderReference => _$this._erpOrderReference;
-
   set erpOrderReference(String erpOrderReference) =>
       _$this._erpOrderReference = erpOrderReference;
 
@@ -247,7 +241,6 @@ class _$SubmitSalesOrderApiResponseActions
       SubmitSalesOrderApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -271,7 +264,6 @@ class _$SubmitSalesOrderApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SubmitSalesOrderApiResponse);

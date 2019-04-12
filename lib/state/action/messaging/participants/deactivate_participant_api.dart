@@ -10,8 +10,8 @@ part 'deactivate_participant_api.g.dart';
 abstract class DeactivateParticipantApi extends ApiDispatcher<
     DeactivateParticipantApiRequest,
     DeactivateParticipantApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeactivateParticipantApi> {
   @override
   String get path => 'v1/messaging/participants/deactivate';

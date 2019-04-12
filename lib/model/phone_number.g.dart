@@ -137,27 +137,19 @@ class PhoneNumberBuilder implements Builder<PhoneNumber, PhoneNumberBuilder> {
   _$PhoneNumber _$v;
 
   String _countryCode;
-
   String get countryCode => _$this._countryCode;
-
   set countryCode(String countryCode) => _$this._countryCode = countryCode;
 
   String _areaCode;
-
   String get areaCode => _$this._areaCode;
-
   set areaCode(String areaCode) => _$this._areaCode = areaCode;
 
   String _phoneNumber;
-
   String get phoneNumber => _$this._phoneNumber;
-
   set phoneNumber(String phoneNumber) => _$this._phoneNumber = phoneNumber;
 
   String _extension;
-
   String get extension => _$this._extension;
-
   set extension(String extension) => _$this._extension = extension;
 
   PhoneNumberBuilder();
@@ -250,7 +242,6 @@ class _$PhoneNumberActions extends PhoneNumberActions {
   PhoneNumberBuilder $newBuilder() => PhoneNumberBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -276,7 +267,6 @@ class _$PhoneNumberActions extends PhoneNumberActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(PhoneNumber);
 }

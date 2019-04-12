@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/directory/people/hcr/add_hcr_matrix
 part 'add_hcr_matrix_api.g.dart';
 
 abstract class AddHcrMatrixApi extends ApiDispatcher<AddHcrMatrixApiRequest,
-    AddHcrMatrixApiRequestBuilder, Empty, EmptyBuilder, AddHcrMatrixApi> {
+    AddHcrMatrixApiRequestBuilder, Nothing, NothingBuilder, AddHcrMatrixApi> {
   @override
   String get path => 'v1/directory/people/hcr/hcr_matrix/add';
 

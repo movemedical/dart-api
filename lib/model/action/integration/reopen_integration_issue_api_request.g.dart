@@ -106,9 +106,7 @@ class ReopenIntegrationIssueApiRequestBuilder
   _$ReopenIntegrationIssueApiRequest _$v;
 
   String _integrationIssueId;
-
   String get integrationIssueId => _$this._integrationIssueId;
-
   set integrationIssueId(String integrationIssueId) =>
       _$this._integrationIssueId = integrationIssueId;
 
@@ -192,7 +190,6 @@ class _$ReopenIntegrationIssueApiRequestActions
       ReopenIntegrationIssueApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -212,7 +209,6 @@ class _$ReopenIntegrationIssueApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ReopenIntegrationIssueApiRequest);

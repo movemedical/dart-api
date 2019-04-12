@@ -10,8 +10,8 @@ part 'create_loan_lines_api.g.dart';
 abstract class CreateLoanLinesApi extends ApiDispatcher<
     CreateLoanLinesApiRequest,
     CreateLoanLinesApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateLoanLinesApi> {
   @override
   String get path => 'v1/inventory/loan/createLoanLines';

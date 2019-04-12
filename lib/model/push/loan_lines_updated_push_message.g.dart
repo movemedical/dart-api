@@ -135,21 +135,15 @@ class LoanLinesUpdatedPushMessageBuilder
   _$LoanLinesUpdatedPushMessage _$v;
 
   String _loanId;
-
   String get loanId => _$this._loanId;
-
   set loanId(String loanId) => _$this._loanId = loanId;
 
   bool _success;
-
   bool get success => _$this._success;
-
   set success(bool success) => _$this._success = success;
 
   String _failureMsg;
-
   String get failureMsg => _$this._failureMsg;
-
   set failureMsg(String failureMsg) => _$this._failureMsg = failureMsg;
 
   LoanLinesUpdatedPushMessageBuilder();
@@ -236,7 +230,6 @@ class _$LoanLinesUpdatedPushMessageActions
       LoanLinesUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -260,7 +253,6 @@ class _$LoanLinesUpdatedPushMessageActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(LoanLinesUpdatedPushMessage);

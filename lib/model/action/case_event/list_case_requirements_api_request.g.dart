@@ -122,17 +122,13 @@ class ListCaseRequirementsApiRequestBuilder
   _$ListCaseRequirementsApiRequest _$v;
 
   String _caseId;
-
   String get caseId => _$this._caseId;
-
   set caseId(String caseId) => _$this._caseId = caseId;
 
   OrderByParamsBuilder<ListCaseRequirementsApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListCaseRequirementsApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListCaseRequirementsApiOrderBy>();
-
   set orderBy(OrderByParamsBuilder<ListCaseRequirementsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -238,14 +234,12 @@ class _$ListCaseRequirementsApiRequestActions
       ListCaseRequirementsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orderBy,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -267,7 +261,6 @@ class _$ListCaseRequirementsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCaseRequirementsApiRequest);

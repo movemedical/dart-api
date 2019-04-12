@@ -101,7 +101,6 @@ class _$ListOrderFilesApi extends ListOrderFilesApi {
           ApiResult<ListOrderFilesApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -113,7 +112,6 @@ class _$ListOrderFilesApi extends ListOrderFilesApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListOrderFilesApiRequest)]),

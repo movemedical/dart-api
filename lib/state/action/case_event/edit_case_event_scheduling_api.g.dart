@@ -11,72 +11,72 @@ part of 'edit_case_event_scheduling_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<EditCaseEventSchedulingApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     EditCaseEventSchedulingApi> EditCaseEventSchedulingApiOptions();
 
 class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       EditCaseEventSchedulingApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>, EditCaseEventSchedulingApi, String>> $cancel;
+          ApiResult<Nothing>, EditCaseEventSchedulingApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           EditCaseEventSchedulingApi,
           Command<ApiCommand<EditCaseEventSchedulingApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           EditCaseEventSchedulingApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           EditCaseEventSchedulingApi,
           CommandProgress>> $progress;
 
   _$EditCaseEventSchedulingApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<EditCaseEventSchedulingApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 EditCaseEventSchedulingApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<EditCaseEventSchedulingApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     EditCaseEventSchedulingApi,
                     Command<ApiCommand<EditCaseEventSchedulingApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<EditCaseEventSchedulingApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     EditCaseEventSchedulingApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EditCaseEventSchedulingApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 EditCaseEventSchedulingApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
       _$EditCaseEventSchedulingApi._(options());
 
   @override
-  CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<EditCaseEventSchedulingApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Empty>>();
+          ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<EditCaseEventSchedulingApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Empty>>();
+          ApiCommand<EditCaseEventSchedulingApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EditCaseEventSchedulingApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
       ApiCommand<EditCaseEventSchedulingApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$EditCaseEventSchedulingApi extends EditCaseEventSchedulingApi {
       EditCaseEventSchedulingApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<EditCaseEventSchedulingApiRequest> get commandPayloadSerializer =>
       EditCaseEventSchedulingApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

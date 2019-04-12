@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/docreport/doc/custom/custom_case_doc_api_r
 part 'custom_case_doc_api.g.dart';
 
 abstract class CustomCaseDocApi extends ApiDispatcher<CustomCaseDocApiRequest,
-    CustomCaseDocApiRequestBuilder, Empty, EmptyBuilder, CustomCaseDocApi> {
+    CustomCaseDocApiRequestBuilder, Nothing, NothingBuilder, CustomCaseDocApi> {
   @override
   String get path => 'v1/doc/custom/case_doc';
 

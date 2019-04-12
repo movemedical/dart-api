@@ -107,9 +107,7 @@ class RequestShipmentPickListDocApiResponseBuilder
   _$RequestShipmentPickListDocApiResponse _$v;
 
   String _docReportId;
-
   String get docReportId => _$this._docReportId;
-
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestShipmentPickListDocApiResponseBuilder();
@@ -191,7 +189,6 @@ class _$RequestShipmentPickListDocApiResponseActions
       RequestShipmentPickListDocApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -211,7 +208,6 @@ class _$RequestShipmentPickListDocApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestShipmentPickListDocApiResponse);

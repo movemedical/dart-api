@@ -10,72 +10,73 @@ part of 'save_item_category_links_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<SaveItemCategoryLinksApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     SaveItemCategoryLinksApi> SaveItemCategoryLinksApiOptions();
 
 class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       SaveItemCategoryLinksApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>, SaveItemCategoryLinksApi, String>> $cancel;
+          ApiResult<Nothing>, SaveItemCategoryLinksApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveItemCategoryLinksApi,
           Command<ApiCommand<SaveItemCategoryLinksApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveItemCategoryLinksApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveItemCategoryLinksApi,
           CommandProgress>> $progress;
 
   _$SaveItemCategoryLinksApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveItemCategoryLinksApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SaveItemCategoryLinksApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveItemCategoryLinksApi,
                     Command<ApiCommand<SaveItemCategoryLinksApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<SaveItemCategoryLinksApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveItemCategoryLinksApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveItemCategoryLinksApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveItemCategoryLinksApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
       _$SaveItemCategoryLinksApi._(options());
 
   @override
-  CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SaveItemCategoryLinksApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Empty>>();
+          ApiCommand<SaveItemCategoryLinksApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveItemCategoryLinksApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
       ApiCommand<SaveItemCategoryLinksApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$SaveItemCategoryLinksApi extends SaveItemCategoryLinksApi {
       SaveItemCategoryLinksApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<SaveItemCategoryLinksApiRequest> get commandPayloadSerializer =>
       SaveItemCategoryLinksApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

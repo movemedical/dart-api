@@ -124,21 +124,15 @@ class AttributableObjectBuilder
   _$AttributableObject _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   AttributableType _type;
-
   AttributableType get type => _$this._type;
-
   set type(AttributableType type) => _$this._type = type;
 
   String _displayText;
-
   String get displayText => _$this._displayText;
-
   set displayText(String displayText) => _$this._displayText = displayText;
 
   AttributableObjectBuilder();
@@ -222,7 +216,6 @@ class _$AttributableObjectActions extends AttributableObjectActions {
   AttributableObjectBuilder $newBuilder() => AttributableObjectBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -246,7 +239,6 @@ class _$AttributableObjectActions extends AttributableObjectActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AttributableObject);
 }

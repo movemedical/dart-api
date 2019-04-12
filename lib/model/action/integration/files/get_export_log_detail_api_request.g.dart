@@ -105,9 +105,7 @@ class GetExportLogDetailApiRequestBuilder
   _$GetExportLogDetailApiRequest _$v;
 
   String _exportLogId;
-
   String get exportLogId => _$this._exportLogId;
-
   set exportLogId(String exportLogId) => _$this._exportLogId = exportLogId;
 
   GetExportLogDetailApiRequestBuilder();
@@ -188,7 +186,6 @@ class _$GetExportLogDetailApiRequestActions
       GetExportLogDetailApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,7 +205,6 @@ class _$GetExportLogDetailApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetExportLogDetailApiRequest);

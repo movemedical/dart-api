@@ -93,9 +93,7 @@ class GetAeApiRequestBuilder
   _$GetAeApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetAeApiRequestBuilder();
@@ -165,7 +163,6 @@ class _$GetAeApiRequestActions extends GetAeApiRequestActions {
   GetAeApiRequestBuilder $newBuilder() => GetAeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -185,7 +182,6 @@ class _$GetAeApiRequestActions extends GetAeApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAeApiRequest);
 }

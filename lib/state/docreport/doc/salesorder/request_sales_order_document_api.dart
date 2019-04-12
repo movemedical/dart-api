@@ -10,8 +10,8 @@ part 'request_sales_order_document_api.g.dart';
 abstract class RequestSalesOrderDocumentApi extends ApiDispatcher<
     RequestSalesOrderDocumentApiRequest,
     RequestSalesOrderDocumentApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestSalesOrderDocumentApi> {
   @override
   String get path => 'v1/doc/salesorder';

@@ -10,8 +10,8 @@ part 'enable_user_access_api.g.dart';
 abstract class EnableUserAccessApi extends ApiDispatcher<
     EnableUserAccessApiRequest,
     EnableUserAccessApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     EnableUserAccessApi> {
   @override
   String get path => 'v1/user/enable_user_access';

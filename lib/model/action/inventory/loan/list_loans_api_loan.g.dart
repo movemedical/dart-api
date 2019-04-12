@@ -196,46 +196,32 @@ class ListLoansApiLoanBuilder
   _$ListLoansApiLoan _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   LoanStatus _status;
-
   LoanStatus get status => _$this._status;
-
   set status(LoanStatus status) => _$this._status = status;
 
   LoanReason _reason;
-
   LoanReason get reason => _$this._reason;
-
   set reason(LoanReason reason) => _$this._reason = reason;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationBuilder _location;
-
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
-
   set location(LocationBuilder location) => _$this._location = location;
 
   DateRangeBuilder _service;
-
   DateRangeBuilder get service => _$this._service ??= new DateRangeBuilder();
-
   set service(DateRangeBuilder service) => _$this._service = service;
 
   ListLoansApiLoanBuilder();
@@ -365,7 +351,6 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
   ListLoansApiLoanBuilder $newBuilder() => ListLoansApiLoanBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -373,7 +358,6 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -405,7 +389,6 @@ class _$ListLoansApiLoanActions extends ListLoansApiLoanActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListLoansApiLoan);
 }

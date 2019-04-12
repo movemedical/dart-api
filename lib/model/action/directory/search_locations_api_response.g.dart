@@ -103,10 +103,8 @@ class SearchLocationsApiResponseBuilder
   _$SearchLocationsApiResponse _$v;
 
   ListBuilder<Location> _locations;
-
   ListBuilder<Location> get locations =>
       _$this._locations ??= new ListBuilder<Location>();
-
   set locations(ListBuilder<Location> locations) =>
       _$this._locations = locations;
 
@@ -201,7 +199,6 @@ class _$SearchLocationsApiResponseActions
       SearchLocationsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -221,7 +218,6 @@ class _$SearchLocationsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SearchLocationsApiResponse);
 }

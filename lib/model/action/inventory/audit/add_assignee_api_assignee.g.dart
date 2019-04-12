@@ -116,16 +116,12 @@ class AddAssigneeApiAssigneeBuilder
   _$AddAssigneeApiAssignee _$v;
 
   GeneralContactType _linkedType;
-
   GeneralContactType get linkedType => _$this._linkedType;
-
   set linkedType(GeneralContactType linkedType) =>
       _$this._linkedType = linkedType;
 
   String _linkedId;
-
   String get linkedId => _$this._linkedId;
-
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   AddAssigneeApiAssigneeBuilder();
@@ -208,7 +204,6 @@ class _$AddAssigneeApiAssigneeActions extends AddAssigneeApiAssigneeActions {
       AddAssigneeApiAssigneeBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -230,7 +225,6 @@ class _$AddAssigneeApiAssigneeActions extends AddAssigneeApiAssigneeActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AddAssigneeApiAssignee);
 }

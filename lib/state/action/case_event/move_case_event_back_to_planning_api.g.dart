@@ -11,58 +11,58 @@ part of 'move_case_event_back_to_planning_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     MoveCaseEventBackToPlanningApi> MoveCaseEventBackToPlanningApiOptions();
 
 class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       MoveCaseEventBackToPlanningApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>, MoveCaseEventBackToPlanningApi, String>> $cancel;
+          ApiResult<Nothing>, MoveCaseEventBackToPlanningApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           MoveCaseEventBackToPlanningApi,
           Command<ApiCommand<MoveCaseEventBackToPlanningApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           MoveCaseEventBackToPlanningApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           MoveCaseEventBackToPlanningApi,
           CommandProgress>> $progress;
 
   _$MoveCaseEventBackToPlanningApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 MoveCaseEventBackToPlanningApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     MoveCaseEventBackToPlanningApi,
                     Command<
                         ApiCommand<MoveCaseEventBackToPlanningApiRequest>>>>(
@@ -70,14 +70,14 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     MoveCaseEventBackToPlanningApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 MoveCaseEventBackToPlanningApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -88,20 +88,19 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
 
   @override
   CommandState<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -113,11 +112,10 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(MoveCaseEventBackToPlanningApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -126,7 +124,8 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
           ApiCommand<MoveCaseEventBackToPlanningApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -136,7 +135,7 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
       MoveCaseEventBackToPlanningApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<MoveCaseEventBackToPlanningApiRequest>
@@ -144,5 +143,5 @@ class _$MoveCaseEventBackToPlanningApi extends MoveCaseEventBackToPlanningApi {
           MoveCaseEventBackToPlanningApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

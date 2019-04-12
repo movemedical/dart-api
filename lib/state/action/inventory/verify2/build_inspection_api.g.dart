@@ -102,7 +102,6 @@ class _$BuildInspectionApi extends BuildInspectionApi {
           ApiResult<BuildInspectionApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -114,7 +113,6 @@ class _$BuildInspectionApi extends BuildInspectionApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(BuildInspectionApiRequest)]),

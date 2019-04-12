@@ -11,60 +11,60 @@ part of 'add_item_categories_to_be_counted_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AddItemCategoriesToBeCountedApi> AddItemCategoriesToBeCountedApiOptions();
 
 class _$AddItemCategoriesToBeCountedApi
     extends AddItemCategoriesToBeCountedApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AddItemCategoriesToBeCountedApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>, AddItemCategoriesToBeCountedApi, String>> $cancel;
+          ApiResult<Nothing>, AddItemCategoriesToBeCountedApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               AddItemCategoriesToBeCountedApi,
               Command<ApiCommand<AddItemCategoriesToBeCountedApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddItemCategoriesToBeCountedApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddItemCategoriesToBeCountedApi,
           CommandProgress>> $progress;
 
   _$AddItemCategoriesToBeCountedApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddItemCategoriesToBeCountedApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddItemCategoriesToBeCountedApi,
                     Command<
                         ApiCommand<AddItemCategoriesToBeCountedApiRequest>>>>(
@@ -72,14 +72,14 @@ class _$AddItemCategoriesToBeCountedApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddItemCategoriesToBeCountedApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddItemCategoriesToBeCountedApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -90,20 +90,19 @@ class _$AddItemCategoriesToBeCountedApi
 
   @override
   CommandState<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<AddItemCategoriesToBeCountedApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -115,12 +114,11 @@ class _$AddItemCategoriesToBeCountedApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(AddItemCategoriesToBeCountedApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -129,7 +127,8 @@ class _$AddItemCategoriesToBeCountedApi
           ApiCommand<AddItemCategoriesToBeCountedApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -139,7 +138,7 @@ class _$AddItemCategoriesToBeCountedApi
       AddItemCategoriesToBeCountedApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AddItemCategoriesToBeCountedApiRequest>
@@ -147,5 +146,5 @@ class _$AddItemCategoriesToBeCountedApi
           AddItemCategoriesToBeCountedApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

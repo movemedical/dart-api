@@ -10,65 +10,65 @@ part of 'decommission_tags_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DecommissionTagsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DecommissionTagsApi> DecommissionTagsApiOptions();
 
 class _$DecommissionTagsApi extends DecommissionTagsApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DecommissionTagsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DecommissionTagsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DecommissionTagsApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>,
           DecommissionTagsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DecommissionTagsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DecommissionTagsApi,
           Command<ApiCommand<DecommissionTagsApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>,
-          DecommissionTagsApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>,
+          DecommissionTagsApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>,
           DecommissionTagsApi, CommandProgress>> $progress;
 
   _$DecommissionTagsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DecommissionTagsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionTagsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DecommissionTagsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DecommissionTagsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DecommissionTagsApi,
                     Command<ApiCommand<DecommissionTagsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DecommissionTagsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DecommissionTagsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionTagsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DecommissionTagsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,17 @@ class _$DecommissionTagsApi extends DecommissionTagsApi {
       _$DecommissionTagsApi._(options());
 
   @override
-  CommandState<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DecommissionTagsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DecommissionTagsApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DecommissionTagsApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DecommissionTagsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +99,10 @@ class _$DecommissionTagsApi extends DecommissionTagsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DecommissionTagsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +110,8 @@ class _$DecommissionTagsApi extends DecommissionTagsApi {
       ApiCommand<DecommissionTagsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +121,12 @@ class _$DecommissionTagsApi extends DecommissionTagsApi {
       DecommissionTagsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DecommissionTagsApiRequest> get commandPayloadSerializer =>
       DecommissionTagsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

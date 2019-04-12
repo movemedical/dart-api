@@ -295,88 +295,62 @@ class DBComponentBuilder implements Builder<DBComponent, DBComponentBuilder> {
   _$DBComponent _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _parentItemId;
-
   String get parentItemId => _$this._parentItemId;
-
   set parentItemId(String parentItemId) => _$this._parentItemId = parentItemId;
 
   String _parentItemVersionId;
-
   String get parentItemVersionId => _$this._parentItemVersionId;
-
   set parentItemVersionId(String parentItemVersionId) =>
       _$this._parentItemVersionId = parentItemVersionId;
 
   String _componentItemId;
-
   String get componentItemId => _$this._componentItemId;
-
   set componentItemId(String componentItemId) =>
       _$this._componentItemId = componentItemId;
 
   bool _anyVersion;
-
   bool get anyVersion => _$this._anyVersion;
-
   set anyVersion(bool anyVersion) => _$this._anyVersion = anyVersion;
 
   String _kitContainerDefId;
-
   String get kitContainerDefId => _$this._kitContainerDefId;
-
   set kitContainerDefId(String kitContainerDefId) =>
       _$this._kitContainerDefId = kitContainerDefId;
 
   String _trayLayerDefId;
-
   String get trayLayerDefId => _$this._trayLayerDefId;
-
   set trayLayerDefId(String trayLayerDefId) =>
       _$this._trayLayerDefId = trayLayerDefId;
 
   bool _forceContainerOrLayer;
-
   bool get forceContainerOrLayer => _$this._forceContainerOrLayer;
-
   set forceContainerOrLayer(bool forceContainerOrLayer) =>
       _$this._forceContainerOrLayer = forceContainerOrLayer;
 
   int _quantity;
-
   int get quantity => _$this._quantity;
-
   set quantity(int quantity) => _$this._quantity = quantity;
 
   int _v;
-
   int get v => _$this._v;
-
   set v(int v) => _$this._v = v;
 
   int _minimumQuantity;
-
   int get minimumQuantity => _$this._minimumQuantity;
-
   set minimumQuantity(int minimumQuantity) =>
       _$this._minimumQuantity = minimumQuantity;
 
   int _placementInSequence;
-
   int get placementInSequence => _$this._placementInSequence;
-
   set placementInSequence(int placementInSequence) =>
       _$this._placementInSequence = placementInSequence;
 
   String _uomId;
-
   String get uomId => _$this._uomId;
-
   set uomId(String uomId) => _$this._uomId = uomId;
 
   DBComponentBuilder();
@@ -532,7 +506,6 @@ class _$DBComponentActions extends DBComponentActions {
   DBComponentBuilder $newBuilder() => DBComponentBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -576,7 +549,6 @@ class _$DBComponentActions extends DBComponentActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(DBComponent);
 }

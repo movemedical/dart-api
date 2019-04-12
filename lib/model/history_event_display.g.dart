@@ -130,22 +130,16 @@ class HistoryEventDisplayBuilder
   _$HistoryEventDisplay _$v;
 
   String _user;
-
   String get user => _$this._user;
-
   set user(String user) => _$this._user = user;
 
   DateTime _timestamp;
-
   DateTime get timestamp => _$this._timestamp;
-
   set timestamp(DateTime timestamp) => _$this._timestamp = timestamp;
 
   ListBuilder<HistoryEventDisplayRecord> _records;
-
   ListBuilder<HistoryEventDisplayRecord> get records =>
       _$this._records ??= new ListBuilder<HistoryEventDisplayRecord>();
-
   set records(ListBuilder<HistoryEventDisplayRecord> records) =>
       _$this._records = records;
 
@@ -243,7 +237,6 @@ class _$HistoryEventDisplayActions extends HistoryEventDisplayActions {
   HistoryEventDisplayBuilder $newBuilder() => HistoryEventDisplayBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -267,7 +260,6 @@ class _$HistoryEventDisplayActions extends HistoryEventDisplayActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(HistoryEventDisplay);
 }

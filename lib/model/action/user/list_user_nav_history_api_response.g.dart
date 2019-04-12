@@ -107,10 +107,8 @@ class ListUserNavHistoryApiResponseBuilder
   _$ListUserNavHistoryApiResponse _$v;
 
   ListBuilder<ListUserNavHistoryApiNavEntry> _entries;
-
   ListBuilder<ListUserNavHistoryApiNavEntry> get entries =>
       _$this._entries ??= new ListBuilder<ListUserNavHistoryApiNavEntry>();
-
   set entries(ListBuilder<ListUserNavHistoryApiNavEntry> entries) =>
       _$this._entries = entries;
 
@@ -205,7 +203,6 @@ class _$ListUserNavHistoryApiResponseActions
       ListUserNavHistoryApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,7 +222,6 @@ class _$ListUserNavHistoryApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUserNavHistoryApiResponse);

@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/zone/update_zone_api_requ
 part 'update_zone_api.g.dart';
 
 abstract class UpdateZoneApi extends ApiDispatcher<UpdateZoneApiRequest,
-    UpdateZoneApiRequestBuilder, Empty, EmptyBuilder, UpdateZoneApi> {
+    UpdateZoneApiRequestBuilder, Nothing, NothingBuilder, UpdateZoneApi> {
   @override
   String get path => 'v1/inventory/zone/update';
 

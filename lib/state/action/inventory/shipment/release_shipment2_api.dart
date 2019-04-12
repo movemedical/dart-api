@@ -10,8 +10,8 @@ part 'release_shipment2_api.g.dart';
 abstract class ReleaseShipment2Api extends ApiDispatcher<
     ReleaseShipment2ApiRequest,
     ReleaseShipment2ApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ReleaseShipment2Api> {
   @override
   String get path => 'v1/inventory/shipment/release2';

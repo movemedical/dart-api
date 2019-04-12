@@ -484,163 +484,119 @@ class ListOrdersApiRequestBuilder
   _$ListOrdersApiRequest _$v;
 
   ListBuilder<OrderStatus> _orderStatuses;
-
   ListBuilder<OrderStatus> get orderStatuses =>
       _$this._orderStatuses ??= new ListBuilder<OrderStatus>();
-
   set orderStatuses(ListBuilder<OrderStatus> orderStatuses) =>
       _$this._orderStatuses = orderStatuses;
 
   ListBuilder<OrderReasonGroup> _orderReasonGroups;
-
   ListBuilder<OrderReasonGroup> get orderReasonGroups =>
       _$this._orderReasonGroups ??= new ListBuilder<OrderReasonGroup>();
-
   set orderReasonGroups(ListBuilder<OrderReasonGroup> orderReasonGroups) =>
       _$this._orderReasonGroups = orderReasonGroups;
 
   ListBuilder<String> _orderReasonIds;
-
   ListBuilder<String> get orderReasonIds =>
       _$this._orderReasonIds ??= new ListBuilder<String>();
-
   set orderReasonIds(ListBuilder<String> orderReasonIds) =>
       _$this._orderReasonIds = orderReasonIds;
 
   ListBuilder<String> _orgUnitIds;
-
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
-
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _itemCategoryIds;
-
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
-
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _createdByContactIds;
-
   ListBuilder<String> get createdByContactIds =>
       _$this._createdByContactIds ??= new ListBuilder<String>();
-
   set createdByContactIds(ListBuilder<String> createdByContactIds) =>
       _$this._createdByContactIds = createdByContactIds;
 
   ListBuilder<String> _itemIds;
-
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
-
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _lotIds;
-
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
-
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _serialIds;
-
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
-
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   bool _hasErpErrors;
-
   bool get hasErpErrors => _$this._hasErpErrors;
-
   set hasErpErrors(bool hasErpErrors) => _$this._hasErpErrors = hasErpErrors;
 
   bool _pendingPo;
-
   bool get pendingPo => _$this._pendingPo;
-
   set pendingPo(bool pendingPo) => _$this._pendingPo = pendingPo;
 
   String _orderNumber;
-
   String get orderNumber => _$this._orderNumber;
-
   set orderNumber(String orderNumber) => _$this._orderNumber = orderNumber;
 
   String _erpOrderNumber;
-
   String get erpOrderNumber => _$this._erpOrderNumber;
-
   set erpOrderNumber(String erpOrderNumber) =>
       _$this._erpOrderNumber = erpOrderNumber;
 
   LocationDataBuilder _location;
-
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
-
   set location(LocationDataBuilder location) => _$this._location = location;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   DateRangeBuilder _createDateRange;
-
   DateRangeBuilder get createDateRange =>
       _$this._createDateRange ??= new DateRangeBuilder();
-
   set createDateRange(DateRangeBuilder createDateRange) =>
       _$this._createDateRange = createDateRange;
 
   DateRangeBuilder _sourceStartDateRange;
-
   DateRangeBuilder get sourceStartDateRange =>
       _$this._sourceStartDateRange ??= new DateRangeBuilder();
-
   set sourceStartDateRange(DateRangeBuilder sourceStartDateRange) =>
       _$this._sourceStartDateRange = sourceStartDateRange;
 
   DateRangeBuilder _deliveryStartDateRange;
-
   DateRangeBuilder get deliveryStartDateRange =>
       _$this._deliveryStartDateRange ??= new DateRangeBuilder();
-
   set deliveryStartDateRange(DateRangeBuilder deliveryStartDateRange) =>
       _$this._deliveryStartDateRange = deliveryStartDateRange;
 
   DateRangeBuilder _deliveryEndDateRange;
-
   DateRangeBuilder get deliveryEndDateRange =>
       _$this._deliveryEndDateRange ??= new DateRangeBuilder();
-
   set deliveryEndDateRange(DateRangeBuilder deliveryEndDateRange) =>
       _$this._deliveryEndDateRange = deliveryEndDateRange;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListOrdersApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListOrdersApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListOrdersApiOrderBy>();
-
   set orderBy(OrderByParamsBuilder<ListOrdersApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -940,7 +896,6 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   ListOrdersApiRequestBuilder $newBuilder() => ListOrdersApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -953,7 +908,6 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1015,7 +969,6 @@ class _$ListOrdersApiRequestActions extends ListOrdersApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOrdersApiRequest);
 }

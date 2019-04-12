@@ -10,8 +10,8 @@ part 'update_delivery_schedule_profile_holiday_api.g.dart';
 abstract class UpdateDeliveryScheduleProfileHolidayApi extends ApiDispatcher<
     UpdateDeliveryScheduleProfileHolidayApiRequest,
     UpdateDeliveryScheduleProfileHolidayApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateDeliveryScheduleProfileHolidayApi> {
   @override
   String get path => 'v1/admin/delivery_profile_holiday/update';

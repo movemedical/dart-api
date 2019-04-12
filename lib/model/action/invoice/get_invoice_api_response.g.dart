@@ -117,18 +117,14 @@ class GetInvoiceApiResponseBuilder
   _$GetInvoiceApiResponse _$v;
 
   GetInvoiceApiInvoiceDetailBuilder _invoiceDetail;
-
   GetInvoiceApiInvoiceDetailBuilder get invoiceDetail =>
       _$this._invoiceDetail ??= new GetInvoiceApiInvoiceDetailBuilder();
-
   set invoiceDetail(GetInvoiceApiInvoiceDetailBuilder invoiceDetail) =>
       _$this._invoiceDetail = invoiceDetail;
 
   GetInvoiceApiDisplayRulesBuilder _displayRules;
-
   GetInvoiceApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetInvoiceApiDisplayRulesBuilder();
-
   set displayRules(GetInvoiceApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
@@ -239,7 +235,6 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
   GetInvoiceApiResponseBuilder $newBuilder() => GetInvoiceApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.invoiceDetail,
@@ -247,7 +242,6 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -269,7 +263,6 @@ class _$GetInvoiceApiResponseActions extends GetInvoiceApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiResponse);
 }

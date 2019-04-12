@@ -103,10 +103,8 @@ class SourceStockApiResponseBuilder
   _$SourceStockApiResponse _$v;
 
   ListBuilder<SourceStockApiSourceError> _errors;
-
   ListBuilder<SourceStockApiSourceError> get errors =>
       _$this._errors ??= new ListBuilder<SourceStockApiSourceError>();
-
   set errors(ListBuilder<SourceStockApiSourceError> errors) =>
       _$this._errors = errors;
 
@@ -195,7 +193,6 @@ class _$SourceStockApiResponseActions extends SourceStockApiResponseActions {
       SourceStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -215,7 +212,6 @@ class _$SourceStockApiResponseActions extends SourceStockApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SourceStockApiResponse);
 }

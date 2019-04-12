@@ -10,8 +10,8 @@ part 'adjust_stock_quantity_api.g.dart';
 abstract class AdjustStockQuantityApi extends ApiDispatcher<
     AdjustStockQuantityApiRequest,
     AdjustStockQuantityApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AdjustStockQuantityApi> {
   @override
   String get path => 'v1/inventory/stock/adjust_stock_quantity';

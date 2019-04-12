@@ -209,53 +209,39 @@ class GetSalesOrderApiCustomerDetailBuilder
   _$GetSalesOrderApiCustomerDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _customerReference;
-
   String get customerReference => _$this._customerReference;
-
   set customerReference(String customerReference) =>
       _$this._customerReference = customerReference;
 
   CustomerAddressBuilder _shipToAddress;
-
   CustomerAddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new CustomerAddressBuilder();
-
   set shipToAddress(CustomerAddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
   CustomerAddressBuilder _billToAddress;
-
   CustomerAddressBuilder get billToAddress =>
       _$this._billToAddress ??= new CustomerAddressBuilder();
-
   set billToAddress(CustomerAddressBuilder billToAddress) =>
       _$this._billToAddress = billToAddress;
 
   CustomerAddressBuilder _deliverToAddress;
-
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
-
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   PhoneNumberBuilder _customerPhoneNumber;
-
   PhoneNumberBuilder get customerPhoneNumber =>
       _$this._customerPhoneNumber ??= new PhoneNumberBuilder();
-
   set customerPhoneNumber(PhoneNumberBuilder customerPhoneNumber) =>
       _$this._customerPhoneNumber = customerPhoneNumber;
 
@@ -414,7 +400,6 @@ class _$GetSalesOrderApiCustomerDetailActions
       GetSalesOrderApiCustomerDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.shipToAddress,
@@ -424,7 +409,6 @@ class _$GetSalesOrderApiCustomerDetailActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -456,7 +440,6 @@ class _$GetSalesOrderApiCustomerDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetSalesOrderApiCustomerDetail);

@@ -315,87 +315,61 @@ class ListConversationsApiConversationBuilder
   _$ListConversationsApiConversation _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   DateTime _urgency;
-
   DateTime get urgency => _$this._urgency;
-
   set urgency(DateTime urgency) => _$this._urgency = urgency;
 
   String _purpose;
-
   String get purpose => _$this._purpose;
-
   set purpose(String purpose) => _$this._purpose = purpose;
 
   String _allParticipantsDisplayText;
-
   String get allParticipantsDisplayText => _$this._allParticipantsDisplayText;
-
   set allParticipantsDisplayText(String allParticipantsDisplayText) =>
       _$this._allParticipantsDisplayText = allParticipantsDisplayText;
 
   bool _stopped;
-
   bool get stopped => _$this._stopped;
-
   set stopped(bool stopped) => _$this._stopped = stopped;
 
   bool _archived;
-
   bool get archived => _$this._archived;
-
   set archived(bool archived) => _$this._archived = archived;
 
   int _unread;
-
   int get unread => _$this._unread;
-
   set unread(int unread) => _$this._unread = unread;
 
   String _lastSenderId;
-
   String get lastSenderId => _$this._lastSenderId;
-
   set lastSenderId(String lastSenderId) => _$this._lastSenderId = lastSenderId;
 
   String _lastSenderInitials;
-
   String get lastSenderInitials => _$this._lastSenderInitials;
-
   set lastSenderInitials(String lastSenderInitials) =>
       _$this._lastSenderInitials = lastSenderInitials;
 
   String _lastSenderDisplayText;
-
   String get lastSenderDisplayText => _$this._lastSenderDisplayText;
-
   set lastSenderDisplayText(String lastSenderDisplayText) =>
       _$this._lastSenderDisplayText = lastSenderDisplayText;
 
   String _lastMessagePreview;
-
   String get lastMessagePreview => _$this._lastMessagePreview;
-
   set lastMessagePreview(String lastMessagePreview) =>
       _$this._lastMessagePreview = lastMessagePreview;
 
   DateTime _lastMessageSentDate;
-
   DateTime get lastMessageSentDate => _$this._lastMessageSentDate;
-
   set lastMessageSentDate(DateTime lastMessageSentDate) =>
       _$this._lastMessageSentDate = lastMessageSentDate;
 
   ListBuilder<AttributableObject> _links;
-
   ListBuilder<AttributableObject> get links =>
       _$this._links ??= new ListBuilder<AttributableObject>();
-
   set links(ListBuilder<AttributableObject> links) => _$this._links = links;
 
   ListConversationsApiConversationBuilder();
@@ -566,7 +540,6 @@ class _$ListConversationsApiConversationActions
       ListConversationsApiConversationBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -610,7 +583,6 @@ class _$ListConversationsApiConversationActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListConversationsApiConversation);

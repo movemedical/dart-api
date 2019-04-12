@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/directory/org/orgunit/move_org_unit
 part 'move_org_unit_api.g.dart';
 
 abstract class MoveOrgUnitApi extends ApiDispatcher<MoveOrgUnitApiRequest,
-    MoveOrgUnitApiRequestBuilder, Empty, EmptyBuilder, MoveOrgUnitApi> {
+    MoveOrgUnitApiRequestBuilder, Nothing, NothingBuilder, MoveOrgUnitApi> {
   @override
   String get path => 'v1/directory/org/orgunit/move';
 

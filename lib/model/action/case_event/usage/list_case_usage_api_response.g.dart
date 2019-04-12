@@ -265,72 +265,52 @@ class ListCaseUsageApiResponseBuilder
   _$ListCaseUsageApiResponse _$v;
 
   ListBuilder<ListCaseUsageApiCaseUsageOrder> _orders;
-
   ListBuilder<ListCaseUsageApiCaseUsageOrder> get orders =>
       _$this._orders ??= new ListBuilder<ListCaseUsageApiCaseUsageOrder>();
-
   set orders(ListBuilder<ListCaseUsageApiCaseUsageOrder> orders) =>
       _$this._orders = orders;
 
   ListBuilder<ListCaseUsageApiCaseUsageConstruct> _constructs;
-
   ListBuilder<ListCaseUsageApiCaseUsageConstruct> get constructs =>
       _$this._constructs ??=
           new ListBuilder<ListCaseUsageApiCaseUsageConstruct>();
-
   set constructs(ListBuilder<ListCaseUsageApiCaseUsageConstruct> constructs) =>
       _$this._constructs = constructs;
 
   ListBuilder<ListCaseUsageApiUsage> _usages;
-
   ListBuilder<ListCaseUsageApiUsage> get usages =>
       _$this._usages ??= new ListBuilder<ListCaseUsageApiUsage>();
-
   set usages(ListBuilder<ListCaseUsageApiUsage> usages) =>
       _$this._usages = usages;
 
   bool _canEditUsage;
-
   bool get canEditUsage => _$this._canEditUsage;
-
   set canEditUsage(bool canEditUsage) => _$this._canEditUsage = canEditUsage;
 
   bool _canConfirmUsage;
-
   bool get canConfirmUsage => _$this._canConfirmUsage;
-
   set canConfirmUsage(bool canConfirmUsage) =>
       _$this._canConfirmUsage = canConfirmUsage;
 
   String _ownerOrgUnitId;
-
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
-
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   String _customerId;
-
   String get customerId => _$this._customerId;
-
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _hcrId;
-
   String get hcrId => _$this._hcrId;
-
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
-
   String get teamId => _$this._teamId;
-
   set teamId(String teamId) => _$this._teamId = teamId;
 
   ListCaseUsageApiResponseBuilder();
@@ -488,7 +468,6 @@ class _$ListCaseUsageApiResponseActions
       ListCaseUsageApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -526,7 +505,6 @@ class _$ListCaseUsageApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListCaseUsageApiResponse);
 }

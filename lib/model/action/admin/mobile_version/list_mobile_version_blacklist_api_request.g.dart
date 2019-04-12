@@ -107,9 +107,7 @@ class ListMobileVersionBlacklistApiRequestBuilder
   _$ListMobileVersionBlacklistApiRequest _$v;
 
   MobilePlatform _platform;
-
   MobilePlatform get platform => _$this._platform;
-
   set platform(MobilePlatform platform) => _$this._platform = platform;
 
   ListMobileVersionBlacklistApiRequestBuilder();
@@ -188,7 +186,6 @@ class _$ListMobileVersionBlacklistApiRequestActions
       ListMobileVersionBlacklistApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,7 +205,6 @@ class _$ListMobileVersionBlacklistApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListMobileVersionBlacklistApiRequest);

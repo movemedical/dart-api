@@ -10,65 +10,65 @@ part of 'delete_hcr_matrix_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DeleteHcrMatrixApi> DeleteHcrMatrixApiOptions();
 
 class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DeleteHcrMatrixApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>,
           DeleteHcrMatrixApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeleteHcrMatrixApi,
           Command<ApiCommand<DeleteHcrMatrixApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
-          DeleteHcrMatrixApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>,
+          DeleteHcrMatrixApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>,
           DeleteHcrMatrixApi, CommandProgress>> $progress;
 
   _$DeleteHcrMatrixApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteHcrMatrixApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteHcrMatrixApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteHcrMatrixApi,
                     Command<ApiCommand<DeleteHcrMatrixApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteHcrMatrixApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteHcrMatrixApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHcrMatrixApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteHcrMatrixApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,16 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
       _$DeleteHcrMatrixApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DeleteHcrMatrixApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DeleteHcrMatrixApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +98,10 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteHcrMatrixApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +109,8 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
       ApiCommand<DeleteHcrMatrixApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +120,12 @@ class _$DeleteHcrMatrixApi extends DeleteHcrMatrixApi {
       DeleteHcrMatrixApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DeleteHcrMatrixApiRequest> get commandPayloadSerializer =>
       DeleteHcrMatrixApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

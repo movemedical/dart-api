@@ -116,15 +116,11 @@ class ListBillingCodesApiRequestBuilder
   _$ListBillingCodesApiRequest _$v;
 
   String _bizUnitId;
-
   String get bizUnitId => _$this._bizUnitId;
-
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   ListBillingCodesApiRequestBuilder();
@@ -207,7 +203,6 @@ class _$ListBillingCodesApiRequestActions
       ListBillingCodesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -229,7 +224,6 @@ class _$ListBillingCodesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListBillingCodesApiRequest);
 }

@@ -10,8 +10,8 @@ part 'update_inventory_type_api.g.dart';
 abstract class UpdateInventoryTypeApi extends ApiDispatcher<
     UpdateInventoryTypeApiRequest,
     UpdateInventoryTypeApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateInventoryTypeApi> {
   @override
   String get path => 'v1/inventory/inventory_type/update';

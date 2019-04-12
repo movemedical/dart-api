@@ -117,16 +117,12 @@ class AddAssigneeApiRequestBuilder
   _$AddAssigneeApiRequest _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListBuilder<AddAssigneeApiAssignee> _assignees;
-
   ListBuilder<AddAssigneeApiAssignee> get assignees =>
       _$this._assignees ??= new ListBuilder<AddAssigneeApiAssignee>();
-
   set assignees(ListBuilder<AddAssigneeApiAssignee> assignees) =>
       _$this._assignees = assignees;
 
@@ -222,7 +218,6 @@ class _$AddAssigneeApiRequestActions extends AddAssigneeApiRequestActions {
   AddAssigneeApiRequestBuilder $newBuilder() => AddAssigneeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -244,7 +239,6 @@ class _$AddAssigneeApiRequestActions extends AddAssigneeApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AddAssigneeApiRequest);
 }

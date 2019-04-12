@@ -179,36 +179,26 @@ class RequestKitManifestDocApiRequestBuilder
   _$RequestKitManifestDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
-
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
-
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
-
   DocReportFormat get format => _$this._format;
-
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
-
   DocReportDisplayType get displayType => _$this._displayType;
-
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   String _kitStockId;
-
   String get kitStockId => _$this._kitStockId;
-
   set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
 
   RequestKitManifestDocApiReportOption _option;
-
   RequestKitManifestDocApiReportOption get option => _$this._option;
-
   set option(RequestKitManifestDocApiReportOption option) =>
       _$this._option = option;
 
@@ -332,14 +322,12 @@ class _$RequestKitManifestDocApiRequestActions
       RequestKitManifestDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -367,7 +355,6 @@ class _$RequestKitManifestDocApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestKitManifestDocApiRequest);

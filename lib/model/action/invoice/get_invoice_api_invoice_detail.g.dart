@@ -204,49 +204,35 @@ class GetInvoiceApiInvoiceDetailBuilder
   _$GetInvoiceApiInvoiceDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _invoiceNumber;
-
   int get invoiceNumber => _$this._invoiceNumber;
-
   set invoiceNumber(int invoiceNumber) => _$this._invoiceNumber = invoiceNumber;
 
   DateTime _invoiceDate;
-
   DateTime get invoiceDate => _$this._invoiceDate;
-
   set invoiceDate(DateTime invoiceDate) => _$this._invoiceDate = invoiceDate;
 
   DateTime _invoiceCreatedDate;
-
   DateTime get invoiceCreatedDate => _$this._invoiceCreatedDate;
-
   set invoiceCreatedDate(DateTime invoiceCreatedDate) =>
       _$this._invoiceCreatedDate = invoiceCreatedDate;
 
   String _erpOrderNumber;
-
   String get erpOrderNumber => _$this._erpOrderNumber;
-
   set erpOrderNumber(String erpOrderNumber) =>
       _$this._erpOrderNumber = erpOrderNumber;
 
   String _erpInvoiceNumber;
-
   String get erpInvoiceNumber => _$this._erpInvoiceNumber;
-
   set erpInvoiceNumber(String erpInvoiceNumber) =>
       _$this._erpInvoiceNumber = erpInvoiceNumber;
 
   OrderHeaderLiteBuilder _order;
-
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
-
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   GetInvoiceApiInvoiceDetailBuilder();
@@ -388,14 +374,12 @@ class _$GetInvoiceApiInvoiceDetailActions
       GetInvoiceApiInvoiceDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.order,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -427,7 +411,6 @@ class _$GetInvoiceApiInvoiceDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetInvoiceApiInvoiceDetail);
 }

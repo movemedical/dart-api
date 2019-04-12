@@ -211,50 +211,36 @@ class ListBizUnitProcedureLinksApiProcedureLinkBuilder
   _$ListBizUnitProcedureLinksApiProcedureLink _$v;
 
   String _procedureToBizUnitId;
-
   String get procedureToBizUnitId => _$this._procedureToBizUnitId;
-
   set procedureToBizUnitId(String procedureToBizUnitId) =>
       _$this._procedureToBizUnitId = procedureToBizUnitId;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
-
   String get procedureName => _$this._procedureName;
-
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _procedureIcdCode;
-
   String get procedureIcdCode => _$this._procedureIcdCode;
-
   set procedureIcdCode(String procedureIcdCode) =>
       _$this._procedureIcdCode = procedureIcdCode;
 
   String _procedureDescription;
-
   String get procedureDescription => _$this._procedureDescription;
-
   set procedureDescription(String procedureDescription) =>
       _$this._procedureDescription = procedureDescription;
 
   bool _procedureBodySideRequired;
-
   bool get procedureBodySideRequired => _$this._procedureBodySideRequired;
-
   set procedureBodySideRequired(bool procedureBodySideRequired) =>
       _$this._procedureBodySideRequired = procedureBodySideRequired;
 
   bool _procedureActive;
-
   bool get procedureActive => _$this._procedureActive;
-
   set procedureActive(bool procedureActive) =>
       _$this._procedureActive = procedureActive;
 
@@ -387,7 +373,6 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
       ListBizUnitProcedureLinksApiProcedureLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -419,7 +404,6 @@ class _$ListBizUnitProcedureLinksApiProcedureLinkActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBizUnitProcedureLinksApiProcedureLink);

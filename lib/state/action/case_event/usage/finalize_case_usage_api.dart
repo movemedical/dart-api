@@ -10,8 +10,8 @@ part 'finalize_case_usage_api.g.dart';
 abstract class FinalizeCaseUsageApi extends ApiDispatcher<
     FinalizeCaseUsageApiRequest,
     FinalizeCaseUsageApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     FinalizeCaseUsageApi> {
   @override
   String get path => 'v1/case_event/usage/reconcile';

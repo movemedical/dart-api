@@ -128,18 +128,14 @@ class CreateProcedureToBizUnitApiRequestBuilder
   _$CreateProcedureToBizUnitApiRequest _$v;
 
   ListBuilder<String> _procedureIds;
-
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
-
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   ListBuilder<String> _bizUnitIds;
-
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
-
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
@@ -246,7 +242,6 @@ class _$CreateProcedureToBizUnitApiRequestActions
       CreateProcedureToBizUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -268,7 +263,6 @@ class _$CreateProcedureToBizUnitApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateProcedureToBizUnitApiRequest);

@@ -116,15 +116,11 @@ class ListCaseEventsApiCountDataBuilder
   _$ListCaseEventsApiCountData _$v;
 
   DateTime _date;
-
   DateTime get date => _$this._date;
-
   set date(DateTime date) => _$this._date = date;
 
   int _count;
-
   int get count => _$this._count;
-
   set count(int count) => _$this._count = count;
 
   ListCaseEventsApiCountDataBuilder();
@@ -206,7 +202,6 @@ class _$ListCaseEventsApiCountDataActions
       ListCaseEventsApiCountDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,7 +223,6 @@ class _$ListCaseEventsApiCountDataActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListCaseEventsApiCountData);
 }

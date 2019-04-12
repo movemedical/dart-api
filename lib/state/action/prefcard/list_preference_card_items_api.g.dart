@@ -106,7 +106,6 @@ class _$ListPreferenceCardItemsApi extends ListPreferenceCardItemsApi {
           ApiResult<ListPreferenceCardItemsApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -118,7 +117,6 @@ class _$ListPreferenceCardItemsApi extends ListPreferenceCardItemsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListPreferenceCardItemsApiRequest)]),

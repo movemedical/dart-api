@@ -10,65 +10,65 @@ part of 'update_hold_reason_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateHoldReasonApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateHoldReasonApi> UpdateHoldReasonApiOptions();
 
 class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateHoldReasonApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateHoldReasonApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>,
           UpdateHoldReasonApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateHoldReasonApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateHoldReasonApi,
           Command<ApiCommand<UpdateHoldReasonApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>,
-          UpdateHoldReasonApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>,
+          UpdateHoldReasonApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>,
           UpdateHoldReasonApi, CommandProgress>> $progress;
 
   _$UpdateHoldReasonApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateHoldReasonApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateHoldReasonApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateHoldReasonApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateHoldReasonApi,
                     Command<ApiCommand<UpdateHoldReasonApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateHoldReasonApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateHoldReasonApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateHoldReasonApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateHoldReasonApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,17 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
       _$UpdateHoldReasonApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UpdateHoldReasonApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<UpdateHoldReasonApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateHoldReasonApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +99,10 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateHoldReasonApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +110,8 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
       ApiCommand<UpdateHoldReasonApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +121,12 @@ class _$UpdateHoldReasonApi extends UpdateHoldReasonApi {
       UpdateHoldReasonApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateHoldReasonApiRequest> get commandPayloadSerializer =>
       UpdateHoldReasonApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -153,29 +153,21 @@ class GetStockOrderApiValidationMsgBuilder
   _$GetStockOrderApiValidationMsg _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _messageGroupId;
-
   String get messageGroupId => _$this._messageGroupId;
-
   set messageGroupId(String messageGroupId) =>
       _$this._messageGroupId = messageGroupId;
 
   ValidationMessageType _messageType;
-
   ValidationMessageType get messageType => _$this._messageType;
-
   set messageType(ValidationMessageType messageType) =>
       _$this._messageType = messageType;
 
   String _message;
-
   String get message => _$this._message;
-
   set message(String message) => _$this._message = message;
 
   GetStockOrderApiValidationMsgBuilder();
@@ -275,7 +267,6 @@ class _$GetStockOrderApiValidationMsgActions
       GetStockOrderApiValidationMsgBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -301,7 +292,6 @@ class _$GetStockOrderApiValidationMsgActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetStockOrderApiValidationMsg);

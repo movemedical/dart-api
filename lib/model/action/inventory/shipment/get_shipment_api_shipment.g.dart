@@ -369,117 +369,85 @@ class GetShipmentApiShipmentBuilder
   _$GetShipmentApiShipment _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   ShipmentStatus _status;
-
   ShipmentStatus get status => _$this._status;
-
   set status(ShipmentStatus status) => _$this._status = status;
 
   OrderHeaderLiteBuilder _order;
-
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
-
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   TransferTypeLiteBuilder _transferType;
-
   TransferTypeLiteBuilder get transferType =>
       _$this._transferType ??= new TransferTypeLiteBuilder();
-
   set transferType(TransferTypeLiteBuilder transferType) =>
       _$this._transferType = transferType;
 
   LoanLiteBuilder _loan;
-
   LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
-
   set loan(LoanLiteBuilder loan) => _$this._loan = loan;
 
   ListBuilder<CaseEventLite> _caseEvents;
-
   ListBuilder<CaseEventLite> get caseEvents =>
       _$this._caseEvents ??= new ListBuilder<CaseEventLite>();
-
   set caseEvents(ListBuilder<CaseEventLite> caseEvents) =>
       _$this._caseEvents = caseEvents;
 
   LocationBuilder _fromLocation;
-
   LocationBuilder get fromLocation =>
       _$this._fromLocation ??= new LocationBuilder();
-
   set fromLocation(LocationBuilder fromLocation) =>
       _$this._fromLocation = fromLocation;
 
   LocationBuilder _toLocation;
-
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
-
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   CustomerAddressBuilder _deliverTo;
-
   CustomerAddressBuilder get deliverTo =>
       _$this._deliverTo ??= new CustomerAddressBuilder();
-
   set deliverTo(CustomerAddressBuilder deliverTo) =>
       _$this._deliverTo = deliverTo;
 
   AddressBuilder _deliverToOverride;
-
   AddressBuilder get deliverToOverride =>
       _$this._deliverToOverride ??= new AddressBuilder();
-
   set deliverToOverride(AddressBuilder deliverToOverride) =>
       _$this._deliverToOverride = deliverToOverride;
 
   ShippingServiceBuilder _shippingService;
-
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
-
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   String _erpReference;
-
   String get erpReference => _$this._erpReference;
-
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   ErpStatus _erpStatus;
-
   ErpStatus get erpStatus => _$this._erpStatus;
-
   set erpStatus(ErpStatus erpStatus) => _$this._erpStatus = erpStatus;
 
   ListBuilder<GetShipmentApiValidationMsg> _validationMessages;
-
   ListBuilder<GetShipmentApiValidationMsg> get validationMessages =>
       _$this._validationMessages ??=
           new ListBuilder<GetShipmentApiValidationMsg>();
-
   set validationMessages(
           ListBuilder<GetShipmentApiValidationMsg> validationMessages) =>
       _$this._validationMessages = validationMessages;
 
   DateTime _deliverWindowEnd;
-
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
-
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
@@ -723,7 +691,6 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
       GetShipmentApiShipmentBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.order,
@@ -737,7 +704,6 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -787,7 +753,6 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetShipmentApiShipment);
 }

@@ -116,16 +116,12 @@ class ListNotesApiResponseBuilder
   _$ListNotesApiResponse _$v;
 
   ListBuilder<ListNotesApiNoteRecord> _data;
-
   ListBuilder<ListNotesApiNoteRecord> get data =>
       _$this._data ??= new ListBuilder<ListNotesApiNoteRecord>();
-
   set data(ListBuilder<ListNotesApiNoteRecord> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListNotesApiResponseBuilder();
@@ -217,7 +213,6 @@ class _$ListNotesApiResponseActions extends ListNotesApiResponseActions {
   ListNotesApiResponseBuilder $newBuilder() => ListNotesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -239,7 +234,6 @@ class _$ListNotesApiResponseActions extends ListNotesApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListNotesApiResponse);
 }

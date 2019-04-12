@@ -120,17 +120,13 @@ class SaveComponentsApiRequestBuilder
   _$SaveComponentsApiRequest _$v;
 
   String _itemVersionId;
-
   String get itemVersionId => _$this._itemVersionId;
-
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   ListBuilder<SaveComponentsApiComponent> _components;
-
   ListBuilder<SaveComponentsApiComponent> get components =>
       _$this._components ??= new ListBuilder<SaveComponentsApiComponent>();
-
   set components(ListBuilder<SaveComponentsApiComponent> components) =>
       _$this._components = components;
 
@@ -233,7 +229,6 @@ class _$SaveComponentsApiRequestActions
       SaveComponentsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,7 +250,6 @@ class _$SaveComponentsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveComponentsApiRequest);
 }

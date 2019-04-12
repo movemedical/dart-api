@@ -103,10 +103,8 @@ class ListOrgUnitsApiResponseBuilder
   _$ListOrgUnitsApiResponse _$v;
 
   ListBuilder<OrgUnit> _orgUnits;
-
   ListBuilder<OrgUnit> get orgUnits =>
       _$this._orgUnits ??= new ListBuilder<OrgUnit>();
-
   set orgUnits(ListBuilder<OrgUnit> orgUnits) => _$this._orgUnits = orgUnits;
 
   ListOrgUnitsApiResponseBuilder();
@@ -194,7 +192,6 @@ class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
       ListOrgUnitsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -214,7 +211,6 @@ class _$ListOrgUnitsApiResponseActions extends ListOrgUnitsApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOrgUnitsApiResponse);
 }

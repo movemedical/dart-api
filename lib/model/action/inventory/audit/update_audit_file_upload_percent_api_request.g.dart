@@ -139,21 +139,15 @@ class UpdateAuditFileUploadPercentApiRequestBuilder
   _$UpdateAuditFileUploadPercentApiRequest _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   String _fileId;
-
   String get fileId => _$this._fileId;
-
   set fileId(String fileId) => _$this._fileId = fileId;
 
   double _percentDecimalForm;
-
   double get percentDecimalForm => _$this._percentDecimalForm;
-
   set percentDecimalForm(double percentDecimalForm) =>
       _$this._percentDecimalForm = percentDecimalForm;
 
@@ -247,7 +241,6 @@ class _$UpdateAuditFileUploadPercentApiRequestActions
       UpdateAuditFileUploadPercentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -271,7 +264,6 @@ class _$UpdateAuditFileUploadPercentApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateAuditFileUploadPercentApiRequest);

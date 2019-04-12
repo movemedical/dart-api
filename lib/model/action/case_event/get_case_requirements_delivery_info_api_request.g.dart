@@ -108,9 +108,7 @@ class GetCaseRequirementsDeliveryInfoApiRequestBuilder
   _$GetCaseRequirementsDeliveryInfoApiRequest _$v;
 
   String _caseEventId;
-
   String get caseEventId => _$this._caseEventId;
-
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   GetCaseRequirementsDeliveryInfoApiRequestBuilder();
@@ -194,7 +192,6 @@ class _$GetCaseRequirementsDeliveryInfoApiRequestActions
       GetCaseRequirementsDeliveryInfoApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -214,7 +211,6 @@ class _$GetCaseRequirementsDeliveryInfoApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCaseRequirementsDeliveryInfoApiRequest);

@@ -122,16 +122,12 @@ class GetMobileVersionDetailsApiResponseBuilder
   _$GetMobileVersionDetailsApiResponse _$v;
 
   String _latestVersion;
-
   String get latestVersion => _$this._latestVersion;
-
   set latestVersion(String latestVersion) =>
       _$this._latestVersion = latestVersion;
 
   String _appUrl;
-
   String get appUrl => _$this._appUrl;
-
   set appUrl(String appUrl) => _$this._appUrl = appUrl;
 
   GetMobileVersionDetailsApiResponseBuilder();
@@ -218,7 +214,6 @@ class _$GetMobileVersionDetailsApiResponseActions
       GetMobileVersionDetailsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -240,7 +235,6 @@ class _$GetMobileVersionDetailsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetMobileVersionDetailsApiResponse);

@@ -435,136 +435,94 @@ class GetAeApiAeDetailBuilder
   _$GetAeApiAeDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
-
   OrgType get orgType => _$this._orgType;
-
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   String _orgName;
-
   String get orgName => _$this._orgName;
-
   set orgName(String orgName) => _$this._orgName = orgName;
 
   String _aeReference;
-
   String get aeReference => _$this._aeReference;
-
   set aeReference(String aeReference) => _$this._aeReference = aeReference;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _workPhoneNumber;
-
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
-
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
-
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
-
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
-
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
-
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   DateTime _startDate;
-
   DateTime get startDate => _$this._startDate;
-
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
-
   DateTime get endDate => _$this._endDate;
-
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   String _userId;
-
   String get userId => _$this._userId;
-
   set userId(String userId) => _$this._userId = userId;
 
   UserPerspective _userPerspective;
-
   UserPerspective get userPerspective => _$this._userPerspective;
-
   set userPerspective(UserPerspective userPerspective) =>
       _$this._userPerspective = userPerspective;
 
   UserStatus _userStatus;
-
   UserStatus get userStatus => _$this._userStatus;
-
   set userStatus(UserStatus userStatus) => _$this._userStatus = userStatus;
 
   bool _userLocked;
-
   bool get userLocked => _$this._userLocked;
-
   set userLocked(bool userLocked) => _$this._userLocked = userLocked;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _directoryAdmin;
-
   bool get directoryAdmin => _$this._directoryAdmin;
-
   set directoryAdmin(bool directoryAdmin) =>
       _$this._directoryAdmin = directoryAdmin;
 
   bool _phiAllowed;
-
   bool get phiAllowed => _$this._phiAllowed;
-
   set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
 
   DateTime _lastVisibilityUpdateDate;
-
   DateTime get lastVisibilityUpdateDate => _$this._lastVisibilityUpdateDate;
-
   set lastVisibilityUpdateDate(DateTime lastVisibilityUpdateDate) =>
       _$this._lastVisibilityUpdateDate = lastVisibilityUpdateDate;
 
@@ -798,7 +756,6 @@ class _$GetAeApiAeDetailActions extends GetAeApiAeDetailActions {
   GetAeApiAeDetailBuilder $newBuilder() => GetAeApiAeDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -809,7 +766,6 @@ class _$GetAeApiAeDetailActions extends GetAeApiAeDetailActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -869,7 +825,6 @@ class _$GetAeApiAeDetailActions extends GetAeApiAeDetailActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetAeApiAeDetail);
 }

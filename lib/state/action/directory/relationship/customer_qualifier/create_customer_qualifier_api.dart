@@ -10,8 +10,8 @@ part 'create_customer_qualifier_api.g.dart';
 abstract class CreateCustomerQualifierApi extends ApiDispatcher<
     CreateCustomerQualifierApiRequest,
     CreateCustomerQualifierApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateCustomerQualifierApi> {
   @override
   String get path => 'v1/directory/relationship/customer_qualifier/create';

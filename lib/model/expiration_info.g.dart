@@ -317,89 +317,61 @@ class ExpirationInfoBuilder
   _$ExpirationInfo _$v;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
-
   String get lotId => _$this._lotId;
-
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
-
   String get serialId => _$this._serialId;
-
   set serialId(String serialId) => _$this._serialId = serialId;
 
   DateTime _expirationDate;
-
   DateTime get expirationDate => _$this._expirationDate;
-
   set expirationDate(DateTime expirationDate) =>
       _$this._expirationDate = expirationDate;
 
   int _expiresInDays;
-
   int get expiresInDays => _$this._expiresInDays;
-
   set expiresInDays(int expiresInDays) => _$this._expiresInDays = expiresInDays;
 
   String _profileId;
-
   String get profileId => _$this._profileId;
-
   set profileId(String profileId) => _$this._profileId = profileId;
 
   String _profileName;
-
   String get profileName => _$this._profileName;
-
   set profileName(String profileName) => _$this._profileName = profileName;
 
   String _specId;
-
   String get specId => _$this._specId;
-
   set specId(String specId) => _$this._specId = specId;
 
   String _levelGroupId;
-
   String get levelGroupId => _$this._levelGroupId;
-
   set levelGroupId(String levelGroupId) => _$this._levelGroupId = levelGroupId;
 
   String _levelGroupName;
-
   String get levelGroupName => _$this._levelGroupName;
-
   set levelGroupName(String levelGroupName) =>
       _$this._levelGroupName = levelGroupName;
 
   String _levelId;
-
   String get levelId => _$this._levelId;
-
   set levelId(String levelId) => _$this._levelId = levelId;
 
   String _levelName;
-
   String get levelName => _$this._levelName;
-
   set levelName(String levelName) => _$this._levelName = levelName;
 
   int _levelSequence;
-
   int get levelSequence => _$this._levelSequence;
-
   set levelSequence(int levelSequence) => _$this._levelSequence = levelSequence;
 
   ExpirationLevelColor _levelColor;
-
   ExpirationLevelColor get levelColor => _$this._levelColor;
-
   set levelColor(ExpirationLevelColor levelColor) =>
       _$this._levelColor = levelColor;
 
@@ -558,7 +530,6 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
   ExpirationInfoBuilder $newBuilder() => ExpirationInfoBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -604,7 +575,6 @@ class _$ExpirationInfoActions extends ExpirationInfoActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ExpirationInfo);
 }

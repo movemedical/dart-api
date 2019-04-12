@@ -206,50 +206,38 @@ class BuildStockOrderRestockPlanApiResponseBuilder
   _$BuildStockOrderRestockPlanApiResponse _$v;
 
   bool _replenishmentAvailable;
-
   bool get replenishmentAvailable => _$this._replenishmentAvailable;
-
   set replenishmentAvailable(bool replenishmentAvailable) =>
       _$this._replenishmentAvailable = replenishmentAvailable;
 
   BuildStockOrderRestockPlanApiRestockSystem _system;
-
   BuildStockOrderRestockPlanApiRestockSystem get system => _$this._system;
-
   set system(BuildStockOrderRestockPlanApiRestockSystem system) =>
       _$this._system = system;
 
   OrderHeaderLiteBuilder _usingExistingOrder;
-
   OrderHeaderLiteBuilder get usingExistingOrder =>
       _$this._usingExistingOrder ??= new OrderHeaderLiteBuilder();
-
   set usingExistingOrder(OrderHeaderLiteBuilder usingExistingOrder) =>
       _$this._usingExistingOrder = usingExistingOrder;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   ListBuilder<BuildStockOrderRestockPlanApiRestockItem> _restockItems;
-
   ListBuilder<BuildStockOrderRestockPlanApiRestockItem> get restockItems =>
       _$this._restockItems ??=
           new ListBuilder<BuildStockOrderRestockPlanApiRestockItem>();
-
   set restockItems(
           ListBuilder<BuildStockOrderRestockPlanApiRestockItem> restockItems) =>
       _$this._restockItems = restockItems;
 
   ListBuilder<BuildStockOrderRestockPlanApiPendingRestockItem>
       _pendingRestockItems;
-
   ListBuilder<BuildStockOrderRestockPlanApiPendingRestockItem>
       get pendingRestockItems => _$this._pendingRestockItems ??=
           new ListBuilder<BuildStockOrderRestockPlanApiPendingRestockItem>();
-
   set pendingRestockItems(
           ListBuilder<BuildStockOrderRestockPlanApiPendingRestockItem>
               pendingRestockItems) =>
@@ -401,14 +389,12 @@ class _$BuildStockOrderRestockPlanApiResponseActions
       BuildStockOrderRestockPlanApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.usingExistingOrder,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -438,7 +424,6 @@ class _$BuildStockOrderRestockPlanApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildStockOrderRestockPlanApiResponse);

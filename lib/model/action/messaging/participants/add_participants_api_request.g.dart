@@ -120,17 +120,13 @@ class AddParticipantsApiRequestBuilder
   _$AddParticipantsApiRequest _$v;
 
   String _conversationId;
-
   String get conversationId => _$this._conversationId;
-
   set conversationId(String conversationId) =>
       _$this._conversationId = conversationId;
 
   ListBuilder<String> _contactIds;
-
   ListBuilder<String> get contactIds =>
       _$this._contactIds ??= new ListBuilder<String>();
-
   set contactIds(ListBuilder<String> contactIds) =>
       _$this._contactIds = contactIds;
 
@@ -233,7 +229,6 @@ class _$AddParticipantsApiRequestActions
       AddParticipantsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,7 +250,6 @@ class _$AddParticipantsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AddParticipantsApiRequest);
 }

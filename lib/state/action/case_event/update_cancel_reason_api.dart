@@ -10,8 +10,8 @@ part 'update_cancel_reason_api.g.dart';
 abstract class UpdateCancelReasonApi extends ApiDispatcher<
     UpdateCancelReasonApiRequest,
     UpdateCancelReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCancelReasonApi> {
   @override
   String get path => 'v1/case_event/cancel_reason/update';

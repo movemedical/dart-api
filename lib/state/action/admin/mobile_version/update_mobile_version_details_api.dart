@@ -10,8 +10,8 @@ part 'update_mobile_version_details_api.g.dart';
 abstract class UpdateMobileVersionDetailsApi extends ApiDispatcher<
     UpdateMobileVersionDetailsApiRequest,
     UpdateMobileVersionDetailsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateMobileVersionDetailsApi> {
   @override
   String get path => 'v1/admin/mobile_version/update_details';

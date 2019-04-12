@@ -10,68 +10,72 @@ part of 'delete_inventory_type_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DeleteInventoryTypeApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DeleteInventoryTypeApi> DeleteInventoryTypeApiOptions();
 
 class _$DeleteInventoryTypeApi extends DeleteInventoryTypeApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DeleteInventoryTypeApiRequest>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DeleteInventoryTypeApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>, DeleteInventoryTypeApi, String>> $cancel;
+          ApiResult<Nothing>, DeleteInventoryTypeApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeleteInventoryTypeApi,
           Command<ApiCommand<DeleteInventoryTypeApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeleteInventoryTypeApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>, DeleteInventoryTypeApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<DeleteInventoryTypeApiRequest>,
+          ApiResult<Nothing>,
+          DeleteInventoryTypeApi,
+          CommandProgress>> $progress;
 
   _$DeleteInventoryTypeApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteInventoryTypeApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteInventoryTypeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteInventoryTypeApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteInventoryTypeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteInventoryTypeApi,
                     Command<ApiCommand<DeleteInventoryTypeApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteInventoryTypeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteInventoryTypeApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteInventoryTypeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteInventoryTypeApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -80,18 +84,17 @@ class _$DeleteInventoryTypeApi extends DeleteInventoryTypeApi {
       _$DeleteInventoryTypeApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<DeleteInventoryTypeApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DeleteInventoryTypeApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -103,11 +106,10 @@ class _$DeleteInventoryTypeApi extends DeleteInventoryTypeApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteInventoryTypeApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -115,7 +117,8 @@ class _$DeleteInventoryTypeApi extends DeleteInventoryTypeApi {
       ApiCommand<DeleteInventoryTypeApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -125,12 +128,12 @@ class _$DeleteInventoryTypeApi extends DeleteInventoryTypeApi {
       DeleteInventoryTypeApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DeleteInventoryTypeApiRequest> get commandPayloadSerializer =>
       DeleteInventoryTypeApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -106,9 +106,7 @@ class PrepareItemFileDownloadApiResponseBuilder
   _$PrepareItemFileDownloadApiResponse _$v;
 
   String _url;
-
   String get url => _$this._url;
-
   set url(String url) => _$this._url = url;
 
   PrepareItemFileDownloadApiResponseBuilder();
@@ -187,7 +185,6 @@ class _$PrepareItemFileDownloadApiResponseActions
       PrepareItemFileDownloadApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -207,7 +204,6 @@ class _$PrepareItemFileDownloadApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareItemFileDownloadApiResponse);

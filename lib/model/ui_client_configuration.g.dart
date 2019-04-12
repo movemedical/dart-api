@@ -184,40 +184,28 @@ class UiClientConfigurationBuilder
   _$UiClientConfiguration _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   UiClientConfigurationType _configType;
-
   UiClientConfigurationType get configType => _$this._configType;
-
   set configType(UiClientConfigurationType configType) =>
       _$this._configType = configType;
 
   bool _valueBool;
-
   bool get valueBool => _$this._valueBool;
-
   set valueBool(bool valueBool) => _$this._valueBool = valueBool;
 
   String _valueString;
-
   String get valueString => _$this._valueString;
-
   set valueString(String valueString) => _$this._valueString = valueString;
 
   int _valueLong;
-
   int get valueLong => _$this._valueLong;
-
   set valueLong(int valueLong) => _$this._valueLong = valueLong;
 
   double _valueDouble;
-
   double get valueDouble => _$this._valueDouble;
-
   set valueDouble(double valueDouble) => _$this._valueDouble = valueDouble;
 
   UiClientConfigurationBuilder();
@@ -326,7 +314,6 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
   UiClientConfigurationBuilder $newBuilder() => UiClientConfigurationBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -356,7 +343,6 @@ class _$UiClientConfigurationActions extends UiClientConfigurationActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(UiClientConfiguration);
 }

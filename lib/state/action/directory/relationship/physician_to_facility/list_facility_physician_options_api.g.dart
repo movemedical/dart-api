@@ -109,7 +109,6 @@ class _$ListFacilityPhysicianOptionsApi
           ApiResult<ListFacilityPhysicianOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -121,7 +120,6 @@ class _$ListFacilityPhysicianOptionsApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(

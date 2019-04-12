@@ -158,29 +158,21 @@ class ShipmentFileUpdatePushMessageBuilder
   _$ShipmentFileUpdatePushMessage _$v;
 
   String _shipmentId;
-
   String get shipmentId => _$this._shipmentId;
-
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _fileId;
-
   String get fileId => _$this._fileId;
-
   set fileId(String fileId) => _$this._fileId = fileId;
 
   ShipmentFileUpdatePushMessageFileUpdateType _updateType;
-
   ShipmentFileUpdatePushMessageFileUpdateType get updateType =>
       _$this._updateType;
-
   set updateType(ShipmentFileUpdatePushMessageFileUpdateType updateType) =>
       _$this._updateType = updateType;
 
   double _percentUploadedDecimalForm;
-
   double get percentUploadedDecimalForm => _$this._percentUploadedDecimalForm;
-
   set percentUploadedDecimalForm(double percentUploadedDecimalForm) =>
       _$this._percentUploadedDecimalForm = percentUploadedDecimalForm;
 
@@ -282,7 +274,6 @@ class _$ShipmentFileUpdatePushMessageActions
       ShipmentFileUpdatePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -308,7 +299,6 @@ class _$ShipmentFileUpdatePushMessageActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ShipmentFileUpdatePushMessage);

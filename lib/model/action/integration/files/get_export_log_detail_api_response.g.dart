@@ -106,10 +106,8 @@ class GetExportLogDetailApiResponseBuilder
   _$GetExportLogDetailApiResponse _$v;
 
   GetExportLogDetailApiExportLogBuilder _exportLog;
-
   GetExportLogDetailApiExportLogBuilder get exportLog =>
       _$this._exportLog ??= new GetExportLogDetailApiExportLogBuilder();
-
   set exportLog(GetExportLogDetailApiExportLogBuilder exportLog) =>
       _$this._exportLog = exportLog;
 
@@ -209,14 +207,12 @@ class _$GetExportLogDetailApiResponseActions
       GetExportLogDetailApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.exportLog,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -236,7 +232,6 @@ class _$GetExportLogDetailApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetExportLogDetailApiResponse);

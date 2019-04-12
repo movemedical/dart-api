@@ -329,93 +329,63 @@ class FileDetailBuilder implements Builder<FileDetail, FileDetailBuilder> {
   _$FileDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   DateTime _created;
-
   DateTime get created => _$this._created;
-
   set created(DateTime created) => _$this._created = created;
 
   DateTime _expires;
-
   DateTime get expires => _$this._expires;
-
   set expires(DateTime expires) => _$this._expires = expires;
 
   String _contentType;
-
   String get contentType => _$this._contentType;
-
   set contentType(String contentType) => _$this._contentType = contentType;
 
   String _md5;
-
   String get md5 => _$this._md5;
-
   set md5(String md5) => _$this._md5 = md5;
 
   int _size;
-
   int get size => _$this._size;
-
   set size(int size) => _$this._size = size;
 
   String _region;
-
   String get region => _$this._region;
-
   set region(String region) => _$this._region = region;
 
   String _bucket;
-
   String get bucket => _$this._bucket;
-
   set bucket(String bucket) => _$this._bucket = bucket;
 
   String _key;
-
   String get key => _$this._key;
-
   set key(String key) => _$this._key = key;
 
   String _storageClass;
-
   String get storageClass => _$this._storageClass;
-
   set storageClass(String storageClass) => _$this._storageClass = storageClass;
 
   bool _resource;
-
   bool get resource => _$this._resource;
-
   set resource(bool resource) => _$this._resource = resource;
 
   bool _uploaded;
-
   bool get uploaded => _$this._uploaded;
-
   set uploaded(bool uploaded) => _$this._uploaded = uploaded;
 
   FileType _fileType;
-
   FileType get fileType => _$this._fileType;
-
   set fileType(FileType fileType) => _$this._fileType = fileType;
 
   FileDetailBuilder();
@@ -562,7 +532,6 @@ class _$FileDetailActions extends FileDetailActions {
   FileDetailBuilder $newBuilder() => FileDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -610,7 +579,6 @@ class _$FileDetailActions extends FileDetailActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(FileDetail);
 }

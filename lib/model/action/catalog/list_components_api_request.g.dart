@@ -117,17 +117,13 @@ class ListComponentsApiRequestBuilder
   _$ListComponentsApiRequest _$v;
 
   String _itemVersionId;
-
   String get itemVersionId => _$this._itemVersionId;
-
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListComponentsApiRequestBuilder();
@@ -233,14 +229,12 @@ class _$ListComponentsApiRequestActions
       ListComponentsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -262,7 +256,6 @@ class _$ListComponentsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListComponentsApiRequest);
 }

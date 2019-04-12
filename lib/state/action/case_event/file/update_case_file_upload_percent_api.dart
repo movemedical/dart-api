@@ -10,8 +10,8 @@ part 'update_case_file_upload_percent_api.g.dart';
 abstract class UpdateCaseFileUploadPercentApi extends ApiDispatcher<
     UpdateCaseFileUploadPercentApiRequest,
     UpdateCaseFileUploadPercentApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCaseFileUploadPercentApi> {
   @override
   String get path => 'v1/case_event/file/update_upload_percent';

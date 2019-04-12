@@ -116,15 +116,11 @@ class CloseAuditItemApiRequestBuilder
   _$CloseAuditItemApiRequest _$v;
 
   String _auditItemId;
-
   String get auditItemId => _$this._auditItemId;
-
   set auditItemId(String auditItemId) => _$this._auditItemId = auditItemId;
 
   String _note;
-
   String get note => _$this._note;
-
   set note(String note) => _$this._note = note;
 
   CloseAuditItemApiRequestBuilder();
@@ -209,7 +205,6 @@ class _$CloseAuditItemApiRequestActions
       CloseAuditItemApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -231,7 +226,6 @@ class _$CloseAuditItemApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CloseAuditItemApiRequest);
 }

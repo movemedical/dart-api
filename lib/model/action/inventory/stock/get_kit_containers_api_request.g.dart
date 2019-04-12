@@ -117,15 +117,11 @@ class GetKitContainersApiRequestBuilder
   _$GetKitContainersApiRequest _$v;
 
   String _kitStockId;
-
   String get kitStockId => _$this._kitStockId;
-
   set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
 
   String _kitStockSummaryId;
-
   String get kitStockSummaryId => _$this._kitStockSummaryId;
-
   set kitStockSummaryId(String kitStockSummaryId) =>
       _$this._kitStockSummaryId = kitStockSummaryId;
 
@@ -212,7 +208,6 @@ class _$GetKitContainersApiRequestActions
       GetKitContainersApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -234,7 +229,6 @@ class _$GetKitContainersApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetKitContainersApiRequest);
 }

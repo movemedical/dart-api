@@ -98,7 +98,6 @@ class _$CreateZoneApi extends CreateZoneApi {
           ApiResult<CreateZoneApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -110,7 +109,6 @@ class _$CreateZoneApi extends CreateZoneApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateZoneApiRequest)]),

@@ -102,7 +102,6 @@ class _$ListAEForOrgUnitApi extends ListAEForOrgUnitApi {
           ApiResult<ListAEForOrgUnitApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -114,7 +113,6 @@ class _$ListAEForOrgUnitApi extends ListAEForOrgUnitApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListAEForOrgUnitApiRequest)]),

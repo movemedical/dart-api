@@ -100,9 +100,7 @@ class GetPhysicianApiRequestBuilder
   _$GetPhysicianApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetPhysicianApiRequestBuilder();
@@ -176,7 +174,6 @@ class _$GetPhysicianApiRequestActions extends GetPhysicianApiRequestActions {
       GetPhysicianApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -196,7 +193,6 @@ class _$GetPhysicianApiRequestActions extends GetPhysicianApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetPhysicianApiRequest);
 }

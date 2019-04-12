@@ -10,8 +10,8 @@ part 'save_item_category_links_api.g.dart';
 abstract class SaveItemCategoryLinksApi extends ApiDispatcher<
     SaveItemCategoryLinksApiRequest,
     SaveItemCategoryLinksApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveItemCategoryLinksApi> {
   @override
   String get path => 'v1/catalog/save_item_category_links';

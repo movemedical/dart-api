@@ -101,9 +101,7 @@ class RemoveAeToTeamApiRequestBuilder
   _$RemoveAeToTeamApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   RemoveAeToTeamApiRequestBuilder();
@@ -180,7 +178,6 @@ class _$RemoveAeToTeamApiRequestActions
       RemoveAeToTeamApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -200,7 +197,6 @@ class _$RemoveAeToTeamApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(RemoveAeToTeamApiRequest);
 }

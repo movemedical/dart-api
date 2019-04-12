@@ -122,15 +122,11 @@ class CreatePhysicianForFacilityApiRequestBuilder
   _$CreatePhysicianForFacilityApiRequest _$v;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   CreatePhysicianForFacilityApiRequestBuilder();
@@ -217,7 +213,6 @@ class _$CreatePhysicianForFacilityApiRequestActions
       CreatePhysicianForFacilityApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -239,7 +234,6 @@ class _$CreatePhysicianForFacilityApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreatePhysicianForFacilityApiRequest);

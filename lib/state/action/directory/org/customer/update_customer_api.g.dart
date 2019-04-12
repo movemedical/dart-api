@@ -10,64 +10,65 @@ part of 'update_customer_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<UpdateCustomerApiRequest>,
+        ApiResult<Nothing>>,
     UpdateCustomerApi> UpdateCustomerApiOptions();
 
 class _$UpdateCustomerApi extends UpdateCustomerApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCustomerApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateCustomerApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<UpdateCustomerApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>,
           UpdateCustomerApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCustomerApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCustomerApi,
           Command<ApiCommand<UpdateCustomerApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>,
-          UpdateCustomerApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>,
+          UpdateCustomerApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>,
           UpdateCustomerApi, CommandProgress>> $progress;
 
   _$UpdateCustomerApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCustomerApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCustomerApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCustomerApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCustomerApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCustomerApi,
                     Command<ApiCommand<UpdateCustomerApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCustomerApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCustomerApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCustomerApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCustomerApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -76,17 +77,16 @@ class _$UpdateCustomerApi extends UpdateCustomerApi {
       _$UpdateCustomerApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UpdateCustomerApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<UpdateCustomerApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<UpdateCustomerApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,11 +98,10 @@ class _$UpdateCustomerApi extends UpdateCustomerApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCustomerApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -110,7 +109,8 @@ class _$UpdateCustomerApi extends UpdateCustomerApi {
       ApiCommand<UpdateCustomerApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -120,12 +120,12 @@ class _$UpdateCustomerApi extends UpdateCustomerApi {
       UpdateCustomerApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateCustomerApiRequest> get commandPayloadSerializer =>
       UpdateCustomerApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

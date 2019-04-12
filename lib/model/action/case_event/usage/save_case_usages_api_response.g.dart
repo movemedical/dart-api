@@ -102,9 +102,7 @@ class SaveCaseUsagesApiResponseBuilder
   _$SaveCaseUsagesApiResponse _$v;
 
   bool _confirmUsageFailed;
-
   bool get confirmUsageFailed => _$this._confirmUsageFailed;
-
   set confirmUsageFailed(bool confirmUsageFailed) =>
       _$this._confirmUsageFailed = confirmUsageFailed;
 
@@ -187,7 +185,6 @@ class _$SaveCaseUsagesApiResponseActions
       SaveCaseUsagesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -207,7 +204,6 @@ class _$SaveCaseUsagesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveCaseUsagesApiResponse);
 }

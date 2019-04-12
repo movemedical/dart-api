@@ -11,72 +11,72 @@ part of 'approve_consignment_loan_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ApproveConsignmentLoanApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ApproveConsignmentLoanApi> ApproveConsignmentLoanApiOptions();
 
 class _$ApproveConsignmentLoanApi extends ApproveConsignmentLoanApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ApproveConsignmentLoanApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>, ApproveConsignmentLoanApi, String>> $cancel;
+          ApiResult<Nothing>, ApproveConsignmentLoanApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ApproveConsignmentLoanApi,
           Command<ApiCommand<ApproveConsignmentLoanApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ApproveConsignmentLoanApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ApproveConsignmentLoanApi,
           CommandProgress>> $progress;
 
   _$ApproveConsignmentLoanApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ApproveConsignmentLoanApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ApproveConsignmentLoanApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ApproveConsignmentLoanApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ApproveConsignmentLoanApi,
                     Command<ApiCommand<ApproveConsignmentLoanApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ApproveConsignmentLoanApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ApproveConsignmentLoanApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ApproveConsignmentLoanApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ApproveConsignmentLoanApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$ApproveConsignmentLoanApi extends ApproveConsignmentLoanApi {
       _$ApproveConsignmentLoanApi._(options());
 
   @override
-  CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ApproveConsignmentLoanApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ApproveConsignmentLoanApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ApproveConsignmentLoanApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$ApproveConsignmentLoanApi extends ApproveConsignmentLoanApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ApproveConsignmentLoanApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$ApproveConsignmentLoanApi extends ApproveConsignmentLoanApi {
       ApiCommand<ApproveConsignmentLoanApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$ApproveConsignmentLoanApi extends ApproveConsignmentLoanApi {
       ApproveConsignmentLoanApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ApproveConsignmentLoanApiRequest> get commandPayloadSerializer =>
       ApproveConsignmentLoanApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

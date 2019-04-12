@@ -114,10 +114,8 @@ class ListRelationshipTypesForOrgUnitApiResponseBuilder
   _$ListRelationshipTypesForOrgUnitApiResponse _$v;
 
   ListBuilder<RelationshipType> _relationshipTypes;
-
   ListBuilder<RelationshipType> get relationshipTypes =>
       _$this._relationshipTypes ??= new ListBuilder<RelationshipType>();
-
   set relationshipTypes(ListBuilder<RelationshipType> relationshipTypes) =>
       _$this._relationshipTypes = relationshipTypes;
 
@@ -217,7 +215,6 @@ class _$ListRelationshipTypesForOrgUnitApiResponseActions
       ListRelationshipTypesForOrgUnitApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -237,7 +234,6 @@ class _$ListRelationshipTypesForOrgUnitApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListRelationshipTypesForOrgUnitApiResponse);

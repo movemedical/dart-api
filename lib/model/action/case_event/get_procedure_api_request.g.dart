@@ -100,9 +100,7 @@ class GetProcedureApiRequestBuilder
   _$GetProcedureApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetProcedureApiRequestBuilder();
@@ -176,7 +174,6 @@ class _$GetProcedureApiRequestActions extends GetProcedureApiRequestActions {
       GetProcedureApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -196,7 +193,6 @@ class _$GetProcedureApiRequestActions extends GetProcedureApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetProcedureApiRequest);
 }

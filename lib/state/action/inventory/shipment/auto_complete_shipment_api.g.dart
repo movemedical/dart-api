@@ -10,72 +10,73 @@ part of 'auto_complete_shipment_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AutoCompleteShipmentApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AutoCompleteShipmentApi> AutoCompleteShipmentApiOptions();
 
 class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AutoCompleteShipmentApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>, AutoCompleteShipmentApi, String>> $cancel;
+          ApiResult<Nothing>, AutoCompleteShipmentApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AutoCompleteShipmentApi,
           Command<ApiCommand<AutoCompleteShipmentApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AutoCompleteShipmentApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AutoCompleteShipmentApi,
           CommandProgress>> $progress;
 
   _$AutoCompleteShipmentApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AutoCompleteShipmentApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AutoCompleteShipmentApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AutoCompleteShipmentApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AutoCompleteShipmentApi,
                     Command<ApiCommand<AutoCompleteShipmentApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AutoCompleteShipmentApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AutoCompleteShipmentApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AutoCompleteShipmentApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AutoCompleteShipmentApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
       _$AutoCompleteShipmentApi._(options());
 
   @override
-  CommandState<ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AutoCompleteShipmentApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AutoCompleteShipmentApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AutoCompleteShipmentApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
       ApiCommand<AutoCompleteShipmentApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$AutoCompleteShipmentApi extends AutoCompleteShipmentApi {
       AutoCompleteShipmentApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AutoCompleteShipmentApiRequest> get commandPayloadSerializer =>
       AutoCompleteShipmentApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

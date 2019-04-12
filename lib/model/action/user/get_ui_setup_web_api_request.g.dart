@@ -117,15 +117,11 @@ class GetUiSetupWebApiRequestBuilder
   _$GetUiSetupWebApiRequest _$v;
 
   String _appVersion;
-
   String get appVersion => _$this._appVersion;
-
   set appVersion(String appVersion) => _$this._appVersion = appVersion;
 
   String _platformVersion;
-
   String get platformVersion => _$this._platformVersion;
-
   set platformVersion(String platformVersion) =>
       _$this._platformVersion = platformVersion;
 
@@ -209,7 +205,6 @@ class _$GetUiSetupWebApiRequestActions extends GetUiSetupWebApiRequestActions {
       GetUiSetupWebApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -231,7 +226,6 @@ class _$GetUiSetupWebApiRequestActions extends GetUiSetupWebApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetUiSetupWebApiRequest);
 }

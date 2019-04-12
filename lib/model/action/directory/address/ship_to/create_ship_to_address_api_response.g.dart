@@ -120,15 +120,11 @@ class CreateShipToAddressApiResponseBuilder
   _$CreateShipToAddressApiResponse _$v;
 
   String _shipToId;
-
   String get shipToId => _$this._shipToId;
-
   set shipToId(String shipToId) => _$this._shipToId = shipToId;
 
   String _addressId;
-
   String get addressId => _$this._addressId;
-
   set addressId(String addressId) => _$this._addressId = addressId;
 
   CreateShipToAddressApiResponseBuilder();
@@ -212,7 +208,6 @@ class _$CreateShipToAddressApiResponseActions
       CreateShipToAddressApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -234,7 +229,6 @@ class _$CreateShipToAddressApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateShipToAddressApiResponse);

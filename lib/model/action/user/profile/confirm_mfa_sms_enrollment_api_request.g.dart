@@ -106,9 +106,7 @@ class ConfirmMfaSmsEnrollmentApiRequestBuilder
   _$ConfirmMfaSmsEnrollmentApiRequest _$v;
 
   String _smsCode;
-
   String get smsCode => _$this._smsCode;
-
   set smsCode(String smsCode) => _$this._smsCode = smsCode;
 
   ConfirmMfaSmsEnrollmentApiRequestBuilder();
@@ -187,7 +185,6 @@ class _$ConfirmMfaSmsEnrollmentApiRequestActions
       ConfirmMfaSmsEnrollmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -207,7 +204,6 @@ class _$ConfirmMfaSmsEnrollmentApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ConfirmMfaSmsEnrollmentApiRequest);

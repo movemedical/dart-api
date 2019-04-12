@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/user/profile/enroll_mfa_sms_api_req
 part 'enroll_mfa_sms_api.g.dart';
 
 abstract class EnrollMfaSmsApi extends ApiDispatcher<EnrollMfaSmsApiRequest,
-    EnrollMfaSmsApiRequestBuilder, Empty, EmptyBuilder, EnrollMfaSmsApi> {
+    EnrollMfaSmsApiRequestBuilder, Nothing, NothingBuilder, EnrollMfaSmsApi> {
   @override
   String get path => 'v1/user/profile/enroll_mfa_sms';
 

@@ -126,18 +126,14 @@ class ListFacilityPhysicianLinksApiResponseBuilder
   _$ListFacilityPhysicianLinksApiResponse _$v;
 
   ListBuilder<ListFacilityPhysicianLinksApiPhysicianLink> _data;
-
   ListBuilder<ListFacilityPhysicianLinksApiPhysicianLink> get data =>
       _$this._data ??=
           new ListBuilder<ListFacilityPhysicianLinksApiPhysicianLink>();
-
   set data(ListBuilder<ListFacilityPhysicianLinksApiPhysicianLink> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListFacilityPhysicianLinksApiResponseBuilder();
@@ -238,7 +234,6 @@ class _$ListFacilityPhysicianLinksApiResponseActions
       ListFacilityPhysicianLinksApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -260,7 +255,6 @@ class _$ListFacilityPhysicianLinksApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListFacilityPhysicianLinksApiResponse);

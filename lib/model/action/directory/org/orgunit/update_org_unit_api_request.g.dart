@@ -273,73 +273,51 @@ class UpdateOrgUnitApiRequestBuilder
   _$UpdateOrgUnitApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _reference;
-
   String get reference => _$this._reference;
-
   set reference(String reference) => _$this._reference = reference;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   int _fulfillmentLeadTimeHours;
-
   int get fulfillmentLeadTimeHours => _$this._fulfillmentLeadTimeHours;
-
   set fulfillmentLeadTimeHours(int fulfillmentLeadTimeHours) =>
       _$this._fulfillmentLeadTimeHours = fulfillmentLeadTimeHours;
 
   int _requirementsLeadTimeHours;
-
   int get requirementsLeadTimeHours => _$this._requirementsLeadTimeHours;
-
   set requirementsLeadTimeHours(int requirementsLeadTimeHours) =>
       _$this._requirementsLeadTimeHours = requirementsLeadTimeHours;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   bool _allowRemoteUsage;
-
   bool get allowRemoteUsage => _$this._allowRemoteUsage;
-
   set allowRemoteUsage(bool allowRemoteUsage) =>
       _$this._allowRemoteUsage = allowRemoteUsage;
 
   bool _allowMixedInventoryTypeUsage;
-
   bool get allowMixedInventoryTypeUsage => _$this._allowMixedInventoryTypeUsage;
-
   set allowMixedInventoryTypeUsage(bool allowMixedInventoryTypeUsage) =>
       _$this._allowMixedInventoryTypeUsage = allowMixedInventoryTypeUsage;
 
   String _opsOrgUnitId;
-
   String get opsOrgUnitId => _$this._opsOrgUnitId;
-
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   UpdateOrgUnitApiRequestBuilder();
@@ -501,14 +479,12 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
       UpdateOrgUnitApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -548,7 +524,6 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateOrgUnitApiRequest);
 }

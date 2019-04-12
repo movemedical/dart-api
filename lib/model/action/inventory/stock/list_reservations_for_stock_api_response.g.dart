@@ -110,11 +110,9 @@ class ListReservationsForStockApiResponseBuilder
   _$ListReservationsForStockApiResponse _$v;
 
   ListBuilder<ListReservationsForStockApiReservation> _picks;
-
   ListBuilder<ListReservationsForStockApiReservation> get picks =>
       _$this._picks ??=
           new ListBuilder<ListReservationsForStockApiReservation>();
-
   set picks(ListBuilder<ListReservationsForStockApiReservation> picks) =>
       _$this._picks = picks;
 
@@ -212,7 +210,6 @@ class _$ListReservationsForStockApiResponseActions
       ListReservationsForStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -232,7 +229,6 @@ class _$ListReservationsForStockApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListReservationsForStockApiResponse);

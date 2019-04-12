@@ -1,6 +1,7 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
+
 part 'case_requirements_updated_push_message.g.dart';
 
 abstract class CaseRequirementsUpdatedPushMessage

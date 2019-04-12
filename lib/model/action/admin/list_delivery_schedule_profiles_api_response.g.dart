@@ -131,11 +131,9 @@ class ListDeliveryScheduleProfilesApiResponseBuilder
 
   ListBuilder<ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail>
       _data;
-
   ListBuilder<ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail>
       get data => _$this._data ??= new ListBuilder<
           ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail>();
-
   set data(
           ListBuilder<
                   ListDeliveryScheduleProfilesApiDeliveryScheduleProfileDetail>
@@ -143,9 +141,7 @@ class ListDeliveryScheduleProfilesApiResponseBuilder
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListDeliveryScheduleProfilesApiResponseBuilder();
@@ -248,7 +244,6 @@ class _$ListDeliveryScheduleProfilesApiResponseActions
       ListDeliveryScheduleProfilesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -270,7 +265,6 @@ class _$ListDeliveryScheduleProfilesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListDeliveryScheduleProfilesApiResponse);

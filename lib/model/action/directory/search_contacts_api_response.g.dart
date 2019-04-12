@@ -103,10 +103,8 @@ class SearchContactsApiResponseBuilder
   _$SearchContactsApiResponse _$v;
 
   ListBuilder<Contact> _contacts;
-
   ListBuilder<Contact> get contacts =>
       _$this._contacts ??= new ListBuilder<Contact>();
-
   set contacts(ListBuilder<Contact> contacts) => _$this._contacts = contacts;
 
   SearchContactsApiResponseBuilder();
@@ -197,7 +195,6 @@ class _$SearchContactsApiResponseActions
       SearchContactsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -217,7 +214,6 @@ class _$SearchContactsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SearchContactsApiResponse);
 }

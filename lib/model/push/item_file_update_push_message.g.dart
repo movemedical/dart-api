@@ -154,28 +154,20 @@ class ItemFileUpdatePushMessageBuilder
   _$ItemFileUpdatePushMessage _$v;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _fileId;
-
   String get fileId => _$this._fileId;
-
   set fileId(String fileId) => _$this._fileId = fileId;
 
   ItemFileUpdatePushMessageUpdateType _updateType;
-
   ItemFileUpdatePushMessageUpdateType get updateType => _$this._updateType;
-
   set updateType(ItemFileUpdatePushMessageUpdateType updateType) =>
       _$this._updateType = updateType;
 
   double _percentUploadedDecimalForm;
-
   double get percentUploadedDecimalForm => _$this._percentUploadedDecimalForm;
-
   set percentUploadedDecimalForm(double percentUploadedDecimalForm) =>
       _$this._percentUploadedDecimalForm = percentUploadedDecimalForm;
 
@@ -276,7 +268,6 @@ class _$ItemFileUpdatePushMessageActions
       ItemFileUpdatePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -302,7 +293,6 @@ class _$ItemFileUpdatePushMessageActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ItemFileUpdatePushMessage);
 }

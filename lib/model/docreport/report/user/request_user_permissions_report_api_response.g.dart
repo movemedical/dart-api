@@ -108,9 +108,7 @@ class RequestUserPermissionsReportApiResponseBuilder
   _$RequestUserPermissionsReportApiResponse _$v;
 
   String _docReportId;
-
   String get docReportId => _$this._docReportId;
-
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestUserPermissionsReportApiResponseBuilder();
@@ -193,7 +191,6 @@ class _$RequestUserPermissionsReportApiResponseActions
       RequestUserPermissionsReportApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -213,7 +210,6 @@ class _$RequestUserPermissionsReportApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestUserPermissionsReportApiResponse);

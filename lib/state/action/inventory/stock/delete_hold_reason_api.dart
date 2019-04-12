@@ -10,8 +10,8 @@ part 'delete_hold_reason_api.g.dart';
 abstract class DeleteHoldReasonApi extends ApiDispatcher<
     DeleteHoldReasonApiRequest,
     DeleteHoldReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteHoldReasonApi> {
   @override
   String get path => 'v1/inventory/stock/hold_reason/delete';

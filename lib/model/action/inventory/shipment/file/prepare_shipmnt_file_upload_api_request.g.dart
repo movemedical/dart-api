@@ -175,35 +175,25 @@ class PrepareShipmntFileUploadApiRequestBuilder
   _$PrepareShipmntFileUploadApiRequest _$v;
 
   String _shipmentId;
-
   String get shipmentId => _$this._shipmentId;
-
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _fileName;
-
   String get fileName => _$this._fileName;
-
   set fileName(String fileName) => _$this._fileName = fileName;
 
   ShipmentFileType _shipmentFileType;
-
   ShipmentFileType get shipmentFileType => _$this._shipmentFileType;
-
   set shipmentFileType(ShipmentFileType shipmentFileType) =>
       _$this._shipmentFileType = shipmentFileType;
 
   String _fileDescription;
-
   String get fileDescription => _$this._fileDescription;
-
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   int _estimatedSizeKb;
-
   int get estimatedSizeKb => _$this._estimatedSizeKb;
-
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
@@ -313,7 +303,6 @@ class _$PrepareShipmntFileUploadApiRequestActions
       PrepareShipmntFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -341,7 +330,6 @@ class _$PrepareShipmntFileUploadApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareShipmntFileUploadApiRequest);

@@ -11,72 +11,72 @@ part of 'move_stock_within_location_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<MoveStockWithinLocationApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<MoveStockWithinLocationApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     MoveStockWithinLocationApi> MoveStockWithinLocationApiOptions();
 
 class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       MoveStockWithinLocationApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>, MoveStockWithinLocationApi, String>> $cancel;
+          ApiResult<Nothing>, MoveStockWithinLocationApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           MoveStockWithinLocationApi,
           Command<ApiCommand<MoveStockWithinLocationApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           MoveStockWithinLocationApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           MoveStockWithinLocationApi,
           CommandProgress>> $progress;
 
   _$MoveStockWithinLocationApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<MoveStockWithinLocationApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<MoveStockWithinLocationApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 MoveStockWithinLocationApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<MoveStockWithinLocationApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     MoveStockWithinLocationApi,
                     Command<ApiCommand<MoveStockWithinLocationApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<MoveStockWithinLocationApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     MoveStockWithinLocationApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<MoveStockWithinLocationApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 MoveStockWithinLocationApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
       _$MoveStockWithinLocationApi._(options());
 
   @override
-  CommandState<ApiCommand<MoveStockWithinLocationApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<MoveStockWithinLocationApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<MoveStockWithinLocationApiRequest>, ApiResult<Empty>>();
+          ApiCommand<MoveStockWithinLocationApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<MoveStockWithinLocationApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<MoveStockWithinLocationApiRequest>, ApiResult<Empty>>();
+          ApiCommand<MoveStockWithinLocationApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(MoveStockWithinLocationApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
       ApiCommand<MoveStockWithinLocationApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$MoveStockWithinLocationApi extends MoveStockWithinLocationApi {
       MoveStockWithinLocationApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<MoveStockWithinLocationApiRequest> get commandPayloadSerializer =>
       MoveStockWithinLocationApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

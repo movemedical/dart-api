@@ -10,8 +10,8 @@ part 'remove_mobile_version_blacklist_api.g.dart';
 abstract class RemoveMobileVersionBlacklistApi extends ApiDispatcher<
     RemoveMobileVersionBlacklistApiRequest,
     RemoveMobileVersionBlacklistApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveMobileVersionBlacklistApi> {
   @override
   String get path => 'v1/admin/mobile_version/blacklist_remove';

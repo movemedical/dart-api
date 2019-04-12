@@ -93,9 +93,7 @@ class GetZoneApiRequestBuilder
   _$GetZoneApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetZoneApiRequestBuilder();
@@ -165,7 +163,6 @@ class _$GetZoneApiRequestActions extends GetZoneApiRequestActions {
   GetZoneApiRequestBuilder $newBuilder() => GetZoneApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -185,7 +182,6 @@ class _$GetZoneApiRequestActions extends GetZoneApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetZoneApiRequest);
 }

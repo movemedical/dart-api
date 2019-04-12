@@ -207,48 +207,34 @@ class PrepareAuditFileUploadApiRequestBuilder
   _$PrepareAuditFileUploadApiRequest _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   String _fileName;
-
   String get fileName => _$this._fileName;
-
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileDescription;
-
   String get fileDescription => _$this._fileDescription;
-
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   AuditFileType _fileType;
-
   AuditFileType get fileType => _$this._fileType;
-
   set fileType(AuditFileType fileType) => _$this._fileType = fileType;
 
   int _estimatedSizeKb;
-
   int get estimatedSizeKb => _$this._estimatedSizeKb;
-
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
   String _ownerOrgUnitId;
-
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
-
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   Visibility _visibility;
-
   Visibility get visibility => _$this._visibility;
-
   set visibility(Visibility visibility) => _$this._visibility = visibility;
 
   PrepareAuditFileUploadApiRequestBuilder();
@@ -370,7 +356,6 @@ class _$PrepareAuditFileUploadApiRequestActions
       PrepareAuditFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -402,7 +387,6 @@ class _$PrepareAuditFileUploadApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareAuditFileUploadApiRequest);

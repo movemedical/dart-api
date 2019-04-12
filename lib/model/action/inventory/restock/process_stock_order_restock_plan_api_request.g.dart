@@ -161,30 +161,22 @@ class ProcessStockOrderRestockPlanApiRequestBuilder
   _$ProcessStockOrderRestockPlanApiRequest _$v;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   ProcessStockOrderRestockPlanApiRestockSystem _system;
-
   ProcessStockOrderRestockPlanApiRestockSystem get system => _$this._system;
-
   set system(ProcessStockOrderRestockPlanApiRestockSystem system) =>
       _$this._system = system;
 
   ListBuilder<ProcessStockOrderRestockPlanApiRestockItem> _restockItems;
-
   ListBuilder<ProcessStockOrderRestockPlanApiRestockItem> get restockItems =>
       _$this._restockItems ??=
           new ListBuilder<ProcessStockOrderRestockPlanApiRestockItem>();
-
   set restockItems(
           ListBuilder<ProcessStockOrderRestockPlanApiRestockItem>
               restockItems) =>
@@ -305,7 +297,6 @@ class _$ProcessStockOrderRestockPlanApiRequestActions
       ProcessStockOrderRestockPlanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -331,7 +322,6 @@ class _$ProcessStockOrderRestockPlanApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ProcessStockOrderRestockPlanApiRequest);

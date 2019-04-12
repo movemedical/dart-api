@@ -125,15 +125,11 @@ class RemoveContainersToBeCountedApiRequestBuilder
   _$RemoveContainersToBeCountedApiRequest _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   ListBuilder<String> _ids;
-
   ListBuilder<String> get ids => _$this._ids ??= new ListBuilder<String>();
-
   set ids(ListBuilder<String> ids) => _$this._ids = ids;
 
   RemoveContainersToBeCountedApiRequestBuilder();
@@ -232,7 +228,6 @@ class _$RemoveContainersToBeCountedApiRequestActions
       RemoveContainersToBeCountedApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -254,7 +249,6 @@ class _$RemoveContainersToBeCountedApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RemoveContainersToBeCountedApiRequest);

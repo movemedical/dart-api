@@ -10,8 +10,8 @@ part 'load_sales_order_line_pricing_api.g.dart';
 abstract class LoadSalesOrderLinePricingApi extends ApiDispatcher<
     LoadSalesOrderLinePricingApiRequest,
     LoadSalesOrderLinePricingApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     LoadSalesOrderLinePricingApi> {
   @override
   String get path => 'v1/inventory/order/load_sales_order_line_pricing';

@@ -108,11 +108,9 @@ class ProcessInspectionApiResponseBuilder
   _$ProcessInspectionApiResponse _$v;
 
   ListBuilder<ProcessInspectionApiProcessingError> _processingErrors;
-
   ListBuilder<ProcessInspectionApiProcessingError> get processingErrors =>
       _$this._processingErrors ??=
           new ListBuilder<ProcessInspectionApiProcessingError>();
-
   set processingErrors(
           ListBuilder<ProcessInspectionApiProcessingError> processingErrors) =>
       _$this._processingErrors = processingErrors;
@@ -211,7 +209,6 @@ class _$ProcessInspectionApiResponseActions
       ProcessInspectionApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -231,7 +228,6 @@ class _$ProcessInspectionApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ProcessInspectionApiResponse);

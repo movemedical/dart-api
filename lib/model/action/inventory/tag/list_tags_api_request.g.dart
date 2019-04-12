@@ -492,163 +492,119 @@ class ListTagsApiRequestBuilder
   _$ListTagsApiRequest _$v;
 
   ListBuilder<String> _itemIds;
-
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
-
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<MoveItemClass> _moveItemClasses;
-
   ListBuilder<MoveItemClass> get moveItemClasses =>
       _$this._moveItemClasses ??= new ListBuilder<MoveItemClass>();
-
   set moveItemClasses(ListBuilder<MoveItemClass> moveItemClasses) =>
       _$this._moveItemClasses = moveItemClasses;
 
   ListBuilder<MoveItemType> _moveItemTypes;
-
   ListBuilder<MoveItemType> get moveItemTypes =>
       _$this._moveItemTypes ??= new ListBuilder<MoveItemType>();
-
   set moveItemTypes(ListBuilder<MoveItemType> moveItemTypes) =>
       _$this._moveItemTypes = moveItemTypes;
 
   ListBuilder<String> _itemVersionIds;
-
   ListBuilder<String> get itemVersionIds =>
       _$this._itemVersionIds ??= new ListBuilder<String>();
-
   set itemVersionIds(ListBuilder<String> itemVersionIds) =>
       _$this._itemVersionIds = itemVersionIds;
 
   ListBuilder<String> _serialIds;
-
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
-
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   ListBuilder<String> _lotIds;
-
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
-
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _orgUnitIds;
-
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
-
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _locationIds;
-
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
-
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   ListBuilder<LocationType> _locationTypes;
-
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
-
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<FacilityType> _facilityTypes;
-
   ListBuilder<FacilityType> get facilityTypes =>
       _$this._facilityTypes ??= new ListBuilder<FacilityType>();
-
   set facilityTypes(ListBuilder<FacilityType> facilityTypes) =>
       _$this._facilityTypes = facilityTypes;
 
   ListBuilder<LocationType> _anyLocationTypes;
-
   ListBuilder<LocationType> get anyLocationTypes =>
       _$this._anyLocationTypes ??= new ListBuilder<LocationType>();
-
   set anyLocationTypes(ListBuilder<LocationType> anyLocationTypes) =>
       _$this._anyLocationTypes = anyLocationTypes;
 
   ListBuilder<String> _anyLocationIds;
-
   ListBuilder<String> get anyLocationIds =>
       _$this._anyLocationIds ??= new ListBuilder<String>();
-
   set anyLocationIds(ListBuilder<String> anyLocationIds) =>
       _$this._anyLocationIds = anyLocationIds;
 
   ListBuilder<String> _itemCategoryIds;
-
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
-
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   bool _itemActive;
-
   bool get itemActive => _$this._itemActive;
-
   set itemActive(bool itemActive) => _$this._itemActive = itemActive;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   String _locationSearch;
-
   String get locationSearch => _$this._locationSearch;
-
   set locationSearch(String locationSearch) =>
       _$this._locationSearch = locationSearch;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
-
   String get subProcedureId => _$this._subProcedureId;
-
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _salesOrgUnitId;
-
   String get salesOrgUnitId => _$this._salesOrgUnitId;
-
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   bool _forExport;
-
   bool get forExport => _$this._forExport;
-
   set forExport(bool forExport) => _$this._forExport = forExport;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListTagsApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListTagsApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListTagsApiOrderBy>();
-
   set orderBy(OrderByParamsBuilder<ListTagsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -929,7 +885,6 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
   ListTagsApiRequestBuilder $newBuilder() => ListTagsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -937,7 +892,6 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -999,7 +953,6 @@ class _$ListTagsApiRequestActions extends ListTagsApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListTagsApiRequest);
 }

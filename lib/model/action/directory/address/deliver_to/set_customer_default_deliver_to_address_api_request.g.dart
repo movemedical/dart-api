@@ -128,15 +128,11 @@ class SetCustomerDefaultDeliverToAddressApiRequestBuilder
   _$SetCustomerDefaultDeliverToAddressApiRequest _$v;
 
   String _customerId;
-
   String get customerId => _$this._customerId;
-
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _deliverToAddressId;
-
   String get deliverToAddressId => _$this._deliverToAddressId;
-
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
@@ -226,7 +222,6 @@ class _$SetCustomerDefaultDeliverToAddressApiRequestActions
       SetCustomerDefaultDeliverToAddressApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -248,7 +243,6 @@ class _$SetCustomerDefaultDeliverToAddressApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SetCustomerDefaultDeliverToAddressApiRequest);

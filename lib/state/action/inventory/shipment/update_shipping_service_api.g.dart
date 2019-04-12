@@ -10,72 +10,73 @@ part of 'update_shipping_service_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateShippingServiceApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<UpdateShippingServiceApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateShippingServiceApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateShippingServiceApi> UpdateShippingServiceApiOptions();
 
 class _$UpdateShippingServiceApi extends UpdateShippingServiceApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateShippingServiceApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>, UpdateShippingServiceApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateShippingServiceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateShippingServiceApi,
           Command<ApiCommand<UpdateShippingServiceApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateShippingServiceApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateShippingServiceApi,
           CommandProgress>> $progress;
 
   _$UpdateShippingServiceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateShippingServiceApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateShippingServiceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateShippingServiceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateShippingServiceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateShippingServiceApi,
                     Command<ApiCommand<UpdateShippingServiceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateShippingServiceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateShippingServiceApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateShippingServiceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateShippingServiceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$UpdateShippingServiceApi extends UpdateShippingServiceApi {
       _$UpdateShippingServiceApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateShippingServiceApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateShippingServiceApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateShippingServiceApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateShippingServiceApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateShippingServiceApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$UpdateShippingServiceApi extends UpdateShippingServiceApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateShippingServiceApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$UpdateShippingServiceApi extends UpdateShippingServiceApi {
       ApiCommand<UpdateShippingServiceApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$UpdateShippingServiceApi extends UpdateShippingServiceApi {
       UpdateShippingServiceApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateShippingServiceApiRequest> get commandPayloadSerializer =>
       UpdateShippingServiceApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

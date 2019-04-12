@@ -10,8 +10,8 @@ part 'update_case_status_to_post_op_api.g.dart';
 abstract class UpdateCaseStatusToPostOpApi extends ApiDispatcher<
     UpdateCaseStatusToPostOpApiRequest,
     UpdateCaseStatusToPostOpApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCaseStatusToPostOpApi> {
   @override
   String get path => 'v1/case_event/status/update_to_post_op';

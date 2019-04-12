@@ -331,101 +331,73 @@ class GetStockSummaryApiStockSummaryBuilder
   _$GetStockSummaryApiStockSummary _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   StockPlaceBuilder _stockPlace;
-
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
-
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   ExpirationInfoBuilder _expirationInfo;
-
   ExpirationInfoBuilder get expirationInfo =>
       _$this._expirationInfo ??= new ExpirationInfoBuilder();
-
   set expirationInfo(ExpirationInfoBuilder expirationInfo) =>
       _$this._expirationInfo = expirationInfo;
 
   ResponsiblePartyBuilder _responsibleParty;
-
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
-
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   LoanLiteBuilder _demandLoan;
-
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
-
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   LoanLiteBuilder _consignmentLoan;
-
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
-
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
   int _qty;
-
   int get qty => _$this._qty;
-
   set qty(int qty) => _$this._qty = qty;
 
   int _qtyAllocated;
-
   int get qtyAllocated => _$this._qtyAllocated;
-
   set qtyAllocated(int qtyAllocated) => _$this._qtyAllocated = qtyAllocated;
 
   int _qtyHold;
-
   int get qtyHold => _$this._qtyHold;
-
   set qtyHold(int qtyHold) => _$this._qtyHold = qtyHold;
 
   int _qtyLost;
-
   int get qtyLost => _$this._qtyLost;
-
   set qtyLost(int qtyLost) => _$this._qtyLost = qtyLost;
 
   int _qtyFound;
-
   int get qtyFound => _$this._qtyFound;
-
   set qtyFound(int qtyFound) => _$this._qtyFound = qtyFound;
 
   ListBuilder<GetStockSummaryApiStockAttribute> _attributes;
-
   ListBuilder<GetStockSummaryApiStockAttribute> get attributes =>
       _$this._attributes ??=
           new ListBuilder<GetStockSummaryApiStockAttribute>();
-
   set attributes(ListBuilder<GetStockSummaryApiStockAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -643,7 +615,6 @@ class _$GetStockSummaryApiStockSummaryActions
       GetStockSummaryApiStockSummaryBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -656,7 +627,6 @@ class _$GetStockSummaryApiStockSummaryActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -702,7 +672,6 @@ class _$GetStockSummaryApiStockSummaryActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetStockSummaryApiStockSummary);

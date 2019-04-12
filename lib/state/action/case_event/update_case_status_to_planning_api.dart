@@ -10,8 +10,8 @@ part 'update_case_status_to_planning_api.g.dart';
 abstract class UpdateCaseStatusToPlanningApi extends ApiDispatcher<
     UpdateCaseStatusToPlanningApiRequest,
     UpdateCaseStatusToPlanningApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCaseStatusToPlanningApi> {
   @override
   String get path => 'v1/case_event/status/update_to_planning';

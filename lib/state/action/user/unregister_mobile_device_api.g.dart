@@ -11,72 +11,72 @@ part of 'unregister_mobile_device_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UnregisterMobileDeviceApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UnregisterMobileDeviceApi> UnregisterMobileDeviceApiOptions();
 
 class _$UnregisterMobileDeviceApi extends UnregisterMobileDeviceApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UnregisterMobileDeviceApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>, UnregisterMobileDeviceApi, String>> $cancel;
+          ApiResult<Nothing>, UnregisterMobileDeviceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UnregisterMobileDeviceApi,
           Command<ApiCommand<UnregisterMobileDeviceApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UnregisterMobileDeviceApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UnregisterMobileDeviceApi,
           CommandProgress>> $progress;
 
   _$UnregisterMobileDeviceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UnregisterMobileDeviceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UnregisterMobileDeviceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UnregisterMobileDeviceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UnregisterMobileDeviceApi,
                     Command<ApiCommand<UnregisterMobileDeviceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UnregisterMobileDeviceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UnregisterMobileDeviceApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UnregisterMobileDeviceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UnregisterMobileDeviceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$UnregisterMobileDeviceApi extends UnregisterMobileDeviceApi {
       _$UnregisterMobileDeviceApi._(options());
 
   @override
-  CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UnregisterMobileDeviceApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UnregisterMobileDeviceApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UnregisterMobileDeviceApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$UnregisterMobileDeviceApi extends UnregisterMobileDeviceApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UnregisterMobileDeviceApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$UnregisterMobileDeviceApi extends UnregisterMobileDeviceApi {
       ApiCommand<UnregisterMobileDeviceApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$UnregisterMobileDeviceApi extends UnregisterMobileDeviceApi {
       UnregisterMobileDeviceApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UnregisterMobileDeviceApiRequest> get commandPayloadSerializer =>
       UnregisterMobileDeviceApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

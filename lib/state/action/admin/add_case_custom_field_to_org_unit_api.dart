@@ -10,8 +10,8 @@ part 'add_case_custom_field_to_org_unit_api.g.dart';
 abstract class AddCaseCustomFieldToOrgUnitApi extends ApiDispatcher<
     AddCaseCustomFieldToOrgUnitApiRequest,
     AddCaseCustomFieldToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddCaseCustomFieldToOrgUnitApi> {
   @override
   String get path => 'v1/admin/case_field_to_org_unit/add';

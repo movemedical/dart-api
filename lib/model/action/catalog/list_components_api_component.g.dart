@@ -186,40 +186,28 @@ class ListComponentsApiComponentBuilder
   _$ListComponentsApiComponent _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _containerId;
-
   String get containerId => _$this._containerId;
-
   set containerId(String containerId) => _$this._containerId = containerId;
 
   ItemSpecBuilder _itemSpec;
-
   ItemSpecBuilder get itemSpec => _$this._itemSpec ??= new ItemSpecBuilder();
-
   set itemSpec(ItemSpecBuilder itemSpec) => _$this._itemSpec = itemSpec;
 
   int _quantity;
-
   int get quantity => _$this._quantity;
-
   set quantity(int quantity) => _$this._quantity = quantity;
 
   int _minimumQuantity;
-
   int get minimumQuantity => _$this._minimumQuantity;
-
   set minimumQuantity(int minimumQuantity) =>
       _$this._minimumQuantity = minimumQuantity;
 
   int _placementInSequence;
-
   int get placementInSequence => _$this._placementInSequence;
-
   set placementInSequence(int placementInSequence) =>
       _$this._placementInSequence = placementInSequence;
 
@@ -351,14 +339,12 @@ class _$ListComponentsApiComponentActions
       ListComponentsApiComponentBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.itemSpec,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -388,7 +374,6 @@ class _$ListComponentsApiComponentActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListComponentsApiComponent);
 }

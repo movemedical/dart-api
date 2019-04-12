@@ -435,135 +435,95 @@ class CreateItemApiRequestBuilder
   _$CreateItemApiRequest _$v;
 
   String _bizUnitId;
-
   String get bizUnitId => _$this._bizUnitId;
-
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _itemCategoryId;
-
   String get itemCategoryId => _$this._itemCategoryId;
-
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
   String _itemNumber;
-
   String get itemNumber => _$this._itemNumber;
-
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   int _sizeSequence;
-
   int get sizeSequence => _$this._sizeSequence;
-
   set sizeSequence(int sizeSequence) => _$this._sizeSequence = sizeSequence;
 
   String _skuNumber;
-
   String get skuNumber => _$this._skuNumber;
-
   set skuNumber(String skuNumber) => _$this._skuNumber = skuNumber;
 
   String _longDescription;
-
   String get longDescription => _$this._longDescription;
-
   set longDescription(String longDescription) =>
       _$this._longDescription = longDescription;
 
   String _shortDescription;
-
   String get shortDescription => _$this._shortDescription;
-
   set shortDescription(String shortDescription) =>
       _$this._shortDescription = shortDescription;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   MoveItemType _moveItemType;
-
   MoveItemType get moveItemType => _$this._moveItemType;
-
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   String _unitOfMeasureId;
-
   String get unitOfMeasureId => _$this._unitOfMeasureId;
-
   set unitOfMeasureId(String unitOfMeasureId) =>
       _$this._unitOfMeasureId = unitOfMeasureId;
 
   String _linkedToItemId;
-
   String get linkedToItemId => _$this._linkedToItemId;
-
   set linkedToItemId(String linkedToItemId) =>
       _$this._linkedToItemId = linkedToItemId;
 
   AuditCode _auditCode;
-
   AuditCode get auditCode => _$this._auditCode;
-
   set auditCode(AuditCode auditCode) => _$this._auditCode = auditCode;
 
   bool _lotTracked;
-
   bool get lotTracked => _$this._lotTracked;
-
   set lotTracked(bool lotTracked) => _$this._lotTracked = lotTracked;
 
   bool _serialTracked;
-
   bool get serialTracked => _$this._serialTracked;
-
   set serialTracked(bool serialTracked) =>
       _$this._serialTracked = serialTracked;
 
   bool _shippable;
-
   bool get shippable => _$this._shippable;
-
   set shippable(bool shippable) => _$this._shippable = shippable;
 
   DateTime _startManufactureDate;
-
   DateTime get startManufactureDate => _$this._startManufactureDate;
-
   set startManufactureDate(DateTime startManufactureDate) =>
       _$this._startManufactureDate = startManufactureDate;
 
   DateTime _endManufactureDate;
-
   DateTime get endManufactureDate => _$this._endManufactureDate;
-
   set endManufactureDate(DateTime endManufactureDate) =>
       _$this._endManufactureDate = endManufactureDate;
 
   int _layerCount;
-
   int get layerCount => _$this._layerCount;
-
   set layerCount(int layerCount) => _$this._layerCount = layerCount;
 
   bool _forceContainersOnDelivery;
-
   bool get forceContainersOnDelivery => _$this._forceContainersOnDelivery;
-
   set forceContainersOnDelivery(bool forceContainersOnDelivery) =>
       _$this._forceContainersOnDelivery = forceContainersOnDelivery;
 
   ListBuilder<ItemSpec> _containers;
-
   ListBuilder<ItemSpec> get containers =>
       _$this._containers ??= new ListBuilder<ItemSpec>();
-
   set containers(ListBuilder<ItemSpec> containers) =>
       _$this._containers = containers;
 
@@ -786,7 +746,6 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
   CreateItemApiRequestBuilder $newBuilder() => CreateItemApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -844,7 +803,6 @@ class _$CreateItemApiRequestActions extends CreateItemApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateItemApiRequest);
 }

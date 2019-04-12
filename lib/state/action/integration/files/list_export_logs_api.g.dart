@@ -101,7 +101,6 @@ class _$ListExportLogsApi extends ListExportLogsApi {
           ApiResult<ListExportLogsApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -113,7 +112,6 @@ class _$ListExportLogsApi extends ListExportLogsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListExportLogsApiRequest)]),

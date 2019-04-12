@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/directory/people/hcr/update_hcr_api
 part 'update_hcr_api.g.dart';
 
 abstract class UpdateHcrApi extends ApiDispatcher<UpdateHcrApiRequest,
-    UpdateHcrApiRequestBuilder, Empty, EmptyBuilder, UpdateHcrApi> {
+    UpdateHcrApiRequestBuilder, Nothing, NothingBuilder, UpdateHcrApi> {
   @override
   String get path => 'v1/directory/people/hcr/update';
 

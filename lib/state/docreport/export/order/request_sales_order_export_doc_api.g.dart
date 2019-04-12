@@ -11,72 +11,72 @@ part of 'request_sales_order_export_doc_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestSalesOrderExportDocApi> RequestSalesOrderExportDocApiOptions();
 
 class _$RequestSalesOrderExportDocApi extends RequestSalesOrderExportDocApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestSalesOrderExportDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>, RequestSalesOrderExportDocApi, String>> $cancel;
+          ApiResult<Nothing>, RequestSalesOrderExportDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestSalesOrderExportDocApi,
           Command<ApiCommand<RequestSalesOrderExportDocApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestSalesOrderExportDocApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestSalesOrderExportDocApi,
           CommandProgress>> $progress;
 
   _$RequestSalesOrderExportDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderExportDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestSalesOrderExportDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestSalesOrderExportDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestSalesOrderExportDocApi,
                     Command<ApiCommand<RequestSalesOrderExportDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestSalesOrderExportDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestSalesOrderExportDocApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestSalesOrderExportDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestSalesOrderExportDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -87,18 +87,19 @@ class _$RequestSalesOrderExportDocApi extends RequestSalesOrderExportDocApi {
 
   @override
   CommandState<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<RequestSalesOrderExportDocApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestSalesOrderExportDocApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestSalesOrderExportDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestSalesOrderExportDocApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestSalesOrderExportDocApiRequest>,
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -110,11 +111,10 @@ class _$RequestSalesOrderExportDocApi extends RequestSalesOrderExportDocApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestSalesOrderExportDocApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -122,7 +122,8 @@ class _$RequestSalesOrderExportDocApi extends RequestSalesOrderExportDocApi {
       ApiCommand<RequestSalesOrderExportDocApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -132,7 +133,7 @@ class _$RequestSalesOrderExportDocApi extends RequestSalesOrderExportDocApi {
       RequestSalesOrderExportDocApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestSalesOrderExportDocApiRequest>
@@ -140,5 +141,5 @@ class _$RequestSalesOrderExportDocApi extends RequestSalesOrderExportDocApi {
           RequestSalesOrderExportDocApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

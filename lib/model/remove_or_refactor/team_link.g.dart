@@ -135,27 +135,19 @@ class TeamLinkBuilder implements Builder<TeamLink, TeamLinkBuilder> {
   _$TeamLink _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _teamId;
-
   String get teamId => _$this._teamId;
-
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _teamName;
-
   String get teamName => _$this._teamName;
-
   set teamName(String teamName) => _$this._teamName = teamName;
 
   bool _teamActive;
-
   bool get teamActive => _$this._teamActive;
-
   set teamActive(bool teamActive) => _$this._teamActive = teamActive;
 
   TeamLinkBuilder();
@@ -238,7 +230,6 @@ class _$TeamLinkActions extends TeamLinkActions {
   TeamLinkBuilder $newBuilder() => TeamLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -264,7 +255,6 @@ class _$TeamLinkActions extends TeamLinkActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(TeamLink);
 }

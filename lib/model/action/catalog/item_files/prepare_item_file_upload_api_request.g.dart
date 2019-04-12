@@ -190,41 +190,29 @@ class PrepareItemFileUploadApiRequestBuilder
   _$PrepareItemFileUploadApiRequest _$v;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _fileName;
-
   String get fileName => _$this._fileName;
-
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileDescription;
-
   String get fileDescription => _$this._fileDescription;
-
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   ItemFileType _fileType;
-
   ItemFileType get fileType => _$this._fileType;
-
   set fileType(ItemFileType fileType) => _$this._fileType = fileType;
 
   int _estimatedSizeKb;
-
   int get estimatedSizeKb => _$this._estimatedSizeKb;
-
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
   String _ownerOrgUnitId;
-
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
-
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
@@ -339,7 +327,6 @@ class _$PrepareItemFileUploadApiRequestActions
       PrepareItemFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -369,7 +356,6 @@ class _$PrepareItemFileUploadApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareItemFileUploadApiRequest);

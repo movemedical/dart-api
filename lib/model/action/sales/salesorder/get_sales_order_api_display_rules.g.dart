@@ -385,112 +385,78 @@ class GetSalesOrderApiDisplayRulesBuilder
   _$GetSalesOrderApiDisplayRules _$v;
 
   bool _editLinePricing;
-
   bool get editLinePricing => _$this._editLinePricing;
-
   set editLinePricing(bool editLinePricing) =>
       _$this._editLinePricing = editLinePricing;
 
   bool _editDetails;
-
   bool get editDetails => _$this._editDetails;
-
   set editDetails(bool editDetails) => _$this._editDetails = editDetails;
 
   bool _addLineQuantity;
-
   bool get addLineQuantity => _$this._addLineQuantity;
-
   set addLineQuantity(bool addLineQuantity) =>
       _$this._addLineQuantity = addLineQuantity;
 
   bool _editLineQuantity;
-
   bool get editLineQuantity => _$this._editLineQuantity;
-
   set editLineQuantity(bool editLineQuantity) =>
       _$this._editLineQuantity = editLineQuantity;
 
   bool _sendToErp;
-
   bool get sendToErp => _$this._sendToErp;
-
   set sendToErp(bool sendToErp) => _$this._sendToErp = sendToErp;
 
   bool _skipErp;
-
   bool get skipErp => _$this._skipErp;
-
   set skipErp(bool skipErp) => _$this._skipErp = skipErp;
 
   bool _confirm;
-
   bool get confirm => _$this._confirm;
-
   set confirm(bool confirm) => _$this._confirm = confirm;
 
   bool _cancel;
-
   bool get cancel => _$this._cancel;
-
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _showItemPricing;
-
   bool get showItemPricing => _$this._showItemPricing;
-
   set showItemPricing(bool showItemPricing) =>
       _$this._showItemPricing = showItemPricing;
 
   bool _getItemPricing;
-
   bool get getItemPricing => _$this._getItemPricing;
-
   set getItemPricing(bool getItemPricing) =>
       _$this._getItemPricing = getItemPricing;
 
   bool _printSalesOrder;
-
   bool get printSalesOrder => _$this._printSalesOrder;
-
   set printSalesOrder(bool printSalesOrder) =>
       _$this._printSalesOrder = printSalesOrder;
 
   bool _editUsage;
-
   bool get editUsage => _$this._editUsage;
-
   set editUsage(bool editUsage) => _$this._editUsage = editUsage;
 
   bool _updatePo;
-
   bool get updatePo => _$this._updatePo;
-
   set updatePo(bool updatePo) => _$this._updatePo = updatePo;
 
   bool _showUsage;
-
   bool get showUsage => _$this._showUsage;
-
   set showUsage(bool showUsage) => _$this._showUsage = showUsage;
 
   bool _showLines;
-
   bool get showLines => _$this._showLines;
-
   set showLines(bool showLines) => _$this._showLines = showLines;
 
   bool _showShipments;
-
   bool get showShipments => _$this._showShipments;
-
   set showShipments(bool showShipments) =>
       _$this._showShipments = showShipments;
 
   bool _approve;
-
   bool get approve => _$this._approve;
-
   set approve(bool approve) => _$this._approve = approve;
 
   GetSalesOrderApiDisplayRulesBuilder();
@@ -670,7 +636,6 @@ class _$GetSalesOrderApiDisplayRulesActions
       GetSalesOrderApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -722,7 +687,6 @@ class _$GetSalesOrderApiDisplayRulesActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetSalesOrderApiDisplayRules);

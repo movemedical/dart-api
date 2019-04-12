@@ -10,8 +10,8 @@ part 'update_physician_api.g.dart';
 abstract class UpdatePhysicianApi extends ApiDispatcher<
     UpdatePhysicianApiRequest,
     UpdatePhysicianApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdatePhysicianApi> {
   @override
   String get path => 'v1/directory/people/physician/update';

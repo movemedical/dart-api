@@ -174,41 +174,29 @@ class StockItemBuilder implements Builder<StockItem, StockItemBuilder> {
   _$StockItem _$v;
 
   ItemBuilder _item;
-
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
-
   set item(ItemBuilder item) => _$this._item = item;
 
   ItemVersionBuilder _itemVersion;
-
   ItemVersionBuilder get itemVersion =>
       _$this._itemVersion ??= new ItemVersionBuilder();
-
   set itemVersion(ItemVersionBuilder itemVersion) =>
       _$this._itemVersion = itemVersion;
 
   LotBuilder _lot;
-
   LotBuilder get lot => _$this._lot ??= new LotBuilder();
-
   set lot(LotBuilder lot) => _$this._lot = lot;
 
   SerialBuilder _serial;
-
   SerialBuilder get serial => _$this._serial ??= new SerialBuilder();
-
   set serial(SerialBuilder serial) => _$this._serial = serial;
 
   String _rawLotNumber;
-
   String get rawLotNumber => _$this._rawLotNumber;
-
   set rawLotNumber(String rawLotNumber) => _$this._rawLotNumber = rawLotNumber;
 
   TagBuilder _tag;
-
   TagBuilder get tag => _$this._tag ??= new TagBuilder();
-
   set tag(TagBuilder tag) => _$this._tag = tag;
 
   StockItemBuilder();
@@ -352,7 +340,6 @@ class _$StockItemActions extends StockItemActions {
   StockItemBuilder $newBuilder() => StockItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
@@ -363,7 +350,6 @@ class _$StockItemActions extends StockItemActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -393,7 +379,6 @@ class _$StockItemActions extends StockItemActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(StockItem);
 }

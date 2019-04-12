@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/inventory/order/save_order_lines_ap
 
 part 'save_order_lines_api.g.dart';
 
-abstract class SaveOrderLinesApi extends ApiDispatcher<SaveOrderLinesApiRequest,
-    SaveOrderLinesApiRequestBuilder, Empty, EmptyBuilder, SaveOrderLinesApi> {
+abstract class SaveOrderLinesApi extends ApiDispatcher<
+    SaveOrderLinesApiRequest,
+    SaveOrderLinesApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    SaveOrderLinesApi> {
   @override
   String get path => 'v1/inventory/order/save_order_lines';
 

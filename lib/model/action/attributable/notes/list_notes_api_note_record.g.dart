@@ -324,92 +324,64 @@ class ListNotesApiNoteRecordBuilder
   _$ListNotesApiNoteRecord _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _ownerOrgUnitId;
-
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
-
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   AttributableType _attrType;
-
   AttributableType get attrType => _$this._attrType;
-
   set attrType(AttributableType attrType) => _$this._attrType = attrType;
 
   String _attrId;
-
   String get attrId => _$this._attrId;
-
   set attrId(String attrId) => _$this._attrId = attrId;
 
   bool _orgVisible;
-
   bool get orgVisible => _$this._orgVisible;
-
   set orgVisible(bool orgVisible) => _$this._orgVisible = orgVisible;
 
   bool _publicVisible;
-
   bool get publicVisible => _$this._publicVisible;
-
   set publicVisible(bool publicVisible) =>
       _$this._publicVisible = publicVisible;
 
   String _noteValue;
-
   String get noteValue => _$this._noteValue;
-
   set noteValue(String noteValue) => _$this._noteValue = noteValue;
 
   String _createdById;
-
   String get createdById => _$this._createdById;
-
   set createdById(String createdById) => _$this._createdById = createdById;
 
   DateTime _dateCreated;
-
   DateTime get dateCreated => _$this._dateCreated;
-
   set dateCreated(DateTime dateCreated) => _$this._dateCreated = dateCreated;
 
   String _createdByDisplayName;
-
   String get createdByDisplayName => _$this._createdByDisplayName;
-
   set createdByDisplayName(String createdByDisplayName) =>
       _$this._createdByDisplayName = createdByDisplayName;
 
   String _ownerOrgUnitName;
-
   String get ownerOrgUnitName => _$this._ownerOrgUnitName;
-
   set ownerOrgUnitName(String ownerOrgUnitName) =>
       _$this._ownerOrgUnitName = ownerOrgUnitName;
 
   String _ownerOrgUnitLabel;
-
   String get ownerOrgUnitLabel => _$this._ownerOrgUnitLabel;
-
   set ownerOrgUnitLabel(String ownerOrgUnitLabel) =>
       _$this._ownerOrgUnitLabel = ownerOrgUnitLabel;
 
   String _createdByInitials;
-
   String get createdByInitials => _$this._createdByInitials;
-
   set createdByInitials(String createdByInitials) =>
       _$this._createdByInitials = createdByInitials;
 
@@ -575,7 +547,6 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
       ListNotesApiNoteRecordBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -621,7 +592,6 @@ class _$ListNotesApiNoteRecordActions extends ListNotesApiNoteRecordActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListNotesApiNoteRecord);
 }

@@ -102,7 +102,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
           ApiResult<GetPendingPoCountApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -114,7 +113,6 @@ class _$GetPendingPoCountApi extends GetPendingPoCountApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(GetPendingPoCountApiRequest)]),

@@ -97,10 +97,8 @@ class ListSSOApiResponseBuilder
   _$ListSSOApiResponse _$v;
 
   ListBuilder<ListSSOApiSSO> _ssos;
-
   ListBuilder<ListSSOApiSSO> get ssos =>
       _$this._ssos ??= new ListBuilder<ListSSOApiSSO>();
-
   set ssos(ListBuilder<ListSSOApiSSO> ssos) => _$this._ssos = ssos;
 
   ListSSOApiResponseBuilder();
@@ -184,7 +182,6 @@ class _$ListSSOApiResponseActions extends ListSSOApiResponseActions {
   ListSSOApiResponseBuilder $newBuilder() => ListSSOApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -204,7 +201,6 @@ class _$ListSSOApiResponseActions extends ListSSOApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListSSOApiResponse);
 }

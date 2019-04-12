@@ -123,17 +123,13 @@ class RequestAuditItemExportDocApiRequestBuilder
   _$RequestAuditItemExportDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
-
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
-
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   RequestAuditItemExportDocApiRequestBuilder();
@@ -237,14 +233,12 @@ class _$RequestAuditItemExportDocApiRequestActions
       RequestAuditItemExportDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -266,7 +260,6 @@ class _$RequestAuditItemExportDocApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestAuditItemExportDocApiRequest);

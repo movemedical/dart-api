@@ -10,72 +10,73 @@ part of 'deactivate_participant_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeactivateParticipantApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DeactivateParticipantApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DeactivateParticipantApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DeactivateParticipantApi> DeactivateParticipantApiOptions();
 
 class _$DeactivateParticipantApi extends DeactivateParticipantApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DeactivateParticipantApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>, DeactivateParticipantApi, String>> $cancel;
+          ApiResult<Nothing>, DeactivateParticipantApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeactivateParticipantApi,
           Command<ApiCommand<DeactivateParticipantApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeactivateParticipantApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeactivateParticipantApi,
           CommandProgress>> $progress;
 
   _$DeactivateParticipantApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeactivateParticipantApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeactivateParticipantApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeactivateParticipantApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeactivateParticipantApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeactivateParticipantApi,
                     Command<ApiCommand<DeactivateParticipantApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DeactivateParticipantApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeactivateParticipantApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeactivateParticipantApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeactivateParticipantApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$DeactivateParticipantApi extends DeactivateParticipantApi {
       _$DeactivateParticipantApi._(options());
 
   @override
-  CommandState<ApiCommand<DeactivateParticipantApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DeactivateParticipantApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<DeactivateParticipantApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeactivateParticipantApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DeactivateParticipantApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$DeactivateParticipantApi extends DeactivateParticipantApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeactivateParticipantApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$DeactivateParticipantApi extends DeactivateParticipantApi {
       ApiCommand<DeactivateParticipantApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$DeactivateParticipantApi extends DeactivateParticipantApi {
       DeactivateParticipantApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DeactivateParticipantApiRequest> get commandPayloadSerializer =>
       DeactivateParticipantApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

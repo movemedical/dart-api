@@ -308,87 +308,63 @@ class SearchLocationsApiRequestBuilder
   _$SearchLocationsApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   ListBuilder<String> _bizUnitIds;
-
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
-
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _orgUnitIds;
-
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
-
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<LocationType> _locationTypes;
-
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
-
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<FacilityType> _facilityTypes;
-
   ListBuilder<FacilityType> get facilityTypes =>
       _$this._facilityTypes ??= new ListBuilder<FacilityType>();
-
   set facilityTypes(ListBuilder<FacilityType> facilityTypes) =>
       _$this._facilityTypes = facilityTypes;
 
   bool _scopeToLocationVizibility;
-
   bool get scopeToLocationVizibility => _$this._scopeToLocationVizibility;
-
   set scopeToLocationVizibility(bool scopeToLocationVizibility) =>
       _$this._scopeToLocationVizibility = scopeToLocationVizibility;
 
   ListBuilder<String> _locationIds;
-
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
-
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   bool _skipCache;
-
   bool get skipCache => _$this._skipCache;
-
   set skipCache(bool skipCache) => _$this._skipCache = skipCache;
 
   SearchLocationsApiSearchLocationsPurpose _purpose;
-
   SearchLocationsApiSearchLocationsPurpose get purpose => _$this._purpose;
-
   set purpose(SearchLocationsApiSearchLocationsPurpose purpose) =>
       _$this._purpose = purpose;
 
   double _latitude;
-
   double get latitude => _$this._latitude;
-
   set latitude(double latitude) => _$this._latitude = latitude;
 
   double _longitude;
-
   double get longitude => _$this._longitude;
-
   set longitude(double longitude) => _$this._longitude = longitude;
 
   SearchLocationsApiRequestBuilder();
@@ -565,7 +541,6 @@ class _$SearchLocationsApiRequestActions
       SearchLocationsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -607,7 +582,6 @@ class _$SearchLocationsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SearchLocationsApiRequest);
 }

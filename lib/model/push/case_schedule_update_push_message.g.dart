@@ -139,7 +139,6 @@ class _$CaseScheduleUpdatePushMessageActions
       CaseScheduleUpdatePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -147,7 +146,6 @@ class _$CaseScheduleUpdatePushMessageActions
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CaseScheduleUpdatePushMessage);

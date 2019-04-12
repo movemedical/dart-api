@@ -103,7 +103,6 @@ class _$ListHcrColleagueLinksApi extends ListHcrColleagueLinksApi {
           ApiResult<ListHcrColleagueLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -115,7 +114,6 @@ class _$ListHcrColleagueLinksApi extends ListHcrColleagueLinksApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListHcrColleagueLinksApiRequest)]),

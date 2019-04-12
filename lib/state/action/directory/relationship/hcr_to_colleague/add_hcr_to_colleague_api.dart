@@ -10,8 +10,8 @@ part 'add_hcr_to_colleague_api.g.dart';
 abstract class AddHcrToColleagueApi extends ApiDispatcher<
     AddHcrToColleagueApiRequest,
     AddHcrToColleagueApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddHcrToColleagueApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_colleague/add';

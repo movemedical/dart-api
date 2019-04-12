@@ -314,85 +314,59 @@ class UpdateUserProfileApiRequestBuilder
   _$UpdateUserProfileApiRequest _$v;
 
   String _currentPassword;
-
   String get currentPassword => _$this._currentPassword;
-
   set currentPassword(String currentPassword) =>
       _$this._currentPassword = currentPassword;
 
   String _newPassword;
-
   String get newPassword => _$this._newPassword;
-
   set newPassword(String newPassword) => _$this._newPassword = newPassword;
 
   String _timezone;
-
   String get timezone => _$this._timezone;
-
   set timezone(String timezone) => _$this._timezone = timezone;
 
   String _erpUserId;
-
   String get erpUserId => _$this._erpUserId;
-
   set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
 
   String _defaultOpsOrgUnitId;
-
   String get defaultOpsOrgUnitId => _$this._defaultOpsOrgUnitId;
-
   set defaultOpsOrgUnitId(String defaultOpsOrgUnitId) =>
       _$this._defaultOpsOrgUnitId = defaultOpsOrgUnitId;
 
   String _defaultSalesOrgUnitId;
-
   String get defaultSalesOrgUnitId => _$this._defaultSalesOrgUnitId;
-
   set defaultSalesOrgUnitId(String defaultSalesOrgUnitId) =>
       _$this._defaultSalesOrgUnitId = defaultSalesOrgUnitId;
 
   String _defaultBizUnitId;
-
   String get defaultBizUnitId => _$this._defaultBizUnitId;
-
   set defaultBizUnitId(String defaultBizUnitId) =>
       _$this._defaultBizUnitId = defaultBizUnitId;
 
   String _ssoId;
-
   String get ssoId => _$this._ssoId;
-
   set ssoId(String ssoId) => _$this._ssoId = ssoId;
 
   String _ssoName;
-
   String get ssoName => _$this._ssoName;
-
   set ssoName(String ssoName) => _$this._ssoName = ssoName;
 
   SSOType _ssoType;
-
   SSOType get ssoType => _$this._ssoType;
-
   set ssoType(SSOType ssoType) => _$this._ssoType = ssoType;
 
   bool _mfaEnabled;
-
   bool get mfaEnabled => _$this._mfaEnabled;
-
   set mfaEnabled(bool mfaEnabled) => _$this._mfaEnabled = mfaEnabled;
 
   String _mfaId;
-
   String get mfaId => _$this._mfaId;
-
   set mfaId(String mfaId) => _$this._mfaId = mfaId;
 
   MfaType _mfaType;
-
   MfaType get mfaType => _$this._mfaType;
-
   set mfaType(MfaType mfaType) => _$this._mfaType = mfaType;
 
   UpdateUserProfileApiRequestBuilder();
@@ -546,7 +520,6 @@ class _$UpdateUserProfileApiRequestActions
       UpdateUserProfileApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -590,7 +563,6 @@ class _$UpdateUserProfileApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateUserProfileApiRequest);

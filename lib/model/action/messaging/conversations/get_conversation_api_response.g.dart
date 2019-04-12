@@ -246,63 +246,45 @@ class GetConversationApiResponseBuilder
   _$GetConversationApiResponse _$v;
 
   DateTime _urgency;
-
   DateTime get urgency => _$this._urgency;
-
   set urgency(DateTime urgency) => _$this._urgency = urgency;
 
   String _purpose;
-
   String get purpose => _$this._purpose;
-
   set purpose(String purpose) => _$this._purpose = purpose;
 
   bool _stopped;
-
   bool get stopped => _$this._stopped;
-
   set stopped(bool stopped) => _$this._stopped = stopped;
 
   String _defaultParticipantId;
-
   String get defaultParticipantId => _$this._defaultParticipantId;
-
   set defaultParticipantId(String defaultParticipantId) =>
       _$this._defaultParticipantId = defaultParticipantId;
 
   ListBuilder<GetConversationApiParticipant> _participants;
-
   ListBuilder<GetConversationApiParticipant> get participants =>
       _$this._participants ??= new ListBuilder<GetConversationApiParticipant>();
-
   set participants(ListBuilder<GetConversationApiParticipant> participants) =>
       _$this._participants = participants;
 
   ListBuilder<AttributableObject> _links;
-
   ListBuilder<AttributableObject> get links =>
       _$this._links ??= new ListBuilder<AttributableObject>();
-
   set links(ListBuilder<AttributableObject> links) => _$this._links = links;
 
   ListBuilder<Message> _messages;
-
   ListBuilder<Message> get messages =>
       _$this._messages ??= new ListBuilder<Message>();
-
   set messages(ListBuilder<Message> messages) => _$this._messages = messages;
 
   bool _moreMessages;
-
   bool get moreMessages => _$this._moreMessages;
-
   set moreMessages(bool moreMessages) => _$this._moreMessages = moreMessages;
 
   GetConversationApiDisplayRulesBuilder _displayRules;
-
   GetConversationApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetConversationApiDisplayRulesBuilder();
-
   set displayRules(GetConversationApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
@@ -459,14 +441,12 @@ class _$GetConversationApiResponseActions
       GetConversationApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.displayRules,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -502,7 +482,6 @@ class _$GetConversationApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetConversationApiResponse);
 }

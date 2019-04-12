@@ -10,8 +10,8 @@ part 'delete_procedure_api.g.dart';
 abstract class DeleteProcedureApi extends ApiDispatcher<
     DeleteProcedureApiRequest,
     DeleteProcedureApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteProcedureApi> {
   @override
   String get path => 'v1/case_event/procedure/delete';

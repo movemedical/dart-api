@@ -281,73 +281,51 @@ class ListHospitalsForSchedulingApiRequestBuilder
   _$ListHospitalsForSchedulingApiRequest _$v;
 
   ListBuilder<String> _hospitalIds;
-
   ListBuilder<String> get hospitalIds =>
       _$this._hospitalIds ??= new ListBuilder<String>();
-
   set hospitalIds(ListBuilder<String> hospitalIds) =>
       _$this._hospitalIds = hospitalIds;
 
   String _bizUnitId;
-
   String get bizUnitId => _$this._bizUnitId;
-
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _healthSystemId;
-
   String get healthSystemId => _$this._healthSystemId;
-
   set healthSystemId(String healthSystemId) =>
       _$this._healthSystemId = healthSystemId;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _hcrId;
-
   String get hcrId => _$this._hcrId;
-
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _teamId;
-
   String get teamId => _$this._teamId;
-
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   bool _forCreateCase;
-
   bool get forCreateCase => _$this._forCreateCase;
-
   set forCreateCase(bool forCreateCase) =>
       _$this._forCreateCase = forCreateCase;
 
   bool _skipCache;
-
   bool get skipCache => _$this._skipCache;
-
   set skipCache(bool skipCache) => _$this._skipCache = skipCache;
 
   ListHospitalsForSchedulingApiRequestBuilder();
@@ -507,7 +485,6 @@ class _$ListHospitalsForSchedulingApiRequestActions
       ListHospitalsForSchedulingApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -547,7 +524,6 @@ class _$ListHospitalsForSchedulingApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHospitalsForSchedulingApiRequest);

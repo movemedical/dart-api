@@ -123,17 +123,13 @@ class ListIntegrationIssuesApiResponseBuilder
   _$ListIntegrationIssuesApiResponse _$v;
 
   ListBuilder<ListIntegrationIssuesApiIssue> _data;
-
   ListBuilder<ListIntegrationIssuesApiIssue> get data =>
       _$this._data ??= new ListBuilder<ListIntegrationIssuesApiIssue>();
-
   set data(ListBuilder<ListIntegrationIssuesApiIssue> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListIntegrationIssuesApiResponseBuilder();
@@ -230,7 +226,6 @@ class _$ListIntegrationIssuesApiResponseActions
       ListIntegrationIssuesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -252,7 +247,6 @@ class _$ListIntegrationIssuesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListIntegrationIssuesApiResponse);

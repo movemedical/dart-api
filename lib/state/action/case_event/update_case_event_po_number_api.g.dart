@@ -11,72 +11,72 @@ part of 'update_case_event_po_number_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateCaseEventPONumberApi> UpdateCaseEventPONumberApiOptions();
 
 class _$UpdateCaseEventPONumberApi extends UpdateCaseEventPONumberApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateCaseEventPONumberApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>, UpdateCaseEventPONumberApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateCaseEventPONumberApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseEventPONumberApi,
           Command<ApiCommand<UpdateCaseEventPONumberApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseEventPONumberApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseEventPONumberApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseEventPONumberApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseEventPONumberApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCaseEventPONumberApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseEventPONumberApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCaseEventPONumberApi,
                     Command<ApiCommand<UpdateCaseEventPONumberApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseEventPONumberApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCaseEventPONumberApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseEventPONumberApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCaseEventPONumberApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$UpdateCaseEventPONumberApi extends UpdateCaseEventPONumberApi {
       _$UpdateCaseEventPONumberApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateCaseEventPONumberApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateCaseEventPONumberApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<UpdateCaseEventPONumberApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCaseEventPONumberApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseEventPONumberApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCaseEventPONumberApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCaseEventPONumberApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$UpdateCaseEventPONumberApi extends UpdateCaseEventPONumberApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseEventPONumberApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$UpdateCaseEventPONumberApi extends UpdateCaseEventPONumberApi {
       ApiCommand<UpdateCaseEventPONumberApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$UpdateCaseEventPONumberApi extends UpdateCaseEventPONumberApi {
       UpdateCaseEventPONumberApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateCaseEventPONumberApiRequest> get commandPayloadSerializer =>
       UpdateCaseEventPONumberApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

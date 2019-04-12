@@ -10,8 +10,8 @@ part 'request_sales_order_export_doc_api.g.dart';
 abstract class RequestSalesOrderExportDocApi extends ApiDispatcher<
     RequestSalesOrderExportDocApiRequest,
     RequestSalesOrderExportDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestSalesOrderExportDocApi> {
   @override
   String get path => 'v1/docreport/export/sales_order';

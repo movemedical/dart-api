@@ -10,57 +10,61 @@ part of 'add_ae_to_team_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>,
     AddAeToTeamApi> AddAeToTeamApiOptions();
 
 class _$AddAeToTeamApi extends AddAeToTeamApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>,
+          ApiResult<Nothing>>,
       AddAeToTeamApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
           AddAeToTeamApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
           AddAeToTeamApi, Command<ApiCommand<AddAeToTeamApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-          AddAeToTeamApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
+          AddAeToTeamApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>,
           AddAeToTeamApi, CommandProgress>> $progress;
 
   _$AddAeToTeamApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddAeToTeamApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>,
-                AddAeToTeamApi, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<AddAeToTeamApiRequest>,
+                ApiResult<Nothing>,
+                AddAeToTeamApi,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddAeToTeamApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddAeToTeamApi,
                     Command<ApiCommand<AddAeToTeamApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AddAeToTeamApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddAeToTeamApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddAeToTeamApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddAeToTeamApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -69,17 +73,16 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
       _$AddAeToTeamApi._(options());
 
   @override
-  CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>
       get $initial =>
-          CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>();
+          CommandState<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<AddAeToTeamApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -91,11 +94,10 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddAeToTeamApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -103,7 +105,8 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
       ApiCommand<AddAeToTeamApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -113,12 +116,12 @@ class _$AddAeToTeamApi extends AddAeToTeamApi {
       AddAeToTeamApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AddAeToTeamApiRequest> get commandPayloadSerializer =>
       AddAeToTeamApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

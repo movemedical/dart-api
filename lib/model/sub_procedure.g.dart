@@ -153,33 +153,23 @@ class SubProcedureBuilder
   _$SubProcedure _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   String _icdCode;
-
   String get icdCode => _$this._icdCode;
-
   set icdCode(String icdCode) => _$this._icdCode = icdCode;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   SubProcedureBuilder();
@@ -274,7 +264,6 @@ class _$SubProcedureActions extends SubProcedureActions {
   SubProcedureBuilder $newBuilder() => SubProcedureBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -302,7 +291,6 @@ class _$SubProcedureActions extends SubProcedureActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SubProcedure);
 }

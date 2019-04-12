@@ -203,47 +203,33 @@ class ListZonesApiRequestBuilder
   _$ListZonesApiRequest _$v;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _zoneId;
-
   String get zoneId => _$this._zoneId;
-
   set zoneId(String zoneId) => _$this._zoneId = zoneId;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ZoneType _type;
-
   ZoneType get type => _$this._type;
-
   set type(ZoneType type) => _$this._type = type;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListZonesApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListZonesApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListZonesApiOrderBy>();
-
   set orderBy(OrderByParamsBuilder<ListZonesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -377,7 +363,6 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
   ListZonesApiRequestBuilder $newBuilder() => ListZonesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -385,7 +370,6 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -417,7 +401,6 @@ class _$ListZonesApiRequestActions extends ListZonesApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListZonesApiRequest);
 }

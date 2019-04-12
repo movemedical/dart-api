@@ -10,8 +10,8 @@ part 'remove_procedure_from_item_category_api.g.dart';
 abstract class RemoveProcedureFromItemCategoryApi extends ApiDispatcher<
     RemoveProcedureFromItemCategoryApiRequest,
     RemoveProcedureFromItemCategoryApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveProcedureFromItemCategoryApi> {
   @override
   String get path =>

@@ -11,72 +11,72 @@ part of 'update_case_event_patient_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateCaseEventPatientApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateCaseEventPatientApi> UpdateCaseEventPatientApiOptions();
 
 class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateCaseEventPatientApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>, UpdateCaseEventPatientApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateCaseEventPatientApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseEventPatientApi,
           Command<ApiCommand<UpdateCaseEventPatientApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseEventPatientApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseEventPatientApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseEventPatientApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseEventPatientApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCaseEventPatientApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseEventPatientApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCaseEventPatientApi,
                     Command<ApiCommand<UpdateCaseEventPatientApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseEventPatientApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCaseEventPatientApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseEventPatientApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCaseEventPatientApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
       _$UpdateCaseEventPatientApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseEventPatientApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCaseEventPatientApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCaseEventPatientApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseEventPatientApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
       ApiCommand<UpdateCaseEventPatientApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
       UpdateCaseEventPatientApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateCaseEventPatientApiRequest> get commandPayloadSerializer =>
       UpdateCaseEventPatientApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

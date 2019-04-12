@@ -135,7 +135,6 @@ class _$ListOpenBillingsApiRequestActions
       ListOpenBillingsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -143,7 +142,6 @@ class _$ListOpenBillingsApiRequestActions
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOpenBillingsApiRequest);
 }

@@ -212,52 +212,36 @@ class CaseCustomValueBuilder
   _$CaseCustomValue _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _caseTypeCustomFieldId;
-
   String get caseTypeCustomFieldId => _$this._caseTypeCustomFieldId;
-
   set caseTypeCustomFieldId(String caseTypeCustomFieldId) =>
       _$this._caseTypeCustomFieldId = caseTypeCustomFieldId;
 
   String _stringValue;
-
   String get stringValue => _$this._stringValue;
-
   set stringValue(String stringValue) => _$this._stringValue = stringValue;
 
   int _longValue;
-
   int get longValue => _$this._longValue;
-
   set longValue(int longValue) => _$this._longValue = longValue;
 
   double _doubleValue;
-
   double get doubleValue => _$this._doubleValue;
-
   set doubleValue(double doubleValue) => _$this._doubleValue = doubleValue;
 
   DateTime _dateValue;
-
   DateTime get dateValue => _$this._dateValue;
-
   set dateValue(DateTime dateValue) => _$this._dateValue = dateValue;
 
   bool _booleanValue;
-
   bool get booleanValue => _$this._booleanValue;
-
   set booleanValue(bool booleanValue) => _$this._booleanValue = booleanValue;
 
   CaseCustomValueBuilder();
@@ -376,7 +360,6 @@ class _$CaseCustomValueActions extends CaseCustomValueActions {
   CaseCustomValueBuilder $newBuilder() => CaseCustomValueBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -410,7 +393,6 @@ class _$CaseCustomValueActions extends CaseCustomValueActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CaseCustomValue);
 }

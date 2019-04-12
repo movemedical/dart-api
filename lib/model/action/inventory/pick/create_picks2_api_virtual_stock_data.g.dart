@@ -157,28 +157,20 @@ class CreatePicks2ApiVirtualStockDataBuilder
   _$CreatePicks2ApiVirtualStockData _$v;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _containerId;
-
   String get containerId => _$this._containerId;
-
   set containerId(String containerId) => _$this._containerId = containerId;
 
   StockContainerType _containerType;
-
   StockContainerType get containerType => _$this._containerType;
-
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
@@ -283,7 +275,6 @@ class _$CreatePicks2ApiVirtualStockDataActions
       CreatePicks2ApiVirtualStockDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -309,7 +300,6 @@ class _$CreatePicks2ApiVirtualStockDataActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreatePicks2ApiVirtualStockData);

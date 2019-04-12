@@ -126,16 +126,12 @@ class ListPhysicianOrgUnitOptionsApiResponseBuilder
   _$ListPhysicianOrgUnitOptionsApiResponse _$v;
 
   ListBuilder<OrgUnitOption> _data;
-
   ListBuilder<OrgUnitOption> get data =>
       _$this._data ??= new ListBuilder<OrgUnitOption>();
-
   set data(ListBuilder<OrgUnitOption> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListPhysicianOrgUnitOptionsApiResponseBuilder();
@@ -234,7 +230,6 @@ class _$ListPhysicianOrgUnitOptionsApiResponseActions
       ListPhysicianOrgUnitOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -256,7 +251,6 @@ class _$ListPhysicianOrgUnitOptionsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPhysicianOrgUnitOptionsApiResponse);

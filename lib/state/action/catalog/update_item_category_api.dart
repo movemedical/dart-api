@@ -10,8 +10,8 @@ part 'update_item_category_api.g.dart';
 abstract class UpdateItemCategoryApi extends ApiDispatcher<
     UpdateItemCategoryApiRequest,
     UpdateItemCategoryApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateItemCategoryApi> {
   @override
   String get path => 'v1/catalog/item_category/update';

@@ -178,19 +178,15 @@ class UpdatePreferenceCardProductGroupsApiRequestBuilder
   _$UpdatePreferenceCardProductGroupsApiRequest _$v;
 
   String _preferenceCardId;
-
   String get preferenceCardId => _$this._preferenceCardId;
-
   set preferenceCardId(String preferenceCardId) =>
       _$this._preferenceCardId = preferenceCardId;
 
   ListBuilder<UpdatePreferenceCardProductGroupsApiProductGroupAdd>
       _productGroupsToAdd;
-
   ListBuilder<UpdatePreferenceCardProductGroupsApiProductGroupAdd>
       get productGroupsToAdd => _$this._productGroupsToAdd ??= new ListBuilder<
           UpdatePreferenceCardProductGroupsApiProductGroupAdd>();
-
   set productGroupsToAdd(
           ListBuilder<UpdatePreferenceCardProductGroupsApiProductGroupAdd>
               productGroupsToAdd) =>
@@ -198,22 +194,18 @@ class UpdatePreferenceCardProductGroupsApiRequestBuilder
 
   ListBuilder<UpdatePreferenceCardProductGroupsApiProductGroupUpdate>
       _productGroupsToUpdate;
-
   ListBuilder<UpdatePreferenceCardProductGroupsApiProductGroupUpdate>
       get productGroupsToUpdate =>
           _$this._productGroupsToUpdate ??= new ListBuilder<
               UpdatePreferenceCardProductGroupsApiProductGroupUpdate>();
-
   set productGroupsToUpdate(
           ListBuilder<UpdatePreferenceCardProductGroupsApiProductGroupUpdate>
               productGroupsToUpdate) =>
       _$this._productGroupsToUpdate = productGroupsToUpdate;
 
   ListBuilder<String> _productGroupsToRemove;
-
   ListBuilder<String> get productGroupsToRemove =>
       _$this._productGroupsToRemove ??= new ListBuilder<String>();
-
   set productGroupsToRemove(ListBuilder<String> productGroupsToRemove) =>
       _$this._productGroupsToRemove = productGroupsToRemove;
 
@@ -348,7 +340,6 @@ class _$UpdatePreferenceCardProductGroupsApiRequestActions
       UpdatePreferenceCardProductGroupsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -374,7 +365,6 @@ class _$UpdatePreferenceCardProductGroupsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdatePreferenceCardProductGroupsApiRequest);

@@ -118,15 +118,11 @@ class ListSerialsApiResponseBuilder
   _$ListSerialsApiResponse _$v;
 
   ListBuilder<Serial> _data;
-
   ListBuilder<Serial> get data => _$this._data ??= new ListBuilder<Serial>();
-
   set data(ListBuilder<Serial> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListSerialsApiResponseBuilder();
@@ -219,7 +215,6 @@ class _$ListSerialsApiResponseActions extends ListSerialsApiResponseActions {
       ListSerialsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,7 +236,6 @@ class _$ListSerialsApiResponseActions extends ListSerialsApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListSerialsApiResponse);
 }

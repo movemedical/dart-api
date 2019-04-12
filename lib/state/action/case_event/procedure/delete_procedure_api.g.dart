@@ -10,65 +10,65 @@ part of 'delete_procedure_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DeleteProcedureApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DeleteProcedureApi> DeleteProcedureApiOptions();
 
 class _$DeleteProcedureApi extends DeleteProcedureApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeleteProcedureApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DeleteProcedureApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<DeleteProcedureApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>,
           DeleteProcedureApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteProcedureApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeleteProcedureApi,
           Command<ApiCommand<DeleteProcedureApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
-          DeleteProcedureApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>,
+          DeleteProcedureApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>,
           DeleteProcedureApi, CommandProgress>> $progress;
 
   _$DeleteProcedureApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteProcedureApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteProcedureApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteProcedureApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteProcedureApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteProcedureApi,
                     Command<ApiCommand<DeleteProcedureApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteProcedureApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteProcedureApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteProcedureApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteProcedureApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,16 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
       _$DeleteProcedureApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DeleteProcedureApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteProcedureApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DeleteProcedureApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +98,10 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteProcedureApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +109,8 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
       ApiCommand<DeleteProcedureApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +120,12 @@ class _$DeleteProcedureApi extends DeleteProcedureApi {
       DeleteProcedureApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DeleteProcedureApiRequest> get commandPayloadSerializer =>
       DeleteProcedureApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

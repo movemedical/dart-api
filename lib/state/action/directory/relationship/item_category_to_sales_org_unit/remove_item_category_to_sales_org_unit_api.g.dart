@@ -11,64 +11,64 @@ part of 'remove_item_category_to_sales_org_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RemoveItemCategoryToSalesOrgUnitApi> RemoveItemCategoryToSalesOrgUnitApiOptions();
 
 class _$RemoveItemCategoryToSalesOrgUnitApi
     extends RemoveItemCategoryToSalesOrgUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RemoveItemCategoryToSalesOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveItemCategoryToSalesOrgUnitApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               RemoveItemCategoryToSalesOrgUnitApi,
               Command<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveItemCategoryToSalesOrgUnitApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveItemCategoryToSalesOrgUnitApi,
           CommandProgress>> $progress;
 
   _$RemoveItemCategoryToSalesOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveItemCategoryToSalesOrgUnitApi,
                     Command<
                         ApiCommand<
@@ -77,14 +77,14 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveItemCategoryToSalesOrgUnitApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveItemCategoryToSalesOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -95,20 +95,19 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
 
   @override
   CommandState<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -120,12 +119,11 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(RemoveItemCategoryToSalesOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -134,7 +132,8 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
           ApiCommand<RemoveItemCategoryToSalesOrgUnitApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -145,7 +144,7 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
           RemoveItemCategoryToSalesOrgUnitApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RemoveItemCategoryToSalesOrgUnitApiRequest>
@@ -153,5 +152,5 @@ class _$RemoveItemCategoryToSalesOrgUnitApi
           RemoveItemCategoryToSalesOrgUnitApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

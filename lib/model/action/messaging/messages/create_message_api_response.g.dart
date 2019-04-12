@@ -101,9 +101,7 @@ class CreateMessageApiResponseBuilder
   _$CreateMessageApiResponse _$v;
 
   MessageBuilder _message;
-
   MessageBuilder get message => _$this._message ??= new MessageBuilder();
-
   set message(MessageBuilder message) => _$this._message = message;
 
   CreateMessageApiResponseBuilder();
@@ -199,14 +197,12 @@ class _$CreateMessageApiResponseActions
       CreateMessageApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.message,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -226,7 +222,6 @@ class _$CreateMessageApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateMessageApiResponse);
 }

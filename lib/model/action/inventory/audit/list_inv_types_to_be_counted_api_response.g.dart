@@ -126,18 +126,14 @@ class ListInvTypesToBeCountedApiResponseBuilder
   _$ListInvTypesToBeCountedApiResponse _$v;
 
   ListBuilder<ListInvTypesToBeCountedApiInvTypeToCount> _data;
-
   ListBuilder<ListInvTypesToBeCountedApiInvTypeToCount> get data =>
       _$this._data ??=
           new ListBuilder<ListInvTypesToBeCountedApiInvTypeToCount>();
-
   set data(ListBuilder<ListInvTypesToBeCountedApiInvTypeToCount> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListInvTypesToBeCountedApiResponseBuilder();
@@ -236,7 +232,6 @@ class _$ListInvTypesToBeCountedApiResponseActions
       ListInvTypesToBeCountedApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -258,7 +253,6 @@ class _$ListInvTypesToBeCountedApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListInvTypesToBeCountedApiResponse);

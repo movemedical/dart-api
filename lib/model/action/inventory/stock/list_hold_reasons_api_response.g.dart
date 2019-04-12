@@ -119,17 +119,13 @@ class ListHoldReasonsApiResponseBuilder
   _$ListHoldReasonsApiResponse _$v;
 
   ListBuilder<ListHoldReasonsApiHoldReason> _data;
-
   ListBuilder<ListHoldReasonsApiHoldReason> get data =>
       _$this._data ??= new ListBuilder<ListHoldReasonsApiHoldReason>();
-
   set data(ListBuilder<ListHoldReasonsApiHoldReason> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHoldReasonsApiResponseBuilder();
@@ -225,7 +221,6 @@ class _$ListHoldReasonsApiResponseActions
       ListHoldReasonsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -247,7 +242,6 @@ class _$ListHoldReasonsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListHoldReasonsApiResponse);
 }

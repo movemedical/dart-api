@@ -10,8 +10,8 @@ part 'update_order_reason_api.g.dart';
 abstract class UpdateOrderReasonApi extends ApiDispatcher<
     UpdateOrderReasonApiRequest,
     UpdateOrderReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateOrderReasonApi> {
   @override
   String get path => 'v1/inventory/order/reason/update';

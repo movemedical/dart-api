@@ -10,8 +10,8 @@ part 'save_relationship_type_api.g.dart';
 abstract class SaveRelationshipTypeApi extends ApiDispatcher<
     SaveRelationshipTypeApiRequest,
     SaveRelationshipTypeApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveRelationshipTypeApi> {
   @override
   String get path => 'v1/directory/relationship/save_relationship_type';

@@ -119,15 +119,11 @@ class CreateInventoryTypeApiRequestBuilder
   _$CreateInventoryTypeApiRequest _$v;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   CreateInventoryTypeApiRequestBuilder();
@@ -209,7 +205,6 @@ class _$CreateInventoryTypeApiRequestActions
       CreateInventoryTypeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -231,7 +226,6 @@ class _$CreateInventoryTypeApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateInventoryTypeApiRequest);

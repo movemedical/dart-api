@@ -121,17 +121,13 @@ class ListChildLoanLinesApiRequestBuilder
   _$ListChildLoanLinesApiRequest _$v;
 
   String _parentLoanLineId;
-
   String get parentLoanLineId => _$this._parentLoanLineId;
-
   set parentLoanLineId(String parentLoanLineId) =>
       _$this._parentLoanLineId = parentLoanLineId;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListChildLoanLinesApiRequestBuilder();
@@ -237,14 +233,12 @@ class _$ListChildLoanLinesApiRequestActions
       ListChildLoanLinesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -266,7 +260,6 @@ class _$ListChildLoanLinesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListChildLoanLinesApiRequest);

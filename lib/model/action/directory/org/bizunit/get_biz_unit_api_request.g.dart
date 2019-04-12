@@ -97,9 +97,7 @@ class GetBizUnitApiRequestBuilder
   _$GetBizUnitApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetBizUnitApiRequestBuilder();
@@ -172,7 +170,6 @@ class _$GetBizUnitApiRequestActions extends GetBizUnitApiRequestActions {
   GetBizUnitApiRequestBuilder $newBuilder() => GetBizUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -192,7 +189,6 @@ class _$GetBizUnitApiRequestActions extends GetBizUnitApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetBizUnitApiRequest);
 }

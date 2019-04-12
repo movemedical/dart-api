@@ -105,9 +105,7 @@ class SubmitConsignmentLoanApiRequestBuilder
   _$SubmitConsignmentLoanApiRequest _$v;
 
   String _loanId;
-
   String get loanId => _$this._loanId;
-
   set loanId(String loanId) => _$this._loanId = loanId;
 
   SubmitConsignmentLoanApiRequestBuilder();
@@ -186,7 +184,6 @@ class _$SubmitConsignmentLoanApiRequestActions
       SubmitConsignmentLoanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,7 +203,6 @@ class _$SubmitConsignmentLoanApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SubmitConsignmentLoanApiRequest);

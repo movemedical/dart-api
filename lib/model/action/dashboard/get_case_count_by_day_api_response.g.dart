@@ -107,10 +107,8 @@ class GetCaseCountByDayApiResponseBuilder
   _$GetCaseCountByDayApiResponse _$v;
 
   ListBuilder<GetCaseCountByDayApiCaseCount> _counts;
-
   ListBuilder<GetCaseCountByDayApiCaseCount> get counts =>
       _$this._counts ??= new ListBuilder<GetCaseCountByDayApiCaseCount>();
-
   set counts(ListBuilder<GetCaseCountByDayApiCaseCount> counts) =>
       _$this._counts = counts;
 
@@ -205,7 +203,6 @@ class _$GetCaseCountByDayApiResponseActions
       GetCaseCountByDayApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,7 +222,6 @@ class _$GetCaseCountByDayApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCaseCountByDayApiResponse);

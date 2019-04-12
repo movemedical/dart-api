@@ -10,8 +10,8 @@ part 'confirm_packages2_api.g.dart';
 abstract class ConfirmPackages2Api extends ApiDispatcher<
     ConfirmPackages2ApiRequest,
     ConfirmPackages2ApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ConfirmPackages2Api> {
   @override
   String get path => 'v1/inventory/pkg/confirm2';

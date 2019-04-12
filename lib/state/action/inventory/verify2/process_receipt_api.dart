@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/inventory/verify2/process_receipt_a
 
 part 'process_receipt_api.g.dart';
 
-abstract class ProcessReceiptApi extends ApiDispatcher<ProcessReceiptApiRequest,
-    ProcessReceiptApiRequestBuilder, Empty, EmptyBuilder, ProcessReceiptApi> {
+abstract class ProcessReceiptApi extends ApiDispatcher<
+    ProcessReceiptApiRequest,
+    ProcessReceiptApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    ProcessReceiptApi> {
   @override
   String get path => 'v1/inventory/inspect/processReceipt';
 

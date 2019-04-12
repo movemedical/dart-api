@@ -131,16 +131,12 @@ class ListRelationshipTypesApiOrgUnitRelationshipsBuilder
   _$ListRelationshipTypesApiOrgUnitRelationships _$v;
 
   OrgUnitBuilder _orgUnit;
-
   OrgUnitBuilder get orgUnit => _$this._orgUnit ??= new OrgUnitBuilder();
-
   set orgUnit(OrgUnitBuilder orgUnit) => _$this._orgUnit = orgUnit;
 
   ListBuilder<RelationshipType> _relationshipTypes;
-
   ListBuilder<RelationshipType> get relationshipTypes =>
       _$this._relationshipTypes ??= new ListBuilder<RelationshipType>();
-
   set relationshipTypes(ListBuilder<RelationshipType> relationshipTypes) =>
       _$this._relationshipTypes = relationshipTypes;
 
@@ -253,14 +249,12 @@ class _$ListRelationshipTypesApiOrgUnitRelationshipsActions
       ListRelationshipTypesApiOrgUnitRelationshipsBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orgUnit,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -282,7 +276,6 @@ class _$ListRelationshipTypesApiOrgUnitRelationshipsActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListRelationshipTypesApiOrgUnitRelationships);

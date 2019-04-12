@@ -11,72 +11,72 @@ part of 'reprocess_integration_issue_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ReprocessIntegrationIssueApi> ReprocessIntegrationIssueApiOptions();
 
 class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ReprocessIntegrationIssueApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>, ReprocessIntegrationIssueApi, String>> $cancel;
+          ApiResult<Nothing>, ReprocessIntegrationIssueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReprocessIntegrationIssueApi,
           Command<ApiCommand<ReprocessIntegrationIssueApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReprocessIntegrationIssueApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReprocessIntegrationIssueApi,
           CommandProgress>> $progress;
 
   _$ReprocessIntegrationIssueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ReprocessIntegrationIssueApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ReprocessIntegrationIssueApi,
                     Command<ApiCommand<ReprocessIntegrationIssueApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ReprocessIntegrationIssueApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ReprocessIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ReprocessIntegrationIssueApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -87,18 +87,19 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
 
   @override
   CommandState<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<ReprocessIntegrationIssueApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ReprocessIntegrationIssueApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ReprocessIntegrationIssueApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ReprocessIntegrationIssueApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ReprocessIntegrationIssueApiRequest>,
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -110,11 +111,10 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ReprocessIntegrationIssueApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -122,7 +122,8 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
       ApiCommand<ReprocessIntegrationIssueApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -132,7 +133,7 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
       ReprocessIntegrationIssueApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ReprocessIntegrationIssueApiRequest>
@@ -140,5 +141,5 @@ class _$ReprocessIntegrationIssueApi extends ReprocessIntegrationIssueApi {
           ReprocessIntegrationIssueApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

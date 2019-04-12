@@ -10,68 +10,72 @@ part of 'remove_team_to_org_unit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RemoveTeamToOrgUnitApi> RemoveTeamToOrgUnitApiOptions();
 
 class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RemoveTeamToOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>, RemoveTeamToOrgUnitApi, String>> $cancel;
+          ApiResult<Nothing>, RemoveTeamToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveTeamToOrgUnitApi,
           Command<ApiCommand<RemoveTeamToOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveTeamToOrgUnitApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>, RemoveTeamToOrgUnitApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<RemoveTeamToOrgUnitApiRequest>,
+          ApiResult<Nothing>,
+          RemoveTeamToOrgUnitApi,
+          CommandProgress>> $progress;
 
   _$RemoveTeamToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveTeamToOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveTeamToOrgUnitApi,
                     Command<ApiCommand<RemoveTeamToOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveTeamToOrgUnitApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveTeamToOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -80,18 +84,17 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
       _$RemoveTeamToOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveTeamToOrgUnitApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RemoveTeamToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -103,11 +106,10 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveTeamToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -115,7 +117,8 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
       ApiCommand<RemoveTeamToOrgUnitApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -125,12 +128,12 @@ class _$RemoveTeamToOrgUnitApi extends RemoveTeamToOrgUnitApi {
       RemoveTeamToOrgUnitApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RemoveTeamToOrgUnitApiRequest> get commandPayloadSerializer =>
       RemoveTeamToOrgUnitApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

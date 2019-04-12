@@ -10,8 +10,8 @@ part 'remove_assignees_api.g.dart';
 abstract class RemoveAssigneesApi extends ApiDispatcher<
     RemoveAssigneesApiRequest,
     RemoveAssigneesApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveAssigneesApi> {
   @override
   String get path => 'v1/inventory/audit/remove_assignees';

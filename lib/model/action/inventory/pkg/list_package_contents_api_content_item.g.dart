@@ -246,64 +246,46 @@ class ListPackageContentsApiContentItemBuilder
   _$ListPackageContentsApiContentItem _$v;
 
   String _stockSummaryKey;
-
   String get stockSummaryKey => _$this._stockSummaryKey;
-
   set stockSummaryKey(String stockSummaryKey) =>
       _$this._stockSummaryKey = stockSummaryKey;
 
   ListBuilder<String> _stockIds;
-
   ListBuilder<String> get stockIds =>
       _$this._stockIds ??= new ListBuilder<String>();
-
   set stockIds(ListBuilder<String> stockIds) => _$this._stockIds = stockIds;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   ExpirationInfoBuilder _expirationInfo;
-
   ExpirationInfoBuilder get expirationInfo =>
       _$this._expirationInfo ??= new ExpirationInfoBuilder();
-
   set expirationInfo(ExpirationInfoBuilder expirationInfo) =>
       _$this._expirationInfo = expirationInfo;
 
   int _qtyShipped;
-
   int get qtyShipped => _$this._qtyShipped;
-
   set qtyShipped(int qtyShipped) => _$this._qtyShipped = qtyShipped;
 
   int _qtyInPkg;
-
   int get qtyInPkg => _$this._qtyInPkg;
-
   set qtyInPkg(int qtyInPkg) => _$this._qtyInPkg = qtyInPkg;
 
   ItemBuilder _kitItem;
-
   ItemBuilder get kitItem => _$this._kitItem ??= new ItemBuilder();
-
   set kitItem(ItemBuilder kitItem) => _$this._kitItem = kitItem;
 
   SerialBuilder _kitSerial;
-
   SerialBuilder get kitSerial => _$this._kitSerial ??= new SerialBuilder();
-
   set kitSerial(SerialBuilder kitSerial) => _$this._kitSerial = kitSerial;
 
   ListPackageContentsApiContentItemBuilder();
@@ -475,7 +457,6 @@ class _$ListPackageContentsApiContentItemActions
       ListPackageContentsApiContentItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -486,7 +467,6 @@ class _$ListPackageContentsApiContentItemActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -522,7 +502,6 @@ class _$ListPackageContentsApiContentItemActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPackageContentsApiContentItem);

@@ -10,57 +10,57 @@ part of 'start_audit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>,
     StartAuditApi> StartAuditApiOptions();
 
 class _$StartAuditApi extends StartAuditApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>,
       StartAuditApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>,
           StartAuditApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>,
           StartAuditApi, Command<ApiCommand<StartAuditApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>,
-          StartAuditApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>,
+          StartAuditApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>,
           StartAuditApi, CommandProgress>> $progress;
 
   _$StartAuditApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<StartAuditApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>,
+            CommandPayload<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>,
                 StartAuditApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<StartAuditApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     StartAuditApi,
                     Command<ApiCommand<StartAuditApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<StartAuditApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     StartAuditApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<StartAuditApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 StartAuditApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -69,17 +69,16 @@ class _$StartAuditApi extends StartAuditApi {
       _$StartAuditApi._(options());
 
   @override
-  CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>
       get $initial =>
-          CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>();
+          CommandState<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<StartAuditApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<StartAuditApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<StartAuditApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -91,11 +90,10 @@ class _$StartAuditApi extends StartAuditApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(StartAuditApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -103,7 +101,8 @@ class _$StartAuditApi extends StartAuditApi {
       ApiCommand<StartAuditApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -113,12 +112,12 @@ class _$StartAuditApi extends StartAuditApi {
       StartAuditApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<StartAuditApiRequest> get commandPayloadSerializer =>
       StartAuditApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

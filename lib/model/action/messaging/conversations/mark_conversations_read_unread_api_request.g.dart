@@ -125,17 +125,13 @@ class MarkConversationsReadUnreadApiRequestBuilder
   _$MarkConversationsReadUnreadApiRequest _$v;
 
   ListBuilder<String> _conversationIds;
-
   ListBuilder<String> get conversationIds =>
       _$this._conversationIds ??= new ListBuilder<String>();
-
   set conversationIds(ListBuilder<String> conversationIds) =>
       _$this._conversationIds = conversationIds;
 
   bool _read;
-
   bool get read => _$this._read;
-
   set read(bool read) => _$this._read = read;
 
   MarkConversationsReadUnreadApiRequestBuilder();
@@ -237,7 +233,6 @@ class _$MarkConversationsReadUnreadApiRequestActions
       MarkConversationsReadUnreadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -259,7 +254,6 @@ class _$MarkConversationsReadUnreadApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(MarkConversationsReadUnreadApiRequest);

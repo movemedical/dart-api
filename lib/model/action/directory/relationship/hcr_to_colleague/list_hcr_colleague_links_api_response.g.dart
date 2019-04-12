@@ -124,17 +124,13 @@ class ListHcrColleagueLinksApiResponseBuilder
   _$ListHcrColleagueLinksApiResponse _$v;
 
   ListBuilder<ListHcrColleagueLinksApiColleagueLink> _data;
-
   ListBuilder<ListHcrColleagueLinksApiColleagueLink> get data =>
       _$this._data ??= new ListBuilder<ListHcrColleagueLinksApiColleagueLink>();
-
   set data(ListBuilder<ListHcrColleagueLinksApiColleagueLink> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHcrColleagueLinksApiResponseBuilder();
@@ -231,7 +227,6 @@ class _$ListHcrColleagueLinksApiResponseActions
       ListHcrColleagueLinksApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -253,7 +248,6 @@ class _$ListHcrColleagueLinksApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHcrColleagueLinksApiResponse);

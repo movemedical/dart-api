@@ -177,37 +177,27 @@ class GetExpiringItemsApiExpirationLevelBuilder
   _$GetExpiringItemsApiExpirationLevel _$v;
 
   String _expirationLevelId;
-
   String get expirationLevelId => _$this._expirationLevelId;
-
   set expirationLevelId(String expirationLevelId) =>
       _$this._expirationLevelId = expirationLevelId;
 
   String _expirationLevelName;
-
   String get expirationLevelName => _$this._expirationLevelName;
-
   set expirationLevelName(String expirationLevelName) =>
       _$this._expirationLevelName = expirationLevelName;
 
   int _expirationLevelSequence;
-
   int get expirationLevelSequence => _$this._expirationLevelSequence;
-
   set expirationLevelSequence(int expirationLevelSequence) =>
       _$this._expirationLevelSequence = expirationLevelSequence;
 
   ExpirationLevelColor _expirationLevelColor;
-
   ExpirationLevelColor get expirationLevelColor => _$this._expirationLevelColor;
-
   set expirationLevelColor(ExpirationLevelColor expirationLevelColor) =>
       _$this._expirationLevelColor = expirationLevelColor;
 
   int _quantityStockExpired;
-
   int get quantityStockExpired => _$this._quantityStockExpired;
-
   set quantityStockExpired(int quantityStockExpired) =>
       _$this._quantityStockExpired = quantityStockExpired;
 
@@ -323,7 +313,6 @@ class _$GetExpiringItemsApiExpirationLevelActions
       GetExpiringItemsApiExpirationLevelBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -351,7 +340,6 @@ class _$GetExpiringItemsApiExpirationLevelActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetExpiringItemsApiExpirationLevel);

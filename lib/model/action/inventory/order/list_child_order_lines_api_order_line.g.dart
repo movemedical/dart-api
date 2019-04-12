@@ -294,76 +294,52 @@ class ListChildOrderLinesApiOrderLineBuilder
   _$ListChildOrderLinesApiOrderLine _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   int _qtyRequested;
-
   int get qtyRequested => _$this._qtyRequested;
-
   set qtyRequested(int qtyRequested) => _$this._qtyRequested = qtyRequested;
 
   int _qtyOpen;
-
   int get qtyOpen => _$this._qtyOpen;
-
   set qtyOpen(int qtyOpen) => _$this._qtyOpen = qtyOpen;
 
   int _qtyAllocated;
-
   int get qtyAllocated => _$this._qtyAllocated;
-
   set qtyAllocated(int qtyAllocated) => _$this._qtyAllocated = qtyAllocated;
 
   int _qtyPicked;
-
   int get qtyPicked => _$this._qtyPicked;
-
   set qtyPicked(int qtyPicked) => _$this._qtyPicked = qtyPicked;
 
   int _qtyShipped;
-
   int get qtyShipped => _$this._qtyShipped;
-
   set qtyShipped(int qtyShipped) => _$this._qtyShipped = qtyShipped;
 
   int _qtyDelivered;
-
   int get qtyDelivered => _$this._qtyDelivered;
-
   set qtyDelivered(int qtyDelivered) => _$this._qtyDelivered = qtyDelivered;
 
   int _qtyConfirmed;
-
   int get qtyConfirmed => _$this._qtyConfirmed;
-
   set qtyConfirmed(int qtyConfirmed) => _$this._qtyConfirmed = qtyConfirmed;
 
   int _qtyMissing;
-
   int get qtyMissing => _$this._qtyMissing;
-
   set qtyMissing(int qtyMissing) => _$this._qtyMissing = qtyMissing;
 
   int _qtyUnexpected;
-
   int get qtyUnexpected => _$this._qtyUnexpected;
-
   set qtyUnexpected(int qtyUnexpected) => _$this._qtyUnexpected = qtyUnexpected;
 
   int _qtyReallocated;
-
   int get qtyReallocated => _$this._qtyReallocated;
-
   set qtyReallocated(int qtyReallocated) =>
       _$this._qtyReallocated = qtyReallocated;
 
@@ -535,14 +511,12 @@ class _$ListChildOrderLinesApiOrderLineActions
       ListChildOrderLinesApiOrderLineBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -584,7 +558,6 @@ class _$ListChildOrderLinesApiOrderLineActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListChildOrderLinesApiOrderLine);

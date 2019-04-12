@@ -114,15 +114,11 @@ class GetShipmentApiRequestBuilder
   _$GetShipmentApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
-
   bool get skipPresence => _$this._skipPresence;
-
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetShipmentApiRequestBuilder();
@@ -203,7 +199,6 @@ class _$GetShipmentApiRequestActions extends GetShipmentApiRequestActions {
   GetShipmentApiRequestBuilder $newBuilder() => GetShipmentApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,7 +220,6 @@ class _$GetShipmentApiRequestActions extends GetShipmentApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetShipmentApiRequest);
 }

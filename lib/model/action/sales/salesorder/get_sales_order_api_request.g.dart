@@ -117,15 +117,11 @@ class GetSalesOrderApiRequestBuilder
   _$GetSalesOrderApiRequest _$v;
 
   String _salesOrderId;
-
   String get salesOrderId => _$this._salesOrderId;
-
   set salesOrderId(String salesOrderId) => _$this._salesOrderId = salesOrderId;
 
   bool _skipPresence;
-
   bool get skipPresence => _$this._skipPresence;
-
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetSalesOrderApiRequestBuilder();
@@ -211,7 +207,6 @@ class _$GetSalesOrderApiRequestActions extends GetSalesOrderApiRequestActions {
       GetSalesOrderApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -233,7 +228,6 @@ class _$GetSalesOrderApiRequestActions extends GetSalesOrderApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSalesOrderApiRequest);
 }

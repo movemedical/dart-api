@@ -10,65 +10,68 @@ part of 'disable_user_access_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DisableUserAccessApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DisableUserAccessApi> DisableUserAccessApiOptions();
 
 class _$DisableUserAccessApi extends DisableUserAccessApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DisableUserAccessApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DisableUserAccessApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DisableUserAccessApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
-          DisableUserAccessApi, String>> $cancel;
+      CommandPayload<ApiCommand<DisableUserAccessApiRequest>,
+          ApiResult<Nothing>, DisableUserAccessApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DisableUserAccessApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DisableUserAccessApi,
           Command<ApiCommand<DisableUserAccessApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
-          DisableUserAccessApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<
+          ApiCommand<DisableUserAccessApiRequest>,
+          ApiResult<Nothing>,
+          DisableUserAccessApi,
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>,
-          DisableUserAccessApi, CommandProgress>> $progress;
+      CommandPayload<ApiCommand<DisableUserAccessApiRequest>,
+          ApiResult<Nothing>, DisableUserAccessApi, CommandProgress>> $progress;
 
   _$DisableUserAccessApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DisableUserAccessApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DisableUserAccessApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DisableUserAccessApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DisableUserAccessApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DisableUserAccessApi,
                     Command<ApiCommand<DisableUserAccessApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DisableUserAccessApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DisableUserAccessApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DisableUserAccessApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DisableUserAccessApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +80,17 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
       _$DisableUserAccessApi._(options());
 
   @override
-  CommandState<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DisableUserAccessApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DisableUserAccessApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DisableUserAccessApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DisableUserAccessApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +102,10 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DisableUserAccessApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +113,8 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
       ApiCommand<DisableUserAccessApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +124,12 @@ class _$DisableUserAccessApi extends DisableUserAccessApi {
       DisableUserAccessApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DisableUserAccessApiRequest> get commandPayloadSerializer =>
       DisableUserAccessApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

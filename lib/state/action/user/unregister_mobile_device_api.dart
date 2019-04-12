@@ -10,8 +10,8 @@ part 'unregister_mobile_device_api.g.dart';
 abstract class UnregisterMobileDeviceApi extends ApiDispatcher<
     UnregisterMobileDeviceApiRequest,
     UnregisterMobileDeviceApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UnregisterMobileDeviceApi> {
   @override
   String get path => 'user/mobile_device/unregister';

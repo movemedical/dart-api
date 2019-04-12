@@ -98,9 +98,7 @@ class StartAuditApiRequestBuilder
   _$StartAuditApiRequest _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   StartAuditApiRequestBuilder();
@@ -173,7 +171,6 @@ class _$StartAuditApiRequestActions extends StartAuditApiRequestActions {
   StartAuditApiRequestBuilder $newBuilder() => StartAuditApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -193,7 +190,6 @@ class _$StartAuditApiRequestActions extends StartAuditApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(StartAuditApiRequest);
 }

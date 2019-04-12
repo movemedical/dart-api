@@ -11,35 +11,35 @@ part of 'set_customer_default_deliver_to_address_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<
         ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     SetCustomerDefaultDeliverToAddressApi> SetCustomerDefaultDeliverToAddressApiOptions();
 
 class _$SetCustomerDefaultDeliverToAddressApi
     extends SetCustomerDefaultDeliverToAddressApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<
           ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       SetCustomerDefaultDeliverToAddressApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SetCustomerDefaultDeliverToAddressApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               SetCustomerDefaultDeliverToAddressApi,
               Command<
                   ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>>>>
@@ -47,13 +47,13 @@ class _$SetCustomerDefaultDeliverToAddressApi
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SetCustomerDefaultDeliverToAddressApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SetCustomerDefaultDeliverToAddressApi,
           CommandProgress>> $progress;
 
@@ -61,17 +61,17 @@ class _$SetCustomerDefaultDeliverToAddressApi
       : $replace = $options.action<
             CommandState<
                 ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SetCustomerDefaultDeliverToAddressApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SetCustomerDefaultDeliverToAddressApi,
                     Command<
                         ApiCommand<
@@ -80,14 +80,14 @@ class _$SetCustomerDefaultDeliverToAddressApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SetCustomerDefaultDeliverToAddressApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SetCustomerDefaultDeliverToAddressApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -98,20 +98,19 @@ class _$SetCustomerDefaultDeliverToAddressApi
 
   @override
   CommandState<ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<SetCustomerDefaultDeliverToAddressApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -123,12 +122,11 @@ class _$SetCustomerDefaultDeliverToAddressApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand,
             [FullType(SetCustomerDefaultDeliverToAddressApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -138,7 +136,8 @@ class _$SetCustomerDefaultDeliverToAddressApi
               .toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -149,7 +148,7 @@ class _$SetCustomerDefaultDeliverToAddressApi
           SetCustomerDefaultDeliverToAddressApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<SetCustomerDefaultDeliverToAddressApiRequest>
@@ -157,5 +156,5 @@ class _$SetCustomerDefaultDeliverToAddressApi
           SetCustomerDefaultDeliverToAddressApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -172,40 +172,28 @@ class LoanLiteBuilder implements Builder<LoanLite, LoanLiteBuilder> {
   _$LoanLite _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   LoanStatus _status;
-
   LoanStatus get status => _$this._status;
-
   set status(LoanStatus status) => _$this._status = status;
 
   DateTime _serviceEndDate;
-
   DateTime get serviceEndDate => _$this._serviceEndDate;
-
   set serviceEndDate(DateTime serviceEndDate) =>
       _$this._serviceEndDate = serviceEndDate;
 
   int _daysLate;
-
   int get daysLate => _$this._daysLate;
-
   set daysLate(int daysLate) => _$this._daysLate = daysLate;
 
   LoanReason _reason;
-
   LoanReason get reason => _$this._reason;
-
   set reason(LoanReason reason) => _$this._reason = reason;
 
   LoanLiteBuilder();
@@ -304,7 +292,6 @@ class _$LoanLiteActions extends LoanLiteActions {
   LoanLiteBuilder $newBuilder() => LoanLiteBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -334,7 +321,6 @@ class _$LoanLiteActions extends LoanLiteActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(LoanLite);
 }

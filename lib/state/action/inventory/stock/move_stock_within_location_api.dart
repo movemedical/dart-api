@@ -10,8 +10,8 @@ part 'move_stock_within_location_api.g.dart';
 abstract class MoveStockWithinLocationApi extends ApiDispatcher<
     MoveStockWithinLocationApiRequest,
     MoveStockWithinLocationApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     MoveStockWithinLocationApi> {
   @override
   String get path => 'v1/inventory/stock/move_within_location';

@@ -139,7 +139,6 @@ class _$GetPendingPoCountApiRequestActions
       GetPendingPoCountApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -147,7 +146,6 @@ class _$GetPendingPoCountApiRequestActions
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetPendingPoCountApiRequest);

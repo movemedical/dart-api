@@ -184,39 +184,27 @@ class UpdatePhysicianApiRequestBuilder
   _$UpdatePhysicianApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _npi;
-
   String get npi => _$this._npi;
-
   set npi(String npi) => _$this._npi = npi;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PhysicianType _physicianType;
-
   PhysicianType get physicianType => _$this._physicianType;
-
   set physicianType(PhysicianType physicianType) =>
       _$this._physicianType = physicianType;
 
@@ -350,7 +338,6 @@ class _$UpdatePhysicianApiRequestActions
       UpdatePhysicianApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -358,7 +345,6 @@ class _$UpdatePhysicianApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -388,7 +374,6 @@ class _$UpdatePhysicianApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdatePhysicianApiRequest);
 }

@@ -129,16 +129,12 @@ class ListBizUnitLinkOptionsForOrgUnitApiResponseBuilder
   _$ListBizUnitLinkOptionsForOrgUnitApiResponse _$v;
 
   ListBuilder<BizUnitOption> _data;
-
   ListBuilder<BizUnitOption> get data =>
       _$this._data ??= new ListBuilder<BizUnitOption>();
-
   set data(ListBuilder<BizUnitOption> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBizUnitLinkOptionsForOrgUnitApiResponseBuilder();
@@ -238,7 +234,6 @@ class _$ListBizUnitLinkOptionsForOrgUnitApiResponseActions
       ListBizUnitLinkOptionsForOrgUnitApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -260,7 +255,6 @@ class _$ListBizUnitLinkOptionsForOrgUnitApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBizUnitLinkOptionsForOrgUnitApiResponse);

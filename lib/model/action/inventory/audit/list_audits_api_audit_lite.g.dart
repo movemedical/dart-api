@@ -148,27 +148,19 @@ class ListAuditsApiAuditLiteBuilder
   _$ListAuditsApiAuditLite _$v;
 
   AuditBuilder _audit;
-
   AuditBuilder get audit => _$this._audit ??= new AuditBuilder();
-
   set audit(AuditBuilder audit) => _$this._audit = audit;
 
   LocationBuilder _location;
-
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
-
   set location(LocationBuilder location) => _$this._location = location;
 
   int _daysUntilDue;
-
   int get daysUntilDue => _$this._daysUntilDue;
-
   set daysUntilDue(int daysUntilDue) => _$this._daysUntilDue = daysUntilDue;
 
   bool _displayDaysUntilDue;
-
   bool get displayDaysUntilDue => _$this._displayDaysUntilDue;
-
   set displayDaysUntilDue(bool displayDaysUntilDue) =>
       _$this._displayDaysUntilDue = displayDaysUntilDue;
 
@@ -291,7 +283,6 @@ class _$ListAuditsApiAuditLiteActions extends ListAuditsApiAuditLiteActions {
       ListAuditsApiAuditLiteBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.audit,
@@ -299,7 +290,6 @@ class _$ListAuditsApiAuditLiteActions extends ListAuditsApiAuditLiteActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -325,7 +315,6 @@ class _$ListAuditsApiAuditLiteActions extends ListAuditsApiAuditLiteActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditsApiAuditLite);
 }

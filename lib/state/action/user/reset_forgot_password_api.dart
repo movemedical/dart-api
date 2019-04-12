@@ -10,8 +10,8 @@ part 'reset_forgot_password_api.g.dart';
 abstract class ResetForgotPasswordApi extends ApiDispatcher<
     ResetForgotPasswordApiRequest,
     ResetForgotPasswordApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ResetForgotPasswordApi> {
   @override
   String get path => 'nsapi/v1/user/reset_forgot_password';

@@ -98,9 +98,7 @@ class GetCustomerApiRequestBuilder
   _$GetCustomerApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetCustomerApiRequestBuilder();
@@ -173,7 +171,6 @@ class _$GetCustomerApiRequestActions extends GetCustomerApiRequestActions {
   GetCustomerApiRequestBuilder $newBuilder() => GetCustomerApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -193,7 +190,6 @@ class _$GetCustomerApiRequestActions extends GetCustomerApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetCustomerApiRequest);
 }

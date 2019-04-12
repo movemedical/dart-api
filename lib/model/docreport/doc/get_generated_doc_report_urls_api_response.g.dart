@@ -109,10 +109,8 @@ class GetGeneratedDocReportUrlsApiResponseBuilder
   _$GetGeneratedDocReportUrlsApiResponse _$v;
 
   ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl> _urls;
-
   ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl> get urls =>
       _$this._urls ??= new ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl>();
-
   set urls(ListBuilder<GetGeneratedDocReportUrlsApiNamedUrl> urls) =>
       _$this._urls = urls;
 
@@ -207,7 +205,6 @@ class _$GetGeneratedDocReportUrlsApiResponseActions
       GetGeneratedDocReportUrlsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -227,7 +224,6 @@ class _$GetGeneratedDocReportUrlsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetGeneratedDocReportUrlsApiResponse);

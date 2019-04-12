@@ -10,8 +10,8 @@ part 'delete_calendar_subscription_api.g.dart';
 abstract class DeleteCalendarSubscriptionApi extends ApiDispatcher<
     DeleteCalendarSubscriptionApiRequest,
     DeleteCalendarSubscriptionApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteCalendarSubscriptionApi> {
   @override
   String get path => 'user/calendar/delete_subscription';

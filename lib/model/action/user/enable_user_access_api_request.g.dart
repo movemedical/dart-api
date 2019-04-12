@@ -220,52 +220,36 @@ class EnableUserAccessApiRequestBuilder
   _$EnableUserAccessApiRequest _$v;
 
   String _linkedId;
-
   String get linkedId => _$this._linkedId;
-
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   String _password;
-
   String get password => _$this._password;
-
   set password(String password) => _$this._password = password;
 
   bool _phiAllowed;
-
   bool get phiAllowed => _$this._phiAllowed;
-
   set phiAllowed(bool phiAllowed) => _$this._phiAllowed = phiAllowed;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   MoveLocale _locale;
-
   MoveLocale get locale => _$this._locale;
-
   set locale(MoveLocale locale) => _$this._locale = locale;
 
   MoveDateRegion _moveDateRegion;
-
   MoveDateRegion get moveDateRegion => _$this._moveDateRegion;
-
   set moveDateRegion(MoveDateRegion moveDateRegion) =>
       _$this._moveDateRegion = moveDateRegion;
 
   SSOType _ssoType;
-
   SSOType get ssoType => _$this._ssoType;
-
   set ssoType(SSOType ssoType) => _$this._ssoType = ssoType;
 
   String _ssoId;
-
   String get ssoId => _$this._ssoId;
-
   set ssoId(String ssoId) => _$this._ssoId = ssoId;
 
   EnableUserAccessApiRequestBuilder();
@@ -382,7 +366,6 @@ class _$EnableUserAccessApiRequestActions
       EnableUserAccessApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -416,7 +399,6 @@ class _$EnableUserAccessApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(EnableUserAccessApiRequest);
 }

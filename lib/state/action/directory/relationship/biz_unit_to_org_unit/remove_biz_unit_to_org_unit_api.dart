@@ -10,8 +10,8 @@ part 'remove_biz_unit_to_org_unit_api.g.dart';
 abstract class RemoveBizUnitToOrgUnitApi extends ApiDispatcher<
     RemoveBizUnitToOrgUnitApiRequest,
     RemoveBizUnitToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveBizUnitToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/biz_unit_to_org_unit/remove';

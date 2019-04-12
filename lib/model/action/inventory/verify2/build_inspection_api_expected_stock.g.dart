@@ -251,66 +251,48 @@ class BuildInspectionApiExpectedStockBuilder
   _$BuildInspectionApiExpectedStock _$v;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   bool _fillsKitStandard;
-
   bool get fillsKitStandard => _$this._fillsKitStandard;
-
   set fillsKitStandard(bool fillsKitStandard) =>
       _$this._fillsKitStandard = fillsKitStandard;
 
   int _kitTrayComponentSequence;
-
   int get kitTrayComponentSequence => _$this._kitTrayComponentSequence;
-
   set kitTrayComponentSequence(int kitTrayComponentSequence) =>
       _$this._kitTrayComponentSequence = kitTrayComponentSequence;
 
   StockContainerDataBuilder _toContainer;
-
   StockContainerDataBuilder get toContainer =>
       _$this._toContainer ??= new StockContainerDataBuilder();
-
   set toContainer(StockContainerDataBuilder toContainer) =>
       _$this._toContainer = toContainer;
 
   bool _verifyKitNow;
-
   bool get verifyKitNow => _$this._verifyKitNow;
-
   set verifyKitNow(bool verifyKitNow) => _$this._verifyKitNow = verifyKitNow;
 
   ListBuilder<String> _childExpectedStockIds;
-
   ListBuilder<String> get childExpectedStockIds =>
       _$this._childExpectedStockIds ??= new ListBuilder<String>();
-
   set childExpectedStockIds(ListBuilder<String> childExpectedStockIds) =>
       _$this._childExpectedStockIds = childExpectedStockIds;
 
   String _entryMatch;
-
   String get entryMatch => _$this._entryMatch;
-
   set entryMatch(String entryMatch) => _$this._entryMatch = entryMatch;
 
   String _selectedOptionId;
-
   String get selectedOptionId => _$this._selectedOptionId;
-
   set selectedOptionId(String selectedOptionId) =>
       _$this._selectedOptionId = selectedOptionId;
 
   ListBuilder<BuildInspectionApiMissingExpectedStockOption> _options;
-
   ListBuilder<BuildInspectionApiMissingExpectedStockOption> get options =>
       _$this._options ??=
           new ListBuilder<BuildInspectionApiMissingExpectedStockOption>();
-
   set options(
           ListBuilder<BuildInspectionApiMissingExpectedStockOption> options) =>
       _$this._options = options;
@@ -478,14 +460,12 @@ class _$BuildInspectionApiExpectedStockActions
       BuildInspectionApiExpectedStockBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.toContainer,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -521,7 +501,6 @@ class _$BuildInspectionApiExpectedStockActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiExpectedStock);

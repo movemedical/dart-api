@@ -10,8 +10,8 @@ part 'save_ae_to_org_unit_api.g.dart';
 abstract class SaveAeToOrgUnitApi extends ApiDispatcher<
     SaveAeToOrgUnitApiRequest,
     SaveAeToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveAeToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/ae_to_org_unit/save';

@@ -10,8 +10,8 @@ part 'remove_physician_to_facility_api.g.dart';
 abstract class RemovePhysicianToFacilityApi extends ApiDispatcher<
     RemovePhysicianToFacilityApiRequest,
     RemovePhysicianToFacilityApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemovePhysicianToFacilityApi> {
   @override
   String get path => 'v1/directory/relationship/physician_to_facility/remove';

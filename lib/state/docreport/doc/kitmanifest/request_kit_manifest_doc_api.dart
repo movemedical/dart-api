@@ -10,8 +10,8 @@ part 'request_kit_manifest_doc_api.g.dart';
 abstract class RequestKitManifestDocApi extends ApiDispatcher<
     RequestKitManifestDocApiRequest,
     RequestKitManifestDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestKitManifestDocApi> {
   @override
   String get path => 'v1/doc/kitmanifest';

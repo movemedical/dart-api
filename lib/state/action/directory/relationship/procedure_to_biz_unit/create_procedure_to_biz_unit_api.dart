@@ -10,8 +10,8 @@ part 'create_procedure_to_biz_unit_api.g.dart';
 abstract class CreateProcedureToBizUnitApi extends ApiDispatcher<
     CreateProcedureToBizUnitApiRequest,
     CreateProcedureToBizUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateProcedureToBizUnitApi> {
   @override
   String get path => 'v1/directory/relationship/procedure_to_bizunit/create';

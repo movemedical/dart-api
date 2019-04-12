@@ -10,8 +10,8 @@ part 'deactivate_mfa_sms_api.g.dart';
 abstract class DeactivateMfaSmsApi extends ApiDispatcher<
     DeactivateMfaSmsApiRequest,
     DeactivateMfaSmsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeactivateMfaSmsApi> {
   @override
   String get path => 'v1/user/profile/deactivate_mfa_sms';

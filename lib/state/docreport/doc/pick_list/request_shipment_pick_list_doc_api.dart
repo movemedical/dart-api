@@ -10,8 +10,8 @@ part 'request_shipment_pick_list_doc_api.g.dart';
 abstract class RequestShipmentPickListDocApi extends ApiDispatcher<
     RequestShipmentPickListDocApiRequest,
     RequestShipmentPickListDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestShipmentPickListDocApi> {
   @override
   String get path => 'v1/doc/shipment_pick_list';

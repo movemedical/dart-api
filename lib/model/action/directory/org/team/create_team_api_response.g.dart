@@ -98,9 +98,7 @@ class CreateTeamApiResponseBuilder
   _$CreateTeamApiResponse _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   CreateTeamApiResponseBuilder();
@@ -173,7 +171,6 @@ class _$CreateTeamApiResponseActions extends CreateTeamApiResponseActions {
   CreateTeamApiResponseBuilder $newBuilder() => CreateTeamApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -193,7 +190,6 @@ class _$CreateTeamApiResponseActions extends CreateTeamApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateTeamApiResponse);
 }

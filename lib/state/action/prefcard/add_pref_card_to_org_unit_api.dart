@@ -10,8 +10,8 @@ part 'add_pref_card_to_org_unit_api.g.dart';
 abstract class AddPrefCardToOrgUnitApi extends ApiDispatcher<
     AddPrefCardToOrgUnitApiRequest,
     AddPrefCardToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddPrefCardToOrgUnitApi> {
   @override
   String get path => 'v1/admin/prefcard_to_org_unit/add';

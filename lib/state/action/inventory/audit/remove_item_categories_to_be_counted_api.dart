@@ -10,8 +10,8 @@ part 'remove_item_categories_to_be_counted_api.g.dart';
 abstract class RemoveItemCategoriesToBeCountedApi extends ApiDispatcher<
     RemoveItemCategoriesToBeCountedApiRequest,
     RemoveItemCategoriesToBeCountedApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveItemCategoriesToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/remove_item_categories_to_be_counted';

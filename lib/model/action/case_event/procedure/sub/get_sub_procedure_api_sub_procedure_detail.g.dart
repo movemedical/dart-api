@@ -208,45 +208,31 @@ class GetSubProcedureApiSubProcedureDetailBuilder
   _$GetSubProcedureApiSubProcedureDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _parentId;
-
   String get parentId => _$this._parentId;
-
   set parentId(String parentId) => _$this._parentId = parentId;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _icdCode;
-
   String get icdCode => _$this._icdCode;
-
   set icdCode(String icdCode) => _$this._icdCode = icdCode;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   bool _allowDelete;
-
   bool get allowDelete => _$this._allowDelete;
-
   set allowDelete(bool allowDelete) => _$this._allowDelete = allowDelete;
 
   GetSubProcedureApiSubProcedureDetailBuilder();
@@ -359,7 +345,6 @@ class _$GetSubProcedureApiSubProcedureDetailActions
       GetSubProcedureApiSubProcedureDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -391,7 +376,6 @@ class _$GetSubProcedureApiSubProcedureDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetSubProcedureApiSubProcedureDetail);

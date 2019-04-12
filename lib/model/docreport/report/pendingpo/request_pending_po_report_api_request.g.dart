@@ -176,36 +176,26 @@ class RequestPendingPoReportApiRequestBuilder
   _$RequestPendingPoReportApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
-
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
-
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
-
   DocReportFormat get format => _$this._format;
-
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
-
   DocReportDisplayType get displayType => _$this._displayType;
-
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   String _hcrOrTeamId;
-
   String get hcrOrTeamId => _$this._hcrOrTeamId;
-
   set hcrOrTeamId(String hcrOrTeamId) => _$this._hcrOrTeamId = hcrOrTeamId;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   RequestPendingPoReportApiRequestBuilder();
@@ -331,14 +321,12 @@ class _$RequestPendingPoReportApiRequestActions
       RequestPendingPoReportApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -366,7 +354,6 @@ class _$RequestPendingPoReportApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestPendingPoReportApiRequest);

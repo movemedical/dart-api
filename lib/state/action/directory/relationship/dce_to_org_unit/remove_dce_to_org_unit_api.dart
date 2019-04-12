@@ -10,8 +10,8 @@ part 'remove_dce_to_org_unit_api.g.dart';
 abstract class RemoveDceToOrgUnitApi extends ApiDispatcher<
     RemoveDceToOrgUnitApiRequest,
     RemoveDceToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveDceToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/dce_to_org_unit/remove';

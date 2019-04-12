@@ -120,16 +120,12 @@ class UpdateBillToAddressApiRequestBuilder
   _$UpdateBillToAddressApiRequest _$v;
 
   String _billToAddressId;
-
   String get billToAddressId => _$this._billToAddressId;
-
   set billToAddressId(String billToAddressId) =>
       _$this._billToAddressId = billToAddressId;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   UpdateBillToAddressApiRequestBuilder();
@@ -215,7 +211,6 @@ class _$UpdateBillToAddressApiRequestActions
       UpdateBillToAddressApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -237,7 +232,6 @@ class _$UpdateBillToAddressApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateBillToAddressApiRequest);

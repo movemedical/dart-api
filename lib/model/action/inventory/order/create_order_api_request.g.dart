@@ -549,194 +549,138 @@ class CreateOrderApiRequestBuilder
   _$CreateOrderApiRequest _$v;
 
   String _bizUnitId;
-
   String get bizUnitId => _$this._bizUnitId;
-
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _orderReasonId;
-
   String get orderReasonId => _$this._orderReasonId;
-
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _shipToAddressId;
-
   String get shipToAddressId => _$this._shipToAddressId;
-
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   AddressBuilder _deliverToAddressOverride;
-
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
-
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _shippingServiceId;
-
   String get shippingServiceId => _$this._shippingServiceId;
-
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _email;
-
   String get email => _$this._email;
-
   set email(String email) => _$this._email = email;
 
   String _attention;
-
   String get attention => _$this._attention;
-
   set attention(String attention) => _$this._attention = attention;
 
   ListBuilder<OrderCustomFieldValue> _orderCustomFieldValues;
-
   ListBuilder<OrderCustomFieldValue> get orderCustomFieldValues =>
       _$this._orderCustomFieldValues ??=
           new ListBuilder<OrderCustomFieldValue>();
-
   set orderCustomFieldValues(
           ListBuilder<OrderCustomFieldValue> orderCustomFieldValues) =>
       _$this._orderCustomFieldValues = orderCustomFieldValues;
 
   LocationDataBuilder _toLocation;
-
   LocationDataBuilder get toLocation =>
       _$this._toLocation ??= new LocationDataBuilder();
-
   set toLocation(LocationDataBuilder toLocation) =>
       _$this._toLocation = toLocation;
 
   String _deliverToAddressId;
-
   String get deliverToAddressId => _$this._deliverToAddressId;
-
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   DateRangeBuilder _deliveryWindow;
-
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
-
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   String _opsOrgUnitId;
-
   String get opsOrgUnitId => _$this._opsOrgUnitId;
-
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _billToId;
-
   String get billToId => _$this._billToId;
-
   set billToId(String billToId) => _$this._billToId = billToId;
 
   String _deliverToId;
-
   String get deliverToId => _$this._deliverToId;
-
   set deliverToId(String deliverToId) => _$this._deliverToId = deliverToId;
 
   String _hcrId;
-
   String get hcrId => _$this._hcrId;
-
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   DateTime _saleDate;
-
   DateTime get saleDate => _$this._saleDate;
-
   set saleDate(DateTime saleDate) => _$this._saleDate = saleDate;
 
   String _salesOrgUnitId;
-
   String get salesOrgUnitId => _$this._salesOrgUnitId;
-
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   DateTime _deliverWindowStart;
-
   DateTime get deliverWindowStart => _$this._deliverWindowStart;
-
   set deliverWindowStart(DateTime deliverWindowStart) =>
       _$this._deliverWindowStart = deliverWindowStart;
 
   DateTime _deliverWindowEnd;
-
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
-
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
   String _poId;
-
   String get poId => _$this._poId;
-
   set poId(String poId) => _$this._poId = poId;
 
   String _creditCardLastFour;
-
   String get creditCardLastFour => _$this._creditCardLastFour;
-
   set creditCardLastFour(String creditCardLastFour) =>
       _$this._creditCardLastFour = creditCardLastFour;
 
   SaveCaseUsagesApiRequestBuilder _saveUsageRequest;
-
   SaveCaseUsagesApiRequestBuilder get saveUsageRequest =>
       _$this._saveUsageRequest ??= new SaveCaseUsagesApiRequestBuilder();
-
   set saveUsageRequest(SaveCaseUsagesApiRequestBuilder saveUsageRequest) =>
       _$this._saveUsageRequest = saveUsageRequest;
 
   SaveOrderLinesApiRequestBuilder _saveOrderLineRequest;
-
   SaveOrderLinesApiRequestBuilder get saveOrderLineRequest =>
       _$this._saveOrderLineRequest ??= new SaveOrderLinesApiRequestBuilder();
-
   set saveOrderLineRequest(
           SaveOrderLinesApiRequestBuilder saveOrderLineRequest) =>
       _$this._saveOrderLineRequest = saveOrderLineRequest;
@@ -1050,7 +994,6 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
   CreateOrderApiRequestBuilder $newBuilder() => CreateOrderApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
@@ -1061,7 +1004,6 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1135,7 +1077,6 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateOrderApiRequest);
 }

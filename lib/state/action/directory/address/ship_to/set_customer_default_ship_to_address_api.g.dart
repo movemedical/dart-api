@@ -11,63 +11,63 @@ part of 'set_customer_default_ship_to_address_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     SetCustomerDefaultShipToAddressApi> SetCustomerDefaultShipToAddressApiOptions();
 
 class _$SetCustomerDefaultShipToAddressApi
     extends SetCustomerDefaultShipToAddressApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       SetCustomerDefaultShipToAddressApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SetCustomerDefaultShipToAddressApi,
           String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               SetCustomerDefaultShipToAddressApi,
               Command<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SetCustomerDefaultShipToAddressApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SetCustomerDefaultShipToAddressApi,
           CommandProgress>> $progress;
 
   _$SetCustomerDefaultShipToAddressApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SetCustomerDefaultShipToAddressApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SetCustomerDefaultShipToAddressApi,
                     Command<
                         ApiCommand<
@@ -76,14 +76,14 @@ class _$SetCustomerDefaultShipToAddressApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SetCustomerDefaultShipToAddressApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SetCustomerDefaultShipToAddressApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -94,20 +94,19 @@ class _$SetCustomerDefaultShipToAddressApi
 
   @override
   CommandState<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -119,12 +118,11 @@ class _$SetCustomerDefaultShipToAddressApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(SetCustomerDefaultShipToAddressApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -133,7 +131,8 @@ class _$SetCustomerDefaultShipToAddressApi
           ApiCommand<SetCustomerDefaultShipToAddressApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -143,7 +142,7 @@ class _$SetCustomerDefaultShipToAddressApi
       SetCustomerDefaultShipToAddressApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<SetCustomerDefaultShipToAddressApiRequest>
@@ -151,5 +150,5 @@ class _$SetCustomerDefaultShipToAddressApi
           SetCustomerDefaultShipToAddressApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

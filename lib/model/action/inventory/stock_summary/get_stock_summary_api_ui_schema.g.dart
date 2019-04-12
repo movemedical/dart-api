@@ -101,9 +101,7 @@ class GetStockSummaryApiUiSchemaBuilder
   _$GetStockSummaryApiUiSchema _$v;
 
   bool _adjust;
-
   bool get adjust => _$this._adjust;
-
   set adjust(bool adjust) => _$this._adjust = adjust;
 
   GetStockSummaryApiUiSchemaBuilder();
@@ -180,7 +178,6 @@ class _$GetStockSummaryApiUiSchemaActions
       GetStockSummaryApiUiSchemaBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -200,7 +197,6 @@ class _$GetStockSummaryApiUiSchemaActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockSummaryApiUiSchema);
 }

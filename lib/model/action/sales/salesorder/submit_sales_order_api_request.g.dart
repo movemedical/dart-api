@@ -222,53 +222,37 @@ class SubmitSalesOrderApiRequestBuilder
   _$SubmitSalesOrderApiRequest _$v;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   bool _validateOnly;
-
   bool get validateOnly => _$this._validateOnly;
-
   set validateOnly(bool validateOnly) => _$this._validateOnly = validateOnly;
 
   String _oracleUserId;
-
   String get oracleUserId => _$this._oracleUserId;
-
   set oracleUserId(String oracleUserId) => _$this._oracleUserId = oracleUserId;
 
   String _cc_code;
-
   String get cc_code => _$this._cc_code;
-
   set cc_code(String cc_code) => _$this._cc_code = cc_code;
 
   String _cc_holderName;
-
   String get cc_holderName => _$this._cc_holderName;
-
   set cc_holderName(String cc_holderName) =>
       _$this._cc_holderName = cc_holderName;
 
   String _cc_number;
-
   String get cc_number => _$this._cc_number;
-
   set cc_number(String cc_number) => _$this._cc_number = cc_number;
 
   int _cc_expiry_month;
-
   int get cc_expiry_month => _$this._cc_expiry_month;
-
   set cc_expiry_month(int cc_expiry_month) =>
       _$this._cc_expiry_month = cc_expiry_month;
 
   int _cc_expiry_year;
-
   int get cc_expiry_year => _$this._cc_expiry_year;
-
   set cc_expiry_year(int cc_expiry_year) =>
       _$this._cc_expiry_year = cc_expiry_year;
 
@@ -398,7 +382,6 @@ class _$SubmitSalesOrderApiRequestActions
       SubmitSalesOrderApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -432,7 +415,6 @@ class _$SubmitSalesOrderApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SubmitSalesOrderApiRequest);
 }

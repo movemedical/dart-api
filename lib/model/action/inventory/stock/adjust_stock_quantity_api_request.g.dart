@@ -123,18 +123,14 @@ class AdjustStockQuantityApiRequestBuilder
   _$AdjustStockQuantityApiRequest _$v;
 
   ListBuilder<AdjustStockQuantityApiAdjustment> _adjustments;
-
   ListBuilder<AdjustStockQuantityApiAdjustment> get adjustments =>
       _$this._adjustments ??=
           new ListBuilder<AdjustStockQuantityApiAdjustment>();
-
   set adjustments(ListBuilder<AdjustStockQuantityApiAdjustment> adjustments) =>
       _$this._adjustments = adjustments;
 
   String _adjustmentNote;
-
   String get adjustmentNote => _$this._adjustmentNote;
-
   set adjustmentNote(String adjustmentNote) =>
       _$this._adjustmentNote = adjustmentNote;
 
@@ -240,7 +236,6 @@ class _$AdjustStockQuantityApiRequestActions
       AdjustStockQuantityApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -262,7 +257,6 @@ class _$AdjustStockQuantityApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AdjustStockQuantityApiRequest);

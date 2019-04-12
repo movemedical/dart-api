@@ -116,15 +116,11 @@ class GetStockApiStockAttributeBuilder
   _$GetStockApiStockAttribute _$v;
 
   String _label;
-
   String get label => _$this._label;
-
   set label(String label) => _$this._label = label;
 
   String _value;
-
   String get value => _$this._value;
-
   set value(String value) => _$this._value = value;
 
   GetStockApiStockAttributeBuilder();
@@ -206,7 +202,6 @@ class _$GetStockApiStockAttributeActions
       GetStockApiStockAttributeBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,7 +223,6 @@ class _$GetStockApiStockAttributeActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockApiStockAttribute);
 }

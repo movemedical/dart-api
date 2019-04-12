@@ -104,9 +104,7 @@ class CreateSubProcedureApiResponseBuilder
   _$CreateSubProcedureApiResponse _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   CreateSubProcedureApiResponseBuilder();
@@ -183,7 +181,6 @@ class _$CreateSubProcedureApiResponseActions
       CreateSubProcedureApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -203,7 +200,6 @@ class _$CreateSubProcedureApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateSubProcedureApiResponse);

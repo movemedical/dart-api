@@ -287,73 +287,51 @@ class ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkBuilder
   _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink _$v;
 
   String _orgUnitToPhysicianId;
-
   String get orgUnitToPhysicianId => _$this._orgUnitToPhysicianId;
-
   set orgUnitToPhysicianId(String orgUnitToPhysicianId) =>
       _$this._orgUnitToPhysicianId = orgUnitToPhysicianId;
 
   String _orgUnitId;
-
   String get orgUnitId => _$this._orgUnitId;
-
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
-
   String get orgUnitName => _$this._orgUnitName;
-
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   String _orgUnitLabel;
-
   String get orgUnitLabel => _$this._orgUnitLabel;
-
   set orgUnitLabel(String orgUnitLabel) => _$this._orgUnitLabel = orgUnitLabel;
 
   bool _orgUnitSales;
-
   bool get orgUnitSales => _$this._orgUnitSales;
-
   set orgUnitSales(bool orgUnitSales) => _$this._orgUnitSales = orgUnitSales;
 
   bool _orgUnitOps;
-
   bool get orgUnitOps => _$this._orgUnitOps;
-
   set orgUnitOps(bool orgUnitOps) => _$this._orgUnitOps = orgUnitOps;
 
   bool _orgUnitActive;
-
   bool get orgUnitActive => _$this._orgUnitActive;
-
   set orgUnitActive(bool orgUnitActive) =>
       _$this._orgUnitActive = orgUnitActive;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
-
   String get procedureName => _$this._procedureName;
-
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _relationshipTypeId;
-
   String get relationshipTypeId => _$this._relationshipTypeId;
-
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
   String _relationshipTypeName;
-
   String get relationshipTypeName => _$this._relationshipTypeName;
-
   set relationshipTypeName(String relationshipTypeName) =>
       _$this._relationshipTypeName = relationshipTypeName;
 
@@ -515,7 +493,6 @@ class _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions
       ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -555,7 +532,6 @@ class _$ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLinkActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPhysicianOrgUnitLinksApiPhysicianOrgUnitLink);

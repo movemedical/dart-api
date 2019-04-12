@@ -196,46 +196,34 @@ class BuildInspectionApiTrayDataBuilder
   _$BuildInspectionApiTrayData _$v;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   bool _inspectNow;
-
   bool get inspectNow => _$this._inspectNow;
-
   set inspectNow(bool inspectNow) => _$this._inspectNow = inspectNow;
 
   FirstInspectionDataBuilder _firstInspectionData;
-
   FirstInspectionDataBuilder get firstInspectionData =>
       _$this._firstInspectionData ??= new FirstInspectionDataBuilder();
-
   set firstInspectionData(FirstInspectionDataBuilder firstInspectionData) =>
       _$this._firstInspectionData = firstInspectionData;
 
   ListBuilder<String> _entryIds;
-
   ListBuilder<String> get entryIds =>
       _$this._entryIds ??= new ListBuilder<String>();
-
   set entryIds(ListBuilder<String> entryIds) => _$this._entryIds = entryIds;
 
   ListBuilder<String> _expectedStockIds;
-
   ListBuilder<String> get expectedStockIds =>
       _$this._expectedStockIds ??= new ListBuilder<String>();
-
   set expectedStockIds(ListBuilder<String> expectedStockIds) =>
       _$this._expectedStockIds = expectedStockIds;
 
   ListBuilder<BuildInspectionApiComponentItem> _openComponents;
-
   ListBuilder<BuildInspectionApiComponentItem> get openComponents =>
       _$this._openComponents ??=
           new ListBuilder<BuildInspectionApiComponentItem>();
-
   set openComponents(
           ListBuilder<BuildInspectionApiComponentItem> openComponents) =>
       _$this._openComponents = openComponents;
@@ -374,14 +362,12 @@ class _$BuildInspectionApiTrayDataActions
       BuildInspectionApiTrayDataBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.firstInspectionData,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -411,7 +397,6 @@ class _$BuildInspectionApiTrayDataActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiTrayData);
 }

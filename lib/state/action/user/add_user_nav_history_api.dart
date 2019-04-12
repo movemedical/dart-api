@@ -10,8 +10,8 @@ part 'add_user_nav_history_api.g.dart';
 abstract class AddUserNavHistoryApi extends ApiDispatcher<
     AddUserNavHistoryApiRequest,
     AddUserNavHistoryApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddUserNavHistoryApi> {
   @override
   String get path => 'v1/user/add_nav_history';

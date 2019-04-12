@@ -261,67 +261,47 @@ class CreateLoanLinesApiCreateLineRequestBuilder
   _$CreateLoanLinesApiCreateLineRequest _$v;
 
   String _caseRequirementId;
-
   String get caseRequirementId => _$this._caseRequirementId;
-
   set caseRequirementId(String caseRequirementId) =>
       _$this._caseRequirementId = caseRequirementId;
 
   String _loanId;
-
   String get loanId => _$this._loanId;
-
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
-
   String get itemVersionId => _$this._itemVersionId;
-
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
-
   String get lotId => _$this._lotId;
-
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
-
   String get serialId => _$this._serialId;
-
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _parentId;
-
   String get parentId => _$this._parentId;
-
   set parentId(String parentId) => _$this._parentId = parentId;
 
   String _kitComponentId;
-
   String get kitComponentId => _$this._kitComponentId;
-
   set kitComponentId(String kitComponentId) =>
       _$this._kitComponentId = kitComponentId;
 
   String _setComponentId;
-
   String get setComponentId => _$this._setComponentId;
-
   set setComponentId(String setComponentId) =>
       _$this._setComponentId = setComponentId;
 
   int _quantityRequested;
-
   int get quantityRequested => _$this._quantityRequested;
-
   set quantityRequested(int quantityRequested) =>
       _$this._quantityRequested = quantityRequested;
 
@@ -462,7 +442,6 @@ class _$CreateLoanLinesApiCreateLineRequestActions
       CreateLoanLinesApiCreateLineRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -500,7 +479,6 @@ class _$CreateLoanLinesApiCreateLineRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateLoanLinesApiCreateLineRequest);

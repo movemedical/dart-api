@@ -119,16 +119,12 @@ class DecommissionKitApiRequestBuilder
   _$DecommissionKitApiRequest _$v;
 
   String _kitStockId;
-
   String get kitStockId => _$this._kitStockId;
-
   set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
 
   ListBuilder<DecommissionKitApiKitContainer> _containers;
-
   ListBuilder<DecommissionKitApiKitContainer> get containers =>
       _$this._containers ??= new ListBuilder<DecommissionKitApiKitContainer>();
-
   set containers(ListBuilder<DecommissionKitApiKitContainer> containers) =>
       _$this._containers = containers;
 
@@ -228,7 +224,6 @@ class _$DecommissionKitApiRequestActions
       DecommissionKitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$DecommissionKitApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(DecommissionKitApiRequest);
 }

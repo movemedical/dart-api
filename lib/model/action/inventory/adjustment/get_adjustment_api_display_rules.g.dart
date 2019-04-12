@@ -104,9 +104,7 @@ class GetAdjustmentApiDisplayRulesBuilder
   _$GetAdjustmentApiDisplayRules _$v;
 
   bool _confirm;
-
   bool get confirm => _$this._confirm;
-
   set confirm(bool confirm) => _$this._confirm = confirm;
 
   GetAdjustmentApiDisplayRulesBuilder();
@@ -184,7 +182,6 @@ class _$GetAdjustmentApiDisplayRulesActions
       GetAdjustmentApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -204,7 +201,6 @@ class _$GetAdjustmentApiDisplayRulesActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetAdjustmentApiDisplayRules);

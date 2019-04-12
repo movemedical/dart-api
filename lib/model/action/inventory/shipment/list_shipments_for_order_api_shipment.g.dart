@@ -189,43 +189,31 @@ class ListShipmentsForOrderApiShipmentBuilder
   _$ListShipmentsForOrderApiShipment _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   ShipmentStatus _status;
-
   ShipmentStatus get status => _$this._status;
-
   set status(ShipmentStatus status) => _$this._status = status;
 
   OrderHeaderLiteBuilder _order;
-
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
-
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   LocationBuilder _fromLocation;
-
   LocationBuilder get fromLocation =>
       _$this._fromLocation ??= new LocationBuilder();
-
   set fromLocation(LocationBuilder fromLocation) =>
       _$this._fromLocation = fromLocation;
 
   LocationBuilder _toLocation;
-
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
-
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   ListShipmentsForOrderApiShipmentBuilder();
@@ -362,7 +350,6 @@ class _$ListShipmentsForOrderApiShipmentActions
       ListShipmentsForOrderApiShipmentBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.order,
@@ -371,7 +358,6 @@ class _$ListShipmentsForOrderApiShipmentActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -401,7 +387,6 @@ class _$ListShipmentsForOrderApiShipmentActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListShipmentsForOrderApiShipment);

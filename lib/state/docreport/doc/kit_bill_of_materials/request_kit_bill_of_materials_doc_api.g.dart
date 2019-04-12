@@ -11,60 +11,60 @@ part of 'request_kit_bill_of_materials_doc_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestKitBillOfMaterialsDocApi> RequestKitBillOfMaterialsDocApiOptions();
 
 class _$RequestKitBillOfMaterialsDocApi
     extends RequestKitBillOfMaterialsDocApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestKitBillOfMaterialsDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>, RequestKitBillOfMaterialsDocApi, String>> $cancel;
+          ApiResult<Nothing>, RequestKitBillOfMaterialsDocApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               RequestKitBillOfMaterialsDocApi,
               Command<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestKitBillOfMaterialsDocApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestKitBillOfMaterialsDocApi,
           CommandProgress>> $progress;
 
   _$RequestKitBillOfMaterialsDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestKitBillOfMaterialsDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestKitBillOfMaterialsDocApi,
                     Command<
                         ApiCommand<RequestKitBillOfMaterialsDocApiRequest>>>>(
@@ -72,14 +72,14 @@ class _$RequestKitBillOfMaterialsDocApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestKitBillOfMaterialsDocApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestKitBillOfMaterialsDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -90,20 +90,19 @@ class _$RequestKitBillOfMaterialsDocApi
 
   @override
   CommandState<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RequestKitBillOfMaterialsDocApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -115,12 +114,11 @@ class _$RequestKitBillOfMaterialsDocApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(RequestKitBillOfMaterialsDocApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -129,7 +127,8 @@ class _$RequestKitBillOfMaterialsDocApi
           ApiCommand<RequestKitBillOfMaterialsDocApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -139,7 +138,7 @@ class _$RequestKitBillOfMaterialsDocApi
       RequestKitBillOfMaterialsDocApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestKitBillOfMaterialsDocApiRequest>
@@ -147,5 +146,5 @@ class _$RequestKitBillOfMaterialsDocApi
           RequestKitBillOfMaterialsDocApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

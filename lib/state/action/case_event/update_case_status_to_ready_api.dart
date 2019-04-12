@@ -10,8 +10,8 @@ part 'update_case_status_to_ready_api.g.dart';
 abstract class UpdateCaseStatusToReadyApi extends ApiDispatcher<
     UpdateCaseStatusToReadyApiRequest,
     UpdateCaseStatusToReadyApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCaseStatusToReadyApi> {
   @override
   String get path => 'v1/case_event/status/update_to_ready';

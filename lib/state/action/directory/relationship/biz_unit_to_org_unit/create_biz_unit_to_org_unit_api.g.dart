@@ -11,72 +11,72 @@ part of 'create_biz_unit_to_org_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CreateBizUnitToOrgUnitApi> CreateBizUnitToOrgUnitApiOptions();
 
 class _$CreateBizUnitToOrgUnitApi extends CreateBizUnitToOrgUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CreateBizUnitToOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>, CreateBizUnitToOrgUnitApi, String>> $cancel;
+          ApiResult<Nothing>, CreateBizUnitToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           CreateBizUnitToOrgUnitApi,
           Command<ApiCommand<CreateBizUnitToOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           CreateBizUnitToOrgUnitApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           CreateBizUnitToOrgUnitApi,
           CommandProgress>> $progress;
 
   _$CreateBizUnitToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CreateBizUnitToOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CreateBizUnitToOrgUnitApi,
                     Command<ApiCommand<CreateBizUnitToOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CreateBizUnitToOrgUnitApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CreateBizUnitToOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$CreateBizUnitToOrgUnitApi extends CreateBizUnitToOrgUnitApi {
       _$CreateBizUnitToOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateBizUnitToOrgUnitApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CreateBizUnitToOrgUnitApiRequest>, ApiResult<Empty>>();
+          ApiCommand<CreateBizUnitToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$CreateBizUnitToOrgUnitApi extends CreateBizUnitToOrgUnitApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateBizUnitToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$CreateBizUnitToOrgUnitApi extends CreateBizUnitToOrgUnitApi {
       ApiCommand<CreateBizUnitToOrgUnitApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$CreateBizUnitToOrgUnitApi extends CreateBizUnitToOrgUnitApi {
       CreateBizUnitToOrgUnitApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<CreateBizUnitToOrgUnitApiRequest> get commandPayloadSerializer =>
       CreateBizUnitToOrgUnitApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

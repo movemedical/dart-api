@@ -10,64 +10,65 @@ part of 'process_receipt_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>,
+        ApiResult<Nothing>>,
     ProcessReceiptApi> ProcessReceiptApiOptions();
 
 class _$ProcessReceiptApi extends ProcessReceiptApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ProcessReceiptApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<ProcessReceiptApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>,
           ProcessReceiptApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ProcessReceiptApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ProcessReceiptApi,
           Command<ApiCommand<ProcessReceiptApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>,
-          ProcessReceiptApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>,
+          ProcessReceiptApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>,
           ProcessReceiptApi, CommandProgress>> $progress;
 
   _$ProcessReceiptApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ProcessReceiptApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ProcessReceiptApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ProcessReceiptApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ProcessReceiptApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ProcessReceiptApi,
                     Command<ApiCommand<ProcessReceiptApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ProcessReceiptApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ProcessReceiptApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ProcessReceiptApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ProcessReceiptApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -76,17 +77,16 @@ class _$ProcessReceiptApi extends ProcessReceiptApi {
       _$ProcessReceiptApi._(options());
 
   @override
-  CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<ProcessReceiptApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<ProcessReceiptApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,11 +98,10 @@ class _$ProcessReceiptApi extends ProcessReceiptApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ProcessReceiptApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -110,7 +109,8 @@ class _$ProcessReceiptApi extends ProcessReceiptApi {
       ApiCommand<ProcessReceiptApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -120,12 +120,12 @@ class _$ProcessReceiptApi extends ProcessReceiptApi {
       ProcessReceiptApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ProcessReceiptApiRequest> get commandPayloadSerializer =>
       ProcessReceiptApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

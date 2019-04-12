@@ -10,72 +10,73 @@ part of 'request_unbilled_report_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestUnbilledReportApi> RequestUnbilledReportApiOptions();
 
 class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestUnbilledReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>, RequestUnbilledReportApi, String>> $cancel;
+          ApiResult<Nothing>, RequestUnbilledReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestUnbilledReportApi,
           Command<ApiCommand<RequestUnbilledReportApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestUnbilledReportApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestUnbilledReportApi,
           CommandProgress>> $progress;
 
   _$RequestUnbilledReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestUnbilledReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestUnbilledReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestUnbilledReportApi,
                     Command<ApiCommand<RequestUnbilledReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestUnbilledReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestUnbilledReportApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestUnbilledReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestUnbilledReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
       _$RequestUnbilledReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestUnbilledReportApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestUnbilledReportApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestUnbilledReportApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
       ApiCommand<RequestUnbilledReportApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$RequestUnbilledReportApi extends RequestUnbilledReportApi {
       RequestUnbilledReportApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestUnbilledReportApiRequest> get commandPayloadSerializer =>
       RequestUnbilledReportApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

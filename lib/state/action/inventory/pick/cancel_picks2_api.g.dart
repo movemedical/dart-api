@@ -10,60 +10,64 @@ part of 'cancel_picks2_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>>,
     CancelPicks2Api> CancelPicks2ApiOptions();
 
 class _$CancelPicks2Api extends CancelPicks2Api {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>,
+          ApiResult<Nothing>>,
       CancelPicks2Api> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>,
           CancelPicks2Api, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CancelPicks2ApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           CancelPicks2Api,
           Command<ApiCommand<CancelPicks2ApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>,
-          CancelPicks2Api, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>,
+          CancelPicks2Api, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>,
           CancelPicks2Api, CommandProgress>> $progress;
 
   _$CancelPicks2Api._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<CancelPicks2ApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>,
-                CancelPicks2Api, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<CancelPicks2ApiRequest>,
+                ApiResult<Nothing>,
+                CancelPicks2Api,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CancelPicks2ApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CancelPicks2Api,
                     Command<ApiCommand<CancelPicks2ApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<CancelPicks2ApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     CancelPicks2Api,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CancelPicks2ApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 CancelPicks2Api,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -72,17 +76,16 @@ class _$CancelPicks2Api extends CancelPicks2Api {
       _$CancelPicks2Api._(options());
 
   @override
-  CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>
-      get $initial =>
-          CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>();
+  CommandState<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>>
+      get $initial => CommandState<ApiCommand<CancelPicks2ApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<CancelPicks2ApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -94,11 +97,10 @@ class _$CancelPicks2Api extends CancelPicks2Api {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CancelPicks2ApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -106,7 +108,8 @@ class _$CancelPicks2Api extends CancelPicks2Api {
       ApiCommand<CancelPicks2ApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -116,12 +119,12 @@ class _$CancelPicks2Api extends CancelPicks2Api {
       CancelPicks2ApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<CancelPicks2ApiRequest> get commandPayloadSerializer =>
       CancelPicks2ApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

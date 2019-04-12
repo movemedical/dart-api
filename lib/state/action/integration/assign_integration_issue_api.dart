@@ -10,8 +10,8 @@ part 'assign_integration_issue_api.g.dart';
 abstract class AssignIntegrationIssueApi extends ApiDispatcher<
     AssignIntegrationIssueApiRequest,
     AssignIntegrationIssueApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AssignIntegrationIssueApi> {
   @override
   String get path => 'v1/integrations/assign_integration_issue';

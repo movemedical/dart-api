@@ -11,72 +11,72 @@ part of 'request_audit_item_export_doc_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestAuditItemExportDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestAuditItemExportDocApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestAuditItemExportDocApi> RequestAuditItemExportDocApiOptions();
 
 class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestAuditItemExportDocApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>, RequestAuditItemExportDocApi, String>> $cancel;
+          ApiResult<Nothing>, RequestAuditItemExportDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestAuditItemExportDocApi,
           Command<ApiCommand<RequestAuditItemExportDocApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestAuditItemExportDocApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestAuditItemExportDocApi,
           CommandProgress>> $progress;
 
   _$RequestAuditItemExportDocApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestAuditItemExportDocApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestAuditItemExportDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestAuditItemExportDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestAuditItemExportDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestAuditItemExportDocApi,
                     Command<ApiCommand<RequestAuditItemExportDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestAuditItemExportDocApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestAuditItemExportDocApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestAuditItemExportDocApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestAuditItemExportDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -87,18 +87,19 @@ class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
 
   @override
   CommandState<ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<RequestAuditItemExportDocApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestAuditItemExportDocApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestAuditItemExportDocApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestAuditItemExportDocApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestAuditItemExportDocApiRequest>,
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -110,11 +111,10 @@ class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestAuditItemExportDocApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -122,7 +122,8 @@ class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
       ApiCommand<RequestAuditItemExportDocApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -132,7 +133,7 @@ class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
       RequestAuditItemExportDocApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestAuditItemExportDocApiRequest>
@@ -140,5 +141,5 @@ class _$RequestAuditItemExportDocApi extends RequestAuditItemExportDocApi {
           RequestAuditItemExportDocApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

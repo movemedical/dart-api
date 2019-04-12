@@ -244,68 +244,48 @@ class PatientBuilder implements Builder<Patient, PatientBuilder> {
   _$Patient _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _initials;
-
   String get initials => _$this._initials;
-
   set initials(String initials) => _$this._initials = initials;
 
   String _mrn;
-
   String get mrn => _$this._mrn;
-
   set mrn(String mrn) => _$this._mrn = mrn;
 
   DateTime _dateOfBirth;
-
   DateTime get dateOfBirth => _$this._dateOfBirth;
-
   set dateOfBirth(DateTime dateOfBirth) => _$this._dateOfBirth = dateOfBirth;
 
   Gender _gender;
-
   Gender get gender => _$this._gender;
-
   set gender(Gender gender) => _$this._gender = gender;
 
   double _heightMeasurement;
-
   double get heightMeasurement => _$this._heightMeasurement;
-
   set heightMeasurement(double heightMeasurement) =>
       _$this._heightMeasurement = heightMeasurement;
 
   LengthMeasurementType _heightMeasurementType;
-
   LengthMeasurementType get heightMeasurementType =>
       _$this._heightMeasurementType;
-
   set heightMeasurementType(LengthMeasurementType heightMeasurementType) =>
       _$this._heightMeasurementType = heightMeasurementType;
 
   double _weightMeasurement;
-
   double get weightMeasurement => _$this._weightMeasurement;
-
   set weightMeasurement(double weightMeasurement) =>
       _$this._weightMeasurement = weightMeasurement;
 
   WeightMeasurementType _weightMeasurementType;
-
   WeightMeasurementType get weightMeasurementType =>
       _$this._weightMeasurementType;
-
   set weightMeasurementType(WeightMeasurementType weightMeasurementType) =>
       _$this._weightMeasurementType = weightMeasurementType;
 
@@ -455,14 +435,12 @@ class _$PatientActions extends PatientActions {
   PatientBuilder $newBuilder() => PatientBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -500,7 +478,6 @@ class _$PatientActions extends PatientActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Patient);
 }

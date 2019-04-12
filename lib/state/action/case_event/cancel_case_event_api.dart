@@ -10,8 +10,8 @@ part 'cancel_case_event_api.g.dart';
 abstract class CancelCaseEventApi extends ApiDispatcher<
     CancelCaseEventApiRequest,
     CancelCaseEventApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CancelCaseEventApi> {
   @override
   String get path => 'v1/case_event/delete';

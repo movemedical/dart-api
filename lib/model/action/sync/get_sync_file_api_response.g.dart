@@ -115,15 +115,11 @@ class GetSyncFileApiResponseBuilder
   _$GetSyncFileApiResponse _$v;
 
   String _ackId;
-
   String get ackId => _$this._ackId;
-
   set ackId(String ackId) => _$this._ackId = ackId;
 
   String _fileUrl;
-
   String get fileUrl => _$this._fileUrl;
-
   set fileUrl(String fileUrl) => _$this._fileUrl = fileUrl;
 
   GetSyncFileApiResponseBuilder();
@@ -202,7 +198,6 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
       GetSyncFileApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -224,7 +219,6 @@ class _$GetSyncFileApiResponseActions extends GetSyncFileApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSyncFileApiResponse);
 }

@@ -10,8 +10,8 @@ part 'save_team_to_org_unit_api.g.dart';
 abstract class SaveTeamToOrgUnitApi extends ApiDispatcher<
     SaveTeamToOrgUnitApiRequest,
     SaveTeamToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveTeamToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/team_to_org_unit/save';

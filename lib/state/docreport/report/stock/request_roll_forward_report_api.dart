@@ -10,8 +10,8 @@ part 'request_roll_forward_report_api.g.dart';
 abstract class RequestRollForwardReportApi extends ApiDispatcher<
     RequestRollForwardReportApiRequest,
     RequestRollForwardReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestRollForwardReportApi> {
   @override
   String get path => 'v1/docreport/roll_forward';

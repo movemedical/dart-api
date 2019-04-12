@@ -149,28 +149,20 @@ class RescheduleEventApiRequestBuilder
   _$RescheduleEventApiRequest _$v;
 
   String _eventId;
-
   String get eventId => _$this._eventId;
-
   set eventId(String eventId) => _$this._eventId = eventId;
 
   DateTime _eventDate;
-
   DateTime get eventDate => _$this._eventDate;
-
   set eventDate(DateTime eventDate) => _$this._eventDate = eventDate;
 
   bool _eventTimeUnknown;
-
   bool get eventTimeUnknown => _$this._eventTimeUnknown;
-
   set eventTimeUnknown(bool eventTimeUnknown) =>
       _$this._eventTimeUnknown = eventTimeUnknown;
 
   int _eventDuration;
-
   int get eventDuration => _$this._eventDuration;
-
   set eventDuration(int eventDuration) => _$this._eventDuration = eventDuration;
 
   RescheduleEventApiRequestBuilder();
@@ -270,7 +262,6 @@ class _$RescheduleEventApiRequestActions
       RescheduleEventApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -296,7 +287,6 @@ class _$RescheduleEventApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(RescheduleEventApiRequest);
 }

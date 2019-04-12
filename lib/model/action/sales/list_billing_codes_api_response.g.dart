@@ -108,11 +108,9 @@ class ListBillingCodesApiResponseBuilder
   _$ListBillingCodesApiResponse _$v;
 
   ListBuilder<ListBillingCodesApiBillingCode> _billingCodes;
-
   ListBuilder<ListBillingCodesApiBillingCode> get billingCodes =>
       _$this._billingCodes ??=
           new ListBuilder<ListBillingCodesApiBillingCode>();
-
   set billingCodes(ListBuilder<ListBillingCodesApiBillingCode> billingCodes) =>
       _$this._billingCodes = billingCodes;
 
@@ -209,7 +207,6 @@ class _$ListBillingCodesApiResponseActions
       ListBillingCodesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -229,7 +226,6 @@ class _$ListBillingCodesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBillingCodesApiResponse);

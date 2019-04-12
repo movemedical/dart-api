@@ -178,35 +178,25 @@ class PreviewApplyPreferenceCardsToCaseApiPreviewBuilder
   _$PreviewApplyPreferenceCardsToCaseApiPreview _$v;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemNumber;
-
   String get itemNumber => _$this._itemNumber;
-
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _itemDescription;
-
   String get itemDescription => _$this._itemDescription;
-
   set itemDescription(String itemDescription) =>
       _$this._itemDescription = itemDescription;
 
   int _quantityToIncrement;
-
   int get quantityToIncrement => _$this._quantityToIncrement;
-
   set quantityToIncrement(int quantityToIncrement) =>
       _$this._quantityToIncrement = quantityToIncrement;
 
   int _quantityDeduplicated;
-
   int get quantityDeduplicated => _$this._quantityDeduplicated;
-
   set quantityDeduplicated(int quantityDeduplicated) =>
       _$this._quantityDeduplicated = quantityDeduplicated;
 
@@ -317,7 +307,6 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
       PreviewApplyPreferenceCardsToCaseApiPreviewBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -345,7 +334,6 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreviewActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PreviewApplyPreferenceCardsToCaseApiPreview);

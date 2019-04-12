@@ -11,72 +11,72 @@ part of 'update_customer_qualifier_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateCustomerQualifierApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateCustomerQualifierApi> UpdateCustomerQualifierApiOptions();
 
 class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateCustomerQualifierApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>, UpdateCustomerQualifierApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateCustomerQualifierApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCustomerQualifierApi,
           Command<ApiCommand<UpdateCustomerQualifierApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCustomerQualifierApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCustomerQualifierApi,
           CommandProgress>> $progress;
 
   _$UpdateCustomerQualifierApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCustomerQualifierApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCustomerQualifierApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCustomerQualifierApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCustomerQualifierApi,
                     Command<ApiCommand<UpdateCustomerQualifierApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCustomerQualifierApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCustomerQualifierApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCustomerQualifierApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCustomerQualifierApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
       _$UpdateCustomerQualifierApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateCustomerQualifierApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<UpdateCustomerQualifierApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCustomerQualifierApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCustomerQualifierApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCustomerQualifierApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCustomerQualifierApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCustomerQualifierApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
       ApiCommand<UpdateCustomerQualifierApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$UpdateCustomerQualifierApi extends UpdateCustomerQualifierApi {
       UpdateCustomerQualifierApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateCustomerQualifierApiRequest> get commandPayloadSerializer =>
       UpdateCustomerQualifierApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

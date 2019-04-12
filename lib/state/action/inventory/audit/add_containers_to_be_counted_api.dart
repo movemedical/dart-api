@@ -10,8 +10,8 @@ part 'add_containers_to_be_counted_api.g.dart';
 abstract class AddContainersToBeCountedApi extends ApiDispatcher<
     AddContainersToBeCountedApiRequest,
     AddContainersToBeCountedApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddContainersToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/add_containers_to_be_counted';

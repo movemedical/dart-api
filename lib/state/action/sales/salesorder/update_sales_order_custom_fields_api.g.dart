@@ -11,60 +11,60 @@ part of 'update_sales_order_custom_fields_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateSalesOrderCustomFieldsApi> UpdateSalesOrderCustomFieldsApiOptions();
 
 class _$UpdateSalesOrderCustomFieldsApi
     extends UpdateSalesOrderCustomFieldsApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateSalesOrderCustomFieldsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>, UpdateSalesOrderCustomFieldsApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateSalesOrderCustomFieldsApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               UpdateSalesOrderCustomFieldsApi,
               Command<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateSalesOrderCustomFieldsApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateSalesOrderCustomFieldsApi,
           CommandProgress>> $progress;
 
   _$UpdateSalesOrderCustomFieldsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateSalesOrderCustomFieldsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateSalesOrderCustomFieldsApi,
                     Command<
                         ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>>>>(
@@ -72,14 +72,14 @@ class _$UpdateSalesOrderCustomFieldsApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateSalesOrderCustomFieldsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateSalesOrderCustomFieldsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -90,20 +90,19 @@ class _$UpdateSalesOrderCustomFieldsApi
 
   @override
   CommandState<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -115,12 +114,11 @@ class _$UpdateSalesOrderCustomFieldsApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(UpdateSalesOrderCustomFieldsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -129,7 +127,8 @@ class _$UpdateSalesOrderCustomFieldsApi
           ApiCommand<UpdateSalesOrderCustomFieldsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -139,7 +138,7 @@ class _$UpdateSalesOrderCustomFieldsApi
       UpdateSalesOrderCustomFieldsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateSalesOrderCustomFieldsApiRequest>
@@ -147,5 +146,5 @@ class _$UpdateSalesOrderCustomFieldsApi
           UpdateSalesOrderCustomFieldsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -369,112 +369,78 @@ class HcrBuilder implements Builder<Hcr, HcrBuilder> {
   _$Hcr _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
-
   OrgType get orgType => _$this._orgType;
-
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   HcrType _hcpType;
-
   HcrType get hcpType => _$this._hcpType;
-
   set hcpType(HcrType hcpType) => _$this._hcpType = hcpType;
 
   String _workingHomeId;
-
   String get workingHomeId => _$this._workingHomeId;
-
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingAtId;
-
   String get workingAtId => _$this._workingAtId;
-
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _workPhoneNumber;
-
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
-
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
-
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
-
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
-
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
-
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   String _defaultDeliverToAddressId;
-
   String get defaultDeliverToAddressId => _$this._defaultDeliverToAddressId;
-
   set defaultDeliverToAddressId(String defaultDeliverToAddressId) =>
       _$this._defaultDeliverToAddressId = defaultDeliverToAddressId;
 
   String _hcrReference;
-
   String get hcrReference => _$this._hcrReference;
-
   set hcrReference(String hcrReference) => _$this._hcrReference = hcrReference;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   DateTime _startDate;
-
   DateTime get startDate => _$this._startDate;
-
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
-
   DateTime get endDate => _$this._endDate;
-
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   HcrBuilder();
@@ -680,7 +646,6 @@ class _$HcrActions extends HcrActions {
   HcrBuilder $newBuilder() => HcrBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -691,7 +656,6 @@ class _$HcrActions extends HcrActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -743,7 +707,6 @@ class _$HcrActions extends HcrActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Hcr);
 }

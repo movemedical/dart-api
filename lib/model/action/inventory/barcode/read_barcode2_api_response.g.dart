@@ -406,120 +406,84 @@ class ReadBarcode2ApiResponseBuilder
   _$ReadBarcode2ApiResponse _$v;
 
   ReadBarcode2ApiReadType _readType;
-
   ReadBarcode2ApiReadType get readType => _$this._readType;
-
   set readType(ReadBarcode2ApiReadType readType) => _$this._readType = readType;
 
   ListBuilder<String> _reconciledBarcodes;
-
   ListBuilder<String> get reconciledBarcodes =>
       _$this._reconciledBarcodes ??= new ListBuilder<String>();
-
   set reconciledBarcodes(ListBuilder<String> reconciledBarcodes) =>
       _$this._reconciledBarcodes = reconciledBarcodes;
 
   ListBuilder<String> _unreconciledBarcodes;
-
   ListBuilder<String> get unreconciledBarcodes =>
       _$this._unreconciledBarcodes ??= new ListBuilder<String>();
-
   set unreconciledBarcodes(ListBuilder<String> unreconciledBarcodes) =>
       _$this._unreconciledBarcodes = unreconciledBarcodes;
 
   String _message;
-
   String get message => _$this._message;
-
   set message(String message) => _$this._message = message;
 
   bool _complete;
-
   bool get complete => _$this._complete;
-
   set complete(bool complete) => _$this._complete = complete;
 
   ItemBuilder _item;
-
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
-
   set item(ItemBuilder item) => _$this._item = item;
 
   String _unknownItem;
-
   String get unknownItem => _$this._unknownItem;
-
   set unknownItem(String unknownItem) => _$this._unknownItem = unknownItem;
 
   LotBuilder _lot;
-
   LotBuilder get lot => _$this._lot ??= new LotBuilder();
-
   set lot(LotBuilder lot) => _$this._lot = lot;
 
   String _unknownLot;
-
   String get unknownLot => _$this._unknownLot;
-
   set unknownLot(String unknownLot) => _$this._unknownLot = unknownLot;
 
   SerialBuilder _serial;
-
   SerialBuilder get serial => _$this._serial ??= new SerialBuilder();
-
   set serial(SerialBuilder serial) => _$this._serial = serial;
 
   String _unknownSerial;
-
   String get unknownSerial => _$this._unknownSerial;
-
   set unknownSerial(String unknownSerial) =>
       _$this._unknownSerial = unknownSerial;
 
   TagBuilder _tag;
-
   TagBuilder get tag => _$this._tag ??= new TagBuilder();
-
   set tag(TagBuilder tag) => _$this._tag = tag;
 
   PkgBuilder _pkg;
-
   PkgBuilder get pkg => _$this._pkg ??= new PkgBuilder();
-
   set pkg(PkgBuilder pkg) => _$this._pkg = pkg;
 
   ShipmentLiteBuilder _shipmentLite;
-
   ShipmentLiteBuilder get shipmentLite =>
       _$this._shipmentLite ??= new ShipmentLiteBuilder();
-
   set shipmentLite(ShipmentLiteBuilder shipmentLite) =>
       _$this._shipmentLite = shipmentLite;
 
   LocationBuilder _pkgToLocation;
-
   LocationBuilder get pkgToLocation =>
       _$this._pkgToLocation ??= new LocationBuilder();
-
   set pkgToLocation(LocationBuilder pkgToLocation) =>
       _$this._pkgToLocation = pkgToLocation;
 
   BinBuilder _bin;
-
   BinBuilder get bin => _$this._bin ??= new BinBuilder();
-
   set bin(BinBuilder bin) => _$this._bin = bin;
 
   ItemBuilder _kitItem;
-
   ItemBuilder get kitItem => _$this._kitItem ??= new ItemBuilder();
-
   set kitItem(ItemBuilder kitItem) => _$this._kitItem = kitItem;
 
   SerialBuilder _kitSerial;
-
   SerialBuilder get kitSerial => _$this._kitSerial ??= new SerialBuilder();
-
   set kitSerial(SerialBuilder kitSerial) => _$this._kitSerial = kitSerial;
 
   ReadBarcode2ApiResponseBuilder();
@@ -777,7 +741,6 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
       ReadBarcode2ApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
@@ -793,7 +756,6 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -847,7 +809,6 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ReadBarcode2ApiResponse);
 }

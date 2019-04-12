@@ -153,28 +153,20 @@ class CreateShippingServiceApiRequestBuilder
   _$CreateShippingServiceApiRequest _$v;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   int _daysInTransit;
-
   int get daysInTransit => _$this._daysInTransit;
-
   set daysInTransit(int daysInTransit) => _$this._daysInTransit = daysInTransit;
 
   int _hoursInTransit;
-
   int get hoursInTransit => _$this._hoursInTransit;
-
   set hoursInTransit(int hoursInTransit) =>
       _$this._hoursInTransit = hoursInTransit;
 
   String _erpCode;
-
   String get erpCode => _$this._erpCode;
-
   set erpCode(String erpCode) => _$this._erpCode = erpCode;
 
   CreateShippingServiceApiRequestBuilder();
@@ -275,7 +267,6 @@ class _$CreateShippingServiceApiRequestActions
       CreateShippingServiceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -301,7 +292,6 @@ class _$CreateShippingServiceApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateShippingServiceApiRequest);

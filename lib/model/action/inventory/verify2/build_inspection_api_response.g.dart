@@ -220,60 +220,46 @@ class BuildInspectionApiResponseBuilder
   _$BuildInspectionApiResponse _$v;
 
   String _processKey;
-
   String get processKey => _$this._processKey;
-
   set processKey(String processKey) => _$this._processKey = processKey;
 
   bool _processInProgress;
-
   bool get processInProgress => _$this._processInProgress;
-
   set processInProgress(bool processInProgress) =>
       _$this._processInProgress = processInProgress;
 
   ListBuilder<BuildInspectionApiReceipt> _receipts;
-
   ListBuilder<BuildInspectionApiReceipt> get receipts =>
       _$this._receipts ??= new ListBuilder<BuildInspectionApiReceipt>();
-
   set receipts(ListBuilder<BuildInspectionApiReceipt> receipts) =>
       _$this._receipts = receipts;
 
   ListBuilder<BuildInspectionApiEntry> _entries;
-
   ListBuilder<BuildInspectionApiEntry> get entries =>
       _$this._entries ??= new ListBuilder<BuildInspectionApiEntry>();
-
   set entries(ListBuilder<BuildInspectionApiEntry> entries) =>
       _$this._entries = entries;
 
   ListBuilder<BuildInspectionApiExpectedStock> _expectedStocks;
-
   ListBuilder<BuildInspectionApiExpectedStock> get expectedStocks =>
       _$this._expectedStocks ??=
           new ListBuilder<BuildInspectionApiExpectedStock>();
-
   set expectedStocks(
           ListBuilder<BuildInspectionApiExpectedStock> expectedStocks) =>
       _$this._expectedStocks = expectedStocks;
 
   ListBuilder<BuildInspectionApiEntryReceiptOverride> _receiptOverrides;
-
   ListBuilder<BuildInspectionApiEntryReceiptOverride> get receiptOverrides =>
       _$this._receiptOverrides ??=
           new ListBuilder<BuildInspectionApiEntryReceiptOverride>();
-
   set receiptOverrides(
           ListBuilder<BuildInspectionApiEntryReceiptOverride>
               receiptOverrides) =>
       _$this._receiptOverrides = receiptOverrides;
 
   BuildInspectionApiSupportingInfoBuilder _supportingInfo;
-
   BuildInspectionApiSupportingInfoBuilder get supportingInfo =>
       _$this._supportingInfo ??= new BuildInspectionApiSupportingInfoBuilder();
-
   set supportingInfo(BuildInspectionApiSupportingInfoBuilder supportingInfo) =>
       _$this._supportingInfo = supportingInfo;
 
@@ -428,14 +414,12 @@ class _$BuildInspectionApiResponseActions
       BuildInspectionApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.supportingInfo,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -467,7 +451,6 @@ class _$BuildInspectionApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiResponse);
 }

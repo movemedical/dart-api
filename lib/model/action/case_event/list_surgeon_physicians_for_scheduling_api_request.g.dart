@@ -128,15 +128,11 @@ class ListSurgeonPhysiciansForSchedulingApiRequestBuilder
   _$ListSurgeonPhysiciansForSchedulingApiRequest _$v;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   ListSurgeonPhysiciansForSchedulingApiRequestBuilder();
@@ -222,7 +218,6 @@ class _$ListSurgeonPhysiciansForSchedulingApiRequestActions
       ListSurgeonPhysiciansForSchedulingApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -244,7 +239,6 @@ class _$ListSurgeonPhysiciansForSchedulingApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListSurgeonPhysiciansForSchedulingApiRequest);

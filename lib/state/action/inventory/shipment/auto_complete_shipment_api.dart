@@ -10,8 +10,8 @@ part 'auto_complete_shipment_api.g.dart';
 abstract class AutoCompleteShipmentApi extends ApiDispatcher<
     AutoCompleteShipmentApiRequest,
     AutoCompleteShipmentApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AutoCompleteShipmentApi> {
   @override
   String get path => 'v1/inventory/shipment/autoComplete';

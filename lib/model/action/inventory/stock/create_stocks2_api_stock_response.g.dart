@@ -161,31 +161,23 @@ class CreateStocks2ApiStockResponseBuilder
   _$CreateStocks2ApiStockResponse _$v;
 
   String _requestId;
-
   String get requestId => _$this._requestId;
-
   set requestId(String requestId) => _$this._requestId = requestId;
 
   String _stockSummaryKey;
-
   String get stockSummaryKey => _$this._stockSummaryKey;
-
   set stockSummaryKey(String stockSummaryKey) =>
       _$this._stockSummaryKey = stockSummaryKey;
 
   ListBuilder<String> _stockIdsCreated;
-
   ListBuilder<String> get stockIdsCreated =>
       _$this._stockIdsCreated ??= new ListBuilder<String>();
-
   set stockIdsCreated(ListBuilder<String> stockIdsCreated) =>
       _$this._stockIdsCreated = stockIdsCreated;
 
   ListBuilder<String> _serialIdsCreated;
-
   ListBuilder<String> get serialIdsCreated =>
       _$this._serialIdsCreated ??= new ListBuilder<String>();
-
   set serialIdsCreated(ListBuilder<String> serialIdsCreated) =>
       _$this._serialIdsCreated = serialIdsCreated;
 
@@ -304,7 +296,6 @@ class _$CreateStocks2ApiStockResponseActions
       CreateStocks2ApiStockResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -330,7 +321,6 @@ class _$CreateStocks2ApiStockResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateStocks2ApiStockResponse);

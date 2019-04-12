@@ -101,9 +101,7 @@ class QueueDeviceSyncApiRequestBuilder
   _$QueueDeviceSyncApiRequest _$v;
 
   String _deviceId;
-
   String get deviceId => _$this._deviceId;
-
   set deviceId(String deviceId) => _$this._deviceId = deviceId;
 
   QueueDeviceSyncApiRequestBuilder();
@@ -181,7 +179,6 @@ class _$QueueDeviceSyncApiRequestActions
       QueueDeviceSyncApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -201,7 +198,6 @@ class _$QueueDeviceSyncApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(QueueDeviceSyncApiRequest);
 }

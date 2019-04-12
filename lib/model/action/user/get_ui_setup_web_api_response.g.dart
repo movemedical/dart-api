@@ -161,37 +161,29 @@ class GetUiSetupWebApiResponseBuilder
   _$GetUiSetupWebApiResponse _$v;
 
   GetUiSetupAllApiResponseBuilder _uiSetup;
-
   GetUiSetupAllApiResponseBuilder get uiSetup =>
       _$this._uiSetup ??= new GetUiSetupAllApiResponseBuilder();
-
   set uiSetup(GetUiSetupAllApiResponseBuilder uiSetup) =>
       _$this._uiSetup = uiSetup;
 
   ListBuilder<GetUiSetupWebApiDashboardWidget> _dashboardWidgets;
-
   ListBuilder<GetUiSetupWebApiDashboardWidget> get dashboardWidgets =>
       _$this._dashboardWidgets ??=
           new ListBuilder<GetUiSetupWebApiDashboardWidget>();
-
   set dashboardWidgets(
           ListBuilder<GetUiSetupWebApiDashboardWidget> dashboardWidgets) =>
       _$this._dashboardWidgets = dashboardWidgets;
 
   ListBuilder<WebNavigationElement> _navigationElements;
-
   ListBuilder<WebNavigationElement> get navigationElements =>
       _$this._navigationElements ??= new ListBuilder<WebNavigationElement>();
-
   set navigationElements(
           ListBuilder<WebNavigationElement> navigationElements) =>
       _$this._navigationElements = navigationElements;
 
   ListBuilder<WebReport> _webReports;
-
   ListBuilder<WebReport> get webReports =>
       _$this._webReports ??= new ListBuilder<WebReport>();
-
   set webReports(ListBuilder<WebReport> webReports) =>
       _$this._webReports = webReports;
 
@@ -323,14 +315,12 @@ class _$GetUiSetupWebApiResponseActions
       GetUiSetupWebApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.uiSetup,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -356,7 +346,6 @@ class _$GetUiSetupWebApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetUiSetupWebApiResponse);
 }

@@ -157,27 +157,19 @@ class ListItemCategoriesToBeCountedApiItemCategoryBuilder
   _$ListItemCategoriesToBeCountedApiItemCategory _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _code;
-
   String get code => _$this._code;
-
   set code(String code) => _$this._code = code;
 
   bool _hasChildren;
-
   bool get hasChildren => _$this._hasChildren;
-
   set hasChildren(bool hasChildren) => _$this._hasChildren = hasChildren;
 
   ListItemCategoriesToBeCountedApiItemCategoryBuilder();
@@ -271,7 +263,6 @@ class _$ListItemCategoriesToBeCountedApiItemCategoryActions
       ListItemCategoriesToBeCountedApiItemCategoryBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -297,7 +288,6 @@ class _$ListItemCategoriesToBeCountedApiItemCategoryActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListItemCategoriesToBeCountedApiItemCategory);

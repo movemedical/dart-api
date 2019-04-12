@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/directory/people/dce/update_dce_api
 part 'update_dce_api.g.dart';
 
 abstract class UpdateDceApi extends ApiDispatcher<UpdateDceApiRequest,
-    UpdateDceApiRequestBuilder, Empty, EmptyBuilder, UpdateDceApi> {
+    UpdateDceApiRequestBuilder, Nothing, NothingBuilder, UpdateDceApi> {
   @override
   String get path => 'v1/directory/people/dce/update';
 

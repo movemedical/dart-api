@@ -114,15 +114,11 @@ class GetSyncFileApiRequestBuilder
   _$GetSyncFileApiRequest _$v;
 
   String _deviceId;
-
   String get deviceId => _$this._deviceId;
-
   set deviceId(String deviceId) => _$this._deviceId = deviceId;
 
   String _ackId;
-
   String get ackId => _$this._ackId;
-
   set ackId(String ackId) => _$this._ackId = ackId;
 
   GetSyncFileApiRequestBuilder();
@@ -200,7 +196,6 @@ class _$GetSyncFileApiRequestActions extends GetSyncFileApiRequestActions {
   GetSyncFileApiRequestBuilder $newBuilder() => GetSyncFileApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -222,7 +217,6 @@ class _$GetSyncFileApiRequestActions extends GetSyncFileApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSyncFileApiRequest);
 }

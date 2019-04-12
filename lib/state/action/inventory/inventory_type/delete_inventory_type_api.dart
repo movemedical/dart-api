@@ -10,8 +10,8 @@ part 'delete_inventory_type_api.g.dart';
 abstract class DeleteInventoryTypeApi extends ApiDispatcher<
     DeleteInventoryTypeApiRequest,
     DeleteInventoryTypeApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteInventoryTypeApi> {
   @override
   String get path => 'v1/inventory/inventory_type/delete';

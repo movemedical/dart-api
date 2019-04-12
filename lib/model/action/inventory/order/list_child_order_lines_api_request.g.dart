@@ -121,17 +121,13 @@ class ListChildOrderLinesApiRequestBuilder
   _$ListChildOrderLinesApiRequest _$v;
 
   String _parentOrderLineId;
-
   String get parentOrderLineId => _$this._parentOrderLineId;
-
   set parentOrderLineId(String parentOrderLineId) =>
       _$this._parentOrderLineId = parentOrderLineId;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListChildOrderLinesApiRequestBuilder();
@@ -237,14 +233,12 @@ class _$ListChildOrderLinesApiRequestActions
       ListChildOrderLinesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -266,7 +260,6 @@ class _$ListChildOrderLinesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListChildOrderLinesApiRequest);

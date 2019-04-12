@@ -95,10 +95,8 @@ class GetTeamApiResponseBuilder
   _$GetTeamApiResponse _$v;
 
   GetTeamApiTeamDetailBuilder _detail;
-
   GetTeamApiTeamDetailBuilder get detail =>
       _$this._detail ??= new GetTeamApiTeamDetailBuilder();
-
   set detail(GetTeamApiTeamDetailBuilder detail) => _$this._detail = detail;
 
   GetTeamApiResponseBuilder();
@@ -189,14 +187,12 @@ class _$GetTeamApiResponseActions extends GetTeamApiResponseActions {
   GetTeamApiResponseBuilder $newBuilder() => GetTeamApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -216,7 +212,6 @@ class _$GetTeamApiResponseActions extends GetTeamApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetTeamApiResponse);
 }

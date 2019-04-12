@@ -10,8 +10,8 @@ part 'add_to_search_locations_cache_api.g.dart';
 abstract class AddToSearchLocationsCacheApi extends ApiDispatcher<
     AddToSearchLocationsCacheApiRequest,
     AddToSearchLocationsCacheApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddToSearchLocationsCacheApi> {
   @override
   String get path => 'v1/cache/add_to_search_locations';

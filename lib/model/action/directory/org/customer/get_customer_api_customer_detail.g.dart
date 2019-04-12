@@ -425,125 +425,87 @@ class GetCustomerApiCustomerDetailBuilder
   _$GetCustomerApiCustomerDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _number;
-
   String get number => _$this._number;
-
   set number(String number) => _$this._number = number;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgName;
-
   String get orgName => _$this._orgName;
-
   set orgName(String orgName) => _$this._orgName = orgName;
 
   String _hsOrgId;
-
   String get hsOrgId => _$this._hsOrgId;
-
   set hsOrgId(String hsOrgId) => _$this._hsOrgId = hsOrgId;
 
   String _hsOrgName;
-
   String get hsOrgName => _$this._hsOrgName;
-
   set hsOrgName(String hsOrgName) => _$this._hsOrgName = hsOrgName;
 
   CustomerAddressBuilder _defaultShipTo;
-
   CustomerAddressBuilder get defaultShipTo =>
       _$this._defaultShipTo ??= new CustomerAddressBuilder();
-
   set defaultShipTo(CustomerAddressBuilder defaultShipTo) =>
       _$this._defaultShipTo = defaultShipTo;
 
   CustomerAddressBuilder _defaultBillTo;
-
   CustomerAddressBuilder get defaultBillTo =>
       _$this._defaultBillTo ??= new CustomerAddressBuilder();
-
   set defaultBillTo(CustomerAddressBuilder defaultBillTo) =>
       _$this._defaultBillTo = defaultBillTo;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _phoneNumber;
-
   PhoneNumberBuilder get phoneNumber =>
       _$this._phoneNumber ??= new PhoneNumberBuilder();
-
   set phoneNumber(PhoneNumberBuilder phoneNumber) =>
       _$this._phoneNumber = phoneNumber;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   bool _publicListing;
-
   bool get publicListing => _$this._publicListing;
-
   set publicListing(bool publicListing) =>
       _$this._publicListing = publicListing;
 
   bool _creditHold;
-
   bool get creditHold => _$this._creditHold;
-
   set creditHold(bool creditHold) => _$this._creditHold = creditHold;
 
   String _paymentTerms;
-
   String get paymentTerms => _$this._paymentTerms;
-
   set paymentTerms(String paymentTerms) => _$this._paymentTerms = paymentTerms;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   bool _moveManaged;
-
   bool get moveManaged => _$this._moveManaged;
-
   set moveManaged(bool moveManaged) => _$this._moveManaged = moveManaged;
 
   ListBuilder<AttributeContact> _attributeContacts;
-
   ListBuilder<AttributeContact> get attributeContacts =>
       _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
-
   set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
       _$this._attributeContacts = attributeContacts;
 
@@ -772,7 +734,6 @@ class _$GetCustomerApiCustomerDetailActions
       GetCustomerApiCustomerDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.defaultShipTo,
@@ -782,7 +743,6 @@ class _$GetCustomerApiCustomerDetailActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -838,7 +798,6 @@ class _$GetCustomerApiCustomerDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetCustomerApiCustomerDetail);

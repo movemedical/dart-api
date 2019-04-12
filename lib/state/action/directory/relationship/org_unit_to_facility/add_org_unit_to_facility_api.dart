@@ -10,8 +10,8 @@ part 'add_org_unit_to_facility_api.g.dart';
 abstract class AddOrgUnitToFacilityApi extends ApiDispatcher<
     AddOrgUnitToFacilityApiRequest,
     AddOrgUnitToFacilityApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddOrgUnitToFacilityApi> {
   @override
   String get path => 'v1/directory/relationship/org_unit_to_facility/add';

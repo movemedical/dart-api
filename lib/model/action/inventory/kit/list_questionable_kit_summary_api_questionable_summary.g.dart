@@ -232,54 +232,38 @@ class ListQuestionableKitSummaryApiQuestionableSummaryBuilder
   _$ListQuestionableKitSummaryApiQuestionableSummary _$v;
 
   String _kitId;
-
   String get kitId => _$this._kitId;
-
   set kitId(String kitId) => _$this._kitId = kitId;
 
   String _kitItemNumber;
-
   String get kitItemNumber => _$this._kitItemNumber;
-
   set kitItemNumber(String kitItemNumber) =>
       _$this._kitItemNumber = kitItemNumber;
 
   int _kitSerialNumber;
-
   int get kitSerialNumber => _$this._kitSerialNumber;
-
   set kitSerialNumber(int kitSerialNumber) =>
       _$this._kitSerialNumber = kitSerialNumber;
 
   String _kitSerialRef;
-
   String get kitSerialRef => _$this._kitSerialRef;
-
   set kitSerialRef(String kitSerialRef) => _$this._kitSerialRef = kitSerialRef;
 
   bool _kitVerified;
-
   bool get kitVerified => _$this._kitVerified;
-
   set kitVerified(bool kitVerified) => _$this._kitVerified = kitVerified;
 
   bool _kitHasExtras;
-
   bool get kitHasExtras => _$this._kitHasExtras;
-
   set kitHasExtras(bool kitHasExtras) => _$this._kitHasExtras = kitHasExtras;
 
   bool _kitHasMissing;
-
   bool get kitHasMissing => _$this._kitHasMissing;
-
   set kitHasMissing(bool kitHasMissing) =>
       _$this._kitHasMissing = kitHasMissing;
 
   int _percentageMissing;
-
   int get percentageMissing => _$this._percentageMissing;
-
   set percentageMissing(int percentageMissing) =>
       _$this._percentageMissing = percentageMissing;
 
@@ -417,7 +401,6 @@ class _$ListQuestionableKitSummaryApiQuestionableSummaryActions
       ListQuestionableKitSummaryApiQuestionableSummaryBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -451,7 +434,6 @@ class _$ListQuestionableKitSummaryApiQuestionableSummaryActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListQuestionableKitSummaryApiQuestionableSummary);

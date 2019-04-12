@@ -10,68 +10,72 @@ part of 'update_inventory_type_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateInventoryTypeApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateInventoryTypeApi> UpdateInventoryTypeApiOptions();
 
 class _$UpdateInventoryTypeApi extends UpdateInventoryTypeApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<UpdateInventoryTypeApiRequest>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateInventoryTypeApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>, UpdateInventoryTypeApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateInventoryTypeApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateInventoryTypeApi,
           Command<ApiCommand<UpdateInventoryTypeApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateInventoryTypeApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>, UpdateInventoryTypeApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<UpdateInventoryTypeApiRequest>,
+          ApiResult<Nothing>,
+          UpdateInventoryTypeApi,
+          CommandProgress>> $progress;
 
   _$UpdateInventoryTypeApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateInventoryTypeApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateInventoryTypeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateInventoryTypeApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateInventoryTypeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateInventoryTypeApi,
                     Command<ApiCommand<UpdateInventoryTypeApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateInventoryTypeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateInventoryTypeApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateInventoryTypeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateInventoryTypeApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -80,18 +84,17 @@ class _$UpdateInventoryTypeApi extends UpdateInventoryTypeApi {
       _$UpdateInventoryTypeApi._(options());
 
   @override
-  CommandState<ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateInventoryTypeApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateInventoryTypeApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -103,11 +106,10 @@ class _$UpdateInventoryTypeApi extends UpdateInventoryTypeApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateInventoryTypeApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -115,7 +117,8 @@ class _$UpdateInventoryTypeApi extends UpdateInventoryTypeApi {
       ApiCommand<UpdateInventoryTypeApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -125,12 +128,12 @@ class _$UpdateInventoryTypeApi extends UpdateInventoryTypeApi {
       UpdateInventoryTypeApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateInventoryTypeApiRequest> get commandPayloadSerializer =>
       UpdateInventoryTypeApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

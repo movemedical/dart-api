@@ -11,72 +11,72 @@ part of 'confirm_case_requirements_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ConfirmCaseRequirementsApi> ConfirmCaseRequirementsApiOptions();
 
 class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ConfirmCaseRequirementsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>, ConfirmCaseRequirementsApi, String>> $cancel;
+          ApiResult<Nothing>, ConfirmCaseRequirementsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ConfirmCaseRequirementsApi,
           Command<ApiCommand<ConfirmCaseRequirementsApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ConfirmCaseRequirementsApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ConfirmCaseRequirementsApi,
           CommandProgress>> $progress;
 
   _$ConfirmCaseRequirementsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ConfirmCaseRequirementsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ConfirmCaseRequirementsApi,
                     Command<ApiCommand<ConfirmCaseRequirementsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ConfirmCaseRequirementsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ConfirmCaseRequirementsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ConfirmCaseRequirementsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
       _$ConfirmCaseRequirementsApi._(options());
 
   @override
-  CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ConfirmCaseRequirementsApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ConfirmCaseRequirementsApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ConfirmCaseRequirementsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ConfirmCaseRequirementsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
       ApiCommand<ConfirmCaseRequirementsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$ConfirmCaseRequirementsApi extends ConfirmCaseRequirementsApi {
       ConfirmCaseRequirementsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ConfirmCaseRequirementsApiRequest> get commandPayloadSerializer =>
       ConfirmCaseRequirementsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

@@ -10,8 +10,8 @@ part 'edit_order_details_api.g.dart';
 abstract class EditOrderDetailsApi extends ApiDispatcher<
     EditOrderDetailsApiRequest,
     EditOrderDetailsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     EditOrderDetailsApi> {
   @override
   String get path => 'v1/inventory/order/edit_details';

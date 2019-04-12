@@ -10,8 +10,8 @@ part 'queue_device_sync_api.g.dart';
 abstract class QueueDeviceSyncApi extends ApiDispatcher<
     QueueDeviceSyncApiRequest,
     QueueDeviceSyncApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     QueueDeviceSyncApi> {
   @override
   String get path => 'v1/mobileDevice/queue_device_sync';

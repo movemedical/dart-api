@@ -119,17 +119,13 @@ class GetKitStockApiResponseBuilder
   _$GetKitStockApiResponse _$v;
 
   GetStockApiStockBuilder _kitStock;
-
   GetStockApiStockBuilder get kitStock =>
       _$this._kitStock ??= new GetStockApiStockBuilder();
-
   set kitStock(GetStockApiStockBuilder kitStock) => _$this._kitStock = kitStock;
 
   ListBuilder<GetStockApiStock> _containers;
-
   ListBuilder<GetStockApiStock> get containers =>
       _$this._containers ??= new ListBuilder<GetStockApiStock>();
-
   set containers(ListBuilder<GetStockApiStock> containers) =>
       _$this._containers = containers;
 
@@ -235,14 +231,12 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
       GetKitStockApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.kitStock,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -264,7 +258,6 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetKitStockApiResponse);
 }

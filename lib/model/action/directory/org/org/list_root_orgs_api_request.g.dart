@@ -116,16 +116,12 @@ class ListRootOrgsApiRequestBuilder
   _$ListRootOrgsApiRequest _$v;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListRootOrgsApiRequestBuilder();
@@ -225,14 +221,12 @@ class _$ListRootOrgsApiRequestActions extends ListRootOrgsApiRequestActions {
       ListRootOrgsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -254,7 +248,6 @@ class _$ListRootOrgsApiRequestActions extends ListRootOrgsApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListRootOrgsApiRequest);
 }

@@ -10,8 +10,8 @@ part 'delete_order_reason_api.g.dart';
 abstract class DeleteOrderReasonApi extends ApiDispatcher<
     DeleteOrderReasonApiRequest,
     DeleteOrderReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteOrderReasonApi> {
   @override
   String get path => 'v1/inventory/order/reason/delete';

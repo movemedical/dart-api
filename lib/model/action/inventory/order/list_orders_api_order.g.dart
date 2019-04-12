@@ -300,84 +300,58 @@ class ListOrdersApiOrderBuilder
   _$ListOrdersApiOrder _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   String _erpReference;
-
   String get erpReference => _$this._erpReference;
-
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   OrderStatus _status;
-
   OrderStatus get status => _$this._status;
-
   set status(OrderStatus status) => _$this._status = status;
 
   OrderReasonBuilder _reason;
-
   OrderReasonBuilder get reason => _$this._reason ??= new OrderReasonBuilder();
-
   set reason(OrderReasonBuilder reason) => _$this._reason = reason;
 
   LocationBuilder _toLocation;
-
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
-
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   DateTime _created;
-
   DateTime get created => _$this._created;
-
   set created(DateTime created) => _$this._created = created;
 
   String _createdBy;
-
   String get createdBy => _$this._createdBy;
-
   set createdBy(String createdBy) => _$this._createdBy = createdBy;
 
   DateTime _sourceStart;
-
   DateTime get sourceStart => _$this._sourceStart;
-
   set sourceStart(DateTime sourceStart) => _$this._sourceStart = sourceStart;
 
   DateTime _deliveryStart;
-
   DateTime get deliveryStart => _$this._deliveryStart;
-
   set deliveryStart(DateTime deliveryStart) =>
       _$this._deliveryStart = deliveryStart;
 
   DateTime _deliveryEnd;
-
   DateTime get deliveryEnd => _$this._deliveryEnd;
-
   set deliveryEnd(DateTime deliveryEnd) => _$this._deliveryEnd = deliveryEnd;
 
   int _noteCount;
-
   int get noteCount => _$this._noteCount;
-
   set noteCount(int noteCount) => _$this._noteCount = noteCount;
 
   ListOrdersApiOrderBuilder();
@@ -550,7 +524,6 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
   ListOrdersApiOrderBuilder $newBuilder() => ListOrdersApiOrderBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.reason,
@@ -558,7 +531,6 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -602,7 +574,6 @@ class _$ListOrdersApiOrderActions extends ListOrdersApiOrderActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOrdersApiOrder);
 }

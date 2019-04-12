@@ -105,9 +105,7 @@ class CreateConversationApiResponseBuilder
   _$CreateConversationApiResponse _$v;
 
   String _conversationId;
-
   String get conversationId => _$this._conversationId;
-
   set conversationId(String conversationId) =>
       _$this._conversationId = conversationId;
 
@@ -189,7 +187,6 @@ class _$CreateConversationApiResponseActions
       CreateConversationApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -209,7 +206,6 @@ class _$CreateConversationApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateConversationApiResponse);

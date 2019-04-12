@@ -102,7 +102,6 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
           ApiResult<GetImportLogDetailApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -114,7 +113,6 @@ class _$GetImportLogDetailApi extends GetImportLogDetailApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(GetImportLogDetailApiRequest)]),

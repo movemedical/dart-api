@@ -10,8 +10,8 @@ part 'create_deliver_to_address_api.g.dart';
 abstract class CreateDeliverToAddressApi extends ApiDispatcher<
     CreateDeliverToAddressApiRequest,
     CreateDeliverToAddressApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateDeliverToAddressApi> {
   @override
   String get path => 'v1/directory/address/deliver_to/create';

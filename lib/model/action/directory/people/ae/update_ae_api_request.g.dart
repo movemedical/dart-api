@@ -283,80 +283,56 @@ class UpdateAeApiRequestBuilder
   _$UpdateAeApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _reference;
-
   String get reference => _$this._reference;
-
   set reference(String reference) => _$this._reference = reference;
 
   PhoneNumberBuilder _workPhoneNumber;
-
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
-
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
-
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
-
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
-
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
-
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   DateTime _startDate;
-
   DateTime get startDate => _$this._startDate;
-
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
-
   DateTime get endDate => _$this._endDate;
-
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   bool _directoryAdmin;
-
   bool get directoryAdmin => _$this._directoryAdmin;
-
   set directoryAdmin(bool directoryAdmin) =>
       _$this._directoryAdmin = directoryAdmin;
 
@@ -535,7 +511,6 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
   UpdateAeApiRequestBuilder $newBuilder() => UpdateAeApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -546,7 +521,6 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -588,7 +562,6 @@ class _$UpdateAeApiRequestActions extends UpdateAeApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateAeApiRequest);
 }

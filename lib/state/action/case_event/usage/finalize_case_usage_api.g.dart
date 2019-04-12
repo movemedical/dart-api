@@ -10,65 +10,68 @@ part of 'finalize_case_usage_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<FinalizeCaseUsageApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     FinalizeCaseUsageApi> FinalizeCaseUsageApiOptions();
 
 class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       FinalizeCaseUsageApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>,
-          FinalizeCaseUsageApi, String>> $cancel;
+      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>,
+          ApiResult<Nothing>, FinalizeCaseUsageApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           FinalizeCaseUsageApi,
           Command<ApiCommand<FinalizeCaseUsageApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>,
-          FinalizeCaseUsageApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<
+          ApiCommand<FinalizeCaseUsageApiRequest>,
+          ApiResult<Nothing>,
+          FinalizeCaseUsageApi,
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>,
-          FinalizeCaseUsageApi, CommandProgress>> $progress;
+      CommandPayload<ApiCommand<FinalizeCaseUsageApiRequest>,
+          ApiResult<Nothing>, FinalizeCaseUsageApi, CommandProgress>> $progress;
 
   _$FinalizeCaseUsageApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<FinalizeCaseUsageApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 FinalizeCaseUsageApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<FinalizeCaseUsageApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     FinalizeCaseUsageApi,
                     Command<ApiCommand<FinalizeCaseUsageApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<FinalizeCaseUsageApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     FinalizeCaseUsageApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<FinalizeCaseUsageApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 FinalizeCaseUsageApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +80,17 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
       _$FinalizeCaseUsageApi._(options());
 
   @override
-  CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<FinalizeCaseUsageApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<FinalizeCaseUsageApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Empty>>();
+          ApiCommand<FinalizeCaseUsageApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +102,10 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(FinalizeCaseUsageApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +113,8 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
       ApiCommand<FinalizeCaseUsageApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +124,12 @@ class _$FinalizeCaseUsageApi extends FinalizeCaseUsageApi {
       FinalizeCaseUsageApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<FinalizeCaseUsageApiRequest> get commandPayloadSerializer =>
       FinalizeCaseUsageApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

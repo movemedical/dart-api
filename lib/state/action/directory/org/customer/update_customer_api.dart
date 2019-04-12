@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/directory/org/customer/update_custo
 
 part 'update_customer_api.g.dart';
 
-abstract class UpdateCustomerApi extends ApiDispatcher<UpdateCustomerApiRequest,
-    UpdateCustomerApiRequestBuilder, Empty, EmptyBuilder, UpdateCustomerApi> {
+abstract class UpdateCustomerApi extends ApiDispatcher<
+    UpdateCustomerApiRequest,
+    UpdateCustomerApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    UpdateCustomerApi> {
   @override
   String get path => 'v1/directory/org/customer/update';
 

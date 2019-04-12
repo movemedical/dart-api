@@ -122,17 +122,13 @@ class ListCancelReasonsApiResponseBuilder
   _$ListCancelReasonsApiResponse _$v;
 
   ListBuilder<ListCancelReasonsApiCancelReason> _data;
-
   ListBuilder<ListCancelReasonsApiCancelReason> get data =>
       _$this._data ??= new ListBuilder<ListCancelReasonsApiCancelReason>();
-
   set data(ListBuilder<ListCancelReasonsApiCancelReason> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListCancelReasonsApiResponseBuilder();
@@ -228,7 +224,6 @@ class _$ListCancelReasonsApiResponseActions
       ListCancelReasonsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$ListCancelReasonsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCancelReasonsApiResponse);

@@ -122,17 +122,13 @@ class ListConversationsApiResponseBuilder
   _$ListConversationsApiResponse _$v;
 
   ListBuilder<ListConversationsApiConversation> _data;
-
   ListBuilder<ListConversationsApiConversation> get data =>
       _$this._data ??= new ListBuilder<ListConversationsApiConversation>();
-
   set data(ListBuilder<ListConversationsApiConversation> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListConversationsApiResponseBuilder();
@@ -228,7 +224,6 @@ class _$ListConversationsApiResponseActions
       ListConversationsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$ListConversationsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListConversationsApiResponse);

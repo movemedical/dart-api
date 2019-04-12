@@ -10,65 +10,65 @@ part of 'release_shipment2_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ReleaseShipment2ApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ReleaseShipment2Api> ReleaseShipment2ApiOptions();
 
 class _$ReleaseShipment2Api extends ReleaseShipment2Api {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ReleaseShipment2ApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ReleaseShipment2Api> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ReleaseShipment2ApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>,
           ReleaseShipment2Api, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReleaseShipment2ApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReleaseShipment2Api,
           Command<ApiCommand<ReleaseShipment2ApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>,
-          ReleaseShipment2Api, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>,
+          ReleaseShipment2Api, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>,
           ReleaseShipment2Api, CommandProgress>> $progress;
 
   _$ReleaseShipment2Api._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ReleaseShipment2ApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ReleaseShipment2ApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ReleaseShipment2Api,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ReleaseShipment2ApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ReleaseShipment2Api,
                     Command<ApiCommand<ReleaseShipment2ApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ReleaseShipment2ApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ReleaseShipment2Api,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ReleaseShipment2ApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ReleaseShipment2Api,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,17 @@ class _$ReleaseShipment2Api extends ReleaseShipment2Api {
       _$ReleaseShipment2Api._(options());
 
   @override
-  CommandState<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<ReleaseShipment2ApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<ReleaseShipment2ApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ReleaseShipment2ApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +99,10 @@ class _$ReleaseShipment2Api extends ReleaseShipment2Api {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ReleaseShipment2ApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +110,8 @@ class _$ReleaseShipment2Api extends ReleaseShipment2Api {
       ApiCommand<ReleaseShipment2ApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +121,12 @@ class _$ReleaseShipment2Api extends ReleaseShipment2Api {
       ReleaseShipment2ApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ReleaseShipment2ApiRequest> get commandPayloadSerializer =>
       ReleaseShipment2ApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

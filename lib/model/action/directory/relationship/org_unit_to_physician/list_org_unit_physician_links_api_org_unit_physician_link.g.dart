@@ -251,63 +251,45 @@ class ListOrgUnitPhysicianLinksApiOrgUnitPhysicianLinkBuilder
   _$ListOrgUnitPhysicianLinksApiOrgUnitPhysicianLink _$v;
 
   String _orgUnitToPhysicianId;
-
   String get orgUnitToPhysicianId => _$this._orgUnitToPhysicianId;
-
   set orgUnitToPhysicianId(String orgUnitToPhysicianId) =>
       _$this._orgUnitToPhysicianId = orgUnitToPhysicianId;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianName;
-
   String get physicianName => _$this._physicianName;
-
   set physicianName(String physicianName) =>
       _$this._physicianName = physicianName;
 
   PhysicianType _physicianType;
-
   PhysicianType get physicianType => _$this._physicianType;
-
   set physicianType(PhysicianType physicianType) =>
       _$this._physicianType = physicianType;
 
   bool _physicianActive;
-
   bool get physicianActive => _$this._physicianActive;
-
   set physicianActive(bool physicianActive) =>
       _$this._physicianActive = physicianActive;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
-
   String get procedureName => _$this._procedureName;
-
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _relationshipTypeId;
-
   String get relationshipTypeId => _$this._relationshipTypeId;
-
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
   String _relationshipTypeName;
-
   String get relationshipTypeName => _$this._relationshipTypeName;
-
   set relationshipTypeName(String relationshipTypeName) =>
       _$this._relationshipTypeName = relationshipTypeName;
 
@@ -459,7 +441,6 @@ class _$ListOrgUnitPhysicianLinksApiOrgUnitPhysicianLinkActions
       ListOrgUnitPhysicianLinksApiOrgUnitPhysicianLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -495,7 +476,6 @@ class _$ListOrgUnitPhysicianLinksApiOrgUnitPhysicianLinkActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOrgUnitPhysicianLinksApiOrgUnitPhysicianLink);

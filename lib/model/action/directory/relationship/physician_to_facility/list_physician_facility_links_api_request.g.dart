@@ -158,30 +158,22 @@ class ListPhysicianFacilityLinksApiRequestBuilder
   _$ListPhysicianFacilityLinksApiRequest _$v;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListPhysicianFacilityLinksApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListPhysicianFacilityLinksApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListPhysicianFacilityLinksApiOrderBy>();
-
   set orderBy(
           OrderByParamsBuilder<ListPhysicianFacilityLinksApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
@@ -313,7 +305,6 @@ class _$ListPhysicianFacilityLinksApiRequestActions
       ListPhysicianFacilityLinksApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -321,7 +312,6 @@ class _$ListPhysicianFacilityLinksApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -347,7 +337,6 @@ class _$ListPhysicianFacilityLinksApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPhysicianFacilityLinksApiRequest);

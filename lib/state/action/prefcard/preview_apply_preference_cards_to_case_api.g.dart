@@ -114,7 +114,6 @@ class _$PreviewApplyPreferenceCardsToCaseApi
           ApiResult<PreviewApplyPreferenceCardsToCaseApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -126,7 +125,6 @@ class _$PreviewApplyPreferenceCardsToCaseApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand,

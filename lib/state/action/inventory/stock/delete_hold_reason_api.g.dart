@@ -10,65 +10,65 @@ part of 'delete_hold_reason_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DeleteHoldReasonApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DeleteHoldReasonApi> DeleteHoldReasonApiOptions();
 
 class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DeleteHoldReasonApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DeleteHoldReasonApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<DeleteHoldReasonApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>,
           DeleteHoldReasonApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DeleteHoldReasonApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DeleteHoldReasonApi,
           Command<ApiCommand<DeleteHoldReasonApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
-          DeleteHoldReasonApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>,
+          DeleteHoldReasonApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>,
           DeleteHoldReasonApi, CommandProgress>> $progress;
 
   _$DeleteHoldReasonApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DeleteHoldReasonApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHoldReasonApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteHoldReasonApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteHoldReasonApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteHoldReasonApi,
                     Command<ApiCommand<DeleteHoldReasonApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DeleteHoldReasonApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DeleteHoldReasonApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DeleteHoldReasonApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DeleteHoldReasonApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,17 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
       _$DeleteHoldReasonApi._(options());
 
   @override
-  CommandState<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DeleteHoldReasonApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DeleteHoldReasonApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DeleteHoldReasonApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +99,10 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteHoldReasonApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +110,8 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
       ApiCommand<DeleteHoldReasonApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +121,12 @@ class _$DeleteHoldReasonApi extends DeleteHoldReasonApi {
       DeleteHoldReasonApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DeleteHoldReasonApiRequest> get commandPayloadSerializer =>
       DeleteHoldReasonApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

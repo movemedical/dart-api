@@ -338,95 +338,67 @@ class RequestStockHistoryReportApiRequestBuilder
   _$RequestStockHistoryReportApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
-
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
-
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
-
   DocReportFormat get format => _$this._format;
-
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
-
   DocReportDisplayType get displayType => _$this._displayType;
-
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   ResponsiblePartyType _responsiblePartyType;
-
   ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
-
   set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
       _$this._responsiblePartyType = responsiblePartyType;
 
   String _responsiblePartyId;
-
   String get responsiblePartyId => _$this._responsiblePartyId;
-
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
-
   String get lotId => _$this._lotId;
-
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
-
   String get serialId => _$this._serialId;
-
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   ListBuilder<StockTransactionType> _transactionTypes;
-
   ListBuilder<StockTransactionType> get transactionTypes =>
       _$this._transactionTypes ??= new ListBuilder<StockTransactionType>();
-
   set transactionTypes(ListBuilder<StockTransactionType> transactionTypes) =>
       _$this._transactionTypes = transactionTypes;
 
   DateTime _startDate;
-
   DateTime get startDate => _$this._startDate;
-
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
-
   DateTime get endDate => _$this._endDate;
-
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   RequestStockHistoryReportApiRequestBuilder();
@@ -609,14 +581,12 @@ class _$RequestStockHistoryReportApiRequestActions
       RequestStockHistoryReportApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -662,7 +632,6 @@ class _$RequestStockHistoryReportApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestStockHistoryReportApiRequest);

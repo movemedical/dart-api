@@ -10,8 +10,8 @@ part 'delete_cancel_reason_api.g.dart';
 abstract class DeleteCancelReasonApi extends ApiDispatcher<
     DeleteCancelReasonApiRequest,
     DeleteCancelReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DeleteCancelReasonApi> {
   @override
   String get path => 'v1/case_event/cancel_reason/delete';

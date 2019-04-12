@@ -196,42 +196,30 @@ class ListFacilityPhysicianLinksApiPhysicianLinkBuilder
   _$ListFacilityPhysicianLinksApiPhysicianLink _$v;
 
   String _physicianToFacilityId;
-
   String get physicianToFacilityId => _$this._physicianToFacilityId;
-
   set physicianToFacilityId(String physicianToFacilityId) =>
       _$this._physicianToFacilityId = physicianToFacilityId;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianName;
-
   String get physicianName => _$this._physicianName;
-
   set physicianName(String physicianName) =>
       _$this._physicianName = physicianName;
 
   PhysicianType _physicianType;
-
   PhysicianType get physicianType => _$this._physicianType;
-
   set physicianType(PhysicianType physicianType) =>
       _$this._physicianType = physicianType;
 
   String _physicianNpi;
-
   String get physicianNpi => _$this._physicianNpi;
-
   set physicianNpi(String physicianNpi) => _$this._physicianNpi = physicianNpi;
 
   bool _physicianActive;
-
   bool get physicianActive => _$this._physicianActive;
-
   set physicianActive(bool physicianActive) =>
       _$this._physicianActive = physicianActive;
 
@@ -356,7 +344,6 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
       ListFacilityPhysicianLinksApiPhysicianLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -386,7 +373,6 @@ class _$ListFacilityPhysicianLinksApiPhysicianLinkActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListFacilityPhysicianLinksApiPhysicianLink);

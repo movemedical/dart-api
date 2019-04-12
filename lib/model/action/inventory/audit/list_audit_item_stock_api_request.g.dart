@@ -120,16 +120,12 @@ class ListAuditItemStockApiRequestBuilder
   _$ListAuditItemStockApiRequest _$v;
 
   String _auditItemId;
-
   String get auditItemId => _$this._auditItemId;
-
   set auditItemId(String auditItemId) => _$this._auditItemId = auditItemId;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListAuditItemStockApiRequestBuilder();
@@ -235,14 +231,12 @@ class _$ListAuditItemStockApiRequestActions
       ListAuditItemStockApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -264,7 +258,6 @@ class _$ListAuditItemStockApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAuditItemStockApiRequest);

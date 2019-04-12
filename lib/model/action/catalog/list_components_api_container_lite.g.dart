@@ -135,22 +135,16 @@ class ListComponentsApiContainerLiteBuilder
   _$ListComponentsApiContainerLite _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _containerNumber;
-
   int get containerNumber => _$this._containerNumber;
-
   set containerNumber(int containerNumber) =>
       _$this._containerNumber = containerNumber;
 
   ItemBuilder _item;
-
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
-
   set item(ItemBuilder item) => _$this._item = item;
 
   ListComponentsApiContainerLiteBuilder();
@@ -259,14 +253,12 @@ class _$ListComponentsApiContainerLiteActions
       ListComponentsApiContainerLiteBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -290,7 +282,6 @@ class _$ListComponentsApiContainerLiteActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListComponentsApiContainerLite);

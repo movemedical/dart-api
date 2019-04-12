@@ -105,9 +105,7 @@ class GetImportLogDetailApiRequestBuilder
   _$GetImportLogDetailApiRequest _$v;
 
   String _importLogId;
-
   String get importLogId => _$this._importLogId;
-
   set importLogId(String importLogId) => _$this._importLogId = importLogId;
 
   GetImportLogDetailApiRequestBuilder();
@@ -188,7 +186,6 @@ class _$GetImportLogDetailApiRequestActions
       GetImportLogDetailApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,7 +205,6 @@ class _$GetImportLogDetailApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetImportLogDetailApiRequest);

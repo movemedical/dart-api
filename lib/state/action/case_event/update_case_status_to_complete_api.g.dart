@@ -11,72 +11,72 @@ part of 'update_case_status_to_complete_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     UpdateCaseStatusToCompleteApi> UpdateCaseStatusToCompleteApiOptions();
 
 class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       UpdateCaseStatusToCompleteApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>, UpdateCaseStatusToCompleteApi, String>> $cancel;
+          ApiResult<Nothing>, UpdateCaseStatusToCompleteApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseStatusToCompleteApi,
           Command<ApiCommand<UpdateCaseStatusToCompleteApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseStatusToCompleteApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           UpdateCaseStatusToCompleteApi,
           CommandProgress>> $progress;
 
   _$UpdateCaseStatusToCompleteApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCaseStatusToCompleteApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCaseStatusToCompleteApi,
                     Command<ApiCommand<UpdateCaseStatusToCompleteApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     UpdateCaseStatusToCompleteApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 UpdateCaseStatusToCompleteApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -87,18 +87,19 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
 
   @override
   CommandState<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<UpdateCaseStatusToCompleteApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<UpdateCaseStatusToCompleteApiRequest>, ApiResult<Empty>>();
+          ApiCommand<UpdateCaseStatusToCompleteApiRequest>,
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -110,11 +111,10 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseStatusToCompleteApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -122,7 +122,8 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
       ApiCommand<UpdateCaseStatusToCompleteApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -132,7 +133,7 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
       UpdateCaseStatusToCompleteApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<UpdateCaseStatusToCompleteApiRequest>
@@ -140,5 +141,5 @@ class _$UpdateCaseStatusToCompleteApi extends UpdateCaseStatusToCompleteApi {
           UpdateCaseStatusToCompleteApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

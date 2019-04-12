@@ -10,8 +10,8 @@ part 'create_physician_for_facility_api.g.dart';
 abstract class CreatePhysicianForFacilityApi extends ApiDispatcher<
     CreatePhysicianForFacilityApiRequest,
     CreatePhysicianForFacilityApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreatePhysicianForFacilityApi> {
   @override
   String get path => 'v1/directory/relationship/physician_for_facility/create';

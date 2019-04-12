@@ -109,15 +109,11 @@ class GetLoanApiRequestBuilder
   _$GetLoanApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
-
   bool get skipPresence => _$this._skipPresence;
-
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetLoanApiRequestBuilder();
@@ -195,7 +191,6 @@ class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
   GetLoanApiRequestBuilder $newBuilder() => GetLoanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -217,7 +212,6 @@ class _$GetLoanApiRequestActions extends GetLoanApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetLoanApiRequest);
 }

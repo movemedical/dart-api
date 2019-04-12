@@ -104,7 +104,6 @@ class _$ListTeamOrgUnitOptionsApi extends ListTeamOrgUnitOptionsApi {
           ApiResult<ListTeamOrgUnitOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -116,7 +115,6 @@ class _$ListTeamOrgUnitOptionsApi extends ListTeamOrgUnitOptionsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListTeamOrgUnitOptionsApiRequest)]),

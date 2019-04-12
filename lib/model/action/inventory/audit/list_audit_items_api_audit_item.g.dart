@@ -291,86 +291,62 @@ class ListAuditItemsApiAuditItemBuilder
   _$ListAuditItemsApiAuditItem _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   AuditItemStatus _status;
-
   AuditItemStatus get status => _$this._status;
-
   set status(AuditItemStatus status) => _$this._status = status;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   StockPlaceBuilder _stockPlace;
-
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
-
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   LocationBuilder _shouldBeAtLocation;
-
   LocationBuilder get shouldBeAtLocation =>
       _$this._shouldBeAtLocation ??= new LocationBuilder();
-
   set shouldBeAtLocation(LocationBuilder shouldBeAtLocation) =>
       _$this._shouldBeAtLocation = shouldBeAtLocation;
 
   ExpirationInfoBuilder _expirationInfo;
-
   ExpirationInfoBuilder get expirationInfo =>
       _$this._expirationInfo ??= new ExpirationInfoBuilder();
-
   set expirationInfo(ExpirationInfoBuilder expirationInfo) =>
       _$this._expirationInfo = expirationInfo;
 
   String _unknownItemNumber;
-
   String get unknownItemNumber => _$this._unknownItemNumber;
-
   set unknownItemNumber(String unknownItemNumber) =>
       _$this._unknownItemNumber = unknownItemNumber;
 
   String _unknownLotSerialNumber;
-
   String get unknownLotSerialNumber => _$this._unknownLotSerialNumber;
-
   set unknownLotSerialNumber(String unknownLotSerialNumber) =>
       _$this._unknownLotSerialNumber = unknownLotSerialNumber;
 
   int _quantityExpected;
-
   int get quantityExpected => _$this._quantityExpected;
-
   set quantityExpected(int quantityExpected) =>
       _$this._quantityExpected = quantityExpected;
 
   int _quantityCounted;
-
   int get quantityCounted => _$this._quantityCounted;
-
   set quantityCounted(int quantityCounted) =>
       _$this._quantityCounted = quantityCounted;
 
   int _diff;
-
   int get diff => _$this._diff;
-
   set diff(int diff) => _$this._diff = diff;
 
   ListAuditItemsApiAuditItemBuilder();
@@ -555,7 +531,6 @@ class _$ListAuditItemsApiAuditItemActions
       ListAuditItemsApiAuditItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -565,7 +540,6 @@ class _$ListAuditItemsApiAuditItemActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -607,7 +581,6 @@ class _$ListAuditItemsApiAuditItemActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditItemsApiAuditItem);
 }

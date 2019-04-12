@@ -10,8 +10,8 @@ part 'add_participants_api.g.dart';
 abstract class AddParticipantsApi extends ApiDispatcher<
     AddParticipantsApiRequest,
     AddParticipantsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddParticipantsApi> {
   @override
   String get path => 'v1/messaging/participants/add_participants';

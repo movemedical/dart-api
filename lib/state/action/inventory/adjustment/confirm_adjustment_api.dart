@@ -10,8 +10,8 @@ part 'confirm_adjustment_api.g.dart';
 abstract class ConfirmAdjustmentApi extends ApiDispatcher<
     ConfirmAdjustmentApiRequest,
     ConfirmAdjustmentApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ConfirmAdjustmentApi> {
   @override
   String get path => 'v1/inventory/adjustment/confirm';

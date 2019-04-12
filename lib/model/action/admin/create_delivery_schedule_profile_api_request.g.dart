@@ -181,38 +181,28 @@ class CreateDeliveryScheduleProfileApiRequestBuilder
   _$CreateDeliveryScheduleProfileApiRequest _$v;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   int _instrumentDeliveryLeadTimeDays;
-
   int get instrumentDeliveryLeadTimeDays =>
       _$this._instrumentDeliveryLeadTimeDays;
-
   set instrumentDeliveryLeadTimeDays(int instrumentDeliveryLeadTimeDays) =>
       _$this._instrumentDeliveryLeadTimeDays = instrumentDeliveryLeadTimeDays;
 
   int _instrumentDeliveryLeadTimeHours;
-
   int get instrumentDeliveryLeadTimeHours =>
       _$this._instrumentDeliveryLeadTimeHours;
-
   set instrumentDeliveryLeadTimeHours(int instrumentDeliveryLeadTimeHours) =>
       _$this._instrumentDeliveryLeadTimeHours = instrumentDeliveryLeadTimeHours;
 
   int _implantDeliveryLeadTimeDays;
-
   int get implantDeliveryLeadTimeDays => _$this._implantDeliveryLeadTimeDays;
-
   set implantDeliveryLeadTimeDays(int implantDeliveryLeadTimeDays) =>
       _$this._implantDeliveryLeadTimeDays = implantDeliveryLeadTimeDays;
 
   int _implantDeliveryLeadTimeHours;
-
   int get implantDeliveryLeadTimeHours => _$this._implantDeliveryLeadTimeHours;
-
   set implantDeliveryLeadTimeHours(int implantDeliveryLeadTimeHours) =>
       _$this._implantDeliveryLeadTimeHours = implantDeliveryLeadTimeHours;
 
@@ -325,7 +315,6 @@ class _$CreateDeliveryScheduleProfileApiRequestActions
       CreateDeliveryScheduleProfileApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -353,7 +342,6 @@ class _$CreateDeliveryScheduleProfileApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateDeliveryScheduleProfileApiRequest);

@@ -10,8 +10,8 @@ part 'remove_cache_keys_api.g.dart';
 abstract class RemoveCacheKeysApi extends ApiDispatcher<
     RemoveCacheKeysApiRequest,
     RemoveCacheKeysApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveCacheKeysApi> {
   @override
   String get path => 'v1/cache/remove_cache_keys';

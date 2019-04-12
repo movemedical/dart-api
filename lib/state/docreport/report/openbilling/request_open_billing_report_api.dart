@@ -10,8 +10,8 @@ part 'request_open_billing_report_api.g.dart';
 abstract class RequestOpenBillingReportApi extends ApiDispatcher<
     RequestOpenBillingReportApiRequest,
     RequestOpenBillingReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestOpenBillingReportApi> {
   @override
   String get path => 'v1/doc/open_billing';

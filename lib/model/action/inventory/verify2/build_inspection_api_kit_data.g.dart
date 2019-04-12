@@ -152,29 +152,21 @@ class BuildInspectionApiKitDataBuilder
   _$BuildInspectionApiKitData _$v;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _serialId;
-
   String get serialId => _$this._serialId;
-
   set serialId(String serialId) => _$this._serialId = serialId;
 
   ListBuilder<BuildInspectionApiKitDataKitContainer> _containers;
-
   ListBuilder<BuildInspectionApiKitDataKitContainer> get containers =>
       _$this._containers ??=
           new ListBuilder<BuildInspectionApiKitDataKitContainer>();
-
   set containers(
           ListBuilder<BuildInspectionApiKitDataKitContainer> containers) =>
       _$this._containers = containers;
@@ -288,7 +280,6 @@ class _$BuildInspectionApiKitDataActions
       BuildInspectionApiKitDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -314,7 +305,6 @@ class _$BuildInspectionApiKitDataActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiKitData);
 }

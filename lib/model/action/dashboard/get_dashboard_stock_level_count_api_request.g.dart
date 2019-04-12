@@ -142,7 +142,6 @@ class _$GetDashboardStockLevelCountApiRequestActions
       GetDashboardStockLevelCountApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -150,7 +149,6 @@ class _$GetDashboardStockLevelCountApiRequestActions
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetDashboardStockLevelCountApiRequest);

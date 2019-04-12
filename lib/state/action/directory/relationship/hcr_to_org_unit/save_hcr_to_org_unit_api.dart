@@ -10,8 +10,8 @@ part 'save_hcr_to_org_unit_api.g.dart';
 abstract class SaveHcrToOrgUnitApi extends ApiDispatcher<
     SaveHcrToOrgUnitApiRequest,
     SaveHcrToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SaveHcrToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_org_unit/save';

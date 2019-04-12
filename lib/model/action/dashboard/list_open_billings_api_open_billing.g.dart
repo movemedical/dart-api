@@ -178,36 +178,26 @@ class ListOpenBillingsApiOpenBillingBuilder
   _$ListOpenBillingsApiOpenBilling _$v;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   ListOpenBillingsApiOpenBillingSummaryType _summaryType;
-
   ListOpenBillingsApiOpenBillingSummaryType get summaryType =>
       _$this._summaryType;
-
   set summaryType(ListOpenBillingsApiOpenBillingSummaryType summaryType) =>
       _$this._summaryType = summaryType;
 
   ListOpenBillingsApiOpenBillingDataType _dataType;
-
   ListOpenBillingsApiOpenBillingDataType get dataType => _$this._dataType;
-
   set dataType(ListOpenBillingsApiOpenBillingDataType dataType) =>
       _$this._dataType = dataType;
 
   double _doubleValue;
-
   double get doubleValue => _$this._doubleValue;
-
   set doubleValue(double doubleValue) => _$this._doubleValue = doubleValue;
 
   int _longValue;
-
   int get longValue => _$this._longValue;
-
   set longValue(int longValue) => _$this._longValue = longValue;
 
   ListOpenBillingsApiOpenBillingBuilder();
@@ -316,7 +306,6 @@ class _$ListOpenBillingsApiOpenBillingActions
       ListOpenBillingsApiOpenBillingBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -344,7 +333,6 @@ class _$ListOpenBillingsApiOpenBillingActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOpenBillingsApiOpenBilling);

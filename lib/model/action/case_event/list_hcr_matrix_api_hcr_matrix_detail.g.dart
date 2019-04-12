@@ -294,79 +294,55 @@ class ListHcrMatrixApiHcrMatrixDetailBuilder
   _$ListHcrMatrixApiHcrMatrixDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _teamId;
-
   String get teamId => _$this._teamId;
-
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _teamText;
-
   String get teamText => _$this._teamText;
-
   set teamText(String teamText) => _$this._teamText = teamText;
 
   String _facilityId;
-
   String get facilityId => _$this._facilityId;
-
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _facilityText;
-
   String get facilityText => _$this._facilityText;
-
   set facilityText(String facilityText) => _$this._facilityText = facilityText;
 
   bool _allFacilities;
-
   bool get allFacilities => _$this._allFacilities;
-
   set allFacilities(bool allFacilities) =>
       _$this._allFacilities = allFacilities;
 
   String _physicianId;
-
   String get physicianId => _$this._physicianId;
-
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianText;
-
   String get physicianText => _$this._physicianText;
-
   set physicianText(String physicianText) =>
       _$this._physicianText = physicianText;
 
   bool _allPhysicians;
-
   bool get allPhysicians => _$this._allPhysicians;
-
   set allPhysicians(bool allPhysicians) =>
       _$this._allPhysicians = allPhysicians;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureText;
-
   String get procedureText => _$this._procedureText;
-
   set procedureText(String procedureText) =>
       _$this._procedureText = procedureText;
 
   bool _allProcedures;
-
   bool get allProcedures => _$this._allProcedures;
-
   set allProcedures(bool allProcedures) =>
       _$this._allProcedures = allProcedures;
 
@@ -526,7 +502,6 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
       ListHcrMatrixApiHcrMatrixDetailBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -568,7 +543,6 @@ class _$ListHcrMatrixApiHcrMatrixDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHcrMatrixApiHcrMatrixDetail);

@@ -107,10 +107,8 @@ class GetOrgUnitChildrenApiResponseBuilder
   _$GetOrgUnitChildrenApiResponse _$v;
 
   ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail> _data;
-
   ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail> get data =>
       _$this._data ??= new ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail>();
-
   set data(ListBuilder<GetOrgUnitChildrenApiOrgUnitDetail> data) =>
       _$this._data = data;
 
@@ -202,7 +200,6 @@ class _$GetOrgUnitChildrenApiResponseActions
       GetOrgUnitChildrenApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -222,7 +219,6 @@ class _$GetOrgUnitChildrenApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetOrgUnitChildrenApiResponse);

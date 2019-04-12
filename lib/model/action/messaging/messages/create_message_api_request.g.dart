@@ -117,16 +117,12 @@ class CreateMessageApiRequestBuilder
   _$CreateMessageApiRequest _$v;
 
   String _fromParticipantId;
-
   String get fromParticipantId => _$this._fromParticipantId;
-
   set fromParticipantId(String fromParticipantId) =>
       _$this._fromParticipantId = fromParticipantId;
 
   String _messageText;
-
   String get messageText => _$this._messageText;
-
   set messageText(String messageText) => _$this._messageText = messageText;
 
   CreateMessageApiRequestBuilder();
@@ -212,7 +208,6 @@ class _$CreateMessageApiRequestActions extends CreateMessageApiRequestActions {
       CreateMessageApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -234,7 +229,6 @@ class _$CreateMessageApiRequestActions extends CreateMessageApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateMessageApiRequest);
 }

@@ -143,26 +143,20 @@ class GetOfflineAuditDataApiResponseBuilder
   _$GetOfflineAuditDataApiResponse _$v;
 
   ListAuditsApiResponseBuilder _listResponse;
-
   ListAuditsApiResponseBuilder get listResponse =>
       _$this._listResponse ??= new ListAuditsApiResponseBuilder();
-
   set listResponse(ListAuditsApiResponseBuilder listResponse) =>
       _$this._listResponse = listResponse;
 
   ListBuilder<GetAuditApiResponse> _detailResponses;
-
   ListBuilder<GetAuditApiResponse> get detailResponses =>
       _$this._detailResponses ??= new ListBuilder<GetAuditApiResponse>();
-
   set detailResponses(ListBuilder<GetAuditApiResponse> detailResponses) =>
       _$this._detailResponses = detailResponses;
 
   ListBuilder<GetOfflineAuditDataApiAuditItem> _auditItems;
-
   ListBuilder<GetOfflineAuditDataApiAuditItem> get auditItems =>
       _$this._auditItems ??= new ListBuilder<GetOfflineAuditDataApiAuditItem>();
-
   set auditItems(ListBuilder<GetOfflineAuditDataApiAuditItem> auditItems) =>
       _$this._auditItems = auditItems;
 
@@ -283,14 +277,12 @@ class _$GetOfflineAuditDataApiResponseActions
       GetOfflineAuditDataApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.listResponse,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -314,7 +306,6 @@ class _$GetOfflineAuditDataApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetOfflineAuditDataApiResponse);

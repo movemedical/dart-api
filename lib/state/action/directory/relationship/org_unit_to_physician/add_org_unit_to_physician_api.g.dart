@@ -10,72 +10,73 @@ part of 'add_org_unit_to_physician_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AddOrgUnitToPhysicianApi> AddOrgUnitToPhysicianApiOptions();
 
 class _$AddOrgUnitToPhysicianApi extends AddOrgUnitToPhysicianApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AddOrgUnitToPhysicianApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>, AddOrgUnitToPhysicianApi, String>> $cancel;
+          ApiResult<Nothing>, AddOrgUnitToPhysicianApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddOrgUnitToPhysicianApi,
           Command<ApiCommand<AddOrgUnitToPhysicianApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddOrgUnitToPhysicianApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddOrgUnitToPhysicianApi,
           CommandProgress>> $progress;
 
   _$AddOrgUnitToPhysicianApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddOrgUnitToPhysicianApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddOrgUnitToPhysicianApi,
                     Command<ApiCommand<AddOrgUnitToPhysicianApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddOrgUnitToPhysicianApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddOrgUnitToPhysicianApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$AddOrgUnitToPhysicianApi extends AddOrgUnitToPhysicianApi {
       _$AddOrgUnitToPhysicianApi._(options());
 
   @override
-  CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddOrgUnitToPhysicianApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddOrgUnitToPhysicianApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AddOrgUnitToPhysicianApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$AddOrgUnitToPhysicianApi extends AddOrgUnitToPhysicianApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddOrgUnitToPhysicianApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$AddOrgUnitToPhysicianApi extends AddOrgUnitToPhysicianApi {
       ApiCommand<AddOrgUnitToPhysicianApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$AddOrgUnitToPhysicianApi extends AddOrgUnitToPhysicianApi {
       AddOrgUnitToPhysicianApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AddOrgUnitToPhysicianApiRequest> get commandPayloadSerializer =>
       AddOrgUnitToPhysicianApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

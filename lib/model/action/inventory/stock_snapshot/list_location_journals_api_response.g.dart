@@ -124,18 +124,14 @@ class ListLocationJournalsApiResponseBuilder
   _$ListLocationJournalsApiResponse _$v;
 
   ListBuilder<ListLocationJournalsApiLocationJournal> _data;
-
   ListBuilder<ListLocationJournalsApiLocationJournal> get data =>
       _$this._data ??=
           new ListBuilder<ListLocationJournalsApiLocationJournal>();
-
   set data(ListBuilder<ListLocationJournalsApiLocationJournal> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListLocationJournalsApiResponseBuilder();
@@ -233,7 +229,6 @@ class _$ListLocationJournalsApiResponseActions
       ListLocationJournalsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,7 +250,6 @@ class _$ListLocationJournalsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListLocationJournalsApiResponse);

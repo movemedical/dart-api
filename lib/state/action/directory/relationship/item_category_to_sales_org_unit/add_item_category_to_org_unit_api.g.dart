@@ -11,72 +11,72 @@ part of 'add_item_category_to_org_unit_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AddItemCategoryToOrgUnitApi> AddItemCategoryToOrgUnitApiOptions();
 
 class _$AddItemCategoryToOrgUnitApi extends AddItemCategoryToOrgUnitApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AddItemCategoryToOrgUnitApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>, AddItemCategoryToOrgUnitApi, String>> $cancel;
+          ApiResult<Nothing>, AddItemCategoryToOrgUnitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddItemCategoryToOrgUnitApi,
           Command<ApiCommand<AddItemCategoryToOrgUnitApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddItemCategoryToOrgUnitApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AddItemCategoryToOrgUnitApi,
           CommandProgress>> $progress;
 
   _$AddItemCategoryToOrgUnitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddItemCategoryToOrgUnitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddItemCategoryToOrgUnitApi,
                     Command<ApiCommand<AddItemCategoryToOrgUnitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AddItemCategoryToOrgUnitApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AddItemCategoryToOrgUnitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,18 @@ class _$AddItemCategoryToOrgUnitApi extends AddItemCategoryToOrgUnitApi {
       _$AddItemCategoryToOrgUnitApi._(options());
 
   @override
-  CommandState<ApiCommand<AddItemCategoryToOrgUnitApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
+          ApiResult<Nothing>>
       get $initial => CommandState<
-          ApiCommand<AddItemCategoryToOrgUnitApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AddItemCategoryToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AddItemCategoryToOrgUnitApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AddItemCategoryToOrgUnitApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AddItemCategoryToOrgUnitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +109,10 @@ class _$AddItemCategoryToOrgUnitApi extends AddItemCategoryToOrgUnitApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddItemCategoryToOrgUnitApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +120,8 @@ class _$AddItemCategoryToOrgUnitApi extends AddItemCategoryToOrgUnitApi {
       ApiCommand<AddItemCategoryToOrgUnitApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +131,12 @@ class _$AddItemCategoryToOrgUnitApi extends AddItemCategoryToOrgUnitApi {
       AddItemCategoryToOrgUnitApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AddItemCategoryToOrgUnitApiRequest> get commandPayloadSerializer =>
       AddItemCategoryToOrgUnitApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

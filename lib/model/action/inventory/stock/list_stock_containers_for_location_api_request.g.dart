@@ -155,28 +155,20 @@ class ListStockContainersForLocationApiRequestBuilder
   _$ListStockContainersForLocationApiRequest _$v;
 
   String _locationId;
-
   String get locationId => _$this._locationId;
-
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _locationType;
-
   LocationType get locationType => _$this._locationType;
-
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   ListStockContainersForLocationApiRequestBuilder();
@@ -274,7 +266,6 @@ class _$ListStockContainersForLocationApiRequestActions
       ListStockContainersForLocationApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -300,7 +291,6 @@ class _$ListStockContainersForLocationApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockContainersForLocationApiRequest);

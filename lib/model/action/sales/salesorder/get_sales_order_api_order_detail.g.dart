@@ -622,228 +622,164 @@ class GetSalesOrderApiOrderDetailBuilder
   _$GetSalesOrderApiOrderDetail _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _orderNumber;
-
   int get orderNumber => _$this._orderNumber;
-
   set orderNumber(int orderNumber) => _$this._orderNumber = orderNumber;
 
   DateTime _createdDate;
-
   DateTime get createdDate => _$this._createdDate;
-
   set createdDate(DateTime createdDate) => _$this._createdDate = createdDate;
 
   String _createdBy;
-
   String get createdBy => _$this._createdBy;
-
   set createdBy(String createdBy) => _$this._createdBy = createdBy;
 
   OrderStatus _status;
-
   OrderStatus get status => _$this._status;
-
   set status(OrderStatus status) => _$this._status = status;
 
   String _email;
-
   String get email => _$this._email;
-
   set email(String email) => _$this._email = email;
 
   String _attention;
-
   String get attention => _$this._attention;
-
   set attention(String attention) => _$this._attention = attention;
 
   OrderReasonBuilder _orderReason;
-
   OrderReasonBuilder get orderReason =>
       _$this._orderReason ??= new OrderReasonBuilder();
-
   set orderReason(OrderReasonBuilder orderReason) =>
       _$this._orderReason = orderReason;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationBuilder _location;
-
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
-
   set location(LocationBuilder location) => _$this._location = location;
 
   DateRangeBuilder _deliveryWindow;
-
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
-
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   DateTime _sourceStartDate;
-
   DateTime get sourceStartDate => _$this._sourceStartDate;
-
   set sourceStartDate(DateTime sourceStartDate) =>
       _$this._sourceStartDate = sourceStartDate;
 
   OrgUnitBuilder _opsOrgUnit;
-
   OrgUnitBuilder get opsOrgUnit => _$this._opsOrgUnit ??= new OrgUnitBuilder();
-
   set opsOrgUnit(OrgUnitBuilder opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   OrgUnitBuilder _salesOrgUnit;
-
   OrgUnitBuilder get salesOrgUnit =>
       _$this._salesOrgUnit ??= new OrgUnitBuilder();
-
   set salesOrgUnit(OrgUnitBuilder salesOrgUnit) =>
       _$this._salesOrgUnit = salesOrgUnit;
 
   ListBuilder<OrderHeaderLite> _restockOrders;
-
   ListBuilder<OrderHeaderLite> get restockOrders =>
       _$this._restockOrders ??= new ListBuilder<OrderHeaderLite>();
-
   set restockOrders(ListBuilder<OrderHeaderLite> restockOrders) =>
       _$this._restockOrders = restockOrders;
 
   GetSalesOrderApiCaseEventBuilder _caseEvent;
-
   GetSalesOrderApiCaseEventBuilder get caseEvent =>
       _$this._caseEvent ??= new GetSalesOrderApiCaseEventBuilder();
-
   set caseEvent(GetSalesOrderApiCaseEventBuilder caseEvent) =>
       _$this._caseEvent = caseEvent;
 
   CustomerAddressBuilder _shipToAddress;
-
   CustomerAddressBuilder get shipToAddress =>
       _$this._shipToAddress ??= new CustomerAddressBuilder();
-
   set shipToAddress(CustomerAddressBuilder shipToAddress) =>
       _$this._shipToAddress = shipToAddress;
 
   CustomerAddressBuilder _billToAddress;
-
   CustomerAddressBuilder get billToAddress =>
       _$this._billToAddress ??= new CustomerAddressBuilder();
-
   set billToAddress(CustomerAddressBuilder billToAddress) =>
       _$this._billToAddress = billToAddress;
 
   CustomerAddressBuilder _deliverToAddress;
-
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
-
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   PhysicianBuilder _physician;
-
   PhysicianBuilder get physician =>
       _$this._physician ??= new PhysicianBuilder();
-
   set physician(PhysicianBuilder physician) => _$this._physician = physician;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _erpReference;
-
   String get erpReference => _$this._erpReference;
-
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   InventoryTypeBuilder _toInventoryType;
-
   InventoryTypeBuilder get toInventoryType =>
       _$this._toInventoryType ??= new InventoryTypeBuilder();
-
   set toInventoryType(InventoryTypeBuilder toInventoryType) =>
       _$this._toInventoryType = toInventoryType;
 
   LocationBuilder _toHomeLocation;
-
   LocationBuilder get toHomeLocation =>
       _$this._toHomeLocation ??= new LocationBuilder();
-
   set toHomeLocation(LocationBuilder toHomeLocation) =>
       _$this._toHomeLocation = toHomeLocation;
 
   ResponsiblePartyBuilder _toResponsibleParty;
-
   ResponsiblePartyBuilder get toResponsibleParty =>
       _$this._toResponsibleParty ??= new ResponsiblePartyBuilder();
-
   set toResponsibleParty(ResponsiblePartyBuilder toResponsibleParty) =>
       _$this._toResponsibleParty = toResponsibleParty;
 
   double _grandTotal;
-
   double get grandTotal => _$this._grandTotal;
-
   set grandTotal(double grandTotal) => _$this._grandTotal = grandTotal;
 
   int _itemQuantity;
-
   int get itemQuantity => _$this._itemQuantity;
-
   set itemQuantity(int itemQuantity) => _$this._itemQuantity = itemQuantity;
 
   GetSalesOrderApiCustomerDetailBuilder _customer;
-
   GetSalesOrderApiCustomerDetailBuilder get customer =>
       _$this._customer ??= new GetSalesOrderApiCustomerDetailBuilder();
-
   set customer(GetSalesOrderApiCustomerDetailBuilder customer) =>
       _$this._customer = customer;
 
   ListBuilder<GetSalesOrderApiValidationMsg> _validationMessages;
-
   ListBuilder<GetSalesOrderApiValidationMsg> get validationMessages =>
       _$this._validationMessages ??=
           new ListBuilder<GetSalesOrderApiValidationMsg>();
-
   set validationMessages(
           ListBuilder<GetSalesOrderApiValidationMsg> validationMessages) =>
       _$this._validationMessages = validationMessages;
 
   HcrBuilder _hcr;
-
   HcrBuilder get hcr => _$this._hcr ??= new HcrBuilder();
-
   set hcr(HcrBuilder hcr) => _$this._hcr = hcr;
 
   String _lastWebServiceLogId;
-
   String get lastWebServiceLogId => _$this._lastWebServiceLogId;
-
   set lastWebServiceLogId(String lastWebServiceLogId) =>
       _$this._lastWebServiceLogId = lastWebServiceLogId;
 
   ShippingServiceBuilder _shippingService;
-
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
-
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
@@ -1250,7 +1186,6 @@ class _$GetSalesOrderApiOrderDetailActions
       GetSalesOrderApiOrderDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orderReason,
@@ -1272,7 +1207,6 @@ class _$GetSalesOrderApiOrderDetailActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1354,7 +1288,6 @@ class _$GetSalesOrderApiOrderDetailActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetSalesOrderApiOrderDetail);

@@ -207,46 +207,32 @@ class ListTeamMembersApiTeamMemberBuilder
   _$ListTeamMembersApiTeamMember _$v;
 
   String _linkedId;
-
   String get linkedId => _$this._linkedId;
-
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   ContactType _linkedType;
-
   ContactType get linkedType => _$this._linkedType;
-
   set linkedType(ContactType linkedType) => _$this._linkedType = linkedType;
 
   GeneralContactType _generalLinkedType;
-
   GeneralContactType get generalLinkedType => _$this._generalLinkedType;
-
   set generalLinkedType(GeneralContactType generalLinkedType) =>
       _$this._generalLinkedType = generalLinkedType;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ListTeamMembersApiTeamMemberBuilder();
@@ -382,14 +368,12 @@ class _$ListTeamMembersApiTeamMemberActions
       ListTeamMembersApiTeamMemberBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -421,7 +405,6 @@ class _$ListTeamMembersApiTeamMemberActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListTeamMembersApiTeamMember);

@@ -208,48 +208,34 @@ class ListAdjustmentsApiAdjustmentBuilder
   _$ListAdjustmentsApiAdjustment _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   int _number;
-
   int get number => _$this._number;
-
   set number(int number) => _$this._number = number;
 
   AdjustmentStatus _status;
-
   AdjustmentStatus get status => _$this._status;
-
   set status(AdjustmentStatus status) => _$this._status = status;
 
   AdjustmentReason _reason;
-
   AdjustmentReason get reason => _$this._reason;
-
   set reason(AdjustmentReason reason) => _$this._reason = reason;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   StockPlaceBuilder _stockPlace;
-
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
-
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   DateTime _adjustedDate;
-
   DateTime get adjustedDate => _$this._adjustedDate;
-
   set adjustedDate(DateTime adjustedDate) =>
       _$this._adjustedDate = adjustedDate;
 
@@ -387,7 +373,6 @@ class _$ListAdjustmentsApiAdjustmentActions
       ListAdjustmentsApiAdjustmentBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -395,7 +380,6 @@ class _$ListAdjustmentsApiAdjustmentActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -427,7 +411,6 @@ class _$ListAdjustmentsApiAdjustmentActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAdjustmentsApiAdjustment);

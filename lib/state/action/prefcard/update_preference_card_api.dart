@@ -10,8 +10,8 @@ part 'update_preference_card_api.g.dart';
 abstract class UpdatePreferenceCardApi extends ApiDispatcher<
     UpdatePreferenceCardApiRequest,
     UpdatePreferenceCardApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdatePreferenceCardApi> {
   @override
   String get path => 'v1/prefcard/update';

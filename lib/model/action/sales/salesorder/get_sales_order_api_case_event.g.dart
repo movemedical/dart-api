@@ -186,39 +186,27 @@ class GetSalesOrderApiCaseEventBuilder
   _$GetSalesOrderApiCaseEvent _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   int _eventNumber;
-
   int get eventNumber => _$this._eventNumber;
-
   set eventNumber(int eventNumber) => _$this._eventNumber = eventNumber;
 
   OrgUnitBuilder _salesOu;
-
   OrgUnitBuilder get salesOu => _$this._salesOu ??= new OrgUnitBuilder();
-
   set salesOu(OrgUnitBuilder salesOu) => _$this._salesOu = salesOu;
 
   OrgUnitBuilder _opsOu;
-
   OrgUnitBuilder get opsOu => _$this._opsOu ??= new OrgUnitBuilder();
-
   set opsOu(OrgUnitBuilder opsOu) => _$this._opsOu = opsOu;
 
   HcrTeamBuilder _hcrTeam;
-
   HcrTeamBuilder get hcrTeam => _$this._hcrTeam ??= new HcrTeamBuilder();
-
   set hcrTeam(HcrTeamBuilder hcrTeam) => _$this._hcrTeam = hcrTeam;
 
   GetSalesOrderApiCaseEventBuilder();
@@ -354,7 +342,6 @@ class _$GetSalesOrderApiCaseEventActions
       GetSalesOrderApiCaseEventBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.salesOu,
@@ -363,7 +350,6 @@ class _$GetSalesOrderApiCaseEventActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -393,7 +379,6 @@ class _$GetSalesOrderApiCaseEventActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSalesOrderApiCaseEvent);
 }

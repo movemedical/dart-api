@@ -108,11 +108,9 @@ class GetWebServiceLogApiResponseBuilder
   _$GetWebServiceLogApiResponse _$v;
 
   GetWebServiceLogApiWebServiceLogDetailBuilder _webServiceLogDetail;
-
   GetWebServiceLogApiWebServiceLogDetailBuilder get webServiceLogDetail =>
       _$this._webServiceLogDetail ??=
           new GetWebServiceLogApiWebServiceLogDetailBuilder();
-
   set webServiceLogDetail(
           GetWebServiceLogApiWebServiceLogDetailBuilder webServiceLogDetail) =>
       _$this._webServiceLogDetail = webServiceLogDetail;
@@ -214,14 +212,12 @@ class _$GetWebServiceLogApiResponseActions
       GetWebServiceLogApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.webServiceLogDetail,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,7 +237,6 @@ class _$GetWebServiceLogApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetWebServiceLogApiResponse);

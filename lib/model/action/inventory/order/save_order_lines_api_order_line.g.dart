@@ -163,33 +163,23 @@ class SaveOrderLinesApiOrderLineBuilder
   _$SaveOrderLinesApiOrderLine _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
-
   String get lotId => _$this._lotId;
-
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
-
   String get serialId => _$this._serialId;
-
   set serialId(String serialId) => _$this._serialId = serialId;
 
   int _quantity;
-
   int get quantity => _$this._quantity;
-
   set quantity(int quantity) => _$this._quantity = quantity;
 
   SaveOrderLinesApiOrderLineBuilder();
@@ -288,7 +278,6 @@ class _$SaveOrderLinesApiOrderLineActions
       SaveOrderLinesApiOrderLineBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -316,7 +305,6 @@ class _$SaveOrderLinesApiOrderLineActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveOrderLinesApiOrderLine);
 }

@@ -127,18 +127,14 @@ class ListItemCategoriesToBeCountedApiResponseBuilder
   _$ListItemCategoriesToBeCountedApiResponse _$v;
 
   ListBuilder<ListItemCategoriesToBeCountedApiItemCategory> _data;
-
   ListBuilder<ListItemCategoriesToBeCountedApiItemCategory> get data =>
       _$this._data ??=
           new ListBuilder<ListItemCategoriesToBeCountedApiItemCategory>();
-
   set data(ListBuilder<ListItemCategoriesToBeCountedApiItemCategory> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListItemCategoriesToBeCountedApiResponseBuilder();
@@ -239,7 +235,6 @@ class _$ListItemCategoriesToBeCountedApiResponseActions
       ListItemCategoriesToBeCountedApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -261,7 +256,6 @@ class _$ListItemCategoriesToBeCountedApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListItemCategoriesToBeCountedApiResponse);

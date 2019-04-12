@@ -10,65 +10,72 @@ part of 'assign_kit_container_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AssignKitContainerApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AssignKitContainerApi> AssignKitContainerApiOptions();
 
 class _$AssignKitContainerApi extends AssignKitContainerApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<AssignKitContainerApiRequest>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AssignKitContainerApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
-          AssignKitContainerApi, String>> $cancel;
+      CommandPayload<ApiCommand<AssignKitContainerApiRequest>,
+          ApiResult<Nothing>, AssignKitContainerApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AssignKitContainerApi,
           Command<ApiCommand<AssignKitContainerApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
-          AssignKitContainerApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<
+          ApiCommand<AssignKitContainerApiRequest>,
+          ApiResult<Nothing>,
+          AssignKitContainerApi,
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>,
-          AssignKitContainerApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<AssignKitContainerApiRequest>,
+          ApiResult<Nothing>,
+          AssignKitContainerApi,
+          CommandProgress>> $progress;
 
   _$AssignKitContainerApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AssignKitContainerApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AssignKitContainerApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AssignKitContainerApi,
                     Command<ApiCommand<AssignKitContainerApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AssignKitContainerApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AssignKitContainerApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AssignKitContainerApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AssignKitContainerApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,18 +84,17 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
       _$AssignKitContainerApi._(options());
 
   @override
-  CommandState<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AssignKitContainerApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AssignKitContainerApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AssignKitContainerApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -100,11 +106,10 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AssignKitContainerApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -112,7 +117,8 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
       ApiCommand<AssignKitContainerApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -122,12 +128,12 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
       AssignKitContainerApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AssignKitContainerApiRequest> get commandPayloadSerializer =>
       AssignKitContainerApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

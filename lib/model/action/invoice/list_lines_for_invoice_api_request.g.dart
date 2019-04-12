@@ -105,9 +105,7 @@ class ListLinesForInvoiceApiRequestBuilder
   _$ListLinesForInvoiceApiRequest _$v;
 
   String _invoiceId;
-
   String get invoiceId => _$this._invoiceId;
-
   set invoiceId(String invoiceId) => _$this._invoiceId = invoiceId;
 
   ListLinesForInvoiceApiRequestBuilder();
@@ -185,7 +183,6 @@ class _$ListLinesForInvoiceApiRequestActions
       ListLinesForInvoiceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -205,7 +202,6 @@ class _$ListLinesForInvoiceApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListLinesForInvoiceApiRequest);

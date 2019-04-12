@@ -10,8 +10,8 @@ part 'update_case_status_to_confirmed_api.g.dart';
 abstract class UpdateCaseStatusToConfirmedApi extends ApiDispatcher<
     UpdateCaseStatusToConfirmedApiRequest,
     UpdateCaseStatusToConfirmedApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCaseStatusToConfirmedApi> {
   @override
   String get path => 'v1/case_event/status/update_to_confirmed';

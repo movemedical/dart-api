@@ -10,64 +10,65 @@ part of 'remove_presence_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<RemovePresenceApiRequest>,
+        ApiResult<Nothing>>,
     RemovePresenceApi> RemovePresenceApiOptions();
 
 class _$RemovePresenceApi extends RemovePresenceApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemovePresenceApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RemovePresenceApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<RemovePresenceApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>,
           RemovePresenceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemovePresenceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemovePresenceApi,
           Command<ApiCommand<RemovePresenceApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>,
-          RemovePresenceApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>,
+          RemovePresenceApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>,
           RemovePresenceApi, CommandProgress>> $progress;
 
   _$RemovePresenceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemovePresenceApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemovePresenceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemovePresenceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemovePresenceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemovePresenceApi,
                     Command<ApiCommand<RemovePresenceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RemovePresenceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemovePresenceApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemovePresenceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemovePresenceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -76,17 +77,16 @@ class _$RemovePresenceApi extends RemovePresenceApi {
       _$RemovePresenceApi._(options());
 
   @override
-  CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RemovePresenceApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RemovePresenceApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<RemovePresenceApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<RemovePresenceApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,11 +98,10 @@ class _$RemovePresenceApi extends RemovePresenceApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemovePresenceApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -110,7 +109,8 @@ class _$RemovePresenceApi extends RemovePresenceApi {
       ApiCommand<RemovePresenceApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -120,12 +120,12 @@ class _$RemovePresenceApi extends RemovePresenceApi {
       RemovePresenceApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RemovePresenceApiRequest> get commandPayloadSerializer =>
       RemovePresenceApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

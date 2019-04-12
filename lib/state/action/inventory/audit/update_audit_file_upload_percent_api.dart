@@ -10,8 +10,8 @@ part 'update_audit_file_upload_percent_api.g.dart';
 abstract class UpdateAuditFileUploadPercentApi extends ApiDispatcher<
     UpdateAuditFileUploadPercentApiRequest,
     UpdateAuditFileUploadPercentApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateAuditFileUploadPercentApi> {
   @override
   String get path => 'v1/inventory/audit/update_file_upload_percent';

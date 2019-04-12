@@ -108,11 +108,9 @@ class GetShippingServiceApiResponseBuilder
   _$GetShippingServiceApiResponse _$v;
 
   GetShippingServiceApiShippingServiceDetailBuilder _shippingService;
-
   GetShippingServiceApiShippingServiceDetailBuilder get shippingService =>
       _$this._shippingService ??=
           new GetShippingServiceApiShippingServiceDetailBuilder();
-
   set shippingService(
           GetShippingServiceApiShippingServiceDetailBuilder shippingService) =>
       _$this._shippingService = shippingService;
@@ -214,14 +212,12 @@ class _$GetShippingServiceApiResponseActions
       GetShippingServiceApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.shippingService,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,7 +237,6 @@ class _$GetShippingServiceApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetShippingServiceApiResponse);

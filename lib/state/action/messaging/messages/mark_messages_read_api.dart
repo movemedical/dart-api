@@ -10,8 +10,8 @@ part 'mark_messages_read_api.g.dart';
 abstract class MarkMessagesReadApi extends ApiDispatcher<
     MarkMessagesReadApiRequest,
     MarkMessagesReadApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     MarkMessagesReadApi> {
   @override
   String get path => 'v1/messaging/messages/mark_message_read';

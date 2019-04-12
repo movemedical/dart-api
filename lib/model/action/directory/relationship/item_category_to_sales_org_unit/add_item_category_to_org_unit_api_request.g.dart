@@ -154,28 +154,20 @@ class AddItemCategoryToOrgUnitApiRequestBuilder
   _$AddItemCategoryToOrgUnitApiRequest _$v;
 
   String _itemCategoryId;
-
   String get itemCategoryId => _$this._itemCategoryId;
-
   set itemCategoryId(String itemCategoryId) =>
       _$this._itemCategoryId = itemCategoryId;
 
   String _orgUnitId;
-
   String get orgUnitId => _$this._orgUnitId;
-
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   bool _canStock;
-
   bool get canStock => _$this._canStock;
-
   set canStock(bool canStock) => _$this._canStock = canStock;
 
   bool _canSell;
-
   bool get canSell => _$this._canSell;
-
   set canSell(bool canSell) => _$this._canSell = canSell;
 
   AddItemCategoryToOrgUnitApiRequestBuilder();
@@ -273,7 +265,6 @@ class _$AddItemCategoryToOrgUnitApiRequestActions
       AddItemCategoryToOrgUnitApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -299,7 +290,6 @@ class _$AddItemCategoryToOrgUnitApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AddItemCategoryToOrgUnitApiRequest);

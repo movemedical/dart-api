@@ -10,8 +10,8 @@ part 'request_shipment_packing_list_doc_api.g.dart';
 abstract class RequestShipmentPackingListDocApi extends ApiDispatcher<
     RequestShipmentPackingListDocApiRequest,
     RequestShipmentPackingListDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestShipmentPackingListDocApi> {
   @override
   String get path => 'v1/doc/shipmentPackingList';

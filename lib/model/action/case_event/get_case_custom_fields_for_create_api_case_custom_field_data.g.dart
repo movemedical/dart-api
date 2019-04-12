@@ -162,27 +162,19 @@ class GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder
   _$GetCaseCustomFieldsForCreateApiCaseCustomFieldData _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   CustomFieldDataType _dataType;
-
   CustomFieldDataType get dataType => _$this._dataType;
-
   set dataType(CustomFieldDataType dataType) => _$this._dataType = dataType;
 
   bool _required;
-
   bool get required => _$this._required;
-
   set required(bool required) => _$this._required = required;
 
   GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder();
@@ -279,7 +271,6 @@ class _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions
       GetCaseCustomFieldsForCreateApiCaseCustomFieldDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -305,7 +296,6 @@ class _$GetCaseCustomFieldsForCreateApiCaseCustomFieldDataActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??=
       FullType(GetCaseCustomFieldsForCreateApiCaseCustomFieldData);

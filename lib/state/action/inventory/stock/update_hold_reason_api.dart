@@ -10,8 +10,8 @@ part 'update_hold_reason_api.g.dart';
 abstract class UpdateHoldReasonApi extends ApiDispatcher<
     UpdateHoldReasonApiRequest,
     UpdateHoldReasonApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateHoldReasonApi> {
   @override
   String get path => 'v1/inventory/stock/hold_reason/update';

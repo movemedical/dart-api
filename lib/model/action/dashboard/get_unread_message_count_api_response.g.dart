@@ -105,9 +105,7 @@ class GetUnreadMessageCountApiResponseBuilder
   _$GetUnreadMessageCountApiResponse _$v;
 
   int _count;
-
   int get count => _$this._count;
-
   set count(int count) => _$this._count = count;
 
   GetUnreadMessageCountApiResponseBuilder();
@@ -186,7 +184,6 @@ class _$GetUnreadMessageCountApiResponseActions
       GetUnreadMessageCountApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,7 +203,6 @@ class _$GetUnreadMessageCountApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetUnreadMessageCountApiResponse);

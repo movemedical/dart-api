@@ -105,9 +105,7 @@ class PrepareItemFileDownloadApiRequestBuilder
   _$PrepareItemFileDownloadApiRequest _$v;
 
   String _fileId;
-
   String get fileId => _$this._fileId;
-
   set fileId(String fileId) => _$this._fileId = fileId;
 
   PrepareItemFileDownloadApiRequestBuilder();
@@ -186,7 +184,6 @@ class _$PrepareItemFileDownloadApiRequestActions
       PrepareItemFileDownloadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -206,7 +203,6 @@ class _$PrepareItemFileDownloadApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareItemFileDownloadApiRequest);

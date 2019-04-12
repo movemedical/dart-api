@@ -135,21 +135,15 @@ class ResetForgotPasswordApiRequestBuilder
   _$ResetForgotPasswordApiRequest _$v;
 
   String _email;
-
   String get email => _$this._email;
-
   set email(String email) => _$this._email = email;
 
   String _newPassword;
-
   String get newPassword => _$this._newPassword;
-
   set newPassword(String newPassword) => _$this._newPassword = newPassword;
 
   String _token;
-
   String get token => _$this._token;
-
   set token(String token) => _$this._token = token;
 
   ResetForgotPasswordApiRequestBuilder();
@@ -239,7 +233,6 @@ class _$ResetForgotPasswordApiRequestActions
       ResetForgotPasswordApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -263,7 +256,6 @@ class _$ResetForgotPasswordApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ResetForgotPasswordApiRequest);

@@ -434,132 +434,90 @@ class StockContainerBuilder
   _$StockContainer _$v;
 
   StockContainerType _containerType;
-
   StockContainerType get containerType => _$this._containerType;
-
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
-
   String get containerId => _$this._containerId;
-
   set containerId(String containerId) => _$this._containerId = containerId;
 
   String _zoneId;
-
   String get zoneId => _$this._zoneId;
-
   set zoneId(String zoneId) => _$this._zoneId = zoneId;
 
   ZoneType _zoneType;
-
   ZoneType get zoneType => _$this._zoneType;
-
   set zoneType(ZoneType zoneType) => _$this._zoneType = zoneType;
 
   String _zoneName;
-
   String get zoneName => _$this._zoneName;
-
   set zoneName(String zoneName) => _$this._zoneName = zoneName;
 
   String _binName;
-
   String get binName => _$this._binName;
-
   set binName(String binName) => _$this._binName = binName;
 
   BinType _binType;
-
   BinType get binType => _$this._binType;
-
   set binType(BinType binType) => _$this._binType = binType;
 
   String _binAisle;
-
   String get binAisle => _$this._binAisle;
-
   set binAisle(String binAisle) => _$this._binAisle = binAisle;
 
   int _binSection;
-
   int get binSection => _$this._binSection;
-
   set binSection(int binSection) => _$this._binSection = binSection;
 
   int _binShelf;
-
   int get binShelf => _$this._binShelf;
-
   set binShelf(int binShelf) => _$this._binShelf = binShelf;
 
   int _binPosition;
-
   int get binPosition => _$this._binPosition;
-
   set binPosition(int binPosition) => _$this._binPosition = binPosition;
 
   int _packageNumber;
-
   int get packageNumber => _$this._packageNumber;
-
   set packageNumber(int packageNumber) => _$this._packageNumber = packageNumber;
 
   String _itemNumber;
-
   String get itemNumber => _$this._itemNumber;
-
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   int _serialNumber;
-
   int get serialNumber => _$this._serialNumber;
-
   set serialNumber(int serialNumber) => _$this._serialNumber = serialNumber;
 
   String _serialRef;
-
   String get serialRef => _$this._serialRef;
-
   set serialRef(String serialRef) => _$this._serialRef = serialRef;
 
   bool _sealed;
-
   bool get sealed => _$this._sealed;
-
   set sealed(bool sealed) => _$this._sealed = sealed;
 
   String _displayText;
-
   String get displayText => _$this._displayText;
-
   set displayText(String displayText) => _$this._displayText = displayText;
 
   String _kitId;
-
   String get kitId => _$this._kitId;
-
   set kitId(String kitId) => _$this._kitId = kitId;
 
   String _kitItemNumber;
-
   String get kitItemNumber => _$this._kitItemNumber;
-
   set kitItemNumber(String kitItemNumber) =>
       _$this._kitItemNumber = kitItemNumber;
 
   int _kitSerialNumber;
-
   int get kitSerialNumber => _$this._kitSerialNumber;
-
   set kitSerialNumber(int kitSerialNumber) =>
       _$this._kitSerialNumber = kitSerialNumber;
 
   String _kitSerialRef;
-
   String get kitSerialRef => _$this._kitSerialRef;
-
   set kitSerialRef(String kitSerialRef) => _$this._kitSerialRef = kitSerialRef;
 
   StockContainerBuilder();
@@ -755,7 +713,6 @@ class _$StockContainerActions extends StockContainerActions {
   StockContainerBuilder $newBuilder() => StockContainerBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -815,7 +772,6 @@ class _$StockContainerActions extends StockContainerActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(StockContainer);
 }

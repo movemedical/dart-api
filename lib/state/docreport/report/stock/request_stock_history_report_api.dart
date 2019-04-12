@@ -10,8 +10,8 @@ part 'request_stock_history_report_api.g.dart';
 abstract class RequestStockHistoryReportApi extends ApiDispatcher<
     RequestStockHistoryReportApiRequest,
     RequestStockHistoryReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestStockHistoryReportApi> {
   @override
   String get path => 'v1/docreport/stock_history';

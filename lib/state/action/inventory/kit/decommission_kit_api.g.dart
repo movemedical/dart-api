@@ -10,65 +10,65 @@ part of 'decommission_kit_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     DecommissionKitApi> DecommissionKitApiOptions();
 
 class _$DecommissionKitApi extends DecommissionKitApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       DecommissionKitApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<DecommissionKitApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>,
           DecommissionKitApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           DecommissionKitApi,
           Command<ApiCommand<DecommissionKitApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
-          DecommissionKitApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>,
+          DecommissionKitApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>,
           DecommissionKitApi, CommandProgress>> $progress;
 
   _$DecommissionKitApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DecommissionKitApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<DecommissionKitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DecommissionKitApi,
                     Command<ApiCommand<DecommissionKitApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<DecommissionKitApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     DecommissionKitApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<DecommissionKitApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 DecommissionKitApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,16 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       _$DecommissionKitApi._(options());
 
   @override
-  CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<DecommissionKitApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<DecommissionKitApiRequest>, ApiResult<Empty>>();
+          ApiCommand<DecommissionKitApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +98,10 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DecommissionKitApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +109,8 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       ApiCommand<DecommissionKitApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +120,12 @@ class _$DecommissionKitApi extends DecommissionKitApi {
       DecommissionKitApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<DecommissionKitApiRequest> get commandPayloadSerializer =>
       DecommissionKitApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

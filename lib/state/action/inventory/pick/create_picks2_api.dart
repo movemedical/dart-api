@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/pick/create_picks2_api_re
 part 'create_picks2_api.g.dart';
 
 abstract class CreatePicks2Api extends ApiDispatcher<CreatePicks2ApiRequest,
-    CreatePicks2ApiRequestBuilder, Empty, EmptyBuilder, CreatePicks2Api> {
+    CreatePicks2ApiRequestBuilder, Nothing, NothingBuilder, CreatePicks2Api> {
   @override
   String get path => 'v1/inventory/pick/createMultiple2';
 

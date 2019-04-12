@@ -190,41 +190,29 @@ class ListOrgUnitTeamLinksApiTeamLinkBuilder
   _$ListOrgUnitTeamLinksApiTeamLink _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _teamId;
-
   String get teamId => _$this._teamId;
-
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _teamName;
-
   String get teamName => _$this._teamName;
-
   set teamName(String teamName) => _$this._teamName = teamName;
 
   OuAccessType _ouAccessType;
-
   OuAccessType get ouAccessType => _$this._ouAccessType;
-
   set ouAccessType(OuAccessType ouAccessType) =>
       _$this._ouAccessType = ouAccessType;
 
   int _numberOfPermissionsSet;
-
   int get numberOfPermissionsSet => _$this._numberOfPermissionsSet;
-
   set numberOfPermissionsSet(int numberOfPermissionsSet) =>
       _$this._numberOfPermissionsSet = numberOfPermissionsSet;
 
   int _numberOfInventoryTypes;
-
   int get numberOfInventoryTypes => _$this._numberOfInventoryTypes;
-
   set numberOfInventoryTypes(int numberOfInventoryTypes) =>
       _$this._numberOfInventoryTypes = numberOfInventoryTypes;
 
@@ -339,7 +327,6 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
       ListOrgUnitTeamLinksApiTeamLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -369,7 +356,6 @@ class _$ListOrgUnitTeamLinksApiTeamLinkActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListOrgUnitTeamLinksApiTeamLink);

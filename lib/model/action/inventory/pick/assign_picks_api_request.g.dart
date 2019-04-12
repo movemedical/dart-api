@@ -117,16 +117,12 @@ class AssignPicksApiRequestBuilder
   _$AssignPicksApiRequest _$v;
 
   String _userId;
-
   String get userId => _$this._userId;
-
   set userId(String userId) => _$this._userId = userId;
 
   ListBuilder<String> _pickIds;
-
   ListBuilder<String> get pickIds =>
       _$this._pickIds ??= new ListBuilder<String>();
-
   set pickIds(ListBuilder<String> pickIds) => _$this._pickIds = pickIds;
 
   AssignPicksApiRequestBuilder();
@@ -218,7 +214,6 @@ class _$AssignPicksApiRequestActions extends AssignPicksApiRequestActions {
   AssignPicksApiRequestBuilder $newBuilder() => AssignPicksApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -240,7 +235,6 @@ class _$AssignPicksApiRequestActions extends AssignPicksApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AssignPicksApiRequest);
 }

@@ -112,11 +112,9 @@ class ListUsersForIssueAssignmentApiResponseBuilder
   _$ListUsersForIssueAssignmentApiResponse _$v;
 
   ListBuilder<ListUsersForIssueAssignmentApiDisplayUser> _users;
-
   ListBuilder<ListUsersForIssueAssignmentApiDisplayUser> get users =>
       _$this._users ??=
           new ListBuilder<ListUsersForIssueAssignmentApiDisplayUser>();
-
   set users(ListBuilder<ListUsersForIssueAssignmentApiDisplayUser> users) =>
       _$this._users = users;
 
@@ -217,7 +215,6 @@ class _$ListUsersForIssueAssignmentApiResponseActions
       ListUsersForIssueAssignmentApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -237,7 +234,6 @@ class _$ListUsersForIssueAssignmentApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUsersForIssueAssignmentApiResponse);

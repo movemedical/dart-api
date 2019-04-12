@@ -10,8 +10,8 @@ part 'update_conversation_api.g.dart';
 abstract class UpdateConversationApi extends ApiDispatcher<
     UpdateConversationApiRequest,
     UpdateConversationApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateConversationApi> {
   @override
   String get path => 'v1/messaging/conversations/update_conversation';

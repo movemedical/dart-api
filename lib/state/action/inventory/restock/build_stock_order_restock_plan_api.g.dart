@@ -106,7 +106,6 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
           ApiResult<BuildStockOrderRestockPlanApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -118,7 +117,6 @@ class _$BuildStockOrderRestockPlanApi extends BuildStockOrderRestockPlanApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(BuildStockOrderRestockPlanApiRequest)]),

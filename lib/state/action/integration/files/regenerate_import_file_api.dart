@@ -10,8 +10,8 @@ part 'regenerate_import_file_api.g.dart';
 abstract class RegenerateImportFileApi extends ApiDispatcher<
     RegenerateImportFileApiRequest,
     RegenerateImportFileApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RegenerateImportFileApi> {
   @override
   String get path => 'v1/integration/file/regenerate_import_file';

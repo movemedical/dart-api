@@ -102,10 +102,8 @@ class GetPhysicianApiResponseBuilder
   _$GetPhysicianApiResponse _$v;
 
   GetPhysicianApiPhysicianDetailBuilder _detail;
-
   GetPhysicianApiPhysicianDetailBuilder get detail =>
       _$this._detail ??= new GetPhysicianApiPhysicianDetailBuilder();
-
   set detail(GetPhysicianApiPhysicianDetailBuilder detail) =>
       _$this._detail = detail;
 
@@ -201,14 +199,12 @@ class _$GetPhysicianApiResponseActions extends GetPhysicianApiResponseActions {
       GetPhysicianApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.detail,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,7 +224,6 @@ class _$GetPhysicianApiResponseActions extends GetPhysicianApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetPhysicianApiResponse);
 }

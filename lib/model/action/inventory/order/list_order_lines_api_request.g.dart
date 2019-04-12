@@ -152,29 +152,21 @@ class ListOrderLinesApiRequestBuilder
   _$ListOrderLinesApiRequest _$v;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListOrderLinesApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListOrderLinesApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListOrderLinesApiOrderBy>();
-
   set orderBy(OrderByParamsBuilder<ListOrderLinesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -299,7 +291,6 @@ class _$ListOrderLinesApiRequestActions
       ListOrderLinesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -307,7 +298,6 @@ class _$ListOrderLinesApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -333,7 +323,6 @@ class _$ListOrderLinesApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOrderLinesApiRequest);
 }

@@ -115,15 +115,11 @@ class ListKitContentsApiDiffBuilder
   _$ListKitContentsApiDiff _$v;
 
   ItemBuilder _item;
-
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
-
   set item(ItemBuilder item) => _$this._item = item;
 
   int _qty;
-
   int get qty => _$this._qty;
-
   set qty(int qty) => _$this._qty = qty;
 
   ListKitContentsApiDiffBuilder();
@@ -220,14 +216,12 @@ class _$ListKitContentsApiDiffActions extends ListKitContentsApiDiffActions {
       ListKitContentsApiDiffBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,7 +243,6 @@ class _$ListKitContentsApiDiffActions extends ListKitContentsApiDiffActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListKitContentsApiDiff);
 }

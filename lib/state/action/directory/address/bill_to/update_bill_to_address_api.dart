@@ -10,8 +10,8 @@ part 'update_bill_to_address_api.g.dart';
 abstract class UpdateBillToAddressApi extends ApiDispatcher<
     UpdateBillToAddressApiRequest,
     UpdateBillToAddressApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateBillToAddressApi> {
   @override
   String get path => 'v1/directory/address/bill_to/update';

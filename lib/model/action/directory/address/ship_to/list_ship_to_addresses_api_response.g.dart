@@ -122,16 +122,12 @@ class ListShipToAddressesApiResponseBuilder
   _$ListShipToAddressesApiResponse _$v;
 
   ListBuilder<CustomerAddress> _data;
-
   ListBuilder<CustomerAddress> get data =>
       _$this._data ??= new ListBuilder<CustomerAddress>();
-
   set data(ListBuilder<CustomerAddress> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListShipToAddressesApiResponseBuilder();
@@ -228,7 +224,6 @@ class _$ListShipToAddressesApiResponseActions
       ListShipToAddressesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$ListShipToAddressesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListShipToAddressesApiResponse);

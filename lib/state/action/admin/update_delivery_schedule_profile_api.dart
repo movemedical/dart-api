@@ -10,8 +10,8 @@ part 'update_delivery_schedule_profile_api.g.dart';
 abstract class UpdateDeliveryScheduleProfileApi extends ApiDispatcher<
     UpdateDeliveryScheduleProfileApiRequest,
     UpdateDeliveryScheduleProfileApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateDeliveryScheduleProfileApi> {
   @override
   String get path => 'v1/admin/delivery_profile/update';

@@ -10,8 +10,8 @@ part 'update_case_event_patient_api.g.dart';
 abstract class UpdateCaseEventPatientApi extends ApiDispatcher<
     UpdateCaseEventPatientApiRequest,
     UpdateCaseEventPatientApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateCaseEventPatientApi> {
   @override
   String get path => 'v1/case_event/update_patient';

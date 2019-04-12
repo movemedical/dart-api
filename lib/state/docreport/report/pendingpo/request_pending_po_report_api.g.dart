@@ -11,72 +11,72 @@ part of 'request_pending_po_report_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RequestPendingPoReportApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RequestPendingPoReportApi> RequestPendingPoReportApiOptions();
 
 class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RequestPendingPoReportApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>, RequestPendingPoReportApi, String>> $cancel;
+          ApiResult<Nothing>, RequestPendingPoReportApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestPendingPoReportApi,
           Command<ApiCommand<RequestPendingPoReportApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestPendingPoReportApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RequestPendingPoReportApi,
           CommandProgress>> $progress;
 
   _$RequestPendingPoReportApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RequestPendingPoReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestPendingPoReportApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RequestPendingPoReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestPendingPoReportApi,
                     Command<ApiCommand<RequestPendingPoReportApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RequestPendingPoReportApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RequestPendingPoReportApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RequestPendingPoReportApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RequestPendingPoReportApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
       _$RequestPendingPoReportApi._(options());
 
   @override
-  CommandState<ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RequestPendingPoReportApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RequestPendingPoReportApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestPendingPoReportApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
       ApiCommand<RequestPendingPoReportApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$RequestPendingPoReportApi extends RequestPendingPoReportApi {
       RequestPendingPoReportApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RequestPendingPoReportApiRequest> get commandPayloadSerializer =>
       RequestPendingPoReportApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

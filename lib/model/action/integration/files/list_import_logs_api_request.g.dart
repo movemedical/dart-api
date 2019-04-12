@@ -241,59 +241,41 @@ class ListImportLogsApiRequestBuilder
   _$ListImportLogsApiRequest _$v;
 
   String _importJobId;
-
   String get importJobId => _$this._importJobId;
-
   set importJobId(String importJobId) => _$this._importJobId = importJobId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   DateTime _startDate;
-
   DateTime get startDate => _$this._startDate;
-
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
-
   DateTime get endDate => _$this._endDate;
-
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   ImportStatus _currentState;
-
   ImportStatus get currentState => _$this._currentState;
-
   set currentState(ImportStatus currentState) =>
       _$this._currentState = currentState;
 
   bool _excludeEmpty;
-
   bool get excludeEmpty => _$this._excludeEmpty;
-
   set excludeEmpty(bool excludeEmpty) => _$this._excludeEmpty = excludeEmpty;
 
   ListImportLogsApiSortBy _sortBy;
-
   ListImportLogsApiSortBy get sortBy => _$this._sortBy;
-
   set sortBy(ListImportLogsApiSortBy sortBy) => _$this._sortBy = sortBy;
 
   bool _descending;
-
   bool get descending => _$this._descending;
-
   set descending(bool descending) => _$this._descending = descending;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListImportLogsApiRequestBuilder();
@@ -441,14 +423,12 @@ class _$ListImportLogsApiRequestActions
       ListImportLogsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -484,7 +464,6 @@ class _$ListImportLogsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListImportLogsApiRequest);
 }

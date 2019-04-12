@@ -10,8 +10,8 @@ part 'move_case_event_back_to_planning_api.g.dart';
 abstract class MoveCaseEventBackToPlanningApi extends ApiDispatcher<
     MoveCaseEventBackToPlanningApiRequest,
     MoveCaseEventBackToPlanningApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     MoveCaseEventBackToPlanningApi> {
   @override
   String get path => 'v1/case_event/move_to_planning';

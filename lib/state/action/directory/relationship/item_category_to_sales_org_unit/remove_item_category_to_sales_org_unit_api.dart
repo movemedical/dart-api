@@ -10,8 +10,8 @@ part 'remove_item_category_to_sales_org_unit_api.g.dart';
 abstract class RemoveItemCategoryToSalesOrgUnitApi extends ApiDispatcher<
     RemoveItemCategoryToSalesOrgUnitApiRequest,
     RemoveItemCategoryToSalesOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveItemCategoryToSalesOrgUnitApi> {
   @override
   String get path =>

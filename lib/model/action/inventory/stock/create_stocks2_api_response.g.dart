@@ -105,11 +105,9 @@ class CreateStocks2ApiResponseBuilder
   _$CreateStocks2ApiResponse _$v;
 
   ListBuilder<CreateStocks2ApiStockResponse> _stockResponses;
-
   ListBuilder<CreateStocks2ApiStockResponse> get stockResponses =>
       _$this._stockResponses ??=
           new ListBuilder<CreateStocks2ApiStockResponse>();
-
   set stockResponses(
           ListBuilder<CreateStocks2ApiStockResponse> stockResponses) =>
       _$this._stockResponses = stockResponses;
@@ -208,7 +206,6 @@ class _$CreateStocks2ApiResponseActions
       CreateStocks2ApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,7 +225,6 @@ class _$CreateStocks2ApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateStocks2ApiResponse);
 }

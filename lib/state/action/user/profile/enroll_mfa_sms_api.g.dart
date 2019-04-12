@@ -10,60 +10,64 @@ part of 'enroll_mfa_sms_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>>,
     EnrollMfaSmsApi> EnrollMfaSmsApiOptions();
 
 class _$EnrollMfaSmsApi extends EnrollMfaSmsApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>,
+          ApiResult<Nothing>>,
       EnrollMfaSmsApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>>
+          CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>>>
       $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>,
           EnrollMfaSmsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<EnrollMfaSmsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           EnrollMfaSmsApi,
           Command<ApiCommand<EnrollMfaSmsApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>,
-          EnrollMfaSmsApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>,
+          EnrollMfaSmsApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>,
           EnrollMfaSmsApi, CommandProgress>> $progress;
 
   _$EnrollMfaSmsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<EnrollMfaSmsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>,
-                EnrollMfaSmsApi, String>>('\$cancel', (a) => a?.$cancel),
+            CommandPayload<
+                ApiCommand<EnrollMfaSmsApiRequest>,
+                ApiResult<Nothing>,
+                EnrollMfaSmsApi,
+                String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<EnrollMfaSmsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     EnrollMfaSmsApi,
                     Command<ApiCommand<EnrollMfaSmsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<EnrollMfaSmsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     EnrollMfaSmsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EnrollMfaSmsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 EnrollMfaSmsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -72,17 +76,16 @@ class _$EnrollMfaSmsApi extends EnrollMfaSmsApi {
       _$EnrollMfaSmsApi._(options());
 
   @override
-  CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>
-      get $initial =>
-          CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>();
+  CommandState<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>>
+      get $initial => CommandState<ApiCommand<EnrollMfaSmsApiRequest>,
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<EnrollMfaSmsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -94,11 +97,10 @@ class _$EnrollMfaSmsApi extends EnrollMfaSmsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EnrollMfaSmsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -106,7 +108,8 @@ class _$EnrollMfaSmsApi extends EnrollMfaSmsApi {
       ApiCommand<EnrollMfaSmsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -116,12 +119,12 @@ class _$EnrollMfaSmsApi extends EnrollMfaSmsApi {
       EnrollMfaSmsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<EnrollMfaSmsApiRequest> get commandPayloadSerializer =>
       EnrollMfaSmsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

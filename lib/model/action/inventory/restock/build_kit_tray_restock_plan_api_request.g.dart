@@ -108,10 +108,8 @@ class BuildKitTrayRestockPlanApiRequestBuilder
   _$BuildKitTrayRestockPlanApiRequest _$v;
 
   String _kitTrayStockIdOrStockSummaryId;
-
   String get kitTrayStockIdOrStockSummaryId =>
       _$this._kitTrayStockIdOrStockSummaryId;
-
   set kitTrayStockIdOrStockSummaryId(String kitTrayStockIdOrStockSummaryId) =>
       _$this._kitTrayStockIdOrStockSummaryId = kitTrayStockIdOrStockSummaryId;
 
@@ -195,7 +193,6 @@ class _$BuildKitTrayRestockPlanApiRequestActions
       BuildKitTrayRestockPlanApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -215,7 +212,6 @@ class _$BuildKitTrayRestockPlanApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildKitTrayRestockPlanApiRequest);

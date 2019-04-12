@@ -121,16 +121,12 @@ class ListHcrTeamLinksApiResponseBuilder
   _$ListHcrTeamLinksApiResponse _$v;
 
   ListBuilder<TeamLink> _data;
-
   ListBuilder<TeamLink> get data =>
       _$this._data ??= new ListBuilder<TeamLink>();
-
   set data(ListBuilder<TeamLink> data) => _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListHcrTeamLinksApiResponseBuilder();
@@ -226,7 +222,6 @@ class _$ListHcrTeamLinksApiResponseActions
       ListHcrTeamLinksApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -248,7 +243,6 @@ class _$ListHcrTeamLinksApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListHcrTeamLinksApiResponse);

@@ -174,37 +174,27 @@ class DecommissionKitApiKitContainerBuilder
   _$DecommissionKitApiKitContainer _$v;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   StockContainerType _toContainerType;
-
   StockContainerType get toContainerType => _$this._toContainerType;
-
   set toContainerType(StockContainerType toContainerType) =>
       _$this._toContainerType = toContainerType;
 
   String _toContainerId;
-
   String get toContainerId => _$this._toContainerId;
-
   set toContainerId(String toContainerId) =>
       _$this._toContainerId = toContainerId;
 
   StockContainerType _contentsToContainerType;
-
   StockContainerType get contentsToContainerType =>
       _$this._contentsToContainerType;
-
   set contentsToContainerType(StockContainerType contentsToContainerType) =>
       _$this._contentsToContainerType = contentsToContainerType;
 
   String _contentsToContainerId;
-
   String get contentsToContainerId => _$this._contentsToContainerId;
-
   set contentsToContainerId(String contentsToContainerId) =>
       _$this._contentsToContainerId = contentsToContainerId;
 
@@ -317,7 +307,6 @@ class _$DecommissionKitApiKitContainerActions
       DecommissionKitApiKitContainerBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -345,7 +334,6 @@ class _$DecommissionKitApiKitContainerActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(DecommissionKitApiKitContainer);

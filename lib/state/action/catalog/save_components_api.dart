@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/catalog/save_components_api_request
 
 part 'save_components_api.g.dart';
 
-abstract class SaveComponentsApi extends ApiDispatcher<SaveComponentsApiRequest,
-    SaveComponentsApiRequestBuilder, Empty, EmptyBuilder, SaveComponentsApi> {
+abstract class SaveComponentsApi extends ApiDispatcher<
+    SaveComponentsApiRequest,
+    SaveComponentsApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    SaveComponentsApi> {
   @override
   String get path => 'v1/catalog/save_components';
 

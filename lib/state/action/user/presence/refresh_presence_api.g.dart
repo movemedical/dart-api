@@ -10,65 +10,65 @@ part of 'refresh_presence_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RefreshPresenceApi> RefreshPresenceApiOptions();
 
 class _$RefreshPresenceApi extends RefreshPresenceApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RefreshPresenceApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<RefreshPresenceApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>,
           RefreshPresenceApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RefreshPresenceApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RefreshPresenceApi,
           Command<ApiCommand<RefreshPresenceApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
-          RefreshPresenceApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>,
+          RefreshPresenceApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>,
           RefreshPresenceApi, CommandProgress>> $progress;
 
   _$RefreshPresenceApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RefreshPresenceApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RefreshPresenceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RefreshPresenceApi,
                     Command<ApiCommand<RefreshPresenceApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RefreshPresenceApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RefreshPresenceApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RefreshPresenceApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RefreshPresenceApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +77,16 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
       _$RefreshPresenceApi._(options());
 
   @override
-  CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<RefreshPresenceApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<RefreshPresenceApiRequest>, ApiResult<Empty>>();
+          ApiCommand<RefreshPresenceApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +98,10 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RefreshPresenceApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +109,8 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
       ApiCommand<RefreshPresenceApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +120,12 @@ class _$RefreshPresenceApi extends RefreshPresenceApi {
       RefreshPresenceApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RefreshPresenceApiRequest> get commandPayloadSerializer =>
       RefreshPresenceApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

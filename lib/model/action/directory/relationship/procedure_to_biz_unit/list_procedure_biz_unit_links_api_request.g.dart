@@ -158,30 +158,22 @@ class ListProcedureBizUnitLinksApiRequestBuilder
   _$ListProcedureBizUnitLinksApiRequest _$v;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListProcedureBizUnitLinksApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListProcedureBizUnitLinksApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListProcedureBizUnitLinksApiOrderBy>();
-
   set orderBy(
           OrderByParamsBuilder<ListProcedureBizUnitLinksApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
@@ -311,7 +303,6 @@ class _$ListProcedureBizUnitLinksApiRequestActions
       ListProcedureBizUnitLinksApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -319,7 +310,6 @@ class _$ListProcedureBizUnitLinksApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -345,7 +335,6 @@ class _$ListProcedureBizUnitLinksApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListProcedureBizUnitLinksApiRequest);

@@ -10,8 +10,8 @@ part 'decommission_tags_api.g.dart';
 abstract class DecommissionTagsApi extends ApiDispatcher<
     DecommissionTagsApiRequest,
     DecommissionTagsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     DecommissionTagsApi> {
   @override
   String get path => 'v1/inventory/tag/decommission';

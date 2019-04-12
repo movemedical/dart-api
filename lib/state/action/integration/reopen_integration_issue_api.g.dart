@@ -11,72 +11,72 @@ part of 'reopen_integration_issue_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ReopenIntegrationIssueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ReopenIntegrationIssueApi> ReopenIntegrationIssueApiOptions();
 
 class _$ReopenIntegrationIssueApi extends ReopenIntegrationIssueApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ReopenIntegrationIssueApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>, ReopenIntegrationIssueApi, String>> $cancel;
+          ApiResult<Nothing>, ReopenIntegrationIssueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReopenIntegrationIssueApi,
           Command<ApiCommand<ReopenIntegrationIssueApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReopenIntegrationIssueApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ReopenIntegrationIssueApi,
           CommandProgress>> $progress;
 
   _$ReopenIntegrationIssueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ReopenIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ReopenIntegrationIssueApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ReopenIntegrationIssueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ReopenIntegrationIssueApi,
                     Command<ApiCommand<ReopenIntegrationIssueApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ReopenIntegrationIssueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ReopenIntegrationIssueApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ReopenIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ReopenIntegrationIssueApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$ReopenIntegrationIssueApi extends ReopenIntegrationIssueApi {
       _$ReopenIntegrationIssueApi._(options());
 
   @override
-  CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ReopenIntegrationIssueApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ReopenIntegrationIssueApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ReopenIntegrationIssueApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$ReopenIntegrationIssueApi extends ReopenIntegrationIssueApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ReopenIntegrationIssueApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$ReopenIntegrationIssueApi extends ReopenIntegrationIssueApi {
       ApiCommand<ReopenIntegrationIssueApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$ReopenIntegrationIssueApi extends ReopenIntegrationIssueApi {
       ReopenIntegrationIssueApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ReopenIntegrationIssueApiRequest> get commandPayloadSerializer =>
       ReopenIntegrationIssueApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

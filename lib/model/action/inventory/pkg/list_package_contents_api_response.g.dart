@@ -108,10 +108,8 @@ class ListPackageContentsApiResponseBuilder
   _$ListPackageContentsApiResponse _$v;
 
   ListBuilder<ListPackageContentsApiContentItem> _contents;
-
   ListBuilder<ListPackageContentsApiContentItem> get contents =>
       _$this._contents ??= new ListBuilder<ListPackageContentsApiContentItem>();
-
   set contents(ListBuilder<ListPackageContentsApiContentItem> contents) =>
       _$this._contents = contents;
 
@@ -207,7 +205,6 @@ class _$ListPackageContentsApiResponseActions
       ListPackageContentsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -227,7 +224,6 @@ class _$ListPackageContentsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPackageContentsApiResponse);

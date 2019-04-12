@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/attributable/files/delete_file_api_
 part 'delete_file_api.g.dart';
 
 abstract class DeleteFileApi extends ApiDispatcher<DeleteFileApiRequest,
-    DeleteFileApiRequestBuilder, Empty, EmptyBuilder, DeleteFileApi> {
+    DeleteFileApiRequestBuilder, Nothing, NothingBuilder, DeleteFileApi> {
   @override
   String get path => 'v1/attributable/files/delete';
 

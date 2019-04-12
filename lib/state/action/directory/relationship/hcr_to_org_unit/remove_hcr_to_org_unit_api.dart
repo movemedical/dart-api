@@ -10,8 +10,8 @@ part 'remove_hcr_to_org_unit_api.g.dart';
 abstract class RemoveHcrToOrgUnitApi extends ApiDispatcher<
     RemoveHcrToOrgUnitApiRequest,
     RemoveHcrToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveHcrToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_org_unit/remove';

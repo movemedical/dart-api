@@ -119,15 +119,11 @@ class ListSubProceduresApiRequestBuilder
   _$ListSubProceduresApiRequest _$v;
 
   String _procedureId;
-
   String get procedureId => _$this._procedureId;
-
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ListSubProceduresApiRequestBuilder();
@@ -213,7 +209,6 @@ class _$ListSubProceduresApiRequestActions
       ListSubProceduresApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -235,7 +230,6 @@ class _$ListSubProceduresApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListSubProceduresApiRequest);

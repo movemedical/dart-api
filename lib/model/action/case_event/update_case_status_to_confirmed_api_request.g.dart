@@ -107,9 +107,7 @@ class UpdateCaseStatusToConfirmedApiRequestBuilder
   _$UpdateCaseStatusToConfirmedApiRequest _$v;
 
   String _caseEventId;
-
   String get caseEventId => _$this._caseEventId;
-
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   UpdateCaseStatusToConfirmedApiRequestBuilder();
@@ -191,7 +189,6 @@ class _$UpdateCaseStatusToConfirmedApiRequestActions
       UpdateCaseStatusToConfirmedApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -211,7 +208,6 @@ class _$UpdateCaseStatusToConfirmedApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateCaseStatusToConfirmedApiRequest);

@@ -266,75 +266,53 @@ class ListTagsApiTagBuilder
   _$ListTagsApiTag _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _tagNumber;
-
   String get tagNumber => _$this._tagNumber;
-
   set tagNumber(String tagNumber) => _$this._tagNumber = tagNumber;
 
   ItemBuilder _item;
-
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
-
   set item(ItemBuilder item) => _$this._item = item;
 
   ItemVersionBuilder _itemVersion;
-
   ItemVersionBuilder get itemVersion =>
       _$this._itemVersion ??= new ItemVersionBuilder();
-
   set itemVersion(ItemVersionBuilder itemVersion) =>
       _$this._itemVersion = itemVersion;
 
   LotBuilder _lot;
-
   LotBuilder get lot => _$this._lot ??= new LotBuilder();
-
   set lot(LotBuilder lot) => _$this._lot = lot;
 
   SerialBuilder _serial;
-
   SerialBuilder get serial => _$this._serial ??= new SerialBuilder();
-
   set serial(SerialBuilder serial) => _$this._serial = serial;
 
   LocationBuilder _lastKnownLocation;
-
   LocationBuilder get lastKnownLocation =>
       _$this._lastKnownLocation ??= new LocationBuilder();
-
   set lastKnownLocation(LocationBuilder lastKnownLocation) =>
       _$this._lastKnownLocation = lastKnownLocation;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   String _stockSummaryKey;
-
   String get stockSummaryKey => _$this._stockSummaryKey;
-
   set stockSummaryKey(String stockSummaryKey) =>
       _$this._stockSummaryKey = stockSummaryKey;
 
   String _stockNumber;
-
   String get stockNumber => _$this._stockNumber;
-
   set stockNumber(String stockNumber) => _$this._stockNumber = stockNumber;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
@@ -516,7 +494,6 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
   ListTagsApiTagBuilder $newBuilder() => ListTagsApiTagBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
@@ -528,7 +505,6 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -568,7 +544,6 @@ class _$ListTagsApiTagActions extends ListTagsApiTagActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListTagsApiTag);
 }

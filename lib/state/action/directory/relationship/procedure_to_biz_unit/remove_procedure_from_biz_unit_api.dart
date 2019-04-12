@@ -10,8 +10,8 @@ part 'remove_procedure_from_biz_unit_api.g.dart';
 abstract class RemoveProcedureFromBizUnitApi extends ApiDispatcher<
     RemoveProcedureFromBizUnitApiRequest,
     RemoveProcedureFromBizUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveProcedureFromBizUnitApi> {
   @override
   String get path => 'v1/directory/relationship/procedure_from_bizunit/remove';

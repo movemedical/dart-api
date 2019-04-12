@@ -11,60 +11,60 @@ part of 'remove_mobile_version_blacklist_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     RemoveMobileVersionBlacklistApi> RemoveMobileVersionBlacklistApiOptions();
 
 class _$RemoveMobileVersionBlacklistApi
     extends RemoveMobileVersionBlacklistApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       RemoveMobileVersionBlacklistApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>, RemoveMobileVersionBlacklistApi, String>> $cancel;
+          ApiResult<Nothing>, RemoveMobileVersionBlacklistApi, String>> $cancel;
   final ActionDispatcher<
           CommandPayload<
               ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-              ApiResult<Empty>,
+              ApiResult<Nothing>,
               RemoveMobileVersionBlacklistApi,
               Command<ApiCommand<RemoveMobileVersionBlacklistApiRequest>>>>
       $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveMobileVersionBlacklistApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           RemoveMobileVersionBlacklistApi,
           CommandProgress>> $progress;
 
   _$RemoveMobileVersionBlacklistApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveMobileVersionBlacklistApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveMobileVersionBlacklistApi,
                     Command<
                         ApiCommand<RemoveMobileVersionBlacklistApiRequest>>>>(
@@ -72,14 +72,14 @@ class _$RemoveMobileVersionBlacklistApi
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     RemoveMobileVersionBlacklistApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 RemoveMobileVersionBlacklistApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -90,20 +90,19 @@ class _$RemoveMobileVersionBlacklistApi
 
   @override
   CommandState<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       get $initial => CommandState<
           ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
           ApiCommand<RemoveMobileVersionBlacklistApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -115,12 +114,11 @@ class _$RemoveMobileVersionBlacklistApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(
             ApiCommand, [FullType(RemoveMobileVersionBlacklistApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -129,7 +127,8 @@ class _$RemoveMobileVersionBlacklistApi
           ApiCommand<RemoveMobileVersionBlacklistApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -139,7 +138,7 @@ class _$RemoveMobileVersionBlacklistApi
       RemoveMobileVersionBlacklistApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<RemoveMobileVersionBlacklistApiRequest>
@@ -147,5 +146,5 @@ class _$RemoveMobileVersionBlacklistApi
           RemoveMobileVersionBlacklistApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

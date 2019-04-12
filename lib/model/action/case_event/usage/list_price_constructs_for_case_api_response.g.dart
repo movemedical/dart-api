@@ -126,18 +126,14 @@ class ListPriceConstructsForCaseApiResponseBuilder
   _$ListPriceConstructsForCaseApiResponse _$v;
 
   ListBuilder<ListPriceConstructsForCaseApiPriceConstruct> _data;
-
   ListBuilder<ListPriceConstructsForCaseApiPriceConstruct> get data =>
       _$this._data ??=
           new ListBuilder<ListPriceConstructsForCaseApiPriceConstruct>();
-
   set data(ListBuilder<ListPriceConstructsForCaseApiPriceConstruct> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListPriceConstructsForCaseApiResponseBuilder();
@@ -238,7 +234,6 @@ class _$ListPriceConstructsForCaseApiResponseActions
       ListPriceConstructsForCaseApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -260,7 +255,6 @@ class _$ListPriceConstructsForCaseApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPriceConstructsForCaseApiResponse);

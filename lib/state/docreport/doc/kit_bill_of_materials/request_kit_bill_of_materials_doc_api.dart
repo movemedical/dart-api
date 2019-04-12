@@ -10,8 +10,8 @@ part 'request_kit_bill_of_materials_doc_api.g.dart';
 abstract class RequestKitBillOfMaterialsDocApi extends ApiDispatcher<
     RequestKitBillOfMaterialsDocApiRequest,
     RequestKitBillOfMaterialsDocApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestKitBillOfMaterialsDocApi> {
   @override
   String get path => 'v1/doc/kitBillOfMaterials';

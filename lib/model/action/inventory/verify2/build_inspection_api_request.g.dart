@@ -235,64 +235,48 @@ class BuildInspectionApiRequestBuilder
   _$BuildInspectionApiRequest _$v;
 
   String _processKey;
-
   String get processKey => _$this._processKey;
-
   set processKey(String processKey) => _$this._processKey = processKey;
 
   bool _cancelPreviousProcess;
-
   bool get cancelPreviousProcess => _$this._cancelPreviousProcess;
-
   set cancelPreviousProcess(bool cancelPreviousProcess) =>
       _$this._cancelPreviousProcess = cancelPreviousProcess;
 
   LocationDataBuilder _receivingAtLocation;
-
   LocationDataBuilder get receivingAtLocation =>
       _$this._receivingAtLocation ??= new LocationDataBuilder();
-
   set receivingAtLocation(LocationDataBuilder receivingAtLocation) =>
       _$this._receivingAtLocation = receivingAtLocation;
 
   BuildInspectionApiAddReceiptBuilder _addReceipt;
-
   BuildInspectionApiAddReceiptBuilder get addReceipt =>
       _$this._addReceipt ??= new BuildInspectionApiAddReceiptBuilder();
-
   set addReceipt(BuildInspectionApiAddReceiptBuilder addReceipt) =>
       _$this._addReceipt = addReceipt;
 
   BuildInspectionApiReceiptUpdateBuilder _updateReceipt;
-
   BuildInspectionApiReceiptUpdateBuilder get updateReceipt =>
       _$this._updateReceipt ??= new BuildInspectionApiReceiptUpdateBuilder();
-
   set updateReceipt(BuildInspectionApiReceiptUpdateBuilder updateReceipt) =>
       _$this._updateReceipt = updateReceipt;
 
   ListBuilder<BuildInspectionApiAddEntry> _entryAdditions;
-
   ListBuilder<BuildInspectionApiAddEntry> get entryAdditions =>
       _$this._entryAdditions ??= new ListBuilder<BuildInspectionApiAddEntry>();
-
   set entryAdditions(ListBuilder<BuildInspectionApiAddEntry> entryAdditions) =>
       _$this._entryAdditions = entryAdditions;
 
   ListBuilder<BuildInspectionApiUpdateEntry> _entryUpdates;
-
   ListBuilder<BuildInspectionApiUpdateEntry> get entryUpdates =>
       _$this._entryUpdates ??= new ListBuilder<BuildInspectionApiUpdateEntry>();
-
   set entryUpdates(ListBuilder<BuildInspectionApiUpdateEntry> entryUpdates) =>
       _$this._entryUpdates = entryUpdates;
 
   ListBuilder<BuildInspectionApiUpdateExpectedStock> _expectedStockUpdates;
-
   ListBuilder<BuildInspectionApiUpdateExpectedStock> get expectedStockUpdates =>
       _$this._expectedStockUpdates ??=
           new ListBuilder<BuildInspectionApiUpdateExpectedStock>();
-
   set expectedStockUpdates(
           ListBuilder<BuildInspectionApiUpdateExpectedStock>
               expectedStockUpdates) =>
@@ -467,7 +451,6 @@ class _$BuildInspectionApiRequestActions
       BuildInspectionApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.receivingAtLocation,
@@ -476,7 +459,6 @@ class _$BuildInspectionApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -510,7 +492,6 @@ class _$BuildInspectionApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiRequest);
 }

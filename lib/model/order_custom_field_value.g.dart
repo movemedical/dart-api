@@ -202,46 +202,32 @@ class OrderCustomFieldValueBuilder
   _$OrderCustomFieldValue _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orderReasonCustomFieldId;
-
   String get orderReasonCustomFieldId => _$this._orderReasonCustomFieldId;
-
   set orderReasonCustomFieldId(String orderReasonCustomFieldId) =>
       _$this._orderReasonCustomFieldId = orderReasonCustomFieldId;
 
   bool _booleanValue;
-
   bool get booleanValue => _$this._booleanValue;
-
   set booleanValue(bool booleanValue) => _$this._booleanValue = booleanValue;
 
   String _stringValue;
-
   String get stringValue => _$this._stringValue;
-
   set stringValue(String stringValue) => _$this._stringValue = stringValue;
 
   DateTime _dateValue;
-
   DateTime get dateValue => _$this._dateValue;
-
   set dateValue(DateTime dateValue) => _$this._dateValue = dateValue;
 
   double _doubleValue;
-
   double get doubleValue => _$this._doubleValue;
-
   set doubleValue(double doubleValue) => _$this._doubleValue = doubleValue;
 
   int _longValue;
-
   int get longValue => _$this._longValue;
-
   set longValue(int longValue) => _$this._longValue = longValue;
 
   OrderCustomFieldValueBuilder();
@@ -358,7 +344,6 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
   OrderCustomFieldValueBuilder $newBuilder() => OrderCustomFieldValueBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -390,7 +375,6 @@ class _$OrderCustomFieldValueActions extends OrderCustomFieldValueActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(OrderCustomFieldValue);
 }

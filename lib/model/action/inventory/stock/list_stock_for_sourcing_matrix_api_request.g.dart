@@ -276,75 +276,55 @@ class ListStockForSourcingMatrixApiRequestBuilder
   _$ListStockForSourcingMatrixApiRequest _$v;
 
   String _orderId;
-
   String get orderId => _$this._orderId;
-
   set orderId(String orderId) => _$this._orderId = orderId;
 
   double _minPercentageMatch;
-
   double get minPercentageMatch => _$this._minPercentageMatch;
-
   set minPercentageMatch(double minPercentageMatch) =>
       _$this._minPercentageMatch = minPercentageMatch;
 
   ListBuilder<MoveItemClass> _moveItemClasses;
-
   ListBuilder<MoveItemClass> get moveItemClasses =>
       _$this._moveItemClasses ??= new ListBuilder<MoveItemClass>();
-
   set moveItemClasses(ListBuilder<MoveItemClass> moveItemClasses) =>
       _$this._moveItemClasses = moveItemClasses;
 
   ListBuilder<String> _locationIds;
-
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
-
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   ListBuilder<String> _orgUnitIds;
-
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
-
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<LocationType> _locationTypes;
-
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
-
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<FacilityType> _facilityTypes;
-
   ListBuilder<FacilityType> get facilityTypes =>
       _$this._facilityTypes ??= new ListBuilder<FacilityType>();
-
   set facilityTypes(ListBuilder<FacilityType> facilityTypes) =>
       _$this._facilityTypes = facilityTypes;
 
   String _inventoryTypeId;
-
   String get inventoryTypeId => _$this._inventoryTypeId;
-
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   bool _activeCases;
-
   bool get activeCases => _$this._activeCases;
-
   set activeCases(bool activeCases) => _$this._activeCases = activeCases;
 
   bool _questionableKitsTrays;
-
   bool get questionableKitsTrays => _$this._questionableKitsTrays;
-
   set questionableKitsTrays(bool questionableKitsTrays) =>
       _$this._questionableKitsTrays = questionableKitsTrays;
 
@@ -517,7 +497,6 @@ class _$ListStockForSourcingMatrixApiRequestActions
       ListStockForSourcingMatrixApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -555,7 +534,6 @@ class _$ListStockForSourcingMatrixApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForSourcingMatrixApiRequest);

@@ -10,72 +10,73 @@ part of 'archive_conversations_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<ArchiveConversationsApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ArchiveConversationsApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ArchiveConversationsApi> ArchiveConversationsApiOptions();
 
 class _$ArchiveConversationsApi extends ArchiveConversationsApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ArchiveConversationsApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>, ArchiveConversationsApi, String>> $cancel;
+          ApiResult<Nothing>, ArchiveConversationsApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ArchiveConversationsApi,
           Command<ApiCommand<ArchiveConversationsApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ArchiveConversationsApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ArchiveConversationsApi,
           CommandProgress>> $progress;
 
   _$ArchiveConversationsApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ArchiveConversationsApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ArchiveConversationsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ArchiveConversationsApi,
                     Command<ApiCommand<ArchiveConversationsApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ArchiveConversationsApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ArchiveConversationsApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ArchiveConversationsApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ArchiveConversationsApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
       _$ArchiveConversationsApi._(options());
 
   @override
-  CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<ArchiveConversationsApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ArchiveConversationsApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ArchiveConversationsApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
       ApiCommand<ArchiveConversationsApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$ArchiveConversationsApi extends ArchiveConversationsApi {
       ArchiveConversationsApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ArchiveConversationsApiRequest> get commandPayloadSerializer =>
       ArchiveConversationsApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

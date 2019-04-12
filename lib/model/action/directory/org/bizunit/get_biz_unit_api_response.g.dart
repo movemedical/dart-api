@@ -100,10 +100,8 @@ class GetBizUnitApiResponseBuilder
   _$GetBizUnitApiResponse _$v;
 
   GetBizUnitApiBizUnitDetailBuilder _data;
-
   GetBizUnitApiBizUnitDetailBuilder get data =>
       _$this._data ??= new GetBizUnitApiBizUnitDetailBuilder();
-
   set data(GetBizUnitApiBizUnitDetailBuilder data) => _$this._data = data;
 
   GetBizUnitApiResponseBuilder();
@@ -196,14 +194,12 @@ class _$GetBizUnitApiResponseActions extends GetBizUnitApiResponseActions {
   GetBizUnitApiResponseBuilder $newBuilder() => GetBizUnitApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.data,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -223,7 +219,6 @@ class _$GetBizUnitApiResponseActions extends GetBizUnitApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetBizUnitApiResponse);
 }

@@ -10,8 +10,8 @@ part 'create_biz_unit_to_org_unit_api.g.dart';
 abstract class CreateBizUnitToOrgUnitApi extends ApiDispatcher<
     CreateBizUnitToOrgUnitApiRequest,
     CreateBizUnitToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     CreateBizUnitToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/biz_unit_to_org_unit/create';

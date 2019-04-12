@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/order/approve_order_api_r
 part 'approve_order_api.g.dart';
 
 abstract class ApproveOrderApi extends ApiDispatcher<ApproveOrderApiRequest,
-    ApproveOrderApiRequestBuilder, Empty, EmptyBuilder, ApproveOrderApi> {
+    ApproveOrderApiRequestBuilder, Nothing, NothingBuilder, ApproveOrderApi> {
   @override
   String get path => 'v1/inventory/order/approve';
 

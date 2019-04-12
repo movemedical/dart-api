@@ -331,100 +331,70 @@ class ItemBuilder implements Builder<Item, ItemBuilder> {
   _$Item _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _itemNumber;
-
   String get itemNumber => _$this._itemNumber;
-
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   int _sizeSequence;
-
   int get sizeSequence => _$this._sizeSequence;
-
   set sizeSequence(int sizeSequence) => _$this._sizeSequence = sizeSequence;
 
   String _skuNumber;
-
   String get skuNumber => _$this._skuNumber;
-
   set skuNumber(String skuNumber) => _$this._skuNumber = skuNumber;
 
   String _shortDescription;
-
   String get shortDescription => _$this._shortDescription;
-
   set shortDescription(String shortDescription) =>
       _$this._shortDescription = shortDescription;
 
   String _longDescription;
-
   String get longDescription => _$this._longDescription;
-
   set longDescription(String longDescription) =>
       _$this._longDescription = longDescription;
 
   String _itemClass;
-
   String get itemClass => _$this._itemClass;
-
   set itemClass(String itemClass) => _$this._itemClass = itemClass;
 
   MoveItemClass _moveItemClass;
-
   MoveItemClass get moveItemClass => _$this._moveItemClass;
-
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   String _itemType;
-
   String get itemType => _$this._itemType;
-
   set itemType(String itemType) => _$this._itemType = itemType;
 
   MoveItemType _moveItemType;
-
   MoveItemType get moveItemType => _$this._moveItemType;
-
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   bool _lotTracked;
-
   bool get lotTracked => _$this._lotTracked;
-
   set lotTracked(bool lotTracked) => _$this._lotTracked = lotTracked;
 
   bool _serialTracked;
-
   bool get serialTracked => _$this._serialTracked;
-
   set serialTracked(bool serialTracked) =>
       _$this._serialTracked = serialTracked;
 
   double _listPrice;
-
   double get listPrice => _$this._listPrice;
-
   set listPrice(double listPrice) => _$this._listPrice = listPrice;
 
   CurrencyType _currencyType;
-
   CurrencyType get currencyType => _$this._currencyType;
-
   set currencyType(CurrencyType currencyType) =>
       _$this._currencyType = currencyType;
 
   UnitOfMeasureBuilder _unitOfMeasure;
-
   UnitOfMeasureBuilder get unitOfMeasure =>
       _$this._unitOfMeasure ??= new UnitOfMeasureBuilder();
-
   set unitOfMeasure(UnitOfMeasureBuilder unitOfMeasure) =>
       _$this._unitOfMeasure = unitOfMeasure;
 
@@ -604,14 +574,12 @@ class _$ItemActions extends ItemActions {
   ItemBuilder $newBuilder() => ItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.unitOfMeasure,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -659,7 +627,6 @@ class _$ItemActions extends ItemActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Item);
 }

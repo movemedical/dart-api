@@ -129,21 +129,15 @@ class CreateHcrApiResponseBuilder
   _$CreateHcrApiResponse _$v;
 
   String _hcrId;
-
   String get hcrId => _$this._hcrId;
-
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _userId;
-
   String get userId => _$this._userId;
-
   set userId(String userId) => _$this._userId = userId;
 
   String _contactId;
-
   String get contactId => _$this._contactId;
-
   set contactId(String contactId) => _$this._contactId = contactId;
 
   CreateHcrApiResponseBuilder();
@@ -226,7 +220,6 @@ class _$CreateHcrApiResponseActions extends CreateHcrApiResponseActions {
   CreateHcrApiResponseBuilder $newBuilder() => CreateHcrApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +243,6 @@ class _$CreateHcrApiResponseActions extends CreateHcrApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateHcrApiResponse);
 }

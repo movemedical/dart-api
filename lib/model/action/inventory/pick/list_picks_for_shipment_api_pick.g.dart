@@ -242,61 +242,43 @@ class ListPicksForShipmentApiPickBuilder
   _$ListPicksForShipmentApiPick _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _dependsOnPickId;
-
   String get dependsOnPickId => _$this._dependsOnPickId;
-
   set dependsOnPickId(String dependsOnPickId) =>
       _$this._dependsOnPickId = dependsOnPickId;
 
   int _pickNumber;
-
   int get pickNumber => _$this._pickNumber;
-
   set pickNumber(int pickNumber) => _$this._pickNumber = pickNumber;
 
   PickStatus _pickStatus;
-
   PickStatus get pickStatus => _$this._pickStatus;
-
   set pickStatus(PickStatus pickStatus) => _$this._pickStatus = pickStatus;
 
   String _assignedUserId;
-
   String get assignedUserId => _$this._assignedUserId;
-
   set assignedUserId(String assignedUserId) =>
       _$this._assignedUserId = assignedUserId;
 
   String _assignedUserDisplayName;
-
   String get assignedUserDisplayName => _$this._assignedUserDisplayName;
-
   set assignedUserDisplayName(String assignedUserDisplayName) =>
       _$this._assignedUserDisplayName = assignedUserDisplayName;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   ItemBuilder _kitItem;
-
   ItemBuilder get kitItem => _$this._kitItem ??= new ItemBuilder();
-
   set kitItem(ItemBuilder kitItem) => _$this._kitItem = kitItem;
 
   SerialBuilder _kitSerial;
-
   SerialBuilder get kitSerial => _$this._kitSerial ??= new SerialBuilder();
-
   set kitSerial(SerialBuilder kitSerial) => _$this._kitSerial = kitSerial;
 
   ListPicksForShipmentApiPickBuilder();
@@ -459,7 +441,6 @@ class _$ListPicksForShipmentApiPickActions
       ListPicksForShipmentApiPickBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
@@ -468,7 +449,6 @@ class _$ListPicksForShipmentApiPickActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -504,7 +484,6 @@ class _$ListPicksForShipmentApiPickActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPicksForShipmentApiPick);

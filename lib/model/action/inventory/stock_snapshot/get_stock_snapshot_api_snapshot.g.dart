@@ -349,106 +349,76 @@ class GetStockSnapshotApiSnapshotBuilder
   _$GetStockSnapshotApiSnapshot _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   StockPlaceBuilder _stockPlace;
-
   StockPlaceBuilder get stockPlace =>
       _$this._stockPlace ??= new StockPlaceBuilder();
-
   set stockPlace(StockPlaceBuilder stockPlace) =>
       _$this._stockPlace = stockPlace;
 
   ResponsiblePartyBuilder _responsibleParty;
-
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
-
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   LoanLiteBuilder _demandLoan;
-
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
-
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   LoanLiteBuilder _consignmentLoan;
-
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
-
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
   OrderHeaderLiteBuilder _order;
-
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
-
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   CaseEventLiteBuilder _caseEvent;
-
   CaseEventLiteBuilder get caseEvent =>
       _$this._caseEvent ??= new CaseEventLiteBuilder();
-
   set caseEvent(CaseEventLiteBuilder caseEvent) =>
       _$this._caseEvent = caseEvent;
 
   StockItemBuilder _kit;
-
   StockItemBuilder get kit => _$this._kit ??= new StockItemBuilder();
-
   set kit(StockItemBuilder kit) => _$this._kit = kit;
 
   String _kitContainerDefId;
-
   String get kitContainerDefId => _$this._kitContainerDefId;
-
   set kitContainerDefId(String kitContainerDefId) =>
       _$this._kitContainerDefId = kitContainerDefId;
 
   String _pickId;
-
   String get pickId => _$this._pickId;
-
   set pickId(String pickId) => _$this._pickId = pickId;
 
   LostFound _lostFound;
-
   LostFound get lostFound => _$this._lostFound;
-
   set lostFound(LostFound lostFound) => _$this._lostFound = lostFound;
 
   bool _onHold;
-
   bool get onHold => _$this._onHold;
-
   set onHold(bool onHold) => _$this._onHold = onHold;
 
   DateTime _start;
-
   DateTime get start => _$this._start;
-
   set start(DateTime start) => _$this._start = start;
 
   DateTime _end;
-
   DateTime get end => _$this._end;
-
   set end(DateTime end) => _$this._end = end;
 
   GetStockSnapshotApiSnapshotBuilder();
@@ -669,7 +639,6 @@ class _$GetStockSnapshotApiSnapshotActions
       GetStockSnapshotApiSnapshotBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockPlace,
@@ -683,7 +652,6 @@ class _$GetStockSnapshotApiSnapshotActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -731,7 +699,6 @@ class _$GetStockSnapshotApiSnapshotActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetStockSnapshotApiSnapshot);

@@ -203,46 +203,32 @@ class CreatePhysicianApiRequestBuilder
   _$CreatePhysicianApiRequest _$v;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   PhysicianType _physicianType;
-
   PhysicianType get physicianType => _$this._physicianType;
-
   set physicianType(PhysicianType physicianType) =>
       _$this._physicianType = physicianType;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _npi;
-
   String get npi => _$this._npi;
-
   set npi(String npi) => _$this._npi = npi;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   CreatePhysicianApiRequestBuilder();
@@ -380,7 +366,6 @@ class _$CreatePhysicianApiRequestActions
       CreatePhysicianApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -388,7 +373,6 @@ class _$CreatePhysicianApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -420,7 +404,6 @@ class _$CreatePhysicianApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreatePhysicianApiRequest);
 }

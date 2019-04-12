@@ -107,9 +107,7 @@ class ListInvoicesForSalesOrderApiRequestBuilder
   _$ListInvoicesForSalesOrderApiRequest _$v;
 
   String _salesOrderId;
-
   String get salesOrderId => _$this._salesOrderId;
-
   set salesOrderId(String salesOrderId) => _$this._salesOrderId = salesOrderId;
 
   ListInvoicesForSalesOrderApiRequestBuilder();
@@ -191,7 +189,6 @@ class _$ListInvoicesForSalesOrderApiRequestActions
       ListInvoicesForSalesOrderApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -211,7 +208,6 @@ class _$ListInvoicesForSalesOrderApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListInvoicesForSalesOrderApiRequest);

@@ -10,8 +10,8 @@ part 'approve_consignment_loan_api.g.dart';
 abstract class ApproveConsignmentLoanApi extends ApiDispatcher<
     ApproveConsignmentLoanApiRequest,
     ApproveConsignmentLoanApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ApproveConsignmentLoanApi> {
   @override
   String get path => 'v1/inventory/loan/approve_consignment_loan';

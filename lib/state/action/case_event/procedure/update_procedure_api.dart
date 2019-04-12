@@ -10,8 +10,8 @@ part 'update_procedure_api.g.dart';
 abstract class UpdateProcedureApi extends ApiDispatcher<
     UpdateProcedureApiRequest,
     UpdateProcedureApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateProcedureApi> {
   @override
   String get path => 'v1/case_event/procedure/update';

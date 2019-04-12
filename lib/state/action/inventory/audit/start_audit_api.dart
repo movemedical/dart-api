@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/audit/start_audit_api_req
 part 'start_audit_api.g.dart';
 
 abstract class StartAuditApi extends ApiDispatcher<StartAuditApiRequest,
-    StartAuditApiRequestBuilder, Empty, EmptyBuilder, StartAuditApi> {
+    StartAuditApiRequestBuilder, Nothing, NothingBuilder, StartAuditApi> {
   @override
   String get path => 'v1/inventory/audit/start';
 

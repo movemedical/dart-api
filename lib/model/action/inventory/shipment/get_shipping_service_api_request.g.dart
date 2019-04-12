@@ -104,9 +104,7 @@ class GetShippingServiceApiRequestBuilder
   _$GetShippingServiceApiRequest _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   GetShippingServiceApiRequestBuilder();
@@ -183,7 +181,6 @@ class _$GetShippingServiceApiRequestActions
       GetShippingServiceApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -203,7 +200,6 @@ class _$GetShippingServiceApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetShippingServiceApiRequest);

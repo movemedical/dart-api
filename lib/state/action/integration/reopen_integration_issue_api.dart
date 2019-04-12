@@ -10,8 +10,8 @@ part 'reopen_integration_issue_api.g.dart';
 abstract class ReopenIntegrationIssueApi extends ApiDispatcher<
     ReopenIntegrationIssueApiRequest,
     ReopenIntegrationIssueApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ReopenIntegrationIssueApi> {
   @override
   String get path => 'v1/integration/reopen_integration_issue';

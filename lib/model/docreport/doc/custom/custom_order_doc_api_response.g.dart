@@ -102,9 +102,7 @@ class CustomOrderDocApiResponseBuilder
   _$CustomOrderDocApiResponse _$v;
 
   String _docReportId;
-
   String get docReportId => _$this._docReportId;
-
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   CustomOrderDocApiResponseBuilder();
@@ -185,7 +183,6 @@ class _$CustomOrderDocApiResponseActions
       CustomOrderDocApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -205,7 +202,6 @@ class _$CustomOrderDocApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CustomOrderDocApiResponse);
 }

@@ -124,16 +124,12 @@ class CreateCalendarSubscriptionApiRequestBuilder
   _$CreateCalendarSubscriptionApiRequest _$v;
 
   String _calendar;
-
   String get calendar => _$this._calendar;
-
   set calendar(String calendar) => _$this._calendar = calendar;
 
   ListCaseEventsApiRequestBuilder _listCaseEventsRequest;
-
   ListCaseEventsApiRequestBuilder get listCaseEventsRequest =>
       _$this._listCaseEventsRequest ??= new ListCaseEventsApiRequestBuilder();
-
   set listCaseEventsRequest(
           ListCaseEventsApiRequestBuilder listCaseEventsRequest) =>
       _$this._listCaseEventsRequest = listCaseEventsRequest;
@@ -243,14 +239,12 @@ class _$CreateCalendarSubscriptionApiRequestActions
       CreateCalendarSubscriptionApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.listCaseEventsRequest,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -272,7 +266,6 @@ class _$CreateCalendarSubscriptionApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateCalendarSubscriptionApiRequest);

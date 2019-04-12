@@ -122,17 +122,13 @@ class ListNotificationsApiResponseBuilder
   _$ListNotificationsApiResponse _$v;
 
   ListBuilder<ListNotificationsApiNotification> _data;
-
   ListBuilder<ListNotificationsApiNotification> get data =>
       _$this._data ??= new ListBuilder<ListNotificationsApiNotification>();
-
   set data(ListBuilder<ListNotificationsApiNotification> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListNotificationsApiResponseBuilder();
@@ -228,7 +224,6 @@ class _$ListNotificationsApiResponseActions
       ListNotificationsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$ListNotificationsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListNotificationsApiResponse);

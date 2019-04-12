@@ -121,16 +121,12 @@ class UpdateDeliverToAddressApiRequestBuilder
   _$UpdateDeliverToAddressApiRequest _$v;
 
   String _deliverToAddressId;
-
   String get deliverToAddressId => _$this._deliverToAddressId;
-
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   UpdateDeliverToAddressApiRequestBuilder();
@@ -217,7 +213,6 @@ class _$UpdateDeliverToAddressApiRequestActions
       UpdateDeliverToAddressApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -239,7 +234,6 @@ class _$UpdateDeliverToAddressApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateDeliverToAddressApiRequest);

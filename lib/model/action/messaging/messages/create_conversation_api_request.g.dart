@@ -212,49 +212,35 @@ class CreateConversationApiRequestBuilder
   _$CreateConversationApiRequest _$v;
 
   String _startedByContactId;
-
   String get startedByContactId => _$this._startedByContactId;
-
   set startedByContactId(String startedByContactId) =>
       _$this._startedByContactId = startedByContactId;
 
   String _purpose;
-
   String get purpose => _$this._purpose;
-
   set purpose(String purpose) => _$this._purpose = purpose;
 
   String _message;
-
   String get message => _$this._message;
-
   set message(String message) => _$this._message = message;
 
   DateTime _urgency;
-
   DateTime get urgency => _$this._urgency;
-
   set urgency(DateTime urgency) => _$this._urgency = urgency;
 
   ListBuilder<String> _participantContactIds;
-
   ListBuilder<String> get participantContactIds =>
       _$this._participantContactIds ??= new ListBuilder<String>();
-
   set participantContactIds(ListBuilder<String> participantContactIds) =>
       _$this._participantContactIds = participantContactIds;
 
   AttributableType _attributableType;
-
   AttributableType get attributableType => _$this._attributableType;
-
   set attributableType(AttributableType attributableType) =>
       _$this._attributableType = attributableType;
 
   String _attrId;
-
   String get attrId => _$this._attrId;
-
   set attrId(String attrId) => _$this._attrId = attrId;
 
   CreateConversationApiRequestBuilder();
@@ -385,7 +371,6 @@ class _$CreateConversationApiRequestActions
       CreateConversationApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -417,7 +402,6 @@ class _$CreateConversationApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateConversationApiRequest);

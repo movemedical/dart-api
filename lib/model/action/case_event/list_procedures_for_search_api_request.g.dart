@@ -176,38 +176,28 @@ class ListProceduresForSearchApiRequestBuilder
   _$ListProceduresForSearchApiRequest _$v;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   bool _export;
-
   bool get export => _$this._export;
-
   set export(bool export) => _$this._export = export;
 
   ListProceduresForSearchApiActiveStatus _activeChoice;
-
   ListProceduresForSearchApiActiveStatus get activeChoice =>
       _$this._activeChoice;
-
   set activeChoice(ListProceduresForSearchApiActiveStatus activeChoice) =>
       _$this._activeChoice = activeChoice;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListProceduresForSearchApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListProceduresForSearchApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListProceduresForSearchApiOrderBy>();
-
   set orderBy(
           OrderByParamsBuilder<ListProceduresForSearchApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
@@ -342,7 +332,6 @@ class _$ListProceduresForSearchApiRequestActions
       ListProceduresForSearchApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -350,7 +339,6 @@ class _$ListProceduresForSearchApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -378,7 +366,6 @@ class _$ListProceduresForSearchApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListProceduresForSearchApiRequest);

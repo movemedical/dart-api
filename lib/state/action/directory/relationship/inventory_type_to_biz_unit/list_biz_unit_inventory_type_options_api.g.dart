@@ -112,7 +112,6 @@ class _$ListBizUnitInventoryTypeOptionsApi
           ApiResult<ListBizUnitInventoryTypeOptionsApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -124,7 +123,6 @@ class _$ListBizUnitInventoryTypeOptionsApi
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(

@@ -10,8 +10,8 @@ part 'set_customer_default_bill_to_address_api.g.dart';
 abstract class SetCustomerDefaultBillToAddressApi extends ApiDispatcher<
     SetCustomerDefaultBillToAddressApiRequest,
     SetCustomerDefaultBillToAddressApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SetCustomerDefaultBillToAddressApi> {
   @override
   String get path => 'v1/directory/address/bill_to/set_customer_default';

@@ -338,97 +338,69 @@ class ListShipmentsApiRequestBuilder
   _$ListShipmentsApiRequest _$v;
 
   String _shipmentId;
-
   String get shipmentId => _$this._shipmentId;
-
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _shipmentNumber;
-
   String get shipmentNumber => _$this._shipmentNumber;
-
   set shipmentNumber(String shipmentNumber) =>
       _$this._shipmentNumber = shipmentNumber;
 
   String _orderNumber;
-
   String get orderNumber => _$this._orderNumber;
-
   set orderNumber(String orderNumber) => _$this._orderNumber = orderNumber;
 
   String _assignedToUserId;
-
   String get assignedToUserId => _$this._assignedToUserId;
-
   set assignedToUserId(String assignedToUserId) =>
       _$this._assignedToUserId = assignedToUserId;
 
   DateRangeBuilder _createdDateRange;
-
   DateRangeBuilder get createdDateRange =>
       _$this._createdDateRange ??= new DateRangeBuilder();
-
   set createdDateRange(DateRangeBuilder createdDateRange) =>
       _$this._createdDateRange = createdDateRange;
 
   DateRangeBuilder _fulfillmentCutoffDateRange;
-
   DateRangeBuilder get fulfillmentCutoffDateRange =>
       _$this._fulfillmentCutoffDateRange ??= new DateRangeBuilder();
-
   set fulfillmentCutoffDateRange(DateRangeBuilder fulfillmentCutoffDateRange) =>
       _$this._fulfillmentCutoffDateRange = fulfillmentCutoffDateRange;
 
   ListBuilder<ShipmentStatus> _status;
-
   ListBuilder<ShipmentStatus> get status =>
       _$this._status ??= new ListBuilder<ShipmentStatus>();
-
   set status(ListBuilder<ShipmentStatus> status) => _$this._status = status;
 
   String _fromLocationId;
-
   String get fromLocationId => _$this._fromLocationId;
-
   set fromLocationId(String fromLocationId) =>
       _$this._fromLocationId = fromLocationId;
 
   String _toLocationId;
-
   String get toLocationId => _$this._toLocationId;
-
   set toLocationId(String toLocationId) => _$this._toLocationId = toLocationId;
 
   MoveShippingCarrier _carrier;
-
   MoveShippingCarrier get carrier => _$this._carrier;
-
   set carrier(MoveShippingCarrier carrier) => _$this._carrier = carrier;
 
   bool _openPicks;
-
   bool get openPicks => _$this._openPicks;
-
   set openPicks(bool openPicks) => _$this._openPicks = openPicks;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListShipmentsApiOrderBy> _orderBy;
-
   OrderByParamsBuilder<ListShipmentsApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListShipmentsApiOrderBy>();
-
   set orderBy(OrderByParamsBuilder<ListShipmentsApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -633,7 +605,6 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
       ListShipmentsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.createdDateRange,
@@ -643,7 +614,6 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -689,7 +659,6 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(ListShipmentsApiRequest);
 }

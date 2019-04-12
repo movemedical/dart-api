@@ -122,17 +122,13 @@ class ListAuditEntriesApiResponseBuilder
   _$ListAuditEntriesApiResponse _$v;
 
   ListBuilder<ListAuditEntriesApiAuditEntry> _data;
-
   ListBuilder<ListAuditEntriesApiAuditEntry> get data =>
       _$this._data ??= new ListBuilder<ListAuditEntriesApiAuditEntry>();
-
   set data(ListBuilder<ListAuditEntriesApiAuditEntry> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAuditEntriesApiResponseBuilder();
@@ -228,7 +224,6 @@ class _$ListAuditEntriesApiResponseActions
       ListAuditEntriesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,7 +245,6 @@ class _$ListAuditEntriesApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAuditEntriesApiResponse);

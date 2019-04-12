@@ -246,63 +246,45 @@ class ProcessStockOrderRestockPlanApiRestockItemBuilder
   _$ProcessStockOrderRestockPlanApiRestockItem _$v;
 
   String _pickId;
-
   String get pickId => _$this._pickId;
-
   set pickId(String pickId) => _$this._pickId = pickId;
 
   String _poNumber;
-
   String get poNumber => _$this._poNumber;
-
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _itemId;
-
   String get itemId => _$this._itemId;
-
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _inventoryTypeId;
-
   String get inventoryTypeId => _$this._inventoryTypeId;
-
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   LocationBuilder _location;
-
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
-
   set location(LocationBuilder location) => _$this._location = location;
 
   CustomerAddressBuilder _deliverToAddress;
-
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
-
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   AddressBuilder _deliverToAddressOverride;
-
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
-
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   DateTime _deliverByDate;
-
   DateTime get deliverByDate => _$this._deliverByDate;
-
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   String _shippingServiceId;
-
   String get shippingServiceId => _$this._shippingServiceId;
-
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
@@ -470,7 +452,6 @@ class _$ProcessStockOrderRestockPlanApiRestockItemActions
       ProcessStockOrderRestockPlanApiRestockItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -479,7 +460,6 @@ class _$ProcessStockOrderRestockPlanApiRestockItemActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -515,7 +495,6 @@ class _$ProcessStockOrderRestockPlanApiRestockItemActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ProcessStockOrderRestockPlanApiRestockItem);

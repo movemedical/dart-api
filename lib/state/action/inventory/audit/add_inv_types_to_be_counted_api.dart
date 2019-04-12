@@ -10,8 +10,8 @@ part 'add_inv_types_to_be_counted_api.g.dart';
 abstract class AddInvTypesToBeCountedApi extends ApiDispatcher<
     AddInvTypesToBeCountedApiRequest,
     AddInvTypesToBeCountedApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddInvTypesToBeCountedApi> {
   @override
   String get path => 'v1/inventory/audit/add_inventory_to_be_counted';

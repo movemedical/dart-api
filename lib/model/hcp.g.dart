@@ -278,81 +278,57 @@ class HcpBuilder implements Builder<Hcp, HcpBuilder> {
   _$Hcp _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   OrgType _orgType;
-
   OrgType get orgType => _$this._orgType;
-
   set orgType(OrgType orgType) => _$this._orgType = orgType;
 
   HcpType _hcpType;
-
   HcpType get hcpType => _$this._hcpType;
-
   set hcpType(HcpType hcpType) => _$this._hcpType = hcpType;
 
   String _workingHomeId;
-
   String get workingHomeId => _$this._workingHomeId;
-
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingAtId;
-
   String get workingAtId => _$this._workingAtId;
-
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PhoneNumberBuilder _workPhoneNumber;
-
   PhoneNumberBuilder get workPhoneNumber =>
       _$this._workPhoneNumber ??= new PhoneNumberBuilder();
-
   set workPhoneNumber(PhoneNumberBuilder workPhoneNumber) =>
       _$this._workPhoneNumber = workPhoneNumber;
 
   PhoneNumberBuilder _mobilePhoneNumber;
-
   PhoneNumberBuilder get mobilePhoneNumber =>
       _$this._mobilePhoneNumber ??= new PhoneNumberBuilder();
-
   set mobilePhoneNumber(PhoneNumberBuilder mobilePhoneNumber) =>
       _$this._mobilePhoneNumber = mobilePhoneNumber;
 
   PhoneNumberBuilder _faxNumber;
-
   PhoneNumberBuilder get faxNumber =>
       _$this._faxNumber ??= new PhoneNumberBuilder();
-
   set faxNumber(PhoneNumberBuilder faxNumber) => _$this._faxNumber = faxNumber;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   HcpBuilder();
@@ -527,7 +503,6 @@ class _$HcpActions extends HcpActions {
   HcpBuilder $newBuilder() => HcpBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -538,7 +513,6 @@ class _$HcpActions extends HcpActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -580,7 +554,6 @@ class _$HcpActions extends HcpActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Hcp);
 }

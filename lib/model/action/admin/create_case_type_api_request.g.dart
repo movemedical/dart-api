@@ -132,21 +132,15 @@ class CreateCaseTypeApiRequestBuilder
   _$CreateCaseTypeApiRequest _$v;
 
   String _bizUnitId;
-
   String get bizUnitId => _$this._bizUnitId;
-
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _name;
-
   String get name => _$this._name;
-
   set name(String name) => _$this._name = name;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   CreateCaseTypeApiRequestBuilder();
@@ -233,7 +227,6 @@ class _$CreateCaseTypeApiRequestActions
       CreateCaseTypeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -257,7 +250,6 @@ class _$CreateCaseTypeApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateCaseTypeApiRequest);
 }

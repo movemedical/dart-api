@@ -10,8 +10,8 @@ part 'remove_hcr_to_team_api.g.dart';
 abstract class RemoveHcrToTeamApi extends ApiDispatcher<
     RemoveHcrToTeamApiRequest,
     RemoveHcrToTeamApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemoveHcrToTeamApi> {
   @override
   String get path => 'v1/directory/relationship/hcr_to_team/remove';

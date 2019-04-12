@@ -10,8 +10,8 @@ part 'add_org_unit_to_physician_api.g.dart';
 abstract class AddOrgUnitToPhysicianApi extends ApiDispatcher<
     AddOrgUnitToPhysicianApiRequest,
     AddOrgUnitToPhysicianApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddOrgUnitToPhysicianApi> {
   @override
   String get path => 'v1/directory/relationship/org_unit_to_physician/add';

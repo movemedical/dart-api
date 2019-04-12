@@ -10,8 +10,8 @@ part 'update_shipment_details_api.g.dart';
 abstract class UpdateShipmentDetailsApi extends ApiDispatcher<
     UpdateShipmentDetailsApiRequest,
     UpdateShipmentDetailsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateShipmentDetailsApi> {
   @override
   String get path => 'v1/inventory/shipment/update_details';

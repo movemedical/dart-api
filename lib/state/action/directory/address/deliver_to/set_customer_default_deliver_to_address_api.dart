@@ -10,8 +10,8 @@ part 'set_customer_default_deliver_to_address_api.g.dart';
 abstract class SetCustomerDefaultDeliverToAddressApi extends ApiDispatcher<
     SetCustomerDefaultDeliverToAddressApiRequest,
     SetCustomerDefaultDeliverToAddressApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     SetCustomerDefaultDeliverToAddressApi> {
   @override
   String get path => 'v1/directory/address/deliver_to/set_customer_default';

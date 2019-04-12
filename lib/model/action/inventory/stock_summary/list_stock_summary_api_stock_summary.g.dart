@@ -491,164 +491,116 @@ class ListStockSummaryApiStockSummaryBuilder
   _$ListStockSummaryApiStockSummary _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   String _key;
-
   String get key => _$this._key;
-
   set key(String key) => _$this._key = key;
 
   int _qty;
-
   int get qty => _$this._qty;
-
   set qty(int qty) => _$this._qty = qty;
 
   int _holdQty;
-
   int get holdQty => _$this._holdQty;
-
   set holdQty(int holdQty) => _$this._holdQty = holdQty;
 
   int _lostQty;
-
   int get lostQty => _$this._lostQty;
-
   set lostQty(int lostQty) => _$this._lostQty = lostQty;
 
   int _foundQty;
-
   int get foundQty => _$this._foundQty;
-
   set foundQty(int foundQty) => _$this._foundQty = foundQty;
 
   StockPlaceBuilder _place;
-
   StockPlaceBuilder get place => _$this._place ??= new StockPlaceBuilder();
-
   set place(StockPlaceBuilder place) => _$this._place = place;
 
   StockItemBuilder _stockItem;
-
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
-
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   ExpirationInfoBuilder _expirationInfo;
-
   ExpirationInfoBuilder get expirationInfo =>
       _$this._expirationInfo ??= new ExpirationInfoBuilder();
-
   set expirationInfo(ExpirationInfoBuilder expirationInfo) =>
       _$this._expirationInfo = expirationInfo;
 
   ResponsiblePartyBuilder _responsibleParty;
-
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
-
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   InventoryTypeBuilder _inventoryType;
-
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
-
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   LoanLiteBuilder _demandLoan;
-
   LoanLiteBuilder get demandLoan =>
       _$this._demandLoan ??= new LoanLiteBuilder();
-
   set demandLoan(LoanLiteBuilder demandLoan) => _$this._demandLoan = demandLoan;
 
   CaseEventLiteBuilder _caseEvent;
-
   CaseEventLiteBuilder get caseEvent =>
       _$this._caseEvent ??= new CaseEventLiteBuilder();
-
   set caseEvent(CaseEventLiteBuilder caseEvent) =>
       _$this._caseEvent = caseEvent;
 
   LoanLiteBuilder _consignmentLoan;
-
   LoanLiteBuilder get consignmentLoan =>
       _$this._consignmentLoan ??= new LoanLiteBuilder();
-
   set consignmentLoan(LoanLiteBuilder consignmentLoan) =>
       _$this._consignmentLoan = consignmentLoan;
 
   String _kitId;
-
   String get kitId => _$this._kitId;
-
   set kitId(String kitId) => _$this._kitId = kitId;
 
   String _kitItemNumber;
-
   String get kitItemNumber => _$this._kitItemNumber;
-
   set kitItemNumber(String kitItemNumber) =>
       _$this._kitItemNumber = kitItemNumber;
 
   int _kitSerialNumber;
-
   int get kitSerialNumber => _$this._kitSerialNumber;
-
   set kitSerialNumber(int kitSerialNumber) =>
       _$this._kitSerialNumber = kitSerialNumber;
 
   String _kitSerialRef;
-
   String get kitSerialRef => _$this._kitSerialRef;
-
   set kitSerialRef(String kitSerialRef) => _$this._kitSerialRef = kitSerialRef;
 
   bool _kitVerified;
-
   bool get kitVerified => _$this._kitVerified;
-
   set kitVerified(bool kitVerified) => _$this._kitVerified = kitVerified;
 
   bool _kitHasExtras;
-
   bool get kitHasExtras => _$this._kitHasExtras;
-
   set kitHasExtras(bool kitHasExtras) => _$this._kitHasExtras = kitHasExtras;
 
   bool _kitHasMissing;
-
   bool get kitHasMissing => _$this._kitHasMissing;
-
   set kitHasMissing(bool kitHasMissing) =>
       _$this._kitHasMissing = kitHasMissing;
 
   bool _kitHasUnverified;
-
   bool get kitHasUnverified => _$this._kitHasUnverified;
-
   set kitHasUnverified(bool kitHasUnverified) =>
       _$this._kitHasUnverified = kitHasUnverified;
 
   String _attributeLabel;
-
   String get attributeLabel => _$this._attributeLabel;
-
   set attributeLabel(String attributeLabel) =>
       _$this._attributeLabel = attributeLabel;
 
   String _attributeValue;
-
   String get attributeValue => _$this._attributeValue;
-
   set attributeValue(String attributeValue) =>
       _$this._attributeValue = attributeValue;
 
@@ -937,7 +889,6 @@ class _$ListStockSummaryApiStockSummaryActions
       ListStockSummaryApiStockSummaryBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.place,
@@ -951,7 +902,6 @@ class _$ListStockSummaryApiStockSummaryActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1017,7 +967,6 @@ class _$ListStockSummaryApiStockSummaryActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockSummaryApiStockSummary);

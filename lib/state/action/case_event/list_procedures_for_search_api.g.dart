@@ -106,7 +106,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
           ApiResult<ListProceduresForSearchApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -118,7 +117,6 @@ class _$ListProceduresForSearchApi extends ListProceduresForSearchApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListProceduresForSearchApiRequest)]),

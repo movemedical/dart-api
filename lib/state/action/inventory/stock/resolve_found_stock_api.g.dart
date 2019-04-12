@@ -10,65 +10,68 @@ part of 'resolve_found_stock_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<ResolveFoundStockApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     ResolveFoundStockApi> ResolveFoundStockApiOptions();
 
 class _$ResolveFoundStockApi extends ResolveFoundStockApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<ResolveFoundStockApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       ResolveFoundStockApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<ResolveFoundStockApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>,
-          ResolveFoundStockApi, String>> $cancel;
+      CommandPayload<ApiCommand<ResolveFoundStockApiRequest>,
+          ApiResult<Nothing>, ResolveFoundStockApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<ResolveFoundStockApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           ResolveFoundStockApi,
           Command<ApiCommand<ResolveFoundStockApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>,
-          ResolveFoundStockApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<
+          ApiCommand<ResolveFoundStockApiRequest>,
+          ApiResult<Nothing>,
+          ResolveFoundStockApi,
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>,
-          ResolveFoundStockApi, CommandProgress>> $progress;
+      CommandPayload<ApiCommand<ResolveFoundStockApiRequest>,
+          ApiResult<Nothing>, ResolveFoundStockApi, CommandProgress>> $progress;
 
   _$ResolveFoundStockApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<ResolveFoundStockApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<ResolveFoundStockApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ResolveFoundStockApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<ResolveFoundStockApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ResolveFoundStockApi,
                     Command<ApiCommand<ResolveFoundStockApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<ResolveFoundStockApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     ResolveFoundStockApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<ResolveFoundStockApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 ResolveFoundStockApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,17 +80,17 @@ class _$ResolveFoundStockApi extends ResolveFoundStockApi {
       _$ResolveFoundStockApi._(options());
 
   @override
-  CommandState<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<ResolveFoundStockApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<ResolveFoundStockApiRequest>,
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Empty>>();
+          ApiCommand<ResolveFoundStockApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,11 +102,10 @@ class _$ResolveFoundStockApi extends ResolveFoundStockApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ResolveFoundStockApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -111,7 +113,8 @@ class _$ResolveFoundStockApi extends ResolveFoundStockApi {
       ApiCommand<ResolveFoundStockApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -121,12 +124,12 @@ class _$ResolveFoundStockApi extends ResolveFoundStockApi {
       ResolveFoundStockApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<ResolveFoundStockApiRequest> get commandPayloadSerializer =>
       ResolveFoundStockApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

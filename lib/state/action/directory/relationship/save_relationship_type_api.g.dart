@@ -10,72 +10,73 @@ part of 'save_relationship_type_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<SaveRelationshipTypeApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     SaveRelationshipTypeApi> SaveRelationshipTypeApiOptions();
 
 class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       SaveRelationshipTypeApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>, SaveRelationshipTypeApi, String>> $cancel;
+          ApiResult<Nothing>, SaveRelationshipTypeApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveRelationshipTypeApi,
           Command<ApiCommand<SaveRelationshipTypeApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveRelationshipTypeApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveRelationshipTypeApi,
           CommandProgress>> $progress;
 
   _$SaveRelationshipTypeApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveRelationshipTypeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveRelationshipTypeApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SaveRelationshipTypeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveRelationshipTypeApi,
                     Command<ApiCommand<SaveRelationshipTypeApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<SaveRelationshipTypeApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveRelationshipTypeApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveRelationshipTypeApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveRelationshipTypeApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -84,18 +85,17 @@ class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
       _$SaveRelationshipTypeApi._(options());
 
   @override
-  CommandState<ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<SaveRelationshipTypeApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Empty>>();
+          ApiCommand<SaveRelationshipTypeApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -107,11 +107,10 @@ class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveRelationshipTypeApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -119,7 +118,8 @@ class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
       ApiCommand<SaveRelationshipTypeApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -129,12 +129,12 @@ class _$SaveRelationshipTypeApi extends SaveRelationshipTypeApi {
       SaveRelationshipTypeApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<SaveRelationshipTypeApiRequest> get commandPayloadSerializer =>
       SaveRelationshipTypeApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

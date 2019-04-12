@@ -122,16 +122,12 @@ class CreateCalendarSubscriptionApiResponseBuilder
   _$CreateCalendarSubscriptionApiResponse _$v;
 
   String _subscriptionId;
-
   String get subscriptionId => _$this._subscriptionId;
-
   set subscriptionId(String subscriptionId) =>
       _$this._subscriptionId = subscriptionId;
 
   String _url;
-
   String get url => _$this._url;
-
   set url(String url) => _$this._url = url;
 
   CreateCalendarSubscriptionApiResponseBuilder();
@@ -218,7 +214,6 @@ class _$CreateCalendarSubscriptionApiResponseActions
       CreateCalendarSubscriptionApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -240,7 +235,6 @@ class _$CreateCalendarSubscriptionApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateCalendarSubscriptionApiResponse);

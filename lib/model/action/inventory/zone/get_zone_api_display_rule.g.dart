@@ -99,9 +99,7 @@ class GetZoneApiDisplayRuleBuilder
   _$GetZoneApiDisplayRule _$v;
 
   bool _editAllowed;
-
   bool get editAllowed => _$this._editAllowed;
-
   set editAllowed(bool editAllowed) => _$this._editAllowed = editAllowed;
 
   GetZoneApiDisplayRuleBuilder();
@@ -175,7 +173,6 @@ class _$GetZoneApiDisplayRuleActions extends GetZoneApiDisplayRuleActions {
   GetZoneApiDisplayRuleBuilder $newBuilder() => GetZoneApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -195,7 +192,6 @@ class _$GetZoneApiDisplayRuleActions extends GetZoneApiDisplayRuleActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetZoneApiDisplayRule);
 }

@@ -10,8 +10,8 @@ part 'fire_order_push_message_api.g.dart';
 abstract class FireOrderPushMessageApi extends ApiDispatcher<
     FireOrderPushMessageApiRequest,
     FireOrderPushMessageApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     FireOrderPushMessageApi> {
   @override
   String get path => 'v1/inventory/order/fire_push';

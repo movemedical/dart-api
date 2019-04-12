@@ -174,37 +174,27 @@ class UpdateCaseEventInsuranceApiRequestBuilder
   _$UpdateCaseEventInsuranceApiRequest _$v;
 
   String _mdcCaseEventId;
-
   String get mdcCaseEventId => _$this._mdcCaseEventId;
-
   set mdcCaseEventId(String mdcCaseEventId) =>
       _$this._mdcCaseEventId = mdcCaseEventId;
 
   bool _removePrimary;
-
   bool get removePrimary => _$this._removePrimary;
-
   set removePrimary(bool removePrimary) =>
       _$this._removePrimary = removePrimary;
 
   InsuranceBuilder _primary;
-
   InsuranceBuilder get primary => _$this._primary ??= new InsuranceBuilder();
-
   set primary(InsuranceBuilder primary) => _$this._primary = primary;
 
   bool _removeSecondary;
-
   bool get removeSecondary => _$this._removeSecondary;
-
   set removeSecondary(bool removeSecondary) =>
       _$this._removeSecondary = removeSecondary;
 
   InsuranceBuilder _secondary;
-
   InsuranceBuilder get secondary =>
       _$this._secondary ??= new InsuranceBuilder();
-
   set secondary(InsuranceBuilder secondary) => _$this._secondary = secondary;
 
   UpdateCaseEventInsuranceApiRequestBuilder();
@@ -339,7 +329,6 @@ class _$UpdateCaseEventInsuranceApiRequestActions
       UpdateCaseEventInsuranceApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.primary,
@@ -347,7 +336,6 @@ class _$UpdateCaseEventInsuranceApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -375,7 +363,6 @@ class _$UpdateCaseEventInsuranceApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateCaseEventInsuranceApiRequest);

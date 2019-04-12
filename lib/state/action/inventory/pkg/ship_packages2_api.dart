@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/pkg/ship_packages2_api_re
 part 'ship_packages2_api.g.dart';
 
 abstract class ShipPackages2Api extends ApiDispatcher<ShipPackages2ApiRequest,
-    ShipPackages2ApiRequestBuilder, Empty, EmptyBuilder, ShipPackages2Api> {
+    ShipPackages2ApiRequestBuilder, Nothing, NothingBuilder, ShipPackages2Api> {
   @override
   String get path => 'v1/inventory/pkg/ship2';
 

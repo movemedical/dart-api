@@ -10,8 +10,8 @@ part 'update_ship_to_address_api.g.dart';
 abstract class UpdateShipToAddressApi extends ApiDispatcher<
     UpdateShipToAddressApiRequest,
     UpdateShipToAddressApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateShipToAddressApi> {
   @override
   String get path => 'v1/directory/address/ship_to/update';

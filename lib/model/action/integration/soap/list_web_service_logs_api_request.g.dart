@@ -208,46 +208,32 @@ class ListWebServiceLogsApiRequestBuilder
   _$ListWebServiceLogsApiRequest _$v;
 
   String _search;
-
   String get search => _$this._search;
-
   set search(String search) => _$this._search = search;
 
   DateTime _startDate;
-
   DateTime get startDate => _$this._startDate;
-
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
-
   DateTime get endDate => _$this._endDate;
-
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   ListWebServiceLogsApiSortBy _sortBy;
-
   ListWebServiceLogsApiSortBy get sortBy => _$this._sortBy;
-
   set sortBy(ListWebServiceLogsApiSortBy sortBy) => _$this._sortBy = sortBy;
 
   bool _descending;
-
   bool get descending => _$this._descending;
-
   set descending(bool descending) => _$this._descending = descending;
 
   bool _failed;
-
   bool get failed => _$this._failed;
-
   set failed(bool failed) => _$this._failed = failed;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListWebServiceLogsApiRequestBuilder();
@@ -376,14 +362,12 @@ class _$ListWebServiceLogsApiRequestActions
       ListWebServiceLogsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -415,7 +399,6 @@ class _$ListWebServiceLogsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListWebServiceLogsApiRequest);

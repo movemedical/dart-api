@@ -296,85 +296,59 @@ class ContactBuilder implements Builder<Contact, ContactBuilder> {
   _$Contact _$v;
 
   String _id;
-
   String get id => _$this._id;
-
   set id(String id) => _$this._id = id;
 
   ContactType _linkedType;
-
   ContactType get linkedType => _$this._linkedType;
-
   set linkedType(ContactType linkedType) => _$this._linkedType = linkedType;
 
   String _linkedId;
-
   String get linkedId => _$this._linkedId;
-
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   GeneralContactType _generalLinkedType;
-
   GeneralContactType get generalLinkedType => _$this._generalLinkedType;
-
   set generalLinkedType(GeneralContactType generalLinkedType) =>
       _$this._generalLinkedType = generalLinkedType;
 
   String _orgId;
-
   String get orgId => _$this._orgId;
-
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _organizationName;
-
   String get organizationName => _$this._organizationName;
-
   set organizationName(String organizationName) =>
       _$this._organizationName = organizationName;
 
   bool _publicVisible;
-
   bool get publicVisible => _$this._publicVisible;
-
   set publicVisible(bool publicVisible) =>
       _$this._publicVisible = publicVisible;
 
   String _description;
-
   String get description => _$this._description;
-
   set description(String description) => _$this._description = description;
 
   String _reference;
-
   String get reference => _$this._reference;
-
   set reference(String reference) => _$this._reference = reference;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _formattedName;
-
   String get formattedName => _$this._formattedName;
-
   set formattedName(String formattedName) =>
       _$this._formattedName = formattedName;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   ContactBuilder();
@@ -548,7 +522,6 @@ class _$ContactActions extends ContactActions {
   ContactBuilder $newBuilder() => ContactBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.email,
@@ -556,7 +529,6 @@ class _$ContactActions extends ContactActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -600,7 +572,6 @@ class _$ContactActions extends ContactActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(Contact);
 }

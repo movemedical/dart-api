@@ -126,22 +126,16 @@ class MovePresenceEventBuilder
   _$MovePresenceEvent _$v;
 
   PresenceEventType _eventType;
-
   PresenceEventType get eventType => _$this._eventType;
-
   set eventType(PresenceEventType eventType) => _$this._eventType = eventType;
 
   String _objectId;
-
   String get objectId => _$this._objectId;
-
   set objectId(String objectId) => _$this._objectId = objectId;
 
   MovePresenceBuilder _presence;
-
   MovePresenceBuilder get presence =>
       _$this._presence ??= new MovePresenceBuilder();
-
   set presence(MovePresenceBuilder presence) => _$this._presence = presence;
 
   MovePresenceEventBuilder();
@@ -244,14 +238,12 @@ class _$MovePresenceEventActions extends MovePresenceEventActions {
   MovePresenceEventBuilder $newBuilder() => MovePresenceEventBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.presence,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -275,7 +267,6 @@ class _$MovePresenceEventActions extends MovePresenceEventActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(MovePresenceEvent);
 }

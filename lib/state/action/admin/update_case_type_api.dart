@@ -7,8 +7,12 @@ export 'package:movemedical_api/model/action/admin/update_case_type_api_request.
 
 part 'update_case_type_api.g.dart';
 
-abstract class UpdateCaseTypeApi extends ApiDispatcher<UpdateCaseTypeApiRequest,
-    UpdateCaseTypeApiRequestBuilder, Empty, EmptyBuilder, UpdateCaseTypeApi> {
+abstract class UpdateCaseTypeApi extends ApiDispatcher<
+    UpdateCaseTypeApiRequest,
+    UpdateCaseTypeApiRequestBuilder,
+    Nothing,
+    NothingBuilder,
+    UpdateCaseTypeApi> {
   @override
   String get path => 'v1/admin/case_type/update';
 

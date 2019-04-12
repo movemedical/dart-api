@@ -107,7 +107,6 @@ class _$ListProceduresForSchedulingApi extends ListProceduresForSchedulingApi {
           ApiResult<ListProceduresForSchedulingApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -119,7 +118,6 @@ class _$ListProceduresForSchedulingApi extends ListProceduresForSchedulingApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListProceduresForSchedulingApiRequest)]),

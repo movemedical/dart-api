@@ -127,20 +127,16 @@ class ListShipmentsForDashboardApiResponseBuilder
   _$ListShipmentsForDashboardApiResponse _$v;
 
   ListBuilder<ListShipmentsForDashboardApiDashboardShipmentLite> _data;
-
   ListBuilder<ListShipmentsForDashboardApiDashboardShipmentLite> get data =>
       _$this._data ??=
           new ListBuilder<ListShipmentsForDashboardApiDashboardShipmentLite>();
-
   set data(
           ListBuilder<ListShipmentsForDashboardApiDashboardShipmentLite>
               data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListShipmentsForDashboardApiResponseBuilder();
@@ -241,7 +237,6 @@ class _$ListShipmentsForDashboardApiResponseActions
       ListShipmentsForDashboardApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -263,7 +258,6 @@ class _$ListShipmentsForDashboardApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListShipmentsForDashboardApiResponse);

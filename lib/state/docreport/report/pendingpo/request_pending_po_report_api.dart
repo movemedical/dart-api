@@ -10,8 +10,8 @@ part 'request_pending_po_report_api.g.dart';
 abstract class RequestPendingPoReportApi extends ApiDispatcher<
     RequestPendingPoReportApiRequest,
     RequestPendingPoReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestPendingPoReportApi> {
   @override
   String get path => 'v1/docreport/pending_po';

@@ -10,8 +10,8 @@ part 'remove_physician_biz_unit_procedure_api.g.dart';
 abstract class RemovePhysicianBizUnitProcedureApi extends ApiDispatcher<
     RemovePhysicianBizUnitProcedureApiRequest,
     RemovePhysicianBizUnitProcedureApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RemovePhysicianBizUnitProcedureApi> {
   @override
   String get path =>

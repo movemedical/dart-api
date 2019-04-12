@@ -10,8 +10,8 @@ part 'edit_case_event_scheduling_api.g.dart';
 abstract class EditCaseEventSchedulingApi extends ApiDispatcher<
     EditCaseEventSchedulingApiRequest,
     EditCaseEventSchedulingApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     EditCaseEventSchedulingApi> {
   @override
   String get path => 'v1/case_event/edit_case_event_scheduling';

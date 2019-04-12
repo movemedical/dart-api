@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/inventory/loan/save_loan_lines_api_
 part 'save_loan_lines_api.g.dart';
 
 abstract class SaveLoanLinesApi extends ApiDispatcher<SaveLoanLinesApiRequest,
-    SaveLoanLinesApiRequestBuilder, Empty, EmptyBuilder, SaveLoanLinesApi> {
+    SaveLoanLinesApiRequestBuilder, Nothing, NothingBuilder, SaveLoanLinesApi> {
   @override
   String get path => 'v1/inventory/loan/save_lines';
 

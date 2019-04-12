@@ -99,9 +99,7 @@ class CancelAuditApiRequestBuilder
   _$CancelAuditApiRequest _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   CancelAuditApiRequestBuilder();
@@ -174,7 +172,6 @@ class _$CancelAuditApiRequestActions extends CancelAuditApiRequestActions {
   CancelAuditApiRequestBuilder $newBuilder() => CancelAuditApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -194,7 +191,6 @@ class _$CancelAuditApiRequestActions extends CancelAuditApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CancelAuditApiRequest);
 }

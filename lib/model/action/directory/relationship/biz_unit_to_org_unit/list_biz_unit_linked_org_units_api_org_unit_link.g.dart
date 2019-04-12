@@ -211,46 +211,32 @@ class ListBizUnitLinkedOrgUnitsApiOrgUnitLinkBuilder
   _$ListBizUnitLinkedOrgUnitsApiOrgUnitLink _$v;
 
   String _bizUnitToOrgUnitId;
-
   String get bizUnitToOrgUnitId => _$this._bizUnitToOrgUnitId;
-
   set bizUnitToOrgUnitId(String bizUnitToOrgUnitId) =>
       _$this._bizUnitToOrgUnitId = bizUnitToOrgUnitId;
 
   String _orgUnitId;
-
   String get orgUnitId => _$this._orgUnitId;
-
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
-
   String get orgUnitName => _$this._orgUnitName;
-
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   bool _opsOrgUnit;
-
   bool get opsOrgUnit => _$this._opsOrgUnit;
-
   set opsOrgUnit(bool opsOrgUnit) => _$this._opsOrgUnit = opsOrgUnit;
 
   bool _salesOrgUnit;
-
   bool get salesOrgUnit => _$this._salesOrgUnit;
-
   set salesOrgUnit(bool salesOrgUnit) => _$this._salesOrgUnit = salesOrgUnit;
 
   String _orgUnitLabel;
-
   String get orgUnitLabel => _$this._orgUnitLabel;
-
   set orgUnitLabel(String orgUnitLabel) => _$this._orgUnitLabel = orgUnitLabel;
 
   bool _orgUnitActive;
-
   bool get orgUnitActive => _$this._orgUnitActive;
-
   set orgUnitActive(bool orgUnitActive) =>
       _$this._orgUnitActive = orgUnitActive;
 
@@ -376,7 +362,6 @@ class _$ListBizUnitLinkedOrgUnitsApiOrgUnitLinkActions
       ListBizUnitLinkedOrgUnitsApiOrgUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -408,7 +393,6 @@ class _$ListBizUnitLinkedOrgUnitsApiOrgUnitLinkActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBizUnitLinkedOrgUnitsApiOrgUnitLink);

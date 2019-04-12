@@ -10,8 +10,8 @@ part 'mark_conversations_read_unread_api.g.dart';
 abstract class MarkConversationsReadUnreadApi extends ApiDispatcher<
     MarkConversationsReadUnreadApiRequest,
     MarkConversationsReadUnreadApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     MarkConversationsReadUnreadApi> {
   @override
   String get path => 'v1/messaging/conversations/mark_read_unread';

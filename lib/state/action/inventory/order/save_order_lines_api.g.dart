@@ -10,64 +10,65 @@ part of 'save_order_lines_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<SaveOrderLinesApiRequest>,
+        ApiResult<Nothing>>,
     SaveOrderLinesApi> SaveOrderLinesApiOptions();
 
 class _$SaveOrderLinesApi extends SaveOrderLinesApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<SaveOrderLinesApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       SaveOrderLinesApi> $options;
 
   final ActionDispatcher<
-          CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>>>
-      $replace;
+      CommandState<ApiCommand<SaveOrderLinesApiRequest>,
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>,
           SaveOrderLinesApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<SaveOrderLinesApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           SaveOrderLinesApi,
           Command<ApiCommand<SaveOrderLinesApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>,
-          SaveOrderLinesApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>,
+          SaveOrderLinesApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>,
           SaveOrderLinesApi, CommandProgress>> $progress;
 
   _$SaveOrderLinesApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<SaveOrderLinesApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<SaveOrderLinesApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveOrderLinesApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<SaveOrderLinesApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveOrderLinesApi,
                     Command<ApiCommand<SaveOrderLinesApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<SaveOrderLinesApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     SaveOrderLinesApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<SaveOrderLinesApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 SaveOrderLinesApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -76,17 +77,16 @@ class _$SaveOrderLinesApi extends SaveOrderLinesApi {
       _$SaveOrderLinesApi._(options());
 
   @override
-  CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<SaveOrderLinesApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<SaveOrderLinesApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<SaveOrderLinesApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,11 +98,10 @@ class _$SaveOrderLinesApi extends SaveOrderLinesApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveOrderLinesApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -110,7 +109,8 @@ class _$SaveOrderLinesApi extends SaveOrderLinesApi {
       ApiCommand<SaveOrderLinesApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -120,12 +120,12 @@ class _$SaveOrderLinesApi extends SaveOrderLinesApi {
       SaveOrderLinesApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<SaveOrderLinesApiRequest> get commandPayloadSerializer =>
       SaveOrderLinesApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

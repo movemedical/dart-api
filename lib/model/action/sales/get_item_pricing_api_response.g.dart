@@ -191,47 +191,35 @@ class GetItemPricingApiResponseBuilder
   _$GetItemPricingApiResponse _$v;
 
   bool _shipToRemotePricingSuccess;
-
   bool get shipToRemotePricingSuccess => _$this._shipToRemotePricingSuccess;
-
   set shipToRemotePricingSuccess(bool shipToRemotePricingSuccess) =>
       _$this._shipToRemotePricingSuccess = shipToRemotePricingSuccess;
 
   String _shipToRemotePricingSoapLogId;
-
   String get shipToRemotePricingSoapLogId =>
       _$this._shipToRemotePricingSoapLogId;
-
   set shipToRemotePricingSoapLogId(String shipToRemotePricingSoapLogId) =>
       _$this._shipToRemotePricingSoapLogId = shipToRemotePricingSoapLogId;
 
   bool _billToRemotePricingSuccess;
-
   bool get billToRemotePricingSuccess => _$this._billToRemotePricingSuccess;
-
   set billToRemotePricingSuccess(bool billToRemotePricingSuccess) =>
       _$this._billToRemotePricingSuccess = billToRemotePricingSuccess;
 
   String _billToRemotePricingSoapLogId;
-
   String get billToRemotePricingSoapLogId =>
       _$this._billToRemotePricingSoapLogId;
-
   set billToRemotePricingSoapLogId(String billToRemotePricingSoapLogId) =>
       _$this._billToRemotePricingSoapLogId = billToRemotePricingSoapLogId;
 
   double _constructPrice;
-
   double get constructPrice => _$this._constructPrice;
-
   set constructPrice(double constructPrice) =>
       _$this._constructPrice = constructPrice;
 
   ListBuilder<GetItemPricingApiItemPrice> _itemPrices;
-
   ListBuilder<GetItemPricingApiItemPrice> get itemPrices =>
       _$this._itemPrices ??= new ListBuilder<GetItemPricingApiItemPrice>();
-
   set itemPrices(ListBuilder<GetItemPricingApiItemPrice> itemPrices) =>
       _$this._itemPrices = itemPrices;
 
@@ -367,7 +355,6 @@ class _$GetItemPricingApiResponseActions
       GetItemPricingApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -397,7 +384,6 @@ class _$GetItemPricingApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetItemPricingApiResponse);
 }

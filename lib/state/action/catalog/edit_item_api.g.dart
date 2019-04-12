@@ -10,50 +10,57 @@ part of 'edit_item_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>,
-    CommandStateBuilder<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>,
+    CommandStateBuilder<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>,
     EditItemApi> EditItemApiOptions();
 
 class _$EditItemApi extends EditItemApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>,
-      CommandStateBuilder<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>,
+      CommandStateBuilder<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>,
       EditItemApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>> $replace;
+          CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>>
+      $replace;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>,
           EditItemApi, String>> $cancel;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>,
           EditItemApi, Command<ApiCommand<EditItemApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
-          EditItemApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>,
+          EditItemApi, CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
+      CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>,
           EditItemApi, CommandProgress>> $progress;
 
   _$EditItemApi._(this.$options)
       : $replace = $options.action<
-                CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>>(
-            '\$replace', (a) => a?.$replace),
+            CommandState<ApiCommand<EditItemApiRequest>,
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
-            CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
+            CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>,
                 EditItemApi, String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
-                CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
-                    EditItemApi, Command<ApiCommand<EditItemApiRequest>>>>(
+                CommandPayload<
+                    ApiCommand<EditItemApiRequest>,
+                    ApiResult<Nothing>,
+                    EditItemApi,
+                    Command<ApiCommand<EditItemApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
-                CommandPayload<ApiCommand<EditItemApiRequest>, ApiResult<Empty>,
-                    EditItemApi, CommandResult<ApiResult<Empty>>>>(
+                CommandPayload<
+                    ApiCommand<EditItemApiRequest>,
+                    ApiResult<Nothing>,
+                    EditItemApi,
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<EditItemApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 EditItemApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -62,16 +69,16 @@ class _$EditItemApi extends EditItemApi {
       _$EditItemApi._(options());
 
   @override
-  CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Empty>> get $initial =>
-      CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>();
+  CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>
+      get $initial =>
+          CommandState<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>();
 
   @override
-  CommandStateBuilder<ApiCommand<EditItemApiRequest>, ApiResult<Empty>>
+  CommandStateBuilder<ApiCommand<EditItemApiRequest>, ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<ApiCommand<EditItemApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -83,11 +90,10 @@ class _$EditItemApi extends EditItemApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EditItemApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -95,7 +101,8 @@ class _$EditItemApi extends EditItemApi {
       ApiCommand<EditItemApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -105,12 +112,12 @@ class _$EditItemApi extends EditItemApi {
       EditItemApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<EditItemApiRequest> get commandPayloadSerializer =>
       EditItemApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

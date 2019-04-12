@@ -116,15 +116,11 @@ class GetSwapStockApiResponseBuilder
   _$GetSwapStockApiResponse _$v;
 
   String _pickId;
-
   String get pickId => _$this._pickId;
-
   set pickId(String pickId) => _$this._pickId = pickId;
 
   String _stockId;
-
   String get stockId => _$this._stockId;
-
   set stockId(String stockId) => _$this._stockId = stockId;
 
   GetSwapStockApiResponseBuilder();
@@ -203,7 +199,6 @@ class _$GetSwapStockApiResponseActions extends GetSwapStockApiResponseActions {
       GetSwapStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,7 +220,6 @@ class _$GetSwapStockApiResponseActions extends GetSwapStockApiResponseActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSwapStockApiResponse);
 }

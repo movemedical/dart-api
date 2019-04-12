@@ -100,9 +100,7 @@ class AuditUpdatedPushMessageBuilder
   _$AuditUpdatedPushMessage _$v;
 
   String _auditId;
-
   String get auditId => _$this._auditId;
-
   set auditId(String auditId) => _$this._auditId = auditId;
 
   AuditUpdatedPushMessageBuilder();
@@ -176,7 +174,6 @@ class _$AuditUpdatedPushMessageActions extends AuditUpdatedPushMessageActions {
       AuditUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -196,7 +193,6 @@ class _$AuditUpdatedPushMessageActions extends AuditUpdatedPushMessageActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(AuditUpdatedPushMessage);
 }

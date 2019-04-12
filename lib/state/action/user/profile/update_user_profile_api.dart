@@ -10,8 +10,8 @@ part 'update_user_profile_api.g.dart';
 abstract class UpdateUserProfileApi extends ApiDispatcher<
     UpdateUserProfileApiRequest,
     UpdateUserProfileApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateUserProfileApi> {
   @override
   String get path => 'v1/user/profile/update';

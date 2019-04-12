@@ -11,72 +11,72 @@ part of 'assign_integration_issue_api.dart';
 
 typedef StatefulActionsOptions<
     CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     CommandStateBuilder<ApiCommand<AssignIntegrationIssueApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<Nothing>>,
     AssignIntegrationIssueApi> AssignIntegrationIssueApiOptions();
 
 class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
   final StatefulActionsOptions<
       CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       CommandStateBuilder<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<Nothing>>,
       AssignIntegrationIssueApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>>> $replace;
+          ApiResult<Nothing>>> $replace;
   final ActionDispatcher<
       CommandPayload<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>, AssignIntegrationIssueApi, String>> $cancel;
+          ApiResult<Nothing>, AssignIntegrationIssueApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AssignIntegrationIssueApi,
           Command<ApiCommand<AssignIntegrationIssueApiRequest>>>> $execute;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AssignIntegrationIssueApi,
-          CommandResult<ApiResult<Empty>>>> $result;
+          CommandResult<ApiResult<Nothing>>>> $result;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<Nothing>,
           AssignIntegrationIssueApi,
           CommandProgress>> $progress;
 
   _$AssignIntegrationIssueApi._(this.$options)
       : $replace = $options.action<
             CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                ApiResult<Nothing>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AssignIntegrationIssueApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<AssignIntegrationIssueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AssignIntegrationIssueApi,
                     Command<ApiCommand<AssignIntegrationIssueApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<AssignIntegrationIssueApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<Nothing>,
                     AssignIntegrationIssueApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<Nothing>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<AssignIntegrationIssueApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<Nothing>,
                 AssignIntegrationIssueApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -86,18 +86,17 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
       _$AssignIntegrationIssueApi._(options());
 
   @override
-  CommandState<ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Nothing>>
       get $initial => CommandState<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<Nothing>>();
 
   @override
   CommandStateBuilder<ApiCommand<AssignIntegrationIssueApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<Nothing>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Empty>>();
+          ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Nothing>>();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,11 +108,10 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
       ]);
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AssignIntegrationIssueApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(Nothing)])
       ]);
 
   @override
@@ -121,7 +119,8 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
       ApiCommand<AssignIntegrationIssueApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<Nothing> newResultBuilder() =>
+      ApiResult<Nothing>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -131,12 +130,12 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
       AssignIntegrationIssueApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  NothingBuilder newResultPayloadBuilder() => Nothing().toBuilder();
 
   @override
   Serializer<AssignIntegrationIssueApiRequest> get commandPayloadSerializer =>
       AssignIntegrationIssueApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<Nothing> get resultPayloadSerializer => Nothing.serializer;
 }

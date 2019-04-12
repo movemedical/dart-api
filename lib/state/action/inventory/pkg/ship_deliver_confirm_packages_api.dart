@@ -10,8 +10,8 @@ part 'ship_deliver_confirm_packages_api.g.dart';
 abstract class ShipDeliverConfirmPackagesApi extends ApiDispatcher<
     ShipDeliverConfirmPackagesApiRequest,
     ShipDeliverConfirmPackagesApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     ShipDeliverConfirmPackagesApi> {
   @override
   String get path => 'v1/inventory/pkg/shipDeliverConfirm';

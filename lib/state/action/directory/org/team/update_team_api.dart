@@ -8,7 +8,7 @@ export 'package:movemedical_api/model/action/directory/org/team/update_team_api_
 part 'update_team_api.g.dart';
 
 abstract class UpdateTeamApi extends ApiDispatcher<UpdateTeamApiRequest,
-    UpdateTeamApiRequestBuilder, Empty, EmptyBuilder, UpdateTeamApi> {
+    UpdateTeamApiRequestBuilder, Nothing, NothingBuilder, UpdateTeamApi> {
   @override
   String get path => 'v1/directory/org/team/update';
 

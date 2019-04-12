@@ -124,15 +124,11 @@ class SetCustomerDefaultBillToAddressApiRequestBuilder
   _$SetCustomerDefaultBillToAddressApiRequest _$v;
 
   String _customerId;
-
   String get customerId => _$this._customerId;
-
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _billToAddressId;
-
   String get billToAddressId => _$this._billToAddressId;
-
   set billToAddressId(String billToAddressId) =>
       _$this._billToAddressId = billToAddressId;
 
@@ -221,7 +217,6 @@ class _$SetCustomerDefaultBillToAddressApiRequestActions
       SetCustomerDefaultBillToAddressApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -243,7 +238,6 @@ class _$SetCustomerDefaultBillToAddressApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SetCustomerDefaultBillToAddressApiRequest);

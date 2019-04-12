@@ -199,46 +199,32 @@ class CreateDceApiRequestBuilder
   _$CreateDceApiRequest _$v;
 
   String _reference;
-
   String get reference => _$this._reference;
-
   set reference(String reference) => _$this._reference = reference;
 
   PersonNameBuilder _name;
-
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
-
   set name(PersonNameBuilder name) => _$this._name = name;
 
   EmailBuilder _email;
-
   EmailBuilder get email => _$this._email ??= new EmailBuilder();
-
   set email(EmailBuilder email) => _$this._email = email;
 
   String _timeZone;
-
   String get timeZone => _$this._timeZone;
-
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   String _workingHomeId;
-
   String get workingHomeId => _$this._workingHomeId;
-
   set workingHomeId(String workingHomeId) =>
       _$this._workingHomeId = workingHomeId;
 
   String _workingAtId;
-
   String get workingAtId => _$this._workingAtId;
-
   set workingAtId(String workingAtId) => _$this._workingAtId = workingAtId;
 
   bool _active;
-
   bool get active => _$this._active;
-
   set active(bool active) => _$this._active = active;
 
   CreateDceApiRequestBuilder();
@@ -372,7 +358,6 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
   CreateDceApiRequestBuilder $newBuilder() => CreateDceApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -380,7 +365,6 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -412,7 +396,6 @@ class _$CreateDceApiRequestActions extends CreateDceApiRequestActions {
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateDceApiRequest);
 }

@@ -10,8 +10,8 @@ part 'add_item_category_to_org_unit_api.g.dart';
 abstract class AddItemCategoryToOrgUnitApi extends ApiDispatcher<
     AddItemCategoryToOrgUnitApiRequest,
     AddItemCategoryToOrgUnitApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     AddItemCategoryToOrgUnitApi> {
   @override
   String get path => 'v1/directory/relationship/item_category_to_org_unit/add';

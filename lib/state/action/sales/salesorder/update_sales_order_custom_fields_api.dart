@@ -10,8 +10,8 @@ part 'update_sales_order_custom_fields_api.g.dart';
 abstract class UpdateSalesOrderCustomFieldsApi extends ApiDispatcher<
     UpdateSalesOrderCustomFieldsApiRequest,
     UpdateSalesOrderCustomFieldsApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     UpdateSalesOrderCustomFieldsApi> {
   @override
   String get path => 'v1/sales/sales_order/update_order_custom_fields';

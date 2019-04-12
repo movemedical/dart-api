@@ -10,8 +10,8 @@ part 'request_unbilled_report_api.g.dart';
 abstract class RequestUnbilledReportApi extends ApiDispatcher<
     RequestUnbilledReportApiRequest,
     RequestUnbilledReportApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
+    Nothing,
+    NothingBuilder,
     RequestUnbilledReportApi> {
   @override
   String get path => 'v1/docreport/unbilled';

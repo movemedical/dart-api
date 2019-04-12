@@ -7,7 +7,6 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:http/http.dart' as http;
-import 'package:meta/meta.dart';
 import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/paginated_list_response.dart'
     as paginated_list_response;

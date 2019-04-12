@@ -122,17 +122,13 @@ class ListDelegateOptionsApiResponseBuilder
   _$ListDelegateOptionsApiResponse _$v;
 
   ListBuilder<ListDelegateOptionsApiDelegateOption> _data;
-
   ListBuilder<ListDelegateOptionsApiDelegateOption> get data =>
       _$this._data ??= new ListBuilder<ListDelegateOptionsApiDelegateOption>();
-
   set data(ListBuilder<ListDelegateOptionsApiDelegateOption> data) =>
       _$this._data = data;
 
   bool _moreData;
-
   bool get moreData => _$this._moreData;
-
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListDelegateOptionsApiResponseBuilder();
@@ -229,7 +225,6 @@ class _$ListDelegateOptionsApiResponseActions
       ListDelegateOptionsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -251,7 +246,6 @@ class _$ListDelegateOptionsApiResponseActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListDelegateOptionsApiResponse);

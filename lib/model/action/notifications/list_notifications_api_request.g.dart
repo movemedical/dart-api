@@ -120,16 +120,12 @@ class ListNotificationsApiRequestBuilder
   _$ListNotificationsApiRequest _$v;
 
   bool _read;
-
   bool get read => _$this._read;
-
   set read(bool read) => _$this._read = read;
 
   PaginationParamsBuilder _paging;
-
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
-
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListNotificationsApiRequestBuilder();
@@ -232,14 +228,12 @@ class _$ListNotificationsApiRequestActions
       ListNotificationsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
-
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
-
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -261,7 +255,6 @@ class _$ListNotificationsApiRequestActions
   }
 
   FullType _$fullType;
-
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListNotificationsApiRequest);
