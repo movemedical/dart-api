@@ -169,21 +169,27 @@ class PreviewApplyPreferenceCardsToCaseApiRequestBuilder
   _$PreviewApplyPreferenceCardsToCaseApiRequest _$v;
 
   String _caseId;
+
   String get caseId => _$this._caseId;
+
   set caseId(String caseId) => _$this._caseId = caseId;
 
   String _preferenceCardId;
+
   String get preferenceCardId => _$this._preferenceCardId;
+
   set preferenceCardId(String preferenceCardId) =>
       _$this._preferenceCardId = preferenceCardId;
 
   ListBuilder<
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>
       _preferenceCardItems;
+
   ListBuilder<
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>
       get preferenceCardItems => _$this._preferenceCardItems ??= new ListBuilder<
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>();
+
   set preferenceCardItems(
           ListBuilder<
                   PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification>
@@ -191,7 +197,9 @@ class PreviewApplyPreferenceCardsToCaseApiRequestBuilder
       _$this._preferenceCardItems = preferenceCardItems;
 
   bool _deduplicate;
+
   bool get deduplicate => _$this._deduplicate;
+
   set deduplicate(bool deduplicate) => _$this._deduplicate = deduplicate;
 
   PreviewApplyPreferenceCardsToCaseApiRequestBuilder();
@@ -313,6 +321,7 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
       PreviewApplyPreferenceCardsToCaseApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -338,6 +347,7 @@ class _$PreviewApplyPreferenceCardsToCaseApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PreviewApplyPreferenceCardsToCaseApiRequest);

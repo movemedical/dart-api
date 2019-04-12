@@ -135,6 +135,7 @@ class _$UiSetupUpdatedPushMessageActions
       UiSetupUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -142,6 +143,7 @@ class _$UiSetupUpdatedPushMessageActions
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(UiSetupUpdatedPushMessage);
 }

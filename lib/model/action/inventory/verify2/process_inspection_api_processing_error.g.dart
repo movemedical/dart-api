@@ -122,11 +122,15 @@ class ProcessInspectionApiProcessingErrorBuilder
   _$ProcessInspectionApiProcessingError _$v;
 
   String _receiptId;
+
   String get receiptId => _$this._receiptId;
+
   set receiptId(String receiptId) => _$this._receiptId = receiptId;
 
   String _error;
+
   String get error => _$this._error;
+
   set error(String error) => _$this._error = error;
 
   ProcessInspectionApiProcessingErrorBuilder();
@@ -210,6 +214,7 @@ class _$ProcessInspectionApiProcessingErrorActions
       ProcessInspectionApiProcessingErrorBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -231,6 +236,7 @@ class _$ProcessInspectionApiProcessingErrorActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ProcessInspectionApiProcessingError);

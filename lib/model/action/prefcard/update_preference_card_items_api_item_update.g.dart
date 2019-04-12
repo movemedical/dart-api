@@ -123,11 +123,15 @@ class UpdatePreferenceCardItemsApiItemUpdateBuilder
   _$UpdatePreferenceCardItemsApiItemUpdate _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   UpdatePreferenceCardItemsApiItemUpdateBuilder();
@@ -211,6 +215,7 @@ class _$UpdatePreferenceCardItemsApiItemUpdateActions
       UpdatePreferenceCardItemsApiItemUpdateBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -232,6 +237,7 @@ class _$UpdatePreferenceCardItemsApiItemUpdateActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdatePreferenceCardItemsApiItemUpdate);

@@ -207,36 +207,50 @@ class PrepareOrderFileUploadApiRequestBuilder
   _$PrepareOrderFileUploadApiRequest _$v;
 
   String _orderHeaderId;
+
   String get orderHeaderId => _$this._orderHeaderId;
+
   set orderHeaderId(String orderHeaderId) =>
       _$this._orderHeaderId = orderHeaderId;
 
   String _fileName;
+
   String get fileName => _$this._fileName;
+
   set fileName(String fileName) => _$this._fileName = fileName;
 
   String _fileDescription;
+
   String get fileDescription => _$this._fileDescription;
+
   set fileDescription(String fileDescription) =>
       _$this._fileDescription = fileDescription;
 
   OrderFileType _orderFileType;
+
   OrderFileType get orderFileType => _$this._orderFileType;
+
   set orderFileType(OrderFileType orderFileType) =>
       _$this._orderFileType = orderFileType;
 
   int _estimatedSizeKb;
+
   int get estimatedSizeKb => _$this._estimatedSizeKb;
+
   set estimatedSizeKb(int estimatedSizeKb) =>
       _$this._estimatedSizeKb = estimatedSizeKb;
 
   String _ownerOrgUnitId;
+
   String get ownerOrgUnitId => _$this._ownerOrgUnitId;
+
   set ownerOrgUnitId(String ownerOrgUnitId) =>
       _$this._ownerOrgUnitId = ownerOrgUnitId;
 
   Visibility _visibility;
+
   Visibility get visibility => _$this._visibility;
+
   set visibility(Visibility visibility) => _$this._visibility = visibility;
 
   PrepareOrderFileUploadApiRequestBuilder();
@@ -364,6 +378,7 @@ class _$PrepareOrderFileUploadApiRequestActions
       PrepareOrderFileUploadApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -395,6 +410,7 @@ class _$PrepareOrderFileUploadApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(PrepareOrderFileUploadApiRequest);

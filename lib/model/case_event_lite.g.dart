@@ -139,19 +139,27 @@ class CaseEventLiteBuilder
   _$CaseEventLite _$v;
 
   String _caseEventId;
+
   String get caseEventId => _$this._caseEventId;
+
   set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
 
   String _eventId;
+
   String get eventId => _$this._eventId;
+
   set eventId(String eventId) => _$this._eventId = eventId;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   CaseEventStatus _status;
+
   CaseEventStatus get status => _$this._status;
+
   set status(CaseEventStatus status) => _$this._status = status;
 
   CaseEventLiteBuilder();
@@ -241,6 +249,7 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
   CaseEventLiteBuilder $newBuilder() => CaseEventLiteBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -266,6 +275,7 @@ class _$CaseEventLiteActions extends CaseEventLiteActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CaseEventLite);
 }

@@ -130,15 +130,21 @@ class UpdateHoldReasonApiRequestBuilder
   _$UpdateHoldReasonApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   UpdateHoldReasonApiRequestBuilder();
@@ -224,6 +230,7 @@ class _$UpdateHoldReasonApiRequestActions
       UpdateHoldReasonApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -247,6 +254,7 @@ class _$UpdateHoldReasonApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(UpdateHoldReasonApiRequest);
 }

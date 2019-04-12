@@ -102,7 +102,9 @@ class FacilityUpdatedPushMessageBuilder
   _$FacilityUpdatedPushMessage _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   FacilityUpdatedPushMessageBuilder();
@@ -180,6 +182,7 @@ class _$FacilityUpdatedPushMessageActions
       FacilityUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -199,6 +202,7 @@ class _$FacilityUpdatedPushMessageActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(FacilityUpdatedPushMessage);
 }

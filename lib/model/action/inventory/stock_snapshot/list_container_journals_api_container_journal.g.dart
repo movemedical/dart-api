@@ -245,45 +245,63 @@ class ListContainerJournalsApiContainerJournalBuilder
   _$ListContainerJournalsApiContainerJournal _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   DateTime _date;
+
   DateTime get date => _$this._date;
+
   set date(DateTime date) => _$this._date = date;
 
   StockTransactionType _stockTransactionType;
+
   StockTransactionType get stockTransactionType => _$this._stockTransactionType;
+
   set stockTransactionType(StockTransactionType stockTransactionType) =>
       _$this._stockTransactionType = stockTransactionType;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   StockContainerBuilder _container;
+
   StockContainerBuilder get container =>
       _$this._container ??= new StockContainerBuilder();
+
   set container(StockContainerBuilder container) =>
       _$this._container = container;
 
   int _quantityChange;
+
   int get quantityChange => _$this._quantityChange;
+
   set quantityChange(int quantityChange) =>
       _$this._quantityChange = quantityChange;
 
   StockReferenceType _transactionReferenceType;
+
   StockReferenceType get transactionReferenceType =>
       _$this._transactionReferenceType;
+
   set transactionReferenceType(StockReferenceType transactionReferenceType) =>
       _$this._transactionReferenceType = transactionReferenceType;
 
   String _transactionReferenceId;
+
   String get transactionReferenceId => _$this._transactionReferenceId;
+
   set transactionReferenceId(String transactionReferenceId) =>
       _$this._transactionReferenceId = transactionReferenceId;
 
@@ -443,6 +461,7 @@ class _$ListContainerJournalsApiContainerJournalActions
       ListContainerJournalsApiContainerJournalBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -450,6 +469,7 @@ class _$ListContainerJournalsApiContainerJournalActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -485,6 +505,7 @@ class _$ListContainerJournalsApiContainerJournalActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListContainerJournalsApiContainerJournal);

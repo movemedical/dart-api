@@ -24,6 +24,7 @@ abstract class ApiActions
   PushDispatcher get push;
 
   FieldDispatcher<String> get appVersion;
+
   FieldDispatcher<String> get platformVersion;
 
   FieldDispatcher<String> get url;

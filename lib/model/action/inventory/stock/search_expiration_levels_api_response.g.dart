@@ -109,9 +109,11 @@ class SearchExpirationLevelsApiResponseBuilder
   _$SearchExpirationLevelsApiResponse _$v;
 
   ListBuilder<SearchExpirationLevelsApiExpirationLevel> _levels;
+
   ListBuilder<SearchExpirationLevelsApiExpirationLevel> get levels =>
       _$this._levels ??=
           new ListBuilder<SearchExpirationLevelsApiExpirationLevel>();
+
   set levels(ListBuilder<SearchExpirationLevelsApiExpirationLevel> levels) =>
       _$this._levels = levels;
 
@@ -209,6 +211,7 @@ class _$SearchExpirationLevelsApiResponseActions
       SearchExpirationLevelsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,6 +231,7 @@ class _$SearchExpirationLevelsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchExpirationLevelsApiResponse);

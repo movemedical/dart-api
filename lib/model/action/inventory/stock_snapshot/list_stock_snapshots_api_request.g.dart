@@ -120,12 +120,16 @@ class ListStockSnapshotsApiRequestBuilder
   _$ListStockSnapshotsApiRequest _$v;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListStockSnapshotsApiRequestBuilder();
@@ -228,12 +232,14 @@ class _$ListStockSnapshotsApiRequestActions
       ListStockSnapshotsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,6 +261,7 @@ class _$ListStockSnapshotsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockSnapshotsApiRequest);

@@ -135,16 +135,22 @@ class SaveOrderLinesApiRequestBuilder
   _$SaveOrderLinesApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   bool _sendToErp;
+
   bool get sendToErp => _$this._sendToErp;
+
   set sendToErp(bool sendToErp) => _$this._sendToErp = sendToErp;
 
   ListBuilder<SaveOrderLinesApiOrderLine> _lines;
+
   ListBuilder<SaveOrderLinesApiOrderLine> get lines =>
       _$this._lines ??= new ListBuilder<SaveOrderLinesApiOrderLine>();
+
   set lines(ListBuilder<SaveOrderLinesApiOrderLine> lines) =>
       _$this._lines = lines;
 
@@ -245,6 +251,7 @@ class _$SaveOrderLinesApiRequestActions
       SaveOrderLinesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -268,6 +275,7 @@ class _$SaveOrderLinesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SaveOrderLinesApiRequest);
 }

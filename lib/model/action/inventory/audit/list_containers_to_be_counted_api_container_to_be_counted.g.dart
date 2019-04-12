@@ -130,12 +130,16 @@ class ListContainersToBeCountedApiContainerToBeCountedBuilder
   _$ListContainersToBeCountedApiContainerToBeCounted _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   StockContainerBuilder _container;
+
   StockContainerBuilder get container =>
       _$this._container ??= new StockContainerBuilder();
+
   set container(StockContainerBuilder container) =>
       _$this._container = container;
 
@@ -244,12 +248,14 @@ class _$ListContainersToBeCountedApiContainerToBeCountedActions
       ListContainersToBeCountedApiContainerToBeCountedBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.container,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -271,6 +277,7 @@ class _$ListContainersToBeCountedApiContainerToBeCountedActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListContainersToBeCountedApiContainerToBeCounted);

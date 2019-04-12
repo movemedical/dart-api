@@ -102,11 +102,15 @@ class TagBuilder implements Builder<Tag, TagBuilder> {
   _$Tag _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _tagNumber;
+
   String get tagNumber => _$this._tagNumber;
+
   set tagNumber(String tagNumber) => _$this._tagNumber = tagNumber;
 
   TagBuilder();
@@ -176,6 +180,7 @@ class _$TagActions extends TagActions {
   TagBuilder $newBuilder() => TagBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -197,6 +202,7 @@ class _$TagActions extends TagActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(Tag);
 }

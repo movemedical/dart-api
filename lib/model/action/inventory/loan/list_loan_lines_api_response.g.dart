@@ -119,12 +119,16 @@ class ListLoanLinesApiResponseBuilder
   _$ListLoanLinesApiResponse _$v;
 
   ListBuilder<ListLoanLinesApiLoanLine> _data;
+
   ListBuilder<ListLoanLinesApiLoanLine> get data =>
       _$this._data ??= new ListBuilder<ListLoanLinesApiLoanLine>();
+
   set data(ListBuilder<ListLoanLinesApiLoanLine> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListLoanLinesApiResponseBuilder();
@@ -220,6 +224,7 @@ class _$ListLoanLinesApiResponseActions
       ListLoanLinesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,6 +246,7 @@ class _$ListLoanLinesApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListLoanLinesApiResponse);
 }

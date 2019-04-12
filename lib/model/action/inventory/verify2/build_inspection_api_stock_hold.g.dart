@@ -151,19 +151,27 @@ class BuildInspectionApiStockHoldBuilder
   _$BuildInspectionApiStockHold _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   String _holdReasonId;
+
   String get holdReasonId => _$this._holdReasonId;
+
   set holdReasonId(String holdReasonId) => _$this._holdReasonId = holdReasonId;
 
   String _holdReasonName;
+
   String get holdReasonName => _$this._holdReasonName;
+
   set holdReasonName(String holdReasonName) =>
       _$this._holdReasonName = holdReasonName;
 
@@ -264,6 +272,7 @@ class _$BuildInspectionApiStockHoldActions
       BuildInspectionApiStockHoldBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -289,6 +298,7 @@ class _$BuildInspectionApiStockHoldActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiStockHold);

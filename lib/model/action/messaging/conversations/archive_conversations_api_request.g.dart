@@ -123,13 +123,17 @@ class ArchiveConversationsApiRequestBuilder
   _$ArchiveConversationsApiRequest _$v;
 
   ListBuilder<String> _conversationIds;
+
   ListBuilder<String> get conversationIds =>
       _$this._conversationIds ??= new ListBuilder<String>();
+
   set conversationIds(ListBuilder<String> conversationIds) =>
       _$this._conversationIds = conversationIds;
 
   bool _archive;
+
   bool get archive => _$this._archive;
+
   set archive(bool archive) => _$this._archive = archive;
 
   ArchiveConversationsApiRequestBuilder();
@@ -229,6 +233,7 @@ class _$ArchiveConversationsApiRequestActions
       ArchiveConversationsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -250,6 +255,7 @@ class _$ArchiveConversationsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ArchiveConversationsApiRequest);

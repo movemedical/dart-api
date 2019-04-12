@@ -239,49 +239,67 @@ class ListLoansApiRequestBuilder
   _$ListLoansApiRequest _$v;
 
   LoanStatus _status;
+
   LoanStatus get status => _$this._status;
+
   set status(LoanStatus status) => _$this._status = status;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   DateRangeBuilder _serviceStartDateRange;
+
   DateRangeBuilder get serviceStartDateRange =>
       _$this._serviceStartDateRange ??= new DateRangeBuilder();
+
   set serviceStartDateRange(DateRangeBuilder serviceStartDateRange) =>
       _$this._serviceStartDateRange = serviceStartDateRange;
 
   DateRangeBuilder _serviceEndDateRange;
+
   DateRangeBuilder get serviceEndDateRange =>
       _$this._serviceEndDateRange ??= new DateRangeBuilder();
+
   set serviceEndDateRange(DateRangeBuilder serviceEndDateRange) =>
       _$this._serviceEndDateRange = serviceEndDateRange;
 
   String _loanNumber;
+
   String get loanNumber => _$this._loanNumber;
+
   set loanNumber(String loanNumber) => _$this._loanNumber = loanNumber;
 
   ListBuilder<LoanReason> _loanReasons;
+
   ListBuilder<LoanReason> get loanReasons =>
       _$this._loanReasons ??= new ListBuilder<LoanReason>();
+
   set loanReasons(ListBuilder<LoanReason> loanReasons) =>
       _$this._loanReasons = loanReasons;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListLoansApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListLoansApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListLoansApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListLoansApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -456,6 +474,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
   ListLoansApiRequestBuilder $newBuilder() => ListLoansApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -466,6 +485,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -501,6 +521,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListLoansApiRequest);
 }

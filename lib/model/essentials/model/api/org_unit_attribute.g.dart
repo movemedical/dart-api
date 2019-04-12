@@ -123,15 +123,21 @@ class OrgUnitAttributeBuilder
   _$OrgUnitAttribute _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _label;
+
   String get label => _$this._label;
+
   set label(String label) => _$this._label = label;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   OrgUnitAttributeBuilder();
@@ -210,6 +216,7 @@ class _$OrgUnitAttributeActions extends OrgUnitAttributeActions {
   OrgUnitAttributeBuilder $newBuilder() => OrgUnitAttributeBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -233,6 +240,7 @@ class _$OrgUnitAttributeActions extends OrgUnitAttributeActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(OrgUnitAttribute);
 }

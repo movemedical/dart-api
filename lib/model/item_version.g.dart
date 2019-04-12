@@ -157,25 +157,35 @@ class ItemVersionBuilder implements Builder<ItemVersion, ItemVersionBuilder> {
   _$ItemVersion _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _version;
+
   String get version => _$this._version;
+
   set version(String version) => _$this._version = version;
 
   DateTime _startManufactureDate;
+
   DateTime get startManufactureDate => _$this._startManufactureDate;
+
   set startManufactureDate(DateTime startManufactureDate) =>
       _$this._startManufactureDate = startManufactureDate;
 
   DateTime _endManufactureDate;
+
   DateTime get endManufactureDate => _$this._endManufactureDate;
+
   set endManufactureDate(DateTime endManufactureDate) =>
       _$this._endManufactureDate = endManufactureDate;
 
   bool _definedContainers;
+
   bool get definedContainers => _$this._definedContainers;
+
   set definedContainers(bool definedContainers) =>
       _$this._definedContainers = definedContainers;
 
@@ -277,6 +287,7 @@ class _$ItemVersionActions extends ItemVersionActions {
   ItemVersionBuilder $newBuilder() => ItemVersionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -304,6 +315,7 @@ class _$ItemVersionActions extends ItemVersionActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ItemVersion);
 }

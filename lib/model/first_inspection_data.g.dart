@@ -114,13 +114,17 @@ class FirstInspectionDataBuilder
   _$FirstInspectionData _$v;
 
   bool _firstInspectionAtLocation;
+
   bool get firstInspectionAtLocation => _$this._firstInspectionAtLocation;
+
   set firstInspectionAtLocation(bool firstInspectionAtLocation) =>
       _$this._firstInspectionAtLocation = firstInspectionAtLocation;
 
   LocationDataBuilder _previousLocation;
+
   LocationDataBuilder get previousLocation =>
       _$this._previousLocation ??= new LocationDataBuilder();
+
   set previousLocation(LocationDataBuilder previousLocation) =>
       _$this._previousLocation = previousLocation;
 
@@ -220,12 +224,14 @@ class _$FirstInspectionDataActions extends FirstInspectionDataActions {
   FirstInspectionDataBuilder $newBuilder() => FirstInspectionDataBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.previousLocation,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -247,6 +253,7 @@ class _$FirstInspectionDataActions extends FirstInspectionDataActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(FirstInspectionData);
 }

@@ -172,23 +172,33 @@ class GetConsignmentLoanFieldsApiLoanFieldDataBuilder
   _$GetConsignmentLoanFieldsApiLoanFieldData _$v;
 
   GetConsignmentLoanFieldsApiLoanField _name;
+
   GetConsignmentLoanFieldsApiLoanField get name => _$this._name;
+
   set name(GetConsignmentLoanFieldsApiLoanField name) => _$this._name = name;
 
   int _sort;
+
   int get sort => _$this._sort;
+
   set sort(int sort) => _$this._sort = sort;
 
   bool _required;
+
   bool get required => _$this._required;
+
   set required(bool required) => _$this._required = required;
 
   bool _loan;
+
   bool get loan => _$this._loan;
+
   set loan(bool loan) => _$this._loan = loan;
 
   bool _loanRequest;
+
   bool get loanRequest => _$this._loanRequest;
+
   set loanRequest(bool loanRequest) => _$this._loanRequest = loanRequest;
 
   GetConsignmentLoanFieldsApiLoanFieldDataBuilder();
@@ -288,6 +298,7 @@ class _$GetConsignmentLoanFieldsApiLoanFieldDataActions
       GetConsignmentLoanFieldsApiLoanFieldDataBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -315,6 +326,7 @@ class _$GetConsignmentLoanFieldsApiLoanFieldDataActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetConsignmentLoanFieldsApiLoanFieldData);

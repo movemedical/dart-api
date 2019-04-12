@@ -116,12 +116,16 @@ class RunCustomActionApiRequestBuilder
   _$RunCustomActionApiRequest _$v;
 
   String _customActionId;
+
   String get customActionId => _$this._customActionId;
+
   set customActionId(String customActionId) =>
       _$this._customActionId = customActionId;
 
   String _args;
+
   String get args => _$this._args;
+
   set args(String args) => _$this._args = args;
 
   RunCustomActionApiRequestBuilder();
@@ -207,6 +211,7 @@ class _$RunCustomActionApiRequestActions
       RunCustomActionApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -228,6 +233,7 @@ class _$RunCustomActionApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(RunCustomActionApiRequest);
 }

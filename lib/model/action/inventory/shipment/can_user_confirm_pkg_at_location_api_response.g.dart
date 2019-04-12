@@ -109,7 +109,9 @@ class CanUserConfirmPkgAtLocationApiResponseBuilder
   _$CanUserConfirmPkgAtLocationApiResponse _$v;
 
   bool _canDeliverAndConfirm;
+
   bool get canDeliverAndConfirm => _$this._canDeliverAndConfirm;
+
   set canDeliverAndConfirm(bool canDeliverAndConfirm) =>
       _$this._canDeliverAndConfirm = canDeliverAndConfirm;
 
@@ -193,6 +195,7 @@ class _$CanUserConfirmPkgAtLocationApiResponseActions
       CanUserConfirmPkgAtLocationApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -212,6 +215,7 @@ class _$CanUserConfirmPkgAtLocationApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CanUserConfirmPkgAtLocationApiResponse);

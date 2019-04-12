@@ -120,12 +120,16 @@ class ListBackToBackPicksApiRequestBuilder
   _$ListBackToBackPicksApiRequest _$v;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListBackToBackPicksApiRequestBuilder();
@@ -228,12 +232,14 @@ class _$ListBackToBackPicksApiRequestActions
       ListBackToBackPicksApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,6 +261,7 @@ class _$ListBackToBackPicksApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBackToBackPicksApiRequest);

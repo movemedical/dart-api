@@ -79,6 +79,7 @@ class _$AddAssigneeApi extends AddAssigneeApi {
           ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -90,6 +91,7 @@ class _$AddAssigneeApi extends AddAssigneeApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddAssigneeApiRequest)]),

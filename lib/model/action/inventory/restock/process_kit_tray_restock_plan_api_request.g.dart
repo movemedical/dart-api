@@ -274,55 +274,75 @@ class ProcessKitTrayRestockPlanApiRequestBuilder
   _$ProcessKitTrayRestockPlanApiRequest _$v;
 
   String _kitTrayStockIdOrStockSummaryId;
+
   String get kitTrayStockIdOrStockSummaryId =>
       _$this._kitTrayStockIdOrStockSummaryId;
+
   set kitTrayStockIdOrStockSummaryId(String kitTrayStockIdOrStockSummaryId) =>
       _$this._kitTrayStockIdOrStockSummaryId = kitTrayStockIdOrStockSummaryId;
 
   BuildKitTrayRestockPlanApiRestockSystem _system;
+
   BuildKitTrayRestockPlanApiRestockSystem get system => _$this._system;
+
   set system(BuildKitTrayRestockPlanApiRestockSystem system) =>
       _$this._system = system;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _existingOrderId;
+
   String get existingOrderId => _$this._existingOrderId;
+
   set existingOrderId(String existingOrderId) =>
       _$this._existingOrderId = existingOrderId;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   DateTime _deliverByDate;
+
   DateTime get deliverByDate => _$this._deliverByDate;
+
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   ListBuilder<ProcessKitTrayRestockPlanApiRestockItem> _restockItems;
+
   ListBuilder<ProcessKitTrayRestockPlanApiRestockItem> get restockItems =>
       _$this._restockItems ??=
           new ListBuilder<ProcessKitTrayRestockPlanApiRestockItem>();
+
   set restockItems(
           ListBuilder<ProcessKitTrayRestockPlanApiRestockItem> restockItems) =>
       _$this._restockItems = restockItems;
@@ -502,6 +522,7 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
       ProcessKitTrayRestockPlanApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -509,6 +530,7 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -546,6 +568,7 @@ class _$ProcessKitTrayRestockPlanApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ProcessKitTrayRestockPlanApiRequest);

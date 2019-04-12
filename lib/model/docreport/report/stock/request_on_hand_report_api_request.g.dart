@@ -215,38 +215,52 @@ class RequestOnHandReportApiRequestBuilder
   _$RequestOnHandReportApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   ListBuilder<String> _inventoryTypeIds;
+
   ListBuilder<String> get inventoryTypeIds =>
       _$this._inventoryTypeIds ??= new ListBuilder<String>();
+
   set inventoryTypeIds(ListBuilder<String> inventoryTypeIds) =>
       _$this._inventoryTypeIds = inventoryTypeIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
@@ -393,12 +407,14 @@ class _$RequestOnHandReportApiRequestActions
       RequestOnHandReportApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -430,6 +446,7 @@ class _$RequestOnHandReportApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestOnHandReportApiRequest);

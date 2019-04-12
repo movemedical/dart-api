@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'list_loan_lines_api_order_by.g.dart';
 
@@ -8,7 +8,7 @@ class ListLoanLinesApiOrderBy extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const ListLoanLinesApiOrderBy ITEM_NUMBER = _$wireITEM_NUMBER;
   static const ListLoanLinesApiOrderBy ITEM_CLASS = _$wireITEM_CLASS;
   static const ListLoanLinesApiOrderBy ITEM_TYPE = _$wireITEM_TYPE;
@@ -19,24 +19,27 @@ class ListLoanLinesApiOrderBy extends EnumClass {
   static const ListLoanLinesApiOrderBy OUTBOUND = _$wireOUTBOUND;
   static const ListLoanLinesApiOrderBy USED = _$wireUSED;
   static const ListLoanLinesApiOrderBy RETURNED = _$wireRETURNED;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const ListLoanLinesApiOrderBy._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
-  static BuiltSet<ListLoanLinesApiOrderBy> get values => _$listLoanLinesApiOrderByValues;
-  
-  static ListLoanLinesApiOrderBy valueOf(String name) => _$listLoanLinesApiOrderByValueOf(name);
-  
+
+  static BuiltSet<ListLoanLinesApiOrderBy> get values =>
+      _$listLoanLinesApiOrderByValues;
+
+  static ListLoanLinesApiOrderBy valueOf(String name) =>
+      _$listLoanLinesApiOrderByValueOf(name);
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<ListLoanLinesApiOrderBy> get serializer => _$listLoanLinesApiOrderBySerializer;
+
+  static Serializer<ListLoanLinesApiOrderBy> get serializer =>
+      _$listLoanLinesApiOrderBySerializer;
 }

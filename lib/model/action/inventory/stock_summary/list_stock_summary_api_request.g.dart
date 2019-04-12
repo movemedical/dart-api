@@ -672,177 +672,241 @@ class ListStockSummaryApiRequestBuilder
   _$ListStockSummaryApiRequest _$v;
 
   ListBuilder<String> _bizUnitIds;
+
   ListBuilder<String> get bizUnitIds =>
       _$this._bizUnitIds ??= new ListBuilder<String>();
+
   set bizUnitIds(ListBuilder<String> bizUnitIds) =>
       _$this._bizUnitIds = bizUnitIds;
 
   ListBuilder<String> _inventoryTypeIds;
+
   ListBuilder<String> get inventoryTypeIds =>
       _$this._inventoryTypeIds ??= new ListBuilder<String>();
+
   set inventoryTypeIds(ListBuilder<String> inventoryTypeIds) =>
       _$this._inventoryTypeIds = inventoryTypeIds;
 
   ListBuilder<MoveItemClass> _moveItemClasses;
+
   ListBuilder<MoveItemClass> get moveItemClasses =>
       _$this._moveItemClasses ??= new ListBuilder<MoveItemClass>();
+
   set moveItemClasses(ListBuilder<MoveItemClass> moveItemClasses) =>
       _$this._moveItemClasses = moveItemClasses;
 
   ListBuilder<MoveItemType> _moveItemTypes;
+
   ListBuilder<MoveItemType> get moveItemTypes =>
       _$this._moveItemTypes ??= new ListBuilder<MoveItemType>();
+
   set moveItemTypes(ListBuilder<MoveItemType> moveItemTypes) =>
       _$this._moveItemTypes = moveItemTypes;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _itemVersionIds;
+
   ListBuilder<String> get itemVersionIds =>
       _$this._itemVersionIds ??= new ListBuilder<String>();
+
   set itemVersionIds(ListBuilder<String> itemVersionIds) =>
       _$this._itemVersionIds = itemVersionIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _responsiblePartyIds;
+
   ListBuilder<String> get responsiblePartyIds =>
       _$this._responsiblePartyIds ??= new ListBuilder<String>();
+
   set responsiblePartyIds(ListBuilder<String> responsiblePartyIds) =>
       _$this._responsiblePartyIds = responsiblePartyIds;
 
   ListBuilder<String> _homeLocationIds;
+
   ListBuilder<String> get homeLocationIds =>
       _$this._homeLocationIds ??= new ListBuilder<String>();
+
   set homeLocationIds(ListBuilder<String> homeLocationIds) =>
       _$this._homeLocationIds = homeLocationIds;
 
   ListBuilder<String> _locationIds;
+
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
+
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   ListBuilder<LocationType> _locationTypes;
+
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
+
   set locationTypes(ListBuilder<LocationType> locationTypes) =>
       _$this._locationTypes = locationTypes;
 
   ListBuilder<FacilityType> _facilityTypes;
+
   ListBuilder<FacilityType> get facilityTypes =>
       _$this._facilityTypes ??= new ListBuilder<FacilityType>();
+
   set facilityTypes(ListBuilder<FacilityType> facilityTypes) =>
       _$this._facilityTypes = facilityTypes;
 
   ListBuilder<String> _containerIds;
+
   ListBuilder<String> get containerIds =>
       _$this._containerIds ??= new ListBuilder<String>();
+
   set containerIds(ListBuilder<String> containerIds) =>
       _$this._containerIds = containerIds;
 
   ListBuilder<String> _loanIds;
+
   ListBuilder<String> get loanIds =>
       _$this._loanIds ??= new ListBuilder<String>();
+
   set loanIds(ListBuilder<String> loanIds) => _$this._loanIds = loanIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _zoneIds;
+
   ListBuilder<String> get zoneIds =>
       _$this._zoneIds ??= new ListBuilder<String>();
+
   set zoneIds(ListBuilder<String> zoneIds) => _$this._zoneIds = zoneIds;
 
   ListBuilder<String> _binIds;
+
   ListBuilder<String> get binIds =>
       _$this._binIds ??= new ListBuilder<String>();
+
   set binIds(ListBuilder<String> binIds) => _$this._binIds = binIds;
 
   int _expiresInDays;
+
   int get expiresInDays => _$this._expiresInDays;
+
   set expiresInDays(int expiresInDays) => _$this._expiresInDays = expiresInDays;
 
   DateRangeBuilder _expirationDateRange;
+
   DateRangeBuilder get expirationDateRange =>
       _$this._expirationDateRange ??= new DateRangeBuilder();
+
   set expirationDateRange(DateRangeBuilder expirationDateRange) =>
       _$this._expirationDateRange = expirationDateRange;
 
   bool _onlyWithinExpirationLevels;
+
   bool get onlyWithinExpirationLevels => _$this._onlyWithinExpirationLevels;
+
   set onlyWithinExpirationLevels(bool onlyWithinExpirationLevels) =>
       _$this._onlyWithinExpirationLevels = onlyWithinExpirationLevels;
 
   ListBuilder<String> _expirationLevelIds;
+
   ListBuilder<String> get expirationLevelIds =>
       _$this._expirationLevelIds ??= new ListBuilder<String>();
+
   set expirationLevelIds(ListBuilder<String> expirationLevelIds) =>
       _$this._expirationLevelIds = expirationLevelIds;
 
   String _searchText;
+
   String get searchText => _$this._searchText;
+
   set searchText(String searchText) => _$this._searchText = searchText;
 
   bool _excludeInTransit;
+
   bool get excludeInTransit => _$this._excludeInTransit;
+
   set excludeInTransit(bool excludeInTransit) =>
       _$this._excludeInTransit = excludeInTransit;
 
   bool _excludeHomeLocation;
+
   bool get excludeHomeLocation => _$this._excludeHomeLocation;
+
   set excludeHomeLocation(bool excludeHomeLocation) =>
       _$this._excludeHomeLocation = excludeHomeLocation;
 
   bool _excludeKitStocks;
+
   bool get excludeKitStocks => _$this._excludeKitStocks;
+
   set excludeKitStocks(bool excludeKitStocks) =>
       _$this._excludeKitStocks = excludeKitStocks;
 
   bool _excludeKitContainersAndContents;
+
   bool get excludeKitContainersAndContents =>
       _$this._excludeKitContainersAndContents;
+
   set excludeKitContainersAndContents(bool excludeKitContainersAndContents) =>
       _$this._excludeKitContainersAndContents = excludeKitContainersAndContents;
 
   bool _demandLoanOnly;
+
   bool get demandLoanOnly => _$this._demandLoanOnly;
+
   set demandLoanOnly(bool demandLoanOnly) =>
       _$this._demandLoanOnly = demandLoanOnly;
 
   bool _forExport;
+
   bool get forExport => _$this._forExport;
+
   set forExport(bool forExport) => _$this._forExport = forExport;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListStockSummaryApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListStockSummaryApiOrderBy> get orderBy =>
       _$this._orderBy ??=
           new OrderByParamsBuilder<ListStockSummaryApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListStockSummaryApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -1223,6 +1287,7 @@ class _$ListStockSummaryApiRequestActions
       ListStockSummaryApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.expirationDateRange,
@@ -1231,6 +1296,7 @@ class _$ListStockSummaryApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1312,6 +1378,7 @@ class _$ListStockSummaryApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListStockSummaryApiRequest);
 }

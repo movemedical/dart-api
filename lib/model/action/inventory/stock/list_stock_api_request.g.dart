@@ -132,18 +132,24 @@ class ListStockApiRequestBuilder
   _$ListStockApiRequest _$v;
 
   String _stockSummaryId;
+
   String get stockSummaryId => _$this._stockSummaryId;
+
   set stockSummaryId(String stockSummaryId) =>
       _$this._stockSummaryId = stockSummaryId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListStockApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListStockApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListStockApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListStockApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -260,6 +266,7 @@ class _$ListStockApiRequestActions extends ListStockApiRequestActions {
   ListStockApiRequestBuilder $newBuilder() => ListStockApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -267,6 +274,7 @@ class _$ListStockApiRequestActions extends ListStockApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -290,6 +298,7 @@ class _$ListStockApiRequestActions extends ListStockApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListStockApiRequest);
 }

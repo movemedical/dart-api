@@ -225,39 +225,57 @@ class BinBuilder implements Builder<Bin, BinBuilder> {
   _$Bin _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   BinType _type;
+
   BinType get type => _$this._type;
+
   set type(BinType type) => _$this._type = type;
 
   String _aisle;
+
   String get aisle => _$this._aisle;
+
   set aisle(String aisle) => _$this._aisle = aisle;
 
   int _section;
+
   int get section => _$this._section;
+
   set section(int section) => _$this._section = section;
 
   int _shelf;
+
   int get shelf => _$this._shelf;
+
   set shelf(int shelf) => _$this._shelf = shelf;
 
   int _position;
+
   int get position => _$this._position;
+
   set position(int position) => _$this._position = position;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   BinBuilder();
@@ -365,6 +383,7 @@ class _$BinActions extends BinActions {
   BinBuilder $newBuilder() => BinBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -400,6 +419,7 @@ class _$BinActions extends BinActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(Bin);
 }

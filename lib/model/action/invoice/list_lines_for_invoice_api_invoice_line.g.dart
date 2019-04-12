@@ -207,33 +207,47 @@ class ListLinesForInvoiceApiInvoiceLineBuilder
   _$ListLinesForInvoiceApiInvoiceLine _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _invoiceLineNumber;
+
   int get invoiceLineNumber => _$this._invoiceLineNumber;
+
   set invoiceLineNumber(int invoiceLineNumber) =>
       _$this._invoiceLineNumber = invoiceLineNumber;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   double _price;
+
   double get price => _$this._price;
+
   set price(double price) => _$this._price = price;
 
   double _unitPrice;
+
   double get unitPrice => _$this._unitPrice;
+
   set unitPrice(double unitPrice) => _$this._unitPrice = unitPrice;
 
   String _erpOrderLineNumber;
+
   String get erpOrderLineNumber => _$this._erpOrderLineNumber;
+
   set erpOrderLineNumber(String erpOrderLineNumber) =>
       _$this._erpOrderLineNumber = erpOrderLineNumber;
 
   ItemBuilder _item;
+
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
+
   set item(ItemBuilder item) => _$this._item = item;
 
   ListLinesForInvoiceApiInvoiceLineBuilder();
@@ -367,12 +381,14 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
       ListLinesForInvoiceApiInvoiceLineBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.item,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -404,6 +420,7 @@ class _$ListLinesForInvoiceApiInvoiceLineActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListLinesForInvoiceApiInvoiceLine);

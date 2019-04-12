@@ -138,12 +138,16 @@ class PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationBuilder
   _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification _$v;
 
   String _preferenceCardItemId;
+
   String get preferenceCardItemId => _$this._preferenceCardItemId;
+
   set preferenceCardItemId(String preferenceCardItemId) =>
       _$this._preferenceCardItemId = preferenceCardItemId;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationBuilder();
@@ -247,6 +251,7 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActio
           PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -268,6 +273,7 @@ class _$PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecificationActio
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(
       PreviewApplyPreferenceCardsToCaseApiPreferenceCardItemSpecification);

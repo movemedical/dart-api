@@ -87,6 +87,7 @@ class _$DeleteOrderReasonApi extends DeleteOrderReasonApi {
           ApiCommand<DeleteOrderReasonApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,6 +99,7 @@ class _$DeleteOrderReasonApi extends DeleteOrderReasonApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeleteOrderReasonApiRequest)]),

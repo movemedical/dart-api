@@ -87,6 +87,7 @@ class _$EnableUserAccessApi extends EnableUserAccessApi {
           ApiCommand<EnableUserAccessApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,6 +99,7 @@ class _$EnableUserAccessApi extends EnableUserAccessApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(EnableUserAccessApiRequest)]),

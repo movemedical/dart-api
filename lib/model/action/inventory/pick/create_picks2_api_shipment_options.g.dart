@@ -191,31 +191,43 @@ class CreatePicks2ApiShipmentOptionsBuilder
   _$CreatePicks2ApiShipmentOptions _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   bool _skipProxyShipment;
+
   bool get skipProxyShipment => _$this._skipProxyShipment;
+
   set skipProxyShipment(bool skipProxyShipment) =>
       _$this._skipProxyShipment = skipProxyShipment;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
@@ -352,12 +364,14 @@ class _$CreatePicks2ApiShipmentOptionsActions
       CreatePicks2ApiShipmentOptionsBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -387,6 +401,7 @@ class _$CreatePicks2ApiShipmentOptionsActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreatePicks2ApiShipmentOptions);

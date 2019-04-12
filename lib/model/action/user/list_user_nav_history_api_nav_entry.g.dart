@@ -172,23 +172,33 @@ class ListUserNavHistoryApiNavEntryBuilder
   _$ListUserNavHistoryApiNavEntry _$v;
 
   DateTime _date;
+
   DateTime get date => _$this._date;
+
   set date(DateTime date) => _$this._date = date;
 
   DeviceType _deviceType;
+
   DeviceType get deviceType => _$this._deviceType;
+
   set deviceType(DeviceType deviceType) => _$this._deviceType = deviceType;
 
   Place _place;
+
   Place get place => _$this._place;
+
   set place(Place place) => _$this._place = place;
 
   String _referenceId;
+
   String get referenceId => _$this._referenceId;
+
   set referenceId(String referenceId) => _$this._referenceId = referenceId;
 
   String _referenceString;
+
   String get referenceString => _$this._referenceString;
+
   set referenceString(String referenceString) =>
       _$this._referenceString = referenceString;
 
@@ -297,6 +307,7 @@ class _$ListUserNavHistoryApiNavEntryActions
       ListUserNavHistoryApiNavEntryBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -324,6 +335,7 @@ class _$ListUserNavHistoryApiNavEntryActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUserNavHistoryApiNavEntry);

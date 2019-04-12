@@ -110,9 +110,11 @@ class ListInvoicesForSalesOrderApiResponseBuilder
   _$ListInvoicesForSalesOrderApiResponse _$v;
 
   ListBuilder<ListInvoicesForSalesOrderApiInvoice> _invoices;
+
   ListBuilder<ListInvoicesForSalesOrderApiInvoice> get invoices =>
       _$this._invoices ??=
           new ListBuilder<ListInvoicesForSalesOrderApiInvoice>();
+
   set invoices(ListBuilder<ListInvoicesForSalesOrderApiInvoice> invoices) =>
       _$this._invoices = invoices;
 
@@ -213,6 +215,7 @@ class _$ListInvoicesForSalesOrderApiResponseActions
       ListInvoicesForSalesOrderApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -232,6 +235,7 @@ class _$ListInvoicesForSalesOrderApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListInvoicesForSalesOrderApiResponse);

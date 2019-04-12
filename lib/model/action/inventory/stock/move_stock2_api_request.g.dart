@@ -639,168 +639,236 @@ class MoveStock2ApiRequestBuilder
   _$MoveStock2ApiRequest _$v;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _toLocationId;
+
   String get toLocationId => _$this._toLocationId;
+
   set toLocationId(String toLocationId) => _$this._toLocationId = toLocationId;
 
   LocationType _toLocationType;
+
   LocationType get toLocationType => _$this._toLocationType;
+
   set toLocationType(LocationType toLocationType) =>
       _$this._toLocationType = toLocationType;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   MoveStock2ApiProcessingLevel _processingLevel;
+
   MoveStock2ApiProcessingLevel get processingLevel => _$this._processingLevel;
+
   set processingLevel(MoveStock2ApiProcessingLevel processingLevel) =>
       _$this._processingLevel = processingLevel;
 
   ListBuilder<MoveStock2ApiMovingStockReq> _stock;
+
   ListBuilder<MoveStock2ApiMovingStockReq> get stock =>
       _$this._stock ??= new ListBuilder<MoveStock2ApiMovingStockReq>();
+
   set stock(ListBuilder<MoveStock2ApiMovingStockReq> stock) =>
       _$this._stock = stock;
 
   String _toInventoryTypeId;
+
   String get toInventoryTypeId => _$this._toInventoryTypeId;
+
   set toInventoryTypeId(String toInventoryTypeId) =>
       _$this._toInventoryTypeId = toInventoryTypeId;
 
   ResponsiblePartyType _toResponsiblePartyType;
+
   ResponsiblePartyType get toResponsiblePartyType =>
       _$this._toResponsiblePartyType;
+
   set toResponsiblePartyType(ResponsiblePartyType toResponsiblePartyType) =>
       _$this._toResponsiblePartyType = toResponsiblePartyType;
 
   String _toResponsiblePartyId;
+
   String get toResponsiblePartyId => _$this._toResponsiblePartyId;
+
   set toResponsiblePartyId(String toResponsiblePartyId) =>
       _$this._toResponsiblePartyId = toResponsiblePartyId;
 
   LocationType _toHomeLocationType;
+
   LocationType get toHomeLocationType => _$this._toHomeLocationType;
+
   set toHomeLocationType(LocationType toHomeLocationType) =>
       _$this._toHomeLocationType = toHomeLocationType;
 
   String _toHomeLocationId;
+
   String get toHomeLocationId => _$this._toHomeLocationId;
+
   set toHomeLocationId(String toHomeLocationId) =>
       _$this._toHomeLocationId = toHomeLocationId;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   String _transferTypeId;
+
   String get transferTypeId => _$this._transferTypeId;
+
   set transferTypeId(String transferTypeId) =>
       _$this._transferTypeId = transferTypeId;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   LocationType _proxyLocationType;
+
   LocationType get proxyLocationType => _$this._proxyLocationType;
+
   set proxyLocationType(LocationType proxyLocationType) =>
       _$this._proxyLocationType = proxyLocationType;
 
   String _proxyLocationId;
+
   String get proxyLocationId => _$this._proxyLocationId;
+
   set proxyLocationId(String proxyLocationId) =>
       _$this._proxyLocationId = proxyLocationId;
 
   StockContainerType _toContainerType;
+
   StockContainerType get toContainerType => _$this._toContainerType;
+
   set toContainerType(StockContainerType toContainerType) =>
       _$this._toContainerType = toContainerType;
 
   String _toContainerId;
+
   String get toContainerId => _$this._toContainerId;
+
   set toContainerId(String toContainerId) =>
       _$this._toContainerId = toContainerId;
 
   DateTime _sourceStartDate;
+
   DateTime get sourceStartDate => _$this._sourceStartDate;
+
   set sourceStartDate(DateTime sourceStartDate) =>
       _$this._sourceStartDate = sourceStartDate;
 
   DateTime _deliverWindowStart;
+
   DateTime get deliverWindowStart => _$this._deliverWindowStart;
+
   set deliverWindowStart(DateTime deliverWindowStart) =>
       _$this._deliverWindowStart = deliverWindowStart;
 
   DateTime _deliverWindowEnd;
+
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
+
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
   DateTime _loanServiceEndDate;
+
   DateTime get loanServiceEndDate => _$this._loanServiceEndDate;
+
   set loanServiceEndDate(DateTime loanServiceEndDate) =>
       _$this._loanServiceEndDate = loanServiceEndDate;
 
   DateTime _fulfillmentCutoffDate;
+
   DateTime get fulfillmentCutoffDate => _$this._fulfillmentCutoffDate;
+
   set fulfillmentCutoffDate(DateTime fulfillmentCutoffDate) =>
       _$this._fulfillmentCutoffDate = fulfillmentCutoffDate;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   DateTime _expirationCutoff;
+
   DateTime get expirationCutoff => _$this._expirationCutoff;
+
   set expirationCutoff(DateTime expirationCutoff) =>
       _$this._expirationCutoff = expirationCutoff;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   String _trackingNumber;
+
   String get trackingNumber => _$this._trackingNumber;
+
   set trackingNumber(String trackingNumber) =>
       _$this._trackingNumber = trackingNumber;
 
@@ -1147,12 +1215,14 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
   MoveStock2ApiRequestBuilder $newBuilder() => MoveStock2ApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1238,6 +1308,7 @@ class _$MoveStock2ApiRequestActions extends MoveStock2ApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(MoveStock2ApiRequest);
 }

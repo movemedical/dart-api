@@ -273,51 +273,73 @@ class GetShipmentApiDisplayRuleBuilder
   _$GetShipmentApiDisplayRule _$v;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _release;
+
   bool get release => _$this._release;
+
   set release(bool release) => _$this._release = release;
 
   bool _processPicks;
+
   bool get processPicks => _$this._processPicks;
+
   set processPicks(bool processPicks) => _$this._processPicks = processPicks;
 
   bool _printPackingList;
+
   bool get printPackingList => _$this._printPackingList;
+
   set printPackingList(bool printPackingList) =>
       _$this._printPackingList = printPackingList;
 
   bool _receiveShipment;
+
   bool get receiveShipment => _$this._receiveShipment;
+
   set receiveShipment(bool receiveShipment) =>
       _$this._receiveShipment = receiveShipment;
 
   bool _assignPick;
+
   bool get assignPick => _$this._assignPick;
+
   set assignPick(bool assignPick) => _$this._assignPick = assignPick;
 
   bool _cancelPick;
+
   bool get cancelPick => _$this._cancelPick;
+
   set cancelPick(bool cancelPick) => _$this._cancelPick = cancelPick;
 
   bool _updateErpReference;
+
   bool get updateErpReference => _$this._updateErpReference;
+
   set updateErpReference(bool updateErpReference) =>
       _$this._updateErpReference = updateErpReference;
 
   bool _updateShipmentDetails;
+
   bool get updateShipmentDetails => _$this._updateShipmentDetails;
+
   set updateShipmentDetails(bool updateShipmentDetails) =>
       _$this._updateShipmentDetails = updateShipmentDetails;
 
   bool _autoComplete;
+
   bool get autoComplete => _$this._autoComplete;
+
   set autoComplete(bool autoComplete) => _$this._autoComplete = autoComplete;
 
   bool _deliverAndConfirm;
+
   bool get deliverAndConfirm => _$this._deliverAndConfirm;
+
   set deliverAndConfirm(bool deliverAndConfirm) =>
       _$this._deliverAndConfirm = deliverAndConfirm;
 
@@ -468,6 +490,7 @@ class _$GetShipmentApiDisplayRuleActions
       GetShipmentApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -507,6 +530,7 @@ class _$GetShipmentApiDisplayRuleActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetShipmentApiDisplayRule);
 }

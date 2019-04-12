@@ -106,6 +106,7 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
           ApiResult<PrepareAuditFileDownloadApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -117,6 +118,7 @@ class _$PrepareAuditFileDownloadApi extends PrepareAuditFileDownloadApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(PrepareAuditFileDownloadApiRequest)]),

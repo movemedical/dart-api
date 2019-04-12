@@ -167,28 +167,36 @@ class UpdatePreferenceCardItemsApiRequestBuilder
   _$UpdatePreferenceCardItemsApiRequest _$v;
 
   String _preferenceCardId;
+
   String get preferenceCardId => _$this._preferenceCardId;
+
   set preferenceCardId(String preferenceCardId) =>
       _$this._preferenceCardId = preferenceCardId;
 
   ListBuilder<UpdatePreferenceCardItemsApiItemAdd> _itemsToAdd;
+
   ListBuilder<UpdatePreferenceCardItemsApiItemAdd> get itemsToAdd =>
       _$this._itemsToAdd ??=
           new ListBuilder<UpdatePreferenceCardItemsApiItemAdd>();
+
   set itemsToAdd(ListBuilder<UpdatePreferenceCardItemsApiItemAdd> itemsToAdd) =>
       _$this._itemsToAdd = itemsToAdd;
 
   ListBuilder<UpdatePreferenceCardItemsApiItemUpdate> _itemsToUpdate;
+
   ListBuilder<UpdatePreferenceCardItemsApiItemUpdate> get itemsToUpdate =>
       _$this._itemsToUpdate ??=
           new ListBuilder<UpdatePreferenceCardItemsApiItemUpdate>();
+
   set itemsToUpdate(
           ListBuilder<UpdatePreferenceCardItemsApiItemUpdate> itemsToUpdate) =>
       _$this._itemsToUpdate = itemsToUpdate;
 
   ListBuilder<String> _itemsToRemove;
+
   ListBuilder<String> get itemsToRemove =>
       _$this._itemsToRemove ??= new ListBuilder<String>();
+
   set itemsToRemove(ListBuilder<String> itemsToRemove) =>
       _$this._itemsToRemove = itemsToRemove;
 
@@ -317,6 +325,7 @@ class _$UpdatePreferenceCardItemsApiRequestActions
       UpdatePreferenceCardItemsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -342,6 +351,7 @@ class _$UpdatePreferenceCardItemsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdatePreferenceCardItemsApiRequest);

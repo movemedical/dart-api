@@ -135,11 +135,15 @@ class ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonBuilder
   _$ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonBuilder();
@@ -234,6 +238,7 @@ class _$ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonActions
           ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,6 +260,7 @@ class _$ListRelativeOrderLineCancelReasonsApiOrderLineCancelReasonActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListRelativeOrderLineCancelReasonsApiOrderLineCancelReason);

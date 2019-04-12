@@ -121,16 +121,22 @@ class CustomActionBuilder
   _$CustomAction _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _argsDef;
+
   String get argsDef => _$this._argsDef;
+
   set argsDef(String argsDef) => _$this._argsDef = argsDef;
 
   RunCustomActionApiRequestBuilder _req;
+
   RunCustomActionApiRequestBuilder get req =>
       _$this._req ??= new RunCustomActionApiRequestBuilder();
+
   set req(RunCustomActionApiRequestBuilder req) => _$this._req = req;
 
   CustomActionBuilder();
@@ -230,12 +236,14 @@ class _$CustomActionActions extends CustomActionActions {
   CustomActionBuilder $newBuilder() => CustomActionBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.req,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -259,6 +267,7 @@ class _$CustomActionActions extends CustomActionActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CustomAction);
 }

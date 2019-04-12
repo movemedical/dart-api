@@ -235,41 +235,59 @@ class GetZoneApiZoneDetailBuilder
   _$GetZoneApiZoneDetail _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _zoneDescription;
+
   String get zoneDescription => _$this._zoneDescription;
+
   set zoneDescription(String zoneDescription) =>
       _$this._zoneDescription = zoneDescription;
 
   bool _isActive;
+
   bool get isActive => _$this._isActive;
+
   set isActive(bool isActive) => _$this._isActive = isActive;
 
   ZoneType _type;
+
   ZoneType get type => _$this._type;
+
   set type(ZoneType type) => _$this._type = type;
 
   bool _sourceable;
+
   bool get sourceable => _$this._sourceable;
+
   set sourceable(bool sourceable) => _$this._sourceable = sourceable;
 
   GetZoneApiDisplayRuleBuilder _editAllowed;
+
   GetZoneApiDisplayRuleBuilder get editAllowed =>
       _$this._editAllowed ??= new GetZoneApiDisplayRuleBuilder();
+
   set editAllowed(GetZoneApiDisplayRuleBuilder editAllowed) =>
       _$this._editAllowed = editAllowed;
 
@@ -411,12 +429,14 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
   GetZoneApiZoneDetailBuilder $newBuilder() => GetZoneApiZoneDetailBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.editAllowed,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -452,6 +472,7 @@ class _$GetZoneApiZoneDetailActions extends GetZoneApiZoneDetailActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetZoneApiZoneDetail);
 }

@@ -120,11 +120,15 @@ class BuildInspectionApiComponentItemBuilder
   _$BuildInspectionApiComponentItem _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   BuildInspectionApiComponentItemBuilder();
@@ -208,6 +212,7 @@ class _$BuildInspectionApiComponentItemActions
       BuildInspectionApiComponentItemBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -229,6 +234,7 @@ class _$BuildInspectionApiComponentItemActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiComponentItem);

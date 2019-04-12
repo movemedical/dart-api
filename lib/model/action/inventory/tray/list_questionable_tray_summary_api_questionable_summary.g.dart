@@ -235,40 +235,56 @@ class ListQuestionableTraySummaryApiQuestionableSummaryBuilder
   _$ListQuestionableTraySummaryApiQuestionableSummary _$v;
 
   String _trayId;
+
   String get trayId => _$this._trayId;
+
   set trayId(String trayId) => _$this._trayId = trayId;
 
   String _trayItemNumber;
+
   String get trayItemNumber => _$this._trayItemNumber;
+
   set trayItemNumber(String trayItemNumber) =>
       _$this._trayItemNumber = trayItemNumber;
 
   int _traySerialNumber;
+
   int get traySerialNumber => _$this._traySerialNumber;
+
   set traySerialNumber(int traySerialNumber) =>
       _$this._traySerialNumber = traySerialNumber;
 
   String _traySerialRef;
+
   String get traySerialRef => _$this._traySerialRef;
+
   set traySerialRef(String traySerialRef) =>
       _$this._traySerialRef = traySerialRef;
 
   bool _trayVerified;
+
   bool get trayVerified => _$this._trayVerified;
+
   set trayVerified(bool trayVerified) => _$this._trayVerified = trayVerified;
 
   bool _trayHasExtras;
+
   bool get trayHasExtras => _$this._trayHasExtras;
+
   set trayHasExtras(bool trayHasExtras) =>
       _$this._trayHasExtras = trayHasExtras;
 
   bool _trayHasMissing;
+
   bool get trayHasMissing => _$this._trayHasMissing;
+
   set trayHasMissing(bool trayHasMissing) =>
       _$this._trayHasMissing = trayHasMissing;
 
   int _percentageMissing;
+
   int get percentageMissing => _$this._percentageMissing;
+
   set percentageMissing(int percentageMissing) =>
       _$this._percentageMissing = percentageMissing;
 
@@ -410,6 +426,7 @@ class _$ListQuestionableTraySummaryApiQuestionableSummaryActions
       ListQuestionableTraySummaryApiQuestionableSummaryBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -443,6 +460,7 @@ class _$ListQuestionableTraySummaryApiQuestionableSummaryActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??=
       FullType(ListQuestionableTraySummaryApiQuestionableSummary);

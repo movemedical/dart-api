@@ -286,54 +286,76 @@ class ListAuditItemsApiRequestBuilder
   _$ListAuditItemsApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   ListBuilder<String> _containerIds;
+
   ListBuilder<String> get containerIds =>
       _$this._containerIds ??= new ListBuilder<String>();
+
   set containerIds(ListBuilder<String> containerIds) =>
       _$this._containerIds = containerIds;
 
   bool _includeClosed;
+
   bool get includeClosed => _$this._includeClosed;
+
   set includeClosed(bool includeClosed) =>
       _$this._includeClosed = includeClosed;
 
   bool _hasDiff;
+
   bool get hasDiff => _$this._hasDiff;
+
   set hasDiff(bool hasDiff) => _$this._hasDiff = hasDiff;
 
   bool _forExport;
+
   bool get forExport => _$this._forExport;
+
   set forExport(bool forExport) => _$this._forExport = forExport;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListAuditItemsApiRequestBuilder();
@@ -500,12 +522,14 @@ class _$ListAuditItemsApiRequestActions
       ListAuditItemsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -545,6 +569,7 @@ class _$ListAuditItemsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditItemsApiRequest);
 }

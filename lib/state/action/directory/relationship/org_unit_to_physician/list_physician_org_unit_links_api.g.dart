@@ -106,6 +106,7 @@ class _$ListPhysicianOrgUnitLinksApi extends ListPhysicianOrgUnitLinksApi {
           ApiResult<ListPhysicianOrgUnitLinksApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -117,6 +118,7 @@ class _$ListPhysicianOrgUnitLinksApi extends ListPhysicianOrgUnitLinksApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListPhysicianOrgUnitLinksApiRequest)]),

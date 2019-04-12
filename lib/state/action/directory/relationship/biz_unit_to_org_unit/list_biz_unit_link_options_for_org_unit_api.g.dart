@@ -113,6 +113,7 @@ class _$ListBizUnitLinkOptionsForOrgUnitApi
           ApiResult<ListBizUnitLinkOptionsForOrgUnitApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -124,6 +125,7 @@ class _$ListBizUnitLinkOptionsForOrgUnitApi
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(

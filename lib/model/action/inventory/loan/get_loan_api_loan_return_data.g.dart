@@ -117,12 +117,16 @@ class GetLoanApiLoanReturnDataBuilder
   _$GetLoanApiLoanReturnData _$v;
 
   String _transferTypeId;
+
   String get transferTypeId => _$this._transferTypeId;
+
   set transferTypeId(String transferTypeId) =>
       _$this._transferTypeId = transferTypeId;
 
   LocationBuilder _returnTo;
+
   LocationBuilder get returnTo => _$this._returnTo ??= new LocationBuilder();
+
   set returnTo(LocationBuilder returnTo) => _$this._returnTo = returnTo;
 
   GetLoanApiLoanReturnDataBuilder();
@@ -226,12 +230,14 @@ class _$GetLoanApiLoanReturnDataActions
       GetLoanApiLoanReturnDataBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.returnTo,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -253,6 +259,7 @@ class _$GetLoanApiLoanReturnDataActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetLoanApiLoanReturnData);
 }

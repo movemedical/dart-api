@@ -101,7 +101,9 @@ class CreatePackageApiRequestBuilder
   _$CreatePackageApiRequest _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   CreatePackageApiRequestBuilder();
@@ -176,6 +178,7 @@ class _$CreatePackageApiRequestActions extends CreatePackageApiRequestActions {
       CreatePackageApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -195,6 +198,7 @@ class _$CreatePackageApiRequestActions extends CreatePackageApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreatePackageApiRequest);
 }

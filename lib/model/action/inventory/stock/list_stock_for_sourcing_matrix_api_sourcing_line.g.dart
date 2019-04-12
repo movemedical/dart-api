@@ -323,78 +323,106 @@ class ListStockForSourcingMatrixApiSourcingLineBuilder
   _$ListStockForSourcingMatrixApiSourcingLine _$v;
 
   String _orderLineId;
+
   String get orderLineId => _$this._orderLineId;
+
   set orderLineId(String orderLineId) => _$this._orderLineId = orderLineId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
+
   String get itemVersionId => _$this._itemVersionId;
+
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   String _itemNumber;
+
   String get itemNumber => _$this._itemNumber;
+
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _itemDesc;
+
   String get itemDesc => _$this._itemDesc;
+
   set itemDesc(String itemDesc) => _$this._itemDesc = itemDesc;
 
   MoveItemType _moveItemType;
+
   MoveItemType get moveItemType => _$this._moveItemType;
+
   set moveItemType(MoveItemType moveItemType) =>
       _$this._moveItemType = moveItemType;
 
   MoveItemClass _moveItemClass;
+
   MoveItemClass get moveItemClass => _$this._moveItemClass;
+
   set moveItemClass(MoveItemClass moveItemClass) =>
       _$this._moveItemClass = moveItemClass;
 
   int _qtyOpen;
+
   int get qtyOpen => _$this._qtyOpen;
+
   set qtyOpen(int qtyOpen) => _$this._qtyOpen = qtyOpen;
 
   ListBuilder<ListStockForSourcingMatrixApiLineAvailability> _locationItems;
+
   ListBuilder<ListStockForSourcingMatrixApiLineAvailability>
       get locationItems => _$this._locationItems ??=
           new ListBuilder<ListStockForSourcingMatrixApiLineAvailability>();
+
   set locationItems(
           ListBuilder<ListStockForSourcingMatrixApiLineAvailability>
               locationItems) =>
       _$this._locationItems = locationItems;
 
   ListBuilder<ListStockForSourcingMatrixApiSourcingLine> _childItems;
+
   ListBuilder<ListStockForSourcingMatrixApiSourcingLine> get childItems =>
       _$this._childItems ??=
           new ListBuilder<ListStockForSourcingMatrixApiSourcingLine>();
+
   set childItems(
           ListBuilder<ListStockForSourcingMatrixApiSourcingLine> childItems) =>
       _$this._childItems = childItems;
 
   MapBuilder<String, ListStockForSourcingMatrixApiLineAvailability>
       _locationItemMap;
+
   MapBuilder<String, ListStockForSourcingMatrixApiLineAvailability>
       get locationItemMap => _$this._locationItemMap ??= new MapBuilder<String,
           ListStockForSourcingMatrixApiLineAvailability>();
+
   set locationItemMap(
           MapBuilder<String, ListStockForSourcingMatrixApiLineAvailability>
               locationItemMap) =>
       _$this._locationItemMap = locationItemMap;
 
   SetComponentBuilder _setComponent;
+
   SetComponentBuilder get setComponent =>
       _$this._setComponent ??= new SetComponentBuilder();
+
   set setComponent(SetComponentBuilder setComponent) =>
       _$this._setComponent = setComponent;
 
@@ -596,12 +624,14 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
       ListStockForSourcingMatrixApiSourcingLineBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.setComponent,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -647,6 +677,7 @@ class _$ListStockForSourcingMatrixApiSourcingLineActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForSourcingMatrixApiSourcingLine);

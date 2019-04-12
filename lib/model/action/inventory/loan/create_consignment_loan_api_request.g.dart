@@ -478,116 +478,162 @@ class CreateConsignmentLoanApiRequestBuilder
   _$CreateConsignmentLoanApiRequest _$v;
 
   LoanReason _loanReason;
+
   LoanReason get loanReason => _$this._loanReason;
+
   set loanReason(LoanReason loanReason) => _$this._loanReason = loanReason;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   String _deliverToId;
+
   String get deliverToId => _$this._deliverToId;
+
   set deliverToId(String deliverToId) => _$this._deliverToId = deliverToId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   String _deliverToAttn;
+
   String get deliverToAttn => _$this._deliverToAttn;
+
   set deliverToAttn(String deliverToAttn) =>
       _$this._deliverToAttn = deliverToAttn;
 
   String _shippingServicePreferenceId;
+
   String get shippingServicePreferenceId => _$this._shippingServicePreferenceId;
+
   set shippingServicePreferenceId(String shippingServicePreferenceId) =>
       _$this._shippingServicePreferenceId = shippingServicePreferenceId;
 
   DateTime _serviceStartDate;
+
   DateTime get serviceStartDate => _$this._serviceStartDate;
+
   set serviceStartDate(DateTime serviceStartDate) =>
       _$this._serviceStartDate = serviceStartDate;
 
   DateTime _serviceEndDate;
+
   DateTime get serviceEndDate => _$this._serviceEndDate;
+
   set serviceEndDate(DateTime serviceEndDate) =>
       _$this._serviceEndDate = serviceEndDate;
 
   DateTime _lateAfterDate;
+
   DateTime get lateAfterDate => _$this._lateAfterDate;
+
   set lateAfterDate(DateTime lateAfterDate) =>
       _$this._lateAfterDate = lateAfterDate;
 
   LoanReturnType _loanReturnType;
+
   LoanReturnType get loanReturnType => _$this._loanReturnType;
+
   set loanReturnType(LoanReturnType loanReturnType) =>
       _$this._loanReturnType = loanReturnType;
 
   LocationType _returnLocationType;
+
   LocationType get returnLocationType => _$this._returnLocationType;
+
   set returnLocationType(LocationType returnLocationType) =>
       _$this._returnLocationType = returnLocationType;
 
   String _returnLocationId;
+
   String get returnLocationId => _$this._returnLocationId;
+
   set returnLocationId(String returnLocationId) =>
       _$this._returnLocationId = returnLocationId;
 
   LocationType _complianceReturnLocationType;
+
   LocationType get complianceReturnLocationType =>
       _$this._complianceReturnLocationType;
+
   set complianceReturnLocationType(LocationType complianceReturnLocationType) =>
       _$this._complianceReturnLocationType = complianceReturnLocationType;
 
   String _complianceReturnLocationId;
+
   String get complianceReturnLocationId => _$this._complianceReturnLocationId;
+
   set complianceReturnLocationId(String complianceReturnLocationId) =>
       _$this._complianceReturnLocationId = complianceReturnLocationId;
 
   int _expiredReplenishDays;
+
   int get expiredReplenishDays => _$this._expiredReplenishDays;
+
   set expiredReplenishDays(int expiredReplenishDays) =>
       _$this._expiredReplenishDays = expiredReplenishDays;
 
   DateTime _nextEvaluateOnHandStockDate;
+
   DateTime get nextEvaluateOnHandStockDate =>
       _$this._nextEvaluateOnHandStockDate;
+
   set nextEvaluateOnHandStockDate(DateTime nextEvaluateOnHandStockDate) =>
       _$this._nextEvaluateOnHandStockDate = nextEvaluateOnHandStockDate;
 
   DateTime _nextEvaluateComplianceStockDate;
+
   DateTime get nextEvaluateComplianceStockDate =>
       _$this._nextEvaluateComplianceStockDate;
+
   set nextEvaluateComplianceStockDate(
           DateTime nextEvaluateComplianceStockDate) =>
       _$this._nextEvaluateComplianceStockDate = nextEvaluateComplianceStockDate;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _reference;
+
   String get reference => _$this._reference;
+
   set reference(String reference) => _$this._reference = reference;
 
   CreateConsignmentLoanApiRequestBuilder();
@@ -853,12 +899,14 @@ class _$CreateConsignmentLoanApiRequestActions
       CreateConsignmentLoanApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliverToAddressOverride,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -922,6 +970,7 @@ class _$CreateConsignmentLoanApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateConsignmentLoanApiRequest);

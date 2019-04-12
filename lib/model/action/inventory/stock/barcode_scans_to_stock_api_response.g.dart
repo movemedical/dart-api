@@ -107,8 +107,10 @@ class BarcodeScansToStockApiResponseBuilder
   _$BarcodeScansToStockApiResponse _$v;
 
   ListBuilder<BarcodeScansToStockApiBarcodeStock> _stocks;
+
   ListBuilder<BarcodeScansToStockApiBarcodeStock> get stocks =>
       _$this._stocks ??= new ListBuilder<BarcodeScansToStockApiBarcodeStock>();
+
   set stocks(ListBuilder<BarcodeScansToStockApiBarcodeStock> stocks) =>
       _$this._stocks = stocks;
 
@@ -204,6 +206,7 @@ class _$BarcodeScansToStockApiResponseActions
       BarcodeScansToStockApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -223,6 +226,7 @@ class _$BarcodeScansToStockApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BarcodeScansToStockApiResponse);

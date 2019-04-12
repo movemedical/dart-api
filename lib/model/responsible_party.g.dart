@@ -127,17 +127,23 @@ class ResponsiblePartyBuilder
   _$ResponsibleParty _$v;
 
   ResponsiblePartyType _responsiblePartyType;
+
   ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+
   set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
       _$this._responsiblePartyType = responsiblePartyType;
 
   String _responsiblePartyId;
+
   String get responsiblePartyId => _$this._responsiblePartyId;
+
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   ResponsiblePartyBuilder();
@@ -228,6 +234,7 @@ class _$ResponsiblePartyActions extends ResponsiblePartyActions {
   ResponsiblePartyBuilder $newBuilder() => ResponsiblePartyBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -251,6 +258,7 @@ class _$ResponsiblePartyActions extends ResponsiblePartyActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ResponsibleParty);
 }

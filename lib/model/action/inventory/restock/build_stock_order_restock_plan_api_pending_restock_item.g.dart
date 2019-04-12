@@ -267,46 +267,66 @@ class BuildStockOrderRestockPlanApiPendingRestockItemBuilder
   _$BuildStockOrderRestockPlanApiPendingRestockItem _$v;
 
   String _pickId;
+
   String get pickId => _$this._pickId;
+
   set pickId(String pickId) => _$this._pickId = pickId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemNumber;
+
   String get itemNumber => _$this._itemNumber;
+
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   InventoryTypeBuilder _inventoryType;
+
   InventoryTypeBuilder get inventoryType =>
       _$this._inventoryType ??= new InventoryTypeBuilder();
+
   set inventoryType(InventoryTypeBuilder inventoryType) =>
       _$this._inventoryType = inventoryType;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _orderDisplay;
+
   String get orderDisplay => _$this._orderDisplay;
+
   set orderDisplay(String orderDisplay) => _$this._orderDisplay = orderDisplay;
 
   String _restockWithPickId;
+
   String get restockWithPickId => _$this._restockWithPickId;
+
   set restockWithPickId(String restockWithPickId) =>
       _$this._restockWithPickId = restockWithPickId;
 
   String _pickDisplay;
+
   String get pickDisplay => _$this._pickDisplay;
+
   set pickDisplay(String pickDisplay) => _$this._pickDisplay = pickDisplay;
 
   BuildStockOrderRestockPlanApiPendingRestockItemBuilder();
@@ -467,12 +487,14 @@ class _$BuildStockOrderRestockPlanApiPendingRestockItemActions
       BuildStockOrderRestockPlanApiPendingRestockItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.inventoryType,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -510,6 +532,7 @@ class _$BuildStockOrderRestockPlanApiPendingRestockItemActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildStockOrderRestockPlanApiPendingRestockItem);

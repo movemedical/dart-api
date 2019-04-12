@@ -102,11 +102,15 @@ class BizUnitBuilder implements Builder<BizUnit, BizUnitBuilder> {
   _$BizUnit _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   BizUnitBuilder();
@@ -179,6 +183,7 @@ class _$BizUnitActions extends BizUnitActions {
   BizUnitBuilder $newBuilder() => BizUnitBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -200,6 +205,7 @@ class _$BizUnitActions extends BizUnitActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(BizUnit);
 }

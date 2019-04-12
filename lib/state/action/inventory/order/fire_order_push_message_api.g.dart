@@ -95,6 +95,7 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
           ApiCommand<FireOrderPushMessageApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -106,6 +107,7 @@ class _$FireOrderPushMessageApi extends FireOrderPushMessageApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(FireOrderPushMessageApiRequest)]),

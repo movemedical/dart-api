@@ -138,19 +138,27 @@ class OrgUnitOptionBuilder
   _$OrgUnitOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _label;
+
   String get label => _$this._label;
+
   set label(String label) => _$this._label = label;
 
   OrgUnitOptionBuilder();
@@ -237,6 +245,7 @@ class _$OrgUnitOptionActions extends OrgUnitOptionActions {
   OrgUnitOptionBuilder $newBuilder() => OrgUnitOptionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -262,6 +271,7 @@ class _$OrgUnitOptionActions extends OrgUnitOptionActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(OrgUnitOption);
 }

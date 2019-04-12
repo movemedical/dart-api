@@ -88,6 +88,7 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
           ApiCommand<AssignKitContainerApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,6 +100,7 @@ class _$AssignKitContainerApi extends AssignKitContainerApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AssignKitContainerApiRequest)]),

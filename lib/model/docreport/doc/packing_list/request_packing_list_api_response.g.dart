@@ -105,7 +105,9 @@ class RequestPackingListApiResponseBuilder
   _$RequestPackingListApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestPackingListApiResponseBuilder();
@@ -186,6 +188,7 @@ class _$RequestPackingListApiResponseActions
       RequestPackingListApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -205,6 +208,7 @@ class _$RequestPackingListApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestPackingListApiResponse);

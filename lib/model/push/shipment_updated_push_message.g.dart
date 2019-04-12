@@ -102,7 +102,9 @@ class ShipmentUpdatedPushMessageBuilder
   _$ShipmentUpdatedPushMessage _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   ShipmentUpdatedPushMessageBuilder();
@@ -180,6 +182,7 @@ class _$ShipmentUpdatedPushMessageActions
       ShipmentUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -199,6 +202,7 @@ class _$ShipmentUpdatedPushMessageActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ShipmentUpdatedPushMessage);
 }

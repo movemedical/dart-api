@@ -208,35 +208,49 @@ class CustomOrderDocApiRequestBuilder
   _$CustomOrderDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   String _orderReasonDocId;
+
   String get orderReasonDocId => _$this._orderReasonDocId;
+
   set orderReasonDocId(String orderReasonDocId) =>
       _$this._orderReasonDocId = orderReasonDocId;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _packageId;
+
   String get packageId => _$this._packageId;
+
   set packageId(String packageId) => _$this._packageId = packageId;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   CustomOrderDocApiRequestBuilder();
@@ -371,12 +385,14 @@ class _$CustomOrderDocApiRequestActions
       CustomOrderDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -408,6 +424,7 @@ class _$CustomOrderDocApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CustomOrderDocApiRequest);
 }

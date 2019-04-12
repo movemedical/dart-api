@@ -361,74 +361,106 @@ class ListShipmentsApiShipmentBuilder
   _$ListShipmentsApiShipment _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   DateTime _created;
+
   DateTime get created => _$this._created;
+
   set created(DateTime created) => _$this._created = created;
 
   int _number;
+
   int get number => _$this._number;
+
   set number(int number) => _$this._number = number;
 
   ShipmentStatus _status;
+
   ShipmentStatus get status => _$this._status;
+
   set status(ShipmentStatus status) => _$this._status = status;
 
   int _orderNumber;
+
   int get orderNumber => _$this._orderNumber;
+
   set orderNumber(int orderNumber) => _$this._orderNumber = orderNumber;
 
   LocationBuilder _fromLocation;
+
   LocationBuilder get fromLocation =>
       _$this._fromLocation ??= new LocationBuilder();
+
   set fromLocation(LocationBuilder fromLocation) =>
       _$this._fromLocation = fromLocation;
 
   LocationBuilder _toLocation;
+
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
+
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   MoveShippingCarrier _carrier;
+
   MoveShippingCarrier get carrier => _$this._carrier;
+
   set carrier(MoveShippingCarrier carrier) => _$this._carrier = carrier;
 
   String _shippingServiceName;
+
   String get shippingServiceName => _$this._shippingServiceName;
+
   set shippingServiceName(String shippingServiceName) =>
       _$this._shippingServiceName = shippingServiceName;
 
   DateTime _deliverWindowEnd;
+
   DateTime get deliverWindowEnd => _$this._deliverWindowEnd;
+
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
   DateTime _fulfillmentCutoff;
+
   DateTime get fulfillmentCutoff => _$this._fulfillmentCutoff;
+
   set fulfillmentCutoff(DateTime fulfillmentCutoff) =>
       _$this._fulfillmentCutoff = fulfillmentCutoff;
 
   int _picksUnassigned;
+
   int get picksUnassigned => _$this._picksUnassigned;
+
   set picksUnassigned(int picksUnassigned) =>
       _$this._picksUnassigned = picksUnassigned;
 
   int _picksAssigned;
+
   int get picksAssigned => _$this._picksAssigned;
+
   set picksAssigned(int picksAssigned) => _$this._picksAssigned = picksAssigned;
 
   int _picksComplete;
+
   int get picksComplete => _$this._picksComplete;
+
   set picksComplete(int picksComplete) => _$this._picksComplete = picksComplete;
 
   int _packageCount;
+
   int get packageCount => _$this._packageCount;
+
   set packageCount(int packageCount) => _$this._packageCount = packageCount;
 
   ListShipmentsApiShipmentBuilder();
@@ -628,6 +660,7 @@ class _$ListShipmentsApiShipmentActions
       ListShipmentsApiShipmentBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.fromLocation,
@@ -635,6 +668,7 @@ class _$ListShipmentsApiShipmentActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -684,6 +718,7 @@ class _$ListShipmentsApiShipmentActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListShipmentsApiShipment);
 }

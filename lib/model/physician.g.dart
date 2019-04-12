@@ -150,23 +150,33 @@ class PhysicianBuilder implements Builder<Physician, PhysicianBuilder> {
   _$Physician _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   PersonNameBuilder _name;
+
   PersonNameBuilder get name => _$this._name ??= new PersonNameBuilder();
+
   set name(PersonNameBuilder name) => _$this._name = name;
 
   String _npi;
+
   String get npi => _$this._npi;
+
   set npi(String npi) => _$this._npi = npi;
 
   String _display;
+
   String get display => _$this._display;
+
   set display(String display) => _$this._display = display;
 
   AddressBuilder _address;
+
   AddressBuilder get address => _$this._address ??= new AddressBuilder();
+
   set address(AddressBuilder address) => _$this._address = address;
 
   PhysicianBuilder();
@@ -283,6 +293,7 @@ class _$PhysicianActions extends PhysicianActions {
   PhysicianBuilder $newBuilder() => PhysicianBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.name,
@@ -290,6 +301,7 @@ class _$PhysicianActions extends PhysicianActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -317,6 +329,7 @@ class _$PhysicianActions extends PhysicianActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(Physician);
 }

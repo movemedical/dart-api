@@ -103,6 +103,7 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
           ApiResult<CreateShippingServiceApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -114,6 +115,7 @@ class _$CreateShippingServiceApi extends CreateShippingServiceApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateShippingServiceApiRequest)]),

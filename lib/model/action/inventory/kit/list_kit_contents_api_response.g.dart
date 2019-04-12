@@ -122,14 +122,18 @@ class ListKitContentsApiResponseBuilder
   _$ListKitContentsApiResponse _$v;
 
   ListBuilder<ListStockSummaryApiStockSummary> _contents;
+
   ListBuilder<ListStockSummaryApiStockSummary> get contents =>
       _$this._contents ??= new ListBuilder<ListStockSummaryApiStockSummary>();
+
   set contents(ListBuilder<ListStockSummaryApiStockSummary> contents) =>
       _$this._contents = contents;
 
   ListBuilder<ListKitContentsApiDiff> _missing;
+
   ListBuilder<ListKitContentsApiDiff> get missing =>
       _$this._missing ??= new ListBuilder<ListKitContentsApiDiff>();
+
   set missing(ListBuilder<ListKitContentsApiDiff> missing) =>
       _$this._missing = missing;
 
@@ -231,6 +235,7 @@ class _$ListKitContentsApiResponseActions
       ListKitContentsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -252,6 +257,7 @@ class _$ListKitContentsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListKitContentsApiResponse);
 }

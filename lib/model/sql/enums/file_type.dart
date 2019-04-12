@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'file_type.g.dart';
 
@@ -8,7 +8,7 @@ class FileType extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const FileType CASE_EVENT = _$wireCASE_EVENT;
   static const FileType CONVERSATION = _$wireCONVERSATION;
   static const FileType STOCK_ORDER = _$wireSTOCK_ORDER;
@@ -26,24 +26,24 @@ class FileType extends EnumClass {
   static const FileType INTEGRATION = _$wireINTEGRATION;
   static const FileType ITEM = _$wireITEM;
   static const FileType SERIAL = _$wireSERIAL;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const FileType._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
+
   static BuiltSet<FileType> get values => _$fileTypeValues;
-  
+
   static FileType valueOf(String name) => _$fileTypeValueOf(name);
-  
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
+
   static Serializer<FileType> get serializer => _$fileTypeSerializer;
 }

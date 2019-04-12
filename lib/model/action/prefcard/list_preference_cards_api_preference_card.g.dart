@@ -366,73 +366,105 @@ class ListPreferenceCardsApiPreferenceCardBuilder
   _$ListPreferenceCardsApiPreferenceCard _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _techniqueId;
+
   String get techniqueId => _$this._techniqueId;
+
   set techniqueId(String techniqueId) => _$this._techniqueId = techniqueId;
 
   String _techniqueName;
+
   String get techniqueName => _$this._techniqueName;
+
   set techniqueName(String techniqueName) =>
       _$this._techniqueName = techniqueName;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _physicianName;
+
   String get physicianName => _$this._physicianName;
+
   set physicianName(String physicianName) =>
       _$this._physicianName = physicianName;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _procedureName;
+
   String get procedureName => _$this._procedureName;
+
   set procedureName(String procedureName) =>
       _$this._procedureName = procedureName;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   String _subProcedureName;
+
   String get subProcedureName => _$this._subProcedureName;
+
   set subProcedureName(String subProcedureName) =>
       _$this._subProcedureName = subProcedureName;
 
   PreferenceCardType _preferenceCardType;
+
   PreferenceCardType get preferenceCardType => _$this._preferenceCardType;
+
   set preferenceCardType(PreferenceCardType preferenceCardType) =>
       _$this._preferenceCardType = preferenceCardType;
 
   int _totalItems;
+
   int get totalItems => _$this._totalItems;
+
   set totalItems(int totalItems) => _$this._totalItems = totalItems;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ListPreferenceCardsApiPreferenceCardBuilder();
@@ -620,6 +652,7 @@ class _$ListPreferenceCardsApiPreferenceCardActions
       ListPreferenceCardsApiPreferenceCardBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -669,6 +702,7 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPreferenceCardsApiPreferenceCard);

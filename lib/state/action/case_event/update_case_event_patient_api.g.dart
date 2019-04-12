@@ -97,6 +97,7 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
           ApiCommand<UpdateCaseEventPatientApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -108,6 +109,7 @@ class _$UpdateCaseEventPatientApi extends UpdateCaseEventPatientApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateCaseEventPatientApiRequest)]),

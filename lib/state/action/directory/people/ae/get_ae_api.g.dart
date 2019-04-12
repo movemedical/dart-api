@@ -83,6 +83,7 @@ class _$GetAeApi extends GetAeApi {
           ApiResult<GetAeApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -94,6 +95,7 @@ class _$GetAeApi extends GetAeApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(GetAeApiRequest)]),

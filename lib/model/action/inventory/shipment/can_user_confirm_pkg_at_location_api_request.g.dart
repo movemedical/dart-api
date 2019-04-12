@@ -154,22 +154,30 @@ class CanUserConfirmPkgAtLocationApiRequestBuilder
   _$CanUserConfirmPkgAtLocationApiRequest _$v;
 
   String _userId;
+
   String get userId => _$this._userId;
+
   set userId(String userId) => _$this._userId = userId;
 
   String _transferTypeId;
+
   String get transferTypeId => _$this._transferTypeId;
+
   set transferTypeId(String transferTypeId) =>
       _$this._transferTypeId = transferTypeId;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   LocationDataBuilder _toLocation;
+
   LocationDataBuilder get toLocation =>
       _$this._toLocation ??= new LocationDataBuilder();
+
   set toLocation(LocationDataBuilder toLocation) =>
       _$this._toLocation = toLocation;
 
@@ -291,12 +299,14 @@ class _$CanUserConfirmPkgAtLocationApiRequestActions
       CanUserConfirmPkgAtLocationApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.toLocation,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -322,6 +332,7 @@ class _$CanUserConfirmPkgAtLocationApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CanUserConfirmPkgAtLocationApiRequest);

@@ -228,37 +228,53 @@ class CreatePreferenceCardApiRequestBuilder
   _$CreatePreferenceCardApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _physicianId;
+
   String get physicianId => _$this._physicianId;
+
   set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _techniqueId;
+
   String get techniqueId => _$this._techniqueId;
+
   set techniqueId(String techniqueId) => _$this._techniqueId = techniqueId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _procedureId;
+
   String get procedureId => _$this._procedureId;
+
   set procedureId(String procedureId) => _$this._procedureId = procedureId;
 
   String _subProcedureId;
+
   String get subProcedureId => _$this._subProcedureId;
+
   set subProcedureId(String subProcedureId) =>
       _$this._subProcedureId = subProcedureId;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
@@ -405,6 +421,7 @@ class _$CreatePreferenceCardApiRequestActions
       CreatePreferenceCardApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -438,6 +455,7 @@ class _$CreatePreferenceCardApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreatePreferenceCardApiRequest);

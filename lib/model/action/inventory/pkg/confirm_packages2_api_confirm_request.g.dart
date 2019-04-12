@@ -139,17 +139,23 @@ class ConfirmPackages2ApiConfirmRequestBuilder
   _$ConfirmPackages2ApiConfirmRequest _$v;
 
   String _packageId;
+
   String get packageId => _$this._packageId;
+
   set packageId(String packageId) => _$this._packageId = packageId;
 
   bool _autoConfirmAdjustments;
+
   bool get autoConfirmAdjustments => _$this._autoConfirmAdjustments;
+
   set autoConfirmAdjustments(bool autoConfirmAdjustments) =>
       _$this._autoConfirmAdjustments = autoConfirmAdjustments;
 
   StockContainerDataBuilder _toContainerOverride;
+
   StockContainerDataBuilder get toContainerOverride =>
       _$this._toContainerOverride ??= new StockContainerDataBuilder();
+
   set toContainerOverride(StockContainerDataBuilder toContainerOverride) =>
       _$this._toContainerOverride = toContainerOverride;
 
@@ -263,12 +269,14 @@ class _$ConfirmPackages2ApiConfirmRequestActions
       ConfirmPackages2ApiConfirmRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.toContainerOverride,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -292,6 +300,7 @@ class _$ConfirmPackages2ApiConfirmRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ConfirmPackages2ApiConfirmRequest);

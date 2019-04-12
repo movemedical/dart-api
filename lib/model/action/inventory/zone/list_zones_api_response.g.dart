@@ -116,12 +116,16 @@ class ListZonesApiResponseBuilder
   _$ListZonesApiResponse _$v;
 
   ListBuilder<ListZonesApiZoneDetail> _data;
+
   ListBuilder<ListZonesApiZoneDetail> get data =>
       _$this._data ??= new ListBuilder<ListZonesApiZoneDetail>();
+
   set data(ListBuilder<ListZonesApiZoneDetail> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListZonesApiResponseBuilder();
@@ -213,6 +217,7 @@ class _$ListZonesApiResponseActions extends ListZonesApiResponseActions {
   ListZonesApiResponseBuilder $newBuilder() => ListZonesApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -234,6 +239,7 @@ class _$ListZonesApiResponseActions extends ListZonesApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListZonesApiResponse);
 }

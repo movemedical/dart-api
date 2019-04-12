@@ -116,13 +116,17 @@ class ListMessagesApiRequestBuilder
   _$ListMessagesApiRequest _$v;
 
   String _conversationId;
+
   String get conversationId => _$this._conversationId;
+
   set conversationId(String conversationId) =>
       _$this._conversationId = conversationId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListMessagesApiRequestBuilder();
@@ -225,12 +229,14 @@ class _$ListMessagesApiRequestActions extends ListMessagesApiRequestActions {
       ListMessagesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -252,6 +258,7 @@ class _$ListMessagesApiRequestActions extends ListMessagesApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListMessagesApiRequest);
 }

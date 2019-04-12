@@ -107,7 +107,9 @@ class GenerateForgotPasswordLinkApiRequestBuilder
   _$GenerateForgotPasswordLinkApiRequest _$v;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   GenerateForgotPasswordLinkApiRequestBuilder();
@@ -186,6 +188,7 @@ class _$GenerateForgotPasswordLinkApiRequestActions
       GenerateForgotPasswordLinkApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -205,6 +208,7 @@ class _$GenerateForgotPasswordLinkApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GenerateForgotPasswordLinkApiRequest);

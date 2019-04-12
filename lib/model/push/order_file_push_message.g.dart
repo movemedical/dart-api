@@ -150,20 +150,28 @@ class OrderFilePushMessageBuilder
   _$OrderFilePushMessage _$v;
 
   String _orderFileId;
+
   String get orderFileId => _$this._orderFileId;
+
   set orderFileId(String orderFileId) => _$this._orderFileId = orderFileId;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   OrderFilePushMessageFileUpdateType _updateType;
+
   OrderFilePushMessageFileUpdateType get updateType => _$this._updateType;
+
   set updateType(OrderFilePushMessageFileUpdateType updateType) =>
       _$this._updateType = updateType;
 
   double _percentUploadedDecimalForm;
+
   double get percentUploadedDecimalForm => _$this._percentUploadedDecimalForm;
+
   set percentUploadedDecimalForm(double percentUploadedDecimalForm) =>
       _$this._percentUploadedDecimalForm = percentUploadedDecimalForm;
 
@@ -263,6 +271,7 @@ class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
   OrderFilePushMessageBuilder $newBuilder() => OrderFilePushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -288,6 +297,7 @@ class _$OrderFilePushMessageActions extends OrderFilePushMessageActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(OrderFilePushMessage);
 }

@@ -179,29 +179,41 @@ class FacilityOptionBuilder
   _$FacilityOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   FacilityType _facilityType;
+
   FacilityType get facilityType => _$this._facilityType;
+
   set facilityType(FacilityType facilityType) =>
       _$this._facilityType = facilityType;
 
   String _accountNumber;
+
   String get accountNumber => _$this._accountNumber;
+
   set accountNumber(String accountNumber) =>
       _$this._accountNumber = accountNumber;
 
   String _addressCity;
+
   String get addressCity => _$this._addressCity;
+
   set addressCity(String addressCity) => _$this._addressCity = addressCity;
 
   String _addressState;
+
   String get addressState => _$this._addressState;
+
   set addressState(String addressState) => _$this._addressState = addressState;
 
   FacilityOptionBuilder();
@@ -310,6 +322,7 @@ class _$FacilityOptionActions extends FacilityOptionActions {
   FacilityOptionBuilder $newBuilder() => FacilityOptionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -339,6 +352,7 @@ class _$FacilityOptionActions extends FacilityOptionActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(FacilityOption);
 }

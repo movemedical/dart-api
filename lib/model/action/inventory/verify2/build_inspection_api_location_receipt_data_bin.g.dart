@@ -126,12 +126,16 @@ class BuildInspectionApiLocationReceiptDataBinBuilder
   _$BuildInspectionApiLocationReceiptDataBin _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   ListBuilder<String> _entryIds;
+
   ListBuilder<String> get entryIds =>
       _$this._entryIds ??= new ListBuilder<String>();
+
   set entryIds(ListBuilder<String> entryIds) => _$this._entryIds = entryIds;
 
   BuildInspectionApiLocationReceiptDataBinBuilder();
@@ -230,6 +234,7 @@ class _$BuildInspectionApiLocationReceiptDataBinActions
       BuildInspectionApiLocationReceiptDataBinBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -251,6 +256,7 @@ class _$BuildInspectionApiLocationReceiptDataBinActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiLocationReceiptDataBin);

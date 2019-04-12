@@ -99,7 +99,9 @@ class GlobalSearchApiRequestBuilder
   _$GlobalSearchApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   GlobalSearchApiRequestBuilder();
@@ -173,6 +175,7 @@ class _$GlobalSearchApiRequestActions extends GlobalSearchApiRequestActions {
       GlobalSearchApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -192,6 +195,7 @@ class _$GlobalSearchApiRequestActions extends GlobalSearchApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GlobalSearchApiRequest);
 }

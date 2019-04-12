@@ -97,6 +97,7 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
           ApiCommand<AssignIntegrationIssueApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -108,6 +109,7 @@ class _$AssignIntegrationIssueApi extends AssignIntegrationIssueApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AssignIntegrationIssueApiRequest)]),

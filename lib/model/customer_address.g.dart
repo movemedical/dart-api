@@ -265,48 +265,70 @@ class CustomerAddressBuilder
   _$CustomerAddress _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _facilityName;
+
   String get facilityName => _$this._facilityName;
+
   set facilityName(String facilityName) => _$this._facilityName = facilityName;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _customerReference;
+
   String get customerReference => _$this._customerReference;
+
   set customerReference(String customerReference) =>
       _$this._customerReference = customerReference;
 
   String _customerKey;
+
   String get customerKey => _$this._customerKey;
+
   set customerKey(String customerKey) => _$this._customerKey = customerKey;
 
   String _reference1;
+
   String get reference1 => _$this._reference1;
+
   set reference1(String reference1) => _$this._reference1 = reference1;
 
   String _reference2;
+
   String get reference2 => _$this._reference2;
+
   set reference2(String reference2) => _$this._reference2 = reference2;
 
   String _addressId;
+
   String get addressId => _$this._addressId;
+
   set addressId(String addressId) => _$this._addressId = addressId;
 
   AddressBuilder _address;
+
   AddressBuilder get address => _$this._address ??= new AddressBuilder();
+
   set address(AddressBuilder address) => _$this._address = address;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   CustomerAddressBuilder();
@@ -458,12 +480,14 @@ class _$CustomerAddressActions extends CustomerAddressActions {
   CustomerAddressBuilder $newBuilder() => CustomerAddressBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.address,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -503,6 +527,7 @@ class _$CustomerAddressActions extends CustomerAddressActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CustomerAddress);
 }

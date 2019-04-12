@@ -105,7 +105,9 @@ class ListPackageTrackingApiRequestBuilder
   _$ListPackageTrackingApiRequest _$v;
 
   String _packageId;
+
   String get packageId => _$this._packageId;
+
   set packageId(String packageId) => _$this._packageId = packageId;
 
   ListPackageTrackingApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$ListPackageTrackingApiRequestActions
       ListPackageTrackingApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$ListPackageTrackingApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPackageTrackingApiRequest);

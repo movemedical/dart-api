@@ -122,12 +122,16 @@ class ListBackToBackPicksApiResponseBuilder
   _$ListBackToBackPicksApiResponse _$v;
 
   ListBuilder<ListBackToBackPicksApiPick> _data;
+
   ListBuilder<ListBackToBackPicksApiPick> get data =>
       _$this._data ??= new ListBuilder<ListBackToBackPicksApiPick>();
+
   set data(ListBuilder<ListBackToBackPicksApiPick> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListBackToBackPicksApiResponseBuilder();
@@ -224,6 +228,7 @@ class _$ListBackToBackPicksApiResponseActions
       ListBackToBackPicksApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -245,6 +250,7 @@ class _$ListBackToBackPicksApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListBackToBackPicksApiResponse);

@@ -136,16 +136,22 @@ class GetConversationApiDisplayRulesBuilder
   _$GetConversationApiDisplayRules _$v;
 
   bool _canStop;
+
   bool get canStop => _$this._canStop;
+
   set canStop(bool canStop) => _$this._canStop = canStop;
 
   bool _canAddMessage;
+
   bool get canAddMessage => _$this._canAddMessage;
+
   set canAddMessage(bool canAddMessage) =>
       _$this._canAddMessage = canAddMessage;
 
   bool _canAddParticipants;
+
   bool get canAddParticipants => _$this._canAddParticipants;
+
   set canAddParticipants(bool canAddParticipants) =>
       _$this._canAddParticipants = canAddParticipants;
 
@@ -242,6 +248,7 @@ class _$GetConversationApiDisplayRulesActions
       GetConversationApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -265,6 +272,7 @@ class _$GetConversationApiDisplayRulesActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetConversationApiDisplayRules);

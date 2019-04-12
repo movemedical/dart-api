@@ -176,28 +176,38 @@ class GetPickProcessingDataApiResponseBuilder
   _$GetPickProcessingDataApiResponse _$v;
 
   OrderHeaderLiteBuilder _order;
+
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
+
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
 
   ShipmentLiteBuilder _shipment;
+
   ShipmentLiteBuilder get shipment =>
       _$this._shipment ??= new ShipmentLiteBuilder();
+
   set shipment(ShipmentLiteBuilder shipment) => _$this._shipment = shipment;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   ListBuilder<StockContainer> _containers;
+
   ListBuilder<StockContainer> get containers =>
       _$this._containers ??= new ListBuilder<StockContainer>();
+
   set containers(ListBuilder<StockContainer> containers) =>
       _$this._containers = containers;
 
   ListBuilder<GetPickProcessingDataApiPick> _picks;
+
   ListBuilder<GetPickProcessingDataApiPick> get picks =>
       _$this._picks ??= new ListBuilder<GetPickProcessingDataApiPick>();
+
   set picks(ListBuilder<GetPickProcessingDataApiPick> picks) =>
       _$this._picks = picks;
 
@@ -337,6 +347,7 @@ class _$GetPickProcessingDataApiResponseActions
       GetPickProcessingDataApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.order,
@@ -345,6 +356,7 @@ class _$GetPickProcessingDataApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -372,6 +384,7 @@ class _$GetPickProcessingDataApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetPickProcessingDataApiResponse);

@@ -101,6 +101,7 @@ class _$SaveCaseUsagesApi extends SaveCaseUsagesApi {
           ApiResult<SaveCaseUsagesApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -112,6 +113,7 @@ class _$SaveCaseUsagesApi extends SaveCaseUsagesApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SaveCaseUsagesApiRequest)]),

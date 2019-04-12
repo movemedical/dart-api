@@ -102,6 +102,7 @@ class _$ListBackToBackPicksApi extends ListBackToBackPicksApi {
           ApiResult<ListBackToBackPicksApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -113,6 +114,7 @@ class _$ListBackToBackPicksApi extends ListBackToBackPicksApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListBackToBackPicksApiRequest)]),

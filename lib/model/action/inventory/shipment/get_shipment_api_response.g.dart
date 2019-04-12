@@ -177,32 +177,42 @@ class GetShipmentApiResponseBuilder
   _$GetShipmentApiResponse _$v;
 
   GetShipmentApiShipmentBuilder _shipment;
+
   GetShipmentApiShipmentBuilder get shipment =>
       _$this._shipment ??= new GetShipmentApiShipmentBuilder();
+
   set shipment(GetShipmentApiShipmentBuilder shipment) =>
       _$this._shipment = shipment;
 
   ListPackagesForShipmentApiResponseBuilder _pkgResponse;
+
   ListPackagesForShipmentApiResponseBuilder get pkgResponse =>
       _$this._pkgResponse ??= new ListPackagesForShipmentApiResponseBuilder();
+
   set pkgResponse(ListPackagesForShipmentApiResponseBuilder pkgResponse) =>
       _$this._pkgResponse = pkgResponse;
 
   ListBuilder<CustomDoc> _customDocs;
+
   ListBuilder<CustomDoc> get customDocs =>
       _$this._customDocs ??= new ListBuilder<CustomDoc>();
+
   set customDocs(ListBuilder<CustomDoc> customDocs) =>
       _$this._customDocs = customDocs;
 
   GetShipmentApiDisplayRuleBuilder _displayRule;
+
   GetShipmentApiDisplayRuleBuilder get displayRule =>
       _$this._displayRule ??= new GetShipmentApiDisplayRuleBuilder();
+
   set displayRule(GetShipmentApiDisplayRuleBuilder displayRule) =>
       _$this._displayRule = displayRule;
 
   ListBuilder<GetShipmentApiShipmentAttribute> _attributes;
+
   ListBuilder<GetShipmentApiShipmentAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetShipmentApiShipmentAttribute>();
+
   set attributes(ListBuilder<GetShipmentApiShipmentAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -348,6 +358,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
       GetShipmentApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.shipment,
@@ -356,6 +367,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -383,6 +395,7 @@ class _$GetShipmentApiResponseActions extends GetShipmentApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetShipmentApiResponse);
 }

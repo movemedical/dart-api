@@ -105,7 +105,9 @@ class MessagingBadgeUpdatedPushMessageBuilder
   _$MessagingBadgeUpdatedPushMessage _$v;
 
   int _badge;
+
   int get badge => _$this._badge;
+
   set badge(int badge) => _$this._badge = badge;
 
   MessagingBadgeUpdatedPushMessageBuilder();
@@ -184,6 +186,7 @@ class _$MessagingBadgeUpdatedPushMessageActions
       MessagingBadgeUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -203,6 +206,7 @@ class _$MessagingBadgeUpdatedPushMessageActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(MessagingBadgeUpdatedPushMessage);

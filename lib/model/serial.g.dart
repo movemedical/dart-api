@@ -225,41 +225,59 @@ class SerialBuilder implements Builder<Serial, SerialBuilder> {
   _$Serial _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _kitSerialId;
+
   String get kitSerialId => _$this._kitSerialId;
+
   set kitSerialId(String kitSerialId) => _$this._kitSerialId = kitSerialId;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   int _serialNumber;
+
   int get serialNumber => _$this._serialNumber;
+
   set serialNumber(int serialNumber) => _$this._serialNumber = serialNumber;
 
   String _serialRef;
+
   String get serialRef => _$this._serialRef;
+
   set serialRef(String serialRef) => _$this._serialRef = serialRef;
 
   DateTime _expirationDate;
+
   DateTime get expirationDate => _$this._expirationDate;
+
   set expirationDate(DateTime expirationDate) =>
       _$this._expirationDate = expirationDate;
 
   DateTime _manufactureDate;
+
   DateTime get manufactureDate => _$this._manufactureDate;
+
   set manufactureDate(DateTime manufactureDate) =>
       _$this._manufactureDate = manufactureDate;
 
   bool _sealed;
+
   bool get sealed => _$this._sealed;
+
   set sealed(bool sealed) => _$this._sealed = sealed;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   SerialBuilder();
@@ -381,6 +399,7 @@ class _$SerialActions extends SerialActions {
   SerialBuilder $newBuilder() => SerialBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -416,6 +435,7 @@ class _$SerialActions extends SerialActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(Serial);
 }

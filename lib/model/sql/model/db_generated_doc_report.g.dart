@@ -471,102 +471,148 @@ class DBGeneratedDocReportBuilder
   _$DBGeneratedDocReport _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _generatedByUserId;
+
   String get generatedByUserId => _$this._generatedByUserId;
+
   set generatedByUserId(String generatedByUserId) =>
       _$this._generatedByUserId = generatedByUserId;
 
   String _scheduledReportId;
+
   String get scheduledReportId => _$this._scheduledReportId;
+
   set scheduledReportId(String scheduledReportId) =>
       _$this._scheduledReportId = scheduledReportId;
 
   DocReportType _docReportType;
+
   DocReportType get docReportType => _$this._docReportType;
+
   set docReportType(DocReportType docReportType) =>
       _$this._docReportType = docReportType;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   String _requestClassName;
+
   String get requestClassName => _$this._requestClassName;
+
   set requestClassName(String requestClassName) =>
       _$this._requestClassName = requestClassName;
 
   String _parameters;
+
   String get parameters => _$this._parameters;
+
   set parameters(String parameters) => _$this._parameters = parameters;
 
   String _typedFileId;
+
   String get typedFileId => _$this._typedFileId;
+
   set typedFileId(String typedFileId) => _$this._typedFileId = typedFileId;
 
   String _displayName;
+
   String get displayName => _$this._displayName;
+
   set displayName(String displayName) => _$this._displayName = displayName;
 
   String _fileId;
+
   String get fileId => _$this._fileId;
+
   set fileId(String fileId) => _$this._fileId = fileId;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   double _processingTimeSeconds;
+
   double get processingTimeSeconds => _$this._processingTimeSeconds;
+
   set processingTimeSeconds(double processingTimeSeconds) =>
       _$this._processingTimeSeconds = processingTimeSeconds;
 
   String _url;
+
   String get url => _$this._url;
+
   set url(String url) => _$this._url = url;
 
   DateTime _expiresOnDate;
+
   DateTime get expiresOnDate => _$this._expiresOnDate;
+
   set expiresOnDate(DateTime expiresOnDate) =>
       _$this._expiresOnDate = expiresOnDate;
 
   GeneratedDocReportStatus _status;
+
   GeneratedDocReportStatus get status => _$this._status;
+
   set status(GeneratedDocReportStatus status) => _$this._status = status;
 
   DateTime _timeout;
+
   DateTime get timeout => _$this._timeout;
+
   set timeout(DateTime timeout) => _$this._timeout = timeout;
 
   int _attempt;
+
   int get attempt => _$this._attempt;
+
   set attempt(int attempt) => _$this._attempt = attempt;
 
   int _maxDownloads;
+
   int get maxDownloads => _$this._maxDownloads;
+
   set maxDownloads(int maxDownloads) => _$this._maxDownloads = maxDownloads;
 
   int _v;
+
   int get v => _$this._v;
+
   set v(int v) => _$this._v = v;
 
   DBGeneratedDocReportBuilder();
@@ -781,6 +827,7 @@ class _$DBGeneratedDocReportActions extends DBGeneratedDocReportActions {
   DBGeneratedDocReportBuilder $newBuilder() => DBGeneratedDocReportBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -844,6 +891,7 @@ class _$DBGeneratedDocReportActions extends DBGeneratedDocReportActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(DBGeneratedDocReport);
 }

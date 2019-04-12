@@ -264,50 +264,70 @@ class ListConversationsApiRequestBuilder
   _$ListConversationsApiRequest _$v;
 
   bool _archived;
+
   bool get archived => _$this._archived;
+
   set archived(bool archived) => _$this._archived = archived;
 
   bool _stopped;
+
   bool get stopped => _$this._stopped;
+
   set stopped(bool stopped) => _$this._stopped = stopped;
 
   bool _unread;
+
   bool get unread => _$this._unread;
+
   set unread(bool unread) => _$this._unread = unread;
 
   ListBuilder<String> _contactIds;
+
   ListBuilder<String> get contactIds =>
       _$this._contactIds ??= new ListBuilder<String>();
+
   set contactIds(ListBuilder<String> contactIds) =>
       _$this._contactIds = contactIds;
 
   DateTime _urgencyStartDate;
+
   DateTime get urgencyStartDate => _$this._urgencyStartDate;
+
   set urgencyStartDate(DateTime urgencyStartDate) =>
       _$this._urgencyStartDate = urgencyStartDate;
 
   DateTime _urgencyEndDate;
+
   DateTime get urgencyEndDate => _$this._urgencyEndDate;
+
   set urgencyEndDate(DateTime urgencyEndDate) =>
       _$this._urgencyEndDate = urgencyEndDate;
 
   AttributableType _attributableType;
+
   AttributableType get attributableType => _$this._attributableType;
+
   set attributableType(AttributableType attributableType) =>
       _$this._attributableType = attributableType;
 
   String _attributableId;
+
   String get attributableId => _$this._attributableId;
+
   set attributableId(String attributableId) =>
       _$this._attributableId = attributableId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListConversationsApiRequestBuilder();
@@ -469,12 +489,14 @@ class _$ListConversationsApiRequestActions
       ListConversationsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -512,6 +534,7 @@ class _$ListConversationsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListConversationsApiRequest);

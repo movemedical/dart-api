@@ -101,6 +101,7 @@ class _$CreateFacilityApi extends CreateFacilityApi {
           ApiResult<CreateFacilityApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -112,6 +113,7 @@ class _$CreateFacilityApi extends CreateFacilityApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateFacilityApiRequest)]),

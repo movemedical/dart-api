@@ -223,36 +223,52 @@ class ListChildLoanLinesApiLoanLineBuilder
   _$ListChildLoanLinesApiLoanLine _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   LoanLineStatus _status;
+
   LoanLineStatus get status => _$this._status;
+
   set status(LoanLineStatus status) => _$this._status = status;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   int _qtyCommitted;
+
   int get qtyCommitted => _$this._qtyCommitted;
+
   set qtyCommitted(int qtyCommitted) => _$this._qtyCommitted = qtyCommitted;
 
   int _qtyInbound;
+
   int get qtyInbound => _$this._qtyInbound;
+
   set qtyInbound(int qtyInbound) => _$this._qtyInbound = qtyInbound;
 
   int _qtyOnHand;
+
   int get qtyOnHand => _$this._qtyOnHand;
+
   set qtyOnHand(int qtyOnHand) => _$this._qtyOnHand = qtyOnHand;
 
   int _qtyOutbound;
+
   int get qtyOutbound => _$this._qtyOutbound;
+
   set qtyOutbound(int qtyOutbound) => _$this._qtyOutbound = qtyOutbound;
 
   int _qtyReturned;
+
   int get qtyReturned => _$this._qtyReturned;
+
   set qtyReturned(int qtyReturned) => _$this._qtyReturned = qtyReturned;
 
   ListChildLoanLinesApiLoanLineBuilder();
@@ -387,12 +403,14 @@ class _$ListChildLoanLinesApiLoanLineActions
       ListChildLoanLinesApiLoanLineBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockItem,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -426,6 +444,7 @@ class _$ListChildLoanLinesApiLoanLineActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListChildLoanLinesApiLoanLine);

@@ -173,26 +173,36 @@ class UpdateShipmentDetailsApiRequestBuilder
   _$UpdateShipmentDetailsApiRequest _$v;
 
   String _shipmentId;
+
   String get shipmentId => _$this._shipmentId;
+
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToOverrideAddress;
+
   AddressBuilder get deliverToOverrideAddress =>
       _$this._deliverToOverrideAddress ??= new AddressBuilder();
+
   set deliverToOverrideAddress(AddressBuilder deliverToOverrideAddress) =>
       _$this._deliverToOverrideAddress = deliverToOverrideAddress;
 
@@ -321,12 +331,14 @@ class _$UpdateShipmentDetailsApiRequestActions
       UpdateShipmentDetailsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.deliverToOverrideAddress,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -354,6 +366,7 @@ class _$UpdateShipmentDetailsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateShipmentDetailsApiRequest);

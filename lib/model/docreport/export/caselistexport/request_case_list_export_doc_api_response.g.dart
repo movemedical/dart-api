@@ -107,7 +107,9 @@ class RequestCaseListExportDocApiResponseBuilder
   _$RequestCaseListExportDocApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestCaseListExportDocApiResponseBuilder();
@@ -189,6 +191,7 @@ class _$RequestCaseListExportDocApiResponseActions
       RequestCaseListExportDocApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,6 +211,7 @@ class _$RequestCaseListExportDocApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestCaseListExportDocApiResponse);

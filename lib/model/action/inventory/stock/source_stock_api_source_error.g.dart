@@ -116,12 +116,16 @@ class SourceStockApiSourceErrorBuilder
   _$SourceStockApiSourceError _$v;
 
   StockDataBuilder _stockData;
+
   StockDataBuilder get stockData =>
       _$this._stockData ??= new StockDataBuilder();
+
   set stockData(StockDataBuilder stockData) => _$this._stockData = stockData;
 
   String _errorMsg;
+
   String get errorMsg => _$this._errorMsg;
+
   set errorMsg(String errorMsg) => _$this._errorMsg = errorMsg;
 
   SourceStockApiSourceErrorBuilder();
@@ -222,12 +226,14 @@ class _$SourceStockApiSourceErrorActions
       SourceStockApiSourceErrorBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockData,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -249,6 +255,7 @@ class _$SourceStockApiSourceErrorActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SourceStockApiSourceError);
 }

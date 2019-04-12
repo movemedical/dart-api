@@ -106,6 +106,7 @@ class _$PrepareFacilityFileUploadApi extends PrepareFacilityFileUploadApi {
           ApiResult<PrepareFacilityFileUploadApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -117,6 +118,7 @@ class _$PrepareFacilityFileUploadApi extends PrepareFacilityFileUploadApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(PrepareFacilityFileUploadApiRequest)]),

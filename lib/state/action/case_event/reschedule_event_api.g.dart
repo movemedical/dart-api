@@ -87,6 +87,7 @@ class _$RescheduleEventApi extends RescheduleEventApi {
           ApiCommand<RescheduleEventApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,6 +99,7 @@ class _$RescheduleEventApi extends RescheduleEventApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RescheduleEventApiRequest)]),

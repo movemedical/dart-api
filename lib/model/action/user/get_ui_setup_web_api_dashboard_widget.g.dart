@@ -122,12 +122,16 @@ class GetUiSetupWebApiDashboardWidgetBuilder
   _$GetUiSetupWebApiDashboardWidget _$v;
 
   WebDashboardWidgetType _widgetType;
+
   WebDashboardWidgetType get widgetType => _$this._widgetType;
+
   set widgetType(WebDashboardWidgetType widgetType) =>
       _$this._widgetType = widgetType;
 
   String _widgetConfig;
+
   String get widgetConfig => _$this._widgetConfig;
+
   set widgetConfig(String widgetConfig) => _$this._widgetConfig = widgetConfig;
 
   GetUiSetupWebApiDashboardWidgetBuilder();
@@ -217,6 +221,7 @@ class _$GetUiSetupWebApiDashboardWidgetActions
       GetUiSetupWebApiDashboardWidgetBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -238,6 +243,7 @@ class _$GetUiSetupWebApiDashboardWidgetActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetUiSetupWebApiDashboardWidget);

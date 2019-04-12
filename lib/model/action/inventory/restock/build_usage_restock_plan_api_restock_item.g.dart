@@ -270,57 +270,77 @@ class BuildUsageRestockPlanApiRestockItemBuilder
   _$BuildUsageRestockPlanApiRestockItem _$v;
 
   String _guid;
+
   String get guid => _$this._guid;
+
   set guid(String guid) => _$this._guid = guid;
 
   bool _shouldRestock;
+
   bool get shouldRestock => _$this._shouldRestock;
+
   set shouldRestock(bool shouldRestock) =>
       _$this._shouldRestock = shouldRestock;
 
   BuildUsageRestockPlanApiRestockByType _restockByType;
+
   BuildUsageRestockPlanApiRestockByType get restockByType =>
       _$this._restockByType;
+
   set restockByType(BuildUsageRestockPlanApiRestockByType restockByType) =>
       _$this._restockByType = restockByType;
 
   DateTime _deliverByDate;
+
   DateTime get deliverByDate => _$this._deliverByDate;
+
   set deliverByDate(DateTime deliverByDate) =>
       _$this._deliverByDate = deliverByDate;
 
   ShippingServiceBuilder _shippingService;
+
   ShippingServiceBuilder get shippingService =>
       _$this._shippingService ??= new ShippingServiceBuilder();
+
   set shippingService(ShippingServiceBuilder shippingService) =>
       _$this._shippingService = shippingService;
 
   LocationBuilder _replenishLocation;
+
   LocationBuilder get replenishLocation =>
       _$this._replenishLocation ??= new LocationBuilder();
+
   set replenishLocation(LocationBuilder replenishLocation) =>
       _$this._replenishLocation = replenishLocation;
 
   CustomerAddressBuilder _deliverToAddress;
+
   CustomerAddressBuilder get deliverToAddress =>
       _$this._deliverToAddress ??= new CustomerAddressBuilder();
+
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
   StockContainerType _replenishContainerType;
+
   StockContainerType get replenishContainerType =>
       _$this._replenishContainerType;
+
   set replenishContainerType(StockContainerType replenishContainerType) =>
       _$this._replenishContainerType = replenishContainerType;
 
   String _replenishContainerId;
+
   String get replenishContainerId => _$this._replenishContainerId;
+
   set replenishContainerId(String replenishContainerId) =>
       _$this._replenishContainerId = replenishContainerId;
 
   BuildUsageRestockPlanApiDisplayRuleBuilder _displayRule;
+
   BuildUsageRestockPlanApiDisplayRuleBuilder get displayRule =>
       _$this._displayRule ??= new BuildUsageRestockPlanApiDisplayRuleBuilder();
+
   set displayRule(BuildUsageRestockPlanApiDisplayRuleBuilder displayRule) =>
       _$this._displayRule = displayRule;
 
@@ -508,6 +528,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
       BuildUsageRestockPlanApiRestockItemBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.shippingService,
@@ -517,6 +538,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -554,6 +576,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildUsageRestockPlanApiRestockItem);

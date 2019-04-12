@@ -141,18 +141,24 @@ class RequestSalesOrderExportDocApiRequestBuilder
   _$RequestSalesOrderExportDocApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   ListSalesOrdersApiRequestBuilder _salesOrderRequest;
+
   ListSalesOrdersApiRequestBuilder get salesOrderRequest =>
       _$this._salesOrderRequest ??= new ListSalesOrdersApiRequestBuilder();
+
   set salesOrderRequest(ListSalesOrdersApiRequestBuilder salesOrderRequest) =>
       _$this._salesOrderRequest = salesOrderRequest;
 
@@ -276,6 +282,7 @@ class _$RequestSalesOrderExportDocApiRequestActions
       RequestSalesOrderExportDocApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
@@ -283,6 +290,7 @@ class _$RequestSalesOrderExportDocApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -306,6 +314,7 @@ class _$RequestSalesOrderExportDocApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestSalesOrderExportDocApiRequest);

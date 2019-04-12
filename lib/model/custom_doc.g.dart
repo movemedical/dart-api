@@ -120,16 +120,22 @@ class CustomDocBuilder implements Builder<CustomDoc, CustomDocBuilder> {
   _$CustomDoc _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _orderReasonDocId;
+
   String get orderReasonDocId => _$this._orderReasonDocId;
+
   set orderReasonDocId(String orderReasonDocId) =>
       _$this._orderReasonDocId = orderReasonDocId;
 
   OrderReasonDocValidFor _validFor;
+
   OrderReasonDocValidFor get validFor => _$this._validFor;
+
   set validFor(OrderReasonDocValidFor validFor) => _$this._validFor = validFor;
 
   CustomDocBuilder();
@@ -211,6 +217,7 @@ class _$CustomDocActions extends CustomDocActions {
   CustomDocBuilder $newBuilder() => CustomDocBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -234,6 +241,7 @@ class _$CustomDocActions extends CustomDocActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CustomDoc);
 }

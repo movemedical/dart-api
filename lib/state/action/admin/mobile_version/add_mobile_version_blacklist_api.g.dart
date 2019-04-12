@@ -106,6 +106,7 @@ class _$AddMobileVersionBlacklistApi extends AddMobileVersionBlacklistApi {
           ApiResult<AddMobileVersionBlacklistApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -117,6 +118,7 @@ class _$AddMobileVersionBlacklistApi extends AddMobileVersionBlacklistApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(AddMobileVersionBlacklistApiRequest)]),

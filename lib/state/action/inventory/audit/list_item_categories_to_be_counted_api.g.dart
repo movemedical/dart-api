@@ -110,6 +110,7 @@ class _$ListItemCategoriesToBeCountedApi
           ApiResult<ListItemCategoriesToBeCountedApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -121,6 +122,7 @@ class _$ListItemCategoriesToBeCountedApi
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(

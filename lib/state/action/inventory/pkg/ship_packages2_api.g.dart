@@ -86,6 +86,7 @@ class _$ShipPackages2Api extends ShipPackages2Api {
           ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -97,6 +98,7 @@ class _$ShipPackages2Api extends ShipPackages2Api {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ShipPackages2ApiRequest)]),

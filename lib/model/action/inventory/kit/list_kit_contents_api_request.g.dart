@@ -101,7 +101,9 @@ class ListKitContentsApiRequestBuilder
   _$ListKitContentsApiRequest _$v;
 
   String _kitStockId;
+
   String get kitStockId => _$this._kitStockId;
+
   set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
 
   ListKitContentsApiRequestBuilder();
@@ -179,6 +181,7 @@ class _$ListKitContentsApiRequestActions
       ListKitContentsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -198,6 +201,7 @@ class _$ListKitContentsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListKitContentsApiRequest);
 }

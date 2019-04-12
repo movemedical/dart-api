@@ -190,28 +190,40 @@ class MoveStock2ApiMovingStockReqBuilder
   _$MoveStock2ApiMovingStockReq _$v;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   String _summaryKey;
+
   String get summaryKey => _$this._summaryKey;
+
   set summaryKey(String summaryKey) => _$this._summaryKey = summaryKey;
 
   int _qty;
+
   int get qty => _$this._qty;
+
   set qty(int qty) => _$this._qty = qty;
 
   String _loanLineId;
+
   String get loanLineId => _$this._loanLineId;
+
   set loanLineId(String loanLineId) => _$this._loanLineId = loanLineId;
 
   StockContainerType _toContainerType;
+
   StockContainerType get toContainerType => _$this._toContainerType;
+
   set toContainerType(StockContainerType toContainerType) =>
       _$this._toContainerType = toContainerType;
 
   String _toContainerId;
+
   String get toContainerId => _$this._toContainerId;
+
   set toContainerId(String toContainerId) =>
       _$this._toContainerId = toContainerId;
 
@@ -322,6 +334,7 @@ class _$MoveStock2ApiMovingStockReqActions
       MoveStock2ApiMovingStockReqBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -351,6 +364,7 @@ class _$MoveStock2ApiMovingStockReqActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(MoveStock2ApiMovingStockReq);

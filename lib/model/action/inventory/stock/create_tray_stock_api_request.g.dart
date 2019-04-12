@@ -275,54 +275,76 @@ class CreateTrayStockApiRequestBuilder
   _$CreateTrayStockApiRequest _$v;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _trayItemId;
+
   String get trayItemId => _$this._trayItemId;
+
   set trayItemId(String trayItemId) => _$this._trayItemId = trayItemId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _homeLocationType;
+
   LocationType get homeLocationType => _$this._homeLocationType;
+
   set homeLocationType(LocationType homeLocationType) =>
       _$this._homeLocationType = homeLocationType;
 
   String _homeLocationId;
+
   String get homeLocationId => _$this._homeLocationId;
+
   set homeLocationId(String homeLocationId) =>
       _$this._homeLocationId = homeLocationId;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   ResponsiblePartyType _responsiblePartyType;
+
   ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+
   set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
       _$this._responsiblePartyType = responsiblePartyType;
 
   String _responsiblePartyId;
+
   String get responsiblePartyId => _$this._responsiblePartyId;
+
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
   bool _fill;
+
   bool get fill => _$this._fill;
+
   set fill(bool fill) => _$this._fill = fill;
 
   CreateTrayStockApiRequestBuilder();
@@ -475,6 +497,7 @@ class _$CreateTrayStockApiRequestActions
       CreateTrayStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -514,6 +537,7 @@ class _$CreateTrayStockApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateTrayStockApiRequest);
 }

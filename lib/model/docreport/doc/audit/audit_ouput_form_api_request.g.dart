@@ -172,27 +172,37 @@ class AuditOuputFormApiRequestBuilder
   _$AuditOuputFormApiRequest _$v;
 
   DBGeneratedDocReportBuilder _docReport;
+
   DBGeneratedDocReportBuilder get docReport =>
       _$this._docReport ??= new DBGeneratedDocReportBuilder();
+
   set docReport(DBGeneratedDocReportBuilder docReport) =>
       _$this._docReport = docReport;
 
   String _orderReasonDocId;
+
   String get orderReasonDocId => _$this._orderReasonDocId;
+
   set orderReasonDocId(String orderReasonDocId) =>
       _$this._orderReasonDocId = orderReasonDocId;
 
   DocReportDisplayType _displayType;
+
   DocReportDisplayType get displayType => _$this._displayType;
+
   set displayType(DocReportDisplayType displayType) =>
       _$this._displayType = displayType;
 
   DocReportFormat _format;
+
   DocReportFormat get format => _$this._format;
+
   set format(DocReportFormat format) => _$this._format = format;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   AuditOuputFormApiRequestBuilder();
@@ -317,12 +327,14 @@ class _$AuditOuputFormApiRequestActions
       AuditOuputFormApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.docReport,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -350,6 +362,7 @@ class _$AuditOuputFormApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(AuditOuputFormApiRequest);
 }

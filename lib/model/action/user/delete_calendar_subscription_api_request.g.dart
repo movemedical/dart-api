@@ -107,7 +107,9 @@ class DeleteCalendarSubscriptionApiRequestBuilder
   _$DeleteCalendarSubscriptionApiRequest _$v;
 
   String _subscriptionId;
+
   String get subscriptionId => _$this._subscriptionId;
+
   set subscriptionId(String subscriptionId) =>
       _$this._subscriptionId = subscriptionId;
 
@@ -191,6 +193,7 @@ class _$DeleteCalendarSubscriptionApiRequestActions
       DeleteCalendarSubscriptionApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -210,6 +213,7 @@ class _$DeleteCalendarSubscriptionApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(DeleteCalendarSubscriptionApiRequest);

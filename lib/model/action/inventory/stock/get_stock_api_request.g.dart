@@ -109,11 +109,15 @@ class GetStockApiRequestBuilder
   _$GetStockApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetStockApiRequestBuilder();
@@ -192,6 +196,7 @@ class _$GetStockApiRequestActions extends GetStockApiRequestActions {
   GetStockApiRequestBuilder $newBuilder() => GetStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -213,6 +218,7 @@ class _$GetStockApiRequestActions extends GetStockApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockApiRequest);
 }

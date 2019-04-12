@@ -139,6 +139,7 @@ class _$IssueRegeneratedPushMessageActions
       IssueRegeneratedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -146,6 +147,7 @@ class _$IssueRegeneratedPushMessageActions
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(IssueRegeneratedPushMessage);

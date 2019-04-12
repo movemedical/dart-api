@@ -121,11 +121,15 @@ class AdjustStockQuantityApiAdjustmentBuilder
   _$AdjustStockQuantityApiAdjustment _$v;
 
   String _summaryId;
+
   String get summaryId => _$this._summaryId;
+
   set summaryId(String summaryId) => _$this._summaryId = summaryId;
 
   int _qtyChange;
+
   int get qtyChange => _$this._qtyChange;
+
   set qtyChange(int qtyChange) => _$this._qtyChange = qtyChange;
 
   AdjustStockQuantityApiAdjustmentBuilder();
@@ -209,6 +213,7 @@ class _$AdjustStockQuantityApiAdjustmentActions
       AdjustStockQuantityApiAdjustmentBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -230,6 +235,7 @@ class _$AdjustStockQuantityApiAdjustmentActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(AdjustStockQuantityApiAdjustment);

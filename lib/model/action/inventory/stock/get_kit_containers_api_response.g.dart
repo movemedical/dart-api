@@ -108,8 +108,10 @@ class GetKitContainersApiResponseBuilder
   _$GetKitContainersApiResponse _$v;
 
   ListBuilder<GetStockApiStock> _containers;
+
   ListBuilder<GetStockApiStock> get containers =>
       _$this._containers ??= new ListBuilder<GetStockApiStock>();
+
   set containers(ListBuilder<GetStockApiStock> containers) =>
       _$this._containers = containers;
 
@@ -204,6 +206,7 @@ class _$GetKitContainersApiResponseActions
       GetKitContainersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -223,6 +226,7 @@ class _$GetKitContainersApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetKitContainersApiResponse);

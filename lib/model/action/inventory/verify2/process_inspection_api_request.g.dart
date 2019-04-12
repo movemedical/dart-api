@@ -105,7 +105,9 @@ class ProcessInspectionApiRequestBuilder
   _$ProcessInspectionApiRequest _$v;
 
   String _processKey;
+
   String get processKey => _$this._processKey;
+
   set processKey(String processKey) => _$this._processKey = processKey;
 
   ProcessInspectionApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$ProcessInspectionApiRequestActions
       ProcessInspectionApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$ProcessInspectionApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ProcessInspectionApiRequest);

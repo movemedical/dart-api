@@ -136,20 +136,26 @@ class GetStockSummaryApiResponseBuilder
   _$GetStockSummaryApiResponse _$v;
 
   GetStockSummaryApiStockSummaryBuilder _stockSummary;
+
   GetStockSummaryApiStockSummaryBuilder get stockSummary =>
       _$this._stockSummary ??= new GetStockSummaryApiStockSummaryBuilder();
+
   set stockSummary(GetStockSummaryApiStockSummaryBuilder stockSummary) =>
       _$this._stockSummary = stockSummary;
 
   GetStockSummaryApiUiSchemaBuilder _uiSchema;
+
   GetStockSummaryApiUiSchemaBuilder get uiSchema =>
       _$this._uiSchema ??= new GetStockSummaryApiUiSchemaBuilder();
+
   set uiSchema(GetStockSummaryApiUiSchemaBuilder uiSchema) =>
       _$this._uiSchema = uiSchema;
 
   GetStockApiResponseBuilder _getStockResponse;
+
   GetStockApiResponseBuilder get getStockResponse =>
       _$this._getStockResponse ??= new GetStockApiResponseBuilder();
+
   set getStockResponse(GetStockApiResponseBuilder getStockResponse) =>
       _$this._getStockResponse = getStockResponse;
 
@@ -278,6 +284,7 @@ class _$GetStockSummaryApiResponseActions
       GetStockSummaryApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.stockSummary,
@@ -286,6 +293,7 @@ class _$GetStockSummaryApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -309,6 +317,7 @@ class _$GetStockSummaryApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetStockSummaryApiResponse);
 }

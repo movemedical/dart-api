@@ -119,11 +119,15 @@ class GetStockOrderApiOrderAttributeBuilder
   _$GetStockOrderApiOrderAttribute _$v;
 
   String _label;
+
   String get label => _$this._label;
+
   set label(String label) => _$this._label = label;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   GetStockOrderApiOrderAttributeBuilder();
@@ -206,6 +210,7 @@ class _$GetStockOrderApiOrderAttributeActions
       GetStockOrderApiOrderAttributeBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -227,6 +232,7 @@ class _$GetStockOrderApiOrderAttributeActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetStockOrderApiOrderAttribute);

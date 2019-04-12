@@ -246,42 +246,60 @@ class GetFoundInventoryTypeApiRequestBuilder
   _$GetFoundInventoryTypeApiRequest _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
+
   String get itemVersionId => _$this._itemVersionId;
+
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   GetFoundInventoryTypeApiProcess _process;
+
   GetFoundInventoryTypeApiProcess get process => _$this._process;
+
   set process(GetFoundInventoryTypeApiProcess process) =>
       _$this._process = process;
 
@@ -414,6 +432,7 @@ class _$GetFoundInventoryTypeApiRequestActions
       GetFoundInventoryTypeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -449,6 +468,7 @@ class _$GetFoundInventoryTypeApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetFoundInventoryTypeApiRequest);

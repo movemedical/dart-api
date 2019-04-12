@@ -104,7 +104,9 @@ class DeleteOrderReasonApiRequestBuilder
   _$DeleteOrderReasonApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   DeleteOrderReasonApiRequestBuilder();
@@ -181,6 +183,7 @@ class _$DeleteOrderReasonApiRequestActions
       DeleteOrderReasonApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -200,6 +203,7 @@ class _$DeleteOrderReasonApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(DeleteOrderReasonApiRequest);

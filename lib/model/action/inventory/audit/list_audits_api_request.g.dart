@@ -429,97 +429,133 @@ class ListAuditsApiRequestBuilder
   _$ListAuditsApiRequest _$v;
 
   ListBuilder<String> _locationIds;
+
   ListBuilder<String> get locationIds =>
       _$this._locationIds ??= new ListBuilder<String>();
+
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
   ListBuilder<AuditStatus> _statuses;
+
   ListBuilder<AuditStatus> get statuses =>
       _$this._statuses ??= new ListBuilder<AuditStatus>();
+
   set statuses(ListBuilder<AuditStatus> statuses) =>
       _$this._statuses = statuses;
 
   DateRangeBuilder _scheduledStartDateRange;
+
   DateRangeBuilder get scheduledStartDateRange =>
       _$this._scheduledStartDateRange ??= new DateRangeBuilder();
+
   set scheduledStartDateRange(DateRangeBuilder scheduledStartDateRange) =>
       _$this._scheduledStartDateRange = scheduledStartDateRange;
 
   DateRangeBuilder _scheduledEndDateRange;
+
   DateRangeBuilder get scheduledEndDateRange =>
       _$this._scheduledEndDateRange ??= new DateRangeBuilder();
+
   set scheduledEndDateRange(DateRangeBuilder scheduledEndDateRange) =>
       _$this._scheduledEndDateRange = scheduledEndDateRange;
 
   bool _assigned;
+
   bool get assigned => _$this._assigned;
+
   set assigned(bool assigned) => _$this._assigned = assigned;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _lotIds;
+
   ListBuilder<String> get lotIds =>
       _$this._lotIds ??= new ListBuilder<String>();
+
   set lotIds(ListBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   ListBuilder<String> _serialIds;
+
   ListBuilder<String> get serialIds =>
       _$this._serialIds ??= new ListBuilder<String>();
+
   set serialIds(ListBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   ListBuilder<String> _itemCategoryIds;
+
   ListBuilder<String> get itemCategoryIds =>
       _$this._itemCategoryIds ??= new ListBuilder<String>();
+
   set itemCategoryIds(ListBuilder<String> itemCategoryIds) =>
       _$this._itemCategoryIds = itemCategoryIds;
 
   ListBuilder<String> _assigneeLinkedIds;
+
   ListBuilder<String> get assigneeLinkedIds =>
       _$this._assigneeLinkedIds ??= new ListBuilder<String>();
+
   set assigneeLinkedIds(ListBuilder<String> assigneeLinkedIds) =>
       _$this._assigneeLinkedIds = assigneeLinkedIds;
 
   ListBuilder<AuditType> _types;
+
   ListBuilder<AuditType> get types =>
       _$this._types ??= new ListBuilder<AuditType>();
+
   set types(ListBuilder<AuditType> types) => _$this._types = types;
 
   ListBuilder<AuditCountType> _countTypes;
+
   ListBuilder<AuditCountType> get countTypes =>
       _$this._countTypes ??= new ListBuilder<AuditCountType>();
+
   set countTypes(ListBuilder<AuditCountType> countTypes) =>
       _$this._countTypes = countTypes;
 
   String _auditNumber;
+
   String get auditNumber => _$this._auditNumber;
+
   set auditNumber(String auditNumber) => _$this._auditNumber = auditNumber;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   DateTime _syncDate;
+
   DateTime get syncDate => _$this._syncDate;
+
   set syncDate(DateTime syncDate) => _$this._syncDate = syncDate;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListAuditsApiOrderBy> _sortBy;
+
   OrderByParamsBuilder<ListAuditsApiOrderBy> get sortBy =>
       _$this._sortBy ??= new OrderByParamsBuilder<ListAuditsApiOrderBy>();
+
   set sortBy(OrderByParamsBuilder<ListAuditsApiOrderBy> sortBy) =>
       _$this._sortBy = sortBy;
 
@@ -768,6 +804,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
   ListAuditsApiRequestBuilder $newBuilder() => ListAuditsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.scheduledStartDateRange,
@@ -777,6 +814,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -830,6 +868,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListAuditsApiRequest);
 }

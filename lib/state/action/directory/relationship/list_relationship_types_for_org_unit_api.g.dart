@@ -112,6 +112,7 @@ class _$ListRelationshipTypesForOrgUnitApi
           ApiResult<ListRelationshipTypesForOrgUnitApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -123,6 +124,7 @@ class _$ListRelationshipTypesForOrgUnitApi
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(

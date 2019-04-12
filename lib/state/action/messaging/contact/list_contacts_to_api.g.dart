@@ -101,6 +101,7 @@ class _$ListContactsToApi extends ListContactsToApi {
           ApiResult<ListContactsToApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -112,6 +113,7 @@ class _$ListContactsToApi extends ListContactsToApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListContactsToApiRequest)]),

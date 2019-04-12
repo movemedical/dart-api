@@ -98,6 +98,7 @@ class _$MoveStock2Api extends MoveStock2Api {
           ApiResult<MoveStock2ApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,6 +110,7 @@ class _$MoveStock2Api extends MoveStock2Api {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(MoveStock2ApiRequest)]),

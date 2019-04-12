@@ -98,6 +98,7 @@ class _$SourceStockApi extends SourceStockApi {
           ApiResult<SourceStockApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,6 +110,7 @@ class _$SourceStockApi extends SourceStockApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(SourceStockApiRequest)]),

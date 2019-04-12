@@ -329,72 +329,100 @@ class CreateStockOrderApiRequestBuilder
   _$CreateStockOrderApiRequest _$v;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _opsOrgUnitId;
+
   String get opsOrgUnitId => _$this._opsOrgUnitId;
+
   set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
 
   String _salesOrgUnitid;
+
   String get salesOrgUnitid => _$this._salesOrgUnitid;
+
   set salesOrgUnitid(String salesOrgUnitid) =>
       _$this._salesOrgUnitid = salesOrgUnitid;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   LocationDataBuilder _toLocation;
+
   LocationDataBuilder get toLocation =>
       _$this._toLocation ??= new LocationDataBuilder();
+
   set toLocation(LocationDataBuilder toLocation) =>
       _$this._toLocation = toLocation;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _shipToAddressId;
+
   String get shipToAddressId => _$this._shipToAddressId;
+
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
 
   String _deliverToAddressId;
+
   String get deliverToAddressId => _$this._deliverToAddressId;
+
   set deliverToAddressId(String deliverToAddressId) =>
       _$this._deliverToAddressId = deliverToAddressId;
 
   AddressBuilder _deliverToAddressOverride;
+
   AddressBuilder get deliverToAddressOverride =>
       _$this._deliverToAddressOverride ??= new AddressBuilder();
+
   set deliverToAddressOverride(AddressBuilder deliverToAddressOverride) =>
       _$this._deliverToAddressOverride = deliverToAddressOverride;
 
   DateRangeBuilder _deliveryWindow;
+
   DateRangeBuilder get deliveryWindow =>
       _$this._deliveryWindow ??= new DateRangeBuilder();
+
   set deliveryWindow(DateRangeBuilder deliveryWindow) =>
       _$this._deliveryWindow = deliveryWindow;
 
   String _shippingServiceId;
+
   String get shippingServiceId => _$this._shippingServiceId;
+
   set shippingServiceId(String shippingServiceId) =>
       _$this._shippingServiceId = shippingServiceId;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   ListBuilder<OrderCustomFieldValue> _orderCustomFieldValues;
+
   ListBuilder<OrderCustomFieldValue> get orderCustomFieldValues =>
       _$this._orderCustomFieldValues ??=
           new ListBuilder<OrderCustomFieldValue>();
+
   set orderCustomFieldValues(
           ListBuilder<OrderCustomFieldValue> orderCustomFieldValues) =>
       _$this._orderCustomFieldValues = orderCustomFieldValues;
@@ -600,6 +628,7 @@ class _$CreateStockOrderApiRequestActions
       CreateStockOrderApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.toLocation,
@@ -608,6 +637,7 @@ class _$CreateStockOrderApiRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -653,6 +683,7 @@ class _$CreateStockOrderApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateStockOrderApiRequest);
 }

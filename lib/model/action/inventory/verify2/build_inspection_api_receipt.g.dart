@@ -265,60 +265,80 @@ class BuildInspectionApiReceiptBuilder
   _$BuildInspectionApiReceipt _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _order;
+
   int get order => _$this._order;
+
   set order(int order) => _$this._order = order;
 
   BuildInspectionApiReceiptType _type;
+
   BuildInspectionApiReceiptType get type => _$this._type;
+
   set type(BuildInspectionApiReceiptType type) => _$this._type = type;
 
   String _receiveIntoBinId;
+
   String get receiveIntoBinId => _$this._receiveIntoBinId;
+
   set receiveIntoBinId(String receiveIntoBinId) =>
       _$this._receiveIntoBinId = receiveIntoBinId;
 
   bool _allowLostOption;
+
   bool get allowLostOption => _$this._allowLostOption;
+
   set allowLostOption(bool allowLostOption) =>
       _$this._allowLostOption = allowLostOption;
 
   BuildInspectionApiShipmentReceiptDataBuilder _shipmentReceiptData;
+
   BuildInspectionApiShipmentReceiptDataBuilder get shipmentReceiptData =>
       _$this._shipmentReceiptData ??=
           new BuildInspectionApiShipmentReceiptDataBuilder();
+
   set shipmentReceiptData(
           BuildInspectionApiShipmentReceiptDataBuilder shipmentReceiptData) =>
       _$this._shipmentReceiptData = shipmentReceiptData;
 
   BuildInspectionApiLoanReceiptDataBuilder _loanReceiptData;
+
   BuildInspectionApiLoanReceiptDataBuilder get loanReceiptData =>
       _$this._loanReceiptData ??=
           new BuildInspectionApiLoanReceiptDataBuilder();
+
   set loanReceiptData(
           BuildInspectionApiLoanReceiptDataBuilder loanReceiptData) =>
       _$this._loanReceiptData = loanReceiptData;
 
   BuildInspectionApiLocationReceiptDataBuilder _locationReceiptData;
+
   BuildInspectionApiLocationReceiptDataBuilder get locationReceiptData =>
       _$this._locationReceiptData ??=
           new BuildInspectionApiLocationReceiptDataBuilder();
+
   set locationReceiptData(
           BuildInspectionApiLocationReceiptDataBuilder locationReceiptData) =>
       _$this._locationReceiptData = locationReceiptData;
 
   BuildInspectionApiKitDataBuilder _kitInspectionData;
+
   BuildInspectionApiKitDataBuilder get kitInspectionData =>
       _$this._kitInspectionData ??= new BuildInspectionApiKitDataBuilder();
+
   set kitInspectionData(BuildInspectionApiKitDataBuilder kitInspectionData) =>
       _$this._kitInspectionData = kitInspectionData;
 
   BuildInspectionApiTrayDataBuilder _trayInspectionData;
+
   BuildInspectionApiTrayDataBuilder get trayInspectionData =>
       _$this._trayInspectionData ??= new BuildInspectionApiTrayDataBuilder();
+
   set trayInspectionData(
           BuildInspectionApiTrayDataBuilder trayInspectionData) =>
       _$this._trayInspectionData = trayInspectionData;
@@ -511,6 +531,7 @@ class _$BuildInspectionApiReceiptActions
       BuildInspectionApiReceiptBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.shipmentReceiptData,
@@ -521,6 +542,7 @@ class _$BuildInspectionApiReceiptActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -558,6 +580,7 @@ class _$BuildInspectionApiReceiptActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(BuildInspectionApiReceipt);
 }

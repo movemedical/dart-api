@@ -132,20 +132,26 @@ class GetLoanApiResponseBuilder
   _$GetLoanApiResponse _$v;
 
   GetLoanApiLoanBuilder _loan;
+
   GetLoanApiLoanBuilder get loan =>
       _$this._loan ??= new GetLoanApiLoanBuilder();
+
   set loan(GetLoanApiLoanBuilder loan) => _$this._loan = loan;
 
   GetLoanApiDisplayRulesBuilder _displayRules;
+
   GetLoanApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetLoanApiDisplayRulesBuilder();
+
   set displayRules(GetLoanApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
   ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData> _consignmentLoanFields;
+
   ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
       get consignmentLoanFields => _$this._consignmentLoanFields ??=
           new ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>();
+
   set consignmentLoanFields(
           ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
               consignmentLoanFields) =>
@@ -265,6 +271,7 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
   GetLoanApiResponseBuilder $newBuilder() => GetLoanApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.loan,
@@ -272,6 +279,7 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -295,6 +303,7 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetLoanApiResponse);
 }

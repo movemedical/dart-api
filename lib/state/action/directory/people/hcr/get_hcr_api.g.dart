@@ -84,6 +84,7 @@ class _$GetHcrApi extends GetHcrApi {
           ApiResult<GetHcrApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -95,6 +96,7 @@ class _$GetHcrApi extends GetHcrApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(GetHcrApiRequest)]),

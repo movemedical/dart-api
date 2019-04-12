@@ -106,6 +106,7 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
           ApiResult<GetItemLotSerialHistoryApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -117,6 +118,7 @@ class _$GetItemLotSerialHistoryApi extends GetItemLotSerialHistoryApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(GetItemLotSerialHistoryApiRequest)]),

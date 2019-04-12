@@ -184,36 +184,46 @@ class BuildStockOrderRestockPlanApiDisplayRuleBuilder
   _$BuildStockOrderRestockPlanApiDisplayRule _$v;
 
   bool _allowUserOverrideDoNotRestock;
+
   bool get allowUserOverrideDoNotRestock =>
       _$this._allowUserOverrideDoNotRestock;
+
   set allowUserOverrideDoNotRestock(bool allowUserOverrideDoNotRestock) =>
       _$this._allowUserOverrideDoNotRestock = allowUserOverrideDoNotRestock;
 
   bool _allowUserOverrideRestockLocation;
+
   bool get allowUserOverrideRestockLocation =>
       _$this._allowUserOverrideRestockLocation;
+
   set allowUserOverrideRestockLocation(bool allowUserOverrideRestockLocation) =>
       _$this._allowUserOverrideRestockLocation =
           allowUserOverrideRestockLocation;
 
   bool _allowUserOverrideRestockDeliverTo;
+
   bool get allowUserOverrideRestockDeliverTo =>
       _$this._allowUserOverrideRestockDeliverTo;
+
   set allowUserOverrideRestockDeliverTo(
           bool allowUserOverrideRestockDeliverTo) =>
       _$this._allowUserOverrideRestockDeliverTo =
           allowUserOverrideRestockDeliverTo;
 
   bool _allowUserOverrideRestockByDateShippingService;
+
   bool get allowUserOverrideRestockByDateShippingService =>
       _$this._allowUserOverrideRestockByDateShippingService;
+
   set allowUserOverrideRestockByDateShippingService(
           bool allowUserOverrideRestockByDateShippingService) =>
       _$this._allowUserOverrideRestockByDateShippingService =
           allowUserOverrideRestockByDateShippingService;
 
   bool _poRequired;
+
   bool get poRequired => _$this._poRequired;
+
   set poRequired(bool poRequired) => _$this._poRequired = poRequired;
 
   BuildStockOrderRestockPlanApiDisplayRuleBuilder();
@@ -329,6 +339,7 @@ class _$BuildStockOrderRestockPlanApiDisplayRuleActions
       BuildStockOrderRestockPlanApiDisplayRuleBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -356,6 +367,7 @@ class _$BuildStockOrderRestockPlanApiDisplayRuleActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildStockOrderRestockPlanApiDisplayRule);

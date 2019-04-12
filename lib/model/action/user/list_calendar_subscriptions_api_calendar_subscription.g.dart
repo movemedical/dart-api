@@ -161,20 +161,28 @@ class ListCalendarSubscriptionsApiCalendarSubscriptionBuilder
   _$ListCalendarSubscriptionsApiCalendarSubscription _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _calendar;
+
   String get calendar => _$this._calendar;
+
   set calendar(String calendar) => _$this._calendar = calendar;
 
   String _url;
+
   String get url => _$this._url;
+
   set url(String url) => _$this._url = url;
 
   ListCaseEventsApiRequestBuilder _listCaseEventsRequest;
+
   ListCaseEventsApiRequestBuilder get listCaseEventsRequest =>
       _$this._listCaseEventsRequest ??= new ListCaseEventsApiRequestBuilder();
+
   set listCaseEventsRequest(
           ListCaseEventsApiRequestBuilder listCaseEventsRequest) =>
       _$this._listCaseEventsRequest = listCaseEventsRequest;
@@ -298,12 +306,14 @@ class _$ListCalendarSubscriptionsApiCalendarSubscriptionActions
       ListCalendarSubscriptionsApiCalendarSubscriptionBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.listCaseEventsRequest,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -329,6 +339,7 @@ class _$ListCalendarSubscriptionsApiCalendarSubscriptionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListCalendarSubscriptionsApiCalendarSubscription);

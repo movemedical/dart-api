@@ -107,8 +107,10 @@ class ListLinesForInvoiceApiResponseBuilder
   _$ListLinesForInvoiceApiResponse _$v;
 
   ListBuilder<ListLinesForInvoiceApiInvoiceLine> _lines;
+
   ListBuilder<ListLinesForInvoiceApiInvoiceLine> get lines =>
       _$this._lines ??= new ListBuilder<ListLinesForInvoiceApiInvoiceLine>();
+
   set lines(ListBuilder<ListLinesForInvoiceApiInvoiceLine> lines) =>
       _$this._lines = lines;
 
@@ -201,6 +203,7 @@ class _$ListLinesForInvoiceApiResponseActions
       ListLinesForInvoiceApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -220,6 +223,7 @@ class _$ListLinesForInvoiceApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListLinesForInvoiceApiResponse);

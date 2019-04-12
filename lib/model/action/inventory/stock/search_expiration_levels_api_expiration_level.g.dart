@@ -155,19 +155,27 @@ class SearchExpirationLevelsApiExpirationLevelBuilder
   _$SearchExpirationLevelsApiExpirationLevel _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _groupName;
+
   String get groupName => _$this._groupName;
+
   set groupName(String groupName) => _$this._groupName = groupName;
 
   String _levelName;
+
   String get levelName => _$this._levelName;
+
   set levelName(String levelName) => _$this._levelName = levelName;
 
   ExpirationLevelColor _levelColor;
+
   ExpirationLevelColor get levelColor => _$this._levelColor;
+
   set levelColor(ExpirationLevelColor levelColor) =>
       _$this._levelColor = levelColor;
 
@@ -266,6 +274,7 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
       SearchExpirationLevelsApiExpirationLevelBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -291,6 +300,7 @@ class _$SearchExpirationLevelsApiExpirationLevelActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchExpirationLevelsApiExpirationLevel);

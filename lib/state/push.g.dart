@@ -628,48 +628,60 @@ class PushPayloadsBuilder
   _$PushPayloads _$v;
 
   AuditFilePushMessageBuilder _auditFilePushMessage;
+
   AuditFilePushMessageBuilder get auditFilePushMessage =>
       _$this._auditFilePushMessage ??= new AuditFilePushMessageBuilder();
+
   set auditFilePushMessage(AuditFilePushMessageBuilder auditFilePushMessage) =>
       _$this._auditFilePushMessage = auditFilePushMessage;
 
   AuditFileUpdatePushMessageBuilder _auditFileUpdatePushMessage;
+
   AuditFileUpdatePushMessageBuilder get auditFileUpdatePushMessage =>
       _$this._auditFileUpdatePushMessage ??=
           new AuditFileUpdatePushMessageBuilder();
+
   set auditFileUpdatePushMessage(
           AuditFileUpdatePushMessageBuilder auditFileUpdatePushMessage) =>
       _$this._auditFileUpdatePushMessage = auditFileUpdatePushMessage;
 
   AuditUpdatedPushMessageBuilder _auditUpdatedPushMessage;
+
   AuditUpdatedPushMessageBuilder get auditUpdatedPushMessage =>
       _$this._auditUpdatedPushMessage ??= new AuditUpdatedPushMessageBuilder();
+
   set auditUpdatedPushMessage(
           AuditUpdatedPushMessageBuilder auditUpdatedPushMessage) =>
       _$this._auditUpdatedPushMessage = auditUpdatedPushMessage;
 
   CaseEventFileUpdatePushMessageBuilder _caseEventFileUpdatePushMessage;
+
   CaseEventFileUpdatePushMessageBuilder get caseEventFileUpdatePushMessage =>
       _$this._caseEventFileUpdatePushMessage ??=
           new CaseEventFileUpdatePushMessageBuilder();
+
   set caseEventFileUpdatePushMessage(
           CaseEventFileUpdatePushMessageBuilder
               caseEventFileUpdatePushMessage) =>
       _$this._caseEventFileUpdatePushMessage = caseEventFileUpdatePushMessage;
 
   CaseEventUpdatePushMessageBuilder _caseEventUpdatePushMessage;
+
   CaseEventUpdatePushMessageBuilder get caseEventUpdatePushMessage =>
       _$this._caseEventUpdatePushMessage ??=
           new CaseEventUpdatePushMessageBuilder();
+
   set caseEventUpdatePushMessage(
           CaseEventUpdatePushMessageBuilder caseEventUpdatePushMessage) =>
       _$this._caseEventUpdatePushMessage = caseEventUpdatePushMessage;
 
   CaseRequirementsUpdatedPushMessageBuilder _caseRequirementsUpdatedPushMessage;
+
   CaseRequirementsUpdatedPushMessageBuilder
       get caseRequirementsUpdatedPushMessage =>
           _$this._caseRequirementsUpdatedPushMessage ??=
               new CaseRequirementsUpdatedPushMessageBuilder();
+
   set caseRequirementsUpdatedPushMessage(
           CaseRequirementsUpdatedPushMessageBuilder
               caseRequirementsUpdatedPushMessage) =>
@@ -677,105 +689,131 @@ class PushPayloadsBuilder
           caseRequirementsUpdatedPushMessage;
 
   CaseScheduleUpdatePushMessageBuilder _caseScheduleUpdatePushMessage;
+
   CaseScheduleUpdatePushMessageBuilder get caseScheduleUpdatePushMessage =>
       _$this._caseScheduleUpdatePushMessage ??=
           new CaseScheduleUpdatePushMessageBuilder();
+
   set caseScheduleUpdatePushMessage(
           CaseScheduleUpdatePushMessageBuilder caseScheduleUpdatePushMessage) =>
       _$this._caseScheduleUpdatePushMessage = caseScheduleUpdatePushMessage;
 
   ConversationUpdatedPushMessageBuilder _conversationUpdatedPushMessage;
+
   ConversationUpdatedPushMessageBuilder get conversationUpdatedPushMessage =>
       _$this._conversationUpdatedPushMessage ??=
           new ConversationUpdatedPushMessageBuilder();
+
   set conversationUpdatedPushMessage(
           ConversationUpdatedPushMessageBuilder
               conversationUpdatedPushMessage) =>
       _$this._conversationUpdatedPushMessage = conversationUpdatedPushMessage;
 
   CreatePickFinishedPushMessageBuilder _createPickFinishedPushMessage;
+
   CreatePickFinishedPushMessageBuilder get createPickFinishedPushMessage =>
       _$this._createPickFinishedPushMessage ??=
           new CreatePickFinishedPushMessageBuilder();
+
   set createPickFinishedPushMessage(
           CreatePickFinishedPushMessageBuilder createPickFinishedPushMessage) =>
       _$this._createPickFinishedPushMessage = createPickFinishedPushMessage;
 
   ExportLogFilePushMessageBuilder _exportLogFilePushMessage;
+
   ExportLogFilePushMessageBuilder get exportLogFilePushMessage =>
       _$this._exportLogFilePushMessage ??=
           new ExportLogFilePushMessageBuilder();
+
   set exportLogFilePushMessage(
           ExportLogFilePushMessageBuilder exportLogFilePushMessage) =>
       _$this._exportLogFilePushMessage = exportLogFilePushMessage;
 
   FacilityUpdatedPushMessageBuilder _facilityUpdatedPushMessage;
+
   FacilityUpdatedPushMessageBuilder get facilityUpdatedPushMessage =>
       _$this._facilityUpdatedPushMessage ??=
           new FacilityUpdatedPushMessageBuilder();
+
   set facilityUpdatedPushMessage(
           FacilityUpdatedPushMessageBuilder facilityUpdatedPushMessage) =>
       _$this._facilityUpdatedPushMessage = facilityUpdatedPushMessage;
 
   ImportLogFilePushMessageBuilder _importLogFilePushMessage;
+
   ImportLogFilePushMessageBuilder get importLogFilePushMessage =>
       _$this._importLogFilePushMessage ??=
           new ImportLogFilePushMessageBuilder();
+
   set importLogFilePushMessage(
           ImportLogFilePushMessageBuilder importLogFilePushMessage) =>
       _$this._importLogFilePushMessage = importLogFilePushMessage;
 
   IssueRegeneratedPushMessageBuilder _issueRegeneratedPushMessage;
+
   IssueRegeneratedPushMessageBuilder get issueRegeneratedPushMessage =>
       _$this._issueRegeneratedPushMessage ??=
           new IssueRegeneratedPushMessageBuilder();
+
   set issueRegeneratedPushMessage(
           IssueRegeneratedPushMessageBuilder issueRegeneratedPushMessage) =>
       _$this._issueRegeneratedPushMessage = issueRegeneratedPushMessage;
 
   ItemFileUpdatePushMessageBuilder _itemFileUpdatePushMessage;
+
   ItemFileUpdatePushMessageBuilder get itemFileUpdatePushMessage =>
       _$this._itemFileUpdatePushMessage ??=
           new ItemFileUpdatePushMessageBuilder();
+
   set itemFileUpdatePushMessage(
           ItemFileUpdatePushMessageBuilder itemFileUpdatePushMessage) =>
       _$this._itemFileUpdatePushMessage = itemFileUpdatePushMessage;
 
   LoanDetailPushMessageBuilder _loanDetailPushMessage;
+
   LoanDetailPushMessageBuilder get loanDetailPushMessage =>
       _$this._loanDetailPushMessage ??= new LoanDetailPushMessageBuilder();
+
   set loanDetailPushMessage(
           LoanDetailPushMessageBuilder loanDetailPushMessage) =>
       _$this._loanDetailPushMessage = loanDetailPushMessage;
 
   LoanLinesUpdatedPushMessageBuilder _loanLinesUpdatedPushMessage;
+
   LoanLinesUpdatedPushMessageBuilder get loanLinesUpdatedPushMessage =>
       _$this._loanLinesUpdatedPushMessage ??=
           new LoanLinesUpdatedPushMessageBuilder();
+
   set loanLinesUpdatedPushMessage(
           LoanLinesUpdatedPushMessageBuilder loanLinesUpdatedPushMessage) =>
       _$this._loanLinesUpdatedPushMessage = loanLinesUpdatedPushMessage;
 
   MessageAddedPushMessageBuilder _messageAddedPushMessage;
+
   MessageAddedPushMessageBuilder get messageAddedPushMessage =>
       _$this._messageAddedPushMessage ??= new MessageAddedPushMessageBuilder();
+
   set messageAddedPushMessage(
           MessageAddedPushMessageBuilder messageAddedPushMessage) =>
       _$this._messageAddedPushMessage = messageAddedPushMessage;
 
   MessagesReadUnreadPushMessageBuilder _messagesReadUnreadPushMessage;
+
   MessagesReadUnreadPushMessageBuilder get messagesReadUnreadPushMessage =>
       _$this._messagesReadUnreadPushMessage ??=
           new MessagesReadUnreadPushMessageBuilder();
+
   set messagesReadUnreadPushMessage(
           MessagesReadUnreadPushMessageBuilder messagesReadUnreadPushMessage) =>
       _$this._messagesReadUnreadPushMessage = messagesReadUnreadPushMessage;
 
   MessagingBadgeUpdatedPushMessageBuilder _messagingBadgeUpdatedPushMessage;
+
   MessagingBadgeUpdatedPushMessageBuilder
       get messagingBadgeUpdatedPushMessage =>
           _$this._messagingBadgeUpdatedPushMessage ??=
               new MessagingBadgeUpdatedPushMessageBuilder();
+
   set messagingBadgeUpdatedPushMessage(
           MessagingBadgeUpdatedPushMessageBuilder
               messagingBadgeUpdatedPushMessage) =>
@@ -783,31 +821,39 @@ class PushPayloadsBuilder
           messagingBadgeUpdatedPushMessage;
 
   NoteAddedUpdatedPushMessageBuilder _noteAddedUpdatedPushMessage;
+
   NoteAddedUpdatedPushMessageBuilder get noteAddedUpdatedPushMessage =>
       _$this._noteAddedUpdatedPushMessage ??=
           new NoteAddedUpdatedPushMessageBuilder();
+
   set noteAddedUpdatedPushMessage(
           NoteAddedUpdatedPushMessageBuilder noteAddedUpdatedPushMessage) =>
       _$this._noteAddedUpdatedPushMessage = noteAddedUpdatedPushMessage;
 
   OrderDetailPushMessageBuilder _orderDetailPushMessage;
+
   OrderDetailPushMessageBuilder get orderDetailPushMessage =>
       _$this._orderDetailPushMessage ??= new OrderDetailPushMessageBuilder();
+
   set orderDetailPushMessage(
           OrderDetailPushMessageBuilder orderDetailPushMessage) =>
       _$this._orderDetailPushMessage = orderDetailPushMessage;
 
   OrderFilePushMessageBuilder _orderFilePushMessage;
+
   OrderFilePushMessageBuilder get orderFilePushMessage =>
       _$this._orderFilePushMessage ??= new OrderFilePushMessageBuilder();
+
   set orderFilePushMessage(OrderFilePushMessageBuilder orderFilePushMessage) =>
       _$this._orderFilePushMessage = orderFilePushMessage;
 
   RefreshConversationListPushMessageBuilder _refreshConversationListPushMessage;
+
   RefreshConversationListPushMessageBuilder
       get refreshConversationListPushMessage =>
           _$this._refreshConversationListPushMessage ??=
               new RefreshConversationListPushMessageBuilder();
+
   set refreshConversationListPushMessage(
           RefreshConversationListPushMessageBuilder
               refreshConversationListPushMessage) =>
@@ -815,26 +861,32 @@ class PushPayloadsBuilder
           refreshConversationListPushMessage;
 
   ShipmentFileUpdatePushMessageBuilder _shipmentFileUpdatePushMessage;
+
   ShipmentFileUpdatePushMessageBuilder get shipmentFileUpdatePushMessage =>
       _$this._shipmentFileUpdatePushMessage ??=
           new ShipmentFileUpdatePushMessageBuilder();
+
   set shipmentFileUpdatePushMessage(
           ShipmentFileUpdatePushMessageBuilder shipmentFileUpdatePushMessage) =>
       _$this._shipmentFileUpdatePushMessage = shipmentFileUpdatePushMessage;
 
   ShipmentUpdatedPushMessageBuilder _shipmentUpdatedPushMessage;
+
   ShipmentUpdatedPushMessageBuilder get shipmentUpdatedPushMessage =>
       _$this._shipmentUpdatedPushMessage ??=
           new ShipmentUpdatedPushMessageBuilder();
+
   set shipmentUpdatedPushMessage(
           ShipmentUpdatedPushMessageBuilder shipmentUpdatedPushMessage) =>
       _$this._shipmentUpdatedPushMessage = shipmentUpdatedPushMessage;
 
   StockSummaryKeyUpdatedPushMessageBuilder _stockSummaryKeyUpdatedPushMessage;
+
   StockSummaryKeyUpdatedPushMessageBuilder
       get stockSummaryKeyUpdatedPushMessage =>
           _$this._stockSummaryKeyUpdatedPushMessage ??=
               new StockSummaryKeyUpdatedPushMessageBuilder();
+
   set stockSummaryKeyUpdatedPushMessage(
           StockSummaryKeyUpdatedPushMessageBuilder
               stockSummaryKeyUpdatedPushMessage) =>
@@ -842,16 +894,20 @@ class PushPayloadsBuilder
           stockSummaryKeyUpdatedPushMessage;
 
   UiSetupUpdatedPushMessageBuilder _uiSetupUpdatedPushMessage;
+
   UiSetupUpdatedPushMessageBuilder get uiSetupUpdatedPushMessage =>
       _$this._uiSetupUpdatedPushMessage ??=
           new UiSetupUpdatedPushMessageBuilder();
+
   set uiSetupUpdatedPushMessage(
           UiSetupUpdatedPushMessageBuilder uiSetupUpdatedPushMessage) =>
       _$this._uiSetupUpdatedPushMessage = uiSetupUpdatedPushMessage;
 
   MovePresenceEventBuilder _movePresenceEvent;
+
   MovePresenceEventBuilder get movePresenceEvent =>
       _$this._movePresenceEvent ??= new MovePresenceEventBuilder();
+
   set movePresenceEvent(MovePresenceEventBuilder movePresenceEvent) =>
       _$this._movePresenceEvent = movePresenceEvent;
 
@@ -1185,6 +1241,7 @@ class _$PushDispatcher extends PushDispatcher {
       _$PushDispatcher._(options());
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([

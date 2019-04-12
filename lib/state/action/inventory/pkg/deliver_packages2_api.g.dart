@@ -87,6 +87,7 @@ class _$DeliverPackages2Api extends DeliverPackages2Api {
           ApiCommand<DeliverPackages2ApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,6 +99,7 @@ class _$DeliverPackages2Api extends DeliverPackages2Api {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(DeliverPackages2ApiRequest)]),

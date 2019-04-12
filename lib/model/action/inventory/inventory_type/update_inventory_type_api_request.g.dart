@@ -134,15 +134,21 @@ class UpdateInventoryTypeApiRequestBuilder
   _$UpdateInventoryTypeApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   UpdateInventoryTypeApiRequestBuilder();
@@ -229,6 +235,7 @@ class _$UpdateInventoryTypeApiRequestActions
       UpdateInventoryTypeApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -252,6 +259,7 @@ class _$UpdateInventoryTypeApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateInventoryTypeApiRequest);

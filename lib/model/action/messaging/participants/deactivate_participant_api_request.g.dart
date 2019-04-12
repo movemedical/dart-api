@@ -106,7 +106,9 @@ class DeactivateParticipantApiRequestBuilder
   _$DeactivateParticipantApiRequest _$v;
 
   String _participantId;
+
   String get participantId => _$this._participantId;
+
   set participantId(String participantId) =>
       _$this._participantId = participantId;
 
@@ -189,6 +191,7 @@ class _$DeactivateParticipantApiRequestActions
       DeactivateParticipantApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,6 +211,7 @@ class _$DeactivateParticipantApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(DeactivateParticipantApiRequest);

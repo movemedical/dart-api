@@ -352,76 +352,108 @@ class AuditBuilder implements Builder<Audit, AuditBuilder> {
   _$Audit _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _referenceString;
+
   String get referenceString => _$this._referenceString;
+
   set referenceString(String referenceString) =>
       _$this._referenceString = referenceString;
 
   int _auditNumber;
+
   int get auditNumber => _$this._auditNumber;
+
   set auditNumber(int auditNumber) => _$this._auditNumber = auditNumber;
 
   AuditType _type;
+
   AuditType get type => _$this._type;
+
   set type(AuditType type) => _$this._type = type;
 
   AuditCountType _countType;
+
   AuditCountType get countType => _$this._countType;
+
   set countType(AuditCountType countType) => _$this._countType = countType;
 
   AuditStatus _status;
+
   AuditStatus get status => _$this._status;
+
   set status(AuditStatus status) => _$this._status = status;
 
   DateTime _scheduledWindowStart;
+
   DateTime get scheduledWindowStart => _$this._scheduledWindowStart;
+
   set scheduledWindowStart(DateTime scheduledWindowStart) =>
       _$this._scheduledWindowStart = scheduledWindowStart;
 
   DateTime _scheduledWindowEnd;
+
   DateTime get scheduledWindowEnd => _$this._scheduledWindowEnd;
+
   set scheduledWindowEnd(DateTime scheduledWindowEnd) =>
       _$this._scheduledWindowEnd = scheduledWindowEnd;
 
   DateTime _actualStart;
+
   DateTime get actualStart => _$this._actualStart;
+
   set actualStart(DateTime actualStart) => _$this._actualStart = actualStart;
 
   DateTime _countEndDate;
+
   DateTime get countEndDate => _$this._countEndDate;
+
   set countEndDate(DateTime countEndDate) =>
       _$this._countEndDate = countEndDate;
 
   DateTime _completeDate;
+
   DateTime get completeDate => _$this._completeDate;
+
   set completeDate(DateTime completeDate) =>
       _$this._completeDate = completeDate;
 
   bool _toteContentsRequired;
+
   bool get toteContentsRequired => _$this._toteContentsRequired;
+
   set toteContentsRequired(bool toteContentsRequired) =>
       _$this._toteContentsRequired = toteContentsRequired;
 
   bool _kitToteContentsRequired;
+
   bool get kitToteContentsRequired => _$this._kitToteContentsRequired;
+
   set kitToteContentsRequired(bool kitToteContentsRequired) =>
       _$this._kitToteContentsRequired = kitToteContentsRequired;
 
   bool _pkgContentsRequired;
+
   bool get pkgContentsRequired => _$this._pkgContentsRequired;
+
   set pkgContentsRequired(bool pkgContentsRequired) =>
       _$this._pkgContentsRequired = pkgContentsRequired;
 
   bool _trayContentsRequired;
+
   bool get trayContentsRequired => _$this._trayContentsRequired;
+
   set trayContentsRequired(bool trayContentsRequired) =>
       _$this._trayContentsRequired = trayContentsRequired;
 
   bool _blind;
+
   bool get blind => _$this._blind;
+
   set blind(bool blind) => _$this._blind = blind;
 
   AuditBuilder();
@@ -599,6 +631,7 @@ class _$AuditActions extends AuditActions {
   AuditBuilder $newBuilder() => AuditBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -648,6 +681,7 @@ class _$AuditActions extends AuditActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(Audit);
 }

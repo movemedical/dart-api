@@ -105,9 +105,11 @@ class CreateLoanLinesApiRequestBuilder
   _$CreateLoanLinesApiRequest _$v;
 
   ListBuilder<CreateLoanLinesApiCreateLineRequest> _lineRequests;
+
   ListBuilder<CreateLoanLinesApiCreateLineRequest> get lineRequests =>
       _$this._lineRequests ??=
           new ListBuilder<CreateLoanLinesApiCreateLineRequest>();
+
   set lineRequests(
           ListBuilder<CreateLoanLinesApiCreateLineRequest> lineRequests) =>
       _$this._lineRequests = lineRequests;
@@ -206,6 +208,7 @@ class _$CreateLoanLinesApiRequestActions
       CreateLoanLinesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,6 +228,7 @@ class _$CreateLoanLinesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateLoanLinesApiRequest);
 }

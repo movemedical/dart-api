@@ -98,6 +98,7 @@ class _$ListRootOrgsApi extends ListRootOrgsApi {
           ApiResult<ListRootOrgsApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,6 +110,7 @@ class _$ListRootOrgsApi extends ListRootOrgsApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListRootOrgsApiRequest)]),

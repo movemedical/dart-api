@@ -137,15 +137,21 @@ class RequestPendingPoReportApiResponseBuilder
   _$RequestPendingPoReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   HcrTeamBuilder _hcrTeam;
+
   HcrTeamBuilder get hcrTeam => _$this._hcrTeam ??= new HcrTeamBuilder();
+
   set hcrTeam(HcrTeamBuilder hcrTeam) => _$this._hcrTeam = hcrTeam;
 
   LocationBuilder _hospital;
+
   LocationBuilder get hospital => _$this._hospital ??= new LocationBuilder();
+
   set hospital(LocationBuilder hospital) => _$this._hospital = hospital;
 
   RequestPendingPoReportApiResponseBuilder();
@@ -263,6 +269,7 @@ class _$RequestPendingPoReportApiResponseActions
       RequestPendingPoReportApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.hcrTeam,
@@ -270,6 +277,7 @@ class _$RequestPendingPoReportApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -293,6 +301,7 @@ class _$RequestPendingPoReportApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestPendingPoReportApiResponse);

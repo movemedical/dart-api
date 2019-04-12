@@ -102,7 +102,9 @@ class ListTrayContentsApiRequestBuilder
   _$ListTrayContentsApiRequest _$v;
 
   String _trayStockId;
+
   String get trayStockId => _$this._trayStockId;
+
   set trayStockId(String trayStockId) => _$this._trayStockId = trayStockId;
 
   ListTrayContentsApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$ListTrayContentsApiRequestActions
       ListTrayContentsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$ListTrayContentsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListTrayContentsApiRequest);
 }

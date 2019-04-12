@@ -225,37 +225,53 @@ class GetConversationApiParticipantBuilder
   _$GetConversationApiParticipant _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _behalfOfParticipantId;
+
   String get behalfOfParticipantId => _$this._behalfOfParticipantId;
+
   set behalfOfParticipantId(String behalfOfParticipantId) =>
       _$this._behalfOfParticipantId = behalfOfParticipantId;
 
   bool _canDeactivate;
+
   bool get canDeactivate => _$this._canDeactivate;
+
   set canDeactivate(bool canDeactivate) =>
       _$this._canDeactivate = canDeactivate;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _archived;
+
   bool get archived => _$this._archived;
+
   set archived(bool archived) => _$this._archived = archived;
 
   String _contactId;
+
   String get contactId => _$this._contactId;
+
   set contactId(String contactId) => _$this._contactId = contactId;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   String _initials;
+
   String get initials => _$this._initials;
+
   set initials(String initials) => _$this._initials = initials;
 
   GetConversationApiParticipantBuilder();
@@ -378,6 +394,7 @@ class _$GetConversationApiParticipantActions
       GetConversationApiParticipantBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -411,6 +428,7 @@ class _$GetConversationApiParticipantActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetConversationApiParticipant);

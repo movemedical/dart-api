@@ -91,6 +91,7 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
           ApiCommand<UpdateShipToAddressApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -102,6 +103,7 @@ class _$UpdateShipToAddressApi extends UpdateShipToAddressApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(UpdateShipToAddressApiRequest)]),

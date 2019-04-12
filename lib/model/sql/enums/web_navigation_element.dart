@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'web_navigation_element.g.dart';
 
@@ -8,7 +8,7 @@ class WebNavigationElement extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const WebNavigationElement DASHBOARD = _$wireDASHBOARD;
   static const WebNavigationElement MESSAGES = _$wireMESSAGES;
   static const WebNavigationElement NOTIFICATIONS = _$wireNOTIFICATIONS;
@@ -23,24 +23,27 @@ class WebNavigationElement extends EnumClass {
   static const WebNavigationElement ANALYTICS = _$wireANALYTICS;
   static const WebNavigationElement INTEGRATIONS = _$wireINTEGRATIONS;
   static const WebNavigationElement ADMIN = _$wireADMIN;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const WebNavigationElement._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
-  static BuiltSet<WebNavigationElement> get values => _$webNavigationElementValues;
-  
-  static WebNavigationElement valueOf(String name) => _$webNavigationElementValueOf(name);
-  
+
+  static BuiltSet<WebNavigationElement> get values =>
+      _$webNavigationElementValues;
+
+  static WebNavigationElement valueOf(String name) =>
+      _$webNavigationElementValueOf(name);
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<WebNavigationElement> get serializer => _$webNavigationElementSerializer;
+
+  static Serializer<WebNavigationElement> get serializer =>
+      _$webNavigationElementSerializer;
 }

@@ -87,6 +87,7 @@ class _$CancelSalesOrderApi extends CancelSalesOrderApi {
           ApiCommand<CancelSalesOrderApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -98,6 +99,7 @@ class _$CancelSalesOrderApi extends CancelSalesOrderApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CancelSalesOrderApiRequest)]),

@@ -105,7 +105,9 @@ class SearchExpirationLevelsApiRequestBuilder
   _$SearchExpirationLevelsApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   SearchExpirationLevelsApiRequestBuilder();
@@ -184,6 +186,7 @@ class _$SearchExpirationLevelsApiRequestActions
       SearchExpirationLevelsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -203,6 +206,7 @@ class _$SearchExpirationLevelsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(SearchExpirationLevelsApiRequest);

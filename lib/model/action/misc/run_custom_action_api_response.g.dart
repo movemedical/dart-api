@@ -101,7 +101,9 @@ class RunCustomActionApiResponseBuilder
   _$RunCustomActionApiResponse _$v;
 
   String _message;
+
   String get message => _$this._message;
+
   set message(String message) => _$this._message = message;
 
   RunCustomActionApiResponseBuilder();
@@ -179,6 +181,7 @@ class _$RunCustomActionApiResponseActions
       RunCustomActionApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -198,6 +201,7 @@ class _$RunCustomActionApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(RunCustomActionApiResponse);
 }

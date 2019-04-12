@@ -106,7 +106,9 @@ class RequestBackOrderReportApiResponseBuilder
   _$RequestBackOrderReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestBackOrderReportApiResponseBuilder();
@@ -188,6 +190,7 @@ class _$RequestBackOrderReportApiResponseActions
       RequestBackOrderReportApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -207,6 +210,7 @@ class _$RequestBackOrderReportApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestBackOrderReportApiResponse);

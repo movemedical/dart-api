@@ -114,11 +114,15 @@ class CreateZoneApiResponseBuilder
   _$CreateZoneApiResponse _$v;
 
   String _zoneId;
+
   String get zoneId => _$this._zoneId;
+
   set zoneId(String zoneId) => _$this._zoneId = zoneId;
 
   String _binId;
+
   String get binId => _$this._binId;
+
   set binId(String binId) => _$this._binId = binId;
 
   CreateZoneApiResponseBuilder();
@@ -196,6 +200,7 @@ class _$CreateZoneApiResponseActions extends CreateZoneApiResponseActions {
   CreateZoneApiResponseBuilder $newBuilder() => CreateZoneApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -217,6 +222,7 @@ class _$CreateZoneApiResponseActions extends CreateZoneApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateZoneApiResponse);
 }

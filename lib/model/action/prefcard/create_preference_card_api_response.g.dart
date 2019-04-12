@@ -106,7 +106,9 @@ class CreatePreferenceCardApiResponseBuilder
   _$CreatePreferenceCardApiResponse _$v;
 
   String _preferenceCardId;
+
   String get preferenceCardId => _$this._preferenceCardId;
+
   set preferenceCardId(String preferenceCardId) =>
       _$this._preferenceCardId = preferenceCardId;
 
@@ -190,6 +192,7 @@ class _$CreatePreferenceCardApiResponseActions
       CreatePreferenceCardApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -209,6 +212,7 @@ class _$CreatePreferenceCardApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreatePreferenceCardApiResponse);

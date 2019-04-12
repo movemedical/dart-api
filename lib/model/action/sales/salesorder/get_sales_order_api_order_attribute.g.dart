@@ -119,11 +119,15 @@ class GetSalesOrderApiOrderAttributeBuilder
   _$GetSalesOrderApiOrderAttribute _$v;
 
   String _label;
+
   String get label => _$this._label;
+
   set label(String label) => _$this._label = label;
 
   String _value;
+
   String get value => _$this._value;
+
   set value(String value) => _$this._value = value;
 
   GetSalesOrderApiOrderAttributeBuilder();
@@ -206,6 +210,7 @@ class _$GetSalesOrderApiOrderAttributeActions
       GetSalesOrderApiOrderAttributeBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -227,6 +232,7 @@ class _$GetSalesOrderApiOrderAttributeActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetSalesOrderApiOrderAttribute);

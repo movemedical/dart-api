@@ -200,31 +200,45 @@ class CreateZoneApiRequestBuilder
   _$CreateZoneApiRequest _$v;
 
   String _facilityId;
+
   String get facilityId => _$this._facilityId;
+
   set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   ZoneType _zoneType;
+
   ZoneType get zoneType => _$this._zoneType;
+
   set zoneType(ZoneType zoneType) => _$this._zoneType = zoneType;
 
   bool _sourceable;
+
   bool get sourceable => _$this._sourceable;
+
   set sourceable(bool sourceable) => _$this._sourceable = sourceable;
 
   bool _receivable;
+
   bool get receivable => _$this._receivable;
+
   set receivable(bool receivable) => _$this._receivable = receivable;
 
   CreateZoneApiRequestBuilder();
@@ -332,6 +346,7 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
   CreateZoneApiRequestBuilder $newBuilder() => CreateZoneApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -363,6 +378,7 @@ class _$CreateZoneApiRequestActions extends CreateZoneApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreateZoneApiRequest);
 }

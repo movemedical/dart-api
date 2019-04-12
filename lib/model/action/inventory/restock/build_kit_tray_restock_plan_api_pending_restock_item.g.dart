@@ -213,31 +213,45 @@ class BuildKitTrayRestockPlanApiPendingRestockItemBuilder
   _$BuildKitTrayRestockPlanApiPendingRestockItem _$v;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemNumber;
+
   String get itemNumber => _$this._itemNumber;
+
   set itemNumber(String itemNumber) => _$this._itemNumber = itemNumber;
 
   String _description;
+
   String get description => _$this._description;
+
   set description(String description) => _$this._description = description;
 
   String _orderId;
+
   String get orderId => _$this._orderId;
+
   set orderId(String orderId) => _$this._orderId = orderId;
 
   String _orderDisplay;
+
   String get orderDisplay => _$this._orderDisplay;
+
   set orderDisplay(String orderDisplay) => _$this._orderDisplay = orderDisplay;
 
   String _pickId;
+
   String get pickId => _$this._pickId;
+
   set pickId(String pickId) => _$this._pickId = pickId;
 
   String _pickDisplay;
+
   String get pickDisplay => _$this._pickDisplay;
+
   set pickDisplay(String pickDisplay) => _$this._pickDisplay = pickDisplay;
 
   BuildKitTrayRestockPlanApiPendingRestockItemBuilder();
@@ -358,6 +372,7 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
       BuildKitTrayRestockPlanApiPendingRestockItemBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -389,6 +404,7 @@ class _$BuildKitTrayRestockPlanApiPendingRestockItemActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildKitTrayRestockPlanApiPendingRestockItem);

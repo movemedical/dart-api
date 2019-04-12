@@ -321,67 +321,91 @@ class ListPreferenceCardsApiRequestBuilder
   _$ListPreferenceCardsApiRequest _$v;
 
   ListBuilder<String> _ids;
+
   ListBuilder<String> get ids => _$this._ids ??= new ListBuilder<String>();
+
   set ids(ListBuilder<String> ids) => _$this._ids = ids;
 
   ListBuilder<String> _physicianIds;
+
   ListBuilder<String> get physicianIds =>
       _$this._physicianIds ??= new ListBuilder<String>();
+
   set physicianIds(ListBuilder<String> physicianIds) =>
       _$this._physicianIds = physicianIds;
 
   ListBuilder<String> _facilityIds;
+
   ListBuilder<String> get facilityIds =>
       _$this._facilityIds ??= new ListBuilder<String>();
+
   set facilityIds(ListBuilder<String> facilityIds) =>
       _$this._facilityIds = facilityIds;
 
   ListBuilder<String> _techniqueIds;
+
   ListBuilder<String> get techniqueIds =>
       _$this._techniqueIds ??= new ListBuilder<String>();
+
   set techniqueIds(ListBuilder<String> techniqueIds) =>
       _$this._techniqueIds = techniqueIds;
 
   ListBuilder<String> _procedureIds;
+
   ListBuilder<String> get procedureIds =>
       _$this._procedureIds ??= new ListBuilder<String>();
+
   set procedureIds(ListBuilder<String> procedureIds) =>
       _$this._procedureIds = procedureIds;
 
   ListBuilder<String> _subProcedureIds;
+
   ListBuilder<String> get subProcedureIds =>
       _$this._subProcedureIds ??= new ListBuilder<String>();
+
   set subProcedureIds(ListBuilder<String> subProcedureIds) =>
       _$this._subProcedureIds = subProcedureIds;
 
   ListBuilder<String> _itemIds;
+
   ListBuilder<String> get itemIds =>
       _$this._itemIds ??= new ListBuilder<String>();
+
   set itemIds(ListBuilder<String> itemIds) => _$this._itemIds = itemIds;
 
   ListBuilder<String> _productGroupIds;
+
   ListBuilder<String> get productGroupIds =>
       _$this._productGroupIds ??= new ListBuilder<String>();
+
   set productGroupIds(ListBuilder<String> productGroupIds) =>
       _$this._productGroupIds = productGroupIds;
 
   ListBuilder<String> _orgUnitIds;
+
   ListBuilder<String> get orgUnitIds =>
       _$this._orgUnitIds ??= new ListBuilder<String>();
+
   set orgUnitIds(ListBuilder<String> orgUnitIds) =>
       _$this._orgUnitIds = orgUnitIds;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListPreferenceCardsApiRequestBuilder();
@@ -575,12 +599,14 @@ class _$ListPreferenceCardsApiRequestActions
       ListPreferenceCardsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -622,6 +648,7 @@ class _$ListPreferenceCardsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListPreferenceCardsApiRequest);

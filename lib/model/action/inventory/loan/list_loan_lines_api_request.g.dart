@@ -152,21 +152,29 @@ class ListLoanLinesApiRequestBuilder
   _$ListLoanLinesApiRequest _$v;
 
   String _loanId;
+
   String get loanId => _$this._loanId;
+
   set loanId(String loanId) => _$this._loanId = loanId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   OrderByParamsBuilder<ListLoanLinesApiOrderBy> _orderBy;
+
   OrderByParamsBuilder<ListLoanLinesApiOrderBy> get orderBy =>
       _$this._orderBy ??= new OrderByParamsBuilder<ListLoanLinesApiOrderBy>();
+
   set orderBy(OrderByParamsBuilder<ListLoanLinesApiOrderBy> orderBy) =>
       _$this._orderBy = orderBy;
 
@@ -288,6 +296,7 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
       ListLoanLinesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
@@ -295,6 +304,7 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -320,6 +330,7 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListLoanLinesApiRequest);
 }

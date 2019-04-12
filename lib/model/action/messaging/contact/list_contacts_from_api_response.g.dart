@@ -121,11 +121,15 @@ class ListContactsFromApiResponseBuilder
   _$ListContactsFromApiResponse _$v;
 
   ListBuilder<Contact> _data;
+
   ListBuilder<Contact> get data => _$this._data ??= new ListBuilder<Contact>();
+
   set data(ListBuilder<Contact> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListContactsFromApiResponseBuilder();
@@ -221,6 +225,7 @@ class _$ListContactsFromApiResponseActions
       ListContactsFromApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -242,6 +247,7 @@ class _$ListContactsFromApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListContactsFromApiResponse);

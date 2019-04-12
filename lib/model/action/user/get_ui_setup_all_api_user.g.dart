@@ -518,116 +518,168 @@ class GetUiSetupAllApiUserBuilder
   _$GetUiSetupAllApiUser _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _displayName;
+
   String get displayName => _$this._displayName;
+
   set displayName(String displayName) => _$this._displayName = displayName;
 
   String _linkedId;
+
   String get linkedId => _$this._linkedId;
+
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   String _erpUserId;
+
   String get erpUserId => _$this._erpUserId;
+
   set erpUserId(String erpUserId) => _$this._erpUserId = erpUserId;
 
   String _orgId;
+
   String get orgId => _$this._orgId;
+
   set orgId(String orgId) => _$this._orgId = orgId;
 
   UserPerspective _userPerspective;
+
   UserPerspective get userPerspective => _$this._userPerspective;
+
   set userPerspective(UserPerspective userPerspective) =>
       _$this._userPerspective = userPerspective;
 
   String _timeZone;
+
   String get timeZone => _$this._timeZone;
+
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
   MoveLocale _locale;
+
   MoveLocale get locale => _$this._locale;
+
   set locale(MoveLocale locale) => _$this._locale = locale;
 
   MoveDateRegion _dateFormat;
+
   MoveDateRegion get dateFormat => _$this._dateFormat;
+
   set dateFormat(MoveDateRegion dateFormat) => _$this._dateFormat = dateFormat;
 
   ContactBuilder _contact;
+
   ContactBuilder get contact => _$this._contact ??= new ContactBuilder();
+
   set contact(ContactBuilder contact) => _$this._contact = contact;
 
   String _ssoId;
+
   String get ssoId => _$this._ssoId;
+
   set ssoId(String ssoId) => _$this._ssoId = ssoId;
 
   String _ssoName;
+
   String get ssoName => _$this._ssoName;
+
   set ssoName(String ssoName) => _$this._ssoName = ssoName;
 
   SSOType _ssoType;
+
   SSOType get ssoType => _$this._ssoType;
+
   set ssoType(SSOType ssoType) => _$this._ssoType = ssoType;
 
   bool _mfaEnabled;
+
   bool get mfaEnabled => _$this._mfaEnabled;
+
   set mfaEnabled(bool mfaEnabled) => _$this._mfaEnabled = mfaEnabled;
 
   String _mfaId;
+
   String get mfaId => _$this._mfaId;
+
   set mfaId(String mfaId) => _$this._mfaId = mfaId;
 
   String _mfaRef;
+
   String get mfaRef => _$this._mfaRef;
+
   set mfaRef(String mfaRef) => _$this._mfaRef = mfaRef;
 
   MfaType _mfaType;
+
   MfaType get mfaType => _$this._mfaType;
+
   set mfaType(MfaType mfaType) => _$this._mfaType = mfaType;
 
   LocationBuilder _defaultReceivingAtLocation;
+
   LocationBuilder get defaultReceivingAtLocation =>
       _$this._defaultReceivingAtLocation ??= new LocationBuilder();
+
   set defaultReceivingAtLocation(LocationBuilder defaultReceivingAtLocation) =>
       _$this._defaultReceivingAtLocation = defaultReceivingAtLocation;
 
   GetUiSetupAllApiOrgInfoBuilder _orgInfo;
+
   GetUiSetupAllApiOrgInfoBuilder get orgInfo =>
       _$this._orgInfo ??= new GetUiSetupAllApiOrgInfoBuilder();
+
   set orgInfo(GetUiSetupAllApiOrgInfoBuilder orgInfo) =>
       _$this._orgInfo = orgInfo;
 
   GetUiSetupAllApiUserPermissionsBuilder _userPermissions;
+
   GetUiSetupAllApiUserPermissionsBuilder get userPermissions =>
       _$this._userPermissions ??= new GetUiSetupAllApiUserPermissionsBuilder();
+
   set userPermissions(GetUiSetupAllApiUserPermissionsBuilder userPermissions) =>
       _$this._userPermissions = userPermissions;
 
   SystemAdminBuilder _systemAdmin;
+
   SystemAdminBuilder get systemAdmin =>
       _$this._systemAdmin ??= new SystemAdminBuilder();
+
   set systemAdmin(SystemAdminBuilder systemAdmin) =>
       _$this._systemAdmin = systemAdmin;
 
   AeBuilder _ae;
+
   AeBuilder get ae => _$this._ae ??= new AeBuilder();
+
   set ae(AeBuilder ae) => _$this._ae = ae;
 
   HcpBuilder _hcp;
+
   HcpBuilder get hcp => _$this._hcp ??= new HcpBuilder();
+
   set hcp(HcpBuilder hcp) => _$this._hcp = hcp;
 
   HcrBuilder _hcr;
+
   HcrBuilder get hcr => _$this._hcr ??= new HcrBuilder();
+
   set hcr(HcrBuilder hcr) => _$this._hcr = hcr;
 
   DceBuilder _dce;
+
   DceBuilder get dce => _$this._dce ??= new DceBuilder();
+
   set dce(DceBuilder dce) => _$this._dce = dce;
 
   ConsumerBuilder _consumer;
+
   ConsumerBuilder get consumer => _$this._consumer ??= new ConsumerBuilder();
+
   set consumer(ConsumerBuilder consumer) => _$this._consumer = consumer;
 
   GetUiSetupAllApiUserBuilder();
@@ -920,6 +972,7 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   GetUiSetupAllApiUserBuilder $newBuilder() => GetUiSetupAllApiUserBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.contact,
@@ -935,6 +988,7 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -1004,6 +1058,7 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetUiSetupAllApiUser);
 }

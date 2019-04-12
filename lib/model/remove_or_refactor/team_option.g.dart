@@ -135,19 +135,27 @@ class TeamOptionBuilder implements Builder<TeamOption, TeamOptionBuilder> {
   _$TeamOption _$v;
 
   String _teamId;
+
   String get teamId => _$this._teamId;
+
   set teamId(String teamId) => _$this._teamId = teamId;
 
   String _teamName;
+
   String get teamName => _$this._teamName;
+
   set teamName(String teamName) => _$this._teamName = teamName;
 
   bool _ops;
+
   bool get ops => _$this._ops;
+
   set ops(bool ops) => _$this._ops = ops;
 
   bool _sales;
+
   bool get sales => _$this._sales;
+
   set sales(bool sales) => _$this._sales = sales;
 
   TeamOptionBuilder();
@@ -230,6 +238,7 @@ class _$TeamOptionActions extends TeamOptionActions {
   TeamOptionBuilder $newBuilder() => TeamOptionBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -255,6 +264,7 @@ class _$TeamOptionActions extends TeamOptionActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(TeamOption);
 }

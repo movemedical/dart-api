@@ -88,6 +88,7 @@ class _$RemoveHcrToOrgUnitApi extends RemoveHcrToOrgUnitApi {
           ApiCommand<RemoveHcrToOrgUnitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -99,6 +100,7 @@ class _$RemoveHcrToOrgUnitApi extends RemoveHcrToOrgUnitApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RemoveHcrToOrgUnitApiRequest)]),

@@ -119,12 +119,16 @@ class ListSalesOrdersApiResponseBuilder
   _$ListSalesOrdersApiResponse _$v;
 
   ListBuilder<ListSalesOrdersApiOrder> _data;
+
   ListBuilder<ListSalesOrdersApiOrder> get data =>
       _$this._data ??= new ListBuilder<ListSalesOrdersApiOrder>();
+
   set data(ListBuilder<ListSalesOrdersApiOrder> data) => _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListSalesOrdersApiResponseBuilder();
@@ -220,6 +224,7 @@ class _$ListSalesOrdersApiResponseActions
       ListSalesOrdersApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -241,6 +246,7 @@ class _$ListSalesOrdersApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListSalesOrdersApiResponse);
 }

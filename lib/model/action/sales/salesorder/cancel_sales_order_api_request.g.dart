@@ -102,7 +102,9 @@ class CancelSalesOrderApiRequestBuilder
   _$CancelSalesOrderApiRequest _$v;
 
   String _salesOrderId;
+
   String get salesOrderId => _$this._salesOrderId;
+
   set salesOrderId(String salesOrderId) => _$this._salesOrderId = salesOrderId;
 
   CancelSalesOrderApiRequestBuilder();
@@ -183,6 +185,7 @@ class _$CancelSalesOrderApiRequestActions
       CancelSalesOrderApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$CancelSalesOrderApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CancelSalesOrderApiRequest);
 }

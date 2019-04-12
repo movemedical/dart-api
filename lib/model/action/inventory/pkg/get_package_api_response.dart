@@ -1,65 +1,72 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
-
+import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_package_attribute.dart';
 import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_pkg.dart';
 import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_ui_schema.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/custom_doc.dart';
-import 'package:movemedical_api/model/action/inventory/pkg/get_package_api_package_attribute.dart';
 
 part 'get_package_api_response.g.dart';
 
-abstract class GetPackageApiResponse implements Built<GetPackageApiResponse, GetPackageApiResponseBuilder> {
+abstract class GetPackageApiResponse
+    implements Built<GetPackageApiResponse, GetPackageApiResponseBuilder> {
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
-  
+
   @nullable
   GetPackageApiPkg get pkg;
-  
+
   @nullable
   GetPackageApiUiSchema get uiSchema;
-  
+
   @nullable
   BuiltList<CustomDoc> get customDocs;
-  
+
   @nullable
   BuiltList<GetPackageApiPackageAttribute> get attributes;
-  
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
-  
+
   GetPackageApiResponse._();
-  
-  factory GetPackageApiResponse([updates(GetPackageApiResponseBuilder b)]) = _$GetPackageApiResponse;
-  
+
+  factory GetPackageApiResponse([updates(GetPackageApiResponseBuilder b)]) =
+      _$GetPackageApiResponse;
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<GetPackageApiResponse> get serializer => _$getPackageApiResponseSerializer;
+
+  static Serializer<GetPackageApiResponse> get serializer =>
+      _$getPackageApiResponseSerializer;
 }
 
-abstract class GetPackageApiResponseActions extends ModelActions<GetPackageApiResponse, GetPackageApiResponseBuilder, GetPackageApiResponseActions> {
+abstract class GetPackageApiResponseActions extends ModelActions<
+    GetPackageApiResponse,
+    GetPackageApiResponseBuilder,
+    GetPackageApiResponseActions> {
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
-  
+
   GetPackageApiPkgActions get pkg;
-  
+
   GetPackageApiUiSchemaActions get uiSchema;
-  
+
   FieldDispatcher<BuiltList<CustomDoc>> get customDocs;
-  
+
   FieldDispatcher<BuiltList<GetPackageApiPackageAttribute>> get attributes;
-  
+
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
-  
+
   GetPackageApiResponseActions._();
-  
-  factory GetPackageApiResponseActions(GetPackageApiResponseActionsOptions options) => _$GetPackageApiResponseActions(options);
+
+  factory GetPackageApiResponseActions(
+          GetPackageApiResponseActionsOptions options) =>
+      _$GetPackageApiResponseActions(options);
 }

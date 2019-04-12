@@ -191,29 +191,41 @@ class ListInvoicesForSalesOrderApiInvoiceBuilder
   _$ListInvoicesForSalesOrderApiInvoice _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _invoiceNumber;
+
   int get invoiceNumber => _$this._invoiceNumber;
+
   set invoiceNumber(int invoiceNumber) => _$this._invoiceNumber = invoiceNumber;
 
   DateTime _invoiceDate;
+
   DateTime get invoiceDate => _$this._invoiceDate;
+
   set invoiceDate(DateTime invoiceDate) => _$this._invoiceDate = invoiceDate;
 
   DateTime _invoiceCreationDate;
+
   DateTime get invoiceCreationDate => _$this._invoiceCreationDate;
+
   set invoiceCreationDate(DateTime invoiceCreationDate) =>
       _$this._invoiceCreationDate = invoiceCreationDate;
 
   String _erpOrderNumber;
+
   String get erpOrderNumber => _$this._erpOrderNumber;
+
   set erpOrderNumber(String erpOrderNumber) =>
       _$this._erpOrderNumber = erpOrderNumber;
 
   String _erpInvoiceNumber;
+
   String get erpInvoiceNumber => _$this._erpInvoiceNumber;
+
   set erpInvoiceNumber(String erpInvoiceNumber) =>
       _$this._erpInvoiceNumber = erpInvoiceNumber;
 
@@ -334,6 +346,7 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
       ListInvoicesForSalesOrderApiInvoiceBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -363,6 +376,7 @@ class _$ListInvoicesForSalesOrderApiInvoiceActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListInvoicesForSalesOrderApiInvoice);

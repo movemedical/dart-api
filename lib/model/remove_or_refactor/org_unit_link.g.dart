@@ -209,39 +209,55 @@ class OrgUnitLinkBuilder implements Builder<OrgUnitLink, OrgUnitLinkBuilder> {
   _$OrgUnitLink _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _orgUnitId;
+
   String get orgUnitId => _$this._orgUnitId;
+
   set orgUnitId(String orgUnitId) => _$this._orgUnitId = orgUnitId;
 
   String _orgUnitName;
+
   String get orgUnitName => _$this._orgUnitName;
+
   set orgUnitName(String orgUnitName) => _$this._orgUnitName = orgUnitName;
 
   OuAccessType _ouAccessType;
+
   OuAccessType get ouAccessType => _$this._ouAccessType;
+
   set ouAccessType(OuAccessType ouAccessType) =>
       _$this._ouAccessType = ouAccessType;
 
   String _relationshipTypeId;
+
   String get relationshipTypeId => _$this._relationshipTypeId;
+
   set relationshipTypeId(String relationshipTypeId) =>
       _$this._relationshipTypeId = relationshipTypeId;
 
   String _relationshipTypeName;
+
   String get relationshipTypeName => _$this._relationshipTypeName;
+
   set relationshipTypeName(String relationshipTypeName) =>
       _$this._relationshipTypeName = relationshipTypeName;
 
   int _numberOfPermissionsSet;
+
   int get numberOfPermissionsSet => _$this._numberOfPermissionsSet;
+
   set numberOfPermissionsSet(int numberOfPermissionsSet) =>
       _$this._numberOfPermissionsSet = numberOfPermissionsSet;
 
   int _numberOfInventoryTypes;
+
   int get numberOfInventoryTypes => _$this._numberOfInventoryTypes;
+
   set numberOfInventoryTypes(int numberOfInventoryTypes) =>
       _$this._numberOfInventoryTypes = numberOfInventoryTypes;
 
@@ -367,6 +383,7 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
   OrgUnitLinkBuilder $newBuilder() => OrgUnitLinkBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -400,6 +417,7 @@ class _$OrgUnitLinkActions extends OrgUnitLinkActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(OrgUnitLink);
 }

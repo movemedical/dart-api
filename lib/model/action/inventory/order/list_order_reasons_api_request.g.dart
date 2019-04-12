@@ -190,30 +190,42 @@ class ListOrderReasonsApiRequestBuilder
   _$ListOrderReasonsApiRequest _$v;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   ListBuilder<OrderReasonGroup> _reasonGroups;
+
   ListBuilder<OrderReasonGroup> get reasonGroups =>
       _$this._reasonGroups ??= new ListBuilder<OrderReasonGroup>();
+
   set reasonGroups(ListBuilder<OrderReasonGroup> reasonGroups) =>
       _$this._reasonGroups = reasonGroups;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   bool _forCreate;
+
   bool get forCreate => _$this._forCreate;
+
   set forCreate(bool forCreate) => _$this._forCreate = forCreate;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListOrderReasonsApiRequestBuilder();
@@ -343,12 +355,14 @@ class _$ListOrderReasonsApiRequestActions
       ListOrderReasonsApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -378,6 +392,7 @@ class _$ListOrderReasonsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListOrderReasonsApiRequest);
 }

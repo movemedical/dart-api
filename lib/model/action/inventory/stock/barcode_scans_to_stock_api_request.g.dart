@@ -126,14 +126,18 @@ class BarcodeScansToStockApiRequestBuilder
   _$BarcodeScansToStockApiRequest _$v;
 
   ListBuilder<BarcodeScansToStockApiScan> _scans;
+
   ListBuilder<BarcodeScansToStockApiScan> get scans =>
       _$this._scans ??= new ListBuilder<BarcodeScansToStockApiScan>();
+
   set scans(ListBuilder<BarcodeScansToStockApiScan> scans) =>
       _$this._scans = scans;
 
   ListBuilder<String> _prevSelectedSummaryKeys;
+
   ListBuilder<String> get prevSelectedSummaryKeys =>
       _$this._prevSelectedSummaryKeys ??= new ListBuilder<String>();
+
   set prevSelectedSummaryKeys(ListBuilder<String> prevSelectedSummaryKeys) =>
       _$this._prevSelectedSummaryKeys = prevSelectedSummaryKeys;
 
@@ -236,6 +240,7 @@ class _$BarcodeScansToStockApiRequestActions
       BarcodeScansToStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -257,6 +262,7 @@ class _$BarcodeScansToStockApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BarcodeScansToStockApiRequest);

@@ -295,59 +295,83 @@ class UpdateOrderReasonApiRequestBuilder
   _$UpdateOrderReasonApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   OrderReasonGroup _reasonGroup;
+
   OrderReasonGroup get reasonGroup => _$this._reasonGroup;
+
   set reasonGroup(OrderReasonGroup reasonGroup) =>
       _$this._reasonGroup = reasonGroup;
 
   bool _approvalRequired;
+
   bool get approvalRequired => _$this._approvalRequired;
+
   set approvalRequired(bool approvalRequired) =>
       _$this._approvalRequired = approvalRequired;
 
   bool _erp;
+
   bool get erp => _$this._erp;
+
   set erp(bool erp) => _$this._erp = erp;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   SalesOrderInventorySource _salesOrderInventorySource;
+
   SalesOrderInventorySource get salesOrderInventorySource =>
       _$this._salesOrderInventorySource;
+
   set salesOrderInventorySource(
           SalesOrderInventorySource salesOrderInventorySource) =>
       _$this._salesOrderInventorySource = salesOrderInventorySource;
 
   bool _changesResponsibleParty;
+
   bool get changesResponsibleParty => _$this._changesResponsibleParty;
+
   set changesResponsibleParty(bool changesResponsibleParty) =>
       _$this._changesResponsibleParty = changesResponsibleParty;
 
   bool _changesHomeLocation;
+
   bool get changesHomeLocation => _$this._changesHomeLocation;
+
   set changesHomeLocation(bool changesHomeLocation) =>
       _$this._changesHomeLocation = changesHomeLocation;
 
   String _toInventoryTypeId;
+
   String get toInventoryTypeId => _$this._toInventoryTypeId;
+
   set toInventoryTypeId(String toInventoryTypeId) =>
       _$this._toInventoryTypeId = toInventoryTypeId;
 
   String _defaultShippingServiceId;
+
   String get defaultShippingServiceId => _$this._defaultShippingServiceId;
+
   set defaultShippingServiceId(String defaultShippingServiceId) =>
       _$this._defaultShippingServiceId = defaultShippingServiceId;
 
@@ -503,6 +527,7 @@ class _$UpdateOrderReasonApiRequestActions
       UpdateOrderReasonApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -544,6 +569,7 @@ class _$UpdateOrderReasonApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(UpdateOrderReasonApiRequest);

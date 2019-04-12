@@ -106,6 +106,7 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
           ApiResult<ListHospitalsForSchedulingApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -117,6 +118,7 @@ class _$ListHospitalsForSchedulingApi extends ListHospitalsForSchedulingApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(ListHospitalsForSchedulingApiRequest)]),

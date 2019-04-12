@@ -157,24 +157,32 @@ class BarcodeScansToStockApiBarcodeStockBuilder
   _$BarcodeScansToStockApiBarcodeStock _$v;
 
   BarcodeScansToStockApiScanBuilder _scan;
+
   BarcodeScansToStockApiScanBuilder get scan =>
       _$this._scan ??= new BarcodeScansToStockApiScanBuilder();
+
   set scan(BarcodeScansToStockApiScanBuilder scan) => _$this._scan = scan;
 
   bool _multipleMatches;
+
   bool get multipleMatches => _$this._multipleMatches;
+
   set multipleMatches(bool multipleMatches) =>
       _$this._multipleMatches = multipleMatches;
 
   ListStockSummaryApiStockSummaryBuilder _stockSummary;
+
   ListStockSummaryApiStockSummaryBuilder get stockSummary =>
       _$this._stockSummary ??= new ListStockSummaryApiStockSummaryBuilder();
+
   set stockSummary(ListStockSummaryApiStockSummaryBuilder stockSummary) =>
       _$this._stockSummary = stockSummary;
 
   StockItemBuilder _stockItem;
+
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
+
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
 
   BarcodeScansToStockApiBarcodeStockBuilder();
@@ -310,6 +318,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
       BarcodeScansToStockApiBarcodeStockBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.scan,
@@ -318,6 +327,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -343,6 +353,7 @@ class _$BarcodeScansToStockApiBarcodeStockActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BarcodeScansToStockApiBarcodeStock);

@@ -423,90 +423,128 @@ class CreateStocks2ApiStockRequestBuilder
   _$CreateStocks2ApiStockRequest _$v;
 
   String _requestId;
+
   String get requestId => _$this._requestId;
+
   set requestId(String requestId) => _$this._requestId = requestId;
 
   String _inventoryTypeId;
+
   String get inventoryTypeId => _$this._inventoryTypeId;
+
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _itemVersionId;
+
   String get itemVersionId => _$this._itemVersionId;
+
   set itemVersionId(String itemVersionId) =>
       _$this._itemVersionId = itemVersionId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   bool _generateSerials;
+
   bool get generateSerials => _$this._generateSerials;
+
   set generateSerials(bool generateSerials) =>
       _$this._generateSerials = generateSerials;
 
   int _quantity;
+
   int get quantity => _$this._quantity;
+
   set quantity(int quantity) => _$this._quantity = quantity;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   LocationType _homeLocationType;
+
   LocationType get homeLocationType => _$this._homeLocationType;
+
   set homeLocationType(LocationType homeLocationType) =>
       _$this._homeLocationType = homeLocationType;
 
   String _homeLocationId;
+
   String get homeLocationId => _$this._homeLocationId;
+
   set homeLocationId(String homeLocationId) =>
       _$this._homeLocationId = homeLocationId;
 
   StockContainerType _containerType;
+
   StockContainerType get containerType => _$this._containerType;
+
   set containerType(StockContainerType containerType) =>
       _$this._containerType = containerType;
 
   String _containerId;
+
   String get containerId => _$this._containerId;
+
   set containerId(String containerId) => _$this._containerId = containerId;
 
   bool _found;
+
   bool get found => _$this._found;
+
   set found(bool found) => _$this._found = found;
 
   AdjustmentDetailsBuilder _adjustmentDetails;
+
   AdjustmentDetailsBuilder get adjustmentDetails =>
       _$this._adjustmentDetails ??= new AdjustmentDetailsBuilder();
+
   set adjustmentDetails(AdjustmentDetailsBuilder adjustmentDetails) =>
       _$this._adjustmentDetails = adjustmentDetails;
 
   ResponsiblePartyType _responsiblePartyType;
+
   ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+
   set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
       _$this._responsiblePartyType = responsiblePartyType;
 
   String _responsiblePartyId;
+
   String get responsiblePartyId => _$this._responsiblePartyId;
+
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
   bool _virtual;
+
   bool get virtual => _$this._virtual;
+
   set virtual(bool virtual) => _$this._virtual = virtual;
 
   CreateStocks2ApiStockRequestBuilder();
@@ -725,12 +763,14 @@ class _$CreateStocks2ApiStockRequestActions
       CreateStocks2ApiStockRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.adjustmentDetails,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -786,6 +826,7 @@ class _$CreateStocks2ApiStockRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CreateStocks2ApiStockRequest);

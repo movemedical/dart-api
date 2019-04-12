@@ -265,47 +265,67 @@ class RequestStockHistoryReportApiResponseBuilder
   _$RequestStockHistoryReportApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   ResponsiblePartyBuilder _responsibleParty;
+
   ResponsiblePartyBuilder get responsibleParty =>
       _$this._responsibleParty ??= new ResponsiblePartyBuilder();
+
   set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
       _$this._responsibleParty = responsibleParty;
 
   ItemBuilder _item;
+
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
+
   set item(ItemBuilder item) => _$this._item = item;
 
   LotBuilder _lot;
+
   LotBuilder get lot => _$this._lot ??= new LotBuilder();
+
   set lot(LotBuilder lot) => _$this._lot = lot;
 
   SerialBuilder _serial;
+
   SerialBuilder get serial => _$this._serial ??= new SerialBuilder();
+
   set serial(SerialBuilder serial) => _$this._serial = serial;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   ListBuilder<StockTransactionType> _transactionTypes;
+
   ListBuilder<StockTransactionType> get transactionTypes =>
       _$this._transactionTypes ??= new ListBuilder<StockTransactionType>();
+
   set transactionTypes(ListBuilder<StockTransactionType> transactionTypes) =>
       _$this._transactionTypes = transactionTypes;
 
   DateTime _startDate;
+
   DateTime get startDate => _$this._startDate;
+
   set startDate(DateTime startDate) => _$this._startDate = startDate;
 
   DateTime _endDate;
+
   DateTime get endDate => _$this._endDate;
+
   set endDate(DateTime endDate) => _$this._endDate = endDate;
 
   RequestStockHistoryReportApiResponseBuilder();
@@ -488,6 +508,7 @@ class _$RequestStockHistoryReportApiResponseActions
       RequestStockHistoryReportApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -498,6 +519,7 @@ class _$RequestStockHistoryReportApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -535,6 +557,7 @@ class _$RequestStockHistoryReportApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestStockHistoryReportApiResponse);

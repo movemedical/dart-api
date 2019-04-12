@@ -181,26 +181,36 @@ class BuildInspectionApiShipmentReceiptDataPkgBuilder
   _$BuildInspectionApiShipmentReceiptDataPkg _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   LocationDataBuilder _location;
+
   LocationDataBuilder get location =>
       _$this._location ??= new LocationDataBuilder();
+
   set location(LocationDataBuilder location) => _$this._location = location;
 
   bool _receivingNow;
+
   bool get receivingNow => _$this._receivingNow;
+
   set receivingNow(bool receivingNow) => _$this._receivingNow = receivingNow;
 
   ListBuilder<String> _entryIds;
+
   ListBuilder<String> get entryIds =>
       _$this._entryIds ??= new ListBuilder<String>();
+
   set entryIds(ListBuilder<String> entryIds) => _$this._entryIds = entryIds;
 
   ListBuilder<String> _expectedStockIds;
+
   ListBuilder<String> get expectedStockIds =>
       _$this._expectedStockIds ??= new ListBuilder<String>();
+
   set expectedStockIds(ListBuilder<String> expectedStockIds) =>
       _$this._expectedStockIds = expectedStockIds;
 
@@ -332,12 +342,14 @@ class _$BuildInspectionApiShipmentReceiptDataPkgActions
       BuildInspectionApiShipmentReceiptDataPkgBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -365,6 +377,7 @@ class _$BuildInspectionApiShipmentReceiptDataPkgActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiShipmentReceiptDataPkg);

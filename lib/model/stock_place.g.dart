@@ -174,35 +174,47 @@ class StockPlaceBuilder implements Builder<StockPlace, StockPlaceBuilder> {
   _$StockPlace _$v;
 
   LocationBuilder _location;
+
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
+
   set location(LocationBuilder location) => _$this._location = location;
 
   LocationBuilder _fromLocation;
+
   LocationBuilder get fromLocation =>
       _$this._fromLocation ??= new LocationBuilder();
+
   set fromLocation(LocationBuilder fromLocation) =>
       _$this._fromLocation = fromLocation;
 
   LocationBuilder _toLocation;
+
   LocationBuilder get toLocation =>
       _$this._toLocation ??= new LocationBuilder();
+
   set toLocation(LocationBuilder toLocation) => _$this._toLocation = toLocation;
 
   LocationBuilder _homeLocation;
+
   LocationBuilder get homeLocation =>
       _$this._homeLocation ??= new LocationBuilder();
+
   set homeLocation(LocationBuilder homeLocation) =>
       _$this._homeLocation = homeLocation;
 
   StockContainerBuilder _rootContainer;
+
   StockContainerBuilder get rootContainer =>
       _$this._rootContainer ??= new StockContainerBuilder();
+
   set rootContainer(StockContainerBuilder rootContainer) =>
       _$this._rootContainer = rootContainer;
 
   StockContainerBuilder _container;
+
   StockContainerBuilder get container =>
       _$this._container ??= new StockContainerBuilder();
+
   set container(StockContainerBuilder container) =>
       _$this._container = container;
 
@@ -352,6 +364,7 @@ class _$StockPlaceActions extends StockPlaceActions {
   StockPlaceBuilder $newBuilder() => StockPlaceBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
@@ -363,6 +376,7 @@ class _$StockPlaceActions extends StockPlaceActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -392,6 +406,7 @@ class _$StockPlaceActions extends StockPlaceActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(StockPlace);
 }

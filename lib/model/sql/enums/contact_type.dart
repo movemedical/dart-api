@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'contact_type.g.dart';
 
@@ -8,7 +8,7 @@ class ContactType extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const ContactType SYSTEM_ADMIN = _$wireSYSTEM_ADMIN;
   static const ContactType HEALTH_SYSTEM = _$wireHEALTH_SYSTEM;
   static const ContactType HS_FACILITY = _$wireHS_FACILITY;
@@ -48,24 +48,24 @@ class ContactType extends EnumClass {
   static const ContactType TEAM = _$wireTEAM;
   static const ContactType PHYSICIAN = _$wirePHYSICIAN;
   static const ContactType EXTERNAL = _$wireEXTERNAL;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const ContactType._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
+
   static BuiltSet<ContactType> get values => _$contactTypeValues;
-  
+
   static ContactType valueOf(String name) => _$contactTypeValueOf(name);
-  
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
+
   static Serializer<ContactType> get serializer => _$contactTypeSerializer;
 }

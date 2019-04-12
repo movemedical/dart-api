@@ -105,9 +105,11 @@ class CancelOrderLinesApiRequestBuilder
   _$CancelOrderLinesApiRequest _$v;
 
   ListBuilder<CancelOrderLinesApiCancellations> _cancellations;
+
   ListBuilder<CancelOrderLinesApiCancellations> get cancellations =>
       _$this._cancellations ??=
           new ListBuilder<CancelOrderLinesApiCancellations>();
+
   set cancellations(
           ListBuilder<CancelOrderLinesApiCancellations> cancellations) =>
       _$this._cancellations = cancellations;
@@ -206,6 +208,7 @@ class _$CancelOrderLinesApiRequestActions
       CancelOrderLinesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -225,6 +228,7 @@ class _$CancelOrderLinesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CancelOrderLinesApiRequest);
 }

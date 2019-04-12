@@ -107,7 +107,9 @@ class RequestAdjustmentExportDocApiResponseBuilder
   _$RequestAdjustmentExportDocApiResponse _$v;
 
   String _docReportId;
+
   String get docReportId => _$this._docReportId;
+
   set docReportId(String docReportId) => _$this._docReportId = docReportId;
 
   RequestAdjustmentExportDocApiResponseBuilder();
@@ -189,6 +191,7 @@ class _$RequestAdjustmentExportDocApiResponseActions
       RequestAdjustmentExportDocApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -208,6 +211,7 @@ class _$RequestAdjustmentExportDocApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(RequestAdjustmentExportDocApiResponse);

@@ -119,11 +119,15 @@ class ListUserNavHistoryApiRequestBuilder
   _$ListUserNavHistoryApiRequest _$v;
 
   DeviceType _deviceType;
+
   DeviceType get deviceType => _$this._deviceType;
+
   set deviceType(DeviceType deviceType) => _$this._deviceType = deviceType;
 
   Place _place;
+
   Place get place => _$this._place;
+
   set place(Place place) => _$this._place = place;
 
   ListUserNavHistoryApiRequestBuilder();
@@ -209,6 +213,7 @@ class _$ListUserNavHistoryApiRequestActions
       ListUserNavHistoryApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -230,6 +235,7 @@ class _$ListUserNavHistoryApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListUserNavHistoryApiRequest);

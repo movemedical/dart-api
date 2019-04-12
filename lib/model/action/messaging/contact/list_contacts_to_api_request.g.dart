@@ -133,17 +133,23 @@ class ListContactsToApiRequestBuilder
   _$ListContactsToApiRequest _$v;
 
   String _conversationId;
+
   String get conversationId => _$this._conversationId;
+
   set conversationId(String conversationId) =>
       _$this._conversationId = conversationId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListContactsToApiRequestBuilder();
@@ -255,12 +261,14 @@ class _$ListContactsToApiRequestActions
       ListContactsToApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -284,6 +292,7 @@ class _$ListContactsToApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListContactsToApiRequest);
 }

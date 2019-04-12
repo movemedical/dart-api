@@ -168,27 +168,37 @@ class SetComponentBuilder
   _$SetComponent _$v;
 
   int _qtyOpen;
+
   int get qtyOpen => _$this._qtyOpen;
+
   set qtyOpen(int qtyOpen) => _$this._qtyOpen = qtyOpen;
 
   DBComponentBuilder _component;
+
   DBComponentBuilder get component =>
       _$this._component ??= new DBComponentBuilder();
+
   set component(DBComponentBuilder component) => _$this._component = component;
 
   SetBuilder<String> _versionIds;
+
   SetBuilder<String> get versionIds =>
       _$this._versionIds ??= new SetBuilder<String>();
+
   set versionIds(SetBuilder<String> versionIds) =>
       _$this._versionIds = versionIds;
 
   SetBuilder<String> _lotIds;
+
   SetBuilder<String> get lotIds => _$this._lotIds ??= new SetBuilder<String>();
+
   set lotIds(SetBuilder<String> lotIds) => _$this._lotIds = lotIds;
 
   SetBuilder<String> _serialIds;
+
   SetBuilder<String> get serialIds =>
       _$this._serialIds ??= new SetBuilder<String>();
+
   set serialIds(SetBuilder<String> serialIds) => _$this._serialIds = serialIds;
 
   SetComponentBuilder();
@@ -310,12 +320,14 @@ class _$SetComponentActions extends SetComponentActions {
   SetComponentBuilder $newBuilder() => SetComponentBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.component,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -343,6 +355,7 @@ class _$SetComponentActions extends SetComponentActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(SetComponent);
 }

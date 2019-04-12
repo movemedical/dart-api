@@ -154,19 +154,27 @@ class BuildInspectionApiReceiptUpdateBuilder
   _$BuildInspectionApiReceiptUpdate _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   BuildInspectionApiReceiptUpdateType _type;
+
   BuildInspectionApiReceiptUpdateType get type => _$this._type;
+
   set type(BuildInspectionApiReceiptUpdateType type) => _$this._type = type;
 
   String _pkgId;
+
   String get pkgId => _$this._pkgId;
+
   set pkgId(String pkgId) => _$this._pkgId = pkgId;
 
   String _binId;
+
   String get binId => _$this._binId;
+
   set binId(String binId) => _$this._binId = binId;
 
   BuildInspectionApiReceiptUpdateBuilder();
@@ -258,6 +266,7 @@ class _$BuildInspectionApiReceiptUpdateActions
       BuildInspectionApiReceiptUpdateBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -283,6 +292,7 @@ class _$BuildInspectionApiReceiptUpdateActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiReceiptUpdate);

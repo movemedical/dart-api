@@ -150,20 +150,28 @@ class GetSwapStockApiRequestBuilder
   _$GetSwapStockApiRequest _$v;
 
   ListBuilder<String> _pickIds;
+
   ListBuilder<String> get pickIds =>
       _$this._pickIds ??= new ListBuilder<String>();
+
   set pickIds(ListBuilder<String> pickIds) => _$this._pickIds = pickIds;
 
   String _itemId;
+
   String get itemId => _$this._itemId;
+
   set itemId(String itemId) => _$this._itemId = itemId;
 
   String _lotId;
+
   String get lotId => _$this._lotId;
+
   set lotId(String lotId) => _$this._lotId = lotId;
 
   String _serialId;
+
   String get serialId => _$this._serialId;
+
   set serialId(String serialId) => _$this._serialId = serialId;
 
   GetSwapStockApiRequestBuilder();
@@ -267,6 +275,7 @@ class _$GetSwapStockApiRequestActions extends GetSwapStockApiRequestActions {
       GetSwapStockApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -292,6 +301,7 @@ class _$GetSwapStockApiRequestActions extends GetSwapStockApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSwapStockApiRequest);
 }

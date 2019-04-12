@@ -113,11 +113,15 @@ class GetPackageApiRequestBuilder
   _$GetPackageApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   bool _skipPresence;
+
   bool get skipPresence => _$this._skipPresence;
+
   set skipPresence(bool skipPresence) => _$this._skipPresence = skipPresence;
 
   GetPackageApiRequestBuilder();
@@ -198,6 +202,7 @@ class _$GetPackageApiRequestActions extends GetPackageApiRequestActions {
   GetPackageApiRequestBuilder $newBuilder() => GetPackageApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -219,6 +224,7 @@ class _$GetPackageApiRequestActions extends GetPackageApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetPackageApiRequest);
 }

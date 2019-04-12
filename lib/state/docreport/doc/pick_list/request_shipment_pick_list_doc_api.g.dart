@@ -98,6 +98,7 @@ class _$RequestShipmentPickListDocApi extends RequestShipmentPickListDocApi {
           ApiCommand<RequestShipmentPickListDocApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -109,6 +110,7 @@ class _$RequestShipmentPickListDocApi extends RequestShipmentPickListDocApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(RequestShipmentPickListDocApiRequest)]),

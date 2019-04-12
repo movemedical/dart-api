@@ -153,21 +153,29 @@ class ListShippingServicesApiRequestBuilder
   _$ListShippingServicesApiRequest _$v;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _search;
+
   String get search => _$this._search;
+
   set search(String search) => _$this._search = search;
 
   bool _active;
+
   bool get active => _$this._active;
+
   set active(bool active) => _$this._active = active;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListShippingServicesApiRequestBuilder();
@@ -285,12 +293,14 @@ class _$ListShippingServicesApiRequestActions
       ListShippingServicesApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -316,6 +326,7 @@ class _$ListShippingServicesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListShippingServicesApiRequest);

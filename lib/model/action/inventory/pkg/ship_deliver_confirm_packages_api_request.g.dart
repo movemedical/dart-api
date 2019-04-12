@@ -130,17 +130,21 @@ class ShipDeliverConfirmPackagesApiRequestBuilder
   _$ShipDeliverConfirmPackagesApiRequest _$v;
 
   ListBuilder<ShipDeliverConfirmPackagesApiProcessingSteps> _processingSteps;
+
   ListBuilder<ShipDeliverConfirmPackagesApiProcessingSteps>
       get processingSteps => _$this._processingSteps ??=
           new ListBuilder<ShipDeliverConfirmPackagesApiProcessingSteps>();
+
   set processingSteps(
           ListBuilder<ShipDeliverConfirmPackagesApiProcessingSteps>
               processingSteps) =>
       _$this._processingSteps = processingSteps;
 
   ListBuilder<String> _packageIds;
+
   ListBuilder<String> get packageIds =>
       _$this._packageIds ??= new ListBuilder<String>();
+
   set packageIds(ListBuilder<String> packageIds) =>
       _$this._packageIds = packageIds;
 
@@ -251,6 +255,7 @@ class _$ShipDeliverConfirmPackagesApiRequestActions
       ShipDeliverConfirmPackagesApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -272,6 +277,7 @@ class _$ShipDeliverConfirmPackagesApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ShipDeliverConfirmPackagesApiRequest);

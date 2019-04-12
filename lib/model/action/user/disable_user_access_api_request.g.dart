@@ -104,7 +104,9 @@ class DisableUserAccessApiRequestBuilder
   _$DisableUserAccessApiRequest _$v;
 
   String _linkedId;
+
   String get linkedId => _$this._linkedId;
+
   set linkedId(String linkedId) => _$this._linkedId = linkedId;
 
   DisableUserAccessApiRequestBuilder();
@@ -182,6 +184,7 @@ class _$DisableUserAccessApiRequestActions
       DisableUserAccessApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -201,6 +204,7 @@ class _$DisableUserAccessApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(DisableUserAccessApiRequest);

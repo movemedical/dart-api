@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'place.g.dart';
 
@@ -8,7 +8,7 @@ class Place extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const Place DASH_BOARD = _$wireDASH_BOARD;
   static const Place CONVERSATION_LIST = _$wireCONVERSATION_LIST;
   static const Place CONVERSATION_DETAIL = _$wireCONVERSATION_DETAIL;
@@ -52,33 +52,35 @@ class Place extends EnumClass {
   static const Place DELIVERY_SCHEDULE_LIST = _$wireDELIVERY_SCHEDULE_LIST;
   static const Place DELIVERY_SCHEDULE_DETAIL = _$wireDELIVERY_SCHEDULE_DETAIL;
   static const Place OPERATING_SCHEDULE_LIST = _$wireOPERATING_SCHEDULE_LIST;
-  static const Place OPERATING_SCHEDULE_DETAIL = _$wireOPERATING_SCHEDULE_DETAIL;
+  static const Place OPERATING_SCHEDULE_DETAIL =
+      _$wireOPERATING_SCHEDULE_DETAIL;
   static const Place SHIPPING_PROFILE_LIST = _$wireSHIPPING_PROFILE_LIST;
   static const Place SHIPPING_PROFILE_DETAIL = _$wireSHIPPING_PROFILE_DETAIL;
   static const Place SHIPPING_SERVICE_LIST = _$wireSHIPPING_SERVICE_LIST;
   static const Place PROFILE = _$wirePROFILE;
   static const Place ADJUSTMENT = _$wireADJUSTMENT;
   static const Place CASE_TYPE_LIST = _$wireCASE_TYPE_LIST;
-  static const Place ORDER_LINE_CANCEL_REASON_LIST = _$wireORDER_LINE_CANCEL_REASON_LIST;
+  static const Place ORDER_LINE_CANCEL_REASON_LIST =
+      _$wireORDER_LINE_CANCEL_REASON_LIST;
   static const Place DCE_DETAIL = _$wireDCE_DETAIL;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const Place._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
+
   static BuiltSet<Place> get values => _$placeValues;
-  
+
   static Place valueOf(String name) => _$placeValueOf(name);
-  
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
+
   static Serializer<Place> get serializer => _$placeSerializer;
 }

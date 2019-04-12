@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'attributable_type.g.dart';
 
@@ -8,7 +8,7 @@ class AttributableType extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const AttributableType MDC_CASE_EVENT = _$wireMDC_CASE_EVENT;
   static const AttributableType LOAN = _$wireLOAN;
   static const AttributableType STOCK_ORDER = _$wireSTOCK_ORDER;
@@ -38,24 +38,26 @@ class AttributableType extends EnumClass {
   static const AttributableType SHIP_TO_ADDRESS = _$wireSHIP_TO_ADDRESS;
   static const AttributableType DELIVER_TO_ADDRESS = _$wireDELIVER_TO_ADDRESS;
   static const AttributableType BILL_TO_ADDRESS = _$wireBILL_TO_ADDRESS;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const AttributableType._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
+
   static BuiltSet<AttributableType> get values => _$attributableTypeValues;
-  
-  static AttributableType valueOf(String name) => _$attributableTypeValueOf(name);
-  
+
+  static AttributableType valueOf(String name) =>
+      _$attributableTypeValueOf(name);
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<AttributableType> get serializer => _$attributableTypeSerializer;
+
+  static Serializer<AttributableType> get serializer =>
+      _$attributableTypeSerializer;
 }

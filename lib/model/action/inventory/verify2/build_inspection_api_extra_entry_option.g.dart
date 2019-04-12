@@ -192,30 +192,42 @@ class BuildInspectionApiExtraEntryOptionBuilder
   _$BuildInspectionApiExtraEntryOption _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   BuildInspectionApiExtraEntryOptionType _type;
+
   BuildInspectionApiExtraEntryOptionType get type => _$this._type;
+
   set type(BuildInspectionApiExtraEntryOptionType type) => _$this._type = type;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   LocationDataBuilder _locationData;
+
   LocationDataBuilder get locationData =>
       _$this._locationData ??= new LocationDataBuilder();
+
   set locationData(LocationDataBuilder locationData) =>
       _$this._locationData = locationData;
 
   bool _multipleOptionForLocation;
+
   bool get multipleOptionForLocation => _$this._multipleOptionForLocation;
+
   set multipleOptionForLocation(bool multipleOptionForLocation) =>
       _$this._multipleOptionForLocation = multipleOptionForLocation;
 
   String _swappedOutExpectedStockId;
+
   String get swappedOutExpectedStockId => _$this._swappedOutExpectedStockId;
+
   set swappedOutExpectedStockId(String swappedOutExpectedStockId) =>
       _$this._swappedOutExpectedStockId = swappedOutExpectedStockId;
 
@@ -345,12 +357,14 @@ class _$BuildInspectionApiExtraEntryOptionActions
       BuildInspectionApiExtraEntryOptionBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.locationData,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -380,6 +394,7 @@ class _$BuildInspectionApiExtraEntryOptionActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(BuildInspectionApiExtraEntryOption);

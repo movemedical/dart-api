@@ -97,6 +97,7 @@ class _$CreateProcedureToBizUnitApi extends CreateProcedureToBizUnitApi {
           ApiCommand<CreateProcedureToBizUnitApiRequest>, ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -108,6 +109,7 @@ class _$CreateProcedureToBizUnitApi extends CreateProcedureToBizUnitApi {
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateProcedureToBizUnitApiRequest)]),

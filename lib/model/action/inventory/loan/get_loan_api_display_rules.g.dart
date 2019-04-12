@@ -308,62 +308,88 @@ class GetLoanApiDisplayRulesBuilder
   _$GetLoanApiDisplayRules _$v;
 
   bool _editDetails;
+
   bool get editDetails => _$this._editDetails;
+
   set editDetails(bool editDetails) => _$this._editDetails = editDetails;
 
   bool _editLoanLines;
+
   bool get editLoanLines => _$this._editLoanLines;
+
   set editLoanLines(bool editLoanLines) =>
       _$this._editLoanLines = editLoanLines;
 
   bool _moveBackToPlanning;
+
   bool get moveBackToPlanning => _$this._moveBackToPlanning;
+
   set moveBackToPlanning(bool moveBackToPlanning) =>
       _$this._moveBackToPlanning = moveBackToPlanning;
 
   bool _submitForApproval;
+
   bool get submitForApproval => _$this._submitForApproval;
+
   set submitForApproval(bool submitForApproval) =>
       _$this._submitForApproval = submitForApproval;
 
   bool _approve;
+
   bool get approve => _$this._approve;
+
   set approve(bool approve) => _$this._approve = approve;
 
   bool _clone;
+
   bool get clone => _$this._clone;
+
   set clone(bool clone) => _$this._clone = clone;
 
   bool _sendForExtension;
+
   bool get sendForExtension => _$this._sendForExtension;
+
   set sendForExtension(bool sendForExtension) =>
       _$this._sendForExtension = sendForExtension;
 
   bool _cancelExtension;
+
   bool get cancelExtension => _$this._cancelExtension;
+
   set cancelExtension(bool cancelExtension) =>
       _$this._cancelExtension = cancelExtension;
 
   bool _approveExtension;
+
   bool get approveExtension => _$this._approveExtension;
+
   set approveExtension(bool approveExtension) =>
       _$this._approveExtension = approveExtension;
 
   bool _generateReturn;
+
   bool get generateReturn => _$this._generateReturn;
+
   set generateReturn(bool generateReturn) =>
       _$this._generateReturn = generateReturn;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _print;
+
   bool get print => _$this._print;
+
   set print(bool print) => _$this._print = print;
 
   bool _loanReturn;
+
   bool get loanReturn => _$this._loanReturn;
+
   set loanReturn(bool loanReturn) => _$this._loanReturn = loanReturn;
 
   GetLoanApiDisplayRulesBuilder();
@@ -520,6 +546,7 @@ class _$GetLoanApiDisplayRulesActions extends GetLoanApiDisplayRulesActions {
       GetLoanApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -563,6 +590,7 @@ class _$GetLoanApiDisplayRulesActions extends GetLoanApiDisplayRulesActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetLoanApiDisplayRules);
 }

@@ -179,33 +179,43 @@ class GetSalesOrderApiResponseBuilder
   _$GetSalesOrderApiResponse _$v;
 
   GetSalesOrderApiOrderDetailBuilder _orderDetail;
+
   GetSalesOrderApiOrderDetailBuilder get orderDetail =>
       _$this._orderDetail ??= new GetSalesOrderApiOrderDetailBuilder();
+
   set orderDetail(GetSalesOrderApiOrderDetailBuilder orderDetail) =>
       _$this._orderDetail = orderDetail;
 
   GetSalesOrderApiDisplayRulesBuilder _displayRules;
+
   GetSalesOrderApiDisplayRulesBuilder get displayRules =>
       _$this._displayRules ??= new GetSalesOrderApiDisplayRulesBuilder();
+
   set displayRules(GetSalesOrderApiDisplayRulesBuilder displayRules) =>
       _$this._displayRules = displayRules;
 
   ListBuilder<CustomFieldValue> _orderCustomFieldValues;
+
   ListBuilder<CustomFieldValue> get orderCustomFieldValues =>
       _$this._orderCustomFieldValues ??= new ListBuilder<CustomFieldValue>();
+
   set orderCustomFieldValues(
           ListBuilder<CustomFieldValue> orderCustomFieldValues) =>
       _$this._orderCustomFieldValues = orderCustomFieldValues;
 
   ListBuilder<CustomDoc> _customDocs;
+
   ListBuilder<CustomDoc> get customDocs =>
       _$this._customDocs ??= new ListBuilder<CustomDoc>();
+
   set customDocs(ListBuilder<CustomDoc> customDocs) =>
       _$this._customDocs = customDocs;
 
   ListBuilder<GetSalesOrderApiOrderAttribute> _attributes;
+
   ListBuilder<GetSalesOrderApiOrderAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetSalesOrderApiOrderAttribute>();
+
   set attributes(ListBuilder<GetSalesOrderApiOrderAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -351,6 +361,7 @@ class _$GetSalesOrderApiResponseActions
       GetSalesOrderApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.orderDetail,
@@ -358,6 +369,7 @@ class _$GetSalesOrderApiResponseActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -385,6 +397,7 @@ class _$GetSalesOrderApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetSalesOrderApiResponse);
 }

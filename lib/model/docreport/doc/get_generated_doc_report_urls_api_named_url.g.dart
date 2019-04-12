@@ -121,11 +121,15 @@ class GetGeneratedDocReportUrlsApiNamedUrlBuilder
   _$GetGeneratedDocReportUrlsApiNamedUrl _$v;
 
   String _name;
+
   String get name => _$this._name;
+
   set name(String name) => _$this._name = name;
 
   String _url;
+
   String get url => _$this._url;
+
   set url(String url) => _$this._url = url;
 
   GetGeneratedDocReportUrlsApiNamedUrlBuilder();
@@ -208,6 +212,7 @@ class _$GetGeneratedDocReportUrlsApiNamedUrlActions
       GetGeneratedDocReportUrlsApiNamedUrlBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -229,6 +234,7 @@ class _$GetGeneratedDocReportUrlsApiNamedUrlActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetGeneratedDocReportUrlsApiNamedUrl);

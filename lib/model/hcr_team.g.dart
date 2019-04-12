@@ -133,19 +133,27 @@ class HcrTeamBuilder implements Builder<HcrTeam, HcrTeamBuilder> {
   _$HcrTeam _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   String _ouId;
+
   String get ouId => _$this._ouId;
+
   set ouId(String ouId) => _$this._ouId = ouId;
 
   HcrTeamType _type;
+
   HcrTeamType get type => _$this._type;
+
   set type(HcrTeamType type) => _$this._type = type;
 
   String _displayText;
+
   String get displayText => _$this._displayText;
+
   set displayText(String displayText) => _$this._displayText = displayText;
 
   HcrTeamBuilder();
@@ -231,6 +239,7 @@ class _$HcrTeamActions extends HcrTeamActions {
   HcrTeamBuilder $newBuilder() => HcrTeamBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -256,6 +265,7 @@ class _$HcrTeamActions extends HcrTeamActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(HcrTeam);
 }

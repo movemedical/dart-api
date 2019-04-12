@@ -130,18 +130,22 @@ class ListStockForSourcingMatrixApiResponseBuilder
   _$ListStockForSourcingMatrixApiResponse _$v;
 
   ListBuilder<ListStockForSourcingMatrixApiSourcingLocation> _locations;
+
   ListBuilder<ListStockForSourcingMatrixApiSourcingLocation> get locations =>
       _$this._locations ??=
           new ListBuilder<ListStockForSourcingMatrixApiSourcingLocation>();
+
   set locations(
           ListBuilder<ListStockForSourcingMatrixApiSourcingLocation>
               locations) =>
       _$this._locations = locations;
 
   ListBuilder<ListStockForSourcingMatrixApiSourcingLine> _items;
+
   ListBuilder<ListStockForSourcingMatrixApiSourcingLine> get items =>
       _$this._items ??=
           new ListBuilder<ListStockForSourcingMatrixApiSourcingLine>();
+
   set items(ListBuilder<ListStockForSourcingMatrixApiSourcingLine> items) =>
       _$this._items = items;
 
@@ -253,6 +257,7 @@ class _$ListStockForSourcingMatrixApiResponseActions
       ListStockForSourcingMatrixApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -274,6 +279,7 @@ class _$ListStockForSourcingMatrixApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListStockForSourcingMatrixApiResponse);

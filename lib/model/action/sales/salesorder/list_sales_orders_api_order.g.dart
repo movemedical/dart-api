@@ -516,112 +516,164 @@ class ListSalesOrdersApiOrderBuilder
   _$ListSalesOrdersApiOrder _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   int _orderNumber;
+
   int get orderNumber => _$this._orderNumber;
+
   set orderNumber(int orderNumber) => _$this._orderNumber = orderNumber;
 
   String _poNumber;
+
   String get poNumber => _$this._poNumber;
+
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _erpReference;
+
   String get erpReference => _$this._erpReference;
+
   set erpReference(String erpReference) => _$this._erpReference = erpReference;
 
   String _orderReasonId;
+
   String get orderReasonId => _$this._orderReasonId;
+
   set orderReasonId(String orderReasonId) =>
       _$this._orderReasonId = orderReasonId;
 
   String _orderReasonName;
+
   String get orderReasonName => _$this._orderReasonName;
+
   set orderReasonName(String orderReasonName) =>
       _$this._orderReasonName = orderReasonName;
 
   String _customerId;
+
   String get customerId => _$this._customerId;
+
   set customerId(String customerId) => _$this._customerId = customerId;
 
   String _customerName;
+
   String get customerName => _$this._customerName;
+
   set customerName(String customerName) => _$this._customerName = customerName;
 
   String _shipToId;
+
   String get shipToId => _$this._shipToId;
+
   set shipToId(String shipToId) => _$this._shipToId = shipToId;
 
   String _billToId;
+
   String get billToId => _$this._billToId;
+
   set billToId(String billToId) => _$this._billToId = billToId;
 
   String _deliverToId;
+
   String get deliverToId => _$this._deliverToId;
+
   set deliverToId(String deliverToId) => _$this._deliverToId = deliverToId;
 
   String _hcrId;
+
   String get hcrId => _$this._hcrId;
+
   set hcrId(String hcrId) => _$this._hcrId = hcrId;
 
   String _salesRepName;
+
   String get salesRepName => _$this._salesRepName;
+
   set salesRepName(String salesRepName) => _$this._salesRepName = salesRepName;
 
   String _locationId;
+
   String get locationId => _$this._locationId;
+
   set locationId(String locationId) => _$this._locationId = locationId;
 
   String _locationName;
+
   String get locationName => _$this._locationName;
+
   set locationName(String locationName) => _$this._locationName = locationName;
 
   LocationType _locationType;
+
   LocationType get locationType => _$this._locationType;
+
   set locationType(LocationType locationType) =>
       _$this._locationType = locationType;
 
   String _bizUnitId;
+
   String get bizUnitId => _$this._bizUnitId;
+
   set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _salesOrgUnitId;
+
   String get salesOrgUnitId => _$this._salesOrgUnitId;
+
   set salesOrgUnitId(String salesOrgUnitId) =>
       _$this._salesOrgUnitId = salesOrgUnitId;
 
   DateTime _created;
+
   DateTime get created => _$this._created;
+
   set created(DateTime created) => _$this._created = created;
 
   DateTime _saleDate;
+
   DateTime get saleDate => _$this._saleDate;
+
   set saleDate(DateTime saleDate) => _$this._saleDate = saleDate;
 
   String _email;
+
   String get email => _$this._email;
+
   set email(String email) => _$this._email = email;
 
   String _attention;
+
   String get attention => _$this._attention;
+
   set attention(String attention) => _$this._attention = attention;
 
   OrderStatus _status;
+
   OrderStatus get status => _$this._status;
+
   set status(OrderStatus status) => _$this._status = status;
 
   String _createdByName;
+
   String get createdByName => _$this._createdByName;
+
   set createdByName(String createdByName) =>
       _$this._createdByName = createdByName;
 
   double _grandTotal;
+
   double get grandTotal => _$this._grandTotal;
+
   set grandTotal(double grandTotal) => _$this._grandTotal = grandTotal;
 
   int _noteCount;
+
   int get noteCount => _$this._noteCount;
+
   set noteCount(int noteCount) => _$this._noteCount = noteCount;
 
   ListSalesOrdersApiOrderBuilder();
@@ -852,6 +904,7 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
       ListSalesOrdersApiOrderBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -921,6 +974,7 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ListSalesOrdersApiOrder);
 }

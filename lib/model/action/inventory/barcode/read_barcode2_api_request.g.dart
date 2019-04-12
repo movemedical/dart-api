@@ -120,14 +120,18 @@ class ReadBarcode2ApiRequestBuilder
   _$ReadBarcode2ApiRequest _$v;
 
   ListBuilder<String> _scanBarcodes;
+
   ListBuilder<String> get scanBarcodes =>
       _$this._scanBarcodes ??= new ListBuilder<String>();
+
   set scanBarcodes(ListBuilder<String> scanBarcodes) =>
       _$this._scanBarcodes = scanBarcodes;
 
   ReadBarcode2ApiResponseBuilder _previousResponse;
+
   ReadBarcode2ApiResponseBuilder get previousResponse =>
       _$this._previousResponse ??= new ReadBarcode2ApiResponseBuilder();
+
   set previousResponse(ReadBarcode2ApiResponseBuilder previousResponse) =>
       _$this._previousResponse = previousResponse;
 
@@ -235,12 +239,14 @@ class _$ReadBarcode2ApiRequestActions extends ReadBarcode2ApiRequestActions {
       ReadBarcode2ApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.previousResponse,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -262,6 +268,7 @@ class _$ReadBarcode2ApiRequestActions extends ReadBarcode2ApiRequestActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ReadBarcode2ApiRequest);
 }

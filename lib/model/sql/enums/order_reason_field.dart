@@ -1,6 +1,6 @@
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
-import 'package:built_collection/built_collection.dart';
 
 part 'order_reason_field.g.dart';
 
@@ -8,7 +8,7 @@ class OrderReasonField extends EnumClass {
   ////////////////////////////////
   /// Values
   ////////////////////////////////
-  
+
   static const OrderReasonField ATTN = _$wireATTN;
   static const OrderReasonField BILL_TO = _$wireBILL_TO;
   static const OrderReasonField EMAIL = _$wireEMAIL;
@@ -24,26 +24,29 @@ class OrderReasonField extends EnumClass {
   static const OrderReasonField CREDIT_CARD_LAST_4 = _$wireCREDIT_CARD_LAST_4;
   static const OrderReasonField HOSPITAL = _$wireHOSPITAL;
   static const OrderReasonField HOSPITAL_SURGEON = _$wireHOSPITAL_SURGEON;
-  static const OrderReasonField SALES_ORG_UNIT_HOSPITAL = _$wireSALES_ORG_UNIT_HOSPITAL;
+  static const OrderReasonField SALES_ORG_UNIT_HOSPITAL =
+      _$wireSALES_ORG_UNIT_HOSPITAL;
   static const OrderReasonField HOSPITAL_BILLTO_REP = _$wireHOSPITAL_BILLTO_REP;
-  
+
   ////////////////////////////////
   /// Constructor
   ////////////////////////////////
-  
+
   const OrderReasonField._(String name) : super(name);
-  
+
   ////////////////////////////////
   /// Utilities
   ////////////////////////////////
-  
+
   static BuiltSet<OrderReasonField> get values => _$orderReasonFieldValues;
-  
-  static OrderReasonField valueOf(String name) => _$orderReasonFieldValueOf(name);
-  
+
+  static OrderReasonField valueOf(String name) =>
+      _$orderReasonFieldValueOf(name);
+
   ////////////////////////////////
   /// Serializer
   ////////////////////////////////
-  
-  static Serializer<OrderReasonField> get serializer => _$orderReasonFieldSerializer;
+
+  static Serializer<OrderReasonField> get serializer =>
+      _$orderReasonFieldSerializer;
 }

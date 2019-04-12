@@ -105,7 +105,9 @@ class NoteAddedUpdatedPushMessageBuilder
   _$NoteAddedUpdatedPushMessage _$v;
 
   String _noteAttrId;
+
   String get noteAttrId => _$this._noteAttrId;
+
   set noteAttrId(String noteAttrId) => _$this._noteAttrId = noteAttrId;
 
   NoteAddedUpdatedPushMessageBuilder();
@@ -183,6 +185,7 @@ class _$NoteAddedUpdatedPushMessageActions
       NoteAddedUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -202,6 +205,7 @@ class _$NoteAddedUpdatedPushMessageActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(NoteAddedUpdatedPushMessage);

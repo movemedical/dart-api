@@ -126,14 +126,18 @@ class ListAssociationJournalsApiResponseBuilder
   _$ListAssociationJournalsApiResponse _$v;
 
   ListBuilder<ListAssociationJournalsApiAssociationJournal> _data;
+
   ListBuilder<ListAssociationJournalsApiAssociationJournal> get data =>
       _$this._data ??=
           new ListBuilder<ListAssociationJournalsApiAssociationJournal>();
+
   set data(ListBuilder<ListAssociationJournalsApiAssociationJournal> data) =>
       _$this._data = data;
 
   bool _moreData;
+
   bool get moreData => _$this._moreData;
+
   set moreData(bool moreData) => _$this._moreData = moreData;
 
   ListAssociationJournalsApiResponseBuilder();
@@ -232,6 +236,7 @@ class _$ListAssociationJournalsApiResponseActions
       ListAssociationJournalsApiResponseBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -253,6 +258,7 @@ class _$ListAssociationJournalsApiResponseActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListAssociationJournalsApiResponse);

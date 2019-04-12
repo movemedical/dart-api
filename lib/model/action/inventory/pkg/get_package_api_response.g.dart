@@ -153,25 +153,33 @@ class GetPackageApiResponseBuilder
   _$GetPackageApiResponse _$v;
 
   GetPackageApiPkgBuilder _pkg;
+
   GetPackageApiPkgBuilder get pkg =>
       _$this._pkg ??= new GetPackageApiPkgBuilder();
+
   set pkg(GetPackageApiPkgBuilder pkg) => _$this._pkg = pkg;
 
   GetPackageApiUiSchemaBuilder _uiSchema;
+
   GetPackageApiUiSchemaBuilder get uiSchema =>
       _$this._uiSchema ??= new GetPackageApiUiSchemaBuilder();
+
   set uiSchema(GetPackageApiUiSchemaBuilder uiSchema) =>
       _$this._uiSchema = uiSchema;
 
   ListBuilder<CustomDoc> _customDocs;
+
   ListBuilder<CustomDoc> get customDocs =>
       _$this._customDocs ??= new ListBuilder<CustomDoc>();
+
   set customDocs(ListBuilder<CustomDoc> customDocs) =>
       _$this._customDocs = customDocs;
 
   ListBuilder<GetPackageApiPackageAttribute> _attributes;
+
   ListBuilder<GetPackageApiPackageAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetPackageApiPackageAttribute>();
+
   set attributes(ListBuilder<GetPackageApiPackageAttribute> attributes) =>
       _$this._attributes = attributes;
 
@@ -299,6 +307,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
   GetPackageApiResponseBuilder $newBuilder() => GetPackageApiResponseBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.pkg,
@@ -306,6 +315,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -331,6 +341,7 @@ class _$GetPackageApiResponseActions extends GetPackageApiResponseActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(GetPackageApiResponse);
 }

@@ -123,12 +123,16 @@ class ListContainersToBeCountedApiRequestBuilder
   _$ListContainersToBeCountedApiRequest _$v;
 
   String _auditId;
+
   String get auditId => _$this._auditId;
+
   set auditId(String auditId) => _$this._auditId = auditId;
 
   PaginationParamsBuilder _paging;
+
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
+
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
 
   ListContainersToBeCountedApiRequestBuilder();
@@ -232,12 +236,14 @@ class _$ListContainersToBeCountedApiRequestActions
       ListContainersToBeCountedApiRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -259,6 +265,7 @@ class _$ListContainersToBeCountedApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(ListContainersToBeCountedApiRequest);

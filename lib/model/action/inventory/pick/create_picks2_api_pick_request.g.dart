@@ -368,79 +368,111 @@ class CreatePicks2ApiPickRequestBuilder
   _$CreatePicks2ApiPickRequest _$v;
 
   String _pickRequestId;
+
   String get pickRequestId => _$this._pickRequestId;
+
   set pickRequestId(String pickRequestId) =>
       _$this._pickRequestId = pickRequestId;
 
   String _stockId;
+
   String get stockId => _$this._stockId;
+
   set stockId(String stockId) => _$this._stockId = stockId;
 
   CreatePicks2ApiVirtualStockDataBuilder _virtualStockData;
+
   CreatePicks2ApiVirtualStockDataBuilder get virtualStockData =>
       _$this._virtualStockData ??= new CreatePicks2ApiVirtualStockDataBuilder();
+
   set virtualStockData(
           CreatePicks2ApiVirtualStockDataBuilder virtualStockData) =>
       _$this._virtualStockData = virtualStockData;
 
   String _orderLineId;
+
   String get orderLineId => _$this._orderLineId;
+
   set orderLineId(String orderLineId) => _$this._orderLineId = orderLineId;
 
   StockContainerType _toContainerType;
+
   StockContainerType get toContainerType => _$this._toContainerType;
+
   set toContainerType(StockContainerType toContainerType) =>
       _$this._toContainerType = toContainerType;
 
   String _toContainerId;
+
   String get toContainerId => _$this._toContainerId;
+
   set toContainerId(String toContainerId) =>
       _$this._toContainerId = toContainerId;
 
   bool _allowVersionSwap;
+
   bool get allowVersionSwap => _$this._allowVersionSwap;
+
   set allowVersionSwap(bool allowVersionSwap) =>
       _$this._allowVersionSwap = allowVersionSwap;
 
   bool _allowLotSerialSwap;
+
   bool get allowLotSerialSwap => _$this._allowLotSerialSwap;
+
   set allowLotSerialSwap(bool allowLotSerialSwap) =>
       _$this._allowLotSerialSwap = allowLotSerialSwap;
 
   bool _released;
+
   bool get released => _$this._released;
+
   set released(bool released) => _$this._released = released;
 
   DateTime _releaseDate;
+
   DateTime get releaseDate => _$this._releaseDate;
+
   set releaseDate(DateTime releaseDate) => _$this._releaseDate = releaseDate;
 
   DateTime _dueDate;
+
   DateTime get dueDate => _$this._dueDate;
+
   set dueDate(DateTime dueDate) => _$this._dueDate = dueDate;
 
   String _dependsOnPickId;
+
   String get dependsOnPickId => _$this._dependsOnPickId;
+
   set dependsOnPickId(String dependsOnPickId) =>
       _$this._dependsOnPickId = dependsOnPickId;
 
   String _toKitId;
+
   String get toKitId => _$this._toKitId;
+
   set toKitId(String toKitId) => _$this._toKitId = toKitId;
 
   String _toKitContainerDefId;
+
   String get toKitContainerDefId => _$this._toKitContainerDefId;
+
   set toKitContainerDefId(String toKitContainerDefId) =>
       _$this._toKitContainerDefId = toKitContainerDefId;
 
   CreatePicks2ApiShipmentOptionsBuilder _shipmentOptions;
+
   CreatePicks2ApiShipmentOptionsBuilder get shipmentOptions =>
       _$this._shipmentOptions ??= new CreatePicks2ApiShipmentOptionsBuilder();
+
   set shipmentOptions(CreatePicks2ApiShipmentOptionsBuilder shipmentOptions) =>
       _$this._shipmentOptions = shipmentOptions;
 
   bool _complete;
+
   bool get complete => _$this._complete;
+
   set complete(bool complete) => _$this._complete = complete;
 
   CreatePicks2ApiPickRequestBuilder();
@@ -653,6 +685,7 @@ class _$CreatePicks2ApiPickRequestActions
       CreatePicks2ApiPickRequestBuilder();
 
   BuiltList<ModuxActions> _$nested;
+
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.virtualStockData,
@@ -660,6 +693,7 @@ class _$CreatePicks2ApiPickRequestActions
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -709,6 +743,7 @@ class _$CreatePicks2ApiPickRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(CreatePicks2ApiPickRequest);
 }

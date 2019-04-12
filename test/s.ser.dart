@@ -17,6 +17,10 @@ Serializers _create(SerializersBuilder b) {
   // Add DateTime serializers.
   b.add(Iso8601DateTimeSerializer());
 
+  b
+    ..addBuilderFactory(
+        FullType(BuiltList, [FullType(String)]), () => ListBuilder<String>());
+
   // Json serialization plugin.
   b.addPlugin(StandardJsonPlugin());
 

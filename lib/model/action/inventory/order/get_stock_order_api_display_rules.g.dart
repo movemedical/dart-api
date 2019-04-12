@@ -349,71 +349,101 @@ class GetStockOrderApiDisplayRulesBuilder
   _$GetStockOrderApiDisplayRules _$v;
 
   bool _editLineQuantity;
+
   bool get editLineQuantity => _$this._editLineQuantity;
+
   set editLineQuantity(bool editLineQuantity) =>
       _$this._editLineQuantity = editLineQuantity;
 
   bool _requestApproval;
+
   bool get requestApproval => _$this._requestApproval;
+
   set requestApproval(bool requestApproval) =>
       _$this._requestApproval = requestApproval;
 
   bool _approve;
+
   bool get approve => _$this._approve;
+
   set approve(bool approve) => _$this._approve = approve;
 
   bool _sourcingMatrix;
+
   bool get sourcingMatrix => _$this._sourcingMatrix;
+
   set sourcingMatrix(bool sourcingMatrix) =>
       _$this._sourcingMatrix = sourcingMatrix;
 
   bool _editDetails;
+
   bool get editDetails => _$this._editDetails;
+
   set editDetails(bool editDetails) => _$this._editDetails = editDetails;
 
   bool _sendToErp;
+
   bool get sendToErp => _$this._sendToErp;
+
   set sendToErp(bool sendToErp) => _$this._sendToErp = sendToErp;
 
   bool _skipErp;
+
   bool get skipErp => _$this._skipErp;
+
   set skipErp(bool skipErp) => _$this._skipErp = skipErp;
 
   bool _cancel;
+
   bool get cancel => _$this._cancel;
+
   set cancel(bool cancel) => _$this._cancel = cancel;
 
   bool _toInventoryType;
+
   bool get toInventoryType => _$this._toInventoryType;
+
   set toInventoryType(bool toInventoryType) =>
       _$this._toInventoryType = toInventoryType;
 
   bool _externalToLocation;
+
   bool get externalToLocation => _$this._externalToLocation;
+
   set externalToLocation(bool externalToLocation) =>
       _$this._externalToLocation = externalToLocation;
 
   bool _createOrderFromOpenLines;
+
   bool get createOrderFromOpenLines => _$this._createOrderFromOpenLines;
+
   set createOrderFromOpenLines(bool createOrderFromOpenLines) =>
       _$this._createOrderFromOpenLines = createOrderFromOpenLines;
 
   bool _restocksAvailable;
+
   bool get restocksAvailable => _$this._restocksAvailable;
+
   set restocksAvailable(bool restocksAvailable) =>
       _$this._restocksAvailable = restocksAvailable;
 
   bool _updatePo;
+
   bool get updatePo => _$this._updatePo;
+
   set updatePo(bool updatePo) => _$this._updatePo = updatePo;
 
   bool _showShipments;
+
   bool get showShipments => _$this._showShipments;
+
   set showShipments(bool showShipments) =>
       _$this._showShipments = showShipments;
 
   bool _editDeliverTo;
+
   bool get editDeliverTo => _$this._editDeliverTo;
+
   set editDeliverTo(bool editDeliverTo) =>
       _$this._editDeliverTo = editDeliverTo;
 
@@ -590,6 +620,7 @@ class _$GetStockOrderApiDisplayRulesActions
       GetStockOrderApiDisplayRulesBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -637,6 +668,7 @@ class _$GetStockOrderApiDisplayRulesActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetStockOrderApiDisplayRules);

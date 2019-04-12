@@ -101,7 +101,9 @@ class ReleaseShipment2ApiRequestBuilder
   _$ReleaseShipment2ApiRequest _$v;
 
   String _id;
+
   String get id => _$this._id;
+
   set id(String id) => _$this._id = id;
 
   ReleaseShipment2ApiRequestBuilder();
@@ -178,6 +180,7 @@ class _$ReleaseShipment2ApiRequestActions
       ReleaseShipment2ApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -197,6 +200,7 @@ class _$ReleaseShipment2ApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(ReleaseShipment2ApiRequest);
 }

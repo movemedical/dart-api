@@ -142,6 +142,7 @@ class _$CaseRequirementsUpdatedPushMessageActions
       CaseRequirementsUpdatedPushMessageBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -149,6 +150,7 @@ class _$CaseRequirementsUpdatedPushMessageActions
       ]);
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(CaseRequirementsUpdatedPushMessage);

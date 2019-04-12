@@ -123,12 +123,16 @@ class GetGeneratedDocReportUrlsApiRequestBuilder
   _$GetGeneratedDocReportUrlsApiRequest _$v;
 
   String _generatedDocReportId;
+
   String get generatedDocReportId => _$this._generatedDocReportId;
+
   set generatedDocReportId(String generatedDocReportId) =>
       _$this._generatedDocReportId = generatedDocReportId;
 
   bool _attachment;
+
   bool get attachment => _$this._attachment;
+
   set attachment(bool attachment) => _$this._attachment = attachment;
 
   GetGeneratedDocReportUrlsApiRequestBuilder();
@@ -215,6 +219,7 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
       GetGeneratedDocReportUrlsApiRequestBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -236,6 +241,7 @@ class _$GetGeneratedDocReportUrlsApiRequestActions
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType =>
       _$fullType ??= FullType(GetGeneratedDocReportUrlsApiRequest);

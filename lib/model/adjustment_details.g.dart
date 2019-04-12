@@ -164,25 +164,35 @@ class AdjustmentDetailsBuilder
   _$AdjustmentDetails _$v;
 
   AdjustmentReason _reason;
+
   AdjustmentReason get reason => _$this._reason;
+
   set reason(AdjustmentReason reason) => _$this._reason = reason;
 
   AdjustmentStatus _status;
+
   AdjustmentStatus get status => _$this._status;
+
   set status(AdjustmentStatus status) => _$this._status = status;
 
   String _erpReferenceNumber;
+
   String get erpReferenceNumber => _$this._erpReferenceNumber;
+
   set erpReferenceNumber(String erpReferenceNumber) =>
       _$this._erpReferenceNumber = erpReferenceNumber;
 
   AdjustmentReferenceType _referenceType;
+
   AdjustmentReferenceType get referenceType => _$this._referenceType;
+
   set referenceType(AdjustmentReferenceType referenceType) =>
       _$this._referenceType = referenceType;
 
   String _referenceId;
+
   String get referenceId => _$this._referenceId;
+
   set referenceId(String referenceId) => _$this._referenceId = referenceId;
 
   AdjustmentDetailsBuilder();
@@ -283,6 +293,7 @@ class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
   AdjustmentDetailsBuilder $newBuilder() => AdjustmentDetailsBuilder();
 
   BuiltList<ActionDispatcher> _$actions;
+
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
@@ -310,6 +321,7 @@ class _$AdjustmentDetailsActions extends AdjustmentDetailsActions {
   }
 
   FullType _$fullType;
+
   @override
   FullType get $fullType => _$fullType ??= FullType(AdjustmentDetails);
 }
