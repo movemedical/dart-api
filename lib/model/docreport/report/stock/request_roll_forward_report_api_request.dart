@@ -8,6 +8,7 @@ import 'package:movemedical_api/model/sql/enums/doc_report_format.dart';
 import 'package:movemedical_api/model/sql/enums/doc_report_display_type.dart';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
 import 'dart:core';
+import 'package:movemedical_api/model/sql/enums/responsible_party_type.dart';
 
 part 'request_roll_forward_report_api_request.g.dart';
 
@@ -30,6 +31,12 @@ abstract class RequestRollForwardReportApiRequest implements Built<RequestRollFo
   
   @nullable
   String get locationId;
+  
+  @nullable
+  ResponsiblePartyType get responsiblePartyType;
+  
+  @nullable
+  String get responsiblePartyId;
   
   @nullable
   String get itemId;
@@ -78,6 +85,10 @@ abstract class RequestRollForwardReportApiRequestActions extends ModelActions<Re
   FieldDispatcher<LocationType> get locationType;
   
   FieldDispatcher<String> get locationId;
+  
+  FieldDispatcher<ResponsiblePartyType> get responsiblePartyType;
+  
+  FieldDispatcher<String> get responsiblePartyId;
   
   FieldDispatcher<String> get itemId;
   

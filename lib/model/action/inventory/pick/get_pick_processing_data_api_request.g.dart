@@ -32,6 +32,12 @@ class _$GetPickProcessingDataApiRequestSerializer
         ..add(serializers.serialize(object.shipmentId,
             specifiedType: const FullType(String)));
     }
+    if (object.orderId != null) {
+      result
+        ..add('orderId')
+        ..add(serializers.serialize(object.orderId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -52,6 +58,10 @@ class _$GetPickProcessingDataApiRequestSerializer
           result.shipmentId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'orderId':
+          result.orderId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -63,12 +73,15 @@ class _$GetPickProcessingDataApiRequest
     extends GetPickProcessingDataApiRequest {
   @override
   final String shipmentId;
+  @override
+  final String orderId;
 
   factory _$GetPickProcessingDataApiRequest(
           [void updates(GetPickProcessingDataApiRequestBuilder b)]) =>
       (new GetPickProcessingDataApiRequestBuilder()..update(updates)).build();
 
-  _$GetPickProcessingDataApiRequest._({this.shipmentId}) : super._();
+  _$GetPickProcessingDataApiRequest._({this.shipmentId, this.orderId})
+      : super._();
 
   @override
   GetPickProcessingDataApiRequest rebuild(
@@ -83,18 +96,20 @@ class _$GetPickProcessingDataApiRequest
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is GetPickProcessingDataApiRequest &&
-        shipmentId == other.shipmentId;
+        shipmentId == other.shipmentId &&
+        orderId == other.orderId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, shipmentId.hashCode));
+    return $jf($jc($jc(0, shipmentId.hashCode), orderId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetPickProcessingDataApiRequest')
-          ..add('shipmentId', shipmentId))
+          ..add('shipmentId', shipmentId)
+          ..add('orderId', orderId))
         .toString();
   }
 }
@@ -109,11 +124,16 @@ class GetPickProcessingDataApiRequestBuilder
   String get shipmentId => _$this._shipmentId;
   set shipmentId(String shipmentId) => _$this._shipmentId = shipmentId;
 
+  String _orderId;
+  String get orderId => _$this._orderId;
+  set orderId(String orderId) => _$this._orderId = orderId;
+
   GetPickProcessingDataApiRequestBuilder();
 
   GetPickProcessingDataApiRequestBuilder get _$this {
     if (_$v != null) {
       _shipmentId = _$v.shipmentId;
+      _orderId = _$v.orderId;
       _$v = null;
     }
     return this;
@@ -134,8 +154,9 @@ class GetPickProcessingDataApiRequestBuilder
 
   @override
   _$GetPickProcessingDataApiRequest build() {
-    final _$result =
-        _$v ?? new _$GetPickProcessingDataApiRequest._(shipmentId: shipmentId);
+    final _$result = _$v ??
+        new _$GetPickProcessingDataApiRequest._(
+            shipmentId: shipmentId, orderId: orderId);
     replace(_$result);
     return _$result;
   }
@@ -164,12 +185,15 @@ class _$GetPickProcessingDataApiRequestActions
 
   final ActionDispatcher<GetPickProcessingDataApiRequest> $replace;
   final FieldDispatcher<String> shipmentId;
+  final FieldDispatcher<String> orderId;
 
   _$GetPickProcessingDataApiRequestActions._(this.$options)
       : $replace = $options.action<GetPickProcessingDataApiRequest>(
             '\$replace', (a) => a?.$replace),
         shipmentId = $options.field<String>('shipmentId', (a) => a?.shipmentId,
             (s) => s?.shipmentId, (p, b) => p?.shipmentId = b),
+        orderId = $options.field<String>('orderId', (a) => a?.orderId,
+            (s) => s?.orderId, (p, b) => p?.orderId = b),
         super._();
 
   factory _$GetPickProcessingDataApiRequestActions(
@@ -190,12 +214,14 @@ class _$GetPickProcessingDataApiRequestActions
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.shipmentId,
+        this.orderId,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     shipmentId.$reducer(reducer);
+    orderId.$reducer(reducer);
   }
 
   @override

@@ -51,6 +51,18 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemSerializer
         ..add(serializers.serialize(object.itemDescription,
             specifiedType: const FullType(String)));
     }
+    if (object.moveItemClass != null) {
+      result
+        ..add('moveItemClass')
+        ..add(serializers.serialize(object.moveItemClass,
+            specifiedType: const FullType(MoveItemClass)));
+    }
+    if (object.moveItemType != null) {
+      result
+        ..add('moveItemType')
+        ..add(serializers.serialize(object.moveItemType,
+            specifiedType: const FullType(MoveItemType)));
+    }
     if (object.quantity != null) {
       result
         ..add('quantity')
@@ -89,6 +101,14 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemSerializer
           result.itemDescription = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'moveItemClass':
+          result.moveItemClass = serializers.deserialize(value,
+              specifiedType: const FullType(MoveItemClass)) as MoveItemClass;
+          break;
+        case 'moveItemType':
+          result.moveItemType = serializers.deserialize(value,
+              specifiedType: const FullType(MoveItemType)) as MoveItemType;
+          break;
         case 'quantity':
           result.quantity = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -111,6 +131,10 @@ class _$ListPreferenceCardItemsApiPreferenceCardItem
   @override
   final String itemDescription;
   @override
+  final MoveItemClass moveItemClass;
+  @override
+  final MoveItemType moveItemType;
+  @override
   final int quantity;
 
   factory _$ListPreferenceCardItemsApiPreferenceCardItem(
@@ -125,6 +149,8 @@ class _$ListPreferenceCardItemsApiPreferenceCardItem
       this.itemId,
       this.itemNumber,
       this.itemDescription,
+      this.moveItemClass,
+      this.moveItemType,
       this.quantity})
       : super._();
 
@@ -146,6 +172,8 @@ class _$ListPreferenceCardItemsApiPreferenceCardItem
         itemId == other.itemId &&
         itemNumber == other.itemNumber &&
         itemDescription == other.itemDescription &&
+        moveItemClass == other.moveItemClass &&
+        moveItemType == other.moveItemType &&
         quantity == other.quantity;
   }
 
@@ -153,9 +181,15 @@ class _$ListPreferenceCardItemsApiPreferenceCardItem
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, preferenceCardItemId.hashCode), itemId.hashCode),
-                itemNumber.hashCode),
-            itemDescription.hashCode),
+            $jc(
+                $jc(
+                    $jc(
+                        $jc($jc(0, preferenceCardItemId.hashCode),
+                            itemId.hashCode),
+                        itemNumber.hashCode),
+                    itemDescription.hashCode),
+                moveItemClass.hashCode),
+            moveItemType.hashCode),
         quantity.hashCode));
   }
 
@@ -167,6 +201,8 @@ class _$ListPreferenceCardItemsApiPreferenceCardItem
           ..add('itemId', itemId)
           ..add('itemNumber', itemNumber)
           ..add('itemDescription', itemDescription)
+          ..add('moveItemClass', moveItemClass)
+          ..add('moveItemType', moveItemType)
           ..add('quantity', quantity))
         .toString();
   }
@@ -196,6 +232,16 @@ class ListPreferenceCardItemsApiPreferenceCardItemBuilder
   set itemDescription(String itemDescription) =>
       _$this._itemDescription = itemDescription;
 
+  MoveItemClass _moveItemClass;
+  MoveItemClass get moveItemClass => _$this._moveItemClass;
+  set moveItemClass(MoveItemClass moveItemClass) =>
+      _$this._moveItemClass = moveItemClass;
+
+  MoveItemType _moveItemType;
+  MoveItemType get moveItemType => _$this._moveItemType;
+  set moveItemType(MoveItemType moveItemType) =>
+      _$this._moveItemType = moveItemType;
+
   int _quantity;
   int get quantity => _$this._quantity;
   set quantity(int quantity) => _$this._quantity = quantity;
@@ -208,6 +254,8 @@ class ListPreferenceCardItemsApiPreferenceCardItemBuilder
       _itemId = _$v.itemId;
       _itemNumber = _$v.itemNumber;
       _itemDescription = _$v.itemDescription;
+      _moveItemClass = _$v.moveItemClass;
+      _moveItemType = _$v.moveItemType;
       _quantity = _$v.quantity;
       _$v = null;
     }
@@ -236,6 +284,8 @@ class ListPreferenceCardItemsApiPreferenceCardItemBuilder
             itemId: itemId,
             itemNumber: itemNumber,
             itemDescription: itemDescription,
+            moveItemClass: moveItemClass,
+            moveItemType: moveItemType,
             quantity: quantity);
     replace(_$result);
     return _$result;
@@ -268,6 +318,8 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> itemNumber;
   final FieldDispatcher<String> itemDescription;
+  final FieldDispatcher<MoveItemClass> moveItemClass;
+  final FieldDispatcher<MoveItemType> moveItemType;
   final FieldDispatcher<int> quantity;
 
   _$ListPreferenceCardItemsApiPreferenceCardItemActions._(this.$options)
@@ -288,6 +340,16 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
             (a) => a?.itemDescription,
             (s) => s?.itemDescription,
             (p, b) => p?.itemDescription = b),
+        moveItemClass = $options.field<MoveItemClass>(
+            'moveItemClass',
+            (a) => a?.moveItemClass,
+            (s) => s?.moveItemClass,
+            (p, b) => p?.moveItemClass = b),
+        moveItemType = $options.field<MoveItemType>(
+            'moveItemType',
+            (a) => a?.moveItemType,
+            (s) => s?.moveItemType,
+            (p, b) => p?.moveItemType = b),
         quantity = $options.field<int>('quantity', (a) => a?.quantity,
             (s) => s?.quantity, (p, b) => p?.quantity = b),
         super._();
@@ -313,6 +375,8 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
         this.itemId,
         this.itemNumber,
         this.itemDescription,
+        this.moveItemClass,
+        this.moveItemType,
         this.quantity,
       ]);
 
@@ -323,6 +387,8 @@ class _$ListPreferenceCardItemsApiPreferenceCardItemActions
     itemId.$reducer(reducer);
     itemNumber.$reducer(reducer);
     itemDescription.$reducer(reducer);
+    moveItemClass.$reducer(reducer);
+    moveItemType.$reducer(reducer);
     quantity.$reducer(reducer);
   }
 

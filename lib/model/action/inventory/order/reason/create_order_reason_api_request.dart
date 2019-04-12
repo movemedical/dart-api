@@ -43,6 +43,9 @@ abstract class CreateOrderReasonApiRequest implements Built<CreateOrderReasonApi
   @nullable
   String get toInventoryTypeId;
   
+  @nullable
+  String get defaultShippingServiceId;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -82,6 +85,8 @@ abstract class CreateOrderReasonApiRequestActions extends ModelActions<CreateOrd
   FieldDispatcher<bool> get changesHomeLocation;
   
   FieldDispatcher<String> get toInventoryTypeId;
+  
+  FieldDispatcher<String> get defaultShippingServiceId;
   
   ////////////////////////////////
   /// Constructors

@@ -50,6 +50,12 @@ class _$CustomFieldValueSerializer
         ..add(serializers.serialize(object.sort,
             specifiedType: const FullType(int)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
     if (object.required != null) {
       result
         ..add('required')
@@ -122,6 +128,10 @@ class _$CustomFieldValueSerializer
           result.sort = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'required':
           result.required = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -165,6 +175,8 @@ class _$CustomFieldValue extends CustomFieldValue {
   @override
   final int sort;
   @override
+  final bool active;
+  @override
   final bool required;
   @override
   final bool booleanValue;
@@ -186,6 +198,7 @@ class _$CustomFieldValue extends CustomFieldValue {
       this.customFieldValueId,
       this.customFieldDataType,
       this.sort,
+      this.active,
       this.required,
       this.booleanValue,
       this.stringValue,
@@ -211,6 +224,7 @@ class _$CustomFieldValue extends CustomFieldValue {
         customFieldValueId == other.customFieldValueId &&
         customFieldDataType == other.customFieldDataType &&
         sort == other.sort &&
+        active == other.active &&
         required == other.required &&
         booleanValue == other.booleanValue &&
         stringValue == other.stringValue &&
@@ -230,11 +244,13 @@ class _$CustomFieldValue extends CustomFieldValue {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, customFieldId.hashCode),
-                                            customFieldName.hashCode),
-                                        customFieldValueId.hashCode),
-                                    customFieldDataType.hashCode),
-                                sort.hashCode),
+                                        $jc(
+                                            $jc($jc(0, customFieldId.hashCode),
+                                                customFieldName.hashCode),
+                                            customFieldValueId.hashCode),
+                                        customFieldDataType.hashCode),
+                                    sort.hashCode),
+                                active.hashCode),
                             required.hashCode),
                         booleanValue.hashCode),
                     stringValue.hashCode),
@@ -251,6 +267,7 @@ class _$CustomFieldValue extends CustomFieldValue {
           ..add('customFieldValueId', customFieldValueId)
           ..add('customFieldDataType', customFieldDataType)
           ..add('sort', sort)
+          ..add('active', active)
           ..add('required', required)
           ..add('booleanValue', booleanValue)
           ..add('stringValue', stringValue)
@@ -289,6 +306,10 @@ class CustomFieldValueBuilder
   int get sort => _$this._sort;
   set sort(int sort) => _$this._sort = sort;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   bool _required;
   bool get required => _$this._required;
   set required(bool required) => _$this._required = required;
@@ -322,6 +343,7 @@ class CustomFieldValueBuilder
       _customFieldValueId = _$v.customFieldValueId;
       _customFieldDataType = _$v.customFieldDataType;
       _sort = _$v.sort;
+      _active = _$v.active;
       _required = _$v.required;
       _booleanValue = _$v.booleanValue;
       _stringValue = _$v.stringValue;
@@ -355,6 +377,7 @@ class CustomFieldValueBuilder
             customFieldValueId: customFieldValueId,
             customFieldDataType: customFieldDataType,
             sort: sort,
+            active: active,
             required: required,
             booleanValue: booleanValue,
             stringValue: stringValue,
@@ -388,6 +411,7 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
   final FieldDispatcher<String> customFieldValueId;
   final FieldDispatcher<CustomFieldDataType> customFieldDataType;
   final FieldDispatcher<int> sort;
+  final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> required;
   final FieldDispatcher<bool> booleanValue;
   final FieldDispatcher<String> stringValue;
@@ -420,6 +444,8 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
             (p, b) => p?.customFieldDataType = b),
         sort = $options.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
+        active = $options.field<bool>('active', (a) => a?.active,
+            (s) => s?.active, (p, b) => p?.active = b),
         required = $options.field<bool>('required', (a) => a?.required,
             (s) => s?.required, (p, b) => p?.required = b),
         booleanValue = $options.field<bool>(
@@ -462,6 +488,7 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
         this.customFieldValueId,
         this.customFieldDataType,
         this.sort,
+        this.active,
         this.required,
         this.booleanValue,
         this.stringValue,
@@ -478,6 +505,7 @@ class _$CustomFieldValueActions extends CustomFieldValueActions {
     customFieldValueId.$reducer(reducer);
     customFieldDataType.$reducer(reducer);
     sort.$reducer(reducer);
+    active.$reducer(reducer);
     required.$reducer(reducer);
     booleanValue.$reducer(reducer);
     stringValue.$reducer(reducer);

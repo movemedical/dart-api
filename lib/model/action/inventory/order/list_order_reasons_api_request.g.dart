@@ -49,6 +49,12 @@ class _$ListOrderReasonsApiRequestSerializer
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
+    if (object.forCreate != null) {
+      result
+        ..add('forCreate')
+        ..add(serializers.serialize(object.forCreate,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -89,6 +95,10 @@ class _$ListOrderReasonsApiRequestSerializer
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'forCreate':
+          result.forCreate = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -111,6 +121,8 @@ class _$ListOrderReasonsApiRequest extends ListOrderReasonsApiRequest {
   @override
   final bool active;
   @override
+  final bool forCreate;
+  @override
   final PaginationParams paging;
 
   factory _$ListOrderReasonsApiRequest(
@@ -122,6 +134,7 @@ class _$ListOrderReasonsApiRequest extends ListOrderReasonsApiRequest {
       this.bizUnitId,
       this.reasonGroups,
       this.active,
+      this.forCreate,
       this.paging})
       : super._();
 
@@ -142,6 +155,7 @@ class _$ListOrderReasonsApiRequest extends ListOrderReasonsApiRequest {
         bizUnitId == other.bizUnitId &&
         reasonGroups == other.reasonGroups &&
         active == other.active &&
+        forCreate == other.forCreate &&
         paging == other.paging;
   }
 
@@ -149,9 +163,11 @@ class _$ListOrderReasonsApiRequest extends ListOrderReasonsApiRequest {
   int get hashCode {
     return $jf($jc(
         $jc(
-            $jc($jc($jc(0, search.hashCode), bizUnitId.hashCode),
-                reasonGroups.hashCode),
-            active.hashCode),
+            $jc(
+                $jc($jc($jc(0, search.hashCode), bizUnitId.hashCode),
+                    reasonGroups.hashCode),
+                active.hashCode),
+            forCreate.hashCode),
         paging.hashCode));
   }
 
@@ -162,6 +178,7 @@ class _$ListOrderReasonsApiRequest extends ListOrderReasonsApiRequest {
           ..add('bizUnitId', bizUnitId)
           ..add('reasonGroups', reasonGroups)
           ..add('active', active)
+          ..add('forCreate', forCreate)
           ..add('paging', paging))
         .toString();
   }
@@ -190,6 +207,10 @@ class ListOrderReasonsApiRequestBuilder
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
+  bool _forCreate;
+  bool get forCreate => _$this._forCreate;
+  set forCreate(bool forCreate) => _$this._forCreate = forCreate;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -203,6 +224,7 @@ class ListOrderReasonsApiRequestBuilder
       _bizUnitId = _$v.bizUnitId;
       _reasonGroups = _$v.reasonGroups?.toBuilder();
       _active = _$v.active;
+      _forCreate = _$v.forCreate;
       _paging = _$v.paging?.toBuilder();
       _$v = null;
     }
@@ -232,6 +254,7 @@ class ListOrderReasonsApiRequestBuilder
               bizUnitId: bizUnitId,
               reasonGroups: _reasonGroups?.build(),
               active: active,
+              forCreate: forCreate,
               paging: _paging?.build());
     } catch (_) {
       String _$failedField;
@@ -278,6 +301,7 @@ class _$ListOrderReasonsApiRequestActions
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<BuiltList<OrderReasonGroup>> reasonGroups;
   final FieldDispatcher<bool> active;
+  final FieldDispatcher<bool> forCreate;
   final PaginationParamsActions paging;
 
   _$ListOrderReasonsApiRequestActions._(this.$options)
@@ -294,6 +318,8 @@ class _$ListOrderReasonsApiRequestActions
             (p, b) => p?.reasonGroups = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
+        forCreate = $options.field<bool>('forCreate', (a) => a?.forCreate,
+            (s) => s?.forCreate, (p, b) => p?.forCreate = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -331,6 +357,7 @@ class _$ListOrderReasonsApiRequestActions
         this.bizUnitId,
         this.reasonGroups,
         this.active,
+        this.forCreate,
       ]);
 
   @override
@@ -340,6 +367,7 @@ class _$ListOrderReasonsApiRequestActions
     bizUnitId.$reducer(reducer);
     reasonGroups.$reducer(reducer);
     active.$reducer(reducer);
+    forCreate.$reducer(reducer);
     paging.$reducer(reducer);
   }
 

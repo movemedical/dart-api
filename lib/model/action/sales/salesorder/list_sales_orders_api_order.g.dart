@@ -36,6 +36,12 @@ class _$ListSalesOrdersApiOrderSerializer
         ..add(serializers.serialize(object.orderNumber,
             specifiedType: const FullType(int)));
     }
+    if (object.poNumber != null) {
+      result
+        ..add('poNumber')
+        ..add(serializers.serialize(object.poNumber,
+            specifiedType: const FullType(String)));
+    }
     if (object.erpReference != null) {
       result
         ..add('erpReference')
@@ -198,6 +204,10 @@ class _$ListSalesOrdersApiOrderSerializer
           result.orderNumber = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'poNumber':
+          result.poNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'erpReference':
           result.erpReference = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -303,6 +313,8 @@ class _$ListSalesOrdersApiOrder extends ListSalesOrdersApiOrder {
   @override
   final int orderNumber;
   @override
+  final String poNumber;
+  @override
   final String erpReference;
   @override
   final String orderReasonId;
@@ -356,6 +368,7 @@ class _$ListSalesOrdersApiOrder extends ListSalesOrdersApiOrder {
   _$ListSalesOrdersApiOrder._(
       {this.id,
       this.orderNumber,
+      this.poNumber,
       this.erpReference,
       this.orderReasonId,
       this.orderReasonName,
@@ -396,6 +409,7 @@ class _$ListSalesOrdersApiOrder extends ListSalesOrdersApiOrder {
     return other is ListSalesOrdersApiOrder &&
         id == other.id &&
         orderNumber == other.orderNumber &&
+        poNumber == other.poNumber &&
         erpReference == other.erpReference &&
         orderReasonId == other.orderReasonId &&
         orderReasonName == other.orderReasonName &&
@@ -441,7 +455,7 @@ class _$ListSalesOrdersApiOrder extends ListSalesOrdersApiOrder {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orderNumber.hashCode), erpReference.hashCode), orderReasonId.hashCode), orderReasonName.hashCode), customerId.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orderNumber.hashCode), poNumber.hashCode), erpReference.hashCode), orderReasonId.hashCode), orderReasonName.hashCode), customerId.hashCode),
                                                                                 customerName.hashCode),
                                                                             shipToId.hashCode),
                                                                         billToId.hashCode),
@@ -468,6 +482,7 @@ class _$ListSalesOrdersApiOrder extends ListSalesOrdersApiOrder {
     return (newBuiltValueToStringHelper('ListSalesOrdersApiOrder')
           ..add('id', id)
           ..add('orderNumber', orderNumber)
+          ..add('poNumber', poNumber)
           ..add('erpReference', erpReference)
           ..add('orderReasonId', orderReasonId)
           ..add('orderReasonName', orderReasonName)
@@ -507,6 +522,10 @@ class ListSalesOrdersApiOrderBuilder
   int _orderNumber;
   int get orderNumber => _$this._orderNumber;
   set orderNumber(int orderNumber) => _$this._orderNumber = orderNumber;
+
+  String _poNumber;
+  String get poNumber => _$this._poNumber;
+  set poNumber(String poNumber) => _$this._poNumber = poNumber;
 
   String _erpReference;
   String get erpReference => _$this._erpReference;
@@ -611,6 +630,7 @@ class ListSalesOrdersApiOrderBuilder
     if (_$v != null) {
       _id = _$v.id;
       _orderNumber = _$v.orderNumber;
+      _poNumber = _$v.poNumber;
       _erpReference = _$v.erpReference;
       _orderReasonId = _$v.orderReasonId;
       _orderReasonName = _$v.orderReasonName;
@@ -658,6 +678,7 @@ class ListSalesOrdersApiOrderBuilder
         new _$ListSalesOrdersApiOrder._(
             id: id,
             orderNumber: orderNumber,
+            poNumber: poNumber,
             erpReference: erpReference,
             orderReasonId: orderReasonId,
             orderReasonName: orderReasonName,
@@ -707,6 +728,7 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
   final ActionDispatcher<ListSalesOrdersApiOrder> $replace;
   final FieldDispatcher<String> id;
   final FieldDispatcher<int> orderNumber;
+  final FieldDispatcher<String> poNumber;
   final FieldDispatcher<String> erpReference;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<String> orderReasonName;
@@ -738,6 +760,8 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         orderNumber = $options.field<int>('orderNumber', (a) => a?.orderNumber,
             (s) => s?.orderNumber, (p, b) => p?.orderNumber = b),
+        poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
+            (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         erpReference = $options.field<String>(
             'erpReference',
             (a) => a?.erpReference,
@@ -834,6 +858,7 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
         this.$replace,
         this.id,
         this.orderNumber,
+        this.poNumber,
         this.erpReference,
         this.orderReasonId,
         this.orderReasonName,
@@ -864,6 +889,7 @@ class _$ListSalesOrdersApiOrderActions extends ListSalesOrdersApiOrderActions {
     super.$reducer(reducer);
     id.$reducer(reducer);
     orderNumber.$reducer(reducer);
+    poNumber.$reducer(reducer);
     erpReference.$reducer(reducer);
     orderReasonId.$reducer(reducer);
     orderReasonName.$reducer(reducer);

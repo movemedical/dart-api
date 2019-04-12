@@ -53,6 +53,36 @@ class _$GetUiSetupMobileApiResponseSerializer
             specifiedType: const FullType(
                 BuiltList, const [const FullType(MobileReport)])));
     }
+    if (object.updateAvailable != null) {
+      result
+        ..add('updateAvailable')
+        ..add(serializers.serialize(object.updateAvailable,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.updateRequired != null) {
+      result
+        ..add('updateRequired')
+        ..add(serializers.serialize(object.updateRequired,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.updateVersion != null) {
+      result
+        ..add('updateVersion')
+        ..add(serializers.serialize(object.updateVersion,
+            specifiedType: const FullType(String)));
+    }
+    if (object.updateUrl != null) {
+      result
+        ..add('updateUrl')
+        ..add(serializers.serialize(object.updateUrl,
+            specifiedType: const FullType(String)));
+    }
+    if (object.deviceId != null) {
+      result
+        ..add('deviceId')
+        ..add(serializers.serialize(object.deviceId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -92,6 +122,26 @@ class _$GetUiSetupMobileApiResponseSerializer
                       BuiltList, const [const FullType(MobileReport)]))
               as BuiltList);
           break;
+        case 'updateAvailable':
+          result.updateAvailable = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'updateRequired':
+          result.updateRequired = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'updateVersion':
+          result.updateVersion = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'updateUrl':
+          result.updateUrl = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'deviceId':
+          result.deviceId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -108,13 +158,31 @@ class _$GetUiSetupMobileApiResponse extends GetUiSetupMobileApiResponse {
   final BuiltList<MobileNavigationElement> tabBarElements;
   @override
   final BuiltList<MobileReport> reports;
+  @override
+  final bool updateAvailable;
+  @override
+  final bool updateRequired;
+  @override
+  final String updateVersion;
+  @override
+  final String updateUrl;
+  @override
+  final String deviceId;
 
   factory _$GetUiSetupMobileApiResponse(
           [void updates(GetUiSetupMobileApiResponseBuilder b)]) =>
       (new GetUiSetupMobileApiResponseBuilder()..update(updates)).build();
 
   _$GetUiSetupMobileApiResponse._(
-      {this.uiSetup, this.dashboardWidgets, this.tabBarElements, this.reports})
+      {this.uiSetup,
+      this.dashboardWidgets,
+      this.tabBarElements,
+      this.reports,
+      this.updateAvailable,
+      this.updateRequired,
+      this.updateVersion,
+      this.updateUrl,
+      this.deviceId})
       : super._();
 
   @override
@@ -133,15 +201,32 @@ class _$GetUiSetupMobileApiResponse extends GetUiSetupMobileApiResponse {
         uiSetup == other.uiSetup &&
         dashboardWidgets == other.dashboardWidgets &&
         tabBarElements == other.tabBarElements &&
-        reports == other.reports;
+        reports == other.reports &&
+        updateAvailable == other.updateAvailable &&
+        updateRequired == other.updateRequired &&
+        updateVersion == other.updateVersion &&
+        updateUrl == other.updateUrl &&
+        deviceId == other.deviceId;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, uiSetup.hashCode), dashboardWidgets.hashCode),
-            tabBarElements.hashCode),
-        reports.hashCode));
+        $jc(
+            $jc(
+                $jc(
+                    $jc(
+                        $jc(
+                            $jc(
+                                $jc($jc(0, uiSetup.hashCode),
+                                    dashboardWidgets.hashCode),
+                                tabBarElements.hashCode),
+                            reports.hashCode),
+                        updateAvailable.hashCode),
+                    updateRequired.hashCode),
+                updateVersion.hashCode),
+            updateUrl.hashCode),
+        deviceId.hashCode));
   }
 
   @override
@@ -150,7 +235,12 @@ class _$GetUiSetupMobileApiResponse extends GetUiSetupMobileApiResponse {
           ..add('uiSetup', uiSetup)
           ..add('dashboardWidgets', dashboardWidgets)
           ..add('tabBarElements', tabBarElements)
-          ..add('reports', reports))
+          ..add('reports', reports)
+          ..add('updateAvailable', updateAvailable)
+          ..add('updateRequired', updateRequired)
+          ..add('updateVersion', updateVersion)
+          ..add('updateUrl', updateUrl)
+          ..add('deviceId', deviceId))
         .toString();
   }
 }
@@ -186,6 +276,29 @@ class GetUiSetupMobileApiResponseBuilder
       _$this._reports ??= new ListBuilder<MobileReport>();
   set reports(ListBuilder<MobileReport> reports) => _$this._reports = reports;
 
+  bool _updateAvailable;
+  bool get updateAvailable => _$this._updateAvailable;
+  set updateAvailable(bool updateAvailable) =>
+      _$this._updateAvailable = updateAvailable;
+
+  bool _updateRequired;
+  bool get updateRequired => _$this._updateRequired;
+  set updateRequired(bool updateRequired) =>
+      _$this._updateRequired = updateRequired;
+
+  String _updateVersion;
+  String get updateVersion => _$this._updateVersion;
+  set updateVersion(String updateVersion) =>
+      _$this._updateVersion = updateVersion;
+
+  String _updateUrl;
+  String get updateUrl => _$this._updateUrl;
+  set updateUrl(String updateUrl) => _$this._updateUrl = updateUrl;
+
+  String _deviceId;
+  String get deviceId => _$this._deviceId;
+  set deviceId(String deviceId) => _$this._deviceId = deviceId;
+
   GetUiSetupMobileApiResponseBuilder();
 
   GetUiSetupMobileApiResponseBuilder get _$this {
@@ -194,6 +307,11 @@ class GetUiSetupMobileApiResponseBuilder
       _dashboardWidgets = _$v.dashboardWidgets?.toBuilder();
       _tabBarElements = _$v.tabBarElements?.toBuilder();
       _reports = _$v.reports?.toBuilder();
+      _updateAvailable = _$v.updateAvailable;
+      _updateRequired = _$v.updateRequired;
+      _updateVersion = _$v.updateVersion;
+      _updateUrl = _$v.updateUrl;
+      _deviceId = _$v.deviceId;
       _$v = null;
     }
     return this;
@@ -221,7 +339,12 @@ class GetUiSetupMobileApiResponseBuilder
               uiSetup: _uiSetup?.build(),
               dashboardWidgets: _dashboardWidgets?.build(),
               tabBarElements: _tabBarElements?.build(),
-              reports: _reports?.build());
+              reports: _reports?.build(),
+              updateAvailable: updateAvailable,
+              updateRequired: updateRequired,
+              updateVersion: updateVersion,
+              updateUrl: updateUrl,
+              deviceId: deviceId);
     } catch (_) {
       String _$failedField;
       try {
@@ -271,6 +394,11 @@ class _$GetUiSetupMobileApiResponseActions
       dashboardWidgets;
   final FieldDispatcher<BuiltList<MobileNavigationElement>> tabBarElements;
   final FieldDispatcher<BuiltList<MobileReport>> reports;
+  final FieldDispatcher<bool> updateAvailable;
+  final FieldDispatcher<bool> updateRequired;
+  final FieldDispatcher<String> updateVersion;
+  final FieldDispatcher<String> updateUrl;
+  final FieldDispatcher<String> deviceId;
 
   _$GetUiSetupMobileApiResponseActions._(this.$options)
       : $replace = $options.action<GetUiSetupMobileApiResponse>(
@@ -297,6 +425,25 @@ class _$GetUiSetupMobileApiResponseActions
             (p, b) => p?.tabBarElements = b),
         reports = $options.field<BuiltList<MobileReport>>('reports',
             (a) => a?.reports, (s) => s?.reports, (p, b) => p?.reports = b),
+        updateAvailable = $options.field<bool>(
+            'updateAvailable',
+            (a) => a?.updateAvailable,
+            (s) => s?.updateAvailable,
+            (p, b) => p?.updateAvailable = b),
+        updateRequired = $options.field<bool>(
+            'updateRequired',
+            (a) => a?.updateRequired,
+            (s) => s?.updateRequired,
+            (p, b) => p?.updateRequired = b),
+        updateVersion = $options.field<String>(
+            'updateVersion',
+            (a) => a?.updateVersion,
+            (s) => s?.updateVersion,
+            (p, b) => p?.updateVersion = b),
+        updateUrl = $options.field<String>('updateUrl', (a) => a?.updateUrl,
+            (s) => s?.updateUrl, (p, b) => p?.updateUrl = b),
+        deviceId = $options.field<String>('deviceId', (a) => a?.deviceId,
+            (s) => s?.deviceId, (p, b) => p?.deviceId = b),
         super._();
 
   factory _$GetUiSetupMobileApiResponseActions(
@@ -324,6 +471,11 @@ class _$GetUiSetupMobileApiResponseActions
         this.dashboardWidgets,
         this.tabBarElements,
         this.reports,
+        this.updateAvailable,
+        this.updateRequired,
+        this.updateVersion,
+        this.updateUrl,
+        this.deviceId,
       ]);
 
   @override
@@ -333,6 +485,11 @@ class _$GetUiSetupMobileApiResponseActions
     dashboardWidgets.$reducer(reducer);
     tabBarElements.$reducer(reducer);
     reports.$reducer(reducer);
+    updateAvailable.$reducer(reducer);
+    updateRequired.$reducer(reducer);
+    updateVersion.$reducer(reducer);
+    updateUrl.$reducer(reducer);
+    deviceId.$reducer(reducer);
   }
 
   @override

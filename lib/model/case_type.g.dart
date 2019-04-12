@@ -24,6 +24,18 @@ class _$CaseTypeSerializer implements StructuredSerializer<CaseType> {
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
+    if (object.orgId != null) {
+      result
+        ..add('orgId')
+        ..add(serializers.serialize(object.orgId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.bizUnitId != null) {
+      result
+        ..add('bizUnitId')
+        ..add(serializers.serialize(object.bizUnitId,
+            specifiedType: const FullType(String)));
+    }
     if (object.name != null) {
       result
         ..add('name')
@@ -35,6 +47,12 @@ class _$CaseTypeSerializer implements StructuredSerializer<CaseType> {
         ..add('active')
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
+    }
+    if (object.bizUnitName != null) {
+      result
+        ..add('bizUnitName')
+        ..add(serializers.serialize(object.bizUnitName,
+            specifiedType: const FullType(String)));
     }
 
     return result;
@@ -55,6 +73,14 @@ class _$CaseTypeSerializer implements StructuredSerializer<CaseType> {
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'orgId':
+          result.orgId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'bizUnitId':
+          result.bizUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -62,6 +88,10 @@ class _$CaseTypeSerializer implements StructuredSerializer<CaseType> {
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'bizUnitName':
+          result.bizUnitName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
       }
     }
@@ -74,14 +104,27 @@ class _$CaseType extends CaseType {
   @override
   final String id;
   @override
+  final String orgId;
+  @override
+  final String bizUnitId;
+  @override
   final String name;
   @override
   final bool active;
+  @override
+  final String bizUnitName;
 
   factory _$CaseType([void updates(CaseTypeBuilder b)]) =>
       (new CaseTypeBuilder()..update(updates)).build();
 
-  _$CaseType._({this.id, this.name, this.active}) : super._();
+  _$CaseType._(
+      {this.id,
+      this.orgId,
+      this.bizUnitId,
+      this.name,
+      this.active,
+      this.bizUnitName})
+      : super._();
 
   @override
   CaseType rebuild(void updates(CaseTypeBuilder b)) =>
@@ -95,21 +138,34 @@ class _$CaseType extends CaseType {
     if (identical(other, this)) return true;
     return other is CaseType &&
         id == other.id &&
+        orgId == other.orgId &&
+        bizUnitId == other.bizUnitId &&
         name == other.name &&
-        active == other.active;
+        active == other.active &&
+        bizUnitName == other.bizUnitName;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, id.hashCode), name.hashCode), active.hashCode));
+    return $jf($jc(
+        $jc(
+            $jc(
+                $jc($jc($jc(0, id.hashCode), orgId.hashCode),
+                    bizUnitId.hashCode),
+                name.hashCode),
+            active.hashCode),
+        bizUnitName.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CaseType')
           ..add('id', id)
+          ..add('orgId', orgId)
+          ..add('bizUnitId', bizUnitId)
           ..add('name', name)
-          ..add('active', active))
+          ..add('active', active)
+          ..add('bizUnitName', bizUnitName))
         .toString();
   }
 }
@@ -121,6 +177,14 @@ class CaseTypeBuilder implements Builder<CaseType, CaseTypeBuilder> {
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
 
+  String _orgId;
+  String get orgId => _$this._orgId;
+  set orgId(String orgId) => _$this._orgId = orgId;
+
+  String _bizUnitId;
+  String get bizUnitId => _$this._bizUnitId;
+  set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
+
   String _name;
   String get name => _$this._name;
   set name(String name) => _$this._name = name;
@@ -129,13 +193,20 @@ class CaseTypeBuilder implements Builder<CaseType, CaseTypeBuilder> {
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
+  String _bizUnitName;
+  String get bizUnitName => _$this._bizUnitName;
+  set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
+
   CaseTypeBuilder();
 
   CaseTypeBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
+      _orgId = _$v.orgId;
+      _bizUnitId = _$v.bizUnitId;
       _name = _$v.name;
       _active = _$v.active;
+      _bizUnitName = _$v.bizUnitName;
       _$v = null;
     }
     return this;
@@ -156,8 +227,14 @@ class CaseTypeBuilder implements Builder<CaseType, CaseTypeBuilder> {
 
   @override
   _$CaseType build() {
-    final _$result =
-        _$v ?? new _$CaseType._(id: id, name: name, active: active);
+    final _$result = _$v ??
+        new _$CaseType._(
+            id: id,
+            orgId: orgId,
+            bizUnitId: bizUnitId,
+            name: name,
+            active: active,
+            bizUnitName: bizUnitName);
     replace(_$result);
     return _$result;
   }
@@ -181,17 +258,29 @@ class _$CaseTypeActions extends CaseTypeActions {
 
   final ActionDispatcher<CaseType> $replace;
   final FieldDispatcher<String> id;
+  final FieldDispatcher<String> orgId;
+  final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> active;
+  final FieldDispatcher<String> bizUnitName;
 
   _$CaseTypeActions._(this.$options)
       : $replace = $options.action<CaseType>('\$replace', (a) => a?.$replace),
         id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
+        orgId = $options.field<String>(
+            'orgId', (a) => a?.orgId, (s) => s?.orgId, (p, b) => p?.orgId = b),
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
         name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
+        bizUnitName = $options.field<String>(
+            'bizUnitName',
+            (a) => a?.bizUnitName,
+            (s) => s?.bizUnitName,
+            (p, b) => p?.bizUnitName = b),
         super._();
 
   factory _$CaseTypeActions(CaseTypeActionsOptions options) =>
@@ -209,16 +298,22 @@ class _$CaseTypeActions extends CaseTypeActions {
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.id,
+        this.orgId,
+        this.bizUnitId,
         this.name,
         this.active,
+        this.bizUnitName,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     id.$reducer(reducer);
+    orgId.$reducer(reducer);
+    bizUnitId.$reducer(reducer);
     name.$reducer(reducer);
     active.$reducer(reducer);
+    bizUnitName.$reducer(reducer);
   }
 
   @override

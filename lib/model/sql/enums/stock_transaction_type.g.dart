@@ -24,6 +24,10 @@ const StockTransactionType _$wirePKG_SHIPPED =
     const StockTransactionType._('PKG_SHIPPED');
 const StockTransactionType _$wirePKG_DELIVERED =
     const StockTransactionType._('PKG_DELIVERED');
+const StockTransactionType _$wireKIT_CONTAINER_ASSIGNED =
+    const StockTransactionType._('KIT_CONTAINER_ASSIGNED');
+const StockTransactionType _$wireKIT_CONTAINER_UNASSIGNED =
+    const StockTransactionType._('KIT_CONTAINER_UNASSIGNED');
 const StockTransactionType _$wireKIT_COMPONENT_STOCK_ASSIGNED =
     const StockTransactionType._('KIT_COMPONENT_STOCK_ASSIGNED');
 const StockTransactionType _$wireKIT_COMPONENT_STOCK_UNASSIGNED =
@@ -76,6 +80,12 @@ const StockTransactionType _$wireINSPECTED_CONFIRMED =
     const StockTransactionType._('INSPECTED_CONFIRMED');
 const StockTransactionType _$wireVIRTUAL_STOCK_REALIZED =
     const StockTransactionType._('VIRTUAL_STOCK_REALIZED');
+const StockTransactionType _$wireKIT_CONTAINER_INSPECTED =
+    const StockTransactionType._('KIT_CONTAINER_INSPECTED');
+const StockTransactionType _$wireTRAY_INSPECTED =
+    const StockTransactionType._('TRAY_INSPECTED');
+const StockTransactionType _$wireCASE_TRANSITION_TO_POST_OP =
+    const StockTransactionType._('CASE_TRANSITION_TO_POST_OP');
 const StockTransactionType _$wirePKG_CONFIRMED =
     const StockTransactionType._('PKG_CONFIRMED');
 const StockTransactionType _$wireTRAY_EVAL =
@@ -165,6 +175,10 @@ StockTransactionType _$stockTransactionTypeValueOf(String name) {
       return _$wirePKG_SHIPPED;
     case 'PKG_DELIVERED':
       return _$wirePKG_DELIVERED;
+    case 'KIT_CONTAINER_ASSIGNED':
+      return _$wireKIT_CONTAINER_ASSIGNED;
+    case 'KIT_CONTAINER_UNASSIGNED':
+      return _$wireKIT_CONTAINER_UNASSIGNED;
     case 'KIT_COMPONENT_STOCK_ASSIGNED':
       return _$wireKIT_COMPONENT_STOCK_ASSIGNED;
     case 'KIT_COMPONENT_STOCK_UNASSIGNED':
@@ -217,6 +231,12 @@ StockTransactionType _$stockTransactionTypeValueOf(String name) {
       return _$wireINSPECTED_CONFIRMED;
     case 'VIRTUAL_STOCK_REALIZED':
       return _$wireVIRTUAL_STOCK_REALIZED;
+    case 'KIT_CONTAINER_INSPECTED':
+      return _$wireKIT_CONTAINER_INSPECTED;
+    case 'TRAY_INSPECTED':
+      return _$wireTRAY_INSPECTED;
+    case 'CASE_TRANSITION_TO_POST_OP':
+      return _$wireCASE_TRANSITION_TO_POST_OP;
     case 'PKG_CONFIRMED':
       return _$wirePKG_CONFIRMED;
     case 'TRAY_EVAL':
@@ -305,6 +325,8 @@ final BuiltSet<StockTransactionType> _$stockTransactionTypeValues =
   _$wirePICK_STOCK_SWAPPED,
   _$wirePKG_SHIPPED,
   _$wirePKG_DELIVERED,
+  _$wireKIT_CONTAINER_ASSIGNED,
+  _$wireKIT_CONTAINER_UNASSIGNED,
   _$wireKIT_COMPONENT_STOCK_ASSIGNED,
   _$wireKIT_COMPONENT_STOCK_UNASSIGNED,
   _$wireAUDIT_COUNTED,
@@ -331,6 +353,9 @@ final BuiltSet<StockTransactionType> _$stockTransactionTypeValues =
   _$wireINSPECTED_STOCK_SWAPPED,
   _$wireINSPECTED_CONFIRMED,
   _$wireVIRTUAL_STOCK_REALIZED,
+  _$wireKIT_CONTAINER_INSPECTED,
+  _$wireTRAY_INSPECTED,
+  _$wireCASE_TRANSITION_TO_POST_OP,
   _$wirePKG_CONFIRMED,
   _$wireTRAY_EVAL,
   _$wireKIT_EVAL,

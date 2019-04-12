@@ -24,6 +24,9 @@ abstract class BuildUsageRestockPlanApiDisplayRule implements Built<BuildUsageRe
   bool get allowUserOverrideRestockByDateShippingService;
   
   @nullable
+  bool get allowOverridePrice;
+  
+  @nullable
   bool get poRequired;
   
   ////////////////////////////////
@@ -53,6 +56,8 @@ abstract class BuildUsageRestockPlanApiDisplayRuleActions extends ModelActions<B
   FieldDispatcher<bool> get allowUserOverrideRestockDeliverTo;
   
   FieldDispatcher<bool> get allowUserOverrideRestockByDateShippingService;
+  
+  FieldDispatcher<bool> get allowOverridePrice;
   
   FieldDispatcher<bool> get poRequired;
   

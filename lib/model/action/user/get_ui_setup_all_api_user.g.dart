@@ -66,11 +66,35 @@ class _$GetUiSetupAllApiUserSerializer
         ..add(serializers.serialize(object.timeZone,
             specifiedType: const FullType(String)));
     }
+    if (object.locale != null) {
+      result
+        ..add('locale')
+        ..add(serializers.serialize(object.locale,
+            specifiedType: const FullType(MoveLocale)));
+    }
+    if (object.dateFormat != null) {
+      result
+        ..add('dateFormat')
+        ..add(serializers.serialize(object.dateFormat,
+            specifiedType: const FullType(MoveDateRegion)));
+    }
     if (object.contact != null) {
       result
         ..add('contact')
         ..add(serializers.serialize(object.contact,
             specifiedType: const FullType(Contact)));
+    }
+    if (object.ssoId != null) {
+      result
+        ..add('ssoId')
+        ..add(serializers.serialize(object.ssoId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.ssoName != null) {
+      result
+        ..add('ssoName')
+        ..add(serializers.serialize(object.ssoName,
+            specifiedType: const FullType(String)));
     }
     if (object.ssoType != null) {
       result
@@ -78,11 +102,35 @@ class _$GetUiSetupAllApiUserSerializer
         ..add(serializers.serialize(object.ssoType,
             specifiedType: const FullType(SSOType)));
     }
-    if (object.ssoId != null) {
+    if (object.mfaEnabled != null) {
       result
-        ..add('ssoId')
-        ..add(serializers.serialize(object.ssoId,
+        ..add('mfaEnabled')
+        ..add(serializers.serialize(object.mfaEnabled,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.mfaId != null) {
+      result
+        ..add('mfaId')
+        ..add(serializers.serialize(object.mfaId,
             specifiedType: const FullType(String)));
+    }
+    if (object.mfaRef != null) {
+      result
+        ..add('mfaRef')
+        ..add(serializers.serialize(object.mfaRef,
+            specifiedType: const FullType(String)));
+    }
+    if (object.mfaType != null) {
+      result
+        ..add('mfaType')
+        ..add(serializers.serialize(object.mfaType,
+            specifiedType: const FullType(MfaType)));
+    }
+    if (object.defaultReceivingAtLocation != null) {
+      result
+        ..add('defaultReceivingAtLocation')
+        ..add(serializers.serialize(object.defaultReceivingAtLocation,
+            specifiedType: const FullType(Location)));
     }
     if (object.orgInfo != null) {
       result
@@ -176,17 +224,50 @@ class _$GetUiSetupAllApiUserSerializer
           result.timeZone = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'locale':
+          result.locale = serializers.deserialize(value,
+              specifiedType: const FullType(MoveLocale)) as MoveLocale;
+          break;
+        case 'dateFormat':
+          result.dateFormat = serializers.deserialize(value,
+              specifiedType: const FullType(MoveDateRegion)) as MoveDateRegion;
+          break;
         case 'contact':
           result.contact.replace(serializers.deserialize(value,
               specifiedType: const FullType(Contact)) as Contact);
+          break;
+        case 'ssoId':
+          result.ssoId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'ssoName':
+          result.ssoName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'ssoType':
           result.ssoType = serializers.deserialize(value,
               specifiedType: const FullType(SSOType)) as SSOType;
           break;
-        case 'ssoId':
-          result.ssoId = serializers.deserialize(value,
+        case 'mfaEnabled':
+          result.mfaEnabled = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'mfaId':
+          result.mfaId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'mfaRef':
+          result.mfaRef = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'mfaType':
+          result.mfaType = serializers.deserialize(value,
+              specifiedType: const FullType(MfaType)) as MfaType;
+          break;
+        case 'defaultReceivingAtLocation':
+          result.defaultReceivingAtLocation.replace(serializers.deserialize(
+              value,
+              specifiedType: const FullType(Location)) as Location);
           break;
         case 'orgInfo':
           result.orgInfo.replace(serializers.deserialize(value,
@@ -246,11 +327,27 @@ class _$GetUiSetupAllApiUser extends GetUiSetupAllApiUser {
   @override
   final String timeZone;
   @override
+  final MoveLocale locale;
+  @override
+  final MoveDateRegion dateFormat;
+  @override
   final Contact contact;
+  @override
+  final String ssoId;
+  @override
+  final String ssoName;
   @override
   final SSOType ssoType;
   @override
-  final String ssoId;
+  final bool mfaEnabled;
+  @override
+  final String mfaId;
+  @override
+  final String mfaRef;
+  @override
+  final MfaType mfaType;
+  @override
+  final Location defaultReceivingAtLocation;
   @override
   final GetUiSetupAllApiOrgInfo orgInfo;
   @override
@@ -280,9 +377,17 @@ class _$GetUiSetupAllApiUser extends GetUiSetupAllApiUser {
       this.orgId,
       this.userPerspective,
       this.timeZone,
+      this.locale,
+      this.dateFormat,
       this.contact,
-      this.ssoType,
       this.ssoId,
+      this.ssoName,
+      this.ssoType,
+      this.mfaEnabled,
+      this.mfaId,
+      this.mfaRef,
+      this.mfaType,
+      this.defaultReceivingAtLocation,
       this.orgInfo,
       this.userPermissions,
       this.systemAdmin,
@@ -312,9 +417,17 @@ class _$GetUiSetupAllApiUser extends GetUiSetupAllApiUser {
         orgId == other.orgId &&
         userPerspective == other.userPerspective &&
         timeZone == other.timeZone &&
+        locale == other.locale &&
+        dateFormat == other.dateFormat &&
         contact == other.contact &&
-        ssoType == other.ssoType &&
         ssoId == other.ssoId &&
+        ssoName == other.ssoName &&
+        ssoType == other.ssoType &&
+        mfaEnabled == other.mfaEnabled &&
+        mfaId == other.mfaId &&
+        mfaRef == other.mfaRef &&
+        mfaType == other.mfaType &&
+        defaultReceivingAtLocation == other.defaultReceivingAtLocation &&
         orgInfo == other.orgInfo &&
         userPermissions == other.userPermissions &&
         systemAdmin == other.systemAdmin &&
@@ -345,22 +458,18 @@ class _$GetUiSetupAllApiUser extends GetUiSetupAllApiUser {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            id
-                                                                                .hashCode),
-                                                                        displayName
-                                                                            .hashCode),
-                                                                    linkedId
-                                                                        .hashCode),
-                                                                erpUserId
-                                                                    .hashCode),
-                                                            orgId.hashCode),
-                                                        userPerspective
-                                                            .hashCode),
-                                                    timeZone.hashCode),
-                                                contact.hashCode),
-                                            ssoType.hashCode),
-                                        ssoId.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), displayName.hashCode), linkedId.hashCode), erpUserId.hashCode), orgId.hashCode), userPerspective.hashCode), timeZone.hashCode),
+                                                                                locale.hashCode),
+                                                                            dateFormat.hashCode),
+                                                                        contact.hashCode),
+                                                                    ssoId.hashCode),
+                                                                ssoName.hashCode),
+                                                            ssoType.hashCode),
+                                                        mfaEnabled.hashCode),
+                                                    mfaId.hashCode),
+                                                mfaRef.hashCode),
+                                            mfaType.hashCode),
+                                        defaultReceivingAtLocation.hashCode),
                                     orgInfo.hashCode),
                                 userPermissions.hashCode),
                             systemAdmin.hashCode),
@@ -381,9 +490,17 @@ class _$GetUiSetupAllApiUser extends GetUiSetupAllApiUser {
           ..add('orgId', orgId)
           ..add('userPerspective', userPerspective)
           ..add('timeZone', timeZone)
+          ..add('locale', locale)
+          ..add('dateFormat', dateFormat)
           ..add('contact', contact)
-          ..add('ssoType', ssoType)
           ..add('ssoId', ssoId)
+          ..add('ssoName', ssoName)
+          ..add('ssoType', ssoType)
+          ..add('mfaEnabled', mfaEnabled)
+          ..add('mfaId', mfaId)
+          ..add('mfaRef', mfaRef)
+          ..add('mfaType', mfaType)
+          ..add('defaultReceivingAtLocation', defaultReceivingAtLocation)
           ..add('orgInfo', orgInfo)
           ..add('userPermissions', userPermissions)
           ..add('systemAdmin', systemAdmin)
@@ -429,17 +546,51 @@ class GetUiSetupAllApiUserBuilder
   String get timeZone => _$this._timeZone;
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
+  MoveLocale _locale;
+  MoveLocale get locale => _$this._locale;
+  set locale(MoveLocale locale) => _$this._locale = locale;
+
+  MoveDateRegion _dateFormat;
+  MoveDateRegion get dateFormat => _$this._dateFormat;
+  set dateFormat(MoveDateRegion dateFormat) => _$this._dateFormat = dateFormat;
+
   ContactBuilder _contact;
   ContactBuilder get contact => _$this._contact ??= new ContactBuilder();
   set contact(ContactBuilder contact) => _$this._contact = contact;
+
+  String _ssoId;
+  String get ssoId => _$this._ssoId;
+  set ssoId(String ssoId) => _$this._ssoId = ssoId;
+
+  String _ssoName;
+  String get ssoName => _$this._ssoName;
+  set ssoName(String ssoName) => _$this._ssoName = ssoName;
 
   SSOType _ssoType;
   SSOType get ssoType => _$this._ssoType;
   set ssoType(SSOType ssoType) => _$this._ssoType = ssoType;
 
-  String _ssoId;
-  String get ssoId => _$this._ssoId;
-  set ssoId(String ssoId) => _$this._ssoId = ssoId;
+  bool _mfaEnabled;
+  bool get mfaEnabled => _$this._mfaEnabled;
+  set mfaEnabled(bool mfaEnabled) => _$this._mfaEnabled = mfaEnabled;
+
+  String _mfaId;
+  String get mfaId => _$this._mfaId;
+  set mfaId(String mfaId) => _$this._mfaId = mfaId;
+
+  String _mfaRef;
+  String get mfaRef => _$this._mfaRef;
+  set mfaRef(String mfaRef) => _$this._mfaRef = mfaRef;
+
+  MfaType _mfaType;
+  MfaType get mfaType => _$this._mfaType;
+  set mfaType(MfaType mfaType) => _$this._mfaType = mfaType;
+
+  LocationBuilder _defaultReceivingAtLocation;
+  LocationBuilder get defaultReceivingAtLocation =>
+      _$this._defaultReceivingAtLocation ??= new LocationBuilder();
+  set defaultReceivingAtLocation(LocationBuilder defaultReceivingAtLocation) =>
+      _$this._defaultReceivingAtLocation = defaultReceivingAtLocation;
 
   GetUiSetupAllApiOrgInfoBuilder _orgInfo;
   GetUiSetupAllApiOrgInfoBuilder get orgInfo =>
@@ -490,9 +641,17 @@ class GetUiSetupAllApiUserBuilder
       _orgId = _$v.orgId;
       _userPerspective = _$v.userPerspective;
       _timeZone = _$v.timeZone;
+      _locale = _$v.locale;
+      _dateFormat = _$v.dateFormat;
       _contact = _$v.contact?.toBuilder();
-      _ssoType = _$v.ssoType;
       _ssoId = _$v.ssoId;
+      _ssoName = _$v.ssoName;
+      _ssoType = _$v.ssoType;
+      _mfaEnabled = _$v.mfaEnabled;
+      _mfaId = _$v.mfaId;
+      _mfaRef = _$v.mfaRef;
+      _mfaType = _$v.mfaType;
+      _defaultReceivingAtLocation = _$v.defaultReceivingAtLocation?.toBuilder();
       _orgInfo = _$v.orgInfo?.toBuilder();
       _userPermissions = _$v.userPermissions?.toBuilder();
       _systemAdmin = _$v.systemAdmin?.toBuilder();
@@ -532,9 +691,17 @@ class GetUiSetupAllApiUserBuilder
               orgId: orgId,
               userPerspective: userPerspective,
               timeZone: timeZone,
+              locale: locale,
+              dateFormat: dateFormat,
               contact: _contact?.build(),
-              ssoType: ssoType,
               ssoId: ssoId,
+              ssoName: ssoName,
+              ssoType: ssoType,
+              mfaEnabled: mfaEnabled,
+              mfaId: mfaId,
+              mfaRef: mfaRef,
+              mfaType: mfaType,
+              defaultReceivingAtLocation: _defaultReceivingAtLocation?.build(),
               orgInfo: _orgInfo?.build(),
               userPermissions: _userPermissions?.build(),
               systemAdmin: _systemAdmin?.build(),
@@ -549,6 +716,8 @@ class GetUiSetupAllApiUserBuilder
         _$failedField = 'contact';
         _contact?.build();
 
+        _$failedField = 'defaultReceivingAtLocation';
+        _defaultReceivingAtLocation?.build();
         _$failedField = 'orgInfo';
         _orgInfo?.build();
         _$failedField = 'userPermissions';
@@ -602,9 +771,17 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   final FieldDispatcher<String> orgId;
   final FieldDispatcher<UserPerspective> userPerspective;
   final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<MoveLocale> locale;
+  final FieldDispatcher<MoveDateRegion> dateFormat;
   final ContactActions contact;
-  final FieldDispatcher<SSOType> ssoType;
   final FieldDispatcher<String> ssoId;
+  final FieldDispatcher<String> ssoName;
+  final FieldDispatcher<SSOType> ssoType;
+  final FieldDispatcher<bool> mfaEnabled;
+  final FieldDispatcher<String> mfaId;
+  final FieldDispatcher<String> mfaRef;
+  final FieldDispatcher<MfaType> mfaType;
+  final LocationActions defaultReceivingAtLocation;
   final GetUiSetupAllApiOrgInfoActions orgInfo;
   final GetUiSetupAllApiUserPermissionsActions userPermissions;
   final SystemAdminActions systemAdmin;
@@ -637,6 +814,13 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
             (p, b) => p?.userPerspective = b),
         timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        locale = $options.field<MoveLocale>('locale', (a) => a?.locale,
+            (s) => s?.locale, (p, b) => p?.locale = b),
+        dateFormat = $options.field<MoveDateRegion>(
+            'dateFormat',
+            (a) => a?.dateFormat,
+            (s) => s?.dateFormat,
+            (p, b) => p?.dateFormat = b),
         contact = ContactActions(() =>
             $options.stateful<Contact, ContactBuilder, ContactActions>(
                 'contact',
@@ -644,10 +828,28 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
                 (s) => s?.contact,
                 (b) => b?.contact,
                 (parent, builder) => parent?.contact = builder)),
-        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
-            (s) => s?.ssoType, (p, b) => p?.ssoType = b),
         ssoId = $options.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
+        ssoName = $options.field<String>('ssoName', (a) => a?.ssoName,
+            (s) => s?.ssoName, (p, b) => p?.ssoName = b),
+        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
+            (s) => s?.ssoType, (p, b) => p?.ssoType = b),
+        mfaEnabled = $options.field<bool>('mfaEnabled', (a) => a?.mfaEnabled,
+            (s) => s?.mfaEnabled, (p, b) => p?.mfaEnabled = b),
+        mfaId = $options.field<String>(
+            'mfaId', (a) => a?.mfaId, (s) => s?.mfaId, (p, b) => p?.mfaId = b),
+        mfaRef = $options.field<String>('mfaRef', (a) => a?.mfaRef,
+            (s) => s?.mfaRef, (p, b) => p?.mfaRef = b),
+        mfaType = $options.field<MfaType>('mfaType', (a) => a?.mfaType,
+            (s) => s?.mfaType, (p, b) => p?.mfaType = b),
+        defaultReceivingAtLocation = LocationActions(() =>
+            $options.stateful<Location, LocationBuilder, LocationActions>(
+                'defaultReceivingAtLocation',
+                (a) => a.defaultReceivingAtLocation,
+                (s) => s?.defaultReceivingAtLocation,
+                (b) => b?.defaultReceivingAtLocation,
+                (parent, builder) =>
+                    parent?.defaultReceivingAtLocation = builder)),
         orgInfo = GetUiSetupAllApiOrgInfoActions(() => $options.stateful<
                 GetUiSetupAllApiOrgInfo,
                 GetUiSetupAllApiOrgInfoBuilder,
@@ -721,6 +923,7 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.contact,
+        this.defaultReceivingAtLocation,
         this.orgInfo,
         this.userPermissions,
         this.systemAdmin,
@@ -743,8 +946,15 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
         this.orgId,
         this.userPerspective,
         this.timeZone,
-        this.ssoType,
+        this.locale,
+        this.dateFormat,
         this.ssoId,
+        this.ssoName,
+        this.ssoType,
+        this.mfaEnabled,
+        this.mfaId,
+        this.mfaRef,
+        this.mfaType,
       ]);
 
   @override
@@ -757,9 +967,17 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
     orgId.$reducer(reducer);
     userPerspective.$reducer(reducer);
     timeZone.$reducer(reducer);
+    locale.$reducer(reducer);
+    dateFormat.$reducer(reducer);
     contact.$reducer(reducer);
-    ssoType.$reducer(reducer);
     ssoId.$reducer(reducer);
+    ssoName.$reducer(reducer);
+    ssoType.$reducer(reducer);
+    mfaEnabled.$reducer(reducer);
+    mfaId.$reducer(reducer);
+    mfaRef.$reducer(reducer);
+    mfaType.$reducer(reducer);
+    defaultReceivingAtLocation.$reducer(reducer);
     orgInfo.$reducer(reducer);
     userPermissions.$reducer(reducer);
     systemAdmin.$reducer(reducer);
@@ -774,6 +992,7 @@ class _$GetUiSetupAllApiUserActions extends GetUiSetupAllApiUserActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     contact.$middleware(middleware);
+    defaultReceivingAtLocation.$middleware(middleware);
     orgInfo.$middleware(middleware);
     userPermissions.$middleware(middleware);
     systemAdmin.$middleware(middleware);

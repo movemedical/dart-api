@@ -6,6 +6,7 @@ import 'dart:core';
 import 'package:movemedical_api/model/action/inventory/restock/build_usage_restock_plan_api_restock_by_type.dart';
 import 'package:movemedical_api/model/shipping_service.dart';
 import 'package:movemedical_api/model/location.dart';
+import 'package:movemedical_api/model/customer_address.dart';
 import 'package:movemedical_api/model/sql/enums/stock_container_type.dart';
 import 'package:movemedical_api/model/action/inventory/restock/build_usage_restock_plan_api_display_rule.dart';
 
@@ -33,6 +34,9 @@ abstract class BuildUsageRestockPlanApiRestockItem implements Built<BuildUsageRe
   
   @nullable
   Location get replenishLocation;
+  
+  @nullable
+  CustomerAddress get deliverToAddress;
   
   @nullable
   StockContainerType get replenishContainerType;
@@ -74,6 +78,8 @@ abstract class BuildUsageRestockPlanApiRestockItemActions extends ModelActions<B
   ShippingServiceActions get shippingService;
   
   LocationActions get replenishLocation;
+  
+  CustomerAddressActions get deliverToAddress;
   
   FieldDispatcher<StockContainerType> get replenishContainerType;
   

@@ -56,6 +56,18 @@ class _$RequestRollForwardReportApiRequestSerializer
         ..add(serializers.serialize(object.locationId,
             specifiedType: const FullType(String)));
     }
+    if (object.responsiblePartyType != null) {
+      result
+        ..add('responsiblePartyType')
+        ..add(serializers.serialize(object.responsiblePartyType,
+            specifiedType: const FullType(ResponsiblePartyType)));
+    }
+    if (object.responsiblePartyId != null) {
+      result
+        ..add('responsiblePartyId')
+        ..add(serializers.serialize(object.responsiblePartyId,
+            specifiedType: const FullType(String)));
+    }
     if (object.itemId != null) {
       result
         ..add('itemId')
@@ -131,6 +143,15 @@ class _$RequestRollForwardReportApiRequestSerializer
           result.locationId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'responsiblePartyType':
+          result.responsiblePartyType = serializers.deserialize(value,
+                  specifiedType: const FullType(ResponsiblePartyType))
+              as ResponsiblePartyType;
+          break;
+        case 'responsiblePartyId':
+          result.responsiblePartyId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'itemId':
           result.itemId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -175,6 +196,10 @@ class _$RequestRollForwardReportApiRequest
   @override
   final String locationId;
   @override
+  final ResponsiblePartyType responsiblePartyType;
+  @override
+  final String responsiblePartyId;
+  @override
   final String itemId;
   @override
   final String lotId;
@@ -198,6 +223,8 @@ class _$RequestRollForwardReportApiRequest
       this.displayType,
       this.locationType,
       this.locationId,
+      this.responsiblePartyType,
+      this.responsiblePartyId,
       this.itemId,
       this.lotId,
       this.serialId,
@@ -224,6 +251,8 @@ class _$RequestRollForwardReportApiRequest
         displayType == other.displayType &&
         locationType == other.locationType &&
         locationId == other.locationId &&
+        responsiblePartyType == other.responsiblePartyType &&
+        responsiblePartyId == other.responsiblePartyId &&
         itemId == other.itemId &&
         lotId == other.lotId &&
         serialId == other.serialId &&
@@ -243,11 +272,15 @@ class _$RequestRollForwardReportApiRequest
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, docReport.hashCode),
-                                            format.hashCode),
-                                        displayType.hashCode),
-                                    locationType.hashCode),
-                                locationId.hashCode),
+                                        $jc(
+                                            $jc(
+                                                $jc($jc(0, docReport.hashCode),
+                                                    format.hashCode),
+                                                displayType.hashCode),
+                                            locationType.hashCode),
+                                        locationId.hashCode),
+                                    responsiblePartyType.hashCode),
+                                responsiblePartyId.hashCode),
                             itemId.hashCode),
                         lotId.hashCode),
                     serialId.hashCode),
@@ -264,6 +297,8 @@ class _$RequestRollForwardReportApiRequest
           ..add('displayType', displayType)
           ..add('locationType', locationType)
           ..add('locationId', locationId)
+          ..add('responsiblePartyType', responsiblePartyType)
+          ..add('responsiblePartyId', responsiblePartyId)
           ..add('itemId', itemId)
           ..add('lotId', lotId)
           ..add('serialId', serialId)
@@ -304,6 +339,16 @@ class RequestRollForwardReportApiRequestBuilder
   String get locationId => _$this._locationId;
   set locationId(String locationId) => _$this._locationId = locationId;
 
+  ResponsiblePartyType _responsiblePartyType;
+  ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+  set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
+      _$this._responsiblePartyType = responsiblePartyType;
+
+  String _responsiblePartyId;
+  String get responsiblePartyId => _$this._responsiblePartyId;
+  set responsiblePartyId(String responsiblePartyId) =>
+      _$this._responsiblePartyId = responsiblePartyId;
+
   String _itemId;
   String get itemId => _$this._itemId;
   set itemId(String itemId) => _$this._itemId = itemId;
@@ -337,6 +382,8 @@ class RequestRollForwardReportApiRequestBuilder
       _displayType = _$v.displayType;
       _locationType = _$v.locationType;
       _locationId = _$v.locationId;
+      _responsiblePartyType = _$v.responsiblePartyType;
+      _responsiblePartyId = _$v.responsiblePartyId;
       _itemId = _$v.itemId;
       _lotId = _$v.lotId;
       _serialId = _$v.serialId;
@@ -372,6 +419,8 @@ class RequestRollForwardReportApiRequestBuilder
               displayType: displayType,
               locationType: locationType,
               locationId: locationId,
+              responsiblePartyType: responsiblePartyType,
+              responsiblePartyId: responsiblePartyId,
               itemId: itemId,
               lotId: lotId,
               serialId: serialId,
@@ -421,6 +470,8 @@ class _$RequestRollForwardReportApiRequestActions
   final FieldDispatcher<DocReportDisplayType> displayType;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> locationId;
+  final FieldDispatcher<ResponsiblePartyType> responsiblePartyType;
+  final FieldDispatcher<String> responsiblePartyId;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<String> lotId;
   final FieldDispatcher<String> serialId;
@@ -454,6 +505,16 @@ class _$RequestRollForwardReportApiRequestActions
             (p, b) => p?.locationType = b),
         locationId = $options.field<String>('locationId', (a) => a?.locationId,
             (s) => s?.locationId, (p, b) => p?.locationId = b),
+        responsiblePartyType = $options.field<ResponsiblePartyType>(
+            'responsiblePartyType',
+            (a) => a?.responsiblePartyType,
+            (s) => s?.responsiblePartyType,
+            (p, b) => p?.responsiblePartyType = b),
+        responsiblePartyId = $options.field<String>(
+            'responsiblePartyId',
+            (a) => a?.responsiblePartyId,
+            (s) => s?.responsiblePartyId,
+            (p, b) => p?.responsiblePartyId = b),
         itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         lotId = $options.field<String>(
@@ -495,6 +556,8 @@ class _$RequestRollForwardReportApiRequestActions
         this.displayType,
         this.locationType,
         this.locationId,
+        this.responsiblePartyType,
+        this.responsiblePartyId,
         this.itemId,
         this.lotId,
         this.serialId,
@@ -511,6 +574,8 @@ class _$RequestRollForwardReportApiRequestActions
     displayType.$reducer(reducer);
     locationType.$reducer(reducer);
     locationId.$reducer(reducer);
+    responsiblePartyType.$reducer(reducer);
+    responsiblePartyId.$reducer(reducer);
     itemId.$reducer(reducer);
     lotId.$reducer(reducer);
     serialId.$reducer(reducer);

@@ -12,7 +12,7 @@ abstract class FacilityUpdatedPushMessage implements Built<FacilityUpdatedPushMe
   ////////////////////////////////
   
   @nullable
-  String get auditId;
+  String get facilityId;
   
   ////////////////////////////////
   /// Constructors
@@ -34,7 +34,7 @@ abstract class FacilityUpdatedPushMessageActions extends ModelActions<FacilityUp
   /// Fields
   ////////////////////////////////
   
-  FieldDispatcher<String> get auditId;
+  FieldDispatcher<String> get facilityId;
   
   ////////////////////////////////
   /// Constructors

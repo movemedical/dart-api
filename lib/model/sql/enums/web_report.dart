@@ -23,6 +23,7 @@ class WebReport extends EnumClass {
   static const WebReport CREDIT_HOLD = _$wireCREDIT_HOLD;
   static const WebReport ORDER_PRINTOUT = _$wireORDER_PRINTOUT;
   static const WebReport PROOF_OF_DELIVERY = _$wirePROOF_OF_DELIVERY;
+  static const WebReport CONSIGNMENT_LOAN_EXPORT = _$wireCONSIGNMENT_LOAN_EXPORT;
   
   ////////////////////////////////
   /// Constructor

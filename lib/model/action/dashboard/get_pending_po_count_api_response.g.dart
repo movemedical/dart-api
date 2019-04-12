@@ -32,6 +32,12 @@ class _$GetPendingPoCountApiResponseSerializer
         ..add(serializers.serialize(object.count,
             specifiedType: const FullType(int)));
     }
+    if (object.totalAmount != null) {
+      result
+        ..add('totalAmount')
+        ..add(serializers.serialize(object.totalAmount,
+            specifiedType: const FullType(double)));
+    }
 
     return result;
   }
@@ -52,6 +58,10 @@ class _$GetPendingPoCountApiResponseSerializer
           result.count = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'totalAmount':
+          result.totalAmount = serializers.deserialize(value,
+              specifiedType: const FullType(double)) as double;
+          break;
       }
     }
 
@@ -62,12 +72,14 @@ class _$GetPendingPoCountApiResponseSerializer
 class _$GetPendingPoCountApiResponse extends GetPendingPoCountApiResponse {
   @override
   final int count;
+  @override
+  final double totalAmount;
 
   factory _$GetPendingPoCountApiResponse(
           [void updates(GetPendingPoCountApiResponseBuilder b)]) =>
       (new GetPendingPoCountApiResponseBuilder()..update(updates)).build();
 
-  _$GetPendingPoCountApiResponse._({this.count}) : super._();
+  _$GetPendingPoCountApiResponse._({this.count, this.totalAmount}) : super._();
 
   @override
   GetPendingPoCountApiResponse rebuild(
@@ -81,18 +93,21 @@ class _$GetPendingPoCountApiResponse extends GetPendingPoCountApiResponse {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GetPendingPoCountApiResponse && count == other.count;
+    return other is GetPendingPoCountApiResponse &&
+        count == other.count &&
+        totalAmount == other.totalAmount;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, count.hashCode));
+    return $jf($jc($jc(0, count.hashCode), totalAmount.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetPendingPoCountApiResponse')
-          ..add('count', count))
+          ..add('count', count)
+          ..add('totalAmount', totalAmount))
         .toString();
   }
 }
@@ -107,11 +122,16 @@ class GetPendingPoCountApiResponseBuilder
   int get count => _$this._count;
   set count(int count) => _$this._count = count;
 
+  double _totalAmount;
+  double get totalAmount => _$this._totalAmount;
+  set totalAmount(double totalAmount) => _$this._totalAmount = totalAmount;
+
   GetPendingPoCountApiResponseBuilder();
 
   GetPendingPoCountApiResponseBuilder get _$this {
     if (_$v != null) {
       _count = _$v.count;
+      _totalAmount = _$v.totalAmount;
       _$v = null;
     }
     return this;
@@ -132,7 +152,9 @@ class GetPendingPoCountApiResponseBuilder
 
   @override
   _$GetPendingPoCountApiResponse build() {
-    final _$result = _$v ?? new _$GetPendingPoCountApiResponse._(count: count);
+    final _$result = _$v ??
+        new _$GetPendingPoCountApiResponse._(
+            count: count, totalAmount: totalAmount);
     replace(_$result);
     return _$result;
   }
@@ -161,12 +183,18 @@ class _$GetPendingPoCountApiResponseActions
 
   final ActionDispatcher<GetPendingPoCountApiResponse> $replace;
   final FieldDispatcher<int> count;
+  final FieldDispatcher<double> totalAmount;
 
   _$GetPendingPoCountApiResponseActions._(this.$options)
       : $replace = $options.action<GetPendingPoCountApiResponse>(
             '\$replace', (a) => a?.$replace),
         count = $options.field<int>(
             'count', (a) => a?.count, (s) => s?.count, (p, b) => p?.count = b),
+        totalAmount = $options.field<double>(
+            'totalAmount',
+            (a) => a?.totalAmount,
+            (s) => s?.totalAmount,
+            (p, b) => p?.totalAmount = b),
         super._();
 
   factory _$GetPendingPoCountApiResponseActions(
@@ -186,12 +214,14 @@ class _$GetPendingPoCountApiResponseActions
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.count,
+        this.totalAmount,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     count.$reducer(reducer);
+    totalAmount.$reducer(reducer);
   }
 
   @override

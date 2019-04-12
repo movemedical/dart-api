@@ -29,6 +29,9 @@ abstract class CreateSalesOrderApiRequest implements Built<CreateSalesOrderApiRe
   String get deliverToId;
   
   @nullable
+  String get physicianId;
+  
+  @nullable
   String get hcrId;
   
   @nullable
@@ -103,6 +106,8 @@ abstract class CreateSalesOrderApiRequestActions extends ModelActions<CreateSale
   FieldDispatcher<String> get billToId;
   
   FieldDispatcher<String> get deliverToId;
+  
+  FieldDispatcher<String> get physicianId;
   
   FieldDispatcher<String> get hcrId;
   

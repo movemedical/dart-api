@@ -18,6 +18,8 @@ class GlobalSearchApiType extends EnumClass {
   static const GlobalSearchApiType PACKAGE = _$wirePACKAGE;
   static const GlobalSearchApiType AUDIT = _$wireAUDIT;
   static const GlobalSearchApiType STOCK = _$wireSTOCK;
+  static const GlobalSearchApiType KIT_STOCK = _$wireKIT_STOCK;
+  static const GlobalSearchApiType TRAY_STOCK = _$wireTRAY_STOCK;
   
   ////////////////////////////////
   /// Constructor

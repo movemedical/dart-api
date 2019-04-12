@@ -19,6 +19,10 @@ const GlobalSearchApiType _$wirePACKAGE =
     const GlobalSearchApiType._('PACKAGE');
 const GlobalSearchApiType _$wireAUDIT = const GlobalSearchApiType._('AUDIT');
 const GlobalSearchApiType _$wireSTOCK = const GlobalSearchApiType._('STOCK');
+const GlobalSearchApiType _$wireKIT_STOCK =
+    const GlobalSearchApiType._('KIT_STOCK');
+const GlobalSearchApiType _$wireTRAY_STOCK =
+    const GlobalSearchApiType._('TRAY_STOCK');
 
 GlobalSearchApiType _$globalSearchApiTypeValueOf(String name) {
   switch (name) {
@@ -40,6 +44,10 @@ GlobalSearchApiType _$globalSearchApiTypeValueOf(String name) {
       return _$wireAUDIT;
     case 'STOCK':
       return _$wireSTOCK;
+    case 'KIT_STOCK':
+      return _$wireKIT_STOCK;
+    case 'TRAY_STOCK':
+      return _$wireTRAY_STOCK;
     default:
       throw new ArgumentError(name);
   }
@@ -56,6 +64,8 @@ final BuiltSet<GlobalSearchApiType> _$globalSearchApiTypeValues =
   _$wirePACKAGE,
   _$wireAUDIT,
   _$wireSTOCK,
+  _$wireKIT_STOCK,
+  _$wireTRAY_STOCK,
 ]);
 
 Serializer<GlobalSearchApiType> _$globalSearchApiTypeSerializer =

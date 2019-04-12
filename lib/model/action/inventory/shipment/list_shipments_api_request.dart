@@ -28,7 +28,13 @@ abstract class ListShipmentsApiRequest implements Built<ListShipmentsApiRequest,
   String get orderNumber;
   
   @nullable
+  String get assignedToUserId;
+  
+  @nullable
   DateRange get createdDateRange;
+  
+  @nullable
+  DateRange get fulfillmentCutoffDateRange;
   
   @nullable
   BuiltList<ShipmentStatus> get status;
@@ -80,7 +86,11 @@ abstract class ListShipmentsApiRequestActions extends ModelActions<ListShipments
   
   FieldDispatcher<String> get orderNumber;
   
+  FieldDispatcher<String> get assignedToUserId;
+  
   DateRangeActions get createdDateRange;
+  
+  DateRangeActions get fulfillmentCutoffDateRange;
   
   FieldDispatcher<BuiltList<ShipmentStatus>> get status;
   

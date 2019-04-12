@@ -78,6 +78,30 @@ class _$OrderReasonSerializer implements StructuredSerializer<OrderReason> {
         ..add(serializers.serialize(object.creditCardAllowed,
             specifiedType: const FullType(bool)));
     }
+    if (object.bizUnitId != null) {
+      result
+        ..add('bizUnitId')
+        ..add(serializers.serialize(object.bizUnitId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.bizUnitName != null) {
+      result
+        ..add('bizUnitName')
+        ..add(serializers.serialize(object.bizUnitName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.erp != null) {
+      result
+        ..add('erp')
+        ..add(serializers.serialize(object.erp,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -136,6 +160,22 @@ class _$OrderReasonSerializer implements StructuredSerializer<OrderReason> {
           result.creditCardAllowed = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'bizUnitId':
+          result.bizUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'bizUnitName':
+          result.bizUnitName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'erp':
+          result.erp = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -164,6 +204,14 @@ class _$OrderReason extends OrderReason {
   final bool changesHomeLocation;
   @override
   final bool creditCardAllowed;
+  @override
+  final String bizUnitId;
+  @override
+  final String bizUnitName;
+  @override
+  final bool erp;
+  @override
+  final bool active;
 
   factory _$OrderReason([void updates(OrderReasonBuilder b)]) =>
       (new OrderReasonBuilder()..update(updates)).build();
@@ -178,7 +226,11 @@ class _$OrderReason extends OrderReason {
       this.approvalRequired,
       this.changesResponsibleParty,
       this.changesHomeLocation,
-      this.creditCardAllowed})
+      this.creditCardAllowed,
+      this.bizUnitId,
+      this.bizUnitName,
+      this.erp,
+      this.active})
       : super._();
 
   @override
@@ -201,7 +253,11 @@ class _$OrderReason extends OrderReason {
         approvalRequired == other.approvalRequired &&
         changesResponsibleParty == other.changesResponsibleParty &&
         changesHomeLocation == other.changesHomeLocation &&
-        creditCardAllowed == other.creditCardAllowed;
+        creditCardAllowed == other.creditCardAllowed &&
+        bizUnitId == other.bizUnitId &&
+        bizUnitName == other.bizUnitName &&
+        erp == other.erp &&
+        active == other.active;
   }
 
   @override
@@ -213,15 +269,25 @@ class _$OrderReason extends OrderReason {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc($jc(0, id.hashCode), name.hashCode),
-                                    reasonGroup.hashCode),
-                                toInventoryType.hashCode),
-                            salesOrderInventorySource.hashCode),
-                        defaultShippingService.hashCode),
-                    approvalRequired.hashCode),
-                changesResponsibleParty.hashCode),
-            changesHomeLocation.hashCode),
-        creditCardAllowed.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc($jc(0, id.hashCode),
+                                                        name.hashCode),
+                                                    reasonGroup.hashCode),
+                                                toInventoryType.hashCode),
+                                            salesOrderInventorySource.hashCode),
+                                        defaultShippingService.hashCode),
+                                    approvalRequired.hashCode),
+                                changesResponsibleParty.hashCode),
+                            changesHomeLocation.hashCode),
+                        creditCardAllowed.hashCode),
+                    bizUnitId.hashCode),
+                bizUnitName.hashCode),
+            erp.hashCode),
+        active.hashCode));
   }
 
   @override
@@ -236,7 +302,11 @@ class _$OrderReason extends OrderReason {
           ..add('approvalRequired', approvalRequired)
           ..add('changesResponsibleParty', changesResponsibleParty)
           ..add('changesHomeLocation', changesHomeLocation)
-          ..add('creditCardAllowed', creditCardAllowed))
+          ..add('creditCardAllowed', creditCardAllowed)
+          ..add('bizUnitId', bizUnitId)
+          ..add('bizUnitName', bizUnitName)
+          ..add('erp', erp)
+          ..add('active', active))
         .toString();
   }
 }
@@ -296,6 +366,22 @@ class OrderReasonBuilder implements Builder<OrderReason, OrderReasonBuilder> {
   set creditCardAllowed(bool creditCardAllowed) =>
       _$this._creditCardAllowed = creditCardAllowed;
 
+  String _bizUnitId;
+  String get bizUnitId => _$this._bizUnitId;
+  set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
+
+  String _bizUnitName;
+  String get bizUnitName => _$this._bizUnitName;
+  set bizUnitName(String bizUnitName) => _$this._bizUnitName = bizUnitName;
+
+  bool _erp;
+  bool get erp => _$this._erp;
+  set erp(bool erp) => _$this._erp = erp;
+
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   OrderReasonBuilder();
 
   OrderReasonBuilder get _$this {
@@ -310,6 +396,10 @@ class OrderReasonBuilder implements Builder<OrderReason, OrderReasonBuilder> {
       _changesResponsibleParty = _$v.changesResponsibleParty;
       _changesHomeLocation = _$v.changesHomeLocation;
       _creditCardAllowed = _$v.creditCardAllowed;
+      _bizUnitId = _$v.bizUnitId;
+      _bizUnitName = _$v.bizUnitName;
+      _erp = _$v.erp;
+      _active = _$v.active;
       _$v = null;
     }
     return this;
@@ -343,7 +433,11 @@ class OrderReasonBuilder implements Builder<OrderReason, OrderReasonBuilder> {
               approvalRequired: approvalRequired,
               changesResponsibleParty: changesResponsibleParty,
               changesHomeLocation: changesHomeLocation,
-              creditCardAllowed: creditCardAllowed);
+              creditCardAllowed: creditCardAllowed,
+              bizUnitId: bizUnitId,
+              bizUnitName: bizUnitName,
+              erp: erp,
+              active: active);
     } catch (_) {
       String _$failedField;
       try {
@@ -390,6 +484,10 @@ class _$OrderReasonActions extends OrderReasonActions {
   final FieldDispatcher<bool> changesResponsibleParty;
   final FieldDispatcher<bool> changesHomeLocation;
   final FieldDispatcher<bool> creditCardAllowed;
+  final FieldDispatcher<String> bizUnitId;
+  final FieldDispatcher<String> bizUnitName;
+  final FieldDispatcher<bool> erp;
+  final FieldDispatcher<bool> active;
 
   _$OrderReasonActions._(this.$options)
       : $replace =
@@ -444,6 +542,17 @@ class _$OrderReasonActions extends OrderReasonActions {
             (a) => a?.creditCardAllowed,
             (s) => s?.creditCardAllowed,
             (p, b) => p?.creditCardAllowed = b),
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
+        bizUnitName = $options.field<String>(
+            'bizUnitName',
+            (a) => a?.bizUnitName,
+            (s) => s?.bizUnitName,
+            (p, b) => p?.bizUnitName = b),
+        erp = $options.field<bool>(
+            'erp', (a) => a?.erp, (s) => s?.erp, (p, b) => p?.erp = b),
+        active = $options.field<bool>('active', (a) => a?.active,
+            (s) => s?.active, (p, b) => p?.active = b),
         super._();
 
   factory _$OrderReasonActions(OrderReasonActionsOptions options) =>
@@ -475,6 +584,10 @@ class _$OrderReasonActions extends OrderReasonActions {
         this.changesResponsibleParty,
         this.changesHomeLocation,
         this.creditCardAllowed,
+        this.bizUnitId,
+        this.bizUnitName,
+        this.erp,
+        this.active,
       ]);
 
   @override
@@ -490,6 +603,10 @@ class _$OrderReasonActions extends OrderReasonActions {
     changesResponsibleParty.$reducer(reducer);
     changesHomeLocation.$reducer(reducer);
     creditCardAllowed.$reducer(reducer);
+    bizUnitId.$reducer(reducer);
+    bizUnitName.$reducer(reducer);
+    erp.$reducer(reducer);
+    active.$reducer(reducer);
   }
 
   @override

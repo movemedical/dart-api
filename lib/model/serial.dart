@@ -15,6 +15,9 @@ abstract class Serial implements Built<Serial, SerialBuilder> {
   String get id;
   
   @nullable
+  String get kitSerialId;
+  
+  @nullable
   String get stockId;
   
   @nullable
@@ -56,6 +59,8 @@ abstract class SerialActions extends ModelActions<Serial, SerialBuilder, SerialA
   ////////////////////////////////
   
   FieldDispatcher<String> get id;
+  
+  FieldDispatcher<String> get kitSerialId;
   
   FieldDispatcher<String> get stockId;
   

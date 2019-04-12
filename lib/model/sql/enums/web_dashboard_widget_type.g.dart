@@ -22,6 +22,8 @@ const WebDashboardWidgetType _$wireORDERS_TO_PROCESS_TABLE =
     const WebDashboardWidgetType._('ORDERS_TO_PROCESS_TABLE');
 const WebDashboardWidgetType _$wireORDERS_NEEDING_SOURCING =
     const WebDashboardWidgetType._('ORDERS_NEEDING_SOURCING');
+const WebDashboardWidgetType _$wireDUE_BACK_TABLE =
+    const WebDashboardWidgetType._('DUE_BACK_TABLE');
 
 WebDashboardWidgetType _$webDashboardWidgetTypeValueOf(String name) {
   switch (name) {
@@ -41,6 +43,8 @@ WebDashboardWidgetType _$webDashboardWidgetTypeValueOf(String name) {
       return _$wireORDERS_TO_PROCESS_TABLE;
     case 'ORDERS_NEEDING_SOURCING':
       return _$wireORDERS_NEEDING_SOURCING;
+    case 'DUE_BACK_TABLE':
+      return _$wireDUE_BACK_TABLE;
     default:
       throw new ArgumentError(name);
   }
@@ -56,6 +60,7 @@ final BuiltSet<WebDashboardWidgetType> _$webDashboardWidgetTypeValues =
   _$wireORDERS_AWAITING_APPROVAL_TABLE,
   _$wireORDERS_TO_PROCESS_TABLE,
   _$wireORDERS_NEEDING_SOURCING,
+  _$wireDUE_BACK_TABLE,
 ]);
 
 Serializer<WebDashboardWidgetType> _$webDashboardWidgetTypeSerializer =

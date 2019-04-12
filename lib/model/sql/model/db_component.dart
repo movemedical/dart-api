@@ -47,6 +47,9 @@ abstract class DBComponent implements Built<DBComponent, DBComponentBuilder> {
   @nullable
   int get placementInSequence;
   
+  @nullable
+  String get uomId;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -90,6 +93,8 @@ abstract class DBComponentActions extends ModelActions<DBComponent, DBComponentB
   FieldDispatcher<int> get minimumQuantity;
   
   FieldDispatcher<int> get placementInSequence;
+  
+  FieldDispatcher<String> get uomId;
   
   ////////////////////////////////
   /// Constructors

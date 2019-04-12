@@ -17,6 +17,8 @@ class StockReferenceType extends EnumClass {
   static const StockReferenceType CASE_USAGE = _$wireCASE_USAGE;
   static const StockReferenceType KIT_STOCK = _$wireKIT_STOCK;
   static const StockReferenceType FILE_IMPORT = _$wireFILE_IMPORT;
+  static const StockReferenceType LOCATION = _$wireLOCATION;
+  static const StockReferenceType CASE_EVENT = _$wireCASE_EVENT;
   
   ////////////////////////////////
   /// Constructor

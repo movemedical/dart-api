@@ -11,6 +11,7 @@ class LoanReason extends EnumClass {
   
   static const LoanReason CASE_EVENT = _$wireCASE_EVENT;
   static const LoanReason CONSIGNMENT = _$wireCONSIGNMENT;
+  static const LoanReason CONSIGNMENT_REQUEST = _$wireCONSIGNMENT_REQUEST;
   static const LoanReason MULTI_CASE_EVENT = _$wireMULTI_CASE_EVENT;
   
   ////////////////////////////////

@@ -15,6 +15,7 @@ class CustomFieldDataType extends EnumClass {
   static const CustomFieldDataType DATE = _$wireDATE;
   static const CustomFieldDataType DATE_TIME = _$wireDATE_TIME;
   static const CustomFieldDataType BOOLEAN = _$wireBOOLEAN;
+  static const CustomFieldDataType CHOICE = _$wireCHOICE;
   
   ////////////////////////////////
   /// Constructor

@@ -30,11 +30,24 @@ class _$ListOrderLinesApiRequestSerializer
         ..add(serializers.serialize(object.orderId,
             specifiedType: const FullType(String)));
     }
+    if (object.search != null) {
+      result
+        ..add('search')
+        ..add(serializers.serialize(object.search,
+            specifiedType: const FullType(String)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
         ..add(serializers.serialize(object.paging,
             specifiedType: const FullType(PaginationParams)));
+    }
+    if (object.orderBy != null) {
+      result
+        ..add('orderBy')
+        ..add(serializers.serialize(object.orderBy,
+            specifiedType: const FullType(OrderByParams,
+                const [const FullType(ListOrderLinesApiOrderBy)])));
     }
 
     return result;
@@ -56,10 +69,20 @@ class _$ListOrderLinesApiRequestSerializer
           result.orderId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'search':
+          result.search = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
               as PaginationParams);
+          break;
+        case 'orderBy':
+          result.orderBy.replace(serializers.deserialize(value,
+              specifiedType: const FullType(OrderByParams, const [
+                const FullType(ListOrderLinesApiOrderBy)
+              ])) as OrderByParams<ListOrderLinesApiOrderBy>);
           break;
       }
     }
@@ -72,13 +95,19 @@ class _$ListOrderLinesApiRequest extends ListOrderLinesApiRequest {
   @override
   final String orderId;
   @override
+  final String search;
+  @override
   final PaginationParams paging;
+  @override
+  final OrderByParams<ListOrderLinesApiOrderBy> orderBy;
 
   factory _$ListOrderLinesApiRequest(
           [void updates(ListOrderLinesApiRequestBuilder b)]) =>
       (new ListOrderLinesApiRequestBuilder()..update(updates)).build();
 
-  _$ListOrderLinesApiRequest._({this.orderId, this.paging}) : super._();
+  _$ListOrderLinesApiRequest._(
+      {this.orderId, this.search, this.paging, this.orderBy})
+      : super._();
 
   @override
   ListOrderLinesApiRequest rebuild(
@@ -94,19 +123,25 @@ class _$ListOrderLinesApiRequest extends ListOrderLinesApiRequest {
     if (identical(other, this)) return true;
     return other is ListOrderLinesApiRequest &&
         orderId == other.orderId &&
-        paging == other.paging;
+        search == other.search &&
+        paging == other.paging &&
+        orderBy == other.orderBy;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, orderId.hashCode), paging.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, orderId.hashCode), search.hashCode), paging.hashCode),
+        orderBy.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListOrderLinesApiRequest')
           ..add('orderId', orderId)
-          ..add('paging', paging))
+          ..add('search', search)
+          ..add('paging', paging)
+          ..add('orderBy', orderBy))
         .toString();
   }
 }
@@ -120,17 +155,29 @@ class ListOrderLinesApiRequestBuilder
   String get orderId => _$this._orderId;
   set orderId(String orderId) => _$this._orderId = orderId;
 
+  String _search;
+  String get search => _$this._search;
+  set search(String search) => _$this._search = search;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
+
+  OrderByParamsBuilder<ListOrderLinesApiOrderBy> _orderBy;
+  OrderByParamsBuilder<ListOrderLinesApiOrderBy> get orderBy =>
+      _$this._orderBy ??= new OrderByParamsBuilder<ListOrderLinesApiOrderBy>();
+  set orderBy(OrderByParamsBuilder<ListOrderLinesApiOrderBy> orderBy) =>
+      _$this._orderBy = orderBy;
 
   ListOrderLinesApiRequestBuilder();
 
   ListOrderLinesApiRequestBuilder get _$this {
     if (_$v != null) {
       _orderId = _$v.orderId;
+      _search = _$v.search;
       _paging = _$v.paging?.toBuilder();
+      _orderBy = _$v.orderBy?.toBuilder();
       _$v = null;
     }
     return this;
@@ -155,12 +202,17 @@ class ListOrderLinesApiRequestBuilder
     try {
       _$result = _$v ??
           new _$ListOrderLinesApiRequest._(
-              orderId: orderId, paging: _paging?.build());
+              orderId: orderId,
+              search: search,
+              paging: _paging?.build(),
+              orderBy: _orderBy?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'paging';
         _paging?.build();
+        _$failedField = 'orderBy';
+        _orderBy?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'ListOrderLinesApiRequest', _$failedField, e.toString());
@@ -195,13 +247,17 @@ class _$ListOrderLinesApiRequestActions
 
   final ActionDispatcher<ListOrderLinesApiRequest> $replace;
   final FieldDispatcher<String> orderId;
+  final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
+  final OrderByParamsActions<ListOrderLinesApiOrderBy> orderBy;
 
   _$ListOrderLinesApiRequestActions._(this.$options)
       : $replace = $options.action<ListOrderLinesApiRequest>(
             '\$replace', (a) => a?.$replace),
         orderId = $options.field<String>('orderId', (a) => a?.orderId,
             (s) => s?.orderId, (p, b) => p?.orderId = b),
+        search = $options.field<String>('search', (a) => a?.search,
+            (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -211,6 +267,16 @@ class _$ListOrderLinesApiRequestActions
             (s) => s?.paging,
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
+        orderBy = OrderByParamsActions<ListOrderLinesApiOrderBy>(() =>
+            $options.stateful<
+                    OrderByParams<ListOrderLinesApiOrderBy>,
+                    OrderByParamsBuilder<ListOrderLinesApiOrderBy>,
+                    OrderByParamsActions<ListOrderLinesApiOrderBy>>(
+                'orderBy',
+                (a) => a.orderBy,
+                (s) => s?.orderBy,
+                (b) => b?.orderBy,
+                (parent, builder) => parent?.orderBy = builder)),
         super._();
 
   factory _$ListOrderLinesApiRequestActions(
@@ -228,6 +294,7 @@ class _$ListOrderLinesApiRequestActions
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
+        this.orderBy,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
@@ -236,19 +303,23 @@ class _$ListOrderLinesApiRequestActions
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.orderId,
+        this.search,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     orderId.$reducer(reducer);
+    search.$reducer(reducer);
     paging.$reducer(reducer);
+    orderBy.$reducer(reducer);
   }
 
   @override
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     paging.$middleware(middleware);
+    orderBy.$middleware(middleware);
   }
 
   FullType _$fullType;

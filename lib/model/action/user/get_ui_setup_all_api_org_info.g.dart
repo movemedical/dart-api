@@ -63,6 +63,12 @@ class _$GetUiSetupAllApiOrgInfoSerializer
             specifiedType: const FullType(
                 BuiltList, const [const FullType(GetUiSetupAllApiOrgUnit)])));
     }
+    if (object.allowCasesWithoutDates != null) {
+      result
+        ..add('allowCasesWithoutDates')
+        ..add(serializers.serialize(object.allowCasesWithoutDates,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -112,6 +118,10 @@ class _$GetUiSetupAllApiOrgInfoSerializer
                 const FullType(GetUiSetupAllApiOrgUnit)
               ])) as BuiltList);
           break;
+        case 'allowCasesWithoutDates':
+          result.allowCasesWithoutDates = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -132,6 +142,8 @@ class _$GetUiSetupAllApiOrgInfo extends GetUiSetupAllApiOrgInfo {
   final BuiltList<GetUiSetupAllApiOrgUnit> invOnlyOrgUnits;
   @override
   final BuiltList<GetUiSetupAllApiOrgUnit> fullAccessOrgUnits;
+  @override
+  final bool allowCasesWithoutDates;
 
   factory _$GetUiSetupAllApiOrgInfo(
           [void updates(GetUiSetupAllApiOrgInfoBuilder b)]) =>
@@ -143,7 +155,8 @@ class _$GetUiSetupAllApiOrgInfo extends GetUiSetupAllApiOrgInfo {
       this.defaultOpsOrgUnit,
       this.bizUnits,
       this.invOnlyOrgUnits,
-      this.fullAccessOrgUnits})
+      this.fullAccessOrgUnits,
+      this.allowCasesWithoutDates})
       : super._();
 
   @override
@@ -164,7 +177,8 @@ class _$GetUiSetupAllApiOrgInfo extends GetUiSetupAllApiOrgInfo {
         defaultOpsOrgUnit == other.defaultOpsOrgUnit &&
         bizUnits == other.bizUnits &&
         invOnlyOrgUnits == other.invOnlyOrgUnits &&
-        fullAccessOrgUnits == other.fullAccessOrgUnits;
+        fullAccessOrgUnits == other.fullAccessOrgUnits &&
+        allowCasesWithoutDates == other.allowCasesWithoutDates;
   }
 
   @override
@@ -173,12 +187,14 @@ class _$GetUiSetupAllApiOrgInfo extends GetUiSetupAllApiOrgInfo {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc(0, defaultBizUnit.hashCode),
-                        defaultSalesOrgUnit.hashCode),
-                    defaultOpsOrgUnit.hashCode),
-                bizUnits.hashCode),
-            invOnlyOrgUnits.hashCode),
-        fullAccessOrgUnits.hashCode));
+                    $jc(
+                        $jc($jc(0, defaultBizUnit.hashCode),
+                            defaultSalesOrgUnit.hashCode),
+                        defaultOpsOrgUnit.hashCode),
+                    bizUnits.hashCode),
+                invOnlyOrgUnits.hashCode),
+            fullAccessOrgUnits.hashCode),
+        allowCasesWithoutDates.hashCode));
   }
 
   @override
@@ -189,7 +205,8 @@ class _$GetUiSetupAllApiOrgInfo extends GetUiSetupAllApiOrgInfo {
           ..add('defaultOpsOrgUnit', defaultOpsOrgUnit)
           ..add('bizUnits', bizUnits)
           ..add('invOnlyOrgUnits', invOnlyOrgUnits)
-          ..add('fullAccessOrgUnits', fullAccessOrgUnits))
+          ..add('fullAccessOrgUnits', fullAccessOrgUnits)
+          ..add('allowCasesWithoutDates', allowCasesWithoutDates))
         .toString();
   }
 }
@@ -236,6 +253,11 @@ class GetUiSetupAllApiOrgInfoBuilder
           ListBuilder<GetUiSetupAllApiOrgUnit> fullAccessOrgUnits) =>
       _$this._fullAccessOrgUnits = fullAccessOrgUnits;
 
+  bool _allowCasesWithoutDates;
+  bool get allowCasesWithoutDates => _$this._allowCasesWithoutDates;
+  set allowCasesWithoutDates(bool allowCasesWithoutDates) =>
+      _$this._allowCasesWithoutDates = allowCasesWithoutDates;
+
   GetUiSetupAllApiOrgInfoBuilder();
 
   GetUiSetupAllApiOrgInfoBuilder get _$this {
@@ -246,6 +268,7 @@ class GetUiSetupAllApiOrgInfoBuilder
       _bizUnits = _$v.bizUnits?.toBuilder();
       _invOnlyOrgUnits = _$v.invOnlyOrgUnits?.toBuilder();
       _fullAccessOrgUnits = _$v.fullAccessOrgUnits?.toBuilder();
+      _allowCasesWithoutDates = _$v.allowCasesWithoutDates;
       _$v = null;
     }
     return this;
@@ -275,7 +298,8 @@ class GetUiSetupAllApiOrgInfoBuilder
               defaultOpsOrgUnit: _defaultOpsOrgUnit?.build(),
               bizUnits: _bizUnits?.build(),
               invOnlyOrgUnits: _invOnlyOrgUnits?.build(),
-              fullAccessOrgUnits: _fullAccessOrgUnits?.build());
+              fullAccessOrgUnits: _fullAccessOrgUnits?.build(),
+              allowCasesWithoutDates: allowCasesWithoutDates);
     } catch (_) {
       String _$failedField;
       try {
@@ -327,6 +351,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
   final FieldDispatcher<BuiltList<GetUiSetupAllApiBizUnit>> bizUnits;
   final FieldDispatcher<BuiltList<GetUiSetupAllApiOrgUnit>> invOnlyOrgUnits;
   final FieldDispatcher<BuiltList<GetUiSetupAllApiOrgUnit>> fullAccessOrgUnits;
+  final FieldDispatcher<bool> allowCasesWithoutDates;
 
   _$GetUiSetupAllApiOrgInfoActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiOrgInfo>(
@@ -375,6 +400,11 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
             (a) => a?.fullAccessOrgUnits,
             (s) => s?.fullAccessOrgUnits,
             (p, b) => p?.fullAccessOrgUnits = b),
+        allowCasesWithoutDates = $options.field<bool>(
+            'allowCasesWithoutDates',
+            (a) => a?.allowCasesWithoutDates,
+            (s) => s?.allowCasesWithoutDates,
+            (p, b) => p?.allowCasesWithoutDates = b),
         super._();
 
   factory _$GetUiSetupAllApiOrgInfoActions(
@@ -404,6 +434,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
         this.bizUnits,
         this.invOnlyOrgUnits,
         this.fullAccessOrgUnits,
+        this.allowCasesWithoutDates,
       ]);
 
   @override
@@ -415,6 +446,7 @@ class _$GetUiSetupAllApiOrgInfoActions extends GetUiSetupAllApiOrgInfoActions {
     bizUnits.$reducer(reducer);
     invOnlyOrgUnits.$reducer(reducer);
     fullAccessOrgUnits.$reducer(reducer);
+    allowCasesWithoutDates.$reducer(reducer);
   }
 
   @override

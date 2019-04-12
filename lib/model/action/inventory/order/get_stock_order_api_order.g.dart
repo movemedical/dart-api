@@ -126,6 +126,12 @@ class _$GetStockOrderApiOrderSerializer
         ..add(serializers.serialize(object.loan,
             specifiedType: const FullType(LoanLite)));
     }
+    if (object.rootLoan != null) {
+      result
+        ..add('rootLoan')
+        ..add(serializers.serialize(object.rootLoan,
+            specifiedType: const FullType(LoanLite)));
+    }
     if (object.parentOrder != null) {
       result
         ..add('parentOrder')
@@ -323,6 +329,10 @@ class _$GetStockOrderApiOrderSerializer
           result.loan.replace(serializers.deserialize(value,
               specifiedType: const FullType(LoanLite)) as LoanLite);
           break;
+        case 'rootLoan':
+          result.rootLoan.replace(serializers.deserialize(value,
+              specifiedType: const FullType(LoanLite)) as LoanLite);
+          break;
         case 'parentOrder':
           result.parentOrder.replace(serializers.deserialize(value,
                   specifiedType: const FullType(OrderHeaderLite))
@@ -451,6 +461,8 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
   @override
   final LoanLite loan;
   @override
+  final LoanLite rootLoan;
+  @override
   final OrderHeaderLite parentOrder;
   @override
   final OrderHeaderLite restockForOrder;
@@ -509,6 +521,7 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
       this.opsOrgUnit,
       this.salesOrgUnit,
       this.loan,
+      this.rootLoan,
       this.parentOrder,
       this.restockForOrder,
       this.childOrders,
@@ -558,6 +571,7 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
         opsOrgUnit == other.opsOrgUnit &&
         salesOrgUnit == other.salesOrgUnit &&
         loan == other.loan &&
+        rootLoan == other.rootLoan &&
         parentOrder == other.parentOrder &&
         restockForOrder == other.restockForOrder &&
         childOrders == other.childOrders &&
@@ -598,8 +612,8 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), createdDate.hashCode), createdBy.hashCode), number.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), expirationCutoff.hashCode), shippingService.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode),
-                                                                                loan.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), createdDate.hashCode), createdBy.hashCode), number.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), expirationCutoff.hashCode), shippingService.hashCode), opsOrgUnit.hashCode), salesOrgUnit.hashCode), loan.hashCode),
+                                                                                rootLoan.hashCode),
                                                                             parentOrder.hashCode),
                                                                         restockForOrder.hashCode),
                                                                     childOrders.hashCode),
@@ -640,6 +654,7 @@ class _$GetStockOrderApiOrder extends GetStockOrderApiOrder {
           ..add('opsOrgUnit', opsOrgUnit)
           ..add('salesOrgUnit', salesOrgUnit)
           ..add('loan', loan)
+          ..add('rootLoan', rootLoan)
           ..add('parentOrder', parentOrder)
           ..add('restockForOrder', restockForOrder)
           ..add('childOrders', childOrders)
@@ -744,6 +759,10 @@ class GetStockOrderApiOrderBuilder
   LoanLiteBuilder _loan;
   LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
   set loan(LoanLiteBuilder loan) => _$this._loan = loan;
+
+  LoanLiteBuilder _rootLoan;
+  LoanLiteBuilder get rootLoan => _$this._rootLoan ??= new LoanLiteBuilder();
+  set rootLoan(LoanLiteBuilder rootLoan) => _$this._rootLoan = rootLoan;
 
   OrderHeaderLiteBuilder _parentOrder;
   OrderHeaderLiteBuilder get parentOrder =>
@@ -869,6 +888,7 @@ class GetStockOrderApiOrderBuilder
       _opsOrgUnit = _$v.opsOrgUnit?.toBuilder();
       _salesOrgUnit = _$v.salesOrgUnit?.toBuilder();
       _loan = _$v.loan?.toBuilder();
+      _rootLoan = _$v.rootLoan?.toBuilder();
       _parentOrder = _$v.parentOrder?.toBuilder();
       _restockForOrder = _$v.restockForOrder?.toBuilder();
       _childOrders = _$v.childOrders?.toBuilder();
@@ -928,6 +948,7 @@ class GetStockOrderApiOrderBuilder
               opsOrgUnit: _opsOrgUnit?.build(),
               salesOrgUnit: _salesOrgUnit?.build(),
               loan: _loan?.build(),
+              rootLoan: _rootLoan?.build(),
               parentOrder: _parentOrder?.build(),
               restockForOrder: _restockForOrder?.build(),
               childOrders: _childOrders?.build(),
@@ -965,6 +986,8 @@ class GetStockOrderApiOrderBuilder
         _salesOrgUnit?.build();
         _$failedField = 'loan';
         _loan?.build();
+        _$failedField = 'rootLoan';
+        _rootLoan?.build();
         _$failedField = 'parentOrder';
         _parentOrder?.build();
         _$failedField = 'restockForOrder';
@@ -1041,6 +1064,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
   final OrgUnitActions opsOrgUnit;
   final OrgUnitActions salesOrgUnit;
   final LoanLiteActions loan;
+  final LoanLiteActions rootLoan;
   final OrderHeaderLiteActions parentOrder;
   final OrderHeaderLiteActions restockForOrder;
   final FieldDispatcher<BuiltList<OrderHeaderLite>> childOrders;
@@ -1147,6 +1171,13 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
                 (s) => s?.loan,
                 (b) => b?.loan,
                 (parent, builder) => parent?.loan = builder)),
+        rootLoan = LoanLiteActions(() =>
+            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+                'rootLoan',
+                (a) => a.rootLoan,
+                (s) => s?.rootLoan,
+                (b) => b?.rootLoan,
+                (parent, builder) => parent?.rootLoan = builder)),
         parentOrder = OrderHeaderLiteActions(() => $options.stateful<
                 OrderHeaderLite,
                 OrderHeaderLiteBuilder,
@@ -1285,6 +1316,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
         this.opsOrgUnit,
         this.salesOrgUnit,
         this.loan,
+        this.rootLoan,
         this.parentOrder,
         this.restockForOrder,
         this.shipToAddress,
@@ -1342,6 +1374,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
     opsOrgUnit.$reducer(reducer);
     salesOrgUnit.$reducer(reducer);
     loan.$reducer(reducer);
+    rootLoan.$reducer(reducer);
     parentOrder.$reducer(reducer);
     restockForOrder.$reducer(reducer);
     childOrders.$reducer(reducer);
@@ -1372,6 +1405,7 @@ class _$GetStockOrderApiOrderActions extends GetStockOrderApiOrderActions {
     opsOrgUnit.$middleware(middleware);
     salesOrgUnit.$middleware(middleware);
     loan.$middleware(middleware);
+    rootLoan.$middleware(middleware);
     parentOrder.$middleware(middleware);
     restockForOrder.$middleware(middleware);
     shipToAddress.$middleware(middleware);

@@ -7,18 +7,15 @@ export 'package:movemedical_api/model/action/cache/add_to_search_locations_cache
 
 part 'add_to_search_locations_cache_api.g.dart';
 
-abstract class AddToSearchLocationsCacheApi extends ApiDispatcher<
-    AddToSearchLocationsCacheApiRequest,
-    AddToSearchLocationsCacheApiRequestBuilder,
-    Empty,
-    EmptyBuilder,
-    AddToSearchLocationsCacheApi> {
+abstract class AddToSearchLocationsCacheApi extends ApiDispatcher<AddToSearchLocationsCacheApiRequest,
+AddToSearchLocationsCacheApiRequestBuilder,
+Empty,
+EmptyBuilder,
+AddToSearchLocationsCacheApi> {
   @override
   String get path => 'v1/cache/add_to_search_locations';
-
+  
   AddToSearchLocationsCacheApi._();
-
-  factory AddToSearchLocationsCacheApi(
-          AddToSearchLocationsCacheApiOptions options) =
-      _$AddToSearchLocationsCacheApi;
+  
+  factory AddToSearchLocationsCacheApi(AddToSearchLocationsCacheApiOptions options) = _$AddToSearchLocationsCacheApi;
 }

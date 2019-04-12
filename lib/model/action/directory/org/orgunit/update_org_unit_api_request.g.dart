@@ -84,6 +84,12 @@ class _$UpdateOrgUnitApiRequestSerializer
         ..add(serializers.serialize(object.allowMixedInventoryTypeUsage,
             specifiedType: const FullType(bool)));
     }
+    if (object.opsOrgUnitId != null) {
+      result
+        ..add('opsOrgUnitId')
+        ..add(serializers.serialize(object.opsOrgUnitId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -140,6 +146,10 @@ class _$UpdateOrgUnitApiRequestSerializer
           result.allowMixedInventoryTypeUsage = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'opsOrgUnitId':
+          result.opsOrgUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -168,6 +178,8 @@ class _$UpdateOrgUnitApiRequest extends UpdateOrgUnitApiRequest {
   final bool allowRemoteUsage;
   @override
   final bool allowMixedInventoryTypeUsage;
+  @override
+  final String opsOrgUnitId;
 
   factory _$UpdateOrgUnitApiRequest(
           [void updates(UpdateOrgUnitApiRequestBuilder b)]) =>
@@ -183,7 +195,8 @@ class _$UpdateOrgUnitApiRequest extends UpdateOrgUnitApiRequest {
       this.requirementsLeadTimeHours,
       this.active,
       this.allowRemoteUsage,
-      this.allowMixedInventoryTypeUsage})
+      this.allowMixedInventoryTypeUsage,
+      this.opsOrgUnitId})
       : super._();
 
   @override
@@ -208,7 +221,8 @@ class _$UpdateOrgUnitApiRequest extends UpdateOrgUnitApiRequest {
         requirementsLeadTimeHours == other.requirementsLeadTimeHours &&
         active == other.active &&
         allowRemoteUsage == other.allowRemoteUsage &&
-        allowMixedInventoryTypeUsage == other.allowMixedInventoryTypeUsage;
+        allowMixedInventoryTypeUsage == other.allowMixedInventoryTypeUsage &&
+        opsOrgUnitId == other.opsOrgUnitId;
   }
 
   @override
@@ -221,16 +235,18 @@ class _$UpdateOrgUnitApiRequest extends UpdateOrgUnitApiRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, id.hashCode),
-                                        reference.hashCode),
-                                    name.hashCode),
-                                email.hashCode),
-                            description.hashCode),
-                        fulfillmentLeadTimeHours.hashCode),
-                    requirementsLeadTimeHours.hashCode),
-                active.hashCode),
-            allowRemoteUsage.hashCode),
-        allowMixedInventoryTypeUsage.hashCode));
+                                    $jc(
+                                        $jc($jc(0, id.hashCode),
+                                            reference.hashCode),
+                                        name.hashCode),
+                                    email.hashCode),
+                                description.hashCode),
+                            fulfillmentLeadTimeHours.hashCode),
+                        requirementsLeadTimeHours.hashCode),
+                    active.hashCode),
+                allowRemoteUsage.hashCode),
+            allowMixedInventoryTypeUsage.hashCode),
+        opsOrgUnitId.hashCode));
   }
 
   @override
@@ -245,7 +261,8 @@ class _$UpdateOrgUnitApiRequest extends UpdateOrgUnitApiRequest {
           ..add('requirementsLeadTimeHours', requirementsLeadTimeHours)
           ..add('active', active)
           ..add('allowRemoteUsage', allowRemoteUsage)
-          ..add('allowMixedInventoryTypeUsage', allowMixedInventoryTypeUsage))
+          ..add('allowMixedInventoryTypeUsage', allowMixedInventoryTypeUsage)
+          ..add('opsOrgUnitId', opsOrgUnitId))
         .toString();
   }
 }
@@ -299,6 +316,10 @@ class UpdateOrgUnitApiRequestBuilder
   set allowMixedInventoryTypeUsage(bool allowMixedInventoryTypeUsage) =>
       _$this._allowMixedInventoryTypeUsage = allowMixedInventoryTypeUsage;
 
+  String _opsOrgUnitId;
+  String get opsOrgUnitId => _$this._opsOrgUnitId;
+  set opsOrgUnitId(String opsOrgUnitId) => _$this._opsOrgUnitId = opsOrgUnitId;
+
   UpdateOrgUnitApiRequestBuilder();
 
   UpdateOrgUnitApiRequestBuilder get _$this {
@@ -313,6 +334,7 @@ class UpdateOrgUnitApiRequestBuilder
       _active = _$v.active;
       _allowRemoteUsage = _$v.allowRemoteUsage;
       _allowMixedInventoryTypeUsage = _$v.allowMixedInventoryTypeUsage;
+      _opsOrgUnitId = _$v.opsOrgUnitId;
       _$v = null;
     }
     return this;
@@ -346,7 +368,8 @@ class UpdateOrgUnitApiRequestBuilder
               requirementsLeadTimeHours: requirementsLeadTimeHours,
               active: active,
               allowRemoteUsage: allowRemoteUsage,
-              allowMixedInventoryTypeUsage: allowMixedInventoryTypeUsage);
+              allowMixedInventoryTypeUsage: allowMixedInventoryTypeUsage,
+              opsOrgUnitId: opsOrgUnitId);
     } catch (_) {
       String _$failedField;
       try {
@@ -392,6 +415,7 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> allowRemoteUsage;
   final FieldDispatcher<bool> allowMixedInventoryTypeUsage;
+  final FieldDispatcher<String> opsOrgUnitId;
 
   _$UpdateOrgUnitApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateOrgUnitApiRequest>(
@@ -436,6 +460,11 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
             (a) => a?.allowMixedInventoryTypeUsage,
             (s) => s?.allowMixedInventoryTypeUsage,
             (p, b) => p?.allowMixedInventoryTypeUsage = b),
+        opsOrgUnitId = $options.field<String>(
+            'opsOrgUnitId',
+            (a) => a?.opsOrgUnitId,
+            (s) => s?.opsOrgUnitId,
+            (p, b) => p?.opsOrgUnitId = b),
         super._();
 
   factory _$UpdateOrgUnitApiRequestActions(
@@ -469,6 +498,7 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
         this.active,
         this.allowRemoteUsage,
         this.allowMixedInventoryTypeUsage,
+        this.opsOrgUnitId,
       ]);
 
   @override
@@ -484,6 +514,7 @@ class _$UpdateOrgUnitApiRequestActions extends UpdateOrgUnitApiRequestActions {
     active.$reducer(reducer);
     allowRemoteUsage.$reducer(reducer);
     allowMixedInventoryTypeUsage.$reducer(reducer);
+    opsOrgUnitId.$reducer(reducer);
   }
 
   @override

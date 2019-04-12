@@ -92,6 +92,18 @@ class _$GetUiSetupAllApiUserPermissionsSerializer
         ..add(serializers.serialize(object.getPricing,
             specifiedType: const FullType(bool)));
     }
+    if (object.requestLoan != null) {
+      result
+        ..add('requestLoan')
+        ..add(serializers.serialize(object.requestLoan,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.createLoan != null) {
+      result
+        ..add('createLoan')
+        ..add(serializers.serialize(object.createLoan,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -152,6 +164,14 @@ class _$GetUiSetupAllApiUserPermissionsSerializer
           result.getPricing = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'requestLoan':
+          result.requestLoan = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'createLoan':
+          result.createLoan = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -183,6 +203,10 @@ class _$GetUiSetupAllApiUserPermissions
   final bool createAudit;
   @override
   final bool getPricing;
+  @override
+  final bool requestLoan;
+  @override
+  final bool createLoan;
 
   factory _$GetUiSetupAllApiUserPermissions(
           [void updates(GetUiSetupAllApiUserPermissionsBuilder b)]) =>
@@ -199,7 +223,9 @@ class _$GetUiSetupAllApiUserPermissions
       this.createSalesOrder,
       this.createStockOrder,
       this.createAudit,
-      this.getPricing})
+      this.getPricing,
+      this.requestLoan,
+      this.createLoan})
       : super._();
 
   @override
@@ -225,7 +251,9 @@ class _$GetUiSetupAllApiUserPermissions
         createSalesOrder == other.createSalesOrder &&
         createStockOrder == other.createStockOrder &&
         createAudit == other.createAudit &&
-        getPricing == other.getPricing;
+        getPricing == other.getPricing &&
+        requestLoan == other.requestLoan &&
+        createLoan == other.createLoan;
   }
 
   @override
@@ -239,17 +267,25 @@ class _$GetUiSetupAllApiUserPermissions
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, directoryAdmin.hashCode),
-                                            manageCatalog.hashCode),
-                                        phiAllowed.hashCode),
-                                    createCase.hashCode),
-                                manageUsers.hashCode),
-                            orgAdmin.hashCode),
-                        createStock.hashCode),
-                    createSalesOrder.hashCode),
-                createStockOrder.hashCode),
-            createAudit.hashCode),
-        getPricing.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        0,
+                                                        directoryAdmin
+                                                            .hashCode),
+                                                    manageCatalog.hashCode),
+                                                phiAllowed.hashCode),
+                                            createCase.hashCode),
+                                        manageUsers.hashCode),
+                                    orgAdmin.hashCode),
+                                createStock.hashCode),
+                            createSalesOrder.hashCode),
+                        createStockOrder.hashCode),
+                    createAudit.hashCode),
+                getPricing.hashCode),
+            requestLoan.hashCode),
+        createLoan.hashCode));
   }
 
   @override
@@ -265,7 +301,9 @@ class _$GetUiSetupAllApiUserPermissions
           ..add('createSalesOrder', createSalesOrder)
           ..add('createStockOrder', createStockOrder)
           ..add('createAudit', createAudit)
-          ..add('getPricing', getPricing))
+          ..add('getPricing', getPricing)
+          ..add('requestLoan', requestLoan)
+          ..add('createLoan', createLoan))
         .toString();
   }
 }
@@ -324,6 +362,14 @@ class GetUiSetupAllApiUserPermissionsBuilder
   bool get getPricing => _$this._getPricing;
   set getPricing(bool getPricing) => _$this._getPricing = getPricing;
 
+  bool _requestLoan;
+  bool get requestLoan => _$this._requestLoan;
+  set requestLoan(bool requestLoan) => _$this._requestLoan = requestLoan;
+
+  bool _createLoan;
+  bool get createLoan => _$this._createLoan;
+  set createLoan(bool createLoan) => _$this._createLoan = createLoan;
+
   GetUiSetupAllApiUserPermissionsBuilder();
 
   GetUiSetupAllApiUserPermissionsBuilder get _$this {
@@ -339,6 +385,8 @@ class GetUiSetupAllApiUserPermissionsBuilder
       _createStockOrder = _$v.createStockOrder;
       _createAudit = _$v.createAudit;
       _getPricing = _$v.getPricing;
+      _requestLoan = _$v.requestLoan;
+      _createLoan = _$v.createLoan;
       _$v = null;
     }
     return this;
@@ -371,7 +419,9 @@ class GetUiSetupAllApiUserPermissionsBuilder
             createSalesOrder: createSalesOrder,
             createStockOrder: createStockOrder,
             createAudit: createAudit,
-            getPricing: getPricing);
+            getPricing: getPricing,
+            requestLoan: requestLoan,
+            createLoan: createLoan);
     replace(_$result);
     return _$result;
   }
@@ -410,6 +460,8 @@ class _$GetUiSetupAllApiUserPermissionsActions
   final FieldDispatcher<bool> createStockOrder;
   final FieldDispatcher<bool> createAudit;
   final FieldDispatcher<bool> getPricing;
+  final FieldDispatcher<bool> requestLoan;
+  final FieldDispatcher<bool> createLoan;
 
   _$GetUiSetupAllApiUserPermissionsActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiUserPermissions>(
@@ -448,6 +500,10 @@ class _$GetUiSetupAllApiUserPermissionsActions
             (s) => s?.createAudit, (p, b) => p?.createAudit = b),
         getPricing = $options.field<bool>('getPricing', (a) => a?.getPricing,
             (s) => s?.getPricing, (p, b) => p?.getPricing = b),
+        requestLoan = $options.field<bool>('requestLoan', (a) => a?.requestLoan,
+            (s) => s?.requestLoan, (p, b) => p?.requestLoan = b),
+        createLoan = $options.field<bool>('createLoan', (a) => a?.createLoan,
+            (s) => s?.createLoan, (p, b) => p?.createLoan = b),
         super._();
 
   factory _$GetUiSetupAllApiUserPermissionsActions(
@@ -478,6 +534,8 @@ class _$GetUiSetupAllApiUserPermissionsActions
         this.createStockOrder,
         this.createAudit,
         this.getPricing,
+        this.requestLoan,
+        this.createLoan,
       ]);
 
   @override
@@ -494,6 +552,8 @@ class _$GetUiSetupAllApiUserPermissionsActions
     createStockOrder.$reducer(reducer);
     createAudit.$reducer(reducer);
     getPricing.$reducer(reducer);
+    requestLoan.$reducer(reducer);
+    createLoan.$reducer(reducer);
   }
 
   @override

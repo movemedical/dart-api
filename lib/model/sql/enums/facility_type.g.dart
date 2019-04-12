@@ -16,6 +16,8 @@ const FacilityType _$wireHOSPITAL = const FacilityType._('HOSPITAL');
 const FacilityType _$wireSURGERY_CENTER =
     const FacilityType._('SURGERY_CENTER');
 const FacilityType _$wireSCAN_CENTER = const FacilityType._('SCAN_CENTER');
+const FacilityType _$wireSTERILIZATION_CENTER =
+    const FacilityType._('STERILIZATION_CENTER');
 
 FacilityType _$facilityTypeValueOf(String name) {
   switch (name) {
@@ -33,6 +35,8 @@ FacilityType _$facilityTypeValueOf(String name) {
       return _$wireSURGERY_CENTER;
     case 'SCAN_CENTER':
       return _$wireSCAN_CENTER;
+    case 'STERILIZATION_CENTER':
+      return _$wireSTERILIZATION_CENTER;
     default:
       throw new ArgumentError(name);
   }
@@ -47,6 +51,7 @@ final BuiltSet<FacilityType> _$facilityTypeValues =
   _$wireHOSPITAL,
   _$wireSURGERY_CENTER,
   _$wireSCAN_CENTER,
+  _$wireSTERILIZATION_CENTER,
 ]);
 
 Serializer<FacilityType> _$facilityTypeSerializer =

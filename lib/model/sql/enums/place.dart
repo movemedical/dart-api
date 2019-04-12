@@ -58,6 +58,9 @@ class Place extends EnumClass {
   static const Place SHIPPING_SERVICE_LIST = _$wireSHIPPING_SERVICE_LIST;
   static const Place PROFILE = _$wirePROFILE;
   static const Place ADJUSTMENT = _$wireADJUSTMENT;
+  static const Place CASE_TYPE_LIST = _$wireCASE_TYPE_LIST;
+  static const Place ORDER_LINE_CANCEL_REASON_LIST = _$wireORDER_LINE_CANCEL_REASON_LIST;
+  static const Place DCE_DETAIL = _$wireDCE_DETAIL;
   
   ////////////////////////////////
   /// Constructor

@@ -17,6 +17,7 @@ class WebDashboardWidgetType extends EnumClass {
   static const WebDashboardWidgetType ORDERS_AWAITING_APPROVAL_TABLE = _$wireORDERS_AWAITING_APPROVAL_TABLE;
   static const WebDashboardWidgetType ORDERS_TO_PROCESS_TABLE = _$wireORDERS_TO_PROCESS_TABLE;
   static const WebDashboardWidgetType ORDERS_NEEDING_SOURCING = _$wireORDERS_NEEDING_SOURCING;
+  static const WebDashboardWidgetType DUE_BACK_TABLE = _$wireDUE_BACK_TABLE;
   
   ////////////////////////////////
   /// Constructor

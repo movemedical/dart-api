@@ -20,6 +20,8 @@ const MobileDashboardWidgetType _$wireSCHEDULE =
     const MobileDashboardWidgetType._('SCHEDULE');
 const MobileDashboardWidgetType _$wirePENDING_PO =
     const MobileDashboardWidgetType._('PENDING_PO');
+const MobileDashboardWidgetType _$wirePENDING_PO_WITH_DOLLARS =
+    const MobileDashboardWidgetType._('PENDING_PO_WITH_DOLLARS');
 const MobileDashboardWidgetType _$wireMONTH_TO_DATE_SALES =
     const MobileDashboardWidgetType._('MONTH_TO_DATE_SALES');
 const MobileDashboardWidgetType _$wireUPCOMMING_AUDITS =
@@ -30,6 +32,10 @@ const MobileDashboardWidgetType _$wireCREATE_CASE =
     const MobileDashboardWidgetType._('CREATE_CASE');
 const MobileDashboardWidgetType _$wireCREATE_AUDIT =
     const MobileDashboardWidgetType._('CREATE_AUDIT');
+const MobileDashboardWidgetType _$wireSTOCK_LEVELS =
+    const MobileDashboardWidgetType._('STOCK_LEVELS');
+const MobileDashboardWidgetType _$wireDUE_BACK_COUNT =
+    const MobileDashboardWidgetType._('DUE_BACK_COUNT');
 
 MobileDashboardWidgetType _$mobileDashboardWidgetTypeValueOf(String name) {
   switch (name) {
@@ -47,6 +53,8 @@ MobileDashboardWidgetType _$mobileDashboardWidgetTypeValueOf(String name) {
       return _$wireSCHEDULE;
     case 'PENDING_PO':
       return _$wirePENDING_PO;
+    case 'PENDING_PO_WITH_DOLLARS':
+      return _$wirePENDING_PO_WITH_DOLLARS;
     case 'MONTH_TO_DATE_SALES':
       return _$wireMONTH_TO_DATE_SALES;
     case 'UPCOMMING_AUDITS':
@@ -57,6 +65,10 @@ MobileDashboardWidgetType _$mobileDashboardWidgetTypeValueOf(String name) {
       return _$wireCREATE_CASE;
     case 'CREATE_AUDIT':
       return _$wireCREATE_AUDIT;
+    case 'STOCK_LEVELS':
+      return _$wireSTOCK_LEVELS;
+    case 'DUE_BACK_COUNT':
+      return _$wireDUE_BACK_COUNT;
     default:
       throw new ArgumentError(name);
   }
@@ -71,11 +83,14 @@ final BuiltSet<MobileDashboardWidgetType> _$mobileDashboardWidgetTypeValues =
   _$wireMESSAGES,
   _$wireSCHEDULE,
   _$wirePENDING_PO,
+  _$wirePENDING_PO_WITH_DOLLARS,
   _$wireMONTH_TO_DATE_SALES,
   _$wireUPCOMMING_AUDITS,
   _$wireEXPIRATION_MANAGEMENT,
   _$wireCREATE_CASE,
   _$wireCREATE_AUDIT,
+  _$wireSTOCK_LEVELS,
+  _$wireDUE_BACK_COUNT,
 ]);
 
 Serializer<MobileDashboardWidgetType> _$mobileDashboardWidgetTypeSerializer =

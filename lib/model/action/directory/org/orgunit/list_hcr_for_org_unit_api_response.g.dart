@@ -30,8 +30,8 @@ class _$ListHCRForOrgUnitApiResponseSerializer
       result
         ..add('data')
         ..add(serializers.serialize(object.data,
-            specifiedType:
-                const FullType(BuiltList, const [const FullType(Hcr)])));
+            specifiedType: const FullType(BuiltList,
+                const [const FullType(ListHCRForOrgUnitApiHcrLink)])));
     }
     if (object.moreData != null) {
       result
@@ -57,9 +57,9 @@ class _$ListHCRForOrgUnitApiResponseSerializer
       switch (key) {
         case 'data':
           result.data.replace(serializers.deserialize(value,
-                  specifiedType:
-                      const FullType(BuiltList, const [const FullType(Hcr)]))
-              as BuiltList);
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(ListHCRForOrgUnitApiHcrLink)
+              ])) as BuiltList);
           break;
         case 'moreData':
           result.moreData = serializers.deserialize(value,
@@ -74,7 +74,7 @@ class _$ListHCRForOrgUnitApiResponseSerializer
 
 class _$ListHCRForOrgUnitApiResponse extends ListHCRForOrgUnitApiResponse {
   @override
-  final BuiltList<Hcr> data;
+  final BuiltList<ListHCRForOrgUnitApiHcrLink> data;
   @override
   final bool moreData;
 
@@ -121,9 +121,11 @@ class ListHCRForOrgUnitApiResponseBuilder
             ListHCRForOrgUnitApiResponseBuilder> {
   _$ListHCRForOrgUnitApiResponse _$v;
 
-  ListBuilder<Hcr> _data;
-  ListBuilder<Hcr> get data => _$this._data ??= new ListBuilder<Hcr>();
-  set data(ListBuilder<Hcr> data) => _$this._data = data;
+  ListBuilder<ListHCRForOrgUnitApiHcrLink> _data;
+  ListBuilder<ListHCRForOrgUnitApiHcrLink> get data =>
+      _$this._data ??= new ListBuilder<ListHCRForOrgUnitApiHcrLink>();
+  set data(ListBuilder<ListHCRForOrgUnitApiHcrLink> data) =>
+      _$this._data = data;
 
   bool _moreData;
   bool get moreData => _$this._moreData;
@@ -198,13 +200,13 @@ class _$ListHCRForOrgUnitApiResponseActions
       ListHCRForOrgUnitApiResponseActions> $options;
 
   final ActionDispatcher<ListHCRForOrgUnitApiResponse> $replace;
-  final FieldDispatcher<BuiltList<Hcr>> data;
+  final FieldDispatcher<BuiltList<ListHCRForOrgUnitApiHcrLink>> data;
   final FieldDispatcher<bool> moreData;
 
   _$ListHCRForOrgUnitApiResponseActions._(this.$options)
       : $replace = $options.action<ListHCRForOrgUnitApiResponse>(
             '\$replace', (a) => a?.$replace),
-        data = $options.field<BuiltList<Hcr>>(
+        data = $options.field<BuiltList<ListHCRForOrgUnitApiHcrLink>>(
             'data', (a) => a?.data, (s) => s?.data, (p, b) => p?.data = b),
         moreData = $options.field<bool>('moreData', (a) => a?.moreData,
             (s) => s?.moreData, (p, b) => p?.moreData = b),

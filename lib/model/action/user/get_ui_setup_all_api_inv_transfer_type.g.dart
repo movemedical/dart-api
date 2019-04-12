@@ -119,6 +119,24 @@ class _$GetUiSetupAllApiInvTransferTypeSerializer
         ..add(serializers.serialize(object.scopeToLocation,
             specifiedType: const FullType(bool)));
     }
+    if (object.shipAndConfirmEnabled != null) {
+      result
+        ..add('shipAndConfirmEnabled')
+        ..add(serializers.serialize(object.shipAndConfirmEnabled,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.directDeliveryShippingServiceId != null) {
+      result
+        ..add('directDeliveryShippingServiceId')
+        ..add(serializers.serialize(object.directDeliveryShippingServiceId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.fromAllLocations != null) {
+      result
+        ..add('fromAllLocations')
+        ..add(serializers.serialize(object.fromAllLocations,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -207,6 +225,19 @@ class _$GetUiSetupAllApiInvTransferTypeSerializer
           result.scopeToLocation = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'shipAndConfirmEnabled':
+          result.shipAndConfirmEnabled = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'directDeliveryShippingServiceId':
+          result.directDeliveryShippingServiceId = serializers.deserialize(
+              value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'fromAllLocations':
+          result.fromAllLocations = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -244,6 +275,12 @@ class _$GetUiSetupAllApiInvTransferType
   final BuiltList<Location> toLocations;
   @override
   final bool scopeToLocation;
+  @override
+  final bool shipAndConfirmEnabled;
+  @override
+  final String directDeliveryShippingServiceId;
+  @override
+  final bool fromAllLocations;
 
   factory _$GetUiSetupAllApiInvTransferType(
           [void updates(GetUiSetupAllApiInvTransferTypeBuilder b)]) =>
@@ -263,7 +300,10 @@ class _$GetUiSetupAllApiInvTransferType
       this.toLocationTypes,
       this.toFacilityTypes,
       this.toLocations,
-      this.scopeToLocation})
+      this.scopeToLocation,
+      this.shipAndConfirmEnabled,
+      this.directDeliveryShippingServiceId,
+      this.fromAllLocations})
       : super._();
 
   @override
@@ -292,7 +332,11 @@ class _$GetUiSetupAllApiInvTransferType
         toLocationTypes == other.toLocationTypes &&
         toFacilityTypes == other.toFacilityTypes &&
         toLocations == other.toLocations &&
-        scopeToLocation == other.scopeToLocation;
+        scopeToLocation == other.scopeToLocation &&
+        shipAndConfirmEnabled == other.shipAndConfirmEnabled &&
+        directDeliveryShippingServiceId ==
+            other.directDeliveryShippingServiceId &&
+        fromAllLocations == other.fromAllLocations;
   }
 
   @override
@@ -309,20 +353,34 @@ class _$GetUiSetupAllApiInvTransferType
                                         $jc(
                                             $jc(
                                                 $jc(
-                                                    $jc($jc(0, id.hashCode),
-                                                        name.hashCode),
-                                                    orderReasonId.hashCode),
-                                                orderReason.hashCode),
-                                            fromInventoryTypes.hashCode),
-                                        moveItemClasses.hashCode),
-                                    moveItemTypes.hashCode),
-                                fromLocationTypes.hashCode),
-                            fromFacilityTypes.hashCode),
-                        fromLocations.hashCode),
-                    toLocationTypes.hashCode),
-                toFacilityTypes.hashCode),
-            toLocations.hashCode),
-        scopeToLocation.hashCode));
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(
+                                                                    $jc(
+                                                                        0,
+                                                                        id
+                                                                            .hashCode),
+                                                                    name
+                                                                        .hashCode),
+                                                                orderReasonId
+                                                                    .hashCode),
+                                                            orderReason
+                                                                .hashCode),
+                                                        fromInventoryTypes
+                                                            .hashCode),
+                                                    moveItemClasses.hashCode),
+                                                moveItemTypes.hashCode),
+                                            fromLocationTypes.hashCode),
+                                        fromFacilityTypes.hashCode),
+                                    fromLocations.hashCode),
+                                toLocationTypes.hashCode),
+                            toFacilityTypes.hashCode),
+                        toLocations.hashCode),
+                    scopeToLocation.hashCode),
+                shipAndConfirmEnabled.hashCode),
+            directDeliveryShippingServiceId.hashCode),
+        fromAllLocations.hashCode));
   }
 
   @override
@@ -341,7 +399,11 @@ class _$GetUiSetupAllApiInvTransferType
           ..add('toLocationTypes', toLocationTypes)
           ..add('toFacilityTypes', toFacilityTypes)
           ..add('toLocations', toLocations)
-          ..add('scopeToLocation', scopeToLocation))
+          ..add('scopeToLocation', scopeToLocation)
+          ..add('shipAndConfirmEnabled', shipAndConfirmEnabled)
+          ..add('directDeliveryShippingServiceId',
+              directDeliveryShippingServiceId)
+          ..add('fromAllLocations', fromAllLocations))
         .toString();
   }
 }
@@ -430,6 +492,22 @@ class GetUiSetupAllApiInvTransferTypeBuilder
   set scopeToLocation(bool scopeToLocation) =>
       _$this._scopeToLocation = scopeToLocation;
 
+  bool _shipAndConfirmEnabled;
+  bool get shipAndConfirmEnabled => _$this._shipAndConfirmEnabled;
+  set shipAndConfirmEnabled(bool shipAndConfirmEnabled) =>
+      _$this._shipAndConfirmEnabled = shipAndConfirmEnabled;
+
+  String _directDeliveryShippingServiceId;
+  String get directDeliveryShippingServiceId =>
+      _$this._directDeliveryShippingServiceId;
+  set directDeliveryShippingServiceId(String directDeliveryShippingServiceId) =>
+      _$this._directDeliveryShippingServiceId = directDeliveryShippingServiceId;
+
+  bool _fromAllLocations;
+  bool get fromAllLocations => _$this._fromAllLocations;
+  set fromAllLocations(bool fromAllLocations) =>
+      _$this._fromAllLocations = fromAllLocations;
+
   GetUiSetupAllApiInvTransferTypeBuilder();
 
   GetUiSetupAllApiInvTransferTypeBuilder get _$this {
@@ -448,6 +526,9 @@ class GetUiSetupAllApiInvTransferTypeBuilder
       _toFacilityTypes = _$v.toFacilityTypes?.toBuilder();
       _toLocations = _$v.toLocations?.toBuilder();
       _scopeToLocation = _$v.scopeToLocation;
+      _shipAndConfirmEnabled = _$v.shipAndConfirmEnabled;
+      _directDeliveryShippingServiceId = _$v.directDeliveryShippingServiceId;
+      _fromAllLocations = _$v.fromAllLocations;
       _$v = null;
     }
     return this;
@@ -485,7 +566,10 @@ class GetUiSetupAllApiInvTransferTypeBuilder
               toLocationTypes: _toLocationTypes?.build(),
               toFacilityTypes: _toFacilityTypes?.build(),
               toLocations: _toLocations?.build(),
-              scopeToLocation: scopeToLocation);
+              scopeToLocation: scopeToLocation,
+              shipAndConfirmEnabled: shipAndConfirmEnabled,
+              directDeliveryShippingServiceId: directDeliveryShippingServiceId,
+              fromAllLocations: fromAllLocations);
     } catch (_) {
       String _$failedField;
       try {
@@ -556,6 +640,9 @@ class _$GetUiSetupAllApiInvTransferTypeActions
   final FieldDispatcher<BuiltList<FacilityType>> toFacilityTypes;
   final FieldDispatcher<BuiltList<Location>> toLocations;
   final FieldDispatcher<bool> scopeToLocation;
+  final FieldDispatcher<bool> shipAndConfirmEnabled;
+  final FieldDispatcher<String> directDeliveryShippingServiceId;
+  final FieldDispatcher<bool> fromAllLocations;
 
   _$GetUiSetupAllApiInvTransferTypeActions._(this.$options)
       : $replace = $options.action<GetUiSetupAllApiInvTransferType>(
@@ -626,6 +713,21 @@ class _$GetUiSetupAllApiInvTransferTypeActions
             (a) => a?.scopeToLocation,
             (s) => s?.scopeToLocation,
             (p, b) => p?.scopeToLocation = b),
+        shipAndConfirmEnabled = $options.field<bool>(
+            'shipAndConfirmEnabled',
+            (a) => a?.shipAndConfirmEnabled,
+            (s) => s?.shipAndConfirmEnabled,
+            (p, b) => p?.shipAndConfirmEnabled = b),
+        directDeliveryShippingServiceId = $options.field<String>(
+            'directDeliveryShippingServiceId',
+            (a) => a?.directDeliveryShippingServiceId,
+            (s) => s?.directDeliveryShippingServiceId,
+            (p, b) => p?.directDeliveryShippingServiceId = b),
+        fromAllLocations = $options.field<bool>(
+            'fromAllLocations',
+            (a) => a?.fromAllLocations,
+            (s) => s?.fromAllLocations,
+            (p, b) => p?.fromAllLocations = b),
         super._();
 
   factory _$GetUiSetupAllApiInvTransferTypeActions(
@@ -664,6 +766,9 @@ class _$GetUiSetupAllApiInvTransferTypeActions
         this.toFacilityTypes,
         this.toLocations,
         this.scopeToLocation,
+        this.shipAndConfirmEnabled,
+        this.directDeliveryShippingServiceId,
+        this.fromAllLocations,
       ]);
 
   @override
@@ -683,6 +788,9 @@ class _$GetUiSetupAllApiInvTransferTypeActions
     toFacilityTypes.$reducer(reducer);
     toLocations.$reducer(reducer);
     scopeToLocation.$reducer(reducer);
+    shipAndConfirmEnabled.$reducer(reducer);
+    directDeliveryShippingServiceId.$reducer(reducer);
+    fromAllLocations.$reducer(reducer);
   }
 
   @override

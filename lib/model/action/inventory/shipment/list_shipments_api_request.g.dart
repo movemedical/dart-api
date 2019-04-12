@@ -42,10 +42,22 @@ class _$ListShipmentsApiRequestSerializer
         ..add(serializers.serialize(object.orderNumber,
             specifiedType: const FullType(String)));
     }
+    if (object.assignedToUserId != null) {
+      result
+        ..add('assignedToUserId')
+        ..add(serializers.serialize(object.assignedToUserId,
+            specifiedType: const FullType(String)));
+    }
     if (object.createdDateRange != null) {
       result
         ..add('createdDateRange')
         ..add(serializers.serialize(object.createdDateRange,
+            specifiedType: const FullType(DateRange)));
+    }
+    if (object.fulfillmentCutoffDateRange != null) {
+      result
+        ..add('fulfillmentCutoffDateRange')
+        ..add(serializers.serialize(object.fulfillmentCutoffDateRange,
             specifiedType: const FullType(DateRange)));
     }
     if (object.status != null) {
@@ -126,8 +138,17 @@ class _$ListShipmentsApiRequestSerializer
           result.orderNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'assignedToUserId':
+          result.assignedToUserId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'createdDateRange':
           result.createdDateRange.replace(serializers.deserialize(value,
+              specifiedType: const FullType(DateRange)) as DateRange);
+          break;
+        case 'fulfillmentCutoffDateRange':
+          result.fulfillmentCutoffDateRange.replace(serializers.deserialize(
+              value,
               specifiedType: const FullType(DateRange)) as DateRange);
           break;
         case 'status':
@@ -183,7 +204,11 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
   @override
   final String orderNumber;
   @override
+  final String assignedToUserId;
+  @override
   final DateRange createdDateRange;
+  @override
+  final DateRange fulfillmentCutoffDateRange;
   @override
   final BuiltList<ShipmentStatus> status;
   @override
@@ -209,7 +234,9 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
       {this.shipmentId,
       this.shipmentNumber,
       this.orderNumber,
+      this.assignedToUserId,
       this.createdDateRange,
+      this.fulfillmentCutoffDateRange,
       this.status,
       this.fromLocationId,
       this.toLocationId,
@@ -236,7 +263,9 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
         shipmentId == other.shipmentId &&
         shipmentNumber == other.shipmentNumber &&
         orderNumber == other.orderNumber &&
+        assignedToUserId == other.assignedToUserId &&
         createdDateRange == other.createdDateRange &&
+        fulfillmentCutoffDateRange == other.fulfillmentCutoffDateRange &&
         status == other.status &&
         fromLocationId == other.fromLocationId &&
         toLocationId == other.toLocationId &&
@@ -259,10 +288,19 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, shipmentId.hashCode),
-                                                shipmentNumber.hashCode),
-                                            orderNumber.hashCode),
-                                        createdDateRange.hashCode),
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            0,
+                                                            shipmentId
+                                                                .hashCode),
+                                                        shipmentNumber
+                                                            .hashCode),
+                                                    orderNumber.hashCode),
+                                                assignedToUserId.hashCode),
+                                            createdDateRange.hashCode),
+                                        fulfillmentCutoffDateRange.hashCode),
                                     status.hashCode),
                                 fromLocationId.hashCode),
                             toLocationId.hashCode),
@@ -279,7 +317,9 @@ class _$ListShipmentsApiRequest extends ListShipmentsApiRequest {
           ..add('shipmentId', shipmentId)
           ..add('shipmentNumber', shipmentNumber)
           ..add('orderNumber', orderNumber)
+          ..add('assignedToUserId', assignedToUserId)
           ..add('createdDateRange', createdDateRange)
+          ..add('fulfillmentCutoffDateRange', fulfillmentCutoffDateRange)
           ..add('status', status)
           ..add('fromLocationId', fromLocationId)
           ..add('toLocationId', toLocationId)
@@ -310,11 +350,22 @@ class ListShipmentsApiRequestBuilder
   String get orderNumber => _$this._orderNumber;
   set orderNumber(String orderNumber) => _$this._orderNumber = orderNumber;
 
+  String _assignedToUserId;
+  String get assignedToUserId => _$this._assignedToUserId;
+  set assignedToUserId(String assignedToUserId) =>
+      _$this._assignedToUserId = assignedToUserId;
+
   DateRangeBuilder _createdDateRange;
   DateRangeBuilder get createdDateRange =>
       _$this._createdDateRange ??= new DateRangeBuilder();
   set createdDateRange(DateRangeBuilder createdDateRange) =>
       _$this._createdDateRange = createdDateRange;
+
+  DateRangeBuilder _fulfillmentCutoffDateRange;
+  DateRangeBuilder get fulfillmentCutoffDateRange =>
+      _$this._fulfillmentCutoffDateRange ??= new DateRangeBuilder();
+  set fulfillmentCutoffDateRange(DateRangeBuilder fulfillmentCutoffDateRange) =>
+      _$this._fulfillmentCutoffDateRange = fulfillmentCutoffDateRange;
 
   ListBuilder<ShipmentStatus> _status;
   ListBuilder<ShipmentStatus> get status =>
@@ -360,7 +411,9 @@ class ListShipmentsApiRequestBuilder
       _shipmentId = _$v.shipmentId;
       _shipmentNumber = _$v.shipmentNumber;
       _orderNumber = _$v.orderNumber;
+      _assignedToUserId = _$v.assignedToUserId;
       _createdDateRange = _$v.createdDateRange?.toBuilder();
+      _fulfillmentCutoffDateRange = _$v.fulfillmentCutoffDateRange?.toBuilder();
       _status = _$v.status?.toBuilder();
       _fromLocationId = _$v.fromLocationId;
       _toLocationId = _$v.toLocationId;
@@ -396,7 +449,9 @@ class ListShipmentsApiRequestBuilder
               shipmentId: shipmentId,
               shipmentNumber: shipmentNumber,
               orderNumber: orderNumber,
+              assignedToUserId: assignedToUserId,
               createdDateRange: _createdDateRange?.build(),
+              fulfillmentCutoffDateRange: _fulfillmentCutoffDateRange?.build(),
               status: _status?.build(),
               fromLocationId: fromLocationId,
               toLocationId: toLocationId,
@@ -410,6 +465,8 @@ class ListShipmentsApiRequestBuilder
       try {
         _$failedField = 'createdDateRange';
         _createdDateRange?.build();
+        _$failedField = 'fulfillmentCutoffDateRange';
+        _fulfillmentCutoffDateRange?.build();
         _$failedField = 'status';
         _status?.build();
 
@@ -450,7 +507,9 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   final FieldDispatcher<String> shipmentId;
   final FieldDispatcher<String> shipmentNumber;
   final FieldDispatcher<String> orderNumber;
+  final FieldDispatcher<String> assignedToUserId;
   final DateRangeActions createdDateRange;
+  final DateRangeActions fulfillmentCutoffDateRange;
   final FieldDispatcher<BuiltList<ShipmentStatus>> status;
   final FieldDispatcher<String> fromLocationId;
   final FieldDispatcher<String> toLocationId;
@@ -475,6 +534,11 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
             (a) => a?.orderNumber,
             (s) => s?.orderNumber,
             (p, b) => p?.orderNumber = b),
+        assignedToUserId = $options.field<String>(
+            'assignedToUserId',
+            (a) => a?.assignedToUserId,
+            (s) => s?.assignedToUserId,
+            (p, b) => p?.assignedToUserId = b),
         createdDateRange = DateRangeActions(() =>
             $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
                 'createdDateRange',
@@ -482,6 +546,14 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
                 (s) => s?.createdDateRange,
                 (b) => b?.createdDateRange,
                 (parent, builder) => parent?.createdDateRange = builder)),
+        fulfillmentCutoffDateRange = DateRangeActions(() =>
+            $options.stateful<DateRange, DateRangeBuilder, DateRangeActions>(
+                'fulfillmentCutoffDateRange',
+                (a) => a.fulfillmentCutoffDateRange,
+                (s) => s?.fulfillmentCutoffDateRange,
+                (b) => b?.fulfillmentCutoffDateRange,
+                (parent, builder) =>
+                    parent?.fulfillmentCutoffDateRange = builder)),
         status = $options.field<BuiltList<ShipmentStatus>>('status',
             (a) => a?.status, (s) => s?.status, (p, b) => p?.status = b),
         fromLocationId = $options.field<String>(
@@ -536,6 +608,7 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.createdDateRange,
+        this.fulfillmentCutoffDateRange,
         this.paging,
         this.orderBy,
       ]);
@@ -548,6 +621,7 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
         this.shipmentId,
         this.shipmentNumber,
         this.orderNumber,
+        this.assignedToUserId,
         this.status,
         this.fromLocationId,
         this.toLocationId,
@@ -562,7 +636,9 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
     shipmentId.$reducer(reducer);
     shipmentNumber.$reducer(reducer);
     orderNumber.$reducer(reducer);
+    assignedToUserId.$reducer(reducer);
     createdDateRange.$reducer(reducer);
+    fulfillmentCutoffDateRange.$reducer(reducer);
     status.$reducer(reducer);
     fromLocationId.$reducer(reducer);
     toLocationId.$reducer(reducer);
@@ -577,6 +653,7 @@ class _$ListShipmentsApiRequestActions extends ListShipmentsApiRequestActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     createdDateRange.$middleware(middleware);
+    fulfillmentCutoffDateRange.$middleware(middleware);
     paging.$middleware(middleware);
     orderBy.$middleware(middleware);
   }

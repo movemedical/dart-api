@@ -15,6 +15,7 @@ class ListShipmentsApiOrderBy extends EnumClass {
   static const ListShipmentsApiOrderBy FROM = _$wireFROM;
   static const ListShipmentsApiOrderBy TO = _$wireTO;
   static const ListShipmentsApiOrderBy SHIPPING_SERVICE = _$wireSHIPPING_SERVICE;
+  static const ListShipmentsApiOrderBy FULFILLMENT_CUTOFF = _$wireFULFILLMENT_CUTOFF;
   
   ////////////////////////////////
   /// Constructor

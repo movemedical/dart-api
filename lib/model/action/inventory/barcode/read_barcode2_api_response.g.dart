@@ -104,6 +104,12 @@ class _$ReadBarcode2ApiResponseSerializer
         ..add(serializers.serialize(object.pkg,
             specifiedType: const FullType(Pkg)));
     }
+    if (object.shipmentLite != null) {
+      result
+        ..add('shipmentLite')
+        ..add(serializers.serialize(object.shipmentLite,
+            specifiedType: const FullType(ShipmentLite)));
+    }
     if (object.pkgToLocation != null) {
       result
         ..add('pkgToLocation')
@@ -201,6 +207,10 @@ class _$ReadBarcode2ApiResponseSerializer
           result.pkg.replace(serializers.deserialize(value,
               specifiedType: const FullType(Pkg)) as Pkg);
           break;
+        case 'shipmentLite':
+          result.shipmentLite.replace(serializers.deserialize(value,
+              specifiedType: const FullType(ShipmentLite)) as ShipmentLite);
+          break;
         case 'pkgToLocation':
           result.pkgToLocation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Location)) as Location);
@@ -252,6 +262,8 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
   @override
   final Pkg pkg;
   @override
+  final ShipmentLite shipmentLite;
+  @override
   final Location pkgToLocation;
   @override
   final Bin bin;
@@ -278,6 +290,7 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
       this.unknownSerial,
       this.tag,
       this.pkg,
+      this.shipmentLite,
       this.pkgToLocation,
       this.bin,
       this.kitItem,
@@ -310,6 +323,7 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
         unknownSerial == other.unknownSerial &&
         tag == other.tag &&
         pkg == other.pkg &&
+        shipmentLite == other.shipmentLite &&
         pkgToLocation == other.pkgToLocation &&
         bin == other.bin &&
         kitItem == other.kitItem &&
@@ -335,23 +349,26 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        readType
+                                                                        $jc(
+                                                                            0,
+                                                                            readType
+                                                                                .hashCode),
+                                                                        reconciledBarcodes
                                                                             .hashCode),
-                                                                    reconciledBarcodes
+                                                                    unreconciledBarcodes
                                                                         .hashCode),
-                                                                unreconciledBarcodes
+                                                                message
                                                                     .hashCode),
-                                                            message.hashCode),
-                                                        complete.hashCode),
-                                                    item.hashCode),
-                                                unknownItem.hashCode),
-                                            lot.hashCode),
-                                        unknownLot.hashCode),
-                                    serial.hashCode),
-                                unknownSerial.hashCode),
-                            tag.hashCode),
-                        pkg.hashCode),
+                                                            complete.hashCode),
+                                                        item.hashCode),
+                                                    unknownItem.hashCode),
+                                                lot.hashCode),
+                                            unknownLot.hashCode),
+                                        serial.hashCode),
+                                    unknownSerial.hashCode),
+                                tag.hashCode),
+                            pkg.hashCode),
+                        shipmentLite.hashCode),
                     pkgToLocation.hashCode),
                 bin.hashCode),
             kitItem.hashCode),
@@ -374,6 +391,7 @@ class _$ReadBarcode2ApiResponse extends ReadBarcode2ApiResponse {
           ..add('unknownSerial', unknownSerial)
           ..add('tag', tag)
           ..add('pkg', pkg)
+          ..add('shipmentLite', shipmentLite)
           ..add('pkgToLocation', pkgToLocation)
           ..add('bin', bin)
           ..add('kitItem', kitItem)
@@ -444,6 +462,12 @@ class ReadBarcode2ApiResponseBuilder
   PkgBuilder get pkg => _$this._pkg ??= new PkgBuilder();
   set pkg(PkgBuilder pkg) => _$this._pkg = pkg;
 
+  ShipmentLiteBuilder _shipmentLite;
+  ShipmentLiteBuilder get shipmentLite =>
+      _$this._shipmentLite ??= new ShipmentLiteBuilder();
+  set shipmentLite(ShipmentLiteBuilder shipmentLite) =>
+      _$this._shipmentLite = shipmentLite;
+
   LocationBuilder _pkgToLocation;
   LocationBuilder get pkgToLocation =>
       _$this._pkgToLocation ??= new LocationBuilder();
@@ -479,6 +503,7 @@ class ReadBarcode2ApiResponseBuilder
       _unknownSerial = _$v.unknownSerial;
       _tag = _$v.tag?.toBuilder();
       _pkg = _$v.pkg?.toBuilder();
+      _shipmentLite = _$v.shipmentLite?.toBuilder();
       _pkgToLocation = _$v.pkgToLocation?.toBuilder();
       _bin = _$v.bin?.toBuilder();
       _kitItem = _$v.kitItem?.toBuilder();
@@ -520,6 +545,7 @@ class ReadBarcode2ApiResponseBuilder
               unknownSerial: unknownSerial,
               tag: _tag?.build(),
               pkg: _pkg?.build(),
+              shipmentLite: _shipmentLite?.build(),
               pkgToLocation: _pkgToLocation?.build(),
               bin: _bin?.build(),
               kitItem: _kitItem?.build(),
@@ -545,6 +571,8 @@ class ReadBarcode2ApiResponseBuilder
         _tag?.build();
         _$failedField = 'pkg';
         _pkg?.build();
+        _$failedField = 'shipmentLite';
+        _shipmentLite?.build();
         _$failedField = 'pkgToLocation';
         _pkgToLocation?.build();
         _$failedField = 'bin';
@@ -596,6 +624,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
   final FieldDispatcher<String> unknownSerial;
   final TagActions tag;
   final PkgActions pkg;
+  final ShipmentLiteActions shipmentLite;
   final LocationActions pkgToLocation;
   final BinActions bin;
   final ItemActions kitItem;
@@ -664,6 +693,13 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
             (s) => s?.pkg,
             (b) => b?.pkg,
             (parent, builder) => parent?.pkg = builder)),
+        shipmentLite = ShipmentLiteActions(() => $options
+            .stateful<ShipmentLite, ShipmentLiteBuilder, ShipmentLiteActions>(
+                'shipmentLite',
+                (a) => a.shipmentLite,
+                (s) => s?.shipmentLite,
+                (b) => b?.shipmentLite,
+                (parent, builder) => parent?.shipmentLite = builder)),
         pkgToLocation = LocationActions(() =>
             $options.stateful<Location, LocationBuilder, LocationActions>(
                 'pkgToLocation',
@@ -712,6 +748,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
         this.serial,
         this.tag,
         this.pkg,
+        this.shipmentLite,
         this.pkgToLocation,
         this.bin,
         this.kitItem,
@@ -749,6 +786,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
     unknownSerial.$reducer(reducer);
     tag.$reducer(reducer);
     pkg.$reducer(reducer);
+    shipmentLite.$reducer(reducer);
     pkgToLocation.$reducer(reducer);
     bin.$reducer(reducer);
     kitItem.$reducer(reducer);
@@ -763,6 +801,7 @@ class _$ReadBarcode2ApiResponseActions extends ReadBarcode2ApiResponseActions {
     serial.$middleware(middleware);
     tag.$middleware(middleware);
     pkg.$middleware(middleware);
+    shipmentLite.$middleware(middleware);
     pkgToLocation.$middleware(middleware);
     bin.$middleware(middleware);
     kitItem.$middleware(middleware);

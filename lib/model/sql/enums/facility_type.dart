@@ -16,6 +16,7 @@ class FacilityType extends EnumClass {
   static const FacilityType HOSPITAL = _$wireHOSPITAL;
   static const FacilityType SURGERY_CENTER = _$wireSURGERY_CENTER;
   static const FacilityType SCAN_CENTER = _$wireSCAN_CENTER;
+  static const FacilityType STERILIZATION_CENTER = _$wireSTERILIZATION_CENTER;
   
   ////////////////////////////////
   /// Constructor

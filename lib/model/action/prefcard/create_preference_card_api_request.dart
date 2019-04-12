@@ -3,6 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
+import 'package:built_collection/built_collection.dart';
 
 part 'create_preference_card_api_request.g.dart';
 
@@ -10,6 +11,9 @@ abstract class CreatePreferenceCardApiRequest implements Built<CreatePreferenceC
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
+  
+  @nullable
+  String get facilityId;
   
   @nullable
   String get physicianId;
@@ -28,6 +32,9 @@ abstract class CreatePreferenceCardApiRequest implements Built<CreatePreferenceC
   
   @nullable
   String get subProcedureId;
+  
+  @nullable
+  BuiltList<String> get orgUnitIds;
   
   ////////////////////////////////
   /// Constructors
@@ -49,6 +56,8 @@ abstract class CreatePreferenceCardApiRequestActions extends ModelActions<Create
   /// Fields
   ////////////////////////////////
   
+  FieldDispatcher<String> get facilityId;
+  
   FieldDispatcher<String> get physicianId;
   
   FieldDispatcher<String> get techniqueId;
@@ -60,6 +69,8 @@ abstract class CreatePreferenceCardApiRequestActions extends ModelActions<Create
   FieldDispatcher<String> get procedureId;
   
   FieldDispatcher<String> get subProcedureId;
+  
+  FieldDispatcher<BuiltList<String>> get orgUnitIds;
   
   ////////////////////////////////
   /// Constructors

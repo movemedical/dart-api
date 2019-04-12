@@ -26,12 +26,6 @@ class _$CreateAuditEntriesApiRequestSerializer
       Serializers serializers, CreateAuditEntriesApiRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.auditId != null) {
-      result
-        ..add('auditId')
-        ..add(serializers.serialize(object.auditId,
-            specifiedType: const FullType(String)));
-    }
     if (object.entries != null) {
       result
         ..add('entries')
@@ -55,10 +49,6 @@ class _$CreateAuditEntriesApiRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'auditId':
-          result.auditId = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
         case 'entries':
           result.entries.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
@@ -74,15 +64,13 @@ class _$CreateAuditEntriesApiRequestSerializer
 
 class _$CreateAuditEntriesApiRequest extends CreateAuditEntriesApiRequest {
   @override
-  final String auditId;
-  @override
   final BuiltList<CreateAuditEntriesApiAuditEntry> entries;
 
   factory _$CreateAuditEntriesApiRequest(
           [void updates(CreateAuditEntriesApiRequestBuilder b)]) =>
       (new CreateAuditEntriesApiRequestBuilder()..update(updates)).build();
 
-  _$CreateAuditEntriesApiRequest._({this.auditId, this.entries}) : super._();
+  _$CreateAuditEntriesApiRequest._({this.entries}) : super._();
 
   @override
   CreateAuditEntriesApiRequest rebuild(
@@ -96,20 +84,17 @@ class _$CreateAuditEntriesApiRequest extends CreateAuditEntriesApiRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is CreateAuditEntriesApiRequest &&
-        auditId == other.auditId &&
-        entries == other.entries;
+    return other is CreateAuditEntriesApiRequest && entries == other.entries;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, auditId.hashCode), entries.hashCode));
+    return $jf($jc(0, entries.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateAuditEntriesApiRequest')
-          ..add('auditId', auditId)
           ..add('entries', entries))
         .toString();
   }
@@ -121,10 +106,6 @@ class CreateAuditEntriesApiRequestBuilder
             CreateAuditEntriesApiRequestBuilder> {
   _$CreateAuditEntriesApiRequest _$v;
 
-  String _auditId;
-  String get auditId => _$this._auditId;
-  set auditId(String auditId) => _$this._auditId = auditId;
-
   ListBuilder<CreateAuditEntriesApiAuditEntry> _entries;
   ListBuilder<CreateAuditEntriesApiAuditEntry> get entries =>
       _$this._entries ??= new ListBuilder<CreateAuditEntriesApiAuditEntry>();
@@ -135,7 +116,6 @@ class CreateAuditEntriesApiRequestBuilder
 
   CreateAuditEntriesApiRequestBuilder get _$this {
     if (_$v != null) {
-      _auditId = _$v.auditId;
       _entries = _$v.entries?.toBuilder();
       _$v = null;
     }
@@ -160,8 +140,7 @@ class CreateAuditEntriesApiRequestBuilder
     _$CreateAuditEntriesApiRequest _$result;
     try {
       _$result = _$v ??
-          new _$CreateAuditEntriesApiRequest._(
-              auditId: auditId, entries: _entries?.build());
+          new _$CreateAuditEntriesApiRequest._(entries: _entries?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -200,14 +179,11 @@ class _$CreateAuditEntriesApiRequestActions
       CreateAuditEntriesApiRequestActions> $options;
 
   final ActionDispatcher<CreateAuditEntriesApiRequest> $replace;
-  final FieldDispatcher<String> auditId;
   final FieldDispatcher<BuiltList<CreateAuditEntriesApiAuditEntry>> entries;
 
   _$CreateAuditEntriesApiRequestActions._(this.$options)
       : $replace = $options.action<CreateAuditEntriesApiRequest>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
-            (s) => s?.auditId, (p, b) => p?.auditId = b),
         entries = $options.field<BuiltList<CreateAuditEntriesApiAuditEntry>>(
             'entries',
             (a) => a?.entries,
@@ -231,14 +207,12 @@ class _$CreateAuditEntriesApiRequestActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.auditId,
         this.entries,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
-    auditId.$reducer(reducer);
     entries.$reducer(reducer);
   }
 

@@ -42,6 +42,12 @@ class _$ListLoanLinesApiLoanLineSerializer
         ..add(serializers.serialize(object.stockItem,
             specifiedType: const FullType(StockItem)));
     }
+    if (object.qtyRequested != null) {
+      result
+        ..add('qtyRequested')
+        ..add(serializers.serialize(object.qtyRequested,
+            specifiedType: const FullType(int)));
+    }
     if (object.qtyCommitted != null) {
       result
         ..add('qtyCommitted')
@@ -106,6 +112,10 @@ class _$ListLoanLinesApiLoanLineSerializer
           result.stockItem.replace(serializers.deserialize(value,
               specifiedType: const FullType(StockItem)) as StockItem);
           break;
+        case 'qtyRequested':
+          result.qtyRequested = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'qtyCommitted':
           result.qtyCommitted = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -145,6 +155,8 @@ class _$ListLoanLinesApiLoanLine extends ListLoanLinesApiLoanLine {
   @override
   final StockItem stockItem;
   @override
+  final int qtyRequested;
+  @override
   final int qtyCommitted;
   @override
   final int qtyInbound;
@@ -165,6 +177,7 @@ class _$ListLoanLinesApiLoanLine extends ListLoanLinesApiLoanLine {
       {this.id,
       this.status,
       this.stockItem,
+      this.qtyRequested,
       this.qtyCommitted,
       this.qtyInbound,
       this.qtyOnHand,
@@ -189,6 +202,7 @@ class _$ListLoanLinesApiLoanLine extends ListLoanLinesApiLoanLine {
         id == other.id &&
         status == other.status &&
         stockItem == other.stockItem &&
+        qtyRequested == other.qtyRequested &&
         qtyCommitted == other.qtyCommitted &&
         qtyInbound == other.qtyInbound &&
         qtyOnHand == other.qtyOnHand &&
@@ -205,8 +219,10 @@ class _$ListLoanLinesApiLoanLine extends ListLoanLinesApiLoanLine {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc($jc(0, id.hashCode), status.hashCode),
-                                stockItem.hashCode),
+                            $jc(
+                                $jc($jc($jc(0, id.hashCode), status.hashCode),
+                                    stockItem.hashCode),
+                                qtyRequested.hashCode),
                             qtyCommitted.hashCode),
                         qtyInbound.hashCode),
                     qtyOnHand.hashCode),
@@ -221,6 +237,7 @@ class _$ListLoanLinesApiLoanLine extends ListLoanLinesApiLoanLine {
           ..add('id', id)
           ..add('status', status)
           ..add('stockItem', stockItem)
+          ..add('qtyRequested', qtyRequested)
           ..add('qtyCommitted', qtyCommitted)
           ..add('qtyInbound', qtyInbound)
           ..add('qtyOnHand', qtyOnHand)
@@ -248,6 +265,10 @@ class ListLoanLinesApiLoanLineBuilder
   StockItemBuilder get stockItem =>
       _$this._stockItem ??= new StockItemBuilder();
   set stockItem(StockItemBuilder stockItem) => _$this._stockItem = stockItem;
+
+  int _qtyRequested;
+  int get qtyRequested => _$this._qtyRequested;
+  set qtyRequested(int qtyRequested) => _$this._qtyRequested = qtyRequested;
 
   int _qtyCommitted;
   int get qtyCommitted => _$this._qtyCommitted;
@@ -280,6 +301,7 @@ class ListLoanLinesApiLoanLineBuilder
       _id = _$v.id;
       _status = _$v.status;
       _stockItem = _$v.stockItem?.toBuilder();
+      _qtyRequested = _$v.qtyRequested;
       _qtyCommitted = _$v.qtyCommitted;
       _qtyInbound = _$v.qtyInbound;
       _qtyOnHand = _$v.qtyOnHand;
@@ -313,6 +335,7 @@ class ListLoanLinesApiLoanLineBuilder
               id: id,
               status: status,
               stockItem: _stockItem?.build(),
+              qtyRequested: qtyRequested,
               qtyCommitted: qtyCommitted,
               qtyInbound: qtyInbound,
               qtyOnHand: qtyOnHand,
@@ -360,6 +383,7 @@ class _$ListLoanLinesApiLoanLineActions
   final FieldDispatcher<String> id;
   final FieldDispatcher<LoanLineStatus> status;
   final StockItemActions stockItem;
+  final FieldDispatcher<int> qtyRequested;
   final FieldDispatcher<int> qtyCommitted;
   final FieldDispatcher<int> qtyInbound;
   final FieldDispatcher<int> qtyOnHand;
@@ -381,6 +405,11 @@ class _$ListLoanLinesApiLoanLineActions
                 (s) => s?.stockItem,
                 (b) => b?.stockItem,
                 (parent, builder) => parent?.stockItem = builder)),
+        qtyRequested = $options.field<int>(
+            'qtyRequested',
+            (a) => a?.qtyRequested,
+            (s) => s?.qtyRequested,
+            (p, b) => p?.qtyRequested = b),
         qtyCommitted = $options.field<int>(
             'qtyCommitted',
             (a) => a?.qtyCommitted,
@@ -422,6 +451,7 @@ class _$ListLoanLinesApiLoanLineActions
         this.$replace,
         this.id,
         this.status,
+        this.qtyRequested,
         this.qtyCommitted,
         this.qtyInbound,
         this.qtyOnHand,
@@ -436,6 +466,7 @@ class _$ListLoanLinesApiLoanLineActions
     id.$reducer(reducer);
     status.$reducer(reducer);
     stockItem.$reducer(reducer);
+    qtyRequested.$reducer(reducer);
     qtyCommitted.$reducer(reducer);
     qtyInbound.$reducer(reducer);
     qtyOnHand.$reducer(reducer);

@@ -14,6 +14,9 @@ abstract class GetPendingPoCountApiResponse implements Built<GetPendingPoCountAp
   @nullable
   int get count;
   
+  @nullable
+  double get totalAmount;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -35,6 +38,8 @@ abstract class GetPendingPoCountApiResponseActions extends ModelActions<GetPendi
   ////////////////////////////////
   
   FieldDispatcher<int> get count;
+  
+  FieldDispatcher<double> get totalAmount;
   
   ////////////////////////////////
   /// Constructors

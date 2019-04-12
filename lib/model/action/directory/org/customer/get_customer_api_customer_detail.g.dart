@@ -134,6 +134,13 @@ class _$GetCustomerApiCustomerDetailSerializer
         ..add(serializers.serialize(object.moveManaged,
             specifiedType: const FullType(bool)));
     }
+    if (object.attributeContacts != null) {
+      result
+        ..add('attributeContacts')
+        ..add(serializers.serialize(object.attributeContacts,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AttributeContact)])));
+    }
 
     return result;
   }
@@ -224,6 +231,12 @@ class _$GetCustomerApiCustomerDetailSerializer
           result.moveManaged = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'attributeContacts':
+          result.attributeContacts.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AttributeContact)]))
+              as BuiltList);
+          break;
       }
     }
 
@@ -268,6 +281,8 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
   final bool active;
   @override
   final bool moveManaged;
+  @override
+  final BuiltList<AttributeContact> attributeContacts;
 
   factory _$GetCustomerApiCustomerDetail(
           [void updates(GetCustomerApiCustomerDetailBuilder b)]) =>
@@ -291,7 +306,8 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
       this.creditHold,
       this.paymentTerms,
       this.active,
-      this.moveManaged})
+      this.moveManaged,
+      this.attributeContacts})
       : super._();
 
   @override
@@ -324,7 +340,8 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
         creditHold == other.creditHold &&
         paymentTerms == other.paymentTerms &&
         active == other.active &&
-        moveManaged == other.moveManaged;
+        moveManaged == other.moveManaged &&
+        attributeContacts == other.attributeContacts;
   }
 
   @override
@@ -346,25 +363,33 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        $jc(0,
-                                                                            id.hashCode),
-                                                                        name.hashCode),
-                                                                    number.hashCode),
-                                                                orgId.hashCode),
-                                                            orgName.hashCode),
-                                                        hsOrgId.hashCode),
-                                                    hsOrgName.hashCode),
-                                                defaultShipTo.hashCode),
-                                            defaultBillTo.hashCode),
-                                        timeZone.hashCode),
-                                    email.hashCode),
-                                phoneNumber.hashCode),
-                            description.hashCode),
-                        publicListing.hashCode),
-                    creditHold.hashCode),
-                paymentTerms.hashCode),
-            active.hashCode),
-        moveManaged.hashCode));
+                                                                        $jc(
+                                                                            $jc(
+                                                                                0,
+                                                                                id
+                                                                                    .hashCode),
+                                                                            name
+                                                                                .hashCode),
+                                                                        number
+                                                                            .hashCode),
+                                                                    orgId
+                                                                        .hashCode),
+                                                                orgName
+                                                                    .hashCode),
+                                                            hsOrgId.hashCode),
+                                                        hsOrgName.hashCode),
+                                                    defaultShipTo.hashCode),
+                                                defaultBillTo.hashCode),
+                                            timeZone.hashCode),
+                                        email.hashCode),
+                                    phoneNumber.hashCode),
+                                description.hashCode),
+                            publicListing.hashCode),
+                        creditHold.hashCode),
+                    paymentTerms.hashCode),
+                active.hashCode),
+            moveManaged.hashCode),
+        attributeContacts.hashCode));
   }
 
   @override
@@ -387,7 +412,8 @@ class _$GetCustomerApiCustomerDetail extends GetCustomerApiCustomerDetail {
           ..add('creditHold', creditHold)
           ..add('paymentTerms', paymentTerms)
           ..add('active', active)
-          ..add('moveManaged', moveManaged))
+          ..add('moveManaged', moveManaged)
+          ..add('attributeContacts', attributeContacts))
         .toString();
   }
 }
@@ -477,6 +503,12 @@ class GetCustomerApiCustomerDetailBuilder
   bool get moveManaged => _$this._moveManaged;
   set moveManaged(bool moveManaged) => _$this._moveManaged = moveManaged;
 
+  ListBuilder<AttributeContact> _attributeContacts;
+  ListBuilder<AttributeContact> get attributeContacts =>
+      _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
+  set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
+      _$this._attributeContacts = attributeContacts;
+
   GetCustomerApiCustomerDetailBuilder();
 
   GetCustomerApiCustomerDetailBuilder get _$this {
@@ -499,6 +531,7 @@ class GetCustomerApiCustomerDetailBuilder
       _paymentTerms = _$v.paymentTerms;
       _active = _$v.active;
       _moveManaged = _$v.moveManaged;
+      _attributeContacts = _$v.attributeContacts?.toBuilder();
       _$v = null;
     }
     return this;
@@ -540,7 +573,8 @@ class GetCustomerApiCustomerDetailBuilder
               creditHold: creditHold,
               paymentTerms: paymentTerms,
               active: active,
-              moveManaged: moveManaged);
+              moveManaged: moveManaged,
+              attributeContacts: _attributeContacts?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -553,6 +587,9 @@ class GetCustomerApiCustomerDetailBuilder
         _email?.build();
         _$failedField = 'phoneNumber';
         _phoneNumber?.build();
+
+        _$failedField = 'attributeContacts';
+        _attributeContacts?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetCustomerApiCustomerDetail', _$failedField, e.toString());
@@ -604,6 +641,7 @@ class _$GetCustomerApiCustomerDetailActions
   final FieldDispatcher<String> paymentTerms;
   final FieldDispatcher<bool> active;
   final FieldDispatcher<bool> moveManaged;
+  final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
 
   _$GetCustomerApiCustomerDetailActions._(this.$options)
       : $replace = $options.action<GetCustomerApiCustomerDetail>(
@@ -677,6 +715,11 @@ class _$GetCustomerApiCustomerDetailActions
             (s) => s?.active, (p, b) => p?.active = b),
         moveManaged = $options.field<bool>('moveManaged', (a) => a?.moveManaged,
             (s) => s?.moveManaged, (p, b) => p?.moveManaged = b),
+        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+            'attributeContacts',
+            (a) => a?.attributeContacts,
+            (s) => s?.attributeContacts,
+            (p, b) => p?.attributeContacts = b),
         super._();
 
   factory _$GetCustomerApiCustomerDetailActions(
@@ -718,6 +761,7 @@ class _$GetCustomerApiCustomerDetailActions
         this.paymentTerms,
         this.active,
         this.moveManaged,
+        this.attributeContacts,
       ]);
 
   @override
@@ -741,6 +785,7 @@ class _$GetCustomerApiCustomerDetailActions
     paymentTerms.$reducer(reducer);
     active.$reducer(reducer);
     moveManaged.$reducer(reducer);
+    attributeContacts.$reducer(reducer);
   }
 
   @override

@@ -57,6 +57,18 @@ class _$ListStockApiStockSerializer
         ..add(serializers.serialize(object.found,
             specifiedType: const FullType(bool)));
     }
+    if (object.tagId != null) {
+      result
+        ..add('tagId')
+        ..add(serializers.serialize(object.tagId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.tagNumber != null) {
+      result
+        ..add('tagNumber')
+        ..add(serializers.serialize(object.tagNumber,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -96,6 +108,14 @@ class _$ListStockApiStockSerializer
           result.found = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'tagId':
+          result.tagId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'tagNumber':
+          result.tagNumber = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -116,6 +136,10 @@ class _$ListStockApiStock extends ListStockApiStock {
   final bool lost;
   @override
   final bool found;
+  @override
+  final String tagId;
+  @override
+  final String tagNumber;
 
   factory _$ListStockApiStock([void updates(ListStockApiStockBuilder b)]) =>
       (new ListStockApiStockBuilder()..update(updates)).build();
@@ -126,7 +150,9 @@ class _$ListStockApiStock extends ListStockApiStock {
       this.allocated,
       this.onHold,
       this.lost,
-      this.found})
+      this.found,
+      this.tagId,
+      this.tagNumber})
       : super._();
 
   @override
@@ -146,7 +172,9 @@ class _$ListStockApiStock extends ListStockApiStock {
         allocated == other.allocated &&
         onHold == other.onHold &&
         lost == other.lost &&
-        found == other.found;
+        found == other.found &&
+        tagId == other.tagId &&
+        tagNumber == other.tagNumber;
   }
 
   @override
@@ -154,11 +182,15 @@ class _$ListStockApiStock extends ListStockApiStock {
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc($jc(0, id.hashCode), number.hashCode),
-                    allocated.hashCode),
-                onHold.hashCode),
-            lost.hashCode),
-        found.hashCode));
+                $jc(
+                    $jc(
+                        $jc($jc($jc(0, id.hashCode), number.hashCode),
+                            allocated.hashCode),
+                        onHold.hashCode),
+                    lost.hashCode),
+                found.hashCode),
+            tagId.hashCode),
+        tagNumber.hashCode));
   }
 
   @override
@@ -169,7 +201,9 @@ class _$ListStockApiStock extends ListStockApiStock {
           ..add('allocated', allocated)
           ..add('onHold', onHold)
           ..add('lost', lost)
-          ..add('found', found))
+          ..add('found', found)
+          ..add('tagId', tagId)
+          ..add('tagNumber', tagNumber))
         .toString();
   }
 }
@@ -202,6 +236,14 @@ class ListStockApiStockBuilder
   bool get found => _$this._found;
   set found(bool found) => _$this._found = found;
 
+  String _tagId;
+  String get tagId => _$this._tagId;
+  set tagId(String tagId) => _$this._tagId = tagId;
+
+  String _tagNumber;
+  String get tagNumber => _$this._tagNumber;
+  set tagNumber(String tagNumber) => _$this._tagNumber = tagNumber;
+
   ListStockApiStockBuilder();
 
   ListStockApiStockBuilder get _$this {
@@ -212,6 +254,8 @@ class ListStockApiStockBuilder
       _onHold = _$v.onHold;
       _lost = _$v.lost;
       _found = _$v.found;
+      _tagId = _$v.tagId;
+      _tagNumber = _$v.tagNumber;
       _$v = null;
     }
     return this;
@@ -239,7 +283,9 @@ class ListStockApiStockBuilder
             allocated: allocated,
             onHold: onHold,
             lost: lost,
-            found: found);
+            found: found,
+            tagId: tagId,
+            tagNumber: tagNumber);
     replace(_$result);
     return _$result;
   }
@@ -268,6 +314,8 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
   final FieldDispatcher<bool> onHold;
   final FieldDispatcher<bool> lost;
   final FieldDispatcher<bool> found;
+  final FieldDispatcher<String> tagId;
+  final FieldDispatcher<String> tagNumber;
 
   _$ListStockApiStockActions._(this.$options)
       : $replace =
@@ -284,6 +332,10 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
             'lost', (a) => a?.lost, (s) => s?.lost, (p, b) => p?.lost = b),
         found = $options.field<bool>(
             'found', (a) => a?.found, (s) => s?.found, (p, b) => p?.found = b),
+        tagId = $options.field<String>(
+            'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
+        tagNumber = $options.field<String>('tagNumber', (a) => a?.tagNumber,
+            (s) => s?.tagNumber, (p, b) => p?.tagNumber = b),
         super._();
 
   factory _$ListStockApiStockActions(ListStockApiStockActionsOptions options) =>
@@ -306,6 +358,8 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
         this.onHold,
         this.lost,
         this.found,
+        this.tagId,
+        this.tagNumber,
       ]);
 
   @override
@@ -317,6 +371,8 @@ class _$ListStockApiStockActions extends ListStockApiStockActions {
     onHold.$reducer(reducer);
     lost.$reducer(reducer);
     found.$reducer(reducer);
+    tagId.$reducer(reducer);
+    tagNumber.$reducer(reducer);
   }
 
   @override

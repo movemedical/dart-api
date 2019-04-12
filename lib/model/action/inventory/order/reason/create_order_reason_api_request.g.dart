@@ -86,6 +86,12 @@ class _$CreateOrderReasonApiRequestSerializer
         ..add(serializers.serialize(object.toInventoryTypeId,
             specifiedType: const FullType(String)));
     }
+    if (object.defaultShippingServiceId != null) {
+      result
+        ..add('defaultShippingServiceId')
+        ..add(serializers.serialize(object.defaultShippingServiceId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -144,6 +150,10 @@ class _$CreateOrderReasonApiRequestSerializer
           result.toInventoryTypeId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'defaultShippingServiceId':
+          result.defaultShippingServiceId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -172,6 +182,8 @@ class _$CreateOrderReasonApiRequest extends CreateOrderReasonApiRequest {
   final bool changesHomeLocation;
   @override
   final String toInventoryTypeId;
+  @override
+  final String defaultShippingServiceId;
 
   factory _$CreateOrderReasonApiRequest(
           [void updates(CreateOrderReasonApiRequestBuilder b)]) =>
@@ -187,7 +199,8 @@ class _$CreateOrderReasonApiRequest extends CreateOrderReasonApiRequest {
       this.salesOrderInventorySource,
       this.changesResponsibleParty,
       this.changesHomeLocation,
-      this.toInventoryTypeId})
+      this.toInventoryTypeId,
+      this.defaultShippingServiceId})
       : super._();
 
   @override
@@ -212,7 +225,8 @@ class _$CreateOrderReasonApiRequest extends CreateOrderReasonApiRequest {
         salesOrderInventorySource == other.salesOrderInventorySource &&
         changesResponsibleParty == other.changesResponsibleParty &&
         changesHomeLocation == other.changesHomeLocation &&
-        toInventoryTypeId == other.toInventoryTypeId;
+        toInventoryTypeId == other.toInventoryTypeId &&
+        defaultShippingServiceId == other.defaultShippingServiceId;
   }
 
   @override
@@ -225,16 +239,18 @@ class _$CreateOrderReasonApiRequest extends CreateOrderReasonApiRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, bizUnitId.hashCode),
-                                        name.hashCode),
-                                    reasonGroup.hashCode),
-                                approvalRequired.hashCode),
-                            erp.hashCode),
-                        active.hashCode),
-                    salesOrderInventorySource.hashCode),
-                changesResponsibleParty.hashCode),
-            changesHomeLocation.hashCode),
-        toInventoryTypeId.hashCode));
+                                    $jc(
+                                        $jc($jc(0, bizUnitId.hashCode),
+                                            name.hashCode),
+                                        reasonGroup.hashCode),
+                                    approvalRequired.hashCode),
+                                erp.hashCode),
+                            active.hashCode),
+                        salesOrderInventorySource.hashCode),
+                    changesResponsibleParty.hashCode),
+                changesHomeLocation.hashCode),
+            toInventoryTypeId.hashCode),
+        defaultShippingServiceId.hashCode));
   }
 
   @override
@@ -249,7 +265,8 @@ class _$CreateOrderReasonApiRequest extends CreateOrderReasonApiRequest {
           ..add('salesOrderInventorySource', salesOrderInventorySource)
           ..add('changesResponsibleParty', changesResponsibleParty)
           ..add('changesHomeLocation', changesHomeLocation)
-          ..add('toInventoryTypeId', toInventoryTypeId))
+          ..add('toInventoryTypeId', toInventoryTypeId)
+          ..add('defaultShippingServiceId', defaultShippingServiceId))
         .toString();
   }
 }
@@ -308,6 +325,11 @@ class CreateOrderReasonApiRequestBuilder
   set toInventoryTypeId(String toInventoryTypeId) =>
       _$this._toInventoryTypeId = toInventoryTypeId;
 
+  String _defaultShippingServiceId;
+  String get defaultShippingServiceId => _$this._defaultShippingServiceId;
+  set defaultShippingServiceId(String defaultShippingServiceId) =>
+      _$this._defaultShippingServiceId = defaultShippingServiceId;
+
   CreateOrderReasonApiRequestBuilder();
 
   CreateOrderReasonApiRequestBuilder get _$this {
@@ -322,6 +344,7 @@ class CreateOrderReasonApiRequestBuilder
       _changesResponsibleParty = _$v.changesResponsibleParty;
       _changesHomeLocation = _$v.changesHomeLocation;
       _toInventoryTypeId = _$v.toInventoryTypeId;
+      _defaultShippingServiceId = _$v.defaultShippingServiceId;
       _$v = null;
     }
     return this;
@@ -353,7 +376,8 @@ class CreateOrderReasonApiRequestBuilder
             salesOrderInventorySource: salesOrderInventorySource,
             changesResponsibleParty: changesResponsibleParty,
             changesHomeLocation: changesHomeLocation,
-            toInventoryTypeId: toInventoryTypeId);
+            toInventoryTypeId: toInventoryTypeId,
+            defaultShippingServiceId: defaultShippingServiceId);
     replace(_$result);
     return _$result;
   }
@@ -391,6 +415,7 @@ class _$CreateOrderReasonApiRequestActions
   final FieldDispatcher<bool> changesResponsibleParty;
   final FieldDispatcher<bool> changesHomeLocation;
   final FieldDispatcher<String> toInventoryTypeId;
+  final FieldDispatcher<String> defaultShippingServiceId;
 
   _$CreateOrderReasonApiRequestActions._(this.$options)
       : $replace = $options.action<CreateOrderReasonApiRequest>(
@@ -433,6 +458,11 @@ class _$CreateOrderReasonApiRequestActions
             (a) => a?.toInventoryTypeId,
             (s) => s?.toInventoryTypeId,
             (p, b) => p?.toInventoryTypeId = b),
+        defaultShippingServiceId = $options.field<String>(
+            'defaultShippingServiceId',
+            (a) => a?.defaultShippingServiceId,
+            (s) => s?.defaultShippingServiceId,
+            (p, b) => p?.defaultShippingServiceId = b),
         super._();
 
   factory _$CreateOrderReasonApiRequestActions(
@@ -461,6 +491,7 @@ class _$CreateOrderReasonApiRequestActions
         this.changesResponsibleParty,
         this.changesHomeLocation,
         this.toInventoryTypeId,
+        this.defaultShippingServiceId,
       ]);
 
   @override
@@ -476,6 +507,7 @@ class _$CreateOrderReasonApiRequestActions
     changesResponsibleParty.$reducer(reducer);
     changesHomeLocation.$reducer(reducer);
     toInventoryTypeId.$reducer(reducer);
+    defaultShippingServiceId.$reducer(reducer);
   }
 
   @override

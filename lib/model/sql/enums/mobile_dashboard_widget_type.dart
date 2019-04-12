@@ -16,11 +16,14 @@ class MobileDashboardWidgetType extends EnumClass {
   static const MobileDashboardWidgetType MESSAGES = _$wireMESSAGES;
   static const MobileDashboardWidgetType SCHEDULE = _$wireSCHEDULE;
   static const MobileDashboardWidgetType PENDING_PO = _$wirePENDING_PO;
+  static const MobileDashboardWidgetType PENDING_PO_WITH_DOLLARS = _$wirePENDING_PO_WITH_DOLLARS;
   static const MobileDashboardWidgetType MONTH_TO_DATE_SALES = _$wireMONTH_TO_DATE_SALES;
   static const MobileDashboardWidgetType UPCOMMING_AUDITS = _$wireUPCOMMING_AUDITS;
   static const MobileDashboardWidgetType EXPIRATION_MANAGEMENT = _$wireEXPIRATION_MANAGEMENT;
   static const MobileDashboardWidgetType CREATE_CASE = _$wireCREATE_CASE;
   static const MobileDashboardWidgetType CREATE_AUDIT = _$wireCREATE_AUDIT;
+  static const MobileDashboardWidgetType STOCK_LEVELS = _$wireSTOCK_LEVELS;
+  static const MobileDashboardWidgetType DUE_BACK_COUNT = _$wireDUE_BACK_COUNT;
   
   ////////////////////////////////
   /// Constructor

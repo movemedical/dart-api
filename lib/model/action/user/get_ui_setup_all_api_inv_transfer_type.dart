@@ -61,6 +61,15 @@ abstract class GetUiSetupAllApiInvTransferType implements Built<GetUiSetupAllApi
   @nullable
   bool get scopeToLocation;
   
+  @nullable
+  bool get shipAndConfirmEnabled;
+  
+  @nullable
+  String get directDeliveryShippingServiceId;
+  
+  @nullable
+  bool get fromAllLocations;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -108,6 +117,12 @@ abstract class GetUiSetupAllApiInvTransferTypeActions extends ModelActions<GetUi
   FieldDispatcher<BuiltList<Location>> get toLocations;
   
   FieldDispatcher<bool> get scopeToLocation;
+  
+  FieldDispatcher<bool> get shipAndConfirmEnabled;
+  
+  FieldDispatcher<String> get directDeliveryShippingServiceId;
+  
+  FieldDispatcher<bool> get fromAllLocations;
   
   ////////////////////////////////
   /// Constructors

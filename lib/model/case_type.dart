@@ -15,10 +15,19 @@ abstract class CaseType implements Built<CaseType, CaseTypeBuilder> {
   String get id;
   
   @nullable
+  String get orgId;
+  
+  @nullable
+  String get bizUnitId;
+  
+  @nullable
   String get name;
   
   @nullable
   bool get active;
+  
+  @nullable
+  String get bizUnitName;
   
   ////////////////////////////////
   /// Constructors
@@ -42,9 +51,15 @@ abstract class CaseTypeActions extends ModelActions<CaseType, CaseTypeBuilder, C
   
   FieldDispatcher<String> get id;
   
+  FieldDispatcher<String> get orgId;
+  
+  FieldDispatcher<String> get bizUnitId;
+  
   FieldDispatcher<String> get name;
   
   FieldDispatcher<bool> get active;
+  
+  FieldDispatcher<String> get bizUnitName;
   
   ////////////////////////////////
   /// Constructors

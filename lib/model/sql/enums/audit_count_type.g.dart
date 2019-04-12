@@ -6,16 +6,19 @@ part of 'audit_count_type.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const AuditCountType _$wireASSIGNED = const AuditCountType._('ASSIGNED');
+const AuditCountType _$wirePHYSICAL = const AuditCountType._('PHYSICAL');
 const AuditCountType _$wireSELF_REPORTED =
     const AuditCountType._('SELF_REPORTED');
-const AuditCountType _$wirePHYSICAL = const AuditCountType._('PHYSICAL');
 
 AuditCountType _$auditCountTypeValueOf(String name) {
   switch (name) {
-    case 'SELF_REPORTED':
-      return _$wireSELF_REPORTED;
+    case 'ASSIGNED':
+      return _$wireASSIGNED;
     case 'PHYSICAL':
       return _$wirePHYSICAL;
+    case 'SELF_REPORTED':
+      return _$wireSELF_REPORTED;
     default:
       throw new ArgumentError(name);
   }
@@ -23,8 +26,9 @@ AuditCountType _$auditCountTypeValueOf(String name) {
 
 final BuiltSet<AuditCountType> _$auditCountTypeValues =
     new BuiltSet<AuditCountType>(const <AuditCountType>[
-  _$wireSELF_REPORTED,
+  _$wireASSIGNED,
   _$wirePHYSICAL,
+  _$wireSELF_REPORTED,
 ]);
 
 Serializer<AuditCountType> _$auditCountTypeSerializer =

@@ -46,6 +46,13 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataSerializer
         ..add(serializers.serialize(object.dataType,
             specifiedType: const FullType(CustomFieldDataType)));
     }
+    if (object.choices != null) {
+      result
+        ..add('choices')
+        ..add(serializers.serialize(object.choices,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     if (object.sort != null) {
       result
         ..add('sort')
@@ -88,6 +95,12 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataSerializer
                   specifiedType: const FullType(CustomFieldDataType))
               as CustomFieldDataType;
           break;
+        case 'choices':
+          result.choices.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
         case 'sort':
           result.sort = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
@@ -112,6 +125,8 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData
   @override
   final CustomFieldDataType dataType;
   @override
+  final BuiltList<String> choices;
+  @override
   final int sort;
   @override
   final bool required;
@@ -125,7 +140,12 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData
           .build();
 
   _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData._(
-      {this.id, this.name, this.dataType, this.sort, this.required})
+      {this.id,
+      this.name,
+      this.dataType,
+      this.choices,
+      this.sort,
+      this.required})
       : super._();
 
   @override
@@ -147,6 +167,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData
         id == other.id &&
         name == other.name &&
         dataType == other.dataType &&
+        choices == other.choices &&
         sort == other.sort &&
         required == other.required;
   }
@@ -154,7 +175,9 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, id.hashCode), name.hashCode), dataType.hashCode),
+        $jc(
+            $jc($jc($jc($jc(0, id.hashCode), name.hashCode), dataType.hashCode),
+                choices.hashCode),
             sort.hashCode),
         required.hashCode));
   }
@@ -166,6 +189,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData
           ..add('id', id)
           ..add('name', name)
           ..add('dataType', dataType)
+          ..add('choices', choices)
           ..add('sort', sort)
           ..add('required', required))
         .toString();
@@ -190,6 +214,11 @@ class GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder
   CustomFieldDataType get dataType => _$this._dataType;
   set dataType(CustomFieldDataType dataType) => _$this._dataType = dataType;
 
+  ListBuilder<String> _choices;
+  ListBuilder<String> get choices =>
+      _$this._choices ??= new ListBuilder<String>();
+  set choices(ListBuilder<String> choices) => _$this._choices = choices;
+
   int _sort;
   int get sort => _$this._sort;
   set sort(int sort) => _$this._sort = sort;
@@ -205,6 +234,7 @@ class GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder
       _id = _$v.id;
       _name = _$v.name;
       _dataType = _$v.dataType;
+      _choices = _$v.choices?.toBuilder();
       _sort = _$v.sort;
       _required = _$v.required;
       _$v = null;
@@ -229,13 +259,29 @@ class GetOrderReasonSpecificationApiOrderReasonCustomFieldDataBuilder
 
   @override
   _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData build() {
-    final _$result = _$v ??
-        new _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData._(
-            id: id,
-            name: name,
-            dataType: dataType,
-            sort: sort,
-            required: required);
+    _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData _$result;
+    try {
+      _$result = _$v ??
+          new _$GetOrderReasonSpecificationApiOrderReasonCustomFieldData._(
+              id: id,
+              name: name,
+              dataType: dataType,
+              choices: _choices?.build(),
+              sort: sort,
+              required: required);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'choices';
+        _choices?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'GetOrderReasonSpecificationApiOrderReasonCustomFieldData',
+            _$failedField,
+            e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
@@ -267,6 +313,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<CustomFieldDataType> dataType;
+  final FieldDispatcher<BuiltList<String>> choices;
   final FieldDispatcher<int> sort;
   final FieldDispatcher<bool> required;
 
@@ -281,6 +328,8 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         dataType = $options.field<CustomFieldDataType>('dataType',
             (a) => a?.dataType, (s) => s?.dataType, (p, b) => p?.dataType = b),
+        choices = $options.field<BuiltList<String>>('choices',
+            (a) => a?.choices, (s) => s?.choices, (p, b) => p?.choices = b),
         sort = $options.field<int>(
             'sort', (a) => a?.sort, (s) => s?.sort, (p, b) => p?.sort = b),
         required = $options.field<bool>('required', (a) => a?.required,
@@ -310,6 +359,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
         this.id,
         this.name,
         this.dataType,
+        this.choices,
         this.sort,
         this.required,
       ]);
@@ -320,6 +370,7 @@ class _$GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions
     id.$reducer(reducer);
     name.$reducer(reducer);
     dataType.$reducer(reducer);
+    choices.$reducer(reducer);
     sort.$reducer(reducer);
     required.$reducer(reducer);
   }

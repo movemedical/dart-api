@@ -38,6 +38,12 @@ class _$GetSalesOrderApiDisplayRulesSerializer
         ..add(serializers.serialize(object.editDetails,
             specifiedType: const FullType(bool)));
     }
+    if (object.addLineQuantity != null) {
+      result
+        ..add('addLineQuantity')
+        ..add(serializers.serialize(object.addLineQuantity,
+            specifiedType: const FullType(bool)));
+    }
     if (object.editLineQuantity != null) {
       result
         ..add('editLineQuantity')
@@ -116,6 +122,12 @@ class _$GetSalesOrderApiDisplayRulesSerializer
         ..add(serializers.serialize(object.showShipments,
             specifiedType: const FullType(bool)));
     }
+    if (object.approve != null) {
+      result
+        ..add('approve')
+        ..add(serializers.serialize(object.approve,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -138,6 +150,10 @@ class _$GetSalesOrderApiDisplayRulesSerializer
           break;
         case 'editDetails':
           result.editDetails = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'addLineQuantity':
+          result.addLineQuantity = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
         case 'editLineQuantity':
@@ -192,6 +208,10 @@ class _$GetSalesOrderApiDisplayRulesSerializer
           result.showShipments = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'approve':
+          result.approve = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -204,6 +224,8 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
   final bool editLinePricing;
   @override
   final bool editDetails;
+  @override
+  final bool addLineQuantity;
   @override
   final bool editLineQuantity;
   @override
@@ -230,6 +252,8 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
   final bool showLines;
   @override
   final bool showShipments;
+  @override
+  final bool approve;
 
   factory _$GetSalesOrderApiDisplayRules(
           [void updates(GetSalesOrderApiDisplayRulesBuilder b)]) =>
@@ -238,6 +262,7 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
   _$GetSalesOrderApiDisplayRules._(
       {this.editLinePricing,
       this.editDetails,
+      this.addLineQuantity,
       this.editLineQuantity,
       this.sendToErp,
       this.skipErp,
@@ -250,7 +275,8 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
       this.updatePo,
       this.showUsage,
       this.showLines,
-      this.showShipments})
+      this.showShipments,
+      this.approve})
       : super._();
 
   @override
@@ -268,6 +294,7 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
     return other is GetSalesOrderApiDisplayRules &&
         editLinePricing == other.editLinePricing &&
         editDetails == other.editDetails &&
+        addLineQuantity == other.addLineQuantity &&
         editLineQuantity == other.editLineQuantity &&
         sendToErp == other.sendToErp &&
         skipErp == other.skipErp &&
@@ -280,7 +307,8 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
         updatePo == other.updatePo &&
         showUsage == other.showUsage &&
         showLines == other.showLines &&
-        showShipments == other.showShipments;
+        showShipments == other.showShipments &&
+        approve == other.approve;
   }
 
   @override
@@ -300,25 +328,30 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
                                                     $jc(
                                                         $jc(
                                                             $jc(
-                                                                0,
-                                                                editLinePricing
+                                                                $jc(
+                                                                    $jc(
+                                                                        0,
+                                                                        editLinePricing
+                                                                            .hashCode),
+                                                                    editDetails
+                                                                        .hashCode),
+                                                                addLineQuantity
                                                                     .hashCode),
-                                                            editDetails
+                                                            editLineQuantity
                                                                 .hashCode),
-                                                        editLineQuantity
-                                                            .hashCode),
-                                                    sendToErp.hashCode),
-                                                skipErp.hashCode),
-                                            confirm.hashCode),
-                                        cancel.hashCode),
-                                    showItemPricing.hashCode),
-                                getItemPricing.hashCode),
-                            printSalesOrder.hashCode),
-                        editUsage.hashCode),
-                    updatePo.hashCode),
-                showUsage.hashCode),
-            showLines.hashCode),
-        showShipments.hashCode));
+                                                        sendToErp.hashCode),
+                                                    skipErp.hashCode),
+                                                confirm.hashCode),
+                                            cancel.hashCode),
+                                        showItemPricing.hashCode),
+                                    getItemPricing.hashCode),
+                                printSalesOrder.hashCode),
+                            editUsage.hashCode),
+                        updatePo.hashCode),
+                    showUsage.hashCode),
+                showLines.hashCode),
+            showShipments.hashCode),
+        approve.hashCode));
   }
 
   @override
@@ -326,6 +359,7 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
     return (newBuiltValueToStringHelper('GetSalesOrderApiDisplayRules')
           ..add('editLinePricing', editLinePricing)
           ..add('editDetails', editDetails)
+          ..add('addLineQuantity', addLineQuantity)
           ..add('editLineQuantity', editLineQuantity)
           ..add('sendToErp', sendToErp)
           ..add('skipErp', skipErp)
@@ -338,7 +372,8 @@ class _$GetSalesOrderApiDisplayRules extends GetSalesOrderApiDisplayRules {
           ..add('updatePo', updatePo)
           ..add('showUsage', showUsage)
           ..add('showLines', showLines)
-          ..add('showShipments', showShipments))
+          ..add('showShipments', showShipments)
+          ..add('approve', approve))
         .toString();
   }
 }
@@ -357,6 +392,11 @@ class GetSalesOrderApiDisplayRulesBuilder
   bool _editDetails;
   bool get editDetails => _$this._editDetails;
   set editDetails(bool editDetails) => _$this._editDetails = editDetails;
+
+  bool _addLineQuantity;
+  bool get addLineQuantity => _$this._addLineQuantity;
+  set addLineQuantity(bool addLineQuantity) =>
+      _$this._addLineQuantity = addLineQuantity;
 
   bool _editLineQuantity;
   bool get editLineQuantity => _$this._editLineQuantity;
@@ -415,12 +455,17 @@ class GetSalesOrderApiDisplayRulesBuilder
   set showShipments(bool showShipments) =>
       _$this._showShipments = showShipments;
 
+  bool _approve;
+  bool get approve => _$this._approve;
+  set approve(bool approve) => _$this._approve = approve;
+
   GetSalesOrderApiDisplayRulesBuilder();
 
   GetSalesOrderApiDisplayRulesBuilder get _$this {
     if (_$v != null) {
       _editLinePricing = _$v.editLinePricing;
       _editDetails = _$v.editDetails;
+      _addLineQuantity = _$v.addLineQuantity;
       _editLineQuantity = _$v.editLineQuantity;
       _sendToErp = _$v.sendToErp;
       _skipErp = _$v.skipErp;
@@ -434,6 +479,7 @@ class GetSalesOrderApiDisplayRulesBuilder
       _showUsage = _$v.showUsage;
       _showLines = _$v.showLines;
       _showShipments = _$v.showShipments;
+      _approve = _$v.approve;
       _$v = null;
     }
     return this;
@@ -458,6 +504,7 @@ class GetSalesOrderApiDisplayRulesBuilder
         new _$GetSalesOrderApiDisplayRules._(
             editLinePricing: editLinePricing,
             editDetails: editDetails,
+            addLineQuantity: addLineQuantity,
             editLineQuantity: editLineQuantity,
             sendToErp: sendToErp,
             skipErp: skipErp,
@@ -470,7 +517,8 @@ class GetSalesOrderApiDisplayRulesBuilder
             updatePo: updatePo,
             showUsage: showUsage,
             showLines: showLines,
-            showShipments: showShipments);
+            showShipments: showShipments,
+            approve: approve);
     replace(_$result);
     return _$result;
   }
@@ -500,6 +548,7 @@ class _$GetSalesOrderApiDisplayRulesActions
   final ActionDispatcher<GetSalesOrderApiDisplayRules> $replace;
   final FieldDispatcher<bool> editLinePricing;
   final FieldDispatcher<bool> editDetails;
+  final FieldDispatcher<bool> addLineQuantity;
   final FieldDispatcher<bool> editLineQuantity;
   final FieldDispatcher<bool> sendToErp;
   final FieldDispatcher<bool> skipErp;
@@ -513,6 +562,7 @@ class _$GetSalesOrderApiDisplayRulesActions
   final FieldDispatcher<bool> showUsage;
   final FieldDispatcher<bool> showLines;
   final FieldDispatcher<bool> showShipments;
+  final FieldDispatcher<bool> approve;
 
   _$GetSalesOrderApiDisplayRulesActions._(this.$options)
       : $replace = $options.action<GetSalesOrderApiDisplayRules>(
@@ -524,6 +574,11 @@ class _$GetSalesOrderApiDisplayRulesActions
             (p, b) => p?.editLinePricing = b),
         editDetails = $options.field<bool>('editDetails', (a) => a?.editDetails,
             (s) => s?.editDetails, (p, b) => p?.editDetails = b),
+        addLineQuantity = $options.field<bool>(
+            'addLineQuantity',
+            (a) => a?.addLineQuantity,
+            (s) => s?.addLineQuantity,
+            (p, b) => p?.addLineQuantity = b),
         editLineQuantity = $options.field<bool>(
             'editLineQuantity',
             (a) => a?.editLineQuantity,
@@ -565,6 +620,8 @@ class _$GetSalesOrderApiDisplayRulesActions
             (a) => a?.showShipments,
             (s) => s?.showShipments,
             (p, b) => p?.showShipments = b),
+        approve = $options.field<bool>('approve', (a) => a?.approve,
+            (s) => s?.approve, (p, b) => p?.approve = b),
         super._();
 
   factory _$GetSalesOrderApiDisplayRulesActions(
@@ -585,6 +642,7 @@ class _$GetSalesOrderApiDisplayRulesActions
         this.$replace,
         this.editLinePricing,
         this.editDetails,
+        this.addLineQuantity,
         this.editLineQuantity,
         this.sendToErp,
         this.skipErp,
@@ -598,6 +656,7 @@ class _$GetSalesOrderApiDisplayRulesActions
         this.showUsage,
         this.showLines,
         this.showShipments,
+        this.approve,
       ]);
 
   @override
@@ -605,6 +664,7 @@ class _$GetSalesOrderApiDisplayRulesActions
     super.$reducer(reducer);
     editLinePricing.$reducer(reducer);
     editDetails.$reducer(reducer);
+    addLineQuantity.$reducer(reducer);
     editLineQuantity.$reducer(reducer);
     sendToErp.$reducer(reducer);
     skipErp.$reducer(reducer);
@@ -618,6 +678,7 @@ class _$GetSalesOrderApiDisplayRulesActions
     showUsage.$reducer(reducer);
     showLines.$reducer(reducer);
     showShipments.$reducer(reducer);
+    approve.$reducer(reducer);
   }
 
   @override

@@ -27,6 +27,8 @@ const WebNavigationElement _$wireDIRECTORY =
     const WebNavigationElement._('DIRECTORY');
 const WebNavigationElement _$wireREPORTS =
     const WebNavigationElement._('REPORTS');
+const WebNavigationElement _$wireANALYTICS =
+    const WebNavigationElement._('ANALYTICS');
 const WebNavigationElement _$wireINTEGRATIONS =
     const WebNavigationElement._('INTEGRATIONS');
 const WebNavigationElement _$wireADMIN = const WebNavigationElement._('ADMIN');
@@ -55,6 +57,8 @@ WebNavigationElement _$webNavigationElementValueOf(String name) {
       return _$wireDIRECTORY;
     case 'REPORTS':
       return _$wireREPORTS;
+    case 'ANALYTICS':
+      return _$wireANALYTICS;
     case 'INTEGRATIONS':
       return _$wireINTEGRATIONS;
     case 'ADMIN':
@@ -77,6 +81,7 @@ final BuiltSet<WebNavigationElement> _$webNavigationElementValues =
   _$wireCATALOGS,
   _$wireDIRECTORY,
   _$wireREPORTS,
+  _$wireANALYTICS,
   _$wireINTEGRATIONS,
   _$wireADMIN,
 ]);

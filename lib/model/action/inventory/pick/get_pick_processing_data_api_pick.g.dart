@@ -80,6 +80,18 @@ class _$GetPickProcessingDataApiPickSerializer
         ..add(serializers.serialize(object.toContainer,
             specifiedType: const FullType(StockContainer)));
     }
+    if (object.loan != null) {
+      result
+        ..add('loan')
+        ..add(serializers.serialize(object.loan,
+            specifiedType: const FullType(LoanLite)));
+    }
+    if (object.caseEvent != null) {
+      result
+        ..add('caseEvent')
+        ..add(serializers.serialize(object.caseEvent,
+            specifiedType: const FullType(CaseEventLite)));
+    }
 
     return result;
   }
@@ -132,6 +144,14 @@ class _$GetPickProcessingDataApiPickSerializer
           result.toContainer.replace(serializers.deserialize(value,
               specifiedType: const FullType(StockContainer)) as StockContainer);
           break;
+        case 'loan':
+          result.loan.replace(serializers.deserialize(value,
+              specifiedType: const FullType(LoanLite)) as LoanLite);
+          break;
+        case 'caseEvent':
+          result.caseEvent.replace(serializers.deserialize(value,
+              specifiedType: const FullType(CaseEventLite)) as CaseEventLite);
+          break;
       }
     }
 
@@ -158,6 +178,10 @@ class _$GetPickProcessingDataApiPick extends GetPickProcessingDataApiPick {
   final StockContainer fromContainer;
   @override
   final StockContainer toContainer;
+  @override
+  final LoanLite loan;
+  @override
+  final CaseEventLite caseEvent;
 
   factory _$GetPickProcessingDataApiPick(
           [void updates(GetPickProcessingDataApiPickBuilder b)]) =>
@@ -172,7 +196,9 @@ class _$GetPickProcessingDataApiPick extends GetPickProcessingDataApiPick {
       this.kitItem,
       this.kitSerial,
       this.fromContainer,
-      this.toContainer})
+      this.toContainer,
+      this.loan,
+      this.caseEvent})
       : super._();
 
   @override
@@ -196,7 +222,9 @@ class _$GetPickProcessingDataApiPick extends GetPickProcessingDataApiPick {
         kitItem == other.kitItem &&
         kitSerial == other.kitSerial &&
         fromContainer == other.fromContainer &&
-        toContainer == other.toContainer;
+        toContainer == other.toContainer &&
+        loan == other.loan &&
+        caseEvent == other.caseEvent;
   }
 
   @override
@@ -208,15 +236,19 @@ class _$GetPickProcessingDataApiPick extends GetPickProcessingDataApiPick {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, id.hashCode),
-                                    sourcedStockId.hashCode),
-                                pickNumber.hashCode),
-                            dependsOnPickId.hashCode),
-                        stockItem.hashCode),
-                    kitItem.hashCode),
-                kitSerial.hashCode),
-            fromContainer.hashCode),
-        toContainer.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc($jc(0, id.hashCode),
+                                            sourcedStockId.hashCode),
+                                        pickNumber.hashCode),
+                                    dependsOnPickId.hashCode),
+                                stockItem.hashCode),
+                            kitItem.hashCode),
+                        kitSerial.hashCode),
+                    fromContainer.hashCode),
+                toContainer.hashCode),
+            loan.hashCode),
+        caseEvent.hashCode));
   }
 
   @override
@@ -230,7 +262,9 @@ class _$GetPickProcessingDataApiPick extends GetPickProcessingDataApiPick {
           ..add('kitItem', kitItem)
           ..add('kitSerial', kitSerial)
           ..add('fromContainer', fromContainer)
-          ..add('toContainer', toContainer))
+          ..add('toContainer', toContainer)
+          ..add('loan', loan)
+          ..add('caseEvent', caseEvent))
         .toString();
   }
 }
@@ -284,6 +318,16 @@ class GetPickProcessingDataApiPickBuilder
   set toContainer(StockContainerBuilder toContainer) =>
       _$this._toContainer = toContainer;
 
+  LoanLiteBuilder _loan;
+  LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
+  set loan(LoanLiteBuilder loan) => _$this._loan = loan;
+
+  CaseEventLiteBuilder _caseEvent;
+  CaseEventLiteBuilder get caseEvent =>
+      _$this._caseEvent ??= new CaseEventLiteBuilder();
+  set caseEvent(CaseEventLiteBuilder caseEvent) =>
+      _$this._caseEvent = caseEvent;
+
   GetPickProcessingDataApiPickBuilder();
 
   GetPickProcessingDataApiPickBuilder get _$this {
@@ -297,6 +341,8 @@ class GetPickProcessingDataApiPickBuilder
       _kitSerial = _$v.kitSerial?.toBuilder();
       _fromContainer = _$v.fromContainer?.toBuilder();
       _toContainer = _$v.toContainer?.toBuilder();
+      _loan = _$v.loan?.toBuilder();
+      _caseEvent = _$v.caseEvent?.toBuilder();
       _$v = null;
     }
     return this;
@@ -329,7 +375,9 @@ class GetPickProcessingDataApiPickBuilder
               kitItem: _kitItem?.build(),
               kitSerial: _kitSerial?.build(),
               fromContainer: _fromContainer?.build(),
-              toContainer: _toContainer?.build());
+              toContainer: _toContainer?.build(),
+              loan: _loan?.build(),
+              caseEvent: _caseEvent?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -343,6 +391,10 @@ class GetPickProcessingDataApiPickBuilder
         _fromContainer?.build();
         _$failedField = 'toContainer';
         _toContainer?.build();
+        _$failedField = 'loan';
+        _loan?.build();
+        _$failedField = 'caseEvent';
+        _caseEvent?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetPickProcessingDataApiPick', _$failedField, e.toString());
@@ -385,6 +437,8 @@ class _$GetPickProcessingDataApiPickActions
   final SerialActions kitSerial;
   final StockContainerActions fromContainer;
   final StockContainerActions toContainer;
+  final LoanLiteActions loan;
+  final CaseEventLiteActions caseEvent;
 
   _$GetPickProcessingDataApiPickActions._(this.$options)
       : $replace = $options.action<GetPickProcessingDataApiPick>(
@@ -438,6 +492,20 @@ class _$GetPickProcessingDataApiPickActions
             (s) => s?.toContainer,
             (b) => b?.toContainer,
             (parent, builder) => parent?.toContainer = builder)),
+        loan = LoanLiteActions(() =>
+            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+                'loan',
+                (a) => a.loan,
+                (s) => s?.loan,
+                (b) => b?.loan,
+                (parent, builder) => parent?.loan = builder)),
+        caseEvent = CaseEventLiteActions(() => $options.stateful<CaseEventLite,
+                CaseEventLiteBuilder, CaseEventLiteActions>(
+            'caseEvent',
+            (a) => a.caseEvent,
+            (s) => s?.caseEvent,
+            (b) => b?.caseEvent,
+            (parent, builder) => parent?.caseEvent = builder)),
         super._();
 
   factory _$GetPickProcessingDataApiPickActions(
@@ -459,6 +527,8 @@ class _$GetPickProcessingDataApiPickActions
         this.kitSerial,
         this.fromContainer,
         this.toContainer,
+        this.loan,
+        this.caseEvent,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
@@ -484,6 +554,8 @@ class _$GetPickProcessingDataApiPickActions
     kitSerial.$reducer(reducer);
     fromContainer.$reducer(reducer);
     toContainer.$reducer(reducer);
+    loan.$reducer(reducer);
+    caseEvent.$reducer(reducer);
   }
 
   @override
@@ -494,6 +566,8 @@ class _$GetPickProcessingDataApiPickActions
     kitSerial.$middleware(middleware);
     fromContainer.$middleware(middleware);
     toContainer.$middleware(middleware);
+    loan.$middleware(middleware);
+    caseEvent.$middleware(middleware);
   }
 
   FullType _$fullType;

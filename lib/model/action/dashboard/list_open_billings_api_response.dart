@@ -2,7 +2,8 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
-import 'dart:core';
+import 'package:built_collection/built_collection.dart';
+import 'package:movemedical_api/model/action/dashboard/list_open_billings_api_open_billing.dart';
 
 part 'list_open_billings_api_response.g.dart';
 
@@ -12,13 +13,7 @@ abstract class ListOpenBillingsApiResponse implements Built<ListOpenBillingsApiR
   ////////////////////////////////
   
   @nullable
-  double get pendingPoSum;
-  
-  @nullable
-  double get missingUsageSum;
-  
-  @nullable
-  double get unreconciledSum;
+  BuiltList<ListOpenBillingsApiOpenBilling> get openBillings;
   
   ////////////////////////////////
   /// Constructors
@@ -40,11 +35,7 @@ abstract class ListOpenBillingsApiResponseActions extends ModelActions<ListOpenB
   /// Fields
   ////////////////////////////////
   
-  FieldDispatcher<double> get pendingPoSum;
-  
-  FieldDispatcher<double> get missingUsageSum;
-  
-  FieldDispatcher<double> get unreconciledSum;
+  FieldDispatcher<BuiltList<ListOpenBillingsApiOpenBilling>> get openBillings;
   
   ////////////////////////////////
   /// Constructors

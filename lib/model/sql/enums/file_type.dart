@@ -24,6 +24,8 @@ class FileType extends EnumClass {
   static const FileType REGENERATE_DATA_IMPORT = _$wireREGENERATE_DATA_IMPORT;
   static const FileType GENERIC = _$wireGENERIC;
   static const FileType INTEGRATION = _$wireINTEGRATION;
+  static const FileType ITEM = _$wireITEM;
+  static const FileType SERIAL = _$wireSERIAL;
   
   ////////////////////////////////
   /// Constructor

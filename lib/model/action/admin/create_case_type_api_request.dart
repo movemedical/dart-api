@@ -12,6 +12,9 @@ abstract class CreateCaseTypeApiRequest implements Built<CreateCaseTypeApiReques
   ////////////////////////////////
   
   @nullable
+  String get bizUnitId;
+  
+  @nullable
   String get name;
   
   @nullable
@@ -36,6 +39,8 @@ abstract class CreateCaseTypeApiRequestActions extends ModelActions<CreateCaseTy
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
+  
+  FieldDispatcher<String> get bizUnitId;
   
   FieldDispatcher<String> get name;
   

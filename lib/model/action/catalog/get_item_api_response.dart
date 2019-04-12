@@ -8,6 +8,7 @@ import 'package:movemedical_api/model/unit_of_measure.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/item_version.dart';
 import 'dart:core';
+import 'package:movemedical_api/model/essentials/action_api/list_attributes_for_item_api_item_attribute.dart';
 import 'package:movemedical_api/model/action/catalog/get_item_api_display_rule.dart';
 
 part 'get_item_api_response.g.dart';
@@ -31,6 +32,9 @@ abstract class GetItemApiResponse implements Built<GetItemApiResponse, GetItemAp
   
   @nullable
   BuiltList<String> get gtins;
+  
+  @nullable
+  BuiltList<ListAttributesForItemApiItemAttribute> get itemAttributes;
   
   @nullable
   bool get active;
@@ -67,6 +71,8 @@ abstract class GetItemApiResponseActions extends ModelActions<GetItemApiResponse
   FieldDispatcher<BuiltList<ItemVersion>> get versions;
   
   FieldDispatcher<BuiltList<String>> get gtins;
+  
+  FieldDispatcher<BuiltList<ListAttributesForItemApiItemAttribute>> get itemAttributes;
   
   FieldDispatcher<bool> get active;
   

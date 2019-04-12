@@ -74,6 +74,12 @@ class _$GetFoundInventoryTypeApiRequestSerializer
         ..add(serializers.serialize(object.containerId,
             specifiedType: const FullType(String)));
     }
+    if (object.process != null) {
+      result
+        ..add('process')
+        ..add(serializers.serialize(object.process,
+            specifiedType: const FullType(GetFoundInventoryTypeApiProcess)));
+    }
 
     return result;
   }
@@ -123,6 +129,12 @@ class _$GetFoundInventoryTypeApiRequestSerializer
           result.containerId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'process':
+          result.process = serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(GetFoundInventoryTypeApiProcess))
+              as GetFoundInventoryTypeApiProcess;
+          break;
       }
     }
 
@@ -148,6 +160,8 @@ class _$GetFoundInventoryTypeApiRequest
   final StockContainerType containerType;
   @override
   final String containerId;
+  @override
+  final GetFoundInventoryTypeApiProcess process;
 
   factory _$GetFoundInventoryTypeApiRequest(
           [void updates(GetFoundInventoryTypeApiRequestBuilder b)]) =>
@@ -161,7 +175,8 @@ class _$GetFoundInventoryTypeApiRequest
       this.locationType,
       this.locationId,
       this.containerType,
-      this.containerId})
+      this.containerId,
+      this.process})
       : super._();
 
   @override
@@ -184,7 +199,8 @@ class _$GetFoundInventoryTypeApiRequest
         locationType == other.locationType &&
         locationId == other.locationId &&
         containerType == other.containerType &&
-        containerId == other.containerId;
+        containerId == other.containerId &&
+        process == other.process;
   }
 
   @override
@@ -195,14 +211,16 @@ class _$GetFoundInventoryTypeApiRequest
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc(0, itemId.hashCode),
-                                itemVersionId.hashCode),
-                            lotId.hashCode),
-                        serialId.hashCode),
-                    locationType.hashCode),
-                locationId.hashCode),
-            containerType.hashCode),
-        containerId.hashCode));
+                            $jc(
+                                $jc($jc(0, itemId.hashCode),
+                                    itemVersionId.hashCode),
+                                lotId.hashCode),
+                            serialId.hashCode),
+                        locationType.hashCode),
+                    locationId.hashCode),
+                containerType.hashCode),
+            containerId.hashCode),
+        process.hashCode));
   }
 
   @override
@@ -215,7 +233,8 @@ class _$GetFoundInventoryTypeApiRequest
           ..add('locationType', locationType)
           ..add('locationId', locationId)
           ..add('containerType', containerType)
-          ..add('containerId', containerId))
+          ..add('containerId', containerId)
+          ..add('process', process))
         .toString();
   }
 }
@@ -261,6 +280,11 @@ class GetFoundInventoryTypeApiRequestBuilder
   String get containerId => _$this._containerId;
   set containerId(String containerId) => _$this._containerId = containerId;
 
+  GetFoundInventoryTypeApiProcess _process;
+  GetFoundInventoryTypeApiProcess get process => _$this._process;
+  set process(GetFoundInventoryTypeApiProcess process) =>
+      _$this._process = process;
+
   GetFoundInventoryTypeApiRequestBuilder();
 
   GetFoundInventoryTypeApiRequestBuilder get _$this {
@@ -273,6 +297,7 @@ class GetFoundInventoryTypeApiRequestBuilder
       _locationId = _$v.locationId;
       _containerType = _$v.containerType;
       _containerId = _$v.containerId;
+      _process = _$v.process;
       _$v = null;
     }
     return this;
@@ -302,7 +327,8 @@ class GetFoundInventoryTypeApiRequestBuilder
             locationType: locationType,
             locationId: locationId,
             containerType: containerType,
-            containerId: containerId);
+            containerId: containerId,
+            process: process);
     replace(_$result);
     return _$result;
   }
@@ -338,6 +364,7 @@ class _$GetFoundInventoryTypeApiRequestActions
   final FieldDispatcher<String> locationId;
   final FieldDispatcher<StockContainerType> containerType;
   final FieldDispatcher<String> containerId;
+  final FieldDispatcher<GetFoundInventoryTypeApiProcess> process;
 
   _$GetFoundInventoryTypeApiRequestActions._(this.$options)
       : $replace = $options.action<GetFoundInventoryTypeApiRequest>(
@@ -370,6 +397,8 @@ class _$GetFoundInventoryTypeApiRequestActions
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
+        process = $options.field<GetFoundInventoryTypeApiProcess>('process',
+            (a) => a?.process, (s) => s?.process, (p, b) => p?.process = b),
         super._();
 
   factory _$GetFoundInventoryTypeApiRequestActions(
@@ -397,6 +426,7 @@ class _$GetFoundInventoryTypeApiRequestActions
         this.locationId,
         this.containerType,
         this.containerId,
+        this.process,
       ]);
 
   @override
@@ -410,6 +440,7 @@ class _$GetFoundInventoryTypeApiRequestActions
     locationId.$reducer(reducer);
     containerType.$reducer(reducer);
     containerId.$reducer(reducer);
+    process.$reducer(reducer);
   }
 
   @override

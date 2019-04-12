@@ -38,6 +38,12 @@ abstract class GetShipmentApiDisplayRule implements Built<GetShipmentApiDisplayR
   @nullable
   bool get updateShipmentDetails;
   
+  @nullable
+  bool get autoComplete;
+  
+  @nullable
+  bool get deliverAndConfirm;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -75,6 +81,10 @@ abstract class GetShipmentApiDisplayRuleActions extends ModelActions<GetShipment
   FieldDispatcher<bool> get updateErpReference;
   
   FieldDispatcher<bool> get updateShipmentDetails;
+  
+  FieldDispatcher<bool> get autoComplete;
+  
+  FieldDispatcher<bool> get deliverAndConfirm;
   
   ////////////////////////////////
   /// Constructors

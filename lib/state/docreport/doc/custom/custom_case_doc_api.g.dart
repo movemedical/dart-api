@@ -10,77 +10,64 @@ part of 'custom_case_doc_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CustomCaseDocApiRequest>,
-        ApiResult<CustomCaseDocApiResponse>>,
-    CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
-        ApiResult<CustomCaseDocApiResponse>>,
+    CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>,
+    CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>,
     CustomCaseDocApi> CustomCaseDocApiOptions();
 
 class _$CustomCaseDocApi extends CustomCaseDocApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>,
+      CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>,
       CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>,
+          ApiResult<Empty>>,
       CustomCaseDocApi> $options;
 
   final ActionDispatcher<
-      CommandState<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>> $replace;
+          CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>>
+      $replace;
+  final ActionDispatcher<
+      CommandPayload<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>,
+          CustomCaseDocApi, String>> $cancel;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
-          CustomCaseDocApi,
-          String>> $cancel;
-  final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
+          ApiResult<Empty>,
           CustomCaseDocApi,
           Command<ApiCommand<CustomCaseDocApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
-          CustomCaseDocApi,
-          CommandResult<ApiResult<CustomCaseDocApiResponse>>>> $result;
+      CommandPayload<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>,
+          CustomCaseDocApi, CommandResult<ApiResult<Empty>>>> $result;
   final ActionDispatcher<
-      CommandPayload<
-          ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>,
-          CustomCaseDocApi,
-          CommandProgress>> $progress;
+      CommandPayload<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>,
+          CustomCaseDocApi, CommandProgress>> $progress;
 
   _$CustomCaseDocApi._(this.$options)
       : $replace = $options.action<
-                CommandState<ApiCommand<CustomCaseDocApiRequest>,
-                    ApiResult<CustomCaseDocApiResponse>>>(
-            '\$replace', (a) => a?.$replace),
+            CommandState<ApiCommand<CustomCaseDocApiRequest>,
+                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<CustomCaseDocApiResponse>,
+                ApiResult<Empty>,
                 CustomCaseDocApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CustomCaseDocApiRequest>,
-                    ApiResult<CustomCaseDocApiResponse>,
+                    ApiResult<Empty>,
                     CustomCaseDocApi,
                     Command<ApiCommand<CustomCaseDocApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<CustomCaseDocApiRequest>,
-                    ApiResult<CustomCaseDocApiResponse>,
+                    ApiResult<Empty>,
                     CustomCaseDocApi,
-                    CommandResult<ApiResult<CustomCaseDocApiResponse>>>>(
+                    CommandResult<ApiResult<Empty>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CustomCaseDocApiRequest>,
-                ApiResult<CustomCaseDocApiResponse>,
+                ApiResult<Empty>,
                 CustomCaseDocApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -89,16 +76,14 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
       _$CustomCaseDocApi._(options());
 
   @override
-  CommandState<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>
-      get $initial => CommandState<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>();
+  CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>
+      get $initial =>
+          CommandState<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>();
 
   @override
-  CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>
+  CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>, ApiResult<Empty>>
       $newBuilder() => CommandStateBuilder<ApiCommand<CustomCaseDocApiRequest>,
-          ApiResult<CustomCaseDocApiResponse>>();
+          ApiResult<Empty>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -115,7 +100,7 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CustomCaseDocApiRequest)]),
-        FullType(ApiResult, [FullType(CustomCaseDocApiResponse)])
+        FullType(ApiResult, [FullType(Empty)])
       ]);
 
   @override
@@ -123,8 +108,7 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
       ApiCommand<CustomCaseDocApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<CustomCaseDocApiResponse> newResultBuilder() =>
-      ApiResult<CustomCaseDocApiResponse>().toBuilder();
+  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -134,14 +118,12 @@ class _$CustomCaseDocApi extends CustomCaseDocApi {
       CustomCaseDocApiRequest().toBuilder();
 
   @override
-  CustomCaseDocApiResponseBuilder newResultPayloadBuilder() =>
-      CustomCaseDocApiResponse().toBuilder();
+  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
 
   @override
   Serializer<CustomCaseDocApiRequest> get commandPayloadSerializer =>
       CustomCaseDocApiRequest.serializer;
 
   @override
-  Serializer<CustomCaseDocApiResponse> get resultPayloadSerializer =>
-      CustomCaseDocApiResponse.serializer;
+  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
 }

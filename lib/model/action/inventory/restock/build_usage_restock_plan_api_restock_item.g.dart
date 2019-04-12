@@ -63,6 +63,12 @@ class _$BuildUsageRestockPlanApiRestockItemSerializer
         ..add(serializers.serialize(object.replenishLocation,
             specifiedType: const FullType(Location)));
     }
+    if (object.deliverToAddress != null) {
+      result
+        ..add('deliverToAddress')
+        ..add(serializers.serialize(object.deliverToAddress,
+            specifiedType: const FullType(CustomerAddress)));
+    }
     if (object.replenishContainerType != null) {
       result
         ..add('replenishContainerType')
@@ -125,6 +131,11 @@ class _$BuildUsageRestockPlanApiRestockItemSerializer
           result.replenishLocation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Location)) as Location);
           break;
+        case 'deliverToAddress':
+          result.deliverToAddress.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(CustomerAddress))
+              as CustomerAddress);
+          break;
         case 'replenishContainerType':
           result.replenishContainerType = serializers.deserialize(value,
                   specifiedType: const FullType(StockContainerType))
@@ -162,6 +173,8 @@ class _$BuildUsageRestockPlanApiRestockItem
   @override
   final Location replenishLocation;
   @override
+  final CustomerAddress deliverToAddress;
+  @override
   final StockContainerType replenishContainerType;
   @override
   final String replenishContainerId;
@@ -180,6 +193,7 @@ class _$BuildUsageRestockPlanApiRestockItem
       this.deliverByDate,
       this.shippingService,
       this.replenishLocation,
+      this.deliverToAddress,
       this.replenishContainerType,
       this.replenishContainerId,
       this.displayRule})
@@ -204,6 +218,7 @@ class _$BuildUsageRestockPlanApiRestockItem
         deliverByDate == other.deliverByDate &&
         shippingService == other.shippingService &&
         replenishLocation == other.replenishLocation &&
+        deliverToAddress == other.deliverToAddress &&
         replenishContainerType == other.replenishContainerType &&
         replenishContainerId == other.replenishContainerId &&
         displayRule == other.displayRule;
@@ -218,12 +233,14 @@ class _$BuildUsageRestockPlanApiRestockItem
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, guid.hashCode),
-                                    shouldRestock.hashCode),
-                                restockByType.hashCode),
-                            deliverByDate.hashCode),
-                        shippingService.hashCode),
-                    replenishLocation.hashCode),
+                                $jc(
+                                    $jc($jc(0, guid.hashCode),
+                                        shouldRestock.hashCode),
+                                    restockByType.hashCode),
+                                deliverByDate.hashCode),
+                            shippingService.hashCode),
+                        replenishLocation.hashCode),
+                    deliverToAddress.hashCode),
                 replenishContainerType.hashCode),
             replenishContainerId.hashCode),
         displayRule.hashCode));
@@ -238,6 +255,7 @@ class _$BuildUsageRestockPlanApiRestockItem
           ..add('deliverByDate', deliverByDate)
           ..add('shippingService', shippingService)
           ..add('replenishLocation', replenishLocation)
+          ..add('deliverToAddress', deliverToAddress)
           ..add('replenishContainerType', replenishContainerType)
           ..add('replenishContainerId', replenishContainerId)
           ..add('displayRule', displayRule))
@@ -283,6 +301,12 @@ class BuildUsageRestockPlanApiRestockItemBuilder
   set replenishLocation(LocationBuilder replenishLocation) =>
       _$this._replenishLocation = replenishLocation;
 
+  CustomerAddressBuilder _deliverToAddress;
+  CustomerAddressBuilder get deliverToAddress =>
+      _$this._deliverToAddress ??= new CustomerAddressBuilder();
+  set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
+      _$this._deliverToAddress = deliverToAddress;
+
   StockContainerType _replenishContainerType;
   StockContainerType get replenishContainerType =>
       _$this._replenishContainerType;
@@ -310,6 +334,7 @@ class BuildUsageRestockPlanApiRestockItemBuilder
       _deliverByDate = _$v.deliverByDate;
       _shippingService = _$v.shippingService?.toBuilder();
       _replenishLocation = _$v.replenishLocation?.toBuilder();
+      _deliverToAddress = _$v.deliverToAddress?.toBuilder();
       _replenishContainerType = _$v.replenishContainerType;
       _replenishContainerId = _$v.replenishContainerId;
       _displayRule = _$v.displayRule?.toBuilder();
@@ -343,6 +368,7 @@ class BuildUsageRestockPlanApiRestockItemBuilder
               deliverByDate: deliverByDate,
               shippingService: _shippingService?.build(),
               replenishLocation: _replenishLocation?.build(),
+              deliverToAddress: _deliverToAddress?.build(),
               replenishContainerType: replenishContainerType,
               replenishContainerId: replenishContainerId,
               displayRule: _displayRule?.build());
@@ -353,6 +379,8 @@ class BuildUsageRestockPlanApiRestockItemBuilder
         _shippingService?.build();
         _$failedField = 'replenishLocation';
         _replenishLocation?.build();
+        _$failedField = 'deliverToAddress';
+        _deliverToAddress?.build();
 
         _$failedField = 'displayRule';
         _displayRule?.build();
@@ -395,6 +423,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
   final FieldDispatcher<DateTime> deliverByDate;
   final ShippingServiceActions shippingService;
   final LocationActions replenishLocation;
+  final CustomerAddressActions deliverToAddress;
   final FieldDispatcher<StockContainerType> replenishContainerType;
   final FieldDispatcher<String> replenishContainerId;
   final BuildUsageRestockPlanApiDisplayRuleActions displayRule;
@@ -435,6 +464,15 @@ class _$BuildUsageRestockPlanApiRestockItemActions
                 (s) => s?.replenishLocation,
                 (b) => b?.replenishLocation,
                 (parent, builder) => parent?.replenishLocation = builder)),
+        deliverToAddress = CustomerAddressActions(() => $options.stateful<
+                CustomerAddress,
+                CustomerAddressBuilder,
+                CustomerAddressActions>(
+            'deliverToAddress',
+            (a) => a.deliverToAddress,
+            (s) => s?.deliverToAddress,
+            (b) => b?.deliverToAddress,
+            (parent, builder) => parent?.deliverToAddress = builder)),
         replenishContainerType = $options.field<StockContainerType>(
             'replenishContainerType',
             (a) => a?.replenishContainerType,
@@ -474,6 +512,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.shippingService,
         this.replenishLocation,
+        this.deliverToAddress,
         this.displayRule,
       ]);
 
@@ -499,6 +538,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
     deliverByDate.$reducer(reducer);
     shippingService.$reducer(reducer);
     replenishLocation.$reducer(reducer);
+    deliverToAddress.$reducer(reducer);
     replenishContainerType.$reducer(reducer);
     replenishContainerId.$reducer(reducer);
     displayRule.$reducer(reducer);
@@ -509,6 +549,7 @@ class _$BuildUsageRestockPlanApiRestockItemActions
     super.$middleware(middleware);
     shippingService.$middleware(middleware);
     replenishLocation.$middleware(middleware);
+    deliverToAddress.$middleware(middleware);
     displayRule.$middleware(middleware);
   }
 

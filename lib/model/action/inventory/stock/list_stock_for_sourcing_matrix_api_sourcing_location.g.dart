@@ -69,6 +69,12 @@ class _$ListStockForSourcingMatrixApiSourcingLocationSerializer
         ..add(serializers.serialize(object.loanDisplay,
             specifiedType: const FullType(String)));
     }
+    if (object.caseEventLite != null) {
+      result
+        ..add('caseEventLite')
+        ..add(serializers.serialize(object.caseEventLite,
+            specifiedType: const FullType(CaseEventLite)));
+    }
     if (object.lastLoanSurgeryDate != null) {
       result
         ..add('lastLoanSurgeryDate')
@@ -137,6 +143,10 @@ class _$ListStockForSourcingMatrixApiSourcingLocationSerializer
           result.loanDisplay = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'caseEventLite':
+          result.caseEventLite.replace(serializers.deserialize(value,
+              specifiedType: const FullType(CaseEventLite)) as CaseEventLite);
+          break;
         case 'lastLoanSurgeryDate':
           result.lastLoanSurgeryDate = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
@@ -177,6 +187,8 @@ class _$ListStockForSourcingMatrixApiSourcingLocation
   @override
   final String loanDisplay;
   @override
+  final CaseEventLite caseEventLite;
+  @override
   final DateTime lastLoanSurgeryDate;
   @override
   final bool inTransit;
@@ -200,6 +212,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocation
       this.demandLoanId,
       this.consignmentLoanId,
       this.loanDisplay,
+      this.caseEventLite,
       this.lastLoanSurgeryDate,
       this.inTransit,
       this.percentageMatch,
@@ -227,6 +240,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocation
         demandLoanId == other.demandLoanId &&
         consignmentLoanId == other.consignmentLoanId &&
         loanDisplay == other.loanDisplay &&
+        caseEventLite == other.caseEventLite &&
         lastLoanSurgeryDate == other.lastLoanSurgeryDate &&
         inTransit == other.inTransit &&
         percentageMatch == other.percentageMatch &&
@@ -244,13 +258,15 @@ class _$ListStockForSourcingMatrixApiSourcingLocation
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, locationKey.hashCode),
-                                            responsibleParty.hashCode),
-                                        location.hashCode),
-                                    homeLocation.hashCode),
-                                demandLoanId.hashCode),
-                            consignmentLoanId.hashCode),
-                        loanDisplay.hashCode),
+                                        $jc(
+                                            $jc($jc(0, locationKey.hashCode),
+                                                responsibleParty.hashCode),
+                                            location.hashCode),
+                                        homeLocation.hashCode),
+                                    demandLoanId.hashCode),
+                                consignmentLoanId.hashCode),
+                            loanDisplay.hashCode),
+                        caseEventLite.hashCode),
                     lastLoanSurgeryDate.hashCode),
                 inTransit.hashCode),
             percentageMatch.hashCode),
@@ -268,6 +284,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocation
           ..add('demandLoanId', demandLoanId)
           ..add('consignmentLoanId', consignmentLoanId)
           ..add('loanDisplay', loanDisplay)
+          ..add('caseEventLite', caseEventLite)
           ..add('lastLoanSurgeryDate', lastLoanSurgeryDate)
           ..add('inTransit', inTransit)
           ..add('percentageMatch', percentageMatch)
@@ -314,6 +331,12 @@ class ListStockForSourcingMatrixApiSourcingLocationBuilder
   String get loanDisplay => _$this._loanDisplay;
   set loanDisplay(String loanDisplay) => _$this._loanDisplay = loanDisplay;
 
+  CaseEventLiteBuilder _caseEventLite;
+  CaseEventLiteBuilder get caseEventLite =>
+      _$this._caseEventLite ??= new CaseEventLiteBuilder();
+  set caseEventLite(CaseEventLiteBuilder caseEventLite) =>
+      _$this._caseEventLite = caseEventLite;
+
   DateTime _lastLoanSurgeryDate;
   DateTime get lastLoanSurgeryDate => _$this._lastLoanSurgeryDate;
   set lastLoanSurgeryDate(DateTime lastLoanSurgeryDate) =>
@@ -343,6 +366,7 @@ class ListStockForSourcingMatrixApiSourcingLocationBuilder
       _demandLoanId = _$v.demandLoanId;
       _consignmentLoanId = _$v.consignmentLoanId;
       _loanDisplay = _$v.loanDisplay;
+      _caseEventLite = _$v.caseEventLite?.toBuilder();
       _lastLoanSurgeryDate = _$v.lastLoanSurgeryDate;
       _inTransit = _$v.inTransit;
       _percentageMatch = _$v.percentageMatch;
@@ -379,6 +403,7 @@ class ListStockForSourcingMatrixApiSourcingLocationBuilder
               demandLoanId: demandLoanId,
               consignmentLoanId: consignmentLoanId,
               loanDisplay: loanDisplay,
+              caseEventLite: _caseEventLite?.build(),
               lastLoanSurgeryDate: lastLoanSurgeryDate,
               inTransit: inTransit,
               percentageMatch: percentageMatch,
@@ -390,6 +415,9 @@ class ListStockForSourcingMatrixApiSourcingLocationBuilder
         _location?.build();
         _$failedField = 'homeLocation';
         _homeLocation?.build();
+
+        _$failedField = 'caseEventLite';
+        _caseEventLite?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'ListStockForSourcingMatrixApiSourcingLocation',
@@ -433,6 +461,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
   final FieldDispatcher<String> demandLoanId;
   final FieldDispatcher<String> consignmentLoanId;
   final FieldDispatcher<String> loanDisplay;
+  final CaseEventLiteActions caseEventLite;
   final FieldDispatcher<DateTime> lastLoanSurgeryDate;
   final FieldDispatcher<bool> inTransit;
   final FieldDispatcher<double> percentageMatch;
@@ -481,6 +510,13 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
             (a) => a?.loanDisplay,
             (s) => s?.loanDisplay,
             (p, b) => p?.loanDisplay = b),
+        caseEventLite = CaseEventLiteActions(() => $options.stateful<
+                CaseEventLite, CaseEventLiteBuilder, CaseEventLiteActions>(
+            'caseEventLite',
+            (a) => a.caseEventLite,
+            (s) => s?.caseEventLite,
+            (b) => b?.caseEventLite,
+            (parent, builder) => parent?.caseEventLite = builder)),
         lastLoanSurgeryDate = $options.field<DateTime>(
             'lastLoanSurgeryDate',
             (a) => a?.lastLoanSurgeryDate,
@@ -518,6 +554,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
         this.homeLocation,
+        this.caseEventLite,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
@@ -546,6 +583,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
     demandLoanId.$reducer(reducer);
     consignmentLoanId.$reducer(reducer);
     loanDisplay.$reducer(reducer);
+    caseEventLite.$reducer(reducer);
     lastLoanSurgeryDate.$reducer(reducer);
     inTransit.$reducer(reducer);
     percentageMatch.$reducer(reducer);
@@ -557,6 +595,7 @@ class _$ListStockForSourcingMatrixApiSourcingLocationActions
     super.$middleware(middleware);
     location.$middleware(middleware);
     homeLocation.$middleware(middleware);
+    caseEventLite.$middleware(middleware);
   }
 
   FullType _$fullType;

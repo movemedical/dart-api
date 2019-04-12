@@ -20,6 +20,9 @@ abstract class ListPreferenceCardsApiRequest implements Built<ListPreferenceCard
   BuiltList<String> get physicianIds;
   
   @nullable
+  BuiltList<String> get facilityIds;
+  
+  @nullable
   BuiltList<String> get techniqueIds;
   
   @nullable
@@ -33,6 +36,12 @@ abstract class ListPreferenceCardsApiRequest implements Built<ListPreferenceCard
   
   @nullable
   BuiltList<String> get productGroupIds;
+  
+  @nullable
+  BuiltList<String> get orgUnitIds;
+  
+  @nullable
+  String get search;
   
   @nullable
   bool get active;
@@ -64,6 +73,8 @@ abstract class ListPreferenceCardsApiRequestActions extends ModelActions<ListPre
   
   FieldDispatcher<BuiltList<String>> get physicianIds;
   
+  FieldDispatcher<BuiltList<String>> get facilityIds;
+  
   FieldDispatcher<BuiltList<String>> get techniqueIds;
   
   FieldDispatcher<BuiltList<String>> get procedureIds;
@@ -73,6 +84,10 @@ abstract class ListPreferenceCardsApiRequestActions extends ModelActions<ListPre
   FieldDispatcher<BuiltList<String>> get itemIds;
   
   FieldDispatcher<BuiltList<String>> get productGroupIds;
+  
+  FieldDispatcher<BuiltList<String>> get orgUnitIds;
+  
+  FieldDispatcher<String> get search;
   
   FieldDispatcher<bool> get active;
   

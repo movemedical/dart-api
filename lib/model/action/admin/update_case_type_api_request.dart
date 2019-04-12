@@ -18,6 +18,9 @@ abstract class UpdateCaseTypeApiRequest implements Built<UpdateCaseTypeApiReques
   String get name;
   
   @nullable
+  String get bizUnitId;
+  
+  @nullable
   bool get active;
   
   ////////////////////////////////
@@ -43,6 +46,8 @@ abstract class UpdateCaseTypeApiRequestActions extends ModelActions<UpdateCaseTy
   FieldDispatcher<String> get id;
   
   FieldDispatcher<String> get name;
+  
+  FieldDispatcher<String> get bizUnitId;
   
   FieldDispatcher<bool> get active;
   

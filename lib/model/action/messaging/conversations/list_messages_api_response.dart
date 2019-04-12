@@ -3,7 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'package:movemedical_api/model/paginated_list_response.dart';
-import 'package:movemedical_api/model/removeOrRefactor/message.dart';
+import 'package:movemedical_api/model/remove_or_refactor/message.dart';
 import 'package:built_collection/built_collection.dart';
 import 'dart:core';
 

@@ -13,6 +13,9 @@ abstract class GetItemPricingApiItem implements Built<GetItemPricingApiItem, Get
   ////////////////////////////////
   
   @nullable
+  String get id;
+  
+  @nullable
   String get itemId;
   
   @nullable
@@ -20,6 +23,9 @@ abstract class GetItemPricingApiItem implements Built<GetItemPricingApiItem, Get
   
   @nullable
   CaseUsageDisposition get caseUsageDisposition;
+  
+  @nullable
+  String get billingCodeId;
   
   @nullable
   bool get construct;
@@ -44,11 +50,15 @@ abstract class GetItemPricingApiItemActions extends ModelActions<GetItemPricingA
   /// Fields
   ////////////////////////////////
   
+  FieldDispatcher<String> get id;
+  
   FieldDispatcher<String> get itemId;
   
   FieldDispatcher<int> get quantity;
   
   FieldDispatcher<CaseUsageDisposition> get caseUsageDisposition;
+  
+  FieldDispatcher<String> get billingCodeId;
   
   FieldDispatcher<bool> get construct;
   

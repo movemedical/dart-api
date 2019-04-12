@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/location.dart';
+import 'package:movemedical_api/model/case_event_lite.dart';
 
 part 'list_stock_for_sourcing_matrix_api_sourcing_location.g.dart';
 
@@ -32,6 +33,9 @@ abstract class ListStockForSourcingMatrixApiSourcingLocation implements Built<Li
   
   @nullable
   String get loanDisplay;
+  
+  @nullable
+  CaseEventLite get caseEventLite;
   
   @nullable
   DateTime get lastLoanSurgeryDate;
@@ -78,6 +82,8 @@ abstract class ListStockForSourcingMatrixApiSourcingLocationActions extends Mode
   FieldDispatcher<String> get consignmentLoanId;
   
   FieldDispatcher<String> get loanDisplay;
+  
+  CaseEventLiteActions get caseEventLite;
   
   FieldDispatcher<DateTime> get lastLoanSurgeryDate;
   

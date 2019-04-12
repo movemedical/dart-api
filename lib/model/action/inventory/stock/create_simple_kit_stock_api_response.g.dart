@@ -26,10 +26,22 @@ class _$CreateSimpleKitStockApiResponseSerializer
       Serializers serializers, CreateSimpleKitStockApiResponse object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.stockSummaryKey != null) {
+    if (object.kitStockId != null) {
       result
-        ..add('stockSummaryKey')
-        ..add(serializers.serialize(object.stockSummaryKey,
+        ..add('kitStockId')
+        ..add(serializers.serialize(object.kitStockId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.kitStockSummaryKey != null) {
+      result
+        ..add('kitStockSummaryKey')
+        ..add(serializers.serialize(object.kitStockSummaryKey,
+            specifiedType: const FullType(String)));
+    }
+    if (object.toteStockId != null) {
+      result
+        ..add('toteStockId')
+        ..add(serializers.serialize(object.toteStockId,
             specifiedType: const FullType(String)));
     }
 
@@ -48,8 +60,16 @@ class _$CreateSimpleKitStockApiResponseSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'stockSummaryKey':
-          result.stockSummaryKey = serializers.deserialize(value,
+        case 'kitStockId':
+          result.kitStockId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'kitStockSummaryKey':
+          result.kitStockSummaryKey = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'toteStockId':
+          result.toteStockId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -62,13 +82,19 @@ class _$CreateSimpleKitStockApiResponseSerializer
 class _$CreateSimpleKitStockApiResponse
     extends CreateSimpleKitStockApiResponse {
   @override
-  final String stockSummaryKey;
+  final String kitStockId;
+  @override
+  final String kitStockSummaryKey;
+  @override
+  final String toteStockId;
 
   factory _$CreateSimpleKitStockApiResponse(
           [void updates(CreateSimpleKitStockApiResponseBuilder b)]) =>
       (new CreateSimpleKitStockApiResponseBuilder()..update(updates)).build();
 
-  _$CreateSimpleKitStockApiResponse._({this.stockSummaryKey}) : super._();
+  _$CreateSimpleKitStockApiResponse._(
+      {this.kitStockId, this.kitStockSummaryKey, this.toteStockId})
+      : super._();
 
   @override
   CreateSimpleKitStockApiResponse rebuild(
@@ -83,18 +109,24 @@ class _$CreateSimpleKitStockApiResponse
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is CreateSimpleKitStockApiResponse &&
-        stockSummaryKey == other.stockSummaryKey;
+        kitStockId == other.kitStockId &&
+        kitStockSummaryKey == other.kitStockSummaryKey &&
+        toteStockId == other.toteStockId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, stockSummaryKey.hashCode));
+    return $jf($jc(
+        $jc($jc(0, kitStockId.hashCode), kitStockSummaryKey.hashCode),
+        toteStockId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateSimpleKitStockApiResponse')
-          ..add('stockSummaryKey', stockSummaryKey))
+          ..add('kitStockId', kitStockId)
+          ..add('kitStockSummaryKey', kitStockSummaryKey)
+          ..add('toteStockId', toteStockId))
         .toString();
   }
 }
@@ -105,16 +137,26 @@ class CreateSimpleKitStockApiResponseBuilder
             CreateSimpleKitStockApiResponseBuilder> {
   _$CreateSimpleKitStockApiResponse _$v;
 
-  String _stockSummaryKey;
-  String get stockSummaryKey => _$this._stockSummaryKey;
-  set stockSummaryKey(String stockSummaryKey) =>
-      _$this._stockSummaryKey = stockSummaryKey;
+  String _kitStockId;
+  String get kitStockId => _$this._kitStockId;
+  set kitStockId(String kitStockId) => _$this._kitStockId = kitStockId;
+
+  String _kitStockSummaryKey;
+  String get kitStockSummaryKey => _$this._kitStockSummaryKey;
+  set kitStockSummaryKey(String kitStockSummaryKey) =>
+      _$this._kitStockSummaryKey = kitStockSummaryKey;
+
+  String _toteStockId;
+  String get toteStockId => _$this._toteStockId;
+  set toteStockId(String toteStockId) => _$this._toteStockId = toteStockId;
 
   CreateSimpleKitStockApiResponseBuilder();
 
   CreateSimpleKitStockApiResponseBuilder get _$this {
     if (_$v != null) {
-      _stockSummaryKey = _$v.stockSummaryKey;
+      _kitStockId = _$v.kitStockId;
+      _kitStockSummaryKey = _$v.kitStockSummaryKey;
+      _toteStockId = _$v.toteStockId;
       _$v = null;
     }
     return this;
@@ -137,7 +179,9 @@ class CreateSimpleKitStockApiResponseBuilder
   _$CreateSimpleKitStockApiResponse build() {
     final _$result = _$v ??
         new _$CreateSimpleKitStockApiResponse._(
-            stockSummaryKey: stockSummaryKey);
+            kitStockId: kitStockId,
+            kitStockSummaryKey: kitStockSummaryKey,
+            toteStockId: toteStockId);
     replace(_$result);
     return _$result;
   }
@@ -165,16 +209,25 @@ class _$CreateSimpleKitStockApiResponseActions
       CreateSimpleKitStockApiResponseActions> $options;
 
   final ActionDispatcher<CreateSimpleKitStockApiResponse> $replace;
-  final FieldDispatcher<String> stockSummaryKey;
+  final FieldDispatcher<String> kitStockId;
+  final FieldDispatcher<String> kitStockSummaryKey;
+  final FieldDispatcher<String> toteStockId;
 
   _$CreateSimpleKitStockApiResponseActions._(this.$options)
       : $replace = $options.action<CreateSimpleKitStockApiResponse>(
             '\$replace', (a) => a?.$replace),
-        stockSummaryKey = $options.field<String>(
-            'stockSummaryKey',
-            (a) => a?.stockSummaryKey,
-            (s) => s?.stockSummaryKey,
-            (p, b) => p?.stockSummaryKey = b),
+        kitStockId = $options.field<String>('kitStockId', (a) => a?.kitStockId,
+            (s) => s?.kitStockId, (p, b) => p?.kitStockId = b),
+        kitStockSummaryKey = $options.field<String>(
+            'kitStockSummaryKey',
+            (a) => a?.kitStockSummaryKey,
+            (s) => s?.kitStockSummaryKey,
+            (p, b) => p?.kitStockSummaryKey = b),
+        toteStockId = $options.field<String>(
+            'toteStockId',
+            (a) => a?.toteStockId,
+            (s) => s?.toteStockId,
+            (p, b) => p?.toteStockId = b),
         super._();
 
   factory _$CreateSimpleKitStockApiResponseActions(
@@ -194,13 +247,17 @@ class _$CreateSimpleKitStockApiResponseActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.stockSummaryKey,
+        this.kitStockId,
+        this.kitStockSummaryKey,
+        this.toteStockId,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
-    stockSummaryKey.$reducer(reducer);
+    kitStockId.$reducer(reducer);
+    kitStockSummaryKey.$reducer(reducer);
+    toteStockId.$reducer(reducer);
   }
 
   @override

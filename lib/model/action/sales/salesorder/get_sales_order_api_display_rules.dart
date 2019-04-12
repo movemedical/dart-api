@@ -18,6 +18,9 @@ abstract class GetSalesOrderApiDisplayRules implements Built<GetSalesOrderApiDis
   bool get editDetails;
   
   @nullable
+  bool get addLineQuantity;
+  
+  @nullable
   bool get editLineQuantity;
   
   @nullable
@@ -56,6 +59,9 @@ abstract class GetSalesOrderApiDisplayRules implements Built<GetSalesOrderApiDis
   @nullable
   bool get showShipments;
   
+  @nullable
+  bool get approve;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -79,6 +85,8 @@ abstract class GetSalesOrderApiDisplayRulesActions extends ModelActions<GetSales
   FieldDispatcher<bool> get editLinePricing;
   
   FieldDispatcher<bool> get editDetails;
+  
+  FieldDispatcher<bool> get addLineQuantity;
   
   FieldDispatcher<bool> get editLineQuantity;
   
@@ -105,6 +113,8 @@ abstract class GetSalesOrderApiDisplayRulesActions extends ModelActions<GetSales
   FieldDispatcher<bool> get showLines;
   
   FieldDispatcher<bool> get showShipments;
+  
+  FieldDispatcher<bool> get approve;
   
   ////////////////////////////////
   /// Constructors

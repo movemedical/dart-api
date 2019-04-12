@@ -8,6 +8,8 @@ part of 'move_locale.dart';
 
 const MoveLocale _$wireUS = const MoveLocale._('US');
 const MoveLocale _$wireFR = const MoveLocale._('FR');
+const MoveLocale _$wireAU = const MoveLocale._('AU');
+const MoveLocale _$wireUK = const MoveLocale._('UK');
 
 MoveLocale _$moveLocaleValueOf(String name) {
   switch (name) {
@@ -15,6 +17,10 @@ MoveLocale _$moveLocaleValueOf(String name) {
       return _$wireUS;
     case 'FR':
       return _$wireFR;
+    case 'AU':
+      return _$wireAU;
+    case 'UK':
+      return _$wireUK;
     default:
       throw new ArgumentError(name);
   }
@@ -24,6 +30,8 @@ final BuiltSet<MoveLocale> _$moveLocaleValues =
     new BuiltSet<MoveLocale>(const <MoveLocale>[
   _$wireUS,
   _$wireFR,
+  _$wireAU,
+  _$wireUK,
 ]);
 
 Serializer<MoveLocale> _$moveLocaleSerializer = new _$MoveLocaleSerializer();

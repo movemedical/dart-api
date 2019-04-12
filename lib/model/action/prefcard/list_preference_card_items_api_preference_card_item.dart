@@ -3,6 +3,8 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
+import 'package:movemedical_api/model/sql/enums/move_item_class.dart';
+import 'package:movemedical_api/model/sql/enums/move_item_type.dart';
 
 part 'list_preference_card_items_api_preference_card_item.g.dart';
 
@@ -22,6 +24,12 @@ abstract class ListPreferenceCardItemsApiPreferenceCardItem implements Built<Lis
   
   @nullable
   String get itemDescription;
+  
+  @nullable
+  MoveItemClass get moveItemClass;
+  
+  @nullable
+  MoveItemType get moveItemType;
   
   @nullable
   int get quantity;
@@ -53,6 +61,10 @@ abstract class ListPreferenceCardItemsApiPreferenceCardItemActions extends Model
   FieldDispatcher<String> get itemNumber;
   
   FieldDispatcher<String> get itemDescription;
+  
+  FieldDispatcher<MoveItemClass> get moveItemClass;
+  
+  FieldDispatcher<MoveItemType> get moveItemType;
   
   FieldDispatcher<int> get quantity;
   

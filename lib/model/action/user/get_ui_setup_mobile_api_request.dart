@@ -3,6 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
+import 'package:movemedical_api/model/sql/enums/mobile_platform.dart';
 
 part 'get_ui_setup_mobile_api_request.g.dart';
 
@@ -15,7 +16,19 @@ abstract class GetUiSetupMobileApiRequest implements Built<GetUiSetupMobileApiRe
   String get appVersion;
   
   @nullable
+  MobilePlatform get platform;
+  
+  @nullable
   String get platformVersion;
+  
+  @nullable
+  String get pushNotificationToken;
+  
+  @nullable
+  String get existingDeviceId;
+  
+  @nullable
+  bool get useSandboxPushNotifications;
   
   ////////////////////////////////
   /// Constructors
@@ -39,7 +52,15 @@ abstract class GetUiSetupMobileApiRequestActions extends ModelActions<GetUiSetup
   
   FieldDispatcher<String> get appVersion;
   
+  FieldDispatcher<MobilePlatform> get platform;
+  
   FieldDispatcher<String> get platformVersion;
+  
+  FieldDispatcher<String> get pushNotificationToken;
+  
+  FieldDispatcher<String> get existingDeviceId;
+  
+  FieldDispatcher<bool> get useSandboxPushNotifications;
   
   ////////////////////////////////
   /// Constructors

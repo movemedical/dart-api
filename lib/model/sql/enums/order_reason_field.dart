@@ -22,6 +22,10 @@ class OrderReasonField extends EnumClass {
   static const OrderReasonField SHIPPING_SERVICE = _$wireSHIPPING_SERVICE;
   static const OrderReasonField TO_LOCATION = _$wireTO_LOCATION;
   static const OrderReasonField CREDIT_CARD_LAST_4 = _$wireCREDIT_CARD_LAST_4;
+  static const OrderReasonField HOSPITAL = _$wireHOSPITAL;
+  static const OrderReasonField HOSPITAL_SURGEON = _$wireHOSPITAL_SURGEON;
+  static const OrderReasonField SALES_ORG_UNIT_HOSPITAL = _$wireSALES_ORG_UNIT_HOSPITAL;
+  static const OrderReasonField HOSPITAL_BILLTO_REP = _$wireHOSPITAL_BILLTO_REP;
   
   ////////////////////////////////
   /// Constructor

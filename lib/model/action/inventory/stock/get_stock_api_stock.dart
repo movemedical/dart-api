@@ -24,6 +24,9 @@ abstract class GetStockApiStock implements Built<GetStockApiStock, GetStockApiSt
   String get id;
   
   @nullable
+  int get stockNumber;
+  
+  @nullable
   StockItem get stockItem;
   
   @nullable
@@ -69,6 +72,9 @@ abstract class GetStockApiStock implements Built<GetStockApiStock, GetStockApiSt
   bool get hasMissing;
   
   @nullable
+  bool get hasUnverified;
+  
+  @nullable
   BuiltList<GetStockApiStockAttribute> get attributes;
   
   ////////////////////////////////
@@ -92,6 +98,8 @@ abstract class GetStockApiStockActions extends ModelActions<GetStockApiStock, Ge
   ////////////////////////////////
   
   FieldDispatcher<String> get id;
+  
+  FieldDispatcher<int> get stockNumber;
   
   StockItemActions get stockItem;
   
@@ -122,6 +130,8 @@ abstract class GetStockApiStockActions extends ModelActions<GetStockApiStock, Ge
   FieldDispatcher<bool> get hasExtras;
   
   FieldDispatcher<bool> get hasMissing;
+  
+  FieldDispatcher<bool> get hasUnverified;
   
   FieldDispatcher<BuiltList<GetStockApiStockAttribute>> get attributes;
   

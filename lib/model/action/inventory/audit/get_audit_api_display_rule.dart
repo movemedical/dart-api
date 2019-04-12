@@ -15,6 +15,9 @@ abstract class GetAuditApiDisplayRule implements Built<GetAuditApiDisplayRule, G
   bool get manage;
   
   @nullable
+  bool get manageInventoryTypesCount;
+  
+  @nullable
   bool get start;
   
   @nullable
@@ -56,6 +59,8 @@ abstract class GetAuditApiDisplayRuleActions extends ModelActions<GetAuditApiDis
   ////////////////////////////////
   
   FieldDispatcher<bool> get manage;
+  
+  FieldDispatcher<bool> get manageInventoryTypesCount;
   
   FieldDispatcher<bool> get start;
   

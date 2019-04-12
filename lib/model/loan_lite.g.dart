@@ -48,6 +48,12 @@ class _$LoanLiteSerializer implements StructuredSerializer<LoanLite> {
         ..add(serializers.serialize(object.daysLate,
             specifiedType: const FullType(int)));
     }
+    if (object.reason != null) {
+      result
+        ..add('reason')
+        ..add(serializers.serialize(object.reason,
+            specifiedType: const FullType(LoanReason)));
+    }
 
     return result;
   }
@@ -83,6 +89,10 @@ class _$LoanLiteSerializer implements StructuredSerializer<LoanLite> {
           result.daysLate = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'reason':
+          result.reason = serializers.deserialize(value,
+              specifiedType: const FullType(LoanReason)) as LoanReason;
+          break;
       }
     }
 
@@ -101,12 +111,19 @@ class _$LoanLite extends LoanLite {
   final DateTime serviceEndDate;
   @override
   final int daysLate;
+  @override
+  final LoanReason reason;
 
   factory _$LoanLite([void updates(LoanLiteBuilder b)]) =>
       (new LoanLiteBuilder()..update(updates)).build();
 
   _$LoanLite._(
-      {this.id, this.number, this.status, this.serviceEndDate, this.daysLate})
+      {this.id,
+      this.number,
+      this.status,
+      this.serviceEndDate,
+      this.daysLate,
+      this.reason})
       : super._();
 
   @override
@@ -124,15 +141,18 @@ class _$LoanLite extends LoanLite {
         number == other.number &&
         status == other.status &&
         serviceEndDate == other.serviceEndDate &&
-        daysLate == other.daysLate;
+        daysLate == other.daysLate &&
+        reason == other.reason;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc($jc(0, id.hashCode), number.hashCode), status.hashCode),
-            serviceEndDate.hashCode),
-        daysLate.hashCode));
+        $jc(
+            $jc($jc($jc($jc(0, id.hashCode), number.hashCode), status.hashCode),
+                serviceEndDate.hashCode),
+            daysLate.hashCode),
+        reason.hashCode));
   }
 
   @override
@@ -142,7 +162,8 @@ class _$LoanLite extends LoanLite {
           ..add('number', number)
           ..add('status', status)
           ..add('serviceEndDate', serviceEndDate)
-          ..add('daysLate', daysLate))
+          ..add('daysLate', daysLate)
+          ..add('reason', reason))
         .toString();
   }
 }
@@ -171,6 +192,10 @@ class LoanLiteBuilder implements Builder<LoanLite, LoanLiteBuilder> {
   int get daysLate => _$this._daysLate;
   set daysLate(int daysLate) => _$this._daysLate = daysLate;
 
+  LoanReason _reason;
+  LoanReason get reason => _$this._reason;
+  set reason(LoanReason reason) => _$this._reason = reason;
+
   LoanLiteBuilder();
 
   LoanLiteBuilder get _$this {
@@ -180,6 +205,7 @@ class LoanLiteBuilder implements Builder<LoanLite, LoanLiteBuilder> {
       _status = _$v.status;
       _serviceEndDate = _$v.serviceEndDate;
       _daysLate = _$v.daysLate;
+      _reason = _$v.reason;
       _$v = null;
     }
     return this;
@@ -206,7 +232,8 @@ class LoanLiteBuilder implements Builder<LoanLite, LoanLiteBuilder> {
             number: number,
             status: status,
             serviceEndDate: serviceEndDate,
-            daysLate: daysLate);
+            daysLate: daysLate,
+            reason: reason);
     replace(_$result);
     return _$result;
   }
@@ -234,6 +261,7 @@ class _$LoanLiteActions extends LoanLiteActions {
   final FieldDispatcher<LoanStatus> status;
   final FieldDispatcher<DateTime> serviceEndDate;
   final FieldDispatcher<int> daysLate;
+  final FieldDispatcher<LoanReason> reason;
 
   _$LoanLiteActions._(this.$options)
       : $replace = $options.action<LoanLite>('\$replace', (a) => a?.$replace),
@@ -250,6 +278,8 @@ class _$LoanLiteActions extends LoanLiteActions {
             (p, b) => p?.serviceEndDate = b),
         daysLate = $options.field<int>('daysLate', (a) => a?.daysLate,
             (s) => s?.daysLate, (p, b) => p?.daysLate = b),
+        reason = $options.field<LoanReason>('reason', (a) => a?.reason,
+            (s) => s?.reason, (p, b) => p?.reason = b),
         super._();
 
   factory _$LoanLiteActions(LoanLiteActionsOptions options) =>
@@ -271,6 +301,7 @@ class _$LoanLiteActions extends LoanLiteActions {
         this.status,
         this.serviceEndDate,
         this.daysLate,
+        this.reason,
       ]);
 
   @override
@@ -281,6 +312,7 @@ class _$LoanLiteActions extends LoanLiteActions {
     status.$reducer(reducer);
     serviceEndDate.$reducer(reducer);
     daysLate.$reducer(reducer);
+    reason.$reducer(reducer);
   }
 
   @override

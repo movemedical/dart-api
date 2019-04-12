@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/sso_type.dart';
+import 'package:movemedical_api/model/sql/enums/mfa_type.dart';
 
 part 'update_user_profile_api_request.g.dart';
 
@@ -34,10 +35,22 @@ abstract class UpdateUserProfileApiRequest implements Built<UpdateUserProfileApi
   String get defaultBizUnitId;
   
   @nullable
+  String get ssoId;
+  
+  @nullable
+  String get ssoName;
+  
+  @nullable
   SSOType get ssoType;
   
   @nullable
-  String get ssoId;
+  bool get mfaEnabled;
+  
+  @nullable
+  String get mfaId;
+  
+  @nullable
+  MfaType get mfaType;
   
   ////////////////////////////////
   /// Constructors
@@ -73,9 +86,17 @@ abstract class UpdateUserProfileApiRequestActions extends ModelActions<UpdateUse
   
   FieldDispatcher<String> get defaultBizUnitId;
   
+  FieldDispatcher<String> get ssoId;
+  
+  FieldDispatcher<String> get ssoName;
+  
   FieldDispatcher<SSOType> get ssoType;
   
-  FieldDispatcher<String> get ssoId;
+  FieldDispatcher<bool> get mfaEnabled;
+  
+  FieldDispatcher<String> get mfaId;
+  
+  FieldDispatcher<MfaType> get mfaType;
   
   ////////////////////////////////
   /// Constructors

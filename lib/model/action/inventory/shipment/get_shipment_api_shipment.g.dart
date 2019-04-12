@@ -48,6 +48,25 @@ class _$GetShipmentApiShipmentSerializer
         ..add(serializers.serialize(object.order,
             specifiedType: const FullType(OrderHeaderLite)));
     }
+    if (object.transferType != null) {
+      result
+        ..add('transferType')
+        ..add(serializers.serialize(object.transferType,
+            specifiedType: const FullType(TransferTypeLite)));
+    }
+    if (object.loan != null) {
+      result
+        ..add('loan')
+        ..add(serializers.serialize(object.loan,
+            specifiedType: const FullType(LoanLite)));
+    }
+    if (object.caseEvents != null) {
+      result
+        ..add('caseEvents')
+        ..add(serializers.serialize(object.caseEvents,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(CaseEventLite)])));
+    }
     if (object.fromLocation != null) {
       result
         ..add('fromLocation')
@@ -136,6 +155,21 @@ class _$GetShipmentApiShipmentSerializer
                   specifiedType: const FullType(OrderHeaderLite))
               as OrderHeaderLite);
           break;
+        case 'transferType':
+          result.transferType.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(TransferTypeLite))
+              as TransferTypeLite);
+          break;
+        case 'loan':
+          result.loan.replace(serializers.deserialize(value,
+              specifiedType: const FullType(LoanLite)) as LoanLite);
+          break;
+        case 'caseEvents':
+          result.caseEvents.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(CaseEventLite)]))
+              as BuiltList);
+          break;
         case 'fromLocation':
           result.fromLocation.replace(serializers.deserialize(value,
               specifiedType: const FullType(Location)) as Location);
@@ -193,6 +227,12 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
   @override
   final OrderHeaderLite order;
   @override
+  final TransferTypeLite transferType;
+  @override
+  final LoanLite loan;
+  @override
+  final BuiltList<CaseEventLite> caseEvents;
+  @override
   final Location fromLocation;
   @override
   final Location toLocation;
@@ -220,6 +260,9 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
       this.number,
       this.status,
       this.order,
+      this.transferType,
+      this.loan,
+      this.caseEvents,
       this.fromLocation,
       this.toLocation,
       this.deliverTo,
@@ -248,6 +291,9 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
         number == other.number &&
         status == other.status &&
         order == other.order &&
+        transferType == other.transferType &&
+        loan == other.loan &&
+        caseEvents == other.caseEvents &&
         fromLocation == other.fromLocation &&
         toLocation == other.toLocation &&
         deliverTo == other.deliverTo &&
@@ -272,10 +318,18 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, id.hashCode),
-                                                    number.hashCode),
-                                                status.hashCode),
-                                            order.hashCode),
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(0,
+                                                                    id.hashCode),
+                                                                number.hashCode),
+                                                            status.hashCode),
+                                                        order.hashCode),
+                                                    transferType.hashCode),
+                                                loan.hashCode),
+                                            caseEvents.hashCode),
                                         fromLocation.hashCode),
                                     toLocation.hashCode),
                                 deliverTo.hashCode),
@@ -294,6 +348,9 @@ class _$GetShipmentApiShipment extends GetShipmentApiShipment {
           ..add('number', number)
           ..add('status', status)
           ..add('order', order)
+          ..add('transferType', transferType)
+          ..add('loan', loan)
+          ..add('caseEvents', caseEvents)
           ..add('fromLocation', fromLocation)
           ..add('toLocation', toLocation)
           ..add('deliverTo', deliverTo)
@@ -327,6 +384,22 @@ class GetShipmentApiShipmentBuilder
   OrderHeaderLiteBuilder get order =>
       _$this._order ??= new OrderHeaderLiteBuilder();
   set order(OrderHeaderLiteBuilder order) => _$this._order = order;
+
+  TransferTypeLiteBuilder _transferType;
+  TransferTypeLiteBuilder get transferType =>
+      _$this._transferType ??= new TransferTypeLiteBuilder();
+  set transferType(TransferTypeLiteBuilder transferType) =>
+      _$this._transferType = transferType;
+
+  LoanLiteBuilder _loan;
+  LoanLiteBuilder get loan => _$this._loan ??= new LoanLiteBuilder();
+  set loan(LoanLiteBuilder loan) => _$this._loan = loan;
+
+  ListBuilder<CaseEventLite> _caseEvents;
+  ListBuilder<CaseEventLite> get caseEvents =>
+      _$this._caseEvents ??= new ListBuilder<CaseEventLite>();
+  set caseEvents(ListBuilder<CaseEventLite> caseEvents) =>
+      _$this._caseEvents = caseEvents;
 
   LocationBuilder _fromLocation;
   LocationBuilder get fromLocation =>
@@ -386,6 +459,9 @@ class GetShipmentApiShipmentBuilder
       _number = _$v.number;
       _status = _$v.status;
       _order = _$v.order?.toBuilder();
+      _transferType = _$v.transferType?.toBuilder();
+      _loan = _$v.loan?.toBuilder();
+      _caseEvents = _$v.caseEvents?.toBuilder();
       _fromLocation = _$v.fromLocation?.toBuilder();
       _toLocation = _$v.toLocation?.toBuilder();
       _deliverTo = _$v.deliverTo?.toBuilder();
@@ -423,6 +499,9 @@ class GetShipmentApiShipmentBuilder
               number: number,
               status: status,
               order: _order?.build(),
+              transferType: _transferType?.build(),
+              loan: _loan?.build(),
+              caseEvents: _caseEvents?.build(),
               fromLocation: _fromLocation?.build(),
               toLocation: _toLocation?.build(),
               deliverTo: _deliverTo?.build(),
@@ -437,6 +516,12 @@ class GetShipmentApiShipmentBuilder
       try {
         _$failedField = 'order';
         _order?.build();
+        _$failedField = 'transferType';
+        _transferType?.build();
+        _$failedField = 'loan';
+        _loan?.build();
+        _$failedField = 'caseEvents';
+        _caseEvents?.build();
         _$failedField = 'fromLocation';
         _fromLocation?.build();
         _$failedField = 'toLocation';
@@ -484,6 +569,9 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   final FieldDispatcher<int> number;
   final FieldDispatcher<ShipmentStatus> status;
   final OrderHeaderLiteActions order;
+  final TransferTypeLiteActions transferType;
+  final LoanLiteActions loan;
+  final FieldDispatcher<BuiltList<CaseEventLite>> caseEvents;
   final LocationActions fromLocation;
   final LocationActions toLocation;
   final CustomerAddressActions deliverTo;
@@ -511,6 +599,27 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
             (s) => s?.order,
             (b) => b?.order,
             (parent, builder) => parent?.order = builder)),
+        transferType = TransferTypeLiteActions(() => $options.stateful<
+                TransferTypeLite,
+                TransferTypeLiteBuilder,
+                TransferTypeLiteActions>(
+            'transferType',
+            (a) => a.transferType,
+            (s) => s?.transferType,
+            (b) => b?.transferType,
+            (parent, builder) => parent?.transferType = builder)),
+        loan = LoanLiteActions(() =>
+            $options.stateful<LoanLite, LoanLiteBuilder, LoanLiteActions>(
+                'loan',
+                (a) => a.loan,
+                (s) => s?.loan,
+                (b) => b?.loan,
+                (parent, builder) => parent?.loan = builder)),
+        caseEvents = $options.field<BuiltList<CaseEventLite>>(
+            'caseEvents',
+            (a) => a?.caseEvents,
+            (s) => s?.caseEvents,
+            (p, b) => p?.caseEvents = b),
         fromLocation = LocationActions(() =>
             $options.stateful<Location, LocationBuilder, LocationActions>(
                 'fromLocation',
@@ -585,6 +694,8 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.order,
+        this.transferType,
+        this.loan,
         this.fromLocation,
         this.toLocation,
         this.deliverTo,
@@ -600,6 +711,7 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
         this.id,
         this.number,
         this.status,
+        this.caseEvents,
         this.erpReference,
         this.erpStatus,
         this.validationMessages,
@@ -613,6 +725,9 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
     number.$reducer(reducer);
     status.$reducer(reducer);
     order.$reducer(reducer);
+    transferType.$reducer(reducer);
+    loan.$reducer(reducer);
+    caseEvents.$reducer(reducer);
     fromLocation.$reducer(reducer);
     toLocation.$reducer(reducer);
     deliverTo.$reducer(reducer);
@@ -628,6 +743,8 @@ class _$GetShipmentApiShipmentActions extends GetShipmentApiShipmentActions {
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     order.$middleware(middleware);
+    transferType.$middleware(middleware);
+    loan.$middleware(middleware);
     fromLocation.$middleware(middleware);
     toLocation.$middleware(middleware);
     deliverTo.$middleware(middleware);

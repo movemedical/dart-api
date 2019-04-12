@@ -3,6 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
+import 'package:movemedical_api/model/preference_card_type.dart';
 
 part 'list_preference_cards_api_preference_card.g.dart';
 
@@ -31,6 +32,30 @@ abstract class ListPreferenceCardsApiPreferenceCard implements Built<ListPrefere
   
   @nullable
   String get physicianName;
+  
+  @nullable
+  String get facilityId;
+  
+  @nullable
+  String get facilityName;
+  
+  @nullable
+  String get procedureId;
+  
+  @nullable
+  String get procedureName;
+  
+  @nullable
+  String get subProcedureId;
+  
+  @nullable
+  String get subProcedureName;
+  
+  @nullable
+  PreferenceCardType get preferenceCardType;
+  
+  @nullable
+  int get totalItems;
   
   @nullable
   bool get active;
@@ -68,6 +93,22 @@ abstract class ListPreferenceCardsApiPreferenceCardActions extends ModelActions<
   FieldDispatcher<String> get physicianId;
   
   FieldDispatcher<String> get physicianName;
+  
+  FieldDispatcher<String> get facilityId;
+  
+  FieldDispatcher<String> get facilityName;
+  
+  FieldDispatcher<String> get procedureId;
+  
+  FieldDispatcher<String> get procedureName;
+  
+  FieldDispatcher<String> get subProcedureId;
+  
+  FieldDispatcher<String> get subProcedureName;
+  
+  FieldDispatcher<PreferenceCardType> get preferenceCardType;
+  
+  FieldDispatcher<int> get totalItems;
   
   FieldDispatcher<bool> get active;
   

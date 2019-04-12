@@ -32,6 +32,12 @@ class _$ListInventoryTypesApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -58,6 +64,10 @@ class _$ListInventoryTypesApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -74,13 +84,16 @@ class _$ListInventoryTypesApiRequest extends ListInventoryTypesApiRequest {
   @override
   final String search;
   @override
+  final bool active;
+  @override
   final PaginationParams paging;
 
   factory _$ListInventoryTypesApiRequest(
           [void updates(ListInventoryTypesApiRequestBuilder b)]) =>
       (new ListInventoryTypesApiRequestBuilder()..update(updates)).build();
 
-  _$ListInventoryTypesApiRequest._({this.search, this.paging}) : super._();
+  _$ListInventoryTypesApiRequest._({this.search, this.active, this.paging})
+      : super._();
 
   @override
   ListInventoryTypesApiRequest rebuild(
@@ -96,18 +109,21 @@ class _$ListInventoryTypesApiRequest extends ListInventoryTypesApiRequest {
     if (identical(other, this)) return true;
     return other is ListInventoryTypesApiRequest &&
         search == other.search &&
+        active == other.active &&
         paging == other.paging;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, search.hashCode), paging.hashCode));
+    return $jf(
+        $jc($jc($jc(0, search.hashCode), active.hashCode), paging.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListInventoryTypesApiRequest')
           ..add('search', search)
+          ..add('active', active)
           ..add('paging', paging))
         .toString();
   }
@@ -123,6 +139,10 @@ class ListInventoryTypesApiRequestBuilder
   String get search => _$this._search;
   set search(String search) => _$this._search = search;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -133,6 +153,7 @@ class ListInventoryTypesApiRequestBuilder
   ListInventoryTypesApiRequestBuilder get _$this {
     if (_$v != null) {
       _search = _$v.search;
+      _active = _$v.active;
       _paging = _$v.paging?.toBuilder();
       _$v = null;
     }
@@ -158,7 +179,7 @@ class ListInventoryTypesApiRequestBuilder
     try {
       _$result = _$v ??
           new _$ListInventoryTypesApiRequest._(
-              search: search, paging: _paging?.build());
+              search: search, active: active, paging: _paging?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -198,6 +219,7 @@ class _$ListInventoryTypesApiRequestActions
 
   final ActionDispatcher<ListInventoryTypesApiRequest> $replace;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
   _$ListInventoryTypesApiRequestActions._(this.$options)
@@ -205,6 +227,8 @@ class _$ListInventoryTypesApiRequestActions
             '\$replace', (a) => a?.$replace),
         search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        active = $options.field<bool>('active', (a) => a?.active,
+            (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -239,12 +263,14 @@ class _$ListInventoryTypesApiRequestActions
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.search,
+        this.active,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     search.$reducer(reducer);
+    active.$reducer(reducer);
     paging.$reducer(reducer);
   }
 

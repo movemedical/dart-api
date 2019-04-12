@@ -32,6 +32,24 @@ class _$StockContainerSerializer
         ..add(serializers.serialize(object.containerId,
             specifiedType: const FullType(String)));
     }
+    if (object.zoneId != null) {
+      result
+        ..add('zoneId')
+        ..add(serializers.serialize(object.zoneId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.zoneType != null) {
+      result
+        ..add('zoneType')
+        ..add(serializers.serialize(object.zoneType,
+            specifiedType: const FullType(ZoneType)));
+    }
+    if (object.zoneName != null) {
+      result
+        ..add('zoneName')
+        ..add(serializers.serialize(object.zoneName,
+            specifiedType: const FullType(String)));
+    }
     if (object.binName != null) {
       result
         ..add('binName')
@@ -152,6 +170,18 @@ class _$StockContainerSerializer
           result.containerId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'zoneId':
+          result.zoneId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'zoneType':
+          result.zoneType = serializers.deserialize(value,
+              specifiedType: const FullType(ZoneType)) as ZoneType;
+          break;
+        case 'zoneName':
+          result.zoneName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'binName':
           result.binName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -229,6 +259,12 @@ class _$StockContainer extends StockContainer {
   @override
   final String containerId;
   @override
+  final String zoneId;
+  @override
+  final ZoneType zoneType;
+  @override
+  final String zoneName;
+  @override
   final String binName;
   @override
   final BinType binType;
@@ -267,6 +303,9 @@ class _$StockContainer extends StockContainer {
   _$StockContainer._(
       {this.containerType,
       this.containerId,
+      this.zoneId,
+      this.zoneType,
+      this.zoneName,
       this.binName,
       this.binType,
       this.binAisle,
@@ -299,6 +338,9 @@ class _$StockContainer extends StockContainer {
     return other is StockContainer &&
         containerType == other.containerType &&
         containerId == other.containerId &&
+        zoneId == other.zoneId &&
+        zoneType == other.zoneType &&
+        zoneName == other.zoneName &&
         binName == other.binName &&
         binType == other.binType &&
         binAisle == other.binAisle &&
@@ -337,15 +379,12 @@ class _$StockContainer extends StockContainer {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            0,
-                                                                            containerType
-                                                                                .hashCode),
-                                                                        containerId
-                                                                            .hashCode),
-                                                                    binName
-                                                                        .hashCode),
-                                                                binType
-                                                                    .hashCode),
+                                                                            $jc($jc($jc(0, containerType.hashCode), containerId.hashCode),
+                                                                                zoneId.hashCode),
+                                                                            zoneType.hashCode),
+                                                                        zoneName.hashCode),
+                                                                    binName.hashCode),
+                                                                binType.hashCode),
                                                             binAisle.hashCode),
                                                         binSection.hashCode),
                                                     binShelf.hashCode),
@@ -367,6 +406,9 @@ class _$StockContainer extends StockContainer {
     return (newBuiltValueToStringHelper('StockContainer')
           ..add('containerType', containerType)
           ..add('containerId', containerId)
+          ..add('zoneId', zoneId)
+          ..add('zoneType', zoneType)
+          ..add('zoneName', zoneName)
           ..add('binName', binName)
           ..add('binType', binType)
           ..add('binAisle', binAisle)
@@ -399,6 +441,18 @@ class StockContainerBuilder
   String _containerId;
   String get containerId => _$this._containerId;
   set containerId(String containerId) => _$this._containerId = containerId;
+
+  String _zoneId;
+  String get zoneId => _$this._zoneId;
+  set zoneId(String zoneId) => _$this._zoneId = zoneId;
+
+  ZoneType _zoneType;
+  ZoneType get zoneType => _$this._zoneType;
+  set zoneType(ZoneType zoneType) => _$this._zoneType = zoneType;
+
+  String _zoneName;
+  String get zoneName => _$this._zoneName;
+  set zoneName(String zoneName) => _$this._zoneName = zoneName;
 
   String _binName;
   String get binName => _$this._binName;
@@ -472,6 +526,9 @@ class StockContainerBuilder
     if (_$v != null) {
       _containerType = _$v.containerType;
       _containerId = _$v.containerId;
+      _zoneId = _$v.zoneId;
+      _zoneType = _$v.zoneType;
+      _zoneName = _$v.zoneName;
       _binName = _$v.binName;
       _binType = _$v.binType;
       _binAisle = _$v.binAisle;
@@ -512,6 +569,9 @@ class StockContainerBuilder
         new _$StockContainer._(
             containerType: containerType,
             containerId: containerId,
+            zoneId: zoneId,
+            zoneType: zoneType,
+            zoneName: zoneName,
             binName: binName,
             binType: binType,
             binAisle: binAisle,
@@ -552,6 +612,9 @@ class _$StockContainerActions extends StockContainerActions {
   final ActionDispatcher<StockContainer> $replace;
   final FieldDispatcher<StockContainerType> containerType;
   final FieldDispatcher<String> containerId;
+  final FieldDispatcher<String> zoneId;
+  final FieldDispatcher<ZoneType> zoneType;
+  final FieldDispatcher<String> zoneName;
   final FieldDispatcher<String> binName;
   final FieldDispatcher<BinType> binType;
   final FieldDispatcher<String> binAisle;
@@ -582,6 +645,12 @@ class _$StockContainerActions extends StockContainerActions {
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
+        zoneId = $options.field<String>('zoneId', (a) => a?.zoneId,
+            (s) => s?.zoneId, (p, b) => p?.zoneId = b),
+        zoneType = $options.field<ZoneType>('zoneType', (a) => a?.zoneType,
+            (s) => s?.zoneType, (p, b) => p?.zoneType = b),
+        zoneName = $options.field<String>('zoneName', (a) => a?.zoneName,
+            (s) => s?.zoneName, (p, b) => p?.zoneName = b),
         binName = $options.field<String>('binName', (a) => a?.binName,
             (s) => s?.binName, (p, b) => p?.binName = b),
         binType = $options.field<BinType>('binType', (a) => a?.binType,
@@ -650,6 +719,9 @@ class _$StockContainerActions extends StockContainerActions {
         this.$replace,
         this.containerType,
         this.containerId,
+        this.zoneId,
+        this.zoneType,
+        this.zoneName,
         this.binName,
         this.binType,
         this.binAisle,
@@ -673,6 +745,9 @@ class _$StockContainerActions extends StockContainerActions {
     super.$reducer(reducer);
     containerType.$reducer(reducer);
     containerId.$reducer(reducer);
+    zoneId.$reducer(reducer);
+    zoneType.$reducer(reducer);
+    zoneName.$reducer(reducer);
     binName.$reducer(reducer);
     binType.$reducer(reducer);
     binAisle.$reducer(reducer);

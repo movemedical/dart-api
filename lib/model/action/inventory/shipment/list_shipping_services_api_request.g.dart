@@ -38,6 +38,12 @@ class _$ListShippingServicesApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -68,6 +74,10 @@ class _$ListShippingServicesApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -86,6 +96,8 @@ class _$ListShippingServicesApiRequest extends ListShippingServicesApiRequest {
   @override
   final String search;
   @override
+  final bool active;
+  @override
   final PaginationParams paging;
 
   factory _$ListShippingServicesApiRequest(
@@ -93,7 +105,7 @@ class _$ListShippingServicesApiRequest extends ListShippingServicesApiRequest {
       (new ListShippingServicesApiRequestBuilder()..update(updates)).build();
 
   _$ListShippingServicesApiRequest._(
-      {this.orderReasonId, this.search, this.paging})
+      {this.orderReasonId, this.search, this.active, this.paging})
       : super._();
 
   @override
@@ -111,13 +123,16 @@ class _$ListShippingServicesApiRequest extends ListShippingServicesApiRequest {
     return other is ListShippingServicesApiRequest &&
         orderReasonId == other.orderReasonId &&
         search == other.search &&
+        active == other.active &&
         paging == other.paging;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc(0, orderReasonId.hashCode), search.hashCode), paging.hashCode));
+        $jc($jc($jc(0, orderReasonId.hashCode), search.hashCode),
+            active.hashCode),
+        paging.hashCode));
   }
 
   @override
@@ -125,6 +140,7 @@ class _$ListShippingServicesApiRequest extends ListShippingServicesApiRequest {
     return (newBuiltValueToStringHelper('ListShippingServicesApiRequest')
           ..add('orderReasonId', orderReasonId)
           ..add('search', search)
+          ..add('active', active)
           ..add('paging', paging))
         .toString();
   }
@@ -145,6 +161,10 @@ class ListShippingServicesApiRequestBuilder
   String get search => _$this._search;
   set search(String search) => _$this._search = search;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -156,6 +176,7 @@ class ListShippingServicesApiRequestBuilder
     if (_$v != null) {
       _orderReasonId = _$v.orderReasonId;
       _search = _$v.search;
+      _active = _$v.active;
       _paging = _$v.paging?.toBuilder();
       _$v = null;
     }
@@ -183,6 +204,7 @@ class ListShippingServicesApiRequestBuilder
           new _$ListShippingServicesApiRequest._(
               orderReasonId: orderReasonId,
               search: search,
+              active: active,
               paging: _paging?.build());
     } catch (_) {
       String _$failedField;
@@ -224,6 +246,7 @@ class _$ListShippingServicesApiRequestActions
   final ActionDispatcher<ListShippingServicesApiRequest> $replace;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
   _$ListShippingServicesApiRequestActions._(this.$options)
@@ -236,6 +259,8 @@ class _$ListShippingServicesApiRequestActions
             (p, b) => p?.orderReasonId = b),
         search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        active = $options.field<bool>('active', (a) => a?.active,
+            (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -272,6 +297,7 @@ class _$ListShippingServicesApiRequestActions
         this.$replace,
         this.orderReasonId,
         this.search,
+        this.active,
       ]);
 
   @override
@@ -279,6 +305,7 @@ class _$ListShippingServicesApiRequestActions
     super.$reducer(reducer);
     orderReasonId.$reducer(reducer);
     search.$reducer(reducer);
+    active.$reducer(reducer);
     paging.$reducer(reducer);
   }
 

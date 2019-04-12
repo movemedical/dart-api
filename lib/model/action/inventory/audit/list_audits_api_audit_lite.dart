@@ -2,7 +2,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
-import 'package:movemedical_api/model/removeOrRefactor/audit.dart';
+import 'package:movemedical_api/model/remove_or_refactor/audit.dart';
 import 'package:movemedical_api/model/location.dart';
 import 'dart:core';
 

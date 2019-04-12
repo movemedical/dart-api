@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/location.dart';
+import 'package:movemedical_api/model/responsible_party.dart';
 import 'package:movemedical_api/model/item.dart';
 import 'package:movemedical_api/model/lot.dart';
 import 'package:movemedical_api/model/serial.dart';
@@ -20,6 +21,9 @@ abstract class RequestRollForwardReportApiResponse implements Built<RequestRollF
   
   @nullable
   Location get location;
+  
+  @nullable
+  ResponsibleParty get responsibleParty;
   
   @nullable
   Item get item;
@@ -62,6 +66,8 @@ abstract class RequestRollForwardReportApiResponseActions extends ModelActions<R
   FieldDispatcher<String> get docReportId;
   
   LocationActions get location;
+  
+  ResponsiblePartyActions get responsibleParty;
   
   ItemActions get item;
   

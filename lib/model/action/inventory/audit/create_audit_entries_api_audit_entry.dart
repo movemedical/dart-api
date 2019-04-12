@@ -15,6 +15,12 @@ abstract class CreateAuditEntriesApiAuditEntry implements Built<CreateAuditEntri
   ////////////////////////////////
   
   @nullable
+  String get auditId;
+  
+  @nullable
+  String get reference;
+  
+  @nullable
   String get auditItemId;
   
   @nullable
@@ -84,6 +90,10 @@ abstract class CreateAuditEntriesApiAuditEntryActions extends ModelActions<Creat
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
+  
+  FieldDispatcher<String> get auditId;
+  
+  FieldDispatcher<String> get reference;
   
   FieldDispatcher<String> get auditItemId;
   

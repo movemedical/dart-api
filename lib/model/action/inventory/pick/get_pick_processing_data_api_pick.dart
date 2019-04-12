@@ -7,6 +7,8 @@ import 'package:movemedical_api/model/stock_item.dart';
 import 'package:movemedical_api/model/item.dart';
 import 'package:movemedical_api/model/serial.dart';
 import 'package:movemedical_api/model/stock_container.dart';
+import 'package:movemedical_api/model/loan_lite.dart';
+import 'package:movemedical_api/model/case_event_lite.dart';
 
 part 'get_pick_processing_data_api_pick.g.dart';
 
@@ -41,6 +43,12 @@ abstract class GetPickProcessingDataApiPick implements Built<GetPickProcessingDa
   
   @nullable
   StockContainer get toContainer;
+  
+  @nullable
+  LoanLite get loan;
+  
+  @nullable
+  CaseEventLite get caseEvent;
   
   ////////////////////////////////
   /// Constructors
@@ -79,6 +87,10 @@ abstract class GetPickProcessingDataApiPickActions extends ModelActions<GetPickP
   StockContainerActions get fromContainer;
   
   StockContainerActions get toContainer;
+  
+  LoanLiteActions get loan;
+  
+  CaseEventLiteActions get caseEvent;
   
   ////////////////////////////////
   /// Constructors

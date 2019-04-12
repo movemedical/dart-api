@@ -38,6 +38,12 @@ const AttributableType _$wireCUSTOMER = const AttributableType._('CUSTOMER');
 const AttributableType _$wireAUDIT = const AttributableType._('AUDIT');
 const AttributableType _$wireIMPORT_LOG =
     const AttributableType._('IMPORT_LOG');
+const AttributableType _$wireSHIP_TO_ADDRESS =
+    const AttributableType._('SHIP_TO_ADDRESS');
+const AttributableType _$wireDELIVER_TO_ADDRESS =
+    const AttributableType._('DELIVER_TO_ADDRESS');
+const AttributableType _$wireBILL_TO_ADDRESS =
+    const AttributableType._('BILL_TO_ADDRESS');
 
 AttributableType _$attributableTypeValueOf(String name) {
   switch (name) {
@@ -93,6 +99,12 @@ AttributableType _$attributableTypeValueOf(String name) {
       return _$wireAUDIT;
     case 'IMPORT_LOG':
       return _$wireIMPORT_LOG;
+    case 'SHIP_TO_ADDRESS':
+      return _$wireSHIP_TO_ADDRESS;
+    case 'DELIVER_TO_ADDRESS':
+      return _$wireDELIVER_TO_ADDRESS;
+    case 'BILL_TO_ADDRESS':
+      return _$wireBILL_TO_ADDRESS;
     default:
       throw new ArgumentError(name);
   }
@@ -126,6 +138,9 @@ final BuiltSet<AttributableType> _$attributableTypeValues =
   _$wireCUSTOMER,
   _$wireAUDIT,
   _$wireIMPORT_LOG,
+  _$wireSHIP_TO_ADDRESS,
+  _$wireDELIVER_TO_ADDRESS,
+  _$wireBILL_TO_ADDRESS,
 ]);
 
 Serializer<AttributableType> _$attributableTypeSerializer =

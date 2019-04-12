@@ -37,12 +37,6 @@ class _$GetKitStockApiResponseSerializer
             specifiedType: const FullType(
                 BuiltList, const [const FullType(GetStockApiStock)])));
     }
-    if (object.inProgressVerify != null) {
-      result
-        ..add('inProgressVerify')
-        ..add(serializers.serialize(object.inProgressVerify,
-            specifiedType: const FullType(InProgressBuildVerify)));
-    }
 
     return result;
   }
@@ -70,11 +64,6 @@ class _$GetKitStockApiResponseSerializer
                       BuiltList, const [const FullType(GetStockApiStock)]))
               as BuiltList);
           break;
-        case 'inProgressVerify':
-          result.inProgressVerify.replace(serializers.deserialize(value,
-                  specifiedType: const FullType(InProgressBuildVerify))
-              as InProgressBuildVerify);
-          break;
       }
     }
 
@@ -87,16 +76,12 @@ class _$GetKitStockApiResponse extends GetKitStockApiResponse {
   final GetStockApiStock kitStock;
   @override
   final BuiltList<GetStockApiStock> containers;
-  @override
-  final InProgressBuildVerify inProgressVerify;
 
   factory _$GetKitStockApiResponse(
           [void updates(GetKitStockApiResponseBuilder b)]) =>
       (new GetKitStockApiResponseBuilder()..update(updates)).build();
 
-  _$GetKitStockApiResponse._(
-      {this.kitStock, this.containers, this.inProgressVerify})
-      : super._();
+  _$GetKitStockApiResponse._({this.kitStock, this.containers}) : super._();
 
   @override
   GetKitStockApiResponse rebuild(
@@ -112,22 +97,19 @@ class _$GetKitStockApiResponse extends GetKitStockApiResponse {
     if (identical(other, this)) return true;
     return other is GetKitStockApiResponse &&
         kitStock == other.kitStock &&
-        containers == other.containers &&
-        inProgressVerify == other.inProgressVerify;
+        containers == other.containers;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, kitStock.hashCode), containers.hashCode),
-        inProgressVerify.hashCode));
+    return $jf($jc($jc(0, kitStock.hashCode), containers.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetKitStockApiResponse')
           ..add('kitStock', kitStock)
-          ..add('containers', containers)
-          ..add('inProgressVerify', inProgressVerify))
+          ..add('containers', containers))
         .toString();
   }
 }
@@ -147,19 +129,12 @@ class GetKitStockApiResponseBuilder
   set containers(ListBuilder<GetStockApiStock> containers) =>
       _$this._containers = containers;
 
-  InProgressBuildVerifyBuilder _inProgressVerify;
-  InProgressBuildVerifyBuilder get inProgressVerify =>
-      _$this._inProgressVerify ??= new InProgressBuildVerifyBuilder();
-  set inProgressVerify(InProgressBuildVerifyBuilder inProgressVerify) =>
-      _$this._inProgressVerify = inProgressVerify;
-
   GetKitStockApiResponseBuilder();
 
   GetKitStockApiResponseBuilder get _$this {
     if (_$v != null) {
       _kitStock = _$v.kitStock?.toBuilder();
       _containers = _$v.containers?.toBuilder();
-      _inProgressVerify = _$v.inProgressVerify?.toBuilder();
       _$v = null;
     }
     return this;
@@ -184,9 +159,7 @@ class GetKitStockApiResponseBuilder
     try {
       _$result = _$v ??
           new _$GetKitStockApiResponse._(
-              kitStock: _kitStock?.build(),
-              containers: _containers?.build(),
-              inProgressVerify: _inProgressVerify?.build());
+              kitStock: _kitStock?.build(), containers: _containers?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -194,8 +167,6 @@ class GetKitStockApiResponseBuilder
         _kitStock?.build();
         _$failedField = 'containers';
         _containers?.build();
-        _$failedField = 'inProgressVerify';
-        _inProgressVerify?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetKitStockApiResponse', _$failedField, e.toString());
@@ -228,7 +199,6 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
   final ActionDispatcher<GetKitStockApiResponse> $replace;
   final GetStockApiStockActions kitStock;
   final FieldDispatcher<BuiltList<GetStockApiStock>> containers;
-  final InProgressBuildVerifyActions inProgressVerify;
 
   _$GetKitStockApiResponseActions._(this.$options)
       : $replace = $options.action<GetKitStockApiResponse>(
@@ -247,15 +217,6 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
             (a) => a?.containers,
             (s) => s?.containers,
             (p, b) => p?.containers = b),
-        inProgressVerify = InProgressBuildVerifyActions(() => $options.stateful<
-                InProgressBuildVerify,
-                InProgressBuildVerifyBuilder,
-                InProgressBuildVerifyActions>(
-            'inProgressVerify',
-            (a) => a.inProgressVerify,
-            (s) => s?.inProgressVerify,
-            (b) => b?.inProgressVerify,
-            (parent, builder) => parent?.inProgressVerify = builder)),
         super._();
 
   factory _$GetKitStockApiResponseActions(
@@ -273,7 +234,6 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.kitStock,
-        this.inProgressVerify,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
@@ -289,14 +249,12 @@ class _$GetKitStockApiResponseActions extends GetKitStockApiResponseActions {
     super.$reducer(reducer);
     kitStock.$reducer(reducer);
     containers.$reducer(reducer);
-    inProgressVerify.$reducer(reducer);
   }
 
   @override
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     kitStock.$middleware(middleware);
-    inProgressVerify.$middleware(middleware);
   }
 
   FullType _$fullType;

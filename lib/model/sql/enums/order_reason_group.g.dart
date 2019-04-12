@@ -13,6 +13,10 @@ const OrderReasonGroup _$wireDEMAND_LOAN_RETURN =
 const OrderReasonGroup _$wirePAR_LOAN = const OrderReasonGroup._('PAR_LOAN');
 const OrderReasonGroup _$wirePAR_LOAN_RETURN =
     const OrderReasonGroup._('PAR_LOAN_RETURN');
+const OrderReasonGroup _$wirePAR_LOAN_COMPLIANCE =
+    const OrderReasonGroup._('PAR_LOAN_COMPLIANCE');
+const OrderReasonGroup _$wirePAR_LOAN_COMPLIANCE_RETURN =
+    const OrderReasonGroup._('PAR_LOAN_COMPLIANCE_RETURN');
 const OrderReasonGroup _$wireTRANSFER = const OrderReasonGroup._('TRANSFER');
 const OrderReasonGroup _$wireINFLATE = const OrderReasonGroup._('INFLATE');
 const OrderReasonGroup _$wireDEFLATE = const OrderReasonGroup._('DEFLATE');
@@ -31,6 +35,10 @@ OrderReasonGroup _$orderReasonGroupValueOf(String name) {
       return _$wirePAR_LOAN;
     case 'PAR_LOAN_RETURN':
       return _$wirePAR_LOAN_RETURN;
+    case 'PAR_LOAN_COMPLIANCE':
+      return _$wirePAR_LOAN_COMPLIANCE;
+    case 'PAR_LOAN_COMPLIANCE_RETURN':
+      return _$wirePAR_LOAN_COMPLIANCE_RETURN;
     case 'TRANSFER':
       return _$wireTRANSFER;
     case 'INFLATE':
@@ -52,6 +60,8 @@ final BuiltSet<OrderReasonGroup> _$orderReasonGroupValues =
   _$wireDEMAND_LOAN_RETURN,
   _$wirePAR_LOAN,
   _$wirePAR_LOAN_RETURN,
+  _$wirePAR_LOAN_COMPLIANCE,
+  _$wirePAR_LOAN_COMPLIANCE_RETURN,
   _$wireTRANSFER,
   _$wireINFLATE,
   _$wireDEFLATE,

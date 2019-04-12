@@ -19,6 +19,9 @@ abstract class MoveStockWithinLocationApiStockMove implements Built<MoveStockWit
   String get summaryKey;
   
   @nullable
+  int get qty;
+  
+  @nullable
   StockContainerType get toContainerType;
   
   @nullable
@@ -47,6 +50,8 @@ abstract class MoveStockWithinLocationApiStockMoveActions extends ModelActions<M
   FieldDispatcher<String> get stockId;
   
   FieldDispatcher<String> get summaryKey;
+  
+  FieldDispatcher<int> get qty;
   
   FieldDispatcher<StockContainerType> get toContainerType;
   

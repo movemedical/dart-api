@@ -41,6 +41,9 @@ abstract class ListAuditItemsApiRequest implements Built<ListAuditItemsApiReques
   bool get hasDiff;
   
   @nullable
+  bool get forExport;
+  
+  @nullable
   PaginationParams get paging;
   
   ////////////////////////////////
@@ -80,6 +83,8 @@ abstract class ListAuditItemsApiRequestActions extends ModelActions<ListAuditIte
   FieldDispatcher<bool> get includeClosed;
   
   FieldDispatcher<bool> get hasDiff;
+  
+  FieldDispatcher<bool> get forExport;
   
   PaginationParamsActions get paging;
   

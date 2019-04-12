@@ -124,6 +124,12 @@ class _$ListAuditsApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.syncDate != null) {
+      result
+        ..add('syncDate')
+        ..add(serializers.serialize(object.syncDate,
+            specifiedType: const FullType(DateTime)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -231,6 +237,10 @@ class _$ListAuditsApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'syncDate':
+          result.syncDate = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -281,6 +291,8 @@ class _$ListAuditsApiRequest extends ListAuditsApiRequest {
   @override
   final String search;
   @override
+  final DateTime syncDate;
+  @override
   final PaginationParams paging;
   @override
   final OrderByParams<ListAuditsApiOrderBy> sortBy;
@@ -305,6 +317,7 @@ class _$ListAuditsApiRequest extends ListAuditsApiRequest {
       this.countTypes,
       this.auditNumber,
       this.search,
+      this.syncDate,
       this.paging,
       this.sortBy})
       : super._();
@@ -336,6 +349,7 @@ class _$ListAuditsApiRequest extends ListAuditsApiRequest {
         countTypes == other.countTypes &&
         auditNumber == other.auditNumber &&
         search == other.search &&
+        syncDate == other.syncDate &&
         paging == other.paging &&
         sortBy == other.sortBy;
   }
@@ -359,26 +373,28 @@ class _$ListAuditsApiRequest extends ListAuditsApiRequest {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        locationIds
+                                                                        $jc(
+                                                                            0,
+                                                                            locationIds
+                                                                                .hashCode),
+                                                                        statuses
                                                                             .hashCode),
-                                                                    statuses
+                                                                    scheduledStartDateRange
                                                                         .hashCode),
-                                                                scheduledStartDateRange
+                                                                scheduledEndDateRange
                                                                     .hashCode),
-                                                            scheduledEndDateRange
-                                                                .hashCode),
-                                                        assigned.hashCode),
-                                                    orgUnitIds.hashCode),
-                                                itemIds.hashCode),
-                                            lotIds.hashCode),
-                                        serialIds.hashCode),
-                                    itemCategoryIds.hashCode),
-                                assigneeLinkedIds.hashCode),
-                            types.hashCode),
-                        countTypes.hashCode),
-                    auditNumber.hashCode),
-                search.hashCode),
+                                                            assigned.hashCode),
+                                                        orgUnitIds.hashCode),
+                                                    itemIds.hashCode),
+                                                lotIds.hashCode),
+                                            serialIds.hashCode),
+                                        itemCategoryIds.hashCode),
+                                    assigneeLinkedIds.hashCode),
+                                types.hashCode),
+                            countTypes.hashCode),
+                        auditNumber.hashCode),
+                    search.hashCode),
+                syncDate.hashCode),
             paging.hashCode),
         sortBy.hashCode));
   }
@@ -401,6 +417,7 @@ class _$ListAuditsApiRequest extends ListAuditsApiRequest {
           ..add('countTypes', countTypes)
           ..add('auditNumber', auditNumber)
           ..add('search', search)
+          ..add('syncDate', syncDate)
           ..add('paging', paging)
           ..add('sortBy', sortBy))
         .toString();
@@ -491,6 +508,10 @@ class ListAuditsApiRequestBuilder
   String get search => _$this._search;
   set search(String search) => _$this._search = search;
 
+  DateTime _syncDate;
+  DateTime get syncDate => _$this._syncDate;
+  set syncDate(DateTime syncDate) => _$this._syncDate = syncDate;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -521,6 +542,7 @@ class ListAuditsApiRequestBuilder
       _countTypes = _$v.countTypes?.toBuilder();
       _auditNumber = _$v.auditNumber;
       _search = _$v.search;
+      _syncDate = _$v.syncDate;
       _paging = _$v.paging?.toBuilder();
       _sortBy = _$v.sortBy?.toBuilder();
       _$v = null;
@@ -562,6 +584,7 @@ class ListAuditsApiRequestBuilder
               countTypes: _countTypes?.build(),
               auditNumber: auditNumber,
               search: search,
+              syncDate: syncDate,
               paging: _paging?.build(),
               sortBy: _sortBy?.build());
     } catch (_) {
@@ -642,6 +665,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
   final FieldDispatcher<BuiltList<AuditCountType>> countTypes;
   final FieldDispatcher<String> auditNumber;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<DateTime> syncDate;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListAuditsApiOrderBy> sortBy;
 
@@ -710,6 +734,8 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
             (p, b) => p?.auditNumber = b),
         search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        syncDate = $options.field<DateTime>('syncDate', (a) => a?.syncDate,
+            (s) => s?.syncDate, (p, b) => p?.syncDate = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -768,6 +794,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
         this.countTypes,
         this.auditNumber,
         this.search,
+        this.syncDate,
       ]);
 
   @override
@@ -788,6 +815,7 @@ class _$ListAuditsApiRequestActions extends ListAuditsApiRequestActions {
     countTypes.$reducer(reducer);
     auditNumber.$reducer(reducer);
     search.$reducer(reducer);
+    syncDate.$reducer(reducer);
     paging.$reducer(reducer);
     sortBy.$reducer(reducer);
   }

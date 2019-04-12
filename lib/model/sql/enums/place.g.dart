@@ -64,6 +64,10 @@ const Place _$wireSHIPPING_SERVICE_LIST =
     const Place._('SHIPPING_SERVICE_LIST');
 const Place _$wirePROFILE = const Place._('PROFILE');
 const Place _$wireADJUSTMENT = const Place._('ADJUSTMENT');
+const Place _$wireCASE_TYPE_LIST = const Place._('CASE_TYPE_LIST');
+const Place _$wireORDER_LINE_CANCEL_REASON_LIST =
+    const Place._('ORDER_LINE_CANCEL_REASON_LIST');
+const Place _$wireDCE_DETAIL = const Place._('DCE_DETAIL');
 
 Place _$placeValueOf(String name) {
   switch (name) {
@@ -165,6 +169,12 @@ Place _$placeValueOf(String name) {
       return _$wirePROFILE;
     case 'ADJUSTMENT':
       return _$wireADJUSTMENT;
+    case 'CASE_TYPE_LIST':
+      return _$wireCASE_TYPE_LIST;
+    case 'ORDER_LINE_CANCEL_REASON_LIST':
+      return _$wireORDER_LINE_CANCEL_REASON_LIST;
+    case 'DCE_DETAIL':
+      return _$wireDCE_DETAIL;
     default:
       throw new ArgumentError(name);
   }
@@ -220,6 +230,9 @@ final BuiltSet<Place> _$placeValues = new BuiltSet<Place>(const <Place>[
   _$wireSHIPPING_SERVICE_LIST,
   _$wirePROFILE,
   _$wireADJUSTMENT,
+  _$wireCASE_TYPE_LIST,
+  _$wireORDER_LINE_CANCEL_REASON_LIST,
+  _$wireDCE_DETAIL,
 ]);
 
 Serializer<Place> _$placeSerializer = new _$PlaceSerializer();

@@ -5,7 +5,7 @@ import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/essentials/docreport/move_doc_report_request.dart';
 import 'package:movemedical_api/model/sql/model/db_generated_doc_report.dart';
 import 'package:movemedical_api/model/sql/enums/doc_report_format.dart';
-import 'package:movemedical_api/model/action/inventory/stockSummary/list_stock_summary_api_request.dart';
+import 'package:movemedical_api/model/action/inventory/stock_summary/list_stock_summary_api_request.dart';
 
 part 'request_stock_export_doc_api_request.g.dart';
 

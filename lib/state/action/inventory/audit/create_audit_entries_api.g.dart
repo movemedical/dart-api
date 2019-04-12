@@ -10,65 +10,77 @@ part of 'create_audit_entries_api.dart';
 // ignore_for_file: annotate_overrides
 
 typedef StatefulActionsOptions<
-    CommandState<ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>>,
+    CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
+        ApiResult<CreateAuditEntriesApiResponse>>,
     CommandStateBuilder<ApiCommand<CreateAuditEntriesApiRequest>,
-        ApiResult<Empty>>,
+        ApiResult<CreateAuditEntriesApiResponse>>,
     CreateAuditEntriesApi> CreateAuditEntriesApiOptions();
 
 class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
   final StatefulActionsOptions<
-      CommandState<ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>>,
+      CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
+          ApiResult<CreateAuditEntriesApiResponse>>,
       CommandStateBuilder<ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<Empty>>,
+          ApiResult<CreateAuditEntriesApiResponse>>,
       CreateAuditEntriesApi> $options;
 
   final ActionDispatcher<
       CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<Empty>>> $replace;
-  final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>,
-          CreateAuditEntriesApi, String>> $cancel;
+          ApiResult<CreateAuditEntriesApiResponse>>> $replace;
   final ActionDispatcher<
       CommandPayload<
           ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<Empty>,
+          ApiResult<CreateAuditEntriesApiResponse>,
+          CreateAuditEntriesApi,
+          String>> $cancel;
+  final ActionDispatcher<
+      CommandPayload<
+          ApiCommand<CreateAuditEntriesApiRequest>,
+          ApiResult<CreateAuditEntriesApiResponse>,
           CreateAuditEntriesApi,
           Command<ApiCommand<CreateAuditEntriesApiRequest>>>> $execute;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>,
-          CreateAuditEntriesApi, CommandResult<ApiResult<Empty>>>> $result;
+      CommandPayload<
+          ApiCommand<CreateAuditEntriesApiRequest>,
+          ApiResult<CreateAuditEntriesApiResponse>,
+          CreateAuditEntriesApi,
+          CommandResult<ApiResult<CreateAuditEntriesApiResponse>>>> $result;
   final ActionDispatcher<
-      CommandPayload<ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>,
-          CreateAuditEntriesApi, CommandProgress>> $progress;
+      CommandPayload<
+          ApiCommand<CreateAuditEntriesApiRequest>,
+          ApiResult<CreateAuditEntriesApiResponse>,
+          CreateAuditEntriesApi,
+          CommandProgress>> $progress;
 
   _$CreateAuditEntriesApi._(this.$options)
       : $replace = $options.action<
-            CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
-                ApiResult<Empty>>>('\$replace', (a) => a?.$replace),
+                CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
+                    ApiResult<CreateAuditEntriesApiResponse>>>(
+            '\$replace', (a) => a?.$replace),
         $cancel = $options.action<
             CommandPayload<
                 ApiCommand<CreateAuditEntriesApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<CreateAuditEntriesApiResponse>,
                 CreateAuditEntriesApi,
                 String>>('\$cancel', (a) => a?.$cancel),
         $execute = $options.action<
                 CommandPayload<
                     ApiCommand<CreateAuditEntriesApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<CreateAuditEntriesApiResponse>,
                     CreateAuditEntriesApi,
                     Command<ApiCommand<CreateAuditEntriesApiRequest>>>>(
             '\$execute', (a) => a?.$execute),
         $result = $options.action<
                 CommandPayload<
                     ApiCommand<CreateAuditEntriesApiRequest>,
-                    ApiResult<Empty>,
+                    ApiResult<CreateAuditEntriesApiResponse>,
                     CreateAuditEntriesApi,
-                    CommandResult<ApiResult<Empty>>>>(
+                    CommandResult<ApiResult<CreateAuditEntriesApiResponse>>>>(
             '\$result', (a) => a?.$result),
         $progress = $options.action<
             CommandPayload<
                 ApiCommand<CreateAuditEntriesApiRequest>,
-                ApiResult<Empty>,
+                ApiResult<CreateAuditEntriesApiResponse>,
                 CreateAuditEntriesApi,
                 CommandProgress>>('\$progress', (a) => a?.$progress),
         super._();
@@ -77,15 +89,17 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
       _$CreateAuditEntriesApi._(options());
 
   @override
-  CommandState<ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>>
+  CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
+          ApiResult<CreateAuditEntriesApiResponse>>
       get $initial => CommandState<ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<Empty>>();
+          ApiResult<CreateAuditEntriesApiResponse>>();
 
   @override
   CommandStateBuilder<ApiCommand<CreateAuditEntriesApiRequest>,
-          ApiResult<Empty>>
+          ApiResult<CreateAuditEntriesApiResponse>>
       $newBuilder() => CommandStateBuilder<
-          ApiCommand<CreateAuditEntriesApiRequest>, ApiResult<Empty>>();
+          ApiCommand<CreateAuditEntriesApiRequest>,
+          ApiResult<CreateAuditEntriesApiResponse>>();
 
   BuiltList<ActionDispatcher> _$actions;
   @override
@@ -102,7 +116,7 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
   @override
   FullType get $fullType => _$fullType ??= FullType(CommandState, [
         FullType(ApiCommand, [FullType(CreateAuditEntriesApiRequest)]),
-        FullType(ApiResult, [FullType(Empty)])
+        FullType(ApiResult, [FullType(CreateAuditEntriesApiResponse)])
       ]);
 
   @override
@@ -110,7 +124,8 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
       ApiCommand<CreateAuditEntriesApiRequest>().toBuilder();
 
   @override
-  ApiResultBuilder<Empty> newResultBuilder() => ApiResult<Empty>().toBuilder();
+  ApiResultBuilder<CreateAuditEntriesApiResponse> newResultBuilder() =>
+      ApiResult<CreateAuditEntriesApiResponse>().toBuilder();
 
   @override
   Serializer<ApiResult> get resultSerializer => ApiResult.serializer;
@@ -120,12 +135,14 @@ class _$CreateAuditEntriesApi extends CreateAuditEntriesApi {
       CreateAuditEntriesApiRequest().toBuilder();
 
   @override
-  EmptyBuilder newResultPayloadBuilder() => Empty().toBuilder();
+  CreateAuditEntriesApiResponseBuilder newResultPayloadBuilder() =>
+      CreateAuditEntriesApiResponse().toBuilder();
 
   @override
   Serializer<CreateAuditEntriesApiRequest> get commandPayloadSerializer =>
       CreateAuditEntriesApiRequest.serializer;
 
   @override
-  Serializer<Empty> get resultPayloadSerializer => Empty.serializer;
+  Serializer<CreateAuditEntriesApiResponse> get resultPayloadSerializer =>
+      CreateAuditEntriesApiResponse.serializer;
 }

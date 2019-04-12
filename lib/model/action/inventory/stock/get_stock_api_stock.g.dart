@@ -27,6 +27,12 @@ class _$GetStockApiStockSerializer
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
+    if (object.stockNumber != null) {
+      result
+        ..add('stockNumber')
+        ..add(serializers.serialize(object.stockNumber,
+            specifiedType: const FullType(int)));
+    }
     if (object.stockItem != null) {
       result
         ..add('stockItem')
@@ -118,6 +124,12 @@ class _$GetStockApiStockSerializer
         ..add(serializers.serialize(object.hasMissing,
             specifiedType: const FullType(bool)));
     }
+    if (object.hasUnverified != null) {
+      result
+        ..add('hasUnverified')
+        ..add(serializers.serialize(object.hasUnverified,
+            specifiedType: const FullType(bool)));
+    }
     if (object.attributes != null) {
       result
         ..add('attributes')
@@ -143,6 +155,10 @@ class _$GetStockApiStockSerializer
         case 'id':
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'stockNumber':
+          result.stockNumber = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
           break;
         case 'stockItem':
           result.stockItem.replace(serializers.deserialize(value,
@@ -207,6 +223,10 @@ class _$GetStockApiStockSerializer
           result.hasMissing = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'hasUnverified':
+          result.hasUnverified = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'attributes':
           result.attributes.replace(serializers.deserialize(value,
               specifiedType: const FullType(BuiltList, const [
@@ -223,6 +243,8 @@ class _$GetStockApiStockSerializer
 class _$GetStockApiStock extends GetStockApiStock {
   @override
   final String id;
+  @override
+  final int stockNumber;
   @override
   final StockItem stockItem;
   @override
@@ -254,6 +276,8 @@ class _$GetStockApiStock extends GetStockApiStock {
   @override
   final bool hasMissing;
   @override
+  final bool hasUnverified;
+  @override
   final BuiltList<GetStockApiStockAttribute> attributes;
 
   factory _$GetStockApiStock([void updates(GetStockApiStockBuilder b)]) =>
@@ -261,6 +285,7 @@ class _$GetStockApiStock extends GetStockApiStock {
 
   _$GetStockApiStock._(
       {this.id,
+      this.stockNumber,
       this.stockItem,
       this.inventoryType,
       this.stockPlace,
@@ -276,6 +301,7 @@ class _$GetStockApiStock extends GetStockApiStock {
       this.verified,
       this.hasExtras,
       this.hasMissing,
+      this.hasUnverified,
       this.attributes})
       : super._();
 
@@ -292,6 +318,7 @@ class _$GetStockApiStock extends GetStockApiStock {
     if (identical(other, this)) return true;
     return other is GetStockApiStock &&
         id == other.id &&
+        stockNumber == other.stockNumber &&
         stockItem == other.stockItem &&
         inventoryType == other.inventoryType &&
         stockPlace == other.stockPlace &&
@@ -307,6 +334,7 @@ class _$GetStockApiStock extends GetStockApiStock {
         verified == other.verified &&
         hasExtras == other.hasExtras &&
         hasMissing == other.hasMissing &&
+        hasUnverified == other.hasUnverified &&
         attributes == other.attributes;
   }
 
@@ -329,27 +357,33 @@ class _$GetStockApiStock extends GetStockApiStock {
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
-                                                                        id
+                                                                        $jc(
+                                                                            $jc(
+                                                                                0,
+                                                                                id
+                                                                                    .hashCode),
+                                                                            stockNumber
+                                                                                .hashCode),
+                                                                        stockItem
                                                                             .hashCode),
-                                                                    stockItem
+                                                                    inventoryType
                                                                         .hashCode),
-                                                                inventoryType
+                                                                stockPlace
                                                                     .hashCode),
-                                                            stockPlace
+                                                            kitStockId
                                                                 .hashCode),
-                                                        kitStockId.hashCode),
-                                                    kitStockItem.hashCode),
-                                                responsibleParty.hashCode),
-                                            demandLoan.hashCode),
-                                        consignmentLoan.hashCode),
-                                    activeRestockOrders.hashCode),
-                                allocated.hashCode),
-                            onHold.hashCode),
-                        lostFound.hashCode),
-                    verified.hashCode),
-                hasExtras.hashCode),
-            hasMissing.hashCode),
+                                                        kitStockItem.hashCode),
+                                                    responsibleParty.hashCode),
+                                                demandLoan.hashCode),
+                                            consignmentLoan.hashCode),
+                                        activeRestockOrders.hashCode),
+                                    allocated.hashCode),
+                                onHold.hashCode),
+                            lostFound.hashCode),
+                        verified.hashCode),
+                    hasExtras.hashCode),
+                hasMissing.hashCode),
+            hasUnverified.hashCode),
         attributes.hashCode));
   }
 
@@ -357,6 +391,7 @@ class _$GetStockApiStock extends GetStockApiStock {
   String toString() {
     return (newBuiltValueToStringHelper('GetStockApiStock')
           ..add('id', id)
+          ..add('stockNumber', stockNumber)
           ..add('stockItem', stockItem)
           ..add('inventoryType', inventoryType)
           ..add('stockPlace', stockPlace)
@@ -372,6 +407,7 @@ class _$GetStockApiStock extends GetStockApiStock {
           ..add('verified', verified)
           ..add('hasExtras', hasExtras)
           ..add('hasMissing', hasMissing)
+          ..add('hasUnverified', hasUnverified)
           ..add('attributes', attributes))
         .toString();
   }
@@ -384,6 +420,10 @@ class GetStockApiStockBuilder
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
+
+  int _stockNumber;
+  int get stockNumber => _$this._stockNumber;
+  set stockNumber(int stockNumber) => _$this._stockNumber = stockNumber;
 
   StockItemBuilder _stockItem;
   StockItemBuilder get stockItem =>
@@ -459,6 +499,11 @@ class GetStockApiStockBuilder
   bool get hasMissing => _$this._hasMissing;
   set hasMissing(bool hasMissing) => _$this._hasMissing = hasMissing;
 
+  bool _hasUnverified;
+  bool get hasUnverified => _$this._hasUnverified;
+  set hasUnverified(bool hasUnverified) =>
+      _$this._hasUnverified = hasUnverified;
+
   ListBuilder<GetStockApiStockAttribute> _attributes;
   ListBuilder<GetStockApiStockAttribute> get attributes =>
       _$this._attributes ??= new ListBuilder<GetStockApiStockAttribute>();
@@ -470,6 +515,7 @@ class GetStockApiStockBuilder
   GetStockApiStockBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
+      _stockNumber = _$v.stockNumber;
       _stockItem = _$v.stockItem?.toBuilder();
       _inventoryType = _$v.inventoryType?.toBuilder();
       _stockPlace = _$v.stockPlace?.toBuilder();
@@ -485,6 +531,7 @@ class GetStockApiStockBuilder
       _verified = _$v.verified;
       _hasExtras = _$v.hasExtras;
       _hasMissing = _$v.hasMissing;
+      _hasUnverified = _$v.hasUnverified;
       _attributes = _$v.attributes?.toBuilder();
       _$v = null;
     }
@@ -511,6 +558,7 @@ class GetStockApiStockBuilder
       _$result = _$v ??
           new _$GetStockApiStock._(
               id: id,
+              stockNumber: stockNumber,
               stockItem: _stockItem?.build(),
               inventoryType: _inventoryType?.build(),
               stockPlace: _stockPlace?.build(),
@@ -526,6 +574,7 @@ class GetStockApiStockBuilder
               verified: verified,
               hasExtras: hasExtras,
               hasMissing: hasMissing,
+              hasUnverified: hasUnverified,
               attributes: _attributes?.build());
     } catch (_) {
       String _$failedField;
@@ -579,6 +628,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
 
   final ActionDispatcher<GetStockApiStock> $replace;
   final FieldDispatcher<String> id;
+  final FieldDispatcher<int> stockNumber;
   final StockItemActions stockItem;
   final InventoryTypeActions inventoryType;
   final StockPlaceActions stockPlace;
@@ -594,6 +644,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
   final FieldDispatcher<bool> verified;
   final FieldDispatcher<bool> hasExtras;
   final FieldDispatcher<bool> hasMissing;
+  final FieldDispatcher<bool> hasUnverified;
   final FieldDispatcher<BuiltList<GetStockApiStockAttribute>> attributes;
 
   _$GetStockApiStockActions._(this.$options)
@@ -601,6 +652,8 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
             $options.action<GetStockApiStock>('\$replace', (a) => a?.$replace),
         id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
+        stockNumber = $options.field<int>('stockNumber', (a) => a?.stockNumber,
+            (s) => s?.stockNumber, (p, b) => p?.stockNumber = b),
         stockItem = StockItemActions(() =>
             $options.stateful<StockItem, StockItemBuilder, StockItemActions>(
                 'stockItem',
@@ -671,6 +724,11 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
             (s) => s?.hasExtras, (p, b) => p?.hasExtras = b),
         hasMissing = $options.field<bool>('hasMissing', (a) => a?.hasMissing,
             (s) => s?.hasMissing, (p, b) => p?.hasMissing = b),
+        hasUnverified = $options.field<bool>(
+            'hasUnverified',
+            (a) => a?.hasUnverified,
+            (s) => s?.hasUnverified,
+            (p, b) => p?.hasUnverified = b),
         attributes = $options.field<BuiltList<GetStockApiStockAttribute>>(
             'attributes',
             (a) => a?.attributes,
@@ -705,6 +763,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.id,
+        this.stockNumber,
         this.kitStockId,
         this.activeRestockOrders,
         this.allocated,
@@ -713,6 +772,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
         this.verified,
         this.hasExtras,
         this.hasMissing,
+        this.hasUnverified,
         this.attributes,
       ]);
 
@@ -720,6 +780,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     id.$reducer(reducer);
+    stockNumber.$reducer(reducer);
     stockItem.$reducer(reducer);
     inventoryType.$reducer(reducer);
     stockPlace.$reducer(reducer);
@@ -735,6 +796,7 @@ class _$GetStockApiStockActions extends GetStockApiStockActions {
     verified.$reducer(reducer);
     hasExtras.$reducer(reducer);
     hasMissing.$reducer(reducer);
+    hasUnverified.$reducer(reducer);
     attributes.$reducer(reducer);
   }
 

@@ -49,6 +49,21 @@ class _$GetUiSetupAllApiResponseSerializer
             specifiedType: const FullType(BuiltList,
                 const [const FullType(GetUiSetupAllApiInvTransferType)])));
     }
+    if (object.timezones != null) {
+      result
+        ..add('timezones')
+        ..add(serializers.serialize(object.timezones,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    if (object.consignmentLoanSpecs != null) {
+      result
+        ..add('consignmentLoanSpecs')
+        ..add(serializers.serialize(object.consignmentLoanSpecs,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GetConsignmentLoanFieldsApiLoanFieldData)
+            ])));
+    }
     if (object.user != null) {
       result
         ..add('user')
@@ -96,6 +111,18 @@ class _$GetUiSetupAllApiResponseSerializer
                 const FullType(GetUiSetupAllApiInvTransferType)
               ])) as BuiltList);
           break;
+        case 'timezones':
+          result.timezones.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
+        case 'consignmentLoanSpecs':
+          result.consignmentLoanSpecs.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GetConsignmentLoanFieldsApiLoanFieldData)
+              ])) as BuiltList);
+          break;
         case 'user':
           result.user.replace(serializers.deserialize(value,
                   specifiedType: const FullType(GetUiSetupAllApiUser))
@@ -124,6 +151,11 @@ class _$GetUiSetupAllApiResponse extends GetUiSetupAllApiResponse {
   @override
   final BuiltList<GetUiSetupAllApiInvTransferType> invTransferTypes;
   @override
+  final BuiltList<String> timezones;
+  @override
+  final BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>
+      consignmentLoanSpecs;
+  @override
   final GetUiSetupAllApiUser user;
   @override
   final BuiltList<UiClientConfiguration> uiConfigs;
@@ -137,6 +169,8 @@ class _$GetUiSetupAllApiResponse extends GetUiSetupAllApiResponse {
       this.stockAutoSearch,
       this.tempPhysicianEnabled,
       this.invTransferTypes,
+      this.timezones,
+      this.consignmentLoanSpecs,
       this.user,
       this.uiConfigs})
       : super._();
@@ -158,6 +192,8 @@ class _$GetUiSetupAllApiResponse extends GetUiSetupAllApiResponse {
         stockAutoSearch == other.stockAutoSearch &&
         tempPhysicianEnabled == other.tempPhysicianEnabled &&
         invTransferTypes == other.invTransferTypes &&
+        timezones == other.timezones &&
+        consignmentLoanSpecs == other.consignmentLoanSpecs &&
         user == other.user &&
         uiConfigs == other.uiConfigs;
   }
@@ -168,10 +204,14 @@ class _$GetUiSetupAllApiResponse extends GetUiSetupAllApiResponse {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc(0, inventoryEnabled.hashCode),
-                        stockAutoSearch.hashCode),
-                    tempPhysicianEnabled.hashCode),
-                invTransferTypes.hashCode),
+                    $jc(
+                        $jc(
+                            $jc($jc(0, inventoryEnabled.hashCode),
+                                stockAutoSearch.hashCode),
+                            tempPhysicianEnabled.hashCode),
+                        invTransferTypes.hashCode),
+                    timezones.hashCode),
+                consignmentLoanSpecs.hashCode),
             user.hashCode),
         uiConfigs.hashCode));
   }
@@ -183,6 +223,8 @@ class _$GetUiSetupAllApiResponse extends GetUiSetupAllApiResponse {
           ..add('stockAutoSearch', stockAutoSearch)
           ..add('tempPhysicianEnabled', tempPhysicianEnabled)
           ..add('invTransferTypes', invTransferTypes)
+          ..add('timezones', timezones)
+          ..add('consignmentLoanSpecs', consignmentLoanSpecs)
           ..add('user', user)
           ..add('uiConfigs', uiConfigs))
         .toString();
@@ -217,6 +259,20 @@ class GetUiSetupAllApiResponseBuilder
           ListBuilder<GetUiSetupAllApiInvTransferType> invTransferTypes) =>
       _$this._invTransferTypes = invTransferTypes;
 
+  ListBuilder<String> _timezones;
+  ListBuilder<String> get timezones =>
+      _$this._timezones ??= new ListBuilder<String>();
+  set timezones(ListBuilder<String> timezones) => _$this._timezones = timezones;
+
+  ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData> _consignmentLoanSpecs;
+  ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
+      get consignmentLoanSpecs => _$this._consignmentLoanSpecs ??=
+          new ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>();
+  set consignmentLoanSpecs(
+          ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
+              consignmentLoanSpecs) =>
+      _$this._consignmentLoanSpecs = consignmentLoanSpecs;
+
   GetUiSetupAllApiUserBuilder _user;
   GetUiSetupAllApiUserBuilder get user =>
       _$this._user ??= new GetUiSetupAllApiUserBuilder();
@@ -236,6 +292,8 @@ class GetUiSetupAllApiResponseBuilder
       _stockAutoSearch = _$v.stockAutoSearch;
       _tempPhysicianEnabled = _$v.tempPhysicianEnabled;
       _invTransferTypes = _$v.invTransferTypes?.toBuilder();
+      _timezones = _$v.timezones?.toBuilder();
+      _consignmentLoanSpecs = _$v.consignmentLoanSpecs?.toBuilder();
       _user = _$v.user?.toBuilder();
       _uiConfigs = _$v.uiConfigs?.toBuilder();
       _$v = null;
@@ -266,6 +324,8 @@ class GetUiSetupAllApiResponseBuilder
               stockAutoSearch: stockAutoSearch,
               tempPhysicianEnabled: tempPhysicianEnabled,
               invTransferTypes: _invTransferTypes?.build(),
+              timezones: _timezones?.build(),
+              consignmentLoanSpecs: _consignmentLoanSpecs?.build(),
               user: _user?.build(),
               uiConfigs: _uiConfigs?.build());
     } catch (_) {
@@ -273,6 +333,10 @@ class GetUiSetupAllApiResponseBuilder
       try {
         _$failedField = 'invTransferTypes';
         _invTransferTypes?.build();
+        _$failedField = 'timezones';
+        _timezones?.build();
+        _$failedField = 'consignmentLoanSpecs';
+        _consignmentLoanSpecs?.build();
         _$failedField = 'user';
         _user?.build();
         _$failedField = 'uiConfigs';
@@ -315,6 +379,9 @@ class _$GetUiSetupAllApiResponseActions
   final FieldDispatcher<bool> tempPhysicianEnabled;
   final FieldDispatcher<BuiltList<GetUiSetupAllApiInvTransferType>>
       invTransferTypes;
+  final FieldDispatcher<BuiltList<String>> timezones;
+  final FieldDispatcher<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>
+      consignmentLoanSpecs;
   final GetUiSetupAllApiUserActions user;
   final FieldDispatcher<BuiltList<UiClientConfiguration>> uiConfigs;
 
@@ -342,6 +409,17 @@ class _$GetUiSetupAllApiResponseActions
                 (a) => a?.invTransferTypes,
                 (s) => s?.invTransferTypes,
                 (p, b) => p?.invTransferTypes = b),
+        timezones = $options.field<BuiltList<String>>(
+            'timezones',
+            (a) => a?.timezones,
+            (s) => s?.timezones,
+            (p, b) => p?.timezones = b),
+        consignmentLoanSpecs =
+            $options.field<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>(
+                'consignmentLoanSpecs',
+                (a) => a?.consignmentLoanSpecs,
+                (s) => s?.consignmentLoanSpecs,
+                (p, b) => p?.consignmentLoanSpecs = b),
         user = GetUiSetupAllApiUserActions(() => $options.stateful<
                 GetUiSetupAllApiUser,
                 GetUiSetupAllApiUserBuilder,
@@ -384,6 +462,8 @@ class _$GetUiSetupAllApiResponseActions
         this.stockAutoSearch,
         this.tempPhysicianEnabled,
         this.invTransferTypes,
+        this.timezones,
+        this.consignmentLoanSpecs,
         this.uiConfigs,
       ]);
 
@@ -394,6 +474,8 @@ class _$GetUiSetupAllApiResponseActions
     stockAutoSearch.$reducer(reducer);
     tempPhysicianEnabled.$reducer(reducer);
     invTransferTypes.$reducer(reducer);
+    timezones.$reducer(reducer);
+    consignmentLoanSpecs.$reducer(reducer);
     user.$reducer(reducer);
     uiConfigs.$reducer(reducer);
   }

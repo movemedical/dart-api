@@ -38,10 +38,22 @@ class _$CreateSimpleKitStockApiRequestSerializer
         ..add(serializers.serialize(object.kitItemId,
             specifiedType: const FullType(String)));
     }
+    if (object.kitItemVersionId != null) {
+      result
+        ..add('kitItemVersionId')
+        ..add(serializers.serialize(object.kitItemVersionId,
+            specifiedType: const FullType(String)));
+    }
     if (object.toteItemId != null) {
       result
         ..add('toteItemId')
         ..add(serializers.serialize(object.toteItemId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.toteItemVersionId != null) {
+      result
+        ..add('toteItemVersionId')
+        ..add(serializers.serialize(object.toteItemVersionId,
             specifiedType: const FullType(String)));
     }
     if (object.locationType != null) {
@@ -80,6 +92,18 @@ class _$CreateSimpleKitStockApiRequestSerializer
         ..add(serializers.serialize(object.containerId,
             specifiedType: const FullType(String)));
     }
+    if (object.responsiblePartyType != null) {
+      result
+        ..add('responsiblePartyType')
+        ..add(serializers.serialize(object.responsiblePartyType,
+            specifiedType: const FullType(ResponsiblePartyType)));
+    }
+    if (object.responsiblePartyId != null) {
+      result
+        ..add('responsiblePartyId')
+        ..add(serializers.serialize(object.responsiblePartyId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -104,8 +128,16 @@ class _$CreateSimpleKitStockApiRequestSerializer
           result.kitItemId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'kitItemVersionId':
+          result.kitItemVersionId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'toteItemId':
           result.toteItemId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'toteItemVersionId':
+          result.toteItemVersionId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
         case 'locationType':
@@ -133,6 +165,15 @@ class _$CreateSimpleKitStockApiRequestSerializer
           result.containerId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'responsiblePartyType':
+          result.responsiblePartyType = serializers.deserialize(value,
+                  specifiedType: const FullType(ResponsiblePartyType))
+              as ResponsiblePartyType;
+          break;
+        case 'responsiblePartyId':
+          result.responsiblePartyId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -146,7 +187,11 @@ class _$CreateSimpleKitStockApiRequest extends CreateSimpleKitStockApiRequest {
   @override
   final String kitItemId;
   @override
+  final String kitItemVersionId;
+  @override
   final String toteItemId;
+  @override
+  final String toteItemVersionId;
   @override
   final LocationType locationType;
   @override
@@ -159,6 +204,10 @@ class _$CreateSimpleKitStockApiRequest extends CreateSimpleKitStockApiRequest {
   final StockContainerType containerType;
   @override
   final String containerId;
+  @override
+  final ResponsiblePartyType responsiblePartyType;
+  @override
+  final String responsiblePartyId;
 
   factory _$CreateSimpleKitStockApiRequest(
           [void updates(CreateSimpleKitStockApiRequestBuilder b)]) =>
@@ -167,13 +216,17 @@ class _$CreateSimpleKitStockApiRequest extends CreateSimpleKitStockApiRequest {
   _$CreateSimpleKitStockApiRequest._(
       {this.inventoryTypeId,
       this.kitItemId,
+      this.kitItemVersionId,
       this.toteItemId,
+      this.toteItemVersionId,
       this.locationType,
       this.locationId,
       this.homeLocationType,
       this.homeLocationId,
       this.containerType,
-      this.containerId})
+      this.containerId,
+      this.responsiblePartyType,
+      this.responsiblePartyId})
       : super._();
 
   @override
@@ -191,13 +244,17 @@ class _$CreateSimpleKitStockApiRequest extends CreateSimpleKitStockApiRequest {
     return other is CreateSimpleKitStockApiRequest &&
         inventoryTypeId == other.inventoryTypeId &&
         kitItemId == other.kitItemId &&
+        kitItemVersionId == other.kitItemVersionId &&
         toteItemId == other.toteItemId &&
+        toteItemVersionId == other.toteItemVersionId &&
         locationType == other.locationType &&
         locationId == other.locationId &&
         homeLocationType == other.homeLocationType &&
         homeLocationId == other.homeLocationId &&
         containerType == other.containerType &&
-        containerId == other.containerId;
+        containerId == other.containerId &&
+        responsiblePartyType == other.responsiblePartyType &&
+        responsiblePartyId == other.responsiblePartyId;
   }
 
   @override
@@ -209,15 +266,27 @@ class _$CreateSimpleKitStockApiRequest extends CreateSimpleKitStockApiRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, inventoryTypeId.hashCode),
-                                    kitItemId.hashCode),
-                                toteItemId.hashCode),
-                            locationType.hashCode),
-                        locationId.hashCode),
-                    homeLocationType.hashCode),
-                homeLocationId.hashCode),
-            containerType.hashCode),
-        containerId.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        0,
+                                                        inventoryTypeId
+                                                            .hashCode),
+                                                    kitItemId.hashCode),
+                                                kitItemVersionId.hashCode),
+                                            toteItemId.hashCode),
+                                        toteItemVersionId.hashCode),
+                                    locationType.hashCode),
+                                locationId.hashCode),
+                            homeLocationType.hashCode),
+                        homeLocationId.hashCode),
+                    containerType.hashCode),
+                containerId.hashCode),
+            responsiblePartyType.hashCode),
+        responsiblePartyId.hashCode));
   }
 
   @override
@@ -225,13 +294,17 @@ class _$CreateSimpleKitStockApiRequest extends CreateSimpleKitStockApiRequest {
     return (newBuiltValueToStringHelper('CreateSimpleKitStockApiRequest')
           ..add('inventoryTypeId', inventoryTypeId)
           ..add('kitItemId', kitItemId)
+          ..add('kitItemVersionId', kitItemVersionId)
           ..add('toteItemId', toteItemId)
+          ..add('toteItemVersionId', toteItemVersionId)
           ..add('locationType', locationType)
           ..add('locationId', locationId)
           ..add('homeLocationType', homeLocationType)
           ..add('homeLocationId', homeLocationId)
           ..add('containerType', containerType)
-          ..add('containerId', containerId))
+          ..add('containerId', containerId)
+          ..add('responsiblePartyType', responsiblePartyType)
+          ..add('responsiblePartyId', responsiblePartyId))
         .toString();
   }
 }
@@ -251,9 +324,19 @@ class CreateSimpleKitStockApiRequestBuilder
   String get kitItemId => _$this._kitItemId;
   set kitItemId(String kitItemId) => _$this._kitItemId = kitItemId;
 
+  String _kitItemVersionId;
+  String get kitItemVersionId => _$this._kitItemVersionId;
+  set kitItemVersionId(String kitItemVersionId) =>
+      _$this._kitItemVersionId = kitItemVersionId;
+
   String _toteItemId;
   String get toteItemId => _$this._toteItemId;
   set toteItemId(String toteItemId) => _$this._toteItemId = toteItemId;
+
+  String _toteItemVersionId;
+  String get toteItemVersionId => _$this._toteItemVersionId;
+  set toteItemVersionId(String toteItemVersionId) =>
+      _$this._toteItemVersionId = toteItemVersionId;
 
   LocationType _locationType;
   LocationType get locationType => _$this._locationType;
@@ -283,19 +366,33 @@ class CreateSimpleKitStockApiRequestBuilder
   String get containerId => _$this._containerId;
   set containerId(String containerId) => _$this._containerId = containerId;
 
+  ResponsiblePartyType _responsiblePartyType;
+  ResponsiblePartyType get responsiblePartyType => _$this._responsiblePartyType;
+  set responsiblePartyType(ResponsiblePartyType responsiblePartyType) =>
+      _$this._responsiblePartyType = responsiblePartyType;
+
+  String _responsiblePartyId;
+  String get responsiblePartyId => _$this._responsiblePartyId;
+  set responsiblePartyId(String responsiblePartyId) =>
+      _$this._responsiblePartyId = responsiblePartyId;
+
   CreateSimpleKitStockApiRequestBuilder();
 
   CreateSimpleKitStockApiRequestBuilder get _$this {
     if (_$v != null) {
       _inventoryTypeId = _$v.inventoryTypeId;
       _kitItemId = _$v.kitItemId;
+      _kitItemVersionId = _$v.kitItemVersionId;
       _toteItemId = _$v.toteItemId;
+      _toteItemVersionId = _$v.toteItemVersionId;
       _locationType = _$v.locationType;
       _locationId = _$v.locationId;
       _homeLocationType = _$v.homeLocationType;
       _homeLocationId = _$v.homeLocationId;
       _containerType = _$v.containerType;
       _containerId = _$v.containerId;
+      _responsiblePartyType = _$v.responsiblePartyType;
+      _responsiblePartyId = _$v.responsiblePartyId;
       _$v = null;
     }
     return this;
@@ -320,13 +417,17 @@ class CreateSimpleKitStockApiRequestBuilder
         new _$CreateSimpleKitStockApiRequest._(
             inventoryTypeId: inventoryTypeId,
             kitItemId: kitItemId,
+            kitItemVersionId: kitItemVersionId,
             toteItemId: toteItemId,
+            toteItemVersionId: toteItemVersionId,
             locationType: locationType,
             locationId: locationId,
             homeLocationType: homeLocationType,
             homeLocationId: homeLocationId,
             containerType: containerType,
-            containerId: containerId);
+            containerId: containerId,
+            responsiblePartyType: responsiblePartyType,
+            responsiblePartyId: responsiblePartyId);
     replace(_$result);
     return _$result;
   }
@@ -356,13 +457,17 @@ class _$CreateSimpleKitStockApiRequestActions
   final ActionDispatcher<CreateSimpleKitStockApiRequest> $replace;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<String> kitItemId;
+  final FieldDispatcher<String> kitItemVersionId;
   final FieldDispatcher<String> toteItemId;
+  final FieldDispatcher<String> toteItemVersionId;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> locationId;
   final FieldDispatcher<LocationType> homeLocationType;
   final FieldDispatcher<String> homeLocationId;
   final FieldDispatcher<StockContainerType> containerType;
   final FieldDispatcher<String> containerId;
+  final FieldDispatcher<ResponsiblePartyType> responsiblePartyType;
+  final FieldDispatcher<String> responsiblePartyId;
 
   _$CreateSimpleKitStockApiRequestActions._(this.$options)
       : $replace = $options.action<CreateSimpleKitStockApiRequest>(
@@ -374,8 +479,18 @@ class _$CreateSimpleKitStockApiRequestActions
             (p, b) => p?.inventoryTypeId = b),
         kitItemId = $options.field<String>('kitItemId', (a) => a?.kitItemId,
             (s) => s?.kitItemId, (p, b) => p?.kitItemId = b),
+        kitItemVersionId = $options.field<String>(
+            'kitItemVersionId',
+            (a) => a?.kitItemVersionId,
+            (s) => s?.kitItemVersionId,
+            (p, b) => p?.kitItemVersionId = b),
         toteItemId = $options.field<String>('toteItemId', (a) => a?.toteItemId,
             (s) => s?.toteItemId, (p, b) => p?.toteItemId = b),
+        toteItemVersionId = $options.field<String>(
+            'toteItemVersionId',
+            (a) => a?.toteItemVersionId,
+            (s) => s?.toteItemVersionId,
+            (p, b) => p?.toteItemVersionId = b),
         locationType = $options.field<LocationType>(
             'locationType',
             (a) => a?.locationType,
@@ -403,6 +518,16 @@ class _$CreateSimpleKitStockApiRequestActions
             (a) => a?.containerId,
             (s) => s?.containerId,
             (p, b) => p?.containerId = b),
+        responsiblePartyType = $options.field<ResponsiblePartyType>(
+            'responsiblePartyType',
+            (a) => a?.responsiblePartyType,
+            (s) => s?.responsiblePartyType,
+            (p, b) => p?.responsiblePartyType = b),
+        responsiblePartyId = $options.field<String>(
+            'responsiblePartyId',
+            (a) => a?.responsiblePartyId,
+            (s) => s?.responsiblePartyId,
+            (p, b) => p?.responsiblePartyId = b),
         super._();
 
   factory _$CreateSimpleKitStockApiRequestActions(
@@ -424,13 +549,17 @@ class _$CreateSimpleKitStockApiRequestActions
         this.$replace,
         this.inventoryTypeId,
         this.kitItemId,
+        this.kitItemVersionId,
         this.toteItemId,
+        this.toteItemVersionId,
         this.locationType,
         this.locationId,
         this.homeLocationType,
         this.homeLocationId,
         this.containerType,
         this.containerId,
+        this.responsiblePartyType,
+        this.responsiblePartyId,
       ]);
 
   @override
@@ -438,13 +567,17 @@ class _$CreateSimpleKitStockApiRequestActions
     super.$reducer(reducer);
     inventoryTypeId.$reducer(reducer);
     kitItemId.$reducer(reducer);
+    kitItemVersionId.$reducer(reducer);
     toteItemId.$reducer(reducer);
+    toteItemVersionId.$reducer(reducer);
     locationType.$reducer(reducer);
     locationId.$reducer(reducer);
     homeLocationType.$reducer(reducer);
     homeLocationId.$reducer(reducer);
     containerType.$reducer(reducer);
     containerId.$reducer(reducer);
+    responsiblePartyType.$reducer(reducer);
+    responsiblePartyId.$reducer(reducer);
   }
 
   @override

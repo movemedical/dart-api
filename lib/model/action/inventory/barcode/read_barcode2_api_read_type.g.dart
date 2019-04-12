@@ -8,6 +8,8 @@ part of 'read_barcode2_api_read_type.dart';
 
 const ReadBarcode2ApiReadType _$wireITEM =
     const ReadBarcode2ApiReadType._('ITEM');
+const ReadBarcode2ApiReadType _$wireSHIPMENT =
+    const ReadBarcode2ApiReadType._('SHIPMENT');
 const ReadBarcode2ApiReadType _$wirePKG =
     const ReadBarcode2ApiReadType._('PKG');
 const ReadBarcode2ApiReadType _$wireBIN =
@@ -21,6 +23,8 @@ ReadBarcode2ApiReadType _$readBarcode2ApiReadTypeValueOf(String name) {
   switch (name) {
     case 'ITEM':
       return _$wireITEM;
+    case 'SHIPMENT':
+      return _$wireSHIPMENT;
     case 'PKG':
       return _$wirePKG;
     case 'BIN':
@@ -37,6 +41,7 @@ ReadBarcode2ApiReadType _$readBarcode2ApiReadTypeValueOf(String name) {
 final BuiltSet<ReadBarcode2ApiReadType> _$readBarcode2ApiReadTypeValues =
     new BuiltSet<ReadBarcode2ApiReadType>(const <ReadBarcode2ApiReadType>[
   _$wireITEM,
+  _$wireSHIPMENT,
   _$wirePKG,
   _$wireBIN,
   _$wireTAG,

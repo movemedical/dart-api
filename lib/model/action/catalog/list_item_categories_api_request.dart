@@ -17,6 +17,9 @@ abstract class ListItemCategoriesApiRequest implements Built<ListItemCategoriesA
   @nullable
   String get linkedItemId;
   
+  @nullable
+  String get procedureId;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -40,6 +43,8 @@ abstract class ListItemCategoriesApiRequestActions extends ModelActions<ListItem
   FieldDispatcher<String> get parentCategoryId;
   
   FieldDispatcher<String> get linkedItemId;
+  
+  FieldDispatcher<String> get procedureId;
   
   ////////////////////////////////
   /// Constructors

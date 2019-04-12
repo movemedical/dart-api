@@ -9,8 +9,9 @@ class AuditCountType extends EnumClass {
   /// Values
   ////////////////////////////////
   
-  static const AuditCountType SELF_REPORTED = _$wireSELF_REPORTED;
+  static const AuditCountType ASSIGNED = _$wireASSIGNED;
   static const AuditCountType PHYSICAL = _$wirePHYSICAL;
+  static const AuditCountType SELF_REPORTED = _$wireSELF_REPORTED;
   
   ////////////////////////////////
   /// Constructor

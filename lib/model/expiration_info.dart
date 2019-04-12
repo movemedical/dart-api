@@ -13,19 +13,46 @@ abstract class ExpirationInfo implements Built<ExpirationInfo, ExpirationInfoBui
   ////////////////////////////////
   
   @nullable
+  String get itemId;
+  
+  @nullable
+  String get lotId;
+  
+  @nullable
+  String get serialId;
+  
+  @nullable
   DateTime get expirationDate;
   
   @nullable
   int get expiresInDays;
   
   @nullable
-  String get expirationLevelId;
+  String get profileId;
   
   @nullable
-  String get expirationLevelDisplay;
+  String get profileName;
   
   @nullable
-  ExpirationLevelColor get color;
+  String get specId;
+  
+  @nullable
+  String get levelGroupId;
+  
+  @nullable
+  String get levelGroupName;
+  
+  @nullable
+  String get levelId;
+  
+  @nullable
+  String get levelName;
+  
+  @nullable
+  int get levelSequence;
+  
+  @nullable
+  ExpirationLevelColor get levelColor;
   
   ////////////////////////////////
   /// Constructors
@@ -47,15 +74,33 @@ abstract class ExpirationInfoActions extends ModelActions<ExpirationInfo, Expira
   /// Fields
   ////////////////////////////////
   
+  FieldDispatcher<String> get itemId;
+  
+  FieldDispatcher<String> get lotId;
+  
+  FieldDispatcher<String> get serialId;
+  
   FieldDispatcher<DateTime> get expirationDate;
   
   FieldDispatcher<int> get expiresInDays;
   
-  FieldDispatcher<String> get expirationLevelId;
+  FieldDispatcher<String> get profileId;
   
-  FieldDispatcher<String> get expirationLevelDisplay;
+  FieldDispatcher<String> get profileName;
   
-  FieldDispatcher<ExpirationLevelColor> get color;
+  FieldDispatcher<String> get specId;
+  
+  FieldDispatcher<String> get levelGroupId;
+  
+  FieldDispatcher<String> get levelGroupName;
+  
+  FieldDispatcher<String> get levelId;
+  
+  FieldDispatcher<String> get levelName;
+  
+  FieldDispatcher<int> get levelSequence;
+  
+  FieldDispatcher<ExpirationLevelColor> get levelColor;
   
   ////////////////////////////////
   /// Constructors

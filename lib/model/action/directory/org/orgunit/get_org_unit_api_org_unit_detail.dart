@@ -5,6 +5,9 @@ import 'package:modux/modux.dart';
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/org_type.dart';
 import 'package:movemedical_api/model/email.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:movemedical_api/model/essentials/model/api/org_unit_attribute.dart';
+import 'package:movemedical_api/model/essentials/model/api/attribute_contact.dart';
 
 part 'get_org_unit_api_org_unit_detail.g.dart';
 
@@ -103,6 +106,12 @@ abstract class GetOrgUnitApiOrgUnitDetail implements Built<GetOrgUnitApiOrgUnitD
   @nullable
   bool get active;
   
+  @nullable
+  BuiltList<OrgUnitAttribute> get attributes;
+  
+  @nullable
+  BuiltList<AttributeContact> get attributeContacts;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -182,6 +191,10 @@ abstract class GetOrgUnitApiOrgUnitDetailActions extends ModelActions<GetOrgUnit
   FieldDispatcher<bool> get allowMixedInventoryTypeUsage;
   
   FieldDispatcher<bool> get active;
+  
+  FieldDispatcher<BuiltList<OrgUnitAttribute>> get attributes;
+  
+  FieldDispatcher<BuiltList<AttributeContact>> get attributeContacts;
   
   ////////////////////////////////
   /// Constructors

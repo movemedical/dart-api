@@ -3,7 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
-import 'package:movemedical_api/model/action/caseEvent/list_case_events_api_request.dart';
+import 'package:movemedical_api/model/action/case_event/list_case_events_api_request.dart';
 
 part 'create_calendar_subscription_api_request.g.dart';
 

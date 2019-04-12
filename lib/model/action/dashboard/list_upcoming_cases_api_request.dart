@@ -2,6 +2,7 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
+import 'package:movemedical_api/model/pagination_params.dart';
 
 part 'list_upcoming_cases_api_request.g.dart';
 
@@ -10,6 +11,8 @@ abstract class ListUpcomingCasesApiRequest implements Built<ListUpcomingCasesApi
   /// Fields
   ////////////////////////////////
   
+  @nullable
+  PaginationParams get paginationParams;
   
   ////////////////////////////////
   /// Constructors
@@ -30,6 +33,8 @@ abstract class ListUpcomingCasesApiRequestActions extends ModelActions<ListUpcom
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
+  
+  PaginationParamsActions get paginationParams;
   
   ////////////////////////////////
   /// Constructors

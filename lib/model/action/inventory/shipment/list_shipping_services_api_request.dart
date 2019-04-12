@@ -19,6 +19,9 @@ abstract class ListShippingServicesApiRequest implements Built<ListShippingServi
   String get search;
   
   @nullable
+  bool get active;
+  
+  @nullable
   PaginationParams get paging;
   
   ////////////////////////////////
@@ -44,6 +47,8 @@ abstract class ListShippingServicesApiRequestActions extends ModelActions<ListSh
   FieldDispatcher<String> get orderReasonId;
   
   FieldDispatcher<String> get search;
+  
+  FieldDispatcher<bool> get active;
   
   PaginationParamsActions get paging;
   

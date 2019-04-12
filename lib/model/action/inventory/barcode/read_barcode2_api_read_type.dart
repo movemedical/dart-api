@@ -10,6 +10,7 @@ class ReadBarcode2ApiReadType extends EnumClass {
   ////////////////////////////////
   
   static const ReadBarcode2ApiReadType ITEM = _$wireITEM;
+  static const ReadBarcode2ApiReadType SHIPMENT = _$wireSHIPMENT;
   static const ReadBarcode2ApiReadType PKG = _$wirePKG;
   static const ReadBarcode2ApiReadType BIN = _$wireBIN;
   static const ReadBarcode2ApiReadType TAG = _$wireTAG;

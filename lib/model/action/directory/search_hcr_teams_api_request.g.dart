@@ -85,6 +85,12 @@ class _$SearchHcrTeamsApiRequestSerializer
         ..add(serializers.serialize(object.forCreateCase,
             specifiedType: const FullType(bool)));
     }
+    if (object.caseEventId != null) {
+      result
+        ..add('caseEventId')
+        ..add(serializers.serialize(object.caseEventId,
+            specifiedType: const FullType(String)));
+    }
     if (object.withSalesOU != null) {
       result
         ..add('withSalesOU')
@@ -157,6 +163,10 @@ class _$SearchHcrTeamsApiRequestSerializer
           result.forCreateCase = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'caseEventId':
+          result.caseEventId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'withSalesOU':
           result.withSalesOU = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -188,6 +198,8 @@ class _$SearchHcrTeamsApiRequest extends SearchHcrTeamsApiRequest {
   @override
   final bool forCreateCase;
   @override
+  final String caseEventId;
+  @override
   final bool withSalesOU;
 
   factory _$SearchHcrTeamsApiRequest(
@@ -204,6 +216,7 @@ class _$SearchHcrTeamsApiRequest extends SearchHcrTeamsApiRequest {
       this.physicianIds,
       this.procedureIds,
       this.forCreateCase,
+      this.caseEventId,
       this.withSalesOU})
       : super._();
 
@@ -229,6 +242,7 @@ class _$SearchHcrTeamsApiRequest extends SearchHcrTeamsApiRequest {
         physicianIds == other.physicianIds &&
         procedureIds == other.procedureIds &&
         forCreateCase == other.forCreateCase &&
+        caseEventId == other.caseEventId &&
         withSalesOU == other.withSalesOU;
   }
 
@@ -242,15 +256,17 @@ class _$SearchHcrTeamsApiRequest extends SearchHcrTeamsApiRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, search.hashCode),
-                                        bizUnitIds.hashCode),
-                                    salesOuIds.hashCode),
-                                hcrIds.hashCode),
-                            teamIds.hashCode),
-                        facilityIds.hashCode),
-                    physicianIds.hashCode),
-                procedureIds.hashCode),
-            forCreateCase.hashCode),
+                                    $jc(
+                                        $jc($jc(0, search.hashCode),
+                                            bizUnitIds.hashCode),
+                                        salesOuIds.hashCode),
+                                    hcrIds.hashCode),
+                                teamIds.hashCode),
+                            facilityIds.hashCode),
+                        physicianIds.hashCode),
+                    procedureIds.hashCode),
+                forCreateCase.hashCode),
+            caseEventId.hashCode),
         withSalesOU.hashCode));
   }
 
@@ -266,6 +282,7 @@ class _$SearchHcrTeamsApiRequest extends SearchHcrTeamsApiRequest {
           ..add('physicianIds', physicianIds)
           ..add('procedureIds', procedureIds)
           ..add('forCreateCase', forCreateCase)
+          ..add('caseEventId', caseEventId)
           ..add('withSalesOU', withSalesOU))
         .toString();
   }
@@ -325,6 +342,10 @@ class SearchHcrTeamsApiRequestBuilder
   set forCreateCase(bool forCreateCase) =>
       _$this._forCreateCase = forCreateCase;
 
+  String _caseEventId;
+  String get caseEventId => _$this._caseEventId;
+  set caseEventId(String caseEventId) => _$this._caseEventId = caseEventId;
+
   bool _withSalesOU;
   bool get withSalesOU => _$this._withSalesOU;
   set withSalesOU(bool withSalesOU) => _$this._withSalesOU = withSalesOU;
@@ -342,6 +363,7 @@ class SearchHcrTeamsApiRequestBuilder
       _physicianIds = _$v.physicianIds?.toBuilder();
       _procedureIds = _$v.procedureIds?.toBuilder();
       _forCreateCase = _$v.forCreateCase;
+      _caseEventId = _$v.caseEventId;
       _withSalesOU = _$v.withSalesOU;
       _$v = null;
     }
@@ -376,6 +398,7 @@ class SearchHcrTeamsApiRequestBuilder
               physicianIds: _physicianIds?.build(),
               procedureIds: _procedureIds?.build(),
               forCreateCase: forCreateCase,
+              caseEventId: caseEventId,
               withSalesOU: withSalesOU);
     } catch (_) {
       String _$failedField;
@@ -436,6 +459,7 @@ class _$SearchHcrTeamsApiRequestActions
   final FieldDispatcher<BuiltList<String>> physicianIds;
   final FieldDispatcher<BuiltList<String>> procedureIds;
   final FieldDispatcher<bool> forCreateCase;
+  final FieldDispatcher<String> caseEventId;
   final FieldDispatcher<bool> withSalesOU;
 
   _$SearchHcrTeamsApiRequestActions._(this.$options)
@@ -477,6 +501,11 @@ class _$SearchHcrTeamsApiRequestActions
             (a) => a?.forCreateCase,
             (s) => s?.forCreateCase,
             (p, b) => p?.forCreateCase = b),
+        caseEventId = $options.field<String>(
+            'caseEventId',
+            (a) => a?.caseEventId,
+            (s) => s?.caseEventId,
+            (p, b) => p?.caseEventId = b),
         withSalesOU = $options.field<bool>('withSalesOU', (a) => a?.withSalesOU,
             (s) => s?.withSalesOU, (p, b) => p?.withSalesOU = b),
         super._();
@@ -506,6 +535,7 @@ class _$SearchHcrTeamsApiRequestActions
         this.physicianIds,
         this.procedureIds,
         this.forCreateCase,
+        this.caseEventId,
         this.withSalesOU,
       ]);
 
@@ -521,6 +551,7 @@ class _$SearchHcrTeamsApiRequestActions
     physicianIds.$reducer(reducer);
     procedureIds.$reducer(reducer);
     forCreateCase.$reducer(reducer);
+    caseEventId.$reducer(reducer);
     withSalesOU.$reducer(reducer);
   }
 

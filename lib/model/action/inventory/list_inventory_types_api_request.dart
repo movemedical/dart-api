@@ -16,6 +16,9 @@ abstract class ListInventoryTypesApiRequest implements Built<ListInventoryTypesA
   String get search;
   
   @nullable
+  bool get active;
+  
+  @nullable
   PaginationParams get paging;
   
   ////////////////////////////////
@@ -39,6 +42,8 @@ abstract class ListInventoryTypesApiRequestActions extends ModelActions<ListInve
   ////////////////////////////////
   
   FieldDispatcher<String> get search;
+  
+  FieldDispatcher<bool> get active;
   
   PaginationParamsActions get paging;
   

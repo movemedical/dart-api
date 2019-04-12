@@ -40,6 +40,13 @@ class _$ListStockForSourcingMatrixApiLineAvailabilitySerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.availableQuestionableStockIds != null) {
+      result
+        ..add('availableQuestionableStockIds')
+        ..add(serializers.serialize(object.availableQuestionableStockIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
 
     return result;
   }
@@ -66,6 +73,13 @@ class _$ListStockForSourcingMatrixApiLineAvailabilitySerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'availableQuestionableStockIds':
+          result.availableQuestionableStockIds.replace(serializers.deserialize(
+                  value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
       }
     }
 
@@ -79,6 +93,8 @@ class _$ListStockForSourcingMatrixApiLineAvailability
   final String locationKey;
   @override
   final BuiltList<String> availableStockIds;
+  @override
+  final BuiltList<String> availableQuestionableStockIds;
 
   factory _$ListStockForSourcingMatrixApiLineAvailability(
           [void updates(
@@ -88,7 +104,9 @@ class _$ListStockForSourcingMatrixApiLineAvailability
           .build();
 
   _$ListStockForSourcingMatrixApiLineAvailability._(
-      {this.locationKey, this.availableStockIds})
+      {this.locationKey,
+      this.availableStockIds,
+      this.availableQuestionableStockIds})
       : super._();
 
   @override
@@ -106,12 +124,15 @@ class _$ListStockForSourcingMatrixApiLineAvailability
     if (identical(other, this)) return true;
     return other is ListStockForSourcingMatrixApiLineAvailability &&
         locationKey == other.locationKey &&
-        availableStockIds == other.availableStockIds;
+        availableStockIds == other.availableStockIds &&
+        availableQuestionableStockIds == other.availableQuestionableStockIds;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, locationKey.hashCode), availableStockIds.hashCode));
+    return $jf($jc(
+        $jc($jc(0, locationKey.hashCode), availableStockIds.hashCode),
+        availableQuestionableStockIds.hashCode));
   }
 
   @override
@@ -119,7 +140,8 @@ class _$ListStockForSourcingMatrixApiLineAvailability
     return (newBuiltValueToStringHelper(
             'ListStockForSourcingMatrixApiLineAvailability')
           ..add('locationKey', locationKey)
-          ..add('availableStockIds', availableStockIds))
+          ..add('availableStockIds', availableStockIds)
+          ..add('availableQuestionableStockIds', availableQuestionableStockIds))
         .toString();
   }
 }
@@ -140,12 +162,21 @@ class ListStockForSourcingMatrixApiLineAvailabilityBuilder
   set availableStockIds(ListBuilder<String> availableStockIds) =>
       _$this._availableStockIds = availableStockIds;
 
+  ListBuilder<String> _availableQuestionableStockIds;
+  ListBuilder<String> get availableQuestionableStockIds =>
+      _$this._availableQuestionableStockIds ??= new ListBuilder<String>();
+  set availableQuestionableStockIds(
+          ListBuilder<String> availableQuestionableStockIds) =>
+      _$this._availableQuestionableStockIds = availableQuestionableStockIds;
+
   ListStockForSourcingMatrixApiLineAvailabilityBuilder();
 
   ListStockForSourcingMatrixApiLineAvailabilityBuilder get _$this {
     if (_$v != null) {
       _locationKey = _$v.locationKey;
       _availableStockIds = _$v.availableStockIds?.toBuilder();
+      _availableQuestionableStockIds =
+          _$v.availableQuestionableStockIds?.toBuilder();
       _$v = null;
     }
     return this;
@@ -172,12 +203,16 @@ class ListStockForSourcingMatrixApiLineAvailabilityBuilder
       _$result = _$v ??
           new _$ListStockForSourcingMatrixApiLineAvailability._(
               locationKey: locationKey,
-              availableStockIds: _availableStockIds?.build());
+              availableStockIds: _availableStockIds?.build(),
+              availableQuestionableStockIds:
+                  _availableQuestionableStockIds?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'availableStockIds';
         _availableStockIds?.build();
+        _$failedField = 'availableQuestionableStockIds';
+        _availableQuestionableStockIds?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'ListStockForSourcingMatrixApiLineAvailability',
@@ -216,6 +251,7 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
       $replace;
   final FieldDispatcher<String> locationKey;
   final FieldDispatcher<BuiltList<String>> availableStockIds;
+  final FieldDispatcher<BuiltList<String>> availableQuestionableStockIds;
 
   _$ListStockForSourcingMatrixApiLineAvailabilityActions._(this.$options)
       : $replace =
@@ -231,6 +267,11 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
             (a) => a?.availableStockIds,
             (s) => s?.availableStockIds,
             (p, b) => p?.availableStockIds = b),
+        availableQuestionableStockIds = $options.field<BuiltList<String>>(
+            'availableQuestionableStockIds',
+            (a) => a?.availableQuestionableStockIds,
+            (s) => s?.availableQuestionableStockIds,
+            (p, b) => p?.availableQuestionableStockIds = b),
         super._();
 
   factory _$ListStockForSourcingMatrixApiLineAvailabilityActions(
@@ -253,6 +294,7 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
         this.$replace,
         this.locationKey,
         this.availableStockIds,
+        this.availableQuestionableStockIds,
       ]);
 
   @override
@@ -260,6 +302,7 @@ class _$ListStockForSourcingMatrixApiLineAvailabilityActions
     super.$reducer(reducer);
     locationKey.$reducer(reducer);
     availableStockIds.$reducer(reducer);
+    availableQuestionableStockIds.$reducer(reducer);
   }
 
   @override

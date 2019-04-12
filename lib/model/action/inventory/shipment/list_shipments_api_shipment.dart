@@ -47,6 +47,21 @@ abstract class ListShipmentsApiShipment implements Built<ListShipmentsApiShipmen
   @nullable
   DateTime get deliverWindowEnd;
   
+  @nullable
+  DateTime get fulfillmentCutoff;
+  
+  @nullable
+  int get picksUnassigned;
+  
+  @nullable
+  int get picksAssigned;
+  
+  @nullable
+  int get picksComplete;
+  
+  @nullable
+  int get packageCount;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -88,6 +103,16 @@ abstract class ListShipmentsApiShipmentActions extends ModelActions<ListShipment
   FieldDispatcher<String> get shippingServiceName;
   
   FieldDispatcher<DateTime> get deliverWindowEnd;
+  
+  FieldDispatcher<DateTime> get fulfillmentCutoff;
+  
+  FieldDispatcher<int> get picksUnassigned;
+  
+  FieldDispatcher<int> get picksAssigned;
+  
+  FieldDispatcher<int> get picksComplete;
+  
+  FieldDispatcher<int> get packageCount;
   
   ////////////////////////////////
   /// Constructors

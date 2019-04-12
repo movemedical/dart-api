@@ -4,7 +4,6 @@ import 'package:modux/modux.dart';
 
 import 'package:movemedical_api/model/action/inventory/stock/get_stock_api_stock.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:movemedical_api/model/in_progress_build_verify.dart';
 
 part 'get_kit_stock_api_response.g.dart';
 
@@ -18,9 +17,6 @@ abstract class GetKitStockApiResponse implements Built<GetKitStockApiResponse, G
   
   @nullable
   BuiltList<GetStockApiStock> get containers;
-  
-  @nullable
-  InProgressBuildVerify get inProgressVerify;
   
   ////////////////////////////////
   /// Constructors
@@ -45,8 +41,6 @@ abstract class GetKitStockApiResponseActions extends ModelActions<GetKitStockApi
   GetStockApiStockActions get kitStock;
   
   FieldDispatcher<BuiltList<GetStockApiStock>> get containers;
-  
-  InProgressBuildVerifyActions get inProgressVerify;
   
   ////////////////////////////////
   /// Constructors

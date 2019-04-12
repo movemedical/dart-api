@@ -5,12 +5,15 @@ import 'package:modux/modux.dart';
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/shipment_status.dart';
 import 'package:movemedical_api/model/order_header_lite.dart';
+import 'package:movemedical_api/model/transfer_type_lite.dart';
+import 'package:movemedical_api/model/loan_lite.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:movemedical_api/model/case_event_lite.dart';
 import 'package:movemedical_api/model/location.dart';
 import 'package:movemedical_api/model/customer_address.dart';
 import 'package:movemedical_api/model/address.dart';
 import 'package:movemedical_api/model/shipping_service.dart';
 import 'package:movemedical_api/model/sql/enums/erp_status.dart';
-import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/action/inventory/shipment/get_shipment_api_validation_msg.dart';
 
 part 'get_shipment_api_shipment.g.dart';
@@ -31,6 +34,15 @@ abstract class GetShipmentApiShipment implements Built<GetShipmentApiShipment, G
   
   @nullable
   OrderHeaderLite get order;
+  
+  @nullable
+  TransferTypeLite get transferType;
+  
+  @nullable
+  LoanLite get loan;
+  
+  @nullable
+  BuiltList<CaseEventLite> get caseEvents;
   
   @nullable
   Location get fromLocation;
@@ -86,6 +98,12 @@ abstract class GetShipmentApiShipmentActions extends ModelActions<GetShipmentApi
   FieldDispatcher<ShipmentStatus> get status;
   
   OrderHeaderLiteActions get order;
+  
+  TransferTypeLiteActions get transferType;
+  
+  LoanLiteActions get loan;
+  
+  FieldDispatcher<BuiltList<CaseEventLite>> get caseEvents;
   
   LocationActions get fromLocation;
   

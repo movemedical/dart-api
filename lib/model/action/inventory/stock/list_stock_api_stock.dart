@@ -29,6 +29,12 @@ abstract class ListStockApiStock implements Built<ListStockApiStock, ListStockAp
   @nullable
   bool get found;
   
+  @nullable
+  String get tagId;
+  
+  @nullable
+  String get tagNumber;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -60,6 +66,10 @@ abstract class ListStockApiStockActions extends ModelActions<ListStockApiStock, 
   FieldDispatcher<bool> get lost;
   
   FieldDispatcher<bool> get found;
+  
+  FieldDispatcher<String> get tagId;
+  
+  FieldDispatcher<String> get tagNumber;
   
   ////////////////////////////////
   /// Constructors

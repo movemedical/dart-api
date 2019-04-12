@@ -7,6 +7,7 @@ import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_mobile_api_dashboard_widget.dart';
 import 'package:movemedical_api/model/sql/enums/mobile_navigation_element.dart';
 import 'package:movemedical_api/model/sql/enums/mobile_report.dart';
+import 'dart:core';
 
 part 'get_ui_setup_mobile_api_response.g.dart';
 
@@ -26,6 +27,21 @@ abstract class GetUiSetupMobileApiResponse implements Built<GetUiSetupMobileApiR
   
   @nullable
   BuiltList<MobileReport> get reports;
+  
+  @nullable
+  bool get updateAvailable;
+  
+  @nullable
+  bool get updateRequired;
+  
+  @nullable
+  String get updateVersion;
+  
+  @nullable
+  String get updateUrl;
+  
+  @nullable
+  String get deviceId;
   
   ////////////////////////////////
   /// Constructors
@@ -54,6 +70,16 @@ abstract class GetUiSetupMobileApiResponseActions extends ModelActions<GetUiSetu
   FieldDispatcher<BuiltList<MobileNavigationElement>> get tabBarElements;
   
   FieldDispatcher<BuiltList<MobileReport>> get reports;
+  
+  FieldDispatcher<bool> get updateAvailable;
+  
+  FieldDispatcher<bool> get updateRequired;
+  
+  FieldDispatcher<String> get updateVersion;
+  
+  FieldDispatcher<String> get updateUrl;
+  
+  FieldDispatcher<String> get deviceId;
   
   ////////////////////////////////
   /// Constructors

@@ -42,6 +42,12 @@ class _$CreateOrderApiRequestSerializer
         ..add(serializers.serialize(object.shipToAddressId,
             specifiedType: const FullType(String)));
     }
+    if (object.physicianId != null) {
+      result
+        ..add('physicianId')
+        ..add(serializers.serialize(object.physicianId,
+            specifiedType: const FullType(String)));
+    }
     if (object.deliverToAddressOverride != null) {
       result
         ..add('deliverToAddressOverride')
@@ -215,6 +221,10 @@ class _$CreateOrderApiRequestSerializer
           result.shipToAddressId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'physicianId':
+          result.physicianId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'deliverToAddressOverride':
           result.deliverToAddressOverride.replace(serializers.deserialize(value,
               specifiedType: const FullType(Address)) as Address);
@@ -330,6 +340,8 @@ class _$CreateOrderApiRequest extends CreateOrderApiRequest {
   @override
   final String shipToAddressId;
   @override
+  final String physicianId;
+  @override
   final Address deliverToAddressOverride;
   @override
   final String shippingServiceId;
@@ -386,6 +398,7 @@ class _$CreateOrderApiRequest extends CreateOrderApiRequest {
       {this.bizUnitId,
       this.orderReasonId,
       this.shipToAddressId,
+      this.physicianId,
       this.deliverToAddressOverride,
       this.shippingServiceId,
       this.poNumber,
@@ -427,6 +440,7 @@ class _$CreateOrderApiRequest extends CreateOrderApiRequest {
         bizUnitId == other.bizUnitId &&
         orderReasonId == other.orderReasonId &&
         shipToAddressId == other.shipToAddressId &&
+        physicianId == other.physicianId &&
         deliverToAddressOverride == other.deliverToAddressOverride &&
         shippingServiceId == other.shippingServiceId &&
         poNumber == other.poNumber &&
@@ -473,7 +487,7 @@ class _$CreateOrderApiRequest extends CreateOrderApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc(0, bizUnitId.hashCode), orderReasonId.hashCode), shipToAddressId.hashCode), deliverToAddressOverride.hashCode), shippingServiceId.hashCode), poNumber.hashCode), email.hashCode), attention.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, bizUnitId.hashCode), orderReasonId.hashCode), shipToAddressId.hashCode), physicianId.hashCode), deliverToAddressOverride.hashCode), shippingServiceId.hashCode), poNumber.hashCode), email.hashCode), attention.hashCode),
                                                                                 orderCustomFieldValues.hashCode),
                                                                             toLocation.hashCode),
                                                                         deliverToAddressId.hashCode),
@@ -501,6 +515,7 @@ class _$CreateOrderApiRequest extends CreateOrderApiRequest {
           ..add('bizUnitId', bizUnitId)
           ..add('orderReasonId', orderReasonId)
           ..add('shipToAddressId', shipToAddressId)
+          ..add('physicianId', physicianId)
           ..add('deliverToAddressOverride', deliverToAddressOverride)
           ..add('shippingServiceId', shippingServiceId)
           ..add('poNumber', poNumber)
@@ -546,6 +561,10 @@ class CreateOrderApiRequestBuilder
   String get shipToAddressId => _$this._shipToAddressId;
   set shipToAddressId(String shipToAddressId) =>
       _$this._shipToAddressId = shipToAddressId;
+
+  String _physicianId;
+  String get physicianId => _$this._physicianId;
+  set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   AddressBuilder _deliverToAddressOverride;
   AddressBuilder get deliverToAddressOverride =>
@@ -673,6 +692,7 @@ class CreateOrderApiRequestBuilder
       _bizUnitId = _$v.bizUnitId;
       _orderReasonId = _$v.orderReasonId;
       _shipToAddressId = _$v.shipToAddressId;
+      _physicianId = _$v.physicianId;
       _deliverToAddressOverride = _$v.deliverToAddressOverride?.toBuilder();
       _shippingServiceId = _$v.shippingServiceId;
       _poNumber = _$v.poNumber;
@@ -724,6 +744,7 @@ class CreateOrderApiRequestBuilder
               bizUnitId: bizUnitId,
               orderReasonId: orderReasonId,
               shipToAddressId: shipToAddressId,
+              physicianId: physicianId,
               deliverToAddressOverride: _deliverToAddressOverride?.build(),
               shippingServiceId: shippingServiceId,
               poNumber: poNumber,
@@ -799,6 +820,7 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
   final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> orderReasonId;
   final FieldDispatcher<String> shipToAddressId;
+  final FieldDispatcher<String> physicianId;
   final AddressActions deliverToAddressOverride;
   final FieldDispatcher<String> shippingServiceId;
   final FieldDispatcher<String> poNumber;
@@ -840,6 +862,11 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
             (a) => a?.shipToAddressId,
             (s) => s?.shipToAddressId,
             (p, b) => p?.shipToAddressId = b),
+        physicianId = $options.field<String>(
+            'physicianId',
+            (a) => a?.physicianId,
+            (s) => s?.physicianId,
+            (p, b) => p?.physicianId = b),
         deliverToAddressOverride = AddressActions(() =>
             $options.stateful<Address, AddressBuilder, AddressActions>(
                 'deliverToAddressOverride',
@@ -984,6 +1011,7 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
         this.bizUnitId,
         this.orderReasonId,
         this.shipToAddressId,
+        this.physicianId,
         this.shippingServiceId,
         this.poNumber,
         this.email,
@@ -1011,6 +1039,7 @@ class _$CreateOrderApiRequestActions extends CreateOrderApiRequestActions {
     bizUnitId.$reducer(reducer);
     orderReasonId.$reducer(reducer);
     shipToAddressId.$reducer(reducer);
+    physicianId.$reducer(reducer);
     deliverToAddressOverride.$reducer(reducer);
     shippingServiceId.$reducer(reducer);
     poNumber.$reducer(reducer);

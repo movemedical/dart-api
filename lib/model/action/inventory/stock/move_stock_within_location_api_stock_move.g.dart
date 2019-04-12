@@ -38,6 +38,12 @@ class _$MoveStockWithinLocationApiStockMoveSerializer
         ..add(serializers.serialize(object.summaryKey,
             specifiedType: const FullType(String)));
     }
+    if (object.qty != null) {
+      result
+        ..add('qty')
+        ..add(serializers.serialize(object.qty,
+            specifiedType: const FullType(int)));
+    }
     if (object.toContainerType != null) {
       result
         ..add('toContainerType')
@@ -74,6 +80,10 @@ class _$MoveStockWithinLocationApiStockMoveSerializer
           result.summaryKey = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'qty':
+          result.qty = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'toContainerType':
           result.toContainerType = serializers.deserialize(value,
                   specifiedType: const FullType(StockContainerType))
@@ -97,6 +107,8 @@ class _$MoveStockWithinLocationApiStockMove
   @override
   final String summaryKey;
   @override
+  final int qty;
+  @override
   final StockContainerType toContainerType;
   @override
   final String toContainerId;
@@ -107,7 +119,11 @@ class _$MoveStockWithinLocationApiStockMove
           .build();
 
   _$MoveStockWithinLocationApiStockMove._(
-      {this.stockId, this.summaryKey, this.toContainerType, this.toContainerId})
+      {this.stockId,
+      this.summaryKey,
+      this.qty,
+      this.toContainerType,
+      this.toContainerId})
       : super._();
 
   @override
@@ -125,6 +141,7 @@ class _$MoveStockWithinLocationApiStockMove
     return other is MoveStockWithinLocationApiStockMove &&
         stockId == other.stockId &&
         summaryKey == other.summaryKey &&
+        qty == other.qty &&
         toContainerType == other.toContainerType &&
         toContainerId == other.toContainerId;
   }
@@ -132,7 +149,9 @@ class _$MoveStockWithinLocationApiStockMove
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, stockId.hashCode), summaryKey.hashCode),
+        $jc(
+            $jc($jc($jc(0, stockId.hashCode), summaryKey.hashCode),
+                qty.hashCode),
             toContainerType.hashCode),
         toContainerId.hashCode));
   }
@@ -142,6 +161,7 @@ class _$MoveStockWithinLocationApiStockMove
     return (newBuiltValueToStringHelper('MoveStockWithinLocationApiStockMove')
           ..add('stockId', stockId)
           ..add('summaryKey', summaryKey)
+          ..add('qty', qty)
           ..add('toContainerType', toContainerType)
           ..add('toContainerId', toContainerId))
         .toString();
@@ -162,6 +182,10 @@ class MoveStockWithinLocationApiStockMoveBuilder
   String get summaryKey => _$this._summaryKey;
   set summaryKey(String summaryKey) => _$this._summaryKey = summaryKey;
 
+  int _qty;
+  int get qty => _$this._qty;
+  set qty(int qty) => _$this._qty = qty;
+
   StockContainerType _toContainerType;
   StockContainerType get toContainerType => _$this._toContainerType;
   set toContainerType(StockContainerType toContainerType) =>
@@ -178,6 +202,7 @@ class MoveStockWithinLocationApiStockMoveBuilder
     if (_$v != null) {
       _stockId = _$v.stockId;
       _summaryKey = _$v.summaryKey;
+      _qty = _$v.qty;
       _toContainerType = _$v.toContainerType;
       _toContainerId = _$v.toContainerId;
       _$v = null;
@@ -204,6 +229,7 @@ class MoveStockWithinLocationApiStockMoveBuilder
         new _$MoveStockWithinLocationApiStockMove._(
             stockId: stockId,
             summaryKey: summaryKey,
+            qty: qty,
             toContainerType: toContainerType,
             toContainerId: toContainerId);
     replace(_$result);
@@ -235,6 +261,7 @@ class _$MoveStockWithinLocationApiStockMoveActions
   final ActionDispatcher<MoveStockWithinLocationApiStockMove> $replace;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<String> summaryKey;
+  final FieldDispatcher<int> qty;
   final FieldDispatcher<StockContainerType> toContainerType;
   final FieldDispatcher<String> toContainerId;
 
@@ -245,6 +272,8 @@ class _$MoveStockWithinLocationApiStockMoveActions
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         summaryKey = $options.field<String>('summaryKey', (a) => a?.summaryKey,
             (s) => s?.summaryKey, (p, b) => p?.summaryKey = b),
+        qty = $options.field<int>(
+            'qty', (a) => a?.qty, (s) => s?.qty, (p, b) => p?.qty = b),
         toContainerType = $options.field<StockContainerType>(
             'toContainerType',
             (a) => a?.toContainerType,
@@ -276,6 +305,7 @@ class _$MoveStockWithinLocationApiStockMoveActions
         this.$replace,
         this.stockId,
         this.summaryKey,
+        this.qty,
         this.toContainerType,
         this.toContainerId,
       ]);
@@ -285,6 +315,7 @@ class _$MoveStockWithinLocationApiStockMoveActions
     super.$reducer(reducer);
     stockId.$reducer(reducer);
     summaryKey.$reducer(reducer);
+    qty.$reducer(reducer);
     toContainerType.$reducer(reducer);
     toContainerId.$reducer(reducer);
   }

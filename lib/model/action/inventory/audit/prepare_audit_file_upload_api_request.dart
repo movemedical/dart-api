@@ -4,7 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/audit_file_type.dart';
-import 'package:movemedical_api/model/removeOrRefactor/visibility.dart';
+import 'package:movemedical_api/model/remove_or_refactor/visibility.dart';
 
 part 'prepare_audit_file_upload_api_request.g.dart';
 

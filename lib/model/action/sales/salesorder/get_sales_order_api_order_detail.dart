@@ -13,6 +13,7 @@ import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/order_header_lite.dart';
 import 'package:movemedical_api/model/action/sales/salesorder/get_sales_order_api_case_event.dart';
 import 'package:movemedical_api/model/customer_address.dart';
+import 'package:movemedical_api/model/physician.dart';
 import 'package:movemedical_api/model/inventory_type.dart';
 import 'package:movemedical_api/model/responsible_party.dart';
 import 'package:movemedical_api/model/action/sales/salesorder/get_sales_order_api_customer_detail.dart';
@@ -83,6 +84,9 @@ abstract class GetSalesOrderApiOrderDetail implements Built<GetSalesOrderApiOrde
   
   @nullable
   CustomerAddress get deliverToAddress;
+  
+  @nullable
+  Physician get physician;
   
   @nullable
   String get poNumber;
@@ -177,6 +181,8 @@ abstract class GetSalesOrderApiOrderDetailActions extends ModelActions<GetSalesO
   CustomerAddressActions get billToAddress;
   
   CustomerAddressActions get deliverToAddress;
+  
+  PhysicianActions get physician;
   
   FieldDispatcher<String> get poNumber;
   

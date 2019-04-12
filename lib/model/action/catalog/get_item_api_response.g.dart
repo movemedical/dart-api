@@ -53,6 +53,14 @@ class _$GetItemApiResponseSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.itemAttributes != null) {
+      result
+        ..add('itemAttributes')
+        ..add(serializers.serialize(object.itemAttributes,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(ListAttributesForItemApiItemAttribute)
+            ])));
+    }
     if (object.active != null) {
       result
         ..add('active')
@@ -104,6 +112,12 @@ class _$GetItemApiResponseSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'itemAttributes':
+          result.itemAttributes.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(ListAttributesForItemApiItemAttribute)
+              ])) as BuiltList);
+          break;
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -132,6 +146,8 @@ class _$GetItemApiResponse extends GetItemApiResponse {
   @override
   final BuiltList<String> gtins;
   @override
+  final BuiltList<ListAttributesForItemApiItemAttribute> itemAttributes;
+  @override
   final bool active;
   @override
   final GetItemApiDisplayRule displayRule;
@@ -145,6 +161,7 @@ class _$GetItemApiResponse extends GetItemApiResponse {
       this.unitOfMeasure,
       this.versions,
       this.gtins,
+      this.itemAttributes,
       this.active,
       this.displayRule})
       : super._();
@@ -166,6 +183,7 @@ class _$GetItemApiResponse extends GetItemApiResponse {
         unitOfMeasure == other.unitOfMeasure &&
         versions == other.versions &&
         gtins == other.gtins &&
+        itemAttributes == other.itemAttributes &&
         active == other.active &&
         displayRule == other.displayRule;
   }
@@ -176,10 +194,12 @@ class _$GetItemApiResponse extends GetItemApiResponse {
         $jc(
             $jc(
                 $jc(
-                    $jc($jc($jc(0, item.hashCode), bizUnit.hashCode),
-                        unitOfMeasure.hashCode),
-                    versions.hashCode),
-                gtins.hashCode),
+                    $jc(
+                        $jc($jc($jc(0, item.hashCode), bizUnit.hashCode),
+                            unitOfMeasure.hashCode),
+                        versions.hashCode),
+                    gtins.hashCode),
+                itemAttributes.hashCode),
             active.hashCode),
         displayRule.hashCode));
   }
@@ -192,6 +212,7 @@ class _$GetItemApiResponse extends GetItemApiResponse {
           ..add('unitOfMeasure', unitOfMeasure)
           ..add('versions', versions)
           ..add('gtins', gtins)
+          ..add('itemAttributes', itemAttributes)
           ..add('active', active)
           ..add('displayRule', displayRule))
         .toString();
@@ -226,6 +247,14 @@ class GetItemApiResponseBuilder
   ListBuilder<String> get gtins => _$this._gtins ??= new ListBuilder<String>();
   set gtins(ListBuilder<String> gtins) => _$this._gtins = gtins;
 
+  ListBuilder<ListAttributesForItemApiItemAttribute> _itemAttributes;
+  ListBuilder<ListAttributesForItemApiItemAttribute> get itemAttributes =>
+      _$this._itemAttributes ??=
+          new ListBuilder<ListAttributesForItemApiItemAttribute>();
+  set itemAttributes(
+          ListBuilder<ListAttributesForItemApiItemAttribute> itemAttributes) =>
+      _$this._itemAttributes = itemAttributes;
+
   bool _active;
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
@@ -245,6 +274,7 @@ class GetItemApiResponseBuilder
       _unitOfMeasure = _$v.unitOfMeasure?.toBuilder();
       _versions = _$v.versions?.toBuilder();
       _gtins = _$v.gtins?.toBuilder();
+      _itemAttributes = _$v.itemAttributes?.toBuilder();
       _active = _$v.active;
       _displayRule = _$v.displayRule?.toBuilder();
       _$v = null;
@@ -276,6 +306,7 @@ class GetItemApiResponseBuilder
               unitOfMeasure: _unitOfMeasure?.build(),
               versions: _versions?.build(),
               gtins: _gtins?.build(),
+              itemAttributes: _itemAttributes?.build(),
               active: active,
               displayRule: _displayRule?.build());
     } catch (_) {
@@ -291,6 +322,8 @@ class GetItemApiResponseBuilder
         _versions?.build();
         _$failedField = 'gtins';
         _gtins?.build();
+        _$failedField = 'itemAttributes';
+        _itemAttributes?.build();
 
         _$failedField = 'displayRule';
         _displayRule?.build();
@@ -327,6 +360,8 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
   final UnitOfMeasureActions unitOfMeasure;
   final FieldDispatcher<BuiltList<ItemVersion>> versions;
   final FieldDispatcher<BuiltList<String>> gtins;
+  final FieldDispatcher<BuiltList<ListAttributesForItemApiItemAttribute>>
+      itemAttributes;
   final FieldDispatcher<bool> active;
   final GetItemApiDisplayRuleActions displayRule;
 
@@ -358,6 +393,12 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
             (a) => a?.versions, (s) => s?.versions, (p, b) => p?.versions = b),
         gtins = $options.field<BuiltList<String>>(
             'gtins', (a) => a?.gtins, (s) => s?.gtins, (p, b) => p?.gtins = b),
+        itemAttributes =
+            $options.field<BuiltList<ListAttributesForItemApiItemAttribute>>(
+                'itemAttributes',
+                (a) => a?.itemAttributes,
+                (s) => s?.itemAttributes,
+                (p, b) => p?.itemAttributes = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         displayRule = GetItemApiDisplayRuleActions(() => $options.stateful<
@@ -397,6 +438,7 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
         this.$replace,
         this.versions,
         this.gtins,
+        this.itemAttributes,
         this.active,
       ]);
 
@@ -408,6 +450,7 @@ class _$GetItemApiResponseActions extends GetItemApiResponseActions {
     unitOfMeasure.$reducer(reducer);
     versions.$reducer(reducer);
     gtins.$reducer(reducer);
+    itemAttributes.$reducer(reducer);
     active.$reducer(reducer);
     displayRule.$reducer(reducer);
   }

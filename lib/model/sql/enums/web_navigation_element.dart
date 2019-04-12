@@ -20,6 +20,7 @@ class WebNavigationElement extends EnumClass {
   static const WebNavigationElement CATALOGS = _$wireCATALOGS;
   static const WebNavigationElement DIRECTORY = _$wireDIRECTORY;
   static const WebNavigationElement REPORTS = _$wireREPORTS;
+  static const WebNavigationElement ANALYTICS = _$wireANALYTICS;
   static const WebNavigationElement INTEGRATIONS = _$wireINTEGRATIONS;
   static const WebNavigationElement ADMIN = _$wireADMIN;
   

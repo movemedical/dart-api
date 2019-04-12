@@ -5,6 +5,7 @@ import 'package:modux/modux.dart';
 import 'dart:core';
 import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_all_api_inv_transfer_type.dart';
+import 'package:movemedical_api/model/essentials/model/api/get_consignment_loan_fields_api_loan_field_data.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_all_api_user.dart';
 import 'package:movemedical_api/model/ui_client_configuration.dart';
 
@@ -26,6 +27,12 @@ abstract class GetUiSetupAllApiResponse implements Built<GetUiSetupAllApiRespons
   
   @nullable
   BuiltList<GetUiSetupAllApiInvTransferType> get invTransferTypes;
+  
+  @nullable
+  BuiltList<String> get timezones;
+  
+  @nullable
+  BuiltList<GetConsignmentLoanFieldsApiLoanFieldData> get consignmentLoanSpecs;
   
   @nullable
   GetUiSetupAllApiUser get user;
@@ -60,6 +67,10 @@ abstract class GetUiSetupAllApiResponseActions extends ModelActions<GetUiSetupAl
   FieldDispatcher<bool> get tempPhysicianEnabled;
   
   FieldDispatcher<BuiltList<GetUiSetupAllApiInvTransferType>> get invTransferTypes;
+  
+  FieldDispatcher<BuiltList<String>> get timezones;
+  
+  FieldDispatcher<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>> get consignmentLoanSpecs;
   
   GetUiSetupAllApiUserActions get user;
   

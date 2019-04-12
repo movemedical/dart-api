@@ -51,6 +51,12 @@ class _$BuildUsageRestockPlanApiDisplayRuleSerializer
             object.allowUserOverrideRestockByDateShippingService,
             specifiedType: const FullType(bool)));
     }
+    if (object.allowOverridePrice != null) {
+      result
+        ..add('allowOverridePrice')
+        ..add(serializers.serialize(object.allowOverridePrice,
+            specifiedType: const FullType(bool)));
+    }
     if (object.poRequired != null) {
       result
         ..add('poRequired')
@@ -89,6 +95,10 @@ class _$BuildUsageRestockPlanApiDisplayRuleSerializer
           result.allowUserOverrideRestockByDateShippingService = serializers
               .deserialize(value, specifiedType: const FullType(bool)) as bool;
           break;
+        case 'allowOverridePrice':
+          result.allowOverridePrice = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'poRequired':
           result.poRequired = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -111,6 +121,8 @@ class _$BuildUsageRestockPlanApiDisplayRule
   @override
   final bool allowUserOverrideRestockByDateShippingService;
   @override
+  final bool allowOverridePrice;
+  @override
   final bool poRequired;
 
   factory _$BuildUsageRestockPlanApiDisplayRule(
@@ -123,6 +135,7 @@ class _$BuildUsageRestockPlanApiDisplayRule
       this.allowUserOverrideRestockLocation,
       this.allowUserOverrideRestockDeliverTo,
       this.allowUserOverrideRestockByDateShippingService,
+      this.allowOverridePrice,
       this.poRequired})
       : super._();
 
@@ -146,6 +159,7 @@ class _$BuildUsageRestockPlanApiDisplayRule
             other.allowUserOverrideRestockDeliverTo &&
         allowUserOverrideRestockByDateShippingService ==
             other.allowUserOverrideRestockByDateShippingService &&
+        allowOverridePrice == other.allowOverridePrice &&
         poRequired == other.poRequired;
   }
 
@@ -154,10 +168,12 @@ class _$BuildUsageRestockPlanApiDisplayRule
     return $jf($jc(
         $jc(
             $jc(
-                $jc($jc(0, allowUserOverrideDoNotRestock.hashCode),
-                    allowUserOverrideRestockLocation.hashCode),
-                allowUserOverrideRestockDeliverTo.hashCode),
-            allowUserOverrideRestockByDateShippingService.hashCode),
+                $jc(
+                    $jc($jc(0, allowUserOverrideDoNotRestock.hashCode),
+                        allowUserOverrideRestockLocation.hashCode),
+                    allowUserOverrideRestockDeliverTo.hashCode),
+                allowUserOverrideRestockByDateShippingService.hashCode),
+            allowOverridePrice.hashCode),
         poRequired.hashCode));
   }
 
@@ -171,6 +187,7 @@ class _$BuildUsageRestockPlanApiDisplayRule
               allowUserOverrideRestockDeliverTo)
           ..add('allowUserOverrideRestockByDateShippingService',
               allowUserOverrideRestockByDateShippingService)
+          ..add('allowOverridePrice', allowOverridePrice)
           ..add('poRequired', poRequired))
         .toString();
   }
@@ -211,6 +228,11 @@ class BuildUsageRestockPlanApiDisplayRuleBuilder
       _$this._allowUserOverrideRestockByDateShippingService =
           allowUserOverrideRestockByDateShippingService;
 
+  bool _allowOverridePrice;
+  bool get allowOverridePrice => _$this._allowOverridePrice;
+  set allowOverridePrice(bool allowOverridePrice) =>
+      _$this._allowOverridePrice = allowOverridePrice;
+
   bool _poRequired;
   bool get poRequired => _$this._poRequired;
   set poRequired(bool poRequired) => _$this._poRequired = poRequired;
@@ -225,6 +247,7 @@ class BuildUsageRestockPlanApiDisplayRuleBuilder
           _$v.allowUserOverrideRestockDeliverTo;
       _allowUserOverrideRestockByDateShippingService =
           _$v.allowUserOverrideRestockByDateShippingService;
+      _allowOverridePrice = _$v.allowOverridePrice;
       _poRequired = _$v.poRequired;
       _$v = null;
     }
@@ -254,6 +277,7 @@ class BuildUsageRestockPlanApiDisplayRuleBuilder
                 allowUserOverrideRestockDeliverTo,
             allowUserOverrideRestockByDateShippingService:
                 allowUserOverrideRestockByDateShippingService,
+            allowOverridePrice: allowOverridePrice,
             poRequired: poRequired);
     replace(_$result);
     return _$result;
@@ -286,6 +310,7 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
   final FieldDispatcher<bool> allowUserOverrideRestockLocation;
   final FieldDispatcher<bool> allowUserOverrideRestockDeliverTo;
   final FieldDispatcher<bool> allowUserOverrideRestockByDateShippingService;
+  final FieldDispatcher<bool> allowOverridePrice;
   final FieldDispatcher<bool> poRequired;
 
   _$BuildUsageRestockPlanApiDisplayRuleActions._(this.$options)
@@ -311,6 +336,11 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
             (a) => a?.allowUserOverrideRestockByDateShippingService,
             (s) => s?.allowUserOverrideRestockByDateShippingService,
             (p, b) => p?.allowUserOverrideRestockByDateShippingService = b),
+        allowOverridePrice = $options.field<bool>(
+            'allowOverridePrice',
+            (a) => a?.allowOverridePrice,
+            (s) => s?.allowOverridePrice,
+            (p, b) => p?.allowOverridePrice = b),
         poRequired = $options.field<bool>('poRequired', (a) => a?.poRequired,
             (s) => s?.poRequired, (p, b) => p?.poRequired = b),
         super._();
@@ -336,6 +366,7 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
         this.allowUserOverrideRestockLocation,
         this.allowUserOverrideRestockDeliverTo,
         this.allowUserOverrideRestockByDateShippingService,
+        this.allowOverridePrice,
         this.poRequired,
       ]);
 
@@ -346,6 +377,7 @@ class _$BuildUsageRestockPlanApiDisplayRuleActions
     allowUserOverrideRestockLocation.$reducer(reducer);
     allowUserOverrideRestockDeliverTo.$reducer(reducer);
     allowUserOverrideRestockByDateShippingService.$reducer(reducer);
+    allowOverridePrice.$reducer(reducer);
     poRequired.$reducer(reducer);
   }
 

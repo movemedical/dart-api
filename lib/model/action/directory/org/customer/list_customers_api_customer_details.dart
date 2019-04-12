@@ -32,12 +32,6 @@ abstract class ListCustomersApiCustomerDetails implements Built<ListCustomersApi
   @nullable
   bool get active;
   
-  @nullable
-  String get city;
-  
-  @nullable
-  String get state;
-  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -71,10 +65,6 @@ abstract class ListCustomersApiCustomerDetailsActions extends ModelActions<ListC
   FieldDispatcher<String> get formattedName;
   
   FieldDispatcher<bool> get active;
-  
-  FieldDispatcher<String> get city;
-  
-  FieldDispatcher<String> get state;
   
   ////////////////////////////////
   /// Constructors

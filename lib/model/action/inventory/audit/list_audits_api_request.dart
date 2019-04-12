@@ -65,6 +65,9 @@ abstract class ListAuditsApiRequest implements Built<ListAuditsApiRequest, ListA
   String get search;
   
   @nullable
+  DateTime get syncDate;
+  
+  @nullable
   PaginationParams get paging;
   
   @nullable
@@ -119,6 +122,8 @@ abstract class ListAuditsApiRequestActions extends ModelActions<ListAuditsApiReq
   FieldDispatcher<String> get auditNumber;
   
   FieldDispatcher<String> get search;
+  
+  FieldDispatcher<DateTime> get syncDate;
   
   PaginationParamsActions get paging;
   

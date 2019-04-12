@@ -45,6 +45,18 @@ abstract class OrderReason implements Built<OrderReason, OrderReasonBuilder> {
   @nullable
   bool get creditCardAllowed;
   
+  @nullable
+  String get bizUnitId;
+  
+  @nullable
+  String get bizUnitName;
+  
+  @nullable
+  bool get erp;
+  
+  @nullable
+  bool get active;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -84,6 +96,14 @@ abstract class OrderReasonActions extends ModelActions<OrderReason, OrderReasonB
   FieldDispatcher<bool> get changesHomeLocation;
   
   FieldDispatcher<bool> get creditCardAllowed;
+  
+  FieldDispatcher<String> get bizUnitId;
+  
+  FieldDispatcher<String> get bizUnitName;
+  
+  FieldDispatcher<bool> get erp;
+  
+  FieldDispatcher<bool> get active;
   
   ////////////////////////////////
   /// Constructors

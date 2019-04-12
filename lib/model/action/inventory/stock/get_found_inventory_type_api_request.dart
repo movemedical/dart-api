@@ -5,6 +5,7 @@ import 'package:modux/modux.dart';
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
 import 'package:movemedical_api/model/sql/enums/stock_container_type.dart';
+import 'package:movemedical_api/model/action/inventory/stock/get_found_inventory_type_api_process.dart';
 
 part 'get_found_inventory_type_api_request.g.dart';
 
@@ -36,6 +37,9 @@ abstract class GetFoundInventoryTypeApiRequest implements Built<GetFoundInventor
   
   @nullable
   String get containerId;
+  
+  @nullable
+  GetFoundInventoryTypeApiProcess get process;
   
   ////////////////////////////////
   /// Constructors
@@ -72,6 +76,8 @@ abstract class GetFoundInventoryTypeApiRequestActions extends ModelActions<GetFo
   FieldDispatcher<StockContainerType> get containerType;
   
   FieldDispatcher<String> get containerId;
+  
+  FieldDispatcher<GetFoundInventoryTypeApiProcess> get process;
   
   ////////////////////////////////
   /// Constructors

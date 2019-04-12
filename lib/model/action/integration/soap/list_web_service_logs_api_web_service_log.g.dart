@@ -80,6 +80,12 @@ class _$ListWebServiceLogsApiWebServiceLogSerializer
         ..add(serializers.serialize(object.logInitiator,
             specifiedType: const FullType(WebServiceLogInitiatorType)));
     }
+    if (object.reference != null) {
+      result
+        ..add('reference')
+        ..add(serializers.serialize(object.reference,
+            specifiedType: const FullType(String)));
+    }
     if (object.request != null) {
       result
         ..add('request')
@@ -146,6 +152,10 @@ class _$ListWebServiceLogsApiWebServiceLogSerializer
                   specifiedType: const FullType(WebServiceLogInitiatorType))
               as WebServiceLogInitiatorType;
           break;
+        case 'reference':
+          result.reference = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'request':
           result.request = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -182,6 +192,8 @@ class _$ListWebServiceLogsApiWebServiceLog
   @override
   final WebServiceLogInitiatorType logInitiator;
   @override
+  final String reference;
+  @override
   final String request;
   @override
   final String response;
@@ -201,6 +213,7 @@ class _$ListWebServiceLogsApiWebServiceLog
       this.webServiceType,
       this.direction,
       this.logInitiator,
+      this.reference,
       this.request,
       this.response})
       : super._();
@@ -227,6 +240,7 @@ class _$ListWebServiceLogsApiWebServiceLog
         webServiceType == other.webServiceType &&
         direction == other.direction &&
         logInitiator == other.logInitiator &&
+        reference == other.reference &&
         request == other.request &&
         response == other.response;
   }
@@ -242,15 +256,17 @@ class _$ListWebServiceLogsApiWebServiceLog
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, id.hashCode),
-                                            interfaceKey.hashCode),
-                                        startDate.hashCode),
-                                    endDate.hashCode),
-                                outcome.hashCode),
-                            outcomeMessage.hashCode),
-                        webServiceType.hashCode),
-                    direction.hashCode),
-                logInitiator.hashCode),
+                                        $jc(
+                                            $jc($jc(0, id.hashCode),
+                                                interfaceKey.hashCode),
+                                            startDate.hashCode),
+                                        endDate.hashCode),
+                                    outcome.hashCode),
+                                outcomeMessage.hashCode),
+                            webServiceType.hashCode),
+                        direction.hashCode),
+                    logInitiator.hashCode),
+                reference.hashCode),
             request.hashCode),
         response.hashCode));
   }
@@ -267,6 +283,7 @@ class _$ListWebServiceLogsApiWebServiceLog
           ..add('webServiceType', webServiceType)
           ..add('direction', direction)
           ..add('logInitiator', logInitiator)
+          ..add('reference', reference)
           ..add('request', request)
           ..add('response', response))
         .toString();
@@ -318,6 +335,10 @@ class ListWebServiceLogsApiWebServiceLogBuilder
   set logInitiator(WebServiceLogInitiatorType logInitiator) =>
       _$this._logInitiator = logInitiator;
 
+  String _reference;
+  String get reference => _$this._reference;
+  set reference(String reference) => _$this._reference = reference;
+
   String _request;
   String get request => _$this._request;
   set request(String request) => _$this._request = request;
@@ -339,6 +360,7 @@ class ListWebServiceLogsApiWebServiceLogBuilder
       _webServiceType = _$v.webServiceType;
       _direction = _$v.direction;
       _logInitiator = _$v.logInitiator;
+      _reference = _$v.reference;
       _request = _$v.request;
       _response = _$v.response;
       _$v = null;
@@ -372,6 +394,7 @@ class ListWebServiceLogsApiWebServiceLogBuilder
             webServiceType: webServiceType,
             direction: direction,
             logInitiator: logInitiator,
+            reference: reference,
             request: request,
             response: response);
     replace(_$result);
@@ -410,6 +433,7 @@ class _$ListWebServiceLogsApiWebServiceLogActions
   final FieldDispatcher<WebServiceType> webServiceType;
   final FieldDispatcher<WebServiceDirection> direction;
   final FieldDispatcher<WebServiceLogInitiatorType> logInitiator;
+  final FieldDispatcher<String> reference;
   final FieldDispatcher<String> request;
   final FieldDispatcher<String> response;
 
@@ -449,6 +473,8 @@ class _$ListWebServiceLogsApiWebServiceLogActions
             (a) => a?.logInitiator,
             (s) => s?.logInitiator,
             (p, b) => p?.logInitiator = b),
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
         request = $options.field<String>('request', (a) => a?.request,
             (s) => s?.request, (p, b) => p?.request = b),
         response = $options.field<String>('response', (a) => a?.response,
@@ -481,6 +507,7 @@ class _$ListWebServiceLogsApiWebServiceLogActions
         this.webServiceType,
         this.direction,
         this.logInitiator,
+        this.reference,
         this.request,
         this.response,
       ]);
@@ -497,6 +524,7 @@ class _$ListWebServiceLogsApiWebServiceLogActions
     webServiceType.$reducer(reducer);
     direction.$reducer(reducer);
     logInitiator.$reducer(reducer);
+    reference.$reducer(reducer);
     request.$reducer(reducer);
     response.$reducer(reducer);
   }

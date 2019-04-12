@@ -40,6 +40,13 @@ class _$ListPreferenceCardsApiRequestSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.facilityIds != null) {
+      result
+        ..add('facilityIds')
+        ..add(serializers.serialize(object.facilityIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     if (object.techniqueIds != null) {
       result
         ..add('techniqueIds')
@@ -74,6 +81,19 @@ class _$ListPreferenceCardsApiRequestSerializer
         ..add(serializers.serialize(object.productGroupIds,
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
+    }
+    if (object.orgUnitIds != null) {
+      result
+        ..add('orgUnitIds')
+        ..add(serializers.serialize(object.orgUnitIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
+    if (object.search != null) {
+      result
+        ..add('search')
+        ..add(serializers.serialize(object.search,
+            specifiedType: const FullType(String)));
     }
     if (object.active != null) {
       result
@@ -115,6 +135,12 @@ class _$ListPreferenceCardsApiRequestSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'facilityIds':
+          result.facilityIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
         case 'techniqueIds':
           result.techniqueIds.replace(serializers.deserialize(value,
                   specifiedType:
@@ -145,6 +171,16 @@ class _$ListPreferenceCardsApiRequestSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'orgUnitIds':
+          result.orgUnitIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
+        case 'search':
+          result.search = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -167,6 +203,8 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
   @override
   final BuiltList<String> physicianIds;
   @override
+  final BuiltList<String> facilityIds;
+  @override
   final BuiltList<String> techniqueIds;
   @override
   final BuiltList<String> procedureIds;
@@ -176,6 +214,10 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
   final BuiltList<String> itemIds;
   @override
   final BuiltList<String> productGroupIds;
+  @override
+  final BuiltList<String> orgUnitIds;
+  @override
+  final String search;
   @override
   final bool active;
   @override
@@ -188,11 +230,14 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
   _$ListPreferenceCardsApiRequest._(
       {this.ids,
       this.physicianIds,
+      this.facilityIds,
       this.techniqueIds,
       this.procedureIds,
       this.subProcedureIds,
       this.itemIds,
       this.productGroupIds,
+      this.orgUnitIds,
+      this.search,
       this.active,
       this.paging})
       : super._();
@@ -212,11 +257,14 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
     return other is ListPreferenceCardsApiRequest &&
         ids == other.ids &&
         physicianIds == other.physicianIds &&
+        facilityIds == other.facilityIds &&
         techniqueIds == other.techniqueIds &&
         procedureIds == other.procedureIds &&
         subProcedureIds == other.subProcedureIds &&
         itemIds == other.itemIds &&
         productGroupIds == other.productGroupIds &&
+        orgUnitIds == other.orgUnitIds &&
+        search == other.search &&
         active == other.active &&
         paging == other.paging;
   }
@@ -230,13 +278,19 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, ids.hashCode),
-                                    physicianIds.hashCode),
-                                techniqueIds.hashCode),
-                            procedureIds.hashCode),
-                        subProcedureIds.hashCode),
-                    itemIds.hashCode),
-                productGroupIds.hashCode),
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc($jc(0, ids.hashCode),
+                                                physicianIds.hashCode),
+                                            facilityIds.hashCode),
+                                        techniqueIds.hashCode),
+                                    procedureIds.hashCode),
+                                subProcedureIds.hashCode),
+                            itemIds.hashCode),
+                        productGroupIds.hashCode),
+                    orgUnitIds.hashCode),
+                search.hashCode),
             active.hashCode),
         paging.hashCode));
   }
@@ -246,11 +300,14 @@ class _$ListPreferenceCardsApiRequest extends ListPreferenceCardsApiRequest {
     return (newBuiltValueToStringHelper('ListPreferenceCardsApiRequest')
           ..add('ids', ids)
           ..add('physicianIds', physicianIds)
+          ..add('facilityIds', facilityIds)
           ..add('techniqueIds', techniqueIds)
           ..add('procedureIds', procedureIds)
           ..add('subProcedureIds', subProcedureIds)
           ..add('itemIds', itemIds)
           ..add('productGroupIds', productGroupIds)
+          ..add('orgUnitIds', orgUnitIds)
+          ..add('search', search)
           ..add('active', active)
           ..add('paging', paging))
         .toString();
@@ -272,6 +329,12 @@ class ListPreferenceCardsApiRequestBuilder
       _$this._physicianIds ??= new ListBuilder<String>();
   set physicianIds(ListBuilder<String> physicianIds) =>
       _$this._physicianIds = physicianIds;
+
+  ListBuilder<String> _facilityIds;
+  ListBuilder<String> get facilityIds =>
+      _$this._facilityIds ??= new ListBuilder<String>();
+  set facilityIds(ListBuilder<String> facilityIds) =>
+      _$this._facilityIds = facilityIds;
 
   ListBuilder<String> _techniqueIds;
   ListBuilder<String> get techniqueIds =>
@@ -302,6 +365,16 @@ class ListPreferenceCardsApiRequestBuilder
   set productGroupIds(ListBuilder<String> productGroupIds) =>
       _$this._productGroupIds = productGroupIds;
 
+  ListBuilder<String> _orgUnitIds;
+  ListBuilder<String> get orgUnitIds =>
+      _$this._orgUnitIds ??= new ListBuilder<String>();
+  set orgUnitIds(ListBuilder<String> orgUnitIds) =>
+      _$this._orgUnitIds = orgUnitIds;
+
+  String _search;
+  String get search => _$this._search;
+  set search(String search) => _$this._search = search;
+
   bool _active;
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
@@ -317,11 +390,14 @@ class ListPreferenceCardsApiRequestBuilder
     if (_$v != null) {
       _ids = _$v.ids?.toBuilder();
       _physicianIds = _$v.physicianIds?.toBuilder();
+      _facilityIds = _$v.facilityIds?.toBuilder();
       _techniqueIds = _$v.techniqueIds?.toBuilder();
       _procedureIds = _$v.procedureIds?.toBuilder();
       _subProcedureIds = _$v.subProcedureIds?.toBuilder();
       _itemIds = _$v.itemIds?.toBuilder();
       _productGroupIds = _$v.productGroupIds?.toBuilder();
+      _orgUnitIds = _$v.orgUnitIds?.toBuilder();
+      _search = _$v.search;
       _active = _$v.active;
       _paging = _$v.paging?.toBuilder();
       _$v = null;
@@ -350,11 +426,14 @@ class ListPreferenceCardsApiRequestBuilder
           new _$ListPreferenceCardsApiRequest._(
               ids: _ids?.build(),
               physicianIds: _physicianIds?.build(),
+              facilityIds: _facilityIds?.build(),
               techniqueIds: _techniqueIds?.build(),
               procedureIds: _procedureIds?.build(),
               subProcedureIds: _subProcedureIds?.build(),
               itemIds: _itemIds?.build(),
               productGroupIds: _productGroupIds?.build(),
+              orgUnitIds: _orgUnitIds?.build(),
+              search: search,
               active: active,
               paging: _paging?.build());
     } catch (_) {
@@ -364,6 +443,8 @@ class ListPreferenceCardsApiRequestBuilder
         _ids?.build();
         _$failedField = 'physicianIds';
         _physicianIds?.build();
+        _$failedField = 'facilityIds';
+        _facilityIds?.build();
         _$failedField = 'techniqueIds';
         _techniqueIds?.build();
         _$failedField = 'procedureIds';
@@ -374,6 +455,8 @@ class ListPreferenceCardsApiRequestBuilder
         _itemIds?.build();
         _$failedField = 'productGroupIds';
         _productGroupIds?.build();
+        _$failedField = 'orgUnitIds';
+        _orgUnitIds?.build();
 
         _$failedField = 'paging';
         _paging?.build();
@@ -412,11 +495,14 @@ class _$ListPreferenceCardsApiRequestActions
   final ActionDispatcher<ListPreferenceCardsApiRequest> $replace;
   final FieldDispatcher<BuiltList<String>> ids;
   final FieldDispatcher<BuiltList<String>> physicianIds;
+  final FieldDispatcher<BuiltList<String>> facilityIds;
   final FieldDispatcher<BuiltList<String>> techniqueIds;
   final FieldDispatcher<BuiltList<String>> procedureIds;
   final FieldDispatcher<BuiltList<String>> subProcedureIds;
   final FieldDispatcher<BuiltList<String>> itemIds;
   final FieldDispatcher<BuiltList<String>> productGroupIds;
+  final FieldDispatcher<BuiltList<String>> orgUnitIds;
+  final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
   final PaginationParamsActions paging;
 
@@ -430,6 +516,11 @@ class _$ListPreferenceCardsApiRequestActions
             (a) => a?.physicianIds,
             (s) => s?.physicianIds,
             (p, b) => p?.physicianIds = b),
+        facilityIds = $options.field<BuiltList<String>>(
+            'facilityIds',
+            (a) => a?.facilityIds,
+            (s) => s?.facilityIds,
+            (p, b) => p?.facilityIds = b),
         techniqueIds = $options.field<BuiltList<String>>(
             'techniqueIds',
             (a) => a?.techniqueIds,
@@ -452,6 +543,13 @@ class _$ListPreferenceCardsApiRequestActions
             (a) => a?.productGroupIds,
             (s) => s?.productGroupIds,
             (p, b) => p?.productGroupIds = b),
+        orgUnitIds = $options.field<BuiltList<String>>(
+            'orgUnitIds',
+            (a) => a?.orgUnitIds,
+            (s) => s?.orgUnitIds,
+            (p, b) => p?.orgUnitIds = b),
+        search = $options.field<String>('search', (a) => a?.search,
+            (s) => s?.search, (p, b) => p?.search = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         paging = PaginationParamsActions(() => $options.stateful<
@@ -489,11 +587,14 @@ class _$ListPreferenceCardsApiRequestActions
         this.$replace,
         this.ids,
         this.physicianIds,
+        this.facilityIds,
         this.techniqueIds,
         this.procedureIds,
         this.subProcedureIds,
         this.itemIds,
         this.productGroupIds,
+        this.orgUnitIds,
+        this.search,
         this.active,
       ]);
 
@@ -502,11 +603,14 @@ class _$ListPreferenceCardsApiRequestActions
     super.$reducer(reducer);
     ids.$reducer(reducer);
     physicianIds.$reducer(reducer);
+    facilityIds.$reducer(reducer);
     techniqueIds.$reducer(reducer);
     procedureIds.$reducer(reducer);
     subProcedureIds.$reducer(reducer);
     itemIds.$reducer(reducer);
     productGroupIds.$reducer(reducer);
+    orgUnitIds.$reducer(reducer);
+    search.$reducer(reducer);
     active.$reducer(reducer);
     paging.$reducer(reducer);
   }

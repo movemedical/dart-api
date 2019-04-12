@@ -24,6 +24,12 @@ class _$SerialSerializer implements StructuredSerializer<Serial> {
         ..add(serializers.serialize(object.id,
             specifiedType: const FullType(String)));
     }
+    if (object.kitSerialId != null) {
+      result
+        ..add('kitSerialId')
+        ..add(serializers.serialize(object.kitSerialId,
+            specifiedType: const FullType(String)));
+    }
     if (object.stockId != null) {
       result
         ..add('stockId')
@@ -85,6 +91,10 @@ class _$SerialSerializer implements StructuredSerializer<Serial> {
           result.id = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'kitSerialId':
+          result.kitSerialId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'stockId':
           result.stockId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -124,6 +134,8 @@ class _$Serial extends Serial {
   @override
   final String id;
   @override
+  final String kitSerialId;
+  @override
   final String stockId;
   @override
   final int serialNumber;
@@ -143,6 +155,7 @@ class _$Serial extends Serial {
 
   _$Serial._(
       {this.id,
+      this.kitSerialId,
       this.stockId,
       this.serialNumber,
       this.serialRef,
@@ -164,6 +177,7 @@ class _$Serial extends Serial {
     if (identical(other, this)) return true;
     return other is Serial &&
         id == other.id &&
+        kitSerialId == other.kitSerialId &&
         stockId == other.stockId &&
         serialNumber == other.serialNumber &&
         serialRef == other.serialRef &&
@@ -180,7 +194,9 @@ class _$Serial extends Serial {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, id.hashCode), stockId.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, id.hashCode), kitSerialId.hashCode),
+                                stockId.hashCode),
                             serialNumber.hashCode),
                         serialRef.hashCode),
                     expirationDate.hashCode),
@@ -193,6 +209,7 @@ class _$Serial extends Serial {
   String toString() {
     return (newBuiltValueToStringHelper('Serial')
           ..add('id', id)
+          ..add('kitSerialId', kitSerialId)
           ..add('stockId', stockId)
           ..add('serialNumber', serialNumber)
           ..add('serialRef', serialRef)
@@ -210,6 +227,10 @@ class SerialBuilder implements Builder<Serial, SerialBuilder> {
   String _id;
   String get id => _$this._id;
   set id(String id) => _$this._id = id;
+
+  String _kitSerialId;
+  String get kitSerialId => _$this._kitSerialId;
+  set kitSerialId(String kitSerialId) => _$this._kitSerialId = kitSerialId;
 
   String _stockId;
   String get stockId => _$this._stockId;
@@ -246,6 +267,7 @@ class SerialBuilder implements Builder<Serial, SerialBuilder> {
   SerialBuilder get _$this {
     if (_$v != null) {
       _id = _$v.id;
+      _kitSerialId = _$v.kitSerialId;
       _stockId = _$v.stockId;
       _serialNumber = _$v.serialNumber;
       _serialRef = _$v.serialRef;
@@ -276,6 +298,7 @@ class SerialBuilder implements Builder<Serial, SerialBuilder> {
     final _$result = _$v ??
         new _$Serial._(
             id: id,
+            kitSerialId: kitSerialId,
             stockId: stockId,
             serialNumber: serialNumber,
             serialRef: serialRef,
@@ -305,6 +328,7 @@ class _$SerialActions extends SerialActions {
 
   final ActionDispatcher<Serial> $replace;
   final FieldDispatcher<String> id;
+  final FieldDispatcher<String> kitSerialId;
   final FieldDispatcher<String> stockId;
   final FieldDispatcher<int> serialNumber;
   final FieldDispatcher<String> serialRef;
@@ -317,6 +341,11 @@ class _$SerialActions extends SerialActions {
       : $replace = $options.action<Serial>('\$replace', (a) => a?.$replace),
         id = $options.field<String>(
             'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
+        kitSerialId = $options.field<String>(
+            'kitSerialId',
+            (a) => a?.kitSerialId,
+            (s) => s?.kitSerialId,
+            (p, b) => p?.kitSerialId = b),
         stockId = $options.field<String>('stockId', (a) => a?.stockId,
             (s) => s?.stockId, (p, b) => p?.stockId = b),
         serialNumber = $options.field<int>(
@@ -357,6 +386,7 @@ class _$SerialActions extends SerialActions {
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.id,
+        this.kitSerialId,
         this.stockId,
         this.serialNumber,
         this.serialRef,
@@ -370,6 +400,7 @@ class _$SerialActions extends SerialActions {
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     id.$reducer(reducer);
+    kitSerialId.$reducer(reducer);
     stockId.$reducer(reducer);
     serialNumber.$reducer(reducer);
     serialRef.$reducer(reducer);

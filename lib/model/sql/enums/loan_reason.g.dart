@@ -8,6 +8,8 @@ part of 'loan_reason.dart';
 
 const LoanReason _$wireCASE_EVENT = const LoanReason._('CASE_EVENT');
 const LoanReason _$wireCONSIGNMENT = const LoanReason._('CONSIGNMENT');
+const LoanReason _$wireCONSIGNMENT_REQUEST =
+    const LoanReason._('CONSIGNMENT_REQUEST');
 const LoanReason _$wireMULTI_CASE_EVENT =
     const LoanReason._('MULTI_CASE_EVENT');
 
@@ -17,6 +19,8 @@ LoanReason _$loanReasonValueOf(String name) {
       return _$wireCASE_EVENT;
     case 'CONSIGNMENT':
       return _$wireCONSIGNMENT;
+    case 'CONSIGNMENT_REQUEST':
+      return _$wireCONSIGNMENT_REQUEST;
     case 'MULTI_CASE_EVENT':
       return _$wireMULTI_CASE_EVENT;
     default:
@@ -28,6 +32,7 @@ final BuiltSet<LoanReason> _$loanReasonValues =
     new BuiltSet<LoanReason>(const <LoanReason>[
   _$wireCASE_EVENT,
   _$wireCONSIGNMENT,
+  _$wireCONSIGNMENT_REQUEST,
   _$wireMULTI_CASE_EVENT,
 ]);
 

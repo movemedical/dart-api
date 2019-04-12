@@ -50,6 +50,12 @@ class _$ListCustomersApiRequestSerializer
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
+    if (object.scopeToLocationVizibility != null) {
+      result
+        ..add('scopeToLocationVizibility')
+        ..add(serializers.serialize(object.scopeToLocationVizibility,
+            specifiedType: const FullType(bool)));
+    }
     if (object.sortBy != null) {
       result
         ..add('sortBy')
@@ -110,6 +116,10 @@ class _$ListCustomersApiRequestSerializer
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'scopeToLocationVizibility':
+          result.scopeToLocationVizibility = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'sortBy':
           result.sortBy = serializers.deserialize(value,
                   specifiedType: const FullType(ListCustomersApiSortBy))
@@ -144,6 +154,8 @@ class _$ListCustomersApiRequest extends ListCustomersApiRequest {
   @override
   final bool active;
   @override
+  final bool scopeToLocationVizibility;
+  @override
   final ListCustomersApiSortBy sortBy;
   @override
   final bool sortAscending;
@@ -161,6 +173,7 @@ class _$ListCustomersApiRequest extends ListCustomersApiRequest {
       this.hsOrgIds,
       this.search,
       this.active,
+      this.scopeToLocationVizibility,
       this.sortBy,
       this.sortAscending,
       this.startRecordIdx,
@@ -184,6 +197,7 @@ class _$ListCustomersApiRequest extends ListCustomersApiRequest {
         hsOrgIds == other.hsOrgIds &&
         search == other.search &&
         active == other.active &&
+        scopeToLocationVizibility == other.scopeToLocationVizibility &&
         sortBy == other.sortBy &&
         sortAscending == other.sortAscending &&
         startRecordIdx == other.startRecordIdx &&
@@ -198,10 +212,12 @@ class _$ListCustomersApiRequest extends ListCustomersApiRequest {
                 $jc(
                     $jc(
                         $jc(
-                            $jc($jc(0, customerIds.hashCode),
-                                hsOrgIds.hashCode),
-                            search.hashCode),
-                        active.hashCode),
+                            $jc(
+                                $jc($jc(0, customerIds.hashCode),
+                                    hsOrgIds.hashCode),
+                                search.hashCode),
+                            active.hashCode),
+                        scopeToLocationVizibility.hashCode),
                     sortBy.hashCode),
                 sortAscending.hashCode),
             startRecordIdx.hashCode),
@@ -215,6 +231,7 @@ class _$ListCustomersApiRequest extends ListCustomersApiRequest {
           ..add('hsOrgIds', hsOrgIds)
           ..add('search', search)
           ..add('active', active)
+          ..add('scopeToLocationVizibility', scopeToLocationVizibility)
           ..add('sortBy', sortBy)
           ..add('sortAscending', sortAscending)
           ..add('startRecordIdx', startRecordIdx)
@@ -247,6 +264,11 @@ class ListCustomersApiRequestBuilder
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
+  bool _scopeToLocationVizibility;
+  bool get scopeToLocationVizibility => _$this._scopeToLocationVizibility;
+  set scopeToLocationVizibility(bool scopeToLocationVizibility) =>
+      _$this._scopeToLocationVizibility = scopeToLocationVizibility;
+
   ListCustomersApiSortBy _sortBy;
   ListCustomersApiSortBy get sortBy => _$this._sortBy;
   set sortBy(ListCustomersApiSortBy sortBy) => _$this._sortBy = sortBy;
@@ -273,6 +295,7 @@ class ListCustomersApiRequestBuilder
       _hsOrgIds = _$v.hsOrgIds?.toBuilder();
       _search = _$v.search;
       _active = _$v.active;
+      _scopeToLocationVizibility = _$v.scopeToLocationVizibility;
       _sortBy = _$v.sortBy;
       _sortAscending = _$v.sortAscending;
       _startRecordIdx = _$v.startRecordIdx;
@@ -305,6 +328,7 @@ class ListCustomersApiRequestBuilder
               hsOrgIds: _hsOrgIds?.build(),
               search: search,
               active: active,
+              scopeToLocationVizibility: scopeToLocationVizibility,
               sortBy: sortBy,
               sortAscending: sortAscending,
               startRecordIdx: startRecordIdx,
@@ -350,6 +374,7 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
   final FieldDispatcher<BuiltList<String>> hsOrgIds;
   final FieldDispatcher<String> search;
   final FieldDispatcher<bool> active;
+  final FieldDispatcher<bool> scopeToLocationVizibility;
   final FieldDispatcher<ListCustomersApiSortBy> sortBy;
   final FieldDispatcher<bool> sortAscending;
   final FieldDispatcher<int> startRecordIdx;
@@ -369,6 +394,11 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
             (s) => s?.search, (p, b) => p?.search = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
+        scopeToLocationVizibility = $options.field<bool>(
+            'scopeToLocationVizibility',
+            (a) => a?.scopeToLocationVizibility,
+            (s) => s?.scopeToLocationVizibility,
+            (p, b) => p?.scopeToLocationVizibility = b),
         sortBy = $options.field<ListCustomersApiSortBy>('sortBy',
             (a) => a?.sortBy, (s) => s?.sortBy, (p, b) => p?.sortBy = b),
         sortAscending = $options.field<bool>(
@@ -405,6 +435,7 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
         this.hsOrgIds,
         this.search,
         this.active,
+        this.scopeToLocationVizibility,
         this.sortBy,
         this.sortAscending,
         this.startRecordIdx,
@@ -418,6 +449,7 @@ class _$ListCustomersApiRequestActions extends ListCustomersApiRequestActions {
     hsOrgIds.$reducer(reducer);
     search.$reducer(reducer);
     active.$reducer(reducer);
+    scopeToLocationVizibility.$reducer(reducer);
     sortBy.$reducer(reducer);
     sortAscending.$reducer(reducer);
     startRecordIdx.$reducer(reducer);

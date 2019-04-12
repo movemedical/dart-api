@@ -38,6 +38,12 @@ class _$ListItemCategoriesApiRequestSerializer
         ..add(serializers.serialize(object.linkedItemId,
             specifiedType: const FullType(String)));
     }
+    if (object.procedureId != null) {
+      result
+        ..add('procedureId')
+        ..add(serializers.serialize(object.procedureId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -62,6 +68,10 @@ class _$ListItemCategoriesApiRequestSerializer
           result.linkedItemId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'procedureId':
+          result.procedureId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -74,12 +84,15 @@ class _$ListItemCategoriesApiRequest extends ListItemCategoriesApiRequest {
   final String parentCategoryId;
   @override
   final String linkedItemId;
+  @override
+  final String procedureId;
 
   factory _$ListItemCategoriesApiRequest(
           [void updates(ListItemCategoriesApiRequestBuilder b)]) =>
       (new ListItemCategoriesApiRequestBuilder()..update(updates)).build();
 
-  _$ListItemCategoriesApiRequest._({this.parentCategoryId, this.linkedItemId})
+  _$ListItemCategoriesApiRequest._(
+      {this.parentCategoryId, this.linkedItemId, this.procedureId})
       : super._();
 
   @override
@@ -96,19 +109,23 @@ class _$ListItemCategoriesApiRequest extends ListItemCategoriesApiRequest {
     if (identical(other, this)) return true;
     return other is ListItemCategoriesApiRequest &&
         parentCategoryId == other.parentCategoryId &&
-        linkedItemId == other.linkedItemId;
+        linkedItemId == other.linkedItemId &&
+        procedureId == other.procedureId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, parentCategoryId.hashCode), linkedItemId.hashCode));
+    return $jf($jc(
+        $jc($jc(0, parentCategoryId.hashCode), linkedItemId.hashCode),
+        procedureId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListItemCategoriesApiRequest')
           ..add('parentCategoryId', parentCategoryId)
-          ..add('linkedItemId', linkedItemId))
+          ..add('linkedItemId', linkedItemId)
+          ..add('procedureId', procedureId))
         .toString();
   }
 }
@@ -128,12 +145,17 @@ class ListItemCategoriesApiRequestBuilder
   String get linkedItemId => _$this._linkedItemId;
   set linkedItemId(String linkedItemId) => _$this._linkedItemId = linkedItemId;
 
+  String _procedureId;
+  String get procedureId => _$this._procedureId;
+  set procedureId(String procedureId) => _$this._procedureId = procedureId;
+
   ListItemCategoriesApiRequestBuilder();
 
   ListItemCategoriesApiRequestBuilder get _$this {
     if (_$v != null) {
       _parentCategoryId = _$v.parentCategoryId;
       _linkedItemId = _$v.linkedItemId;
+      _procedureId = _$v.procedureId;
       _$v = null;
     }
     return this;
@@ -156,7 +178,9 @@ class ListItemCategoriesApiRequestBuilder
   _$ListItemCategoriesApiRequest build() {
     final _$result = _$v ??
         new _$ListItemCategoriesApiRequest._(
-            parentCategoryId: parentCategoryId, linkedItemId: linkedItemId);
+            parentCategoryId: parentCategoryId,
+            linkedItemId: linkedItemId,
+            procedureId: procedureId);
     replace(_$result);
     return _$result;
   }
@@ -186,6 +210,7 @@ class _$ListItemCategoriesApiRequestActions
   final ActionDispatcher<ListItemCategoriesApiRequest> $replace;
   final FieldDispatcher<String> parentCategoryId;
   final FieldDispatcher<String> linkedItemId;
+  final FieldDispatcher<String> procedureId;
 
   _$ListItemCategoriesApiRequestActions._(this.$options)
       : $replace = $options.action<ListItemCategoriesApiRequest>(
@@ -200,6 +225,11 @@ class _$ListItemCategoriesApiRequestActions
             (a) => a?.linkedItemId,
             (s) => s?.linkedItemId,
             (p, b) => p?.linkedItemId = b),
+        procedureId = $options.field<String>(
+            'procedureId',
+            (a) => a?.procedureId,
+            (s) => s?.procedureId,
+            (p, b) => p?.procedureId = b),
         super._();
 
   factory _$ListItemCategoriesApiRequestActions(
@@ -220,6 +250,7 @@ class _$ListItemCategoriesApiRequestActions
         this.$replace,
         this.parentCategoryId,
         this.linkedItemId,
+        this.procedureId,
       ]);
 
   @override
@@ -227,6 +258,7 @@ class _$ListItemCategoriesApiRequestActions
     super.$reducer(reducer);
     parentCategoryId.$reducer(reducer);
     linkedItemId.$reducer(reducer);
+    procedureId.$reducer(reducer);
   }
 
   @override

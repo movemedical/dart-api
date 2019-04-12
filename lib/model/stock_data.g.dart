@@ -60,6 +60,12 @@ class _$StockDataSerializer implements StructuredSerializer<StockData> {
         ..add(serializers.serialize(object.kitId,
             specifiedType: const FullType(String)));
     }
+    if (object.kitContainer != null) {
+      result
+        ..add('kitContainer')
+        ..add(serializers.serialize(object.kitContainer,
+            specifiedType: const FullType(bool)));
+    }
     if (object.virtual != null) {
       result
         ..add('virtual')
@@ -82,6 +88,12 @@ class _$StockDataSerializer implements StructuredSerializer<StockData> {
       result
         ..add('hasMissing')
         ..add(serializers.serialize(object.hasMissing,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.hasUnverified != null) {
+      result
+        ..add('hasUnverified')
+        ..add(serializers.serialize(object.hasUnverified,
             specifiedType: const FullType(bool)));
     }
     if (object.inventoryTypeId != null) {
@@ -174,6 +186,18 @@ class _$StockDataSerializer implements StructuredSerializer<StockData> {
         ..add(serializers.serialize(object.responsiblePartyId,
             specifiedType: const FullType(String)));
     }
+    if (object.demandLoanId != null) {
+      result
+        ..add('demandLoanId')
+        ..add(serializers.serialize(object.demandLoanId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.consignmentLoanId != null) {
+      result
+        ..add('consignmentLoanId')
+        ..add(serializers.serialize(object.consignmentLoanId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -217,6 +241,10 @@ class _$StockDataSerializer implements StructuredSerializer<StockData> {
           result.kitId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'kitContainer':
+          result.kitContainer = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'virtual':
           result.virtual = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -231,6 +259,10 @@ class _$StockDataSerializer implements StructuredSerializer<StockData> {
           break;
         case 'hasMissing':
           result.hasMissing = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'hasUnverified':
+          result.hasUnverified = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
         case 'inventoryTypeId':
@@ -296,6 +328,14 @@ class _$StockDataSerializer implements StructuredSerializer<StockData> {
           result.responsiblePartyId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'demandLoanId':
+          result.demandLoanId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'consignmentLoanId':
+          result.consignmentLoanId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -319,6 +359,8 @@ class _$StockData extends StockData {
   @override
   final String kitId;
   @override
+  final bool kitContainer;
+  @override
   final bool virtual;
   @override
   final bool verified;
@@ -326,6 +368,8 @@ class _$StockData extends StockData {
   final bool hasExtras;
   @override
   final bool hasMissing;
+  @override
+  final bool hasUnverified;
   @override
   final String inventoryTypeId;
   @override
@@ -356,6 +400,10 @@ class _$StockData extends StockData {
   final ResponsiblePartyType responsiblePartyType;
   @override
   final String responsiblePartyId;
+  @override
+  final String demandLoanId;
+  @override
+  final String consignmentLoanId;
 
   factory _$StockData([void updates(StockDataBuilder b)]) =>
       (new StockDataBuilder()..update(updates)).build();
@@ -368,10 +416,12 @@ class _$StockData extends StockData {
       this.serialId,
       this.tagId,
       this.kitId,
+      this.kitContainer,
       this.virtual,
       this.verified,
       this.hasExtras,
       this.hasMissing,
+      this.hasUnverified,
       this.inventoryTypeId,
       this.locationType,
       this.locationId,
@@ -386,7 +436,9 @@ class _$StockData extends StockData {
       this.containerType,
       this.containerId,
       this.responsiblePartyType,
-      this.responsiblePartyId})
+      this.responsiblePartyId,
+      this.demandLoanId,
+      this.consignmentLoanId})
       : super._();
 
   @override
@@ -407,10 +459,12 @@ class _$StockData extends StockData {
         serialId == other.serialId &&
         tagId == other.tagId &&
         kitId == other.kitId &&
+        kitContainer == other.kitContainer &&
         virtual == other.virtual &&
         verified == other.verified &&
         hasExtras == other.hasExtras &&
         hasMissing == other.hasMissing &&
+        hasUnverified == other.hasUnverified &&
         inventoryTypeId == other.inventoryTypeId &&
         locationType == other.locationType &&
         locationId == other.locationId &&
@@ -425,7 +479,9 @@ class _$StockData extends StockData {
         containerType == other.containerType &&
         containerId == other.containerId &&
         responsiblePartyType == other.responsiblePartyType &&
-        responsiblePartyId == other.responsiblePartyId;
+        responsiblePartyId == other.responsiblePartyId &&
+        demandLoanId == other.demandLoanId &&
+        consignmentLoanId == other.consignmentLoanId;
   }
 
   @override
@@ -448,26 +504,26 @@ class _$StockData extends StockData {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), itemId.hashCode), itemVersionId.hashCode), lotId.hashCode), serialId.hashCode), tagId.hashCode), kitId.hashCode),
-                                                                                virtual.hashCode),
-                                                                            verified.hashCode),
-                                                                        hasExtras.hashCode),
-                                                                    hasMissing.hashCode),
-                                                                inventoryTypeId.hashCode),
-                                                            locationType.hashCode),
-                                                        locationId.hashCode),
-                                                    fromLocationType.hashCode),
-                                                fromLocationId.hashCode),
-                                            toLocationType.hashCode),
-                                        toLocationId.hashCode),
-                                    homeLocationType.hashCode),
-                                homeLocationId.hashCode),
-                            rootContainerType.hashCode),
-                        rootContainerId.hashCode),
-                    containerType.hashCode),
-                containerId.hashCode),
-            responsiblePartyType.hashCode),
-        responsiblePartyId.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), itemId.hashCode), itemVersionId.hashCode), lotId.hashCode), serialId.hashCode), tagId.hashCode), kitId.hashCode), kitContainer.hashCode), virtual.hashCode), verified.hashCode), hasExtras.hashCode),
+                                                                                hasMissing.hashCode),
+                                                                            hasUnverified.hashCode),
+                                                                        inventoryTypeId.hashCode),
+                                                                    locationType.hashCode),
+                                                                locationId.hashCode),
+                                                            fromLocationType.hashCode),
+                                                        fromLocationId.hashCode),
+                                                    toLocationType.hashCode),
+                                                toLocationId.hashCode),
+                                            homeLocationType.hashCode),
+                                        homeLocationId.hashCode),
+                                    rootContainerType.hashCode),
+                                rootContainerId.hashCode),
+                            containerType.hashCode),
+                        containerId.hashCode),
+                    responsiblePartyType.hashCode),
+                responsiblePartyId.hashCode),
+            demandLoanId.hashCode),
+        consignmentLoanId.hashCode));
   }
 
   @override
@@ -480,10 +536,12 @@ class _$StockData extends StockData {
           ..add('serialId', serialId)
           ..add('tagId', tagId)
           ..add('kitId', kitId)
+          ..add('kitContainer', kitContainer)
           ..add('virtual', virtual)
           ..add('verified', verified)
           ..add('hasExtras', hasExtras)
           ..add('hasMissing', hasMissing)
+          ..add('hasUnverified', hasUnverified)
           ..add('inventoryTypeId', inventoryTypeId)
           ..add('locationType', locationType)
           ..add('locationId', locationId)
@@ -498,7 +556,9 @@ class _$StockData extends StockData {
           ..add('containerType', containerType)
           ..add('containerId', containerId)
           ..add('responsiblePartyType', responsiblePartyType)
-          ..add('responsiblePartyId', responsiblePartyId))
+          ..add('responsiblePartyId', responsiblePartyId)
+          ..add('demandLoanId', demandLoanId)
+          ..add('consignmentLoanId', consignmentLoanId))
         .toString();
   }
 }
@@ -535,6 +595,10 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
   String get kitId => _$this._kitId;
   set kitId(String kitId) => _$this._kitId = kitId;
 
+  bool _kitContainer;
+  bool get kitContainer => _$this._kitContainer;
+  set kitContainer(bool kitContainer) => _$this._kitContainer = kitContainer;
+
   bool _virtual;
   bool get virtual => _$this._virtual;
   set virtual(bool virtual) => _$this._virtual = virtual;
@@ -550,6 +614,11 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
   bool _hasMissing;
   bool get hasMissing => _$this._hasMissing;
   set hasMissing(bool hasMissing) => _$this._hasMissing = hasMissing;
+
+  bool _hasUnverified;
+  bool get hasUnverified => _$this._hasUnverified;
+  set hasUnverified(bool hasUnverified) =>
+      _$this._hasUnverified = hasUnverified;
 
   String _inventoryTypeId;
   String get inventoryTypeId => _$this._inventoryTypeId;
@@ -623,6 +692,15 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
   set responsiblePartyId(String responsiblePartyId) =>
       _$this._responsiblePartyId = responsiblePartyId;
 
+  String _demandLoanId;
+  String get demandLoanId => _$this._demandLoanId;
+  set demandLoanId(String demandLoanId) => _$this._demandLoanId = demandLoanId;
+
+  String _consignmentLoanId;
+  String get consignmentLoanId => _$this._consignmentLoanId;
+  set consignmentLoanId(String consignmentLoanId) =>
+      _$this._consignmentLoanId = consignmentLoanId;
+
   StockDataBuilder();
 
   StockDataBuilder get _$this {
@@ -634,10 +712,12 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
       _serialId = _$v.serialId;
       _tagId = _$v.tagId;
       _kitId = _$v.kitId;
+      _kitContainer = _$v.kitContainer;
       _virtual = _$v.virtual;
       _verified = _$v.verified;
       _hasExtras = _$v.hasExtras;
       _hasMissing = _$v.hasMissing;
+      _hasUnverified = _$v.hasUnverified;
       _inventoryTypeId = _$v.inventoryTypeId;
       _locationType = _$v.locationType;
       _locationId = _$v.locationId;
@@ -653,6 +733,8 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
       _containerId = _$v.containerId;
       _responsiblePartyType = _$v.responsiblePartyType;
       _responsiblePartyId = _$v.responsiblePartyId;
+      _demandLoanId = _$v.demandLoanId;
+      _consignmentLoanId = _$v.consignmentLoanId;
       _$v = null;
     }
     return this;
@@ -682,10 +764,12 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
             serialId: serialId,
             tagId: tagId,
             kitId: kitId,
+            kitContainer: kitContainer,
             virtual: virtual,
             verified: verified,
             hasExtras: hasExtras,
             hasMissing: hasMissing,
+            hasUnverified: hasUnverified,
             inventoryTypeId: inventoryTypeId,
             locationType: locationType,
             locationId: locationId,
@@ -700,7 +784,9 @@ class StockDataBuilder implements Builder<StockData, StockDataBuilder> {
             containerType: containerType,
             containerId: containerId,
             responsiblePartyType: responsiblePartyType,
-            responsiblePartyId: responsiblePartyId);
+            responsiblePartyId: responsiblePartyId,
+            demandLoanId: demandLoanId,
+            consignmentLoanId: consignmentLoanId);
     replace(_$result);
     return _$result;
   }
@@ -730,10 +816,12 @@ class _$StockDataActions extends StockDataActions {
   final FieldDispatcher<String> serialId;
   final FieldDispatcher<String> tagId;
   final FieldDispatcher<String> kitId;
+  final FieldDispatcher<bool> kitContainer;
   final FieldDispatcher<bool> virtual;
   final FieldDispatcher<bool> verified;
   final FieldDispatcher<bool> hasExtras;
   final FieldDispatcher<bool> hasMissing;
+  final FieldDispatcher<bool> hasUnverified;
   final FieldDispatcher<String> inventoryTypeId;
   final FieldDispatcher<LocationType> locationType;
   final FieldDispatcher<String> locationId;
@@ -749,6 +837,8 @@ class _$StockDataActions extends StockDataActions {
   final FieldDispatcher<String> containerId;
   final FieldDispatcher<ResponsiblePartyType> responsiblePartyType;
   final FieldDispatcher<String> responsiblePartyId;
+  final FieldDispatcher<String> demandLoanId;
+  final FieldDispatcher<String> consignmentLoanId;
 
   _$StockDataActions._(this.$options)
       : $replace = $options.action<StockData>('\$replace', (a) => a?.$replace),
@@ -769,6 +859,11 @@ class _$StockDataActions extends StockDataActions {
             'tagId', (a) => a?.tagId, (s) => s?.tagId, (p, b) => p?.tagId = b),
         kitId = $options.field<String>(
             'kitId', (a) => a?.kitId, (s) => s?.kitId, (p, b) => p?.kitId = b),
+        kitContainer = $options.field<bool>(
+            'kitContainer',
+            (a) => a?.kitContainer,
+            (s) => s?.kitContainer,
+            (p, b) => p?.kitContainer = b),
         virtual = $options.field<bool>('virtual', (a) => a?.virtual,
             (s) => s?.virtual, (p, b) => p?.virtual = b),
         verified = $options.field<bool>('verified', (a) => a?.verified,
@@ -777,6 +872,11 @@ class _$StockDataActions extends StockDataActions {
             (s) => s?.hasExtras, (p, b) => p?.hasExtras = b),
         hasMissing = $options.field<bool>('hasMissing', (a) => a?.hasMissing,
             (s) => s?.hasMissing, (p, b) => p?.hasMissing = b),
+        hasUnverified = $options.field<bool>(
+            'hasUnverified',
+            (a) => a?.hasUnverified,
+            (s) => s?.hasUnverified,
+            (p, b) => p?.hasUnverified = b),
         inventoryTypeId = $options.field<String>(
             'inventoryTypeId',
             (a) => a?.inventoryTypeId,
@@ -849,6 +949,16 @@ class _$StockDataActions extends StockDataActions {
             (a) => a?.responsiblePartyId,
             (s) => s?.responsiblePartyId,
             (p, b) => p?.responsiblePartyId = b),
+        demandLoanId = $options.field<String>(
+            'demandLoanId',
+            (a) => a?.demandLoanId,
+            (s) => s?.demandLoanId,
+            (p, b) => p?.demandLoanId = b),
+        consignmentLoanId = $options.field<String>(
+            'consignmentLoanId',
+            (a) => a?.consignmentLoanId,
+            (s) => s?.consignmentLoanId,
+            (p, b) => p?.consignmentLoanId = b),
         super._();
 
   factory _$StockDataActions(StockDataActionsOptions options) =>
@@ -872,10 +982,12 @@ class _$StockDataActions extends StockDataActions {
         this.serialId,
         this.tagId,
         this.kitId,
+        this.kitContainer,
         this.virtual,
         this.verified,
         this.hasExtras,
         this.hasMissing,
+        this.hasUnverified,
         this.inventoryTypeId,
         this.locationType,
         this.locationId,
@@ -891,6 +1003,8 @@ class _$StockDataActions extends StockDataActions {
         this.containerId,
         this.responsiblePartyType,
         this.responsiblePartyId,
+        this.demandLoanId,
+        this.consignmentLoanId,
       ]);
 
   @override
@@ -903,10 +1017,12 @@ class _$StockDataActions extends StockDataActions {
     serialId.$reducer(reducer);
     tagId.$reducer(reducer);
     kitId.$reducer(reducer);
+    kitContainer.$reducer(reducer);
     virtual.$reducer(reducer);
     verified.$reducer(reducer);
     hasExtras.$reducer(reducer);
     hasMissing.$reducer(reducer);
+    hasUnverified.$reducer(reducer);
     inventoryTypeId.$reducer(reducer);
     locationType.$reducer(reducer);
     locationId.$reducer(reducer);
@@ -922,6 +1038,8 @@ class _$StockDataActions extends StockDataActions {
     containerId.$reducer(reducer);
     responsiblePartyType.$reducer(reducer);
     responsiblePartyId.$reducer(reducer);
+    demandLoanId.$reducer(reducer);
+    consignmentLoanId.$reducer(reducer);
   }
 
   @override

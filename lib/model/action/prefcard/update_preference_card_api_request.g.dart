@@ -44,6 +44,13 @@ class _$UpdatePreferenceCardApiRequestSerializer
         ..add(serializers.serialize(object.description,
             specifiedType: const FullType(String)));
     }
+    if (object.orgUnitIds != null) {
+      result
+        ..add('orgUnitIds')
+        ..add(serializers.serialize(object.orgUnitIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     if (object.active != null) {
       result
         ..add('active')
@@ -78,6 +85,12 @@ class _$UpdatePreferenceCardApiRequestSerializer
           result.description = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'orgUnitIds':
+          result.orgUnitIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -97,6 +110,8 @@ class _$UpdatePreferenceCardApiRequest extends UpdatePreferenceCardApiRequest {
   @override
   final String description;
   @override
+  final BuiltList<String> orgUnitIds;
+  @override
   final bool active;
 
   factory _$UpdatePreferenceCardApiRequest(
@@ -104,7 +119,7 @@ class _$UpdatePreferenceCardApiRequest extends UpdatePreferenceCardApiRequest {
       (new UpdatePreferenceCardApiRequestBuilder()..update(updates)).build();
 
   _$UpdatePreferenceCardApiRequest._(
-      {this.id, this.name, this.description, this.active})
+      {this.id, this.name, this.description, this.orgUnitIds, this.active})
       : super._();
 
   @override
@@ -123,13 +138,15 @@ class _$UpdatePreferenceCardApiRequest extends UpdatePreferenceCardApiRequest {
         id == other.id &&
         name == other.name &&
         description == other.description &&
+        orgUnitIds == other.orgUnitIds &&
         active == other.active;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, id.hashCode), name.hashCode), description.hashCode),
+        $jc($jc($jc($jc(0, id.hashCode), name.hashCode), description.hashCode),
+            orgUnitIds.hashCode),
         active.hashCode));
   }
 
@@ -139,6 +156,7 @@ class _$UpdatePreferenceCardApiRequest extends UpdatePreferenceCardApiRequest {
           ..add('id', id)
           ..add('name', name)
           ..add('description', description)
+          ..add('orgUnitIds', orgUnitIds)
           ..add('active', active))
         .toString();
   }
@@ -162,6 +180,12 @@ class UpdatePreferenceCardApiRequestBuilder
   String get description => _$this._description;
   set description(String description) => _$this._description = description;
 
+  ListBuilder<String> _orgUnitIds;
+  ListBuilder<String> get orgUnitIds =>
+      _$this._orgUnitIds ??= new ListBuilder<String>();
+  set orgUnitIds(ListBuilder<String> orgUnitIds) =>
+      _$this._orgUnitIds = orgUnitIds;
+
   bool _active;
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
@@ -173,6 +197,7 @@ class UpdatePreferenceCardApiRequestBuilder
       _id = _$v.id;
       _name = _$v.name;
       _description = _$v.description;
+      _orgUnitIds = _$v.orgUnitIds?.toBuilder();
       _active = _$v.active;
       _$v = null;
     }
@@ -194,9 +219,26 @@ class UpdatePreferenceCardApiRequestBuilder
 
   @override
   _$UpdatePreferenceCardApiRequest build() {
-    final _$result = _$v ??
-        new _$UpdatePreferenceCardApiRequest._(
-            id: id, name: name, description: description, active: active);
+    _$UpdatePreferenceCardApiRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$UpdatePreferenceCardApiRequest._(
+              id: id,
+              name: name,
+              description: description,
+              orgUnitIds: _orgUnitIds?.build(),
+              active: active);
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'orgUnitIds';
+        _orgUnitIds?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'UpdatePreferenceCardApiRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
@@ -227,6 +269,7 @@ class _$UpdatePreferenceCardApiRequestActions
   final FieldDispatcher<String> id;
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> description;
+  final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<bool> active;
 
   _$UpdatePreferenceCardApiRequestActions._(this.$options)
@@ -241,6 +284,11 @@ class _$UpdatePreferenceCardApiRequestActions
             (a) => a?.description,
             (s) => s?.description,
             (p, b) => p?.description = b),
+        orgUnitIds = $options.field<BuiltList<String>>(
+            'orgUnitIds',
+            (a) => a?.orgUnitIds,
+            (s) => s?.orgUnitIds,
+            (p, b) => p?.orgUnitIds = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
@@ -265,6 +313,7 @@ class _$UpdatePreferenceCardApiRequestActions
         this.id,
         this.name,
         this.description,
+        this.orgUnitIds,
         this.active,
       ]);
 
@@ -274,6 +323,7 @@ class _$UpdatePreferenceCardApiRequestActions
     id.$reducer(reducer);
     name.$reducer(reducer);
     description.$reducer(reducer);
+    orgUnitIds.$reducer(reducer);
     active.$reducer(reducer);
   }
 

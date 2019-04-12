@@ -22,6 +22,8 @@ const FileType _$wireREGENERATE_DATA_IMPORT =
     const FileType._('REGENERATE_DATA_IMPORT');
 const FileType _$wireGENERIC = const FileType._('GENERIC');
 const FileType _$wireINTEGRATION = const FileType._('INTEGRATION');
+const FileType _$wireITEM = const FileType._('ITEM');
+const FileType _$wireSERIAL = const FileType._('SERIAL');
 
 FileType _$fileTypeValueOf(String name) {
   switch (name) {
@@ -55,6 +57,10 @@ FileType _$fileTypeValueOf(String name) {
       return _$wireGENERIC;
     case 'INTEGRATION':
       return _$wireINTEGRATION;
+    case 'ITEM':
+      return _$wireITEM;
+    case 'SERIAL':
+      return _$wireSERIAL;
     default:
       throw new ArgumentError(name);
   }
@@ -77,6 +83,8 @@ final BuiltSet<FileType> _$fileTypeValues =
   _$wireREGENERATE_DATA_IMPORT,
   _$wireGENERIC,
   _$wireINTEGRATION,
+  _$wireITEM,
+  _$wireSERIAL,
 ]);
 
 Serializer<FileType> _$fileTypeSerializer = new _$FileTypeSerializer();

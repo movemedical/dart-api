@@ -90,6 +90,12 @@ class _$DBComponentSerializer implements StructuredSerializer<DBComponent> {
         ..add(serializers.serialize(object.placementInSequence,
             specifiedType: const FullType(int)));
     }
+    if (object.uomId != null) {
+      result
+        ..add('uomId')
+        ..add(serializers.serialize(object.uomId,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -153,6 +159,10 @@ class _$DBComponentSerializer implements StructuredSerializer<DBComponent> {
           result.placementInSequence = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'uomId':
+          result.uomId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -185,6 +195,8 @@ class _$DBComponent extends DBComponent {
   final int minimumQuantity;
   @override
   final int placementInSequence;
+  @override
+  final String uomId;
 
   factory _$DBComponent([void updates(DBComponentBuilder b)]) =>
       (new DBComponentBuilder()..update(updates)).build();
@@ -201,7 +213,8 @@ class _$DBComponent extends DBComponent {
       this.quantity,
       this.v,
       this.minimumQuantity,
-      this.placementInSequence})
+      this.placementInSequence,
+      this.uomId})
       : super._();
 
   @override
@@ -226,7 +239,8 @@ class _$DBComponent extends DBComponent {
         quantity == other.quantity &&
         v == other.v &&
         minimumQuantity == other.minimumQuantity &&
-        placementInSequence == other.placementInSequence;
+        placementInSequence == other.placementInSequence &&
+        uomId == other.uomId;
   }
 
   @override
@@ -241,18 +255,20 @@ class _$DBComponent extends DBComponent {
                                 $jc(
                                     $jc(
                                         $jc(
-                                            $jc($jc(0, id.hashCode),
-                                                parentItemId.hashCode),
-                                            parentItemVersionId.hashCode),
-                                        componentItemId.hashCode),
-                                    anyVersion.hashCode),
-                                kitContainerDefId.hashCode),
-                            trayLayerDefId.hashCode),
-                        forceContainerOrLayer.hashCode),
-                    quantity.hashCode),
-                v.hashCode),
-            minimumQuantity.hashCode),
-        placementInSequence.hashCode));
+                                            $jc(
+                                                $jc($jc(0, id.hashCode),
+                                                    parentItemId.hashCode),
+                                                parentItemVersionId.hashCode),
+                                            componentItemId.hashCode),
+                                        anyVersion.hashCode),
+                                    kitContainerDefId.hashCode),
+                                trayLayerDefId.hashCode),
+                            forceContainerOrLayer.hashCode),
+                        quantity.hashCode),
+                    v.hashCode),
+                minimumQuantity.hashCode),
+            placementInSequence.hashCode),
+        uomId.hashCode));
   }
 
   @override
@@ -269,7 +285,8 @@ class _$DBComponent extends DBComponent {
           ..add('quantity', quantity)
           ..add('v', v)
           ..add('minimumQuantity', minimumQuantity)
-          ..add('placementInSequence', placementInSequence))
+          ..add('placementInSequence', placementInSequence)
+          ..add('uomId', uomId))
         .toString();
   }
 }
@@ -332,6 +349,10 @@ class DBComponentBuilder implements Builder<DBComponent, DBComponentBuilder> {
   set placementInSequence(int placementInSequence) =>
       _$this._placementInSequence = placementInSequence;
 
+  String _uomId;
+  String get uomId => _$this._uomId;
+  set uomId(String uomId) => _$this._uomId = uomId;
+
   DBComponentBuilder();
 
   DBComponentBuilder get _$this {
@@ -348,6 +369,7 @@ class DBComponentBuilder implements Builder<DBComponent, DBComponentBuilder> {
       _v = _$v.v;
       _minimumQuantity = _$v.minimumQuantity;
       _placementInSequence = _$v.placementInSequence;
+      _uomId = _$v.uomId;
       _$v = null;
     }
     return this;
@@ -381,7 +403,8 @@ class DBComponentBuilder implements Builder<DBComponent, DBComponentBuilder> {
             quantity: quantity,
             v: v,
             minimumQuantity: minimumQuantity,
-            placementInSequence: placementInSequence);
+            placementInSequence: placementInSequence,
+            uomId: uomId);
     replace(_$result);
     return _$result;
   }
@@ -416,6 +439,7 @@ class _$DBComponentActions extends DBComponentActions {
   final FieldDispatcher<int> v;
   final FieldDispatcher<int> minimumQuantity;
   final FieldDispatcher<int> placementInSequence;
+  final FieldDispatcher<String> uomId;
 
   _$DBComponentActions._(this.$options)
       : $replace =
@@ -468,6 +492,8 @@ class _$DBComponentActions extends DBComponentActions {
             (a) => a?.placementInSequence,
             (s) => s?.placementInSequence,
             (p, b) => p?.placementInSequence = b),
+        uomId = $options.field<String>(
+            'uomId', (a) => a?.uomId, (s) => s?.uomId, (p, b) => p?.uomId = b),
         super._();
 
   factory _$DBComponentActions(DBComponentActionsOptions options) =>
@@ -496,6 +522,7 @@ class _$DBComponentActions extends DBComponentActions {
         this.v,
         this.minimumQuantity,
         this.placementInSequence,
+        this.uomId,
       ]);
 
   @override
@@ -513,6 +540,7 @@ class _$DBComponentActions extends DBComponentActions {
     v.$reducer(reducer);
     minimumQuantity.$reducer(reducer);
     placementInSequence.$reducer(reducer);
+    uomId.$reducer(reducer);
   }
 
   @override

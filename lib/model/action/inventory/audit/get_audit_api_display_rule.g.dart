@@ -30,6 +30,12 @@ class _$GetAuditApiDisplayRuleSerializer
         ..add(serializers.serialize(object.manage,
             specifiedType: const FullType(bool)));
     }
+    if (object.manageInventoryTypesCount != null) {
+      result
+        ..add('manageInventoryTypesCount')
+        ..add(serializers.serialize(object.manageInventoryTypesCount,
+            specifiedType: const FullType(bool)));
+    }
     if (object.start != null) {
       result
         ..add('start')
@@ -92,6 +98,10 @@ class _$GetAuditApiDisplayRuleSerializer
           result.manage = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'manageInventoryTypesCount':
+          result.manageInventoryTypesCount = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'start':
           result.start = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -131,6 +141,8 @@ class _$GetAuditApiDisplayRule extends GetAuditApiDisplayRule {
   @override
   final bool manage;
   @override
+  final bool manageInventoryTypesCount;
+  @override
   final bool start;
   @override
   final bool submit;
@@ -151,6 +163,7 @@ class _$GetAuditApiDisplayRule extends GetAuditApiDisplayRule {
 
   _$GetAuditApiDisplayRule._(
       {this.manage,
+      this.manageInventoryTypesCount,
       this.start,
       this.submit,
       this.cancel,
@@ -174,6 +187,7 @@ class _$GetAuditApiDisplayRule extends GetAuditApiDisplayRule {
     if (identical(other, this)) return true;
     return other is GetAuditApiDisplayRule &&
         manage == other.manage &&
+        manageInventoryTypesCount == other.manageInventoryTypesCount &&
         start == other.start &&
         submit == other.submit &&
         cancel == other.cancel &&
@@ -190,7 +204,11 @@ class _$GetAuditApiDisplayRule extends GetAuditApiDisplayRule {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, manage.hashCode), start.hashCode),
+                        $jc(
+                            $jc(
+                                $jc($jc(0, manage.hashCode),
+                                    manageInventoryTypesCount.hashCode),
+                                start.hashCode),
                             submit.hashCode),
                         cancel.hashCode),
                     addCounts.hashCode),
@@ -203,6 +221,7 @@ class _$GetAuditApiDisplayRule extends GetAuditApiDisplayRule {
   String toString() {
     return (newBuiltValueToStringHelper('GetAuditApiDisplayRule')
           ..add('manage', manage)
+          ..add('manageInventoryTypesCount', manageInventoryTypesCount)
           ..add('start', start)
           ..add('submit', submit)
           ..add('cancel', cancel)
@@ -221,6 +240,11 @@ class GetAuditApiDisplayRuleBuilder
   bool _manage;
   bool get manage => _$this._manage;
   set manage(bool manage) => _$this._manage = manage;
+
+  bool _manageInventoryTypesCount;
+  bool get manageInventoryTypesCount => _$this._manageInventoryTypesCount;
+  set manageInventoryTypesCount(bool manageInventoryTypesCount) =>
+      _$this._manageInventoryTypesCount = manageInventoryTypesCount;
 
   bool _start;
   bool get start => _$this._start;
@@ -255,6 +279,7 @@ class GetAuditApiDisplayRuleBuilder
   GetAuditApiDisplayRuleBuilder get _$this {
     if (_$v != null) {
       _manage = _$v.manage;
+      _manageInventoryTypesCount = _$v.manageInventoryTypesCount;
       _start = _$v.start;
       _submit = _$v.submit;
       _cancel = _$v.cancel;
@@ -285,6 +310,7 @@ class GetAuditApiDisplayRuleBuilder
     final _$result = _$v ??
         new _$GetAuditApiDisplayRule._(
             manage: manage,
+            manageInventoryTypesCount: manageInventoryTypesCount,
             start: start,
             submit: submit,
             cancel: cancel,
@@ -317,6 +343,7 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
 
   final ActionDispatcher<GetAuditApiDisplayRule> $replace;
   final FieldDispatcher<bool> manage;
+  final FieldDispatcher<bool> manageInventoryTypesCount;
   final FieldDispatcher<bool> start;
   final FieldDispatcher<bool> submit;
   final FieldDispatcher<bool> cancel;
@@ -330,6 +357,11 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
             '\$replace', (a) => a?.$replace),
         manage = $options.field<bool>('manage', (a) => a?.manage,
             (s) => s?.manage, (p, b) => p?.manage = b),
+        manageInventoryTypesCount = $options.field<bool>(
+            'manageInventoryTypesCount',
+            (a) => a?.manageInventoryTypesCount,
+            (s) => s?.manageInventoryTypesCount,
+            (p, b) => p?.manageInventoryTypesCount = b),
         start = $options.field<bool>(
             'start', (a) => a?.start, (s) => s?.start, (p, b) => p?.start = b),
         submit = $options.field<bool>('submit', (a) => a?.submit,
@@ -363,6 +395,7 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.manage,
+        this.manageInventoryTypesCount,
         this.start,
         this.submit,
         this.cancel,
@@ -376,6 +409,7 @@ class _$GetAuditApiDisplayRuleActions extends GetAuditApiDisplayRuleActions {
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     manage.$reducer(reducer);
+    manageInventoryTypesCount.$reducer(reducer);
     start.$reducer(reducer);
     submit.$reducer(reducer);
     cancel.$reducer(reducer);

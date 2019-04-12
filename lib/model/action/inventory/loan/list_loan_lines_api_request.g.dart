@@ -30,11 +30,24 @@ class _$ListLoanLinesApiRequestSerializer
         ..add(serializers.serialize(object.loanId,
             specifiedType: const FullType(String)));
     }
+    if (object.search != null) {
+      result
+        ..add('search')
+        ..add(serializers.serialize(object.search,
+            specifiedType: const FullType(String)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
         ..add(serializers.serialize(object.paging,
             specifiedType: const FullType(PaginationParams)));
+    }
+    if (object.orderBy != null) {
+      result
+        ..add('orderBy')
+        ..add(serializers.serialize(object.orderBy,
+            specifiedType: const FullType(OrderByParams,
+                const [const FullType(ListLoanLinesApiOrderBy)])));
     }
 
     return result;
@@ -56,10 +69,20 @@ class _$ListLoanLinesApiRequestSerializer
           result.loanId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'search':
+          result.search = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
               as PaginationParams);
+          break;
+        case 'orderBy':
+          result.orderBy.replace(serializers.deserialize(value,
+              specifiedType: const FullType(OrderByParams, const [
+                const FullType(ListLoanLinesApiOrderBy)
+              ])) as OrderByParams<ListLoanLinesApiOrderBy>);
           break;
       }
     }
@@ -72,13 +95,19 @@ class _$ListLoanLinesApiRequest extends ListLoanLinesApiRequest {
   @override
   final String loanId;
   @override
+  final String search;
+  @override
   final PaginationParams paging;
+  @override
+  final OrderByParams<ListLoanLinesApiOrderBy> orderBy;
 
   factory _$ListLoanLinesApiRequest(
           [void updates(ListLoanLinesApiRequestBuilder b)]) =>
       (new ListLoanLinesApiRequestBuilder()..update(updates)).build();
 
-  _$ListLoanLinesApiRequest._({this.loanId, this.paging}) : super._();
+  _$ListLoanLinesApiRequest._(
+      {this.loanId, this.search, this.paging, this.orderBy})
+      : super._();
 
   @override
   ListLoanLinesApiRequest rebuild(
@@ -94,19 +123,25 @@ class _$ListLoanLinesApiRequest extends ListLoanLinesApiRequest {
     if (identical(other, this)) return true;
     return other is ListLoanLinesApiRequest &&
         loanId == other.loanId &&
-        paging == other.paging;
+        search == other.search &&
+        paging == other.paging &&
+        orderBy == other.orderBy;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, loanId.hashCode), paging.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, loanId.hashCode), search.hashCode), paging.hashCode),
+        orderBy.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListLoanLinesApiRequest')
           ..add('loanId', loanId)
-          ..add('paging', paging))
+          ..add('search', search)
+          ..add('paging', paging)
+          ..add('orderBy', orderBy))
         .toString();
   }
 }
@@ -120,17 +155,29 @@ class ListLoanLinesApiRequestBuilder
   String get loanId => _$this._loanId;
   set loanId(String loanId) => _$this._loanId = loanId;
 
+  String _search;
+  String get search => _$this._search;
+  set search(String search) => _$this._search = search;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
   set paging(PaginationParamsBuilder paging) => _$this._paging = paging;
+
+  OrderByParamsBuilder<ListLoanLinesApiOrderBy> _orderBy;
+  OrderByParamsBuilder<ListLoanLinesApiOrderBy> get orderBy =>
+      _$this._orderBy ??= new OrderByParamsBuilder<ListLoanLinesApiOrderBy>();
+  set orderBy(OrderByParamsBuilder<ListLoanLinesApiOrderBy> orderBy) =>
+      _$this._orderBy = orderBy;
 
   ListLoanLinesApiRequestBuilder();
 
   ListLoanLinesApiRequestBuilder get _$this {
     if (_$v != null) {
       _loanId = _$v.loanId;
+      _search = _$v.search;
       _paging = _$v.paging?.toBuilder();
+      _orderBy = _$v.orderBy?.toBuilder();
       _$v = null;
     }
     return this;
@@ -155,12 +202,17 @@ class ListLoanLinesApiRequestBuilder
     try {
       _$result = _$v ??
           new _$ListLoanLinesApiRequest._(
-              loanId: loanId, paging: _paging?.build());
+              loanId: loanId,
+              search: search,
+              paging: _paging?.build(),
+              orderBy: _orderBy?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'paging';
         _paging?.build();
+        _$failedField = 'orderBy';
+        _orderBy?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'ListLoanLinesApiRequest', _$failedField, e.toString());
@@ -192,13 +244,17 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
 
   final ActionDispatcher<ListLoanLinesApiRequest> $replace;
   final FieldDispatcher<String> loanId;
+  final FieldDispatcher<String> search;
   final PaginationParamsActions paging;
+  final OrderByParamsActions<ListLoanLinesApiOrderBy> orderBy;
 
   _$ListLoanLinesApiRequestActions._(this.$options)
       : $replace = $options.action<ListLoanLinesApiRequest>(
             '\$replace', (a) => a?.$replace),
         loanId = $options.field<String>('loanId', (a) => a?.loanId,
             (s) => s?.loanId, (p, b) => p?.loanId = b),
+        search = $options.field<String>('search', (a) => a?.search,
+            (s) => s?.search, (p, b) => p?.search = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -208,6 +264,16 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
             (s) => s?.paging,
             (b) => b?.paging,
             (parent, builder) => parent?.paging = builder)),
+        orderBy = OrderByParamsActions<ListLoanLinesApiOrderBy>(() =>
+            $options.stateful<
+                    OrderByParams<ListLoanLinesApiOrderBy>,
+                    OrderByParamsBuilder<ListLoanLinesApiOrderBy>,
+                    OrderByParamsActions<ListLoanLinesApiOrderBy>>(
+                'orderBy',
+                (a) => a.orderBy,
+                (s) => s?.orderBy,
+                (b) => b?.orderBy,
+                (parent, builder) => parent?.orderBy = builder)),
         super._();
 
   factory _$ListLoanLinesApiRequestActions(
@@ -225,6 +291,7 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.paging,
+        this.orderBy,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
@@ -233,19 +300,23 @@ class _$ListLoanLinesApiRequestActions extends ListLoanLinesApiRequestActions {
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.loanId,
+        this.search,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     loanId.$reducer(reducer);
+    search.$reducer(reducer);
     paging.$reducer(reducer);
+    orderBy.$reducer(reducer);
   }
 
   @override
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     paging.$middleware(middleware);
+    orderBy.$middleware(middleware);
   }
 
   FullType _$fullType;

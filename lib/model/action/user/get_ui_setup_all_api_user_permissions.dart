@@ -44,6 +44,12 @@ abstract class GetUiSetupAllApiUserPermissions implements Built<GetUiSetupAllApi
   @nullable
   bool get getPricing;
   
+  @nullable
+  bool get requestLoan;
+  
+  @nullable
+  bool get createLoan;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -85,6 +91,10 @@ abstract class GetUiSetupAllApiUserPermissionsActions extends ModelActions<GetUi
   FieldDispatcher<bool> get createAudit;
   
   FieldDispatcher<bool> get getPricing;
+  
+  FieldDispatcher<bool> get requestLoan;
+  
+  FieldDispatcher<bool> get createLoan;
   
   ////////////////////////////////
   /// Constructors

@@ -5,6 +5,7 @@ import 'package:modux/modux.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_all_api_biz_unit.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_all_api_org_unit.dart';
 import 'package:built_collection/built_collection.dart';
+import 'dart:core';
 
 part 'get_ui_setup_all_api_org_info.g.dart';
 
@@ -30,6 +31,9 @@ abstract class GetUiSetupAllApiOrgInfo implements Built<GetUiSetupAllApiOrgInfo,
   
   @nullable
   BuiltList<GetUiSetupAllApiOrgUnit> get fullAccessOrgUnits;
+  
+  @nullable
+  bool get allowCasesWithoutDates;
   
   ////////////////////////////////
   /// Constructors
@@ -62,6 +66,8 @@ abstract class GetUiSetupAllApiOrgInfoActions extends ModelActions<GetUiSetupAll
   FieldDispatcher<BuiltList<GetUiSetupAllApiOrgUnit>> get invOnlyOrgUnits;
   
   FieldDispatcher<BuiltList<GetUiSetupAllApiOrgUnit>> get fullAccessOrgUnits;
+  
+  FieldDispatcher<bool> get allowCasesWithoutDates;
   
   ////////////////////////////////
   /// Constructors

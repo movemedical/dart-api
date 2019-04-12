@@ -42,6 +42,9 @@ abstract class UpdateOrgUnitApiRequest implements Built<UpdateOrgUnitApiRequest,
   @nullable
   bool get allowMixedInventoryTypeUsage;
   
+  @nullable
+  String get opsOrgUnitId;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -81,6 +84,8 @@ abstract class UpdateOrgUnitApiRequestActions extends ModelActions<UpdateOrgUnit
   FieldDispatcher<bool> get allowRemoteUsage;
   
   FieldDispatcher<bool> get allowMixedInventoryTypeUsage;
+  
+  FieldDispatcher<String> get opsOrgUnitId;
   
   ////////////////////////////////
   /// Constructors

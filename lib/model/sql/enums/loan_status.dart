@@ -16,8 +16,10 @@ class LoanStatus extends EnumClass {
   static const LoanStatus ACTIVE_FILLING = _$wireACTIVE_FILLING;
   static const LoanStatus ACTIVE_FULL = _$wireACTIVE_FULL;
   static const LoanStatus INACTIVE = _$wireINACTIVE;
+  static const LoanStatus INACTIVE_RETURNING = _$wireINACTIVE_RETURNING;
   static const LoanStatus CANCELED = _$wireCANCELED;
   static const LoanStatus DENIED = _$wireDENIED;
+  static const LoanStatus CLOSED = _$wireCLOSED;
   
   ////////////////////////////////
   /// Constructor

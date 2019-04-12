@@ -6,6 +6,8 @@ import 'dart:core';
 import 'package:movemedical_api/model/customer_address.dart';
 import 'package:movemedical_api/model/email.dart';
 import 'package:movemedical_api/model/phone_number.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:movemedical_api/model/essentials/model/api/attribute_contact.dart';
 
 part 'get_customer_api_customer_detail.g.dart';
 
@@ -68,6 +70,9 @@ abstract class GetCustomerApiCustomerDetail implements Built<GetCustomerApiCusto
   @nullable
   bool get moveManaged;
   
+  @nullable
+  BuiltList<AttributeContact> get attributeContacts;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -123,6 +128,8 @@ abstract class GetCustomerApiCustomerDetailActions extends ModelActions<GetCusto
   FieldDispatcher<bool> get active;
   
   FieldDispatcher<bool> get moveManaged;
+  
+  FieldDispatcher<BuiltList<AttributeContact>> get attributeContacts;
   
   ////////////////////////////////
   /// Constructors

@@ -43,6 +43,9 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
       'conversationUpdatedPushMessage',
       serializers.serialize(object.conversationUpdatedPushMessage,
           specifiedType: const FullType(ConversationUpdatedPushMessage)),
+      'createPickFinishedPushMessage',
+      serializers.serialize(object.createPickFinishedPushMessage,
+          specifiedType: const FullType(CreatePickFinishedPushMessage)),
       'exportLogFilePushMessage',
       serializers.serialize(object.exportLogFilePushMessage,
           specifiedType: const FullType(ExportLogFilePushMessage)),
@@ -55,12 +58,24 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
       'issueRegeneratedPushMessage',
       serializers.serialize(object.issueRegeneratedPushMessage,
           specifiedType: const FullType(IssueRegeneratedPushMessage)),
+      'itemFileUpdatePushMessage',
+      serializers.serialize(object.itemFileUpdatePushMessage,
+          specifiedType: const FullType(ItemFileUpdatePushMessage)),
+      'loanDetailPushMessage',
+      serializers.serialize(object.loanDetailPushMessage,
+          specifiedType: const FullType(LoanDetailPushMessage)),
+      'loanLinesUpdatedPushMessage',
+      serializers.serialize(object.loanLinesUpdatedPushMessage,
+          specifiedType: const FullType(LoanLinesUpdatedPushMessage)),
       'messageAddedPushMessage',
       serializers.serialize(object.messageAddedPushMessage,
           specifiedType: const FullType(MessageAddedPushMessage)),
       'messagesReadUnreadPushMessage',
       serializers.serialize(object.messagesReadUnreadPushMessage,
           specifiedType: const FullType(MessagesReadUnreadPushMessage)),
+      'messagingBadgeUpdatedPushMessage',
+      serializers.serialize(object.messagingBadgeUpdatedPushMessage,
+          specifiedType: const FullType(MessagingBadgeUpdatedPushMessage)),
       'noteAddedUpdatedPushMessage',
       serializers.serialize(object.noteAddedUpdatedPushMessage,
           specifiedType: const FullType(NoteAddedUpdatedPushMessage)),
@@ -76,6 +91,9 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
       'shipmentFileUpdatePushMessage',
       serializers.serialize(object.shipmentFileUpdatePushMessage,
           specifiedType: const FullType(ShipmentFileUpdatePushMessage)),
+      'shipmentUpdatedPushMessage',
+      serializers.serialize(object.shipmentUpdatedPushMessage,
+          specifiedType: const FullType(ShipmentUpdatedPushMessage)),
       'stockSummaryKeyUpdatedPushMessage',
       serializers.serialize(object.stockSummaryKeyUpdatedPushMessage,
           specifiedType: const FullType(StockSummaryKeyUpdatedPushMessage)),
@@ -148,6 +166,12 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
                   specifiedType: const FullType(ConversationUpdatedPushMessage))
               as ConversationUpdatedPushMessage);
           break;
+        case 'createPickFinishedPushMessage':
+          result.createPickFinishedPushMessage.replace(serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(CreatePickFinishedPushMessage))
+              as CreatePickFinishedPushMessage);
+          break;
         case 'exportLogFilePushMessage':
           result.exportLogFilePushMessage.replace(serializers.deserialize(value,
                   specifiedType: const FullType(ExportLogFilePushMessage))
@@ -170,6 +194,23 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
                   specifiedType: const FullType(IssueRegeneratedPushMessage))
               as IssueRegeneratedPushMessage);
           break;
+        case 'itemFileUpdatePushMessage':
+          result.itemFileUpdatePushMessage.replace(serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(ItemFileUpdatePushMessage))
+              as ItemFileUpdatePushMessage);
+          break;
+        case 'loanDetailPushMessage':
+          result.loanDetailPushMessage.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(LoanDetailPushMessage))
+              as LoanDetailPushMessage);
+          break;
+        case 'loanLinesUpdatedPushMessage':
+          result.loanLinesUpdatedPushMessage.replace(serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(LoanLinesUpdatedPushMessage))
+              as LoanLinesUpdatedPushMessage);
+          break;
         case 'messageAddedPushMessage':
           result.messageAddedPushMessage.replace(serializers.deserialize(value,
                   specifiedType: const FullType(MessageAddedPushMessage))
@@ -180,6 +221,13 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
                   value,
                   specifiedType: const FullType(MessagesReadUnreadPushMessage))
               as MessagesReadUnreadPushMessage);
+          break;
+        case 'messagingBadgeUpdatedPushMessage':
+          result.messagingBadgeUpdatedPushMessage.replace(
+              serializers.deserialize(value,
+                      specifiedType:
+                          const FullType(MessagingBadgeUpdatedPushMessage))
+                  as MessagingBadgeUpdatedPushMessage);
           break;
         case 'noteAddedUpdatedPushMessage':
           result.noteAddedUpdatedPushMessage.replace(serializers.deserialize(
@@ -209,6 +257,12 @@ class _$PushPayloadsSerializer implements StructuredSerializer<PushPayloads> {
                   value,
                   specifiedType: const FullType(ShipmentFileUpdatePushMessage))
               as ShipmentFileUpdatePushMessage);
+          break;
+        case 'shipmentUpdatedPushMessage':
+          result.shipmentUpdatedPushMessage.replace(serializers.deserialize(
+                  value,
+                  specifiedType: const FullType(ShipmentUpdatedPushMessage))
+              as ShipmentUpdatedPushMessage);
           break;
         case 'stockSummaryKeyUpdatedPushMessage':
           result.stockSummaryKeyUpdatedPushMessage.replace(
@@ -253,6 +307,8 @@ class _$PushPayloads extends PushPayloads {
   @override
   final ConversationUpdatedPushMessage conversationUpdatedPushMessage;
   @override
+  final CreatePickFinishedPushMessage createPickFinishedPushMessage;
+  @override
   final ExportLogFilePushMessage exportLogFilePushMessage;
   @override
   final FacilityUpdatedPushMessage facilityUpdatedPushMessage;
@@ -261,9 +317,17 @@ class _$PushPayloads extends PushPayloads {
   @override
   final IssueRegeneratedPushMessage issueRegeneratedPushMessage;
   @override
+  final ItemFileUpdatePushMessage itemFileUpdatePushMessage;
+  @override
+  final LoanDetailPushMessage loanDetailPushMessage;
+  @override
+  final LoanLinesUpdatedPushMessage loanLinesUpdatedPushMessage;
+  @override
   final MessageAddedPushMessage messageAddedPushMessage;
   @override
   final MessagesReadUnreadPushMessage messagesReadUnreadPushMessage;
+  @override
+  final MessagingBadgeUpdatedPushMessage messagingBadgeUpdatedPushMessage;
   @override
   final NoteAddedUpdatedPushMessage noteAddedUpdatedPushMessage;
   @override
@@ -274,6 +338,8 @@ class _$PushPayloads extends PushPayloads {
   final RefreshConversationListPushMessage refreshConversationListPushMessage;
   @override
   final ShipmentFileUpdatePushMessage shipmentFileUpdatePushMessage;
+  @override
+  final ShipmentUpdatedPushMessage shipmentUpdatedPushMessage;
   @override
   final StockSummaryKeyUpdatedPushMessage stockSummaryKeyUpdatedPushMessage;
   @override
@@ -293,17 +359,23 @@ class _$PushPayloads extends PushPayloads {
       this.caseRequirementsUpdatedPushMessage,
       this.caseScheduleUpdatePushMessage,
       this.conversationUpdatedPushMessage,
+      this.createPickFinishedPushMessage,
       this.exportLogFilePushMessage,
       this.facilityUpdatedPushMessage,
       this.importLogFilePushMessage,
       this.issueRegeneratedPushMessage,
+      this.itemFileUpdatePushMessage,
+      this.loanDetailPushMessage,
+      this.loanLinesUpdatedPushMessage,
       this.messageAddedPushMessage,
       this.messagesReadUnreadPushMessage,
+      this.messagingBadgeUpdatedPushMessage,
       this.noteAddedUpdatedPushMessage,
       this.orderDetailPushMessage,
       this.orderFilePushMessage,
       this.refreshConversationListPushMessage,
       this.shipmentFileUpdatePushMessage,
+      this.shipmentUpdatedPushMessage,
       this.stockSummaryKeyUpdatedPushMessage,
       this.uiSetupUpdatedPushMessage,
       this.movePresenceEvent})
@@ -340,6 +412,10 @@ class _$PushPayloads extends PushPayloads {
       throw new BuiltValueNullFieldError(
           'PushPayloads', 'conversationUpdatedPushMessage');
     }
+    if (createPickFinishedPushMessage == null) {
+      throw new BuiltValueNullFieldError(
+          'PushPayloads', 'createPickFinishedPushMessage');
+    }
     if (exportLogFilePushMessage == null) {
       throw new BuiltValueNullFieldError(
           'PushPayloads', 'exportLogFilePushMessage');
@@ -356,6 +432,18 @@ class _$PushPayloads extends PushPayloads {
       throw new BuiltValueNullFieldError(
           'PushPayloads', 'issueRegeneratedPushMessage');
     }
+    if (itemFileUpdatePushMessage == null) {
+      throw new BuiltValueNullFieldError(
+          'PushPayloads', 'itemFileUpdatePushMessage');
+    }
+    if (loanDetailPushMessage == null) {
+      throw new BuiltValueNullFieldError(
+          'PushPayloads', 'loanDetailPushMessage');
+    }
+    if (loanLinesUpdatedPushMessage == null) {
+      throw new BuiltValueNullFieldError(
+          'PushPayloads', 'loanLinesUpdatedPushMessage');
+    }
     if (messageAddedPushMessage == null) {
       throw new BuiltValueNullFieldError(
           'PushPayloads', 'messageAddedPushMessage');
@@ -363,6 +451,10 @@ class _$PushPayloads extends PushPayloads {
     if (messagesReadUnreadPushMessage == null) {
       throw new BuiltValueNullFieldError(
           'PushPayloads', 'messagesReadUnreadPushMessage');
+    }
+    if (messagingBadgeUpdatedPushMessage == null) {
+      throw new BuiltValueNullFieldError(
+          'PushPayloads', 'messagingBadgeUpdatedPushMessage');
     }
     if (noteAddedUpdatedPushMessage == null) {
       throw new BuiltValueNullFieldError(
@@ -383,6 +475,10 @@ class _$PushPayloads extends PushPayloads {
     if (shipmentFileUpdatePushMessage == null) {
       throw new BuiltValueNullFieldError(
           'PushPayloads', 'shipmentFileUpdatePushMessage');
+    }
+    if (shipmentUpdatedPushMessage == null) {
+      throw new BuiltValueNullFieldError(
+          'PushPayloads', 'shipmentUpdatedPushMessage');
     }
     if (stockSummaryKeyUpdatedPushMessage == null) {
       throw new BuiltValueNullFieldError(
@@ -419,18 +515,25 @@ class _$PushPayloads extends PushPayloads {
         caseScheduleUpdatePushMessage == other.caseScheduleUpdatePushMessage &&
         conversationUpdatedPushMessage ==
             other.conversationUpdatedPushMessage &&
+        createPickFinishedPushMessage == other.createPickFinishedPushMessage &&
         exportLogFilePushMessage == other.exportLogFilePushMessage &&
         facilityUpdatedPushMessage == other.facilityUpdatedPushMessage &&
         importLogFilePushMessage == other.importLogFilePushMessage &&
         issueRegeneratedPushMessage == other.issueRegeneratedPushMessage &&
+        itemFileUpdatePushMessage == other.itemFileUpdatePushMessage &&
+        loanDetailPushMessage == other.loanDetailPushMessage &&
+        loanLinesUpdatedPushMessage == other.loanLinesUpdatedPushMessage &&
         messageAddedPushMessage == other.messageAddedPushMessage &&
         messagesReadUnreadPushMessage == other.messagesReadUnreadPushMessage &&
+        messagingBadgeUpdatedPushMessage ==
+            other.messagingBadgeUpdatedPushMessage &&
         noteAddedUpdatedPushMessage == other.noteAddedUpdatedPushMessage &&
         orderDetailPushMessage == other.orderDetailPushMessage &&
         orderFilePushMessage == other.orderFilePushMessage &&
         refreshConversationListPushMessage ==
             other.refreshConversationListPushMessage &&
         shipmentFileUpdatePushMessage == other.shipmentFileUpdatePushMessage &&
+        shipmentUpdatedPushMessage == other.shipmentUpdatedPushMessage &&
         stockSummaryKeyUpdatedPushMessage ==
             other.stockSummaryKeyUpdatedPushMessage &&
         uiSetupUpdatedPushMessage == other.uiSetupUpdatedPushMessage &&
@@ -457,23 +560,23 @@ class _$PushPayloads extends PushPayloads {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc(0, auditFilePushMessage.hashCode), auditFileUpdatePushMessage.hashCode), auditUpdatedPushMessage.hashCode),
-                                                                                caseEventFileUpdatePushMessage.hashCode),
-                                                                            caseEventUpdatePushMessage.hashCode),
-                                                                        caseRequirementsUpdatedPushMessage.hashCode),
-                                                                    caseScheduleUpdatePushMessage.hashCode),
-                                                                conversationUpdatedPushMessage.hashCode),
-                                                            exportLogFilePushMessage.hashCode),
-                                                        facilityUpdatedPushMessage.hashCode),
-                                                    importLogFilePushMessage.hashCode),
-                                                issueRegeneratedPushMessage.hashCode),
-                                            messageAddedPushMessage.hashCode),
-                                        messagesReadUnreadPushMessage.hashCode),
-                                    noteAddedUpdatedPushMessage.hashCode),
-                                orderDetailPushMessage.hashCode),
-                            orderFilePushMessage.hashCode),
-                        refreshConversationListPushMessage.hashCode),
-                    shipmentFileUpdatePushMessage.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, auditFilePushMessage.hashCode), auditFileUpdatePushMessage.hashCode), auditUpdatedPushMessage.hashCode), caseEventFileUpdatePushMessage.hashCode), caseEventUpdatePushMessage.hashCode), caseRequirementsUpdatedPushMessage.hashCode), caseScheduleUpdatePushMessage.hashCode), conversationUpdatedPushMessage.hashCode), createPickFinishedPushMessage.hashCode),
+                                                                                exportLogFilePushMessage.hashCode),
+                                                                            facilityUpdatedPushMessage.hashCode),
+                                                                        importLogFilePushMessage.hashCode),
+                                                                    issueRegeneratedPushMessage.hashCode),
+                                                                itemFileUpdatePushMessage.hashCode),
+                                                            loanDetailPushMessage.hashCode),
+                                                        loanLinesUpdatedPushMessage.hashCode),
+                                                    messageAddedPushMessage.hashCode),
+                                                messagesReadUnreadPushMessage.hashCode),
+                                            messagingBadgeUpdatedPushMessage.hashCode),
+                                        noteAddedUpdatedPushMessage.hashCode),
+                                    orderDetailPushMessage.hashCode),
+                                orderFilePushMessage.hashCode),
+                            refreshConversationListPushMessage.hashCode),
+                        shipmentFileUpdatePushMessage.hashCode),
+                    shipmentUpdatedPushMessage.hashCode),
                 stockSummaryKeyUpdatedPushMessage.hashCode),
             uiSetupUpdatedPushMessage.hashCode),
         movePresenceEvent.hashCode));
@@ -493,18 +596,25 @@ class _$PushPayloads extends PushPayloads {
           ..add('caseScheduleUpdatePushMessage', caseScheduleUpdatePushMessage)
           ..add(
               'conversationUpdatedPushMessage', conversationUpdatedPushMessage)
+          ..add('createPickFinishedPushMessage', createPickFinishedPushMessage)
           ..add('exportLogFilePushMessage', exportLogFilePushMessage)
           ..add('facilityUpdatedPushMessage', facilityUpdatedPushMessage)
           ..add('importLogFilePushMessage', importLogFilePushMessage)
           ..add('issueRegeneratedPushMessage', issueRegeneratedPushMessage)
+          ..add('itemFileUpdatePushMessage', itemFileUpdatePushMessage)
+          ..add('loanDetailPushMessage', loanDetailPushMessage)
+          ..add('loanLinesUpdatedPushMessage', loanLinesUpdatedPushMessage)
           ..add('messageAddedPushMessage', messageAddedPushMessage)
           ..add('messagesReadUnreadPushMessage', messagesReadUnreadPushMessage)
+          ..add('messagingBadgeUpdatedPushMessage',
+              messagingBadgeUpdatedPushMessage)
           ..add('noteAddedUpdatedPushMessage', noteAddedUpdatedPushMessage)
           ..add('orderDetailPushMessage', orderDetailPushMessage)
           ..add('orderFilePushMessage', orderFilePushMessage)
           ..add('refreshConversationListPushMessage',
               refreshConversationListPushMessage)
           ..add('shipmentFileUpdatePushMessage', shipmentFileUpdatePushMessage)
+          ..add('shipmentUpdatedPushMessage', shipmentUpdatedPushMessage)
           ..add('stockSummaryKeyUpdatedPushMessage',
               stockSummaryKeyUpdatedPushMessage)
           ..add('uiSetupUpdatedPushMessage', uiSetupUpdatedPushMessage)
@@ -583,6 +693,14 @@ class PushPayloadsBuilder
               conversationUpdatedPushMessage) =>
       _$this._conversationUpdatedPushMessage = conversationUpdatedPushMessage;
 
+  CreatePickFinishedPushMessageBuilder _createPickFinishedPushMessage;
+  CreatePickFinishedPushMessageBuilder get createPickFinishedPushMessage =>
+      _$this._createPickFinishedPushMessage ??=
+          new CreatePickFinishedPushMessageBuilder();
+  set createPickFinishedPushMessage(
+          CreatePickFinishedPushMessageBuilder createPickFinishedPushMessage) =>
+      _$this._createPickFinishedPushMessage = createPickFinishedPushMessage;
+
   ExportLogFilePushMessageBuilder _exportLogFilePushMessage;
   ExportLogFilePushMessageBuilder get exportLogFilePushMessage =>
       _$this._exportLogFilePushMessage ??=
@@ -615,6 +733,29 @@ class PushPayloadsBuilder
           IssueRegeneratedPushMessageBuilder issueRegeneratedPushMessage) =>
       _$this._issueRegeneratedPushMessage = issueRegeneratedPushMessage;
 
+  ItemFileUpdatePushMessageBuilder _itemFileUpdatePushMessage;
+  ItemFileUpdatePushMessageBuilder get itemFileUpdatePushMessage =>
+      _$this._itemFileUpdatePushMessage ??=
+          new ItemFileUpdatePushMessageBuilder();
+  set itemFileUpdatePushMessage(
+          ItemFileUpdatePushMessageBuilder itemFileUpdatePushMessage) =>
+      _$this._itemFileUpdatePushMessage = itemFileUpdatePushMessage;
+
+  LoanDetailPushMessageBuilder _loanDetailPushMessage;
+  LoanDetailPushMessageBuilder get loanDetailPushMessage =>
+      _$this._loanDetailPushMessage ??= new LoanDetailPushMessageBuilder();
+  set loanDetailPushMessage(
+          LoanDetailPushMessageBuilder loanDetailPushMessage) =>
+      _$this._loanDetailPushMessage = loanDetailPushMessage;
+
+  LoanLinesUpdatedPushMessageBuilder _loanLinesUpdatedPushMessage;
+  LoanLinesUpdatedPushMessageBuilder get loanLinesUpdatedPushMessage =>
+      _$this._loanLinesUpdatedPushMessage ??=
+          new LoanLinesUpdatedPushMessageBuilder();
+  set loanLinesUpdatedPushMessage(
+          LoanLinesUpdatedPushMessageBuilder loanLinesUpdatedPushMessage) =>
+      _$this._loanLinesUpdatedPushMessage = loanLinesUpdatedPushMessage;
+
   MessageAddedPushMessageBuilder _messageAddedPushMessage;
   MessageAddedPushMessageBuilder get messageAddedPushMessage =>
       _$this._messageAddedPushMessage ??= new MessageAddedPushMessageBuilder();
@@ -629,6 +770,17 @@ class PushPayloadsBuilder
   set messagesReadUnreadPushMessage(
           MessagesReadUnreadPushMessageBuilder messagesReadUnreadPushMessage) =>
       _$this._messagesReadUnreadPushMessage = messagesReadUnreadPushMessage;
+
+  MessagingBadgeUpdatedPushMessageBuilder _messagingBadgeUpdatedPushMessage;
+  MessagingBadgeUpdatedPushMessageBuilder
+      get messagingBadgeUpdatedPushMessage =>
+          _$this._messagingBadgeUpdatedPushMessage ??=
+              new MessagingBadgeUpdatedPushMessageBuilder();
+  set messagingBadgeUpdatedPushMessage(
+          MessagingBadgeUpdatedPushMessageBuilder
+              messagingBadgeUpdatedPushMessage) =>
+      _$this._messagingBadgeUpdatedPushMessage =
+          messagingBadgeUpdatedPushMessage;
 
   NoteAddedUpdatedPushMessageBuilder _noteAddedUpdatedPushMessage;
   NoteAddedUpdatedPushMessageBuilder get noteAddedUpdatedPushMessage =>
@@ -669,6 +821,14 @@ class PushPayloadsBuilder
   set shipmentFileUpdatePushMessage(
           ShipmentFileUpdatePushMessageBuilder shipmentFileUpdatePushMessage) =>
       _$this._shipmentFileUpdatePushMessage = shipmentFileUpdatePushMessage;
+
+  ShipmentUpdatedPushMessageBuilder _shipmentUpdatedPushMessage;
+  ShipmentUpdatedPushMessageBuilder get shipmentUpdatedPushMessage =>
+      _$this._shipmentUpdatedPushMessage ??=
+          new ShipmentUpdatedPushMessageBuilder();
+  set shipmentUpdatedPushMessage(
+          ShipmentUpdatedPushMessageBuilder shipmentUpdatedPushMessage) =>
+      _$this._shipmentUpdatedPushMessage = shipmentUpdatedPushMessage;
 
   StockSummaryKeyUpdatedPushMessageBuilder _stockSummaryKeyUpdatedPushMessage;
   StockSummaryKeyUpdatedPushMessageBuilder
@@ -711,14 +871,22 @@ class PushPayloadsBuilder
           _$v.caseScheduleUpdatePushMessage?.toBuilder();
       _conversationUpdatedPushMessage =
           _$v.conversationUpdatedPushMessage?.toBuilder();
+      _createPickFinishedPushMessage =
+          _$v.createPickFinishedPushMessage?.toBuilder();
       _exportLogFilePushMessage = _$v.exportLogFilePushMessage?.toBuilder();
       _facilityUpdatedPushMessage = _$v.facilityUpdatedPushMessage?.toBuilder();
       _importLogFilePushMessage = _$v.importLogFilePushMessage?.toBuilder();
       _issueRegeneratedPushMessage =
           _$v.issueRegeneratedPushMessage?.toBuilder();
+      _itemFileUpdatePushMessage = _$v.itemFileUpdatePushMessage?.toBuilder();
+      _loanDetailPushMessage = _$v.loanDetailPushMessage?.toBuilder();
+      _loanLinesUpdatedPushMessage =
+          _$v.loanLinesUpdatedPushMessage?.toBuilder();
       _messageAddedPushMessage = _$v.messageAddedPushMessage?.toBuilder();
       _messagesReadUnreadPushMessage =
           _$v.messagesReadUnreadPushMessage?.toBuilder();
+      _messagingBadgeUpdatedPushMessage =
+          _$v.messagingBadgeUpdatedPushMessage?.toBuilder();
       _noteAddedUpdatedPushMessage =
           _$v.noteAddedUpdatedPushMessage?.toBuilder();
       _orderDetailPushMessage = _$v.orderDetailPushMessage?.toBuilder();
@@ -727,6 +895,7 @@ class PushPayloadsBuilder
           _$v.refreshConversationListPushMessage?.toBuilder();
       _shipmentFileUpdatePushMessage =
           _$v.shipmentFileUpdatePushMessage?.toBuilder();
+      _shipmentUpdatedPushMessage = _$v.shipmentUpdatedPushMessage?.toBuilder();
       _stockSummaryKeyUpdatedPushMessage =
           _$v.stockSummaryKeyUpdatedPushMessage?.toBuilder();
       _uiSetupUpdatedPushMessage = _$v.uiSetupUpdatedPushMessage?.toBuilder();
@@ -767,13 +936,20 @@ class PushPayloadsBuilder
                   caseScheduleUpdatePushMessage.build(),
               conversationUpdatedPushMessage:
                   conversationUpdatedPushMessage.build(),
+              createPickFinishedPushMessage:
+                  createPickFinishedPushMessage.build(),
               exportLogFilePushMessage: exportLogFilePushMessage.build(),
               facilityUpdatedPushMessage: facilityUpdatedPushMessage.build(),
               importLogFilePushMessage: importLogFilePushMessage.build(),
               issueRegeneratedPushMessage: issueRegeneratedPushMessage.build(),
+              itemFileUpdatePushMessage: itemFileUpdatePushMessage.build(),
+              loanDetailPushMessage: loanDetailPushMessage.build(),
+              loanLinesUpdatedPushMessage: loanLinesUpdatedPushMessage.build(),
               messageAddedPushMessage: messageAddedPushMessage.build(),
               messagesReadUnreadPushMessage:
                   messagesReadUnreadPushMessage.build(),
+              messagingBadgeUpdatedPushMessage:
+                  messagingBadgeUpdatedPushMessage.build(),
               noteAddedUpdatedPushMessage: noteAddedUpdatedPushMessage.build(),
               orderDetailPushMessage: orderDetailPushMessage.build(),
               orderFilePushMessage: orderFilePushMessage.build(),
@@ -781,6 +957,7 @@ class PushPayloadsBuilder
                   refreshConversationListPushMessage.build(),
               shipmentFileUpdatePushMessage:
                   shipmentFileUpdatePushMessage.build(),
+              shipmentUpdatedPushMessage: shipmentUpdatedPushMessage.build(),
               stockSummaryKeyUpdatedPushMessage:
                   stockSummaryKeyUpdatedPushMessage.build(),
               uiSetupUpdatedPushMessage: uiSetupUpdatedPushMessage.build(),
@@ -804,6 +981,8 @@ class PushPayloadsBuilder
         caseScheduleUpdatePushMessage.build();
         _$failedField = 'conversationUpdatedPushMessage';
         conversationUpdatedPushMessage.build();
+        _$failedField = 'createPickFinishedPushMessage';
+        createPickFinishedPushMessage.build();
         _$failedField = 'exportLogFilePushMessage';
         exportLogFilePushMessage.build();
         _$failedField = 'facilityUpdatedPushMessage';
@@ -812,10 +991,18 @@ class PushPayloadsBuilder
         importLogFilePushMessage.build();
         _$failedField = 'issueRegeneratedPushMessage';
         issueRegeneratedPushMessage.build();
+        _$failedField = 'itemFileUpdatePushMessage';
+        itemFileUpdatePushMessage.build();
+        _$failedField = 'loanDetailPushMessage';
+        loanDetailPushMessage.build();
+        _$failedField = 'loanLinesUpdatedPushMessage';
+        loanLinesUpdatedPushMessage.build();
         _$failedField = 'messageAddedPushMessage';
         messageAddedPushMessage.build();
         _$failedField = 'messagesReadUnreadPushMessage';
         messagesReadUnreadPushMessage.build();
+        _$failedField = 'messagingBadgeUpdatedPushMessage';
+        messagingBadgeUpdatedPushMessage.build();
         _$failedField = 'noteAddedUpdatedPushMessage';
         noteAddedUpdatedPushMessage.build();
         _$failedField = 'orderDetailPushMessage';
@@ -826,6 +1013,8 @@ class PushPayloadsBuilder
         refreshConversationListPushMessage.build();
         _$failedField = 'shipmentFileUpdatePushMessage';
         shipmentFileUpdatePushMessage.build();
+        _$failedField = 'shipmentUpdatedPushMessage';
+        shipmentUpdatedPushMessage.build();
         _$failedField = 'stockSummaryKeyUpdatedPushMessage';
         stockSummaryKeyUpdatedPushMessage.build();
         _$failedField = 'uiSetupUpdatedPushMessage';
@@ -869,14 +1058,22 @@ class _$PushDispatcher extends PushDispatcher {
       caseScheduleUpdatePushMessage;
   final ActionDispatcher<ConversationUpdatedPushMessage>
       conversationUpdatedPushMessage;
+  final ActionDispatcher<CreatePickFinishedPushMessage>
+      createPickFinishedPushMessage;
   final ActionDispatcher<ExportLogFilePushMessage> exportLogFilePushMessage;
   final ActionDispatcher<FacilityUpdatedPushMessage> facilityUpdatedPushMessage;
   final ActionDispatcher<ImportLogFilePushMessage> importLogFilePushMessage;
   final ActionDispatcher<IssueRegeneratedPushMessage>
       issueRegeneratedPushMessage;
+  final ActionDispatcher<ItemFileUpdatePushMessage> itemFileUpdatePushMessage;
+  final ActionDispatcher<LoanDetailPushMessage> loanDetailPushMessage;
+  final ActionDispatcher<LoanLinesUpdatedPushMessage>
+      loanLinesUpdatedPushMessage;
   final ActionDispatcher<MessageAddedPushMessage> messageAddedPushMessage;
   final ActionDispatcher<MessagesReadUnreadPushMessage>
       messagesReadUnreadPushMessage;
+  final ActionDispatcher<MessagingBadgeUpdatedPushMessage>
+      messagingBadgeUpdatedPushMessage;
   final ActionDispatcher<NoteAddedUpdatedPushMessage>
       noteAddedUpdatedPushMessage;
   final ActionDispatcher<OrderDetailPushMessage> orderDetailPushMessage;
@@ -885,6 +1082,7 @@ class _$PushDispatcher extends PushDispatcher {
       refreshConversationListPushMessage;
   final ActionDispatcher<ShipmentFileUpdatePushMessage>
       shipmentFileUpdatePushMessage;
+  final ActionDispatcher<ShipmentUpdatedPushMessage> shipmentUpdatedPushMessage;
   final ActionDispatcher<StockSummaryKeyUpdatedPushMessage>
       stockSummaryKeyUpdatedPushMessage;
   final ActionDispatcher<UiSetupUpdatedPushMessage> uiSetupUpdatedPushMessage;
@@ -919,6 +1117,10 @@ class _$PushDispatcher extends PushDispatcher {
             $options.action<ConversationUpdatedPushMessage>(
                 'conversationUpdatedPushMessage',
                 (a) => a?.conversationUpdatedPushMessage),
+        createPickFinishedPushMessage =
+            $options.action<CreatePickFinishedPushMessage>(
+                'createPickFinishedPushMessage',
+                (a) => a?.createPickFinishedPushMessage),
         exportLogFilePushMessage = $options.action<ExportLogFilePushMessage>(
             'exportLogFilePushMessage', (a) => a?.exportLogFilePushMessage),
         facilityUpdatedPushMessage =
@@ -931,12 +1133,24 @@ class _$PushDispatcher extends PushDispatcher {
             $options.action<IssueRegeneratedPushMessage>(
                 'issueRegeneratedPushMessage',
                 (a) => a?.issueRegeneratedPushMessage),
+        itemFileUpdatePushMessage = $options.action<ItemFileUpdatePushMessage>(
+            'itemFileUpdatePushMessage', (a) => a?.itemFileUpdatePushMessage),
+        loanDetailPushMessage = $options.action<LoanDetailPushMessage>(
+            'loanDetailPushMessage', (a) => a?.loanDetailPushMessage),
+        loanLinesUpdatedPushMessage =
+            $options.action<LoanLinesUpdatedPushMessage>(
+                'loanLinesUpdatedPushMessage',
+                (a) => a?.loanLinesUpdatedPushMessage),
         messageAddedPushMessage = $options.action<MessageAddedPushMessage>(
             'messageAddedPushMessage', (a) => a?.messageAddedPushMessage),
         messagesReadUnreadPushMessage =
             $options.action<MessagesReadUnreadPushMessage>(
                 'messagesReadUnreadPushMessage',
                 (a) => a?.messagesReadUnreadPushMessage),
+        messagingBadgeUpdatedPushMessage =
+            $options.action<MessagingBadgeUpdatedPushMessage>(
+                'messagingBadgeUpdatedPushMessage',
+                (a) => a?.messagingBadgeUpdatedPushMessage),
         noteAddedUpdatedPushMessage =
             $options.action<NoteAddedUpdatedPushMessage>(
                 'noteAddedUpdatedPushMessage',
@@ -953,6 +1167,10 @@ class _$PushDispatcher extends PushDispatcher {
             $options.action<ShipmentFileUpdatePushMessage>(
                 'shipmentFileUpdatePushMessage',
                 (a) => a?.shipmentFileUpdatePushMessage),
+        shipmentUpdatedPushMessage =
+            $options.action<ShipmentUpdatedPushMessage>(
+                'shipmentUpdatedPushMessage',
+                (a) => a?.shipmentUpdatedPushMessage),
         stockSummaryKeyUpdatedPushMessage =
             $options.action<StockSummaryKeyUpdatedPushMessage>(
                 'stockSummaryKeyUpdatedPushMessage',
@@ -978,17 +1196,23 @@ class _$PushDispatcher extends PushDispatcher {
         this.caseRequirementsUpdatedPushMessage,
         this.caseScheduleUpdatePushMessage,
         this.conversationUpdatedPushMessage,
+        this.createPickFinishedPushMessage,
         this.exportLogFilePushMessage,
         this.facilityUpdatedPushMessage,
         this.importLogFilePushMessage,
         this.issueRegeneratedPushMessage,
+        this.itemFileUpdatePushMessage,
+        this.loanDetailPushMessage,
+        this.loanLinesUpdatedPushMessage,
         this.messageAddedPushMessage,
         this.messagesReadUnreadPushMessage,
+        this.messagingBadgeUpdatedPushMessage,
         this.noteAddedUpdatedPushMessage,
         this.orderDetailPushMessage,
         this.orderFilePushMessage,
         this.refreshConversationListPushMessage,
         this.shipmentFileUpdatePushMessage,
+        this.shipmentUpdatedPushMessage,
         this.stockSummaryKeyUpdatedPushMessage,
         this.uiSetupUpdatedPushMessage,
         this.movePresenceEvent,

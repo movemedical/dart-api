@@ -104,6 +104,20 @@ class _$GetPhysicianApiPhysicianDetailSerializer
         ..add(serializers.serialize(object.timeZone,
             specifiedType: const FullType(String)));
     }
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(PhysicianAttribute)])));
+    }
+    if (object.attributeContacts != null) {
+      result
+        ..add('attributeContacts')
+        ..add(serializers.serialize(object.attributeContacts,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AttributeContact)])));
+    }
 
     return result;
   }
@@ -173,6 +187,18 @@ class _$GetPhysicianApiPhysicianDetailSerializer
           result.timeZone = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'attributes':
+          result.attributes.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(PhysicianAttribute)]))
+              as BuiltList);
+          break;
+        case 'attributeContacts':
+          result.attributeContacts.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AttributeContact)]))
+              as BuiltList);
+          break;
       }
     }
 
@@ -207,6 +233,10 @@ class _$GetPhysicianApiPhysicianDetail extends GetPhysicianApiPhysicianDetail {
   final UserStatus userStatus;
   @override
   final String timeZone;
+  @override
+  final BuiltList<PhysicianAttribute> attributes;
+  @override
+  final BuiltList<AttributeContact> attributeContacts;
 
   factory _$GetPhysicianApiPhysicianDetail(
           [void updates(GetPhysicianApiPhysicianDetailBuilder b)]) =>
@@ -225,7 +255,9 @@ class _$GetPhysicianApiPhysicianDetail extends GetPhysicianApiPhysicianDetail {
       this.userId,
       this.userPerspective,
       this.userStatus,
-      this.timeZone})
+      this.timeZone,
+      this.attributes,
+      this.attributeContacts})
       : super._();
 
   @override
@@ -253,7 +285,9 @@ class _$GetPhysicianApiPhysicianDetail extends GetPhysicianApiPhysicianDetail {
         userId == other.userId &&
         userPerspective == other.userPerspective &&
         userStatus == other.userStatus &&
-        timeZone == other.timeZone;
+        timeZone == other.timeZone &&
+        attributes == other.attributes &&
+        attributeContacts == other.attributeContacts;
   }
 
   @override
@@ -269,19 +303,25 @@ class _$GetPhysicianApiPhysicianDetail extends GetPhysicianApiPhysicianDetail {
                                     $jc(
                                         $jc(
                                             $jc(
-                                                $jc($jc(0, id.hashCode),
-                                                    physicianType.hashCode),
-                                                name.hashCode),
-                                            email.hashCode),
-                                        workPhoneNumber.hashCode),
-                                    mobilePhoneNumber.hashCode),
-                                reference1.hashCode),
-                            active.hashCode),
-                        npi.hashCode),
-                    userId.hashCode),
-                userPerspective.hashCode),
-            userStatus.hashCode),
-        timeZone.hashCode));
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(0, id.hashCode),
+                                                            physicianType
+                                                                .hashCode),
+                                                        name.hashCode),
+                                                    email.hashCode),
+                                                workPhoneNumber.hashCode),
+                                            mobilePhoneNumber.hashCode),
+                                        reference1.hashCode),
+                                    active.hashCode),
+                                npi.hashCode),
+                            userId.hashCode),
+                        userPerspective.hashCode),
+                    userStatus.hashCode),
+                timeZone.hashCode),
+            attributes.hashCode),
+        attributeContacts.hashCode));
   }
 
   @override
@@ -299,7 +339,9 @@ class _$GetPhysicianApiPhysicianDetail extends GetPhysicianApiPhysicianDetail {
           ..add('userId', userId)
           ..add('userPerspective', userPerspective)
           ..add('userStatus', userStatus)
-          ..add('timeZone', timeZone))
+          ..add('timeZone', timeZone)
+          ..add('attributes', attributes)
+          ..add('attributeContacts', attributeContacts))
         .toString();
   }
 }
@@ -368,6 +410,18 @@ class GetPhysicianApiPhysicianDetailBuilder
   String get timeZone => _$this._timeZone;
   set timeZone(String timeZone) => _$this._timeZone = timeZone;
 
+  ListBuilder<PhysicianAttribute> _attributes;
+  ListBuilder<PhysicianAttribute> get attributes =>
+      _$this._attributes ??= new ListBuilder<PhysicianAttribute>();
+  set attributes(ListBuilder<PhysicianAttribute> attributes) =>
+      _$this._attributes = attributes;
+
+  ListBuilder<AttributeContact> _attributeContacts;
+  ListBuilder<AttributeContact> get attributeContacts =>
+      _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
+  set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
+      _$this._attributeContacts = attributeContacts;
+
   GetPhysicianApiPhysicianDetailBuilder();
 
   GetPhysicianApiPhysicianDetailBuilder get _$this {
@@ -385,6 +439,8 @@ class GetPhysicianApiPhysicianDetailBuilder
       _userPerspective = _$v.userPerspective;
       _userStatus = _$v.userStatus;
       _timeZone = _$v.timeZone;
+      _attributes = _$v.attributes?.toBuilder();
+      _attributeContacts = _$v.attributeContacts?.toBuilder();
       _$v = null;
     }
     return this;
@@ -421,7 +477,9 @@ class GetPhysicianApiPhysicianDetailBuilder
               userId: userId,
               userPerspective: userPerspective,
               userStatus: userStatus,
-              timeZone: timeZone);
+              timeZone: timeZone,
+              attributes: _attributes?.build(),
+              attributeContacts: _attributeContacts?.build());
     } catch (_) {
       String _$failedField;
       try {
@@ -433,6 +491,11 @@ class GetPhysicianApiPhysicianDetailBuilder
         _workPhoneNumber?.build();
         _$failedField = 'mobilePhoneNumber';
         _mobilePhoneNumber?.build();
+
+        _$failedField = 'attributes';
+        _attributes?.build();
+        _$failedField = 'attributeContacts';
+        _attributeContacts?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetPhysicianApiPhysicianDetail', _$failedField, e.toString());
@@ -479,6 +542,8 @@ class _$GetPhysicianApiPhysicianDetailActions
   final FieldDispatcher<UserPerspective> userPerspective;
   final FieldDispatcher<UserStatus> userStatus;
   final FieldDispatcher<String> timeZone;
+  final FieldDispatcher<BuiltList<PhysicianAttribute>> attributes;
+  final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
 
   _$GetPhysicianApiPhysicianDetailActions._(this.$options)
       : $replace = $options.action<GetPhysicianApiPhysicianDetail>(
@@ -538,6 +603,16 @@ class _$GetPhysicianApiPhysicianDetailActions
             (p, b) => p?.userStatus = b),
         timeZone = $options.field<String>('timeZone', (a) => a?.timeZone,
             (s) => s?.timeZone, (p, b) => p?.timeZone = b),
+        attributes = $options.field<BuiltList<PhysicianAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
+        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+            'attributeContacts',
+            (a) => a?.attributeContacts,
+            (s) => s?.attributeContacts,
+            (p, b) => p?.attributeContacts = b),
         super._();
 
   factory _$GetPhysicianApiPhysicianDetailActions(
@@ -575,6 +650,8 @@ class _$GetPhysicianApiPhysicianDetailActions
         this.userPerspective,
         this.userStatus,
         this.timeZone,
+        this.attributes,
+        this.attributeContacts,
       ]);
 
   @override
@@ -593,6 +670,8 @@ class _$GetPhysicianApiPhysicianDetailActions
     userPerspective.$reducer(reducer);
     userStatus.$reducer(reducer);
     timeZone.$reducer(reducer);
+    attributes.$reducer(reducer);
+    attributeContacts.$reducer(reducer);
   }
 
   @override

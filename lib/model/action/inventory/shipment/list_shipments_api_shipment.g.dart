@@ -90,6 +90,36 @@ class _$ListShipmentsApiShipmentSerializer
         ..add(serializers.serialize(object.deliverWindowEnd,
             specifiedType: const FullType(DateTime)));
     }
+    if (object.fulfillmentCutoff != null) {
+      result
+        ..add('fulfillmentCutoff')
+        ..add(serializers.serialize(object.fulfillmentCutoff,
+            specifiedType: const FullType(DateTime)));
+    }
+    if (object.picksUnassigned != null) {
+      result
+        ..add('picksUnassigned')
+        ..add(serializers.serialize(object.picksUnassigned,
+            specifiedType: const FullType(int)));
+    }
+    if (object.picksAssigned != null) {
+      result
+        ..add('picksAssigned')
+        ..add(serializers.serialize(object.picksAssigned,
+            specifiedType: const FullType(int)));
+    }
+    if (object.picksComplete != null) {
+      result
+        ..add('picksComplete')
+        ..add(serializers.serialize(object.picksComplete,
+            specifiedType: const FullType(int)));
+    }
+    if (object.packageCount != null) {
+      result
+        ..add('packageCount')
+        ..add(serializers.serialize(object.packageCount,
+            specifiedType: const FullType(int)));
+    }
 
     return result;
   }
@@ -151,6 +181,26 @@ class _$ListShipmentsApiShipmentSerializer
           result.deliverWindowEnd = serializers.deserialize(value,
               specifiedType: const FullType(DateTime)) as DateTime;
           break;
+        case 'fulfillmentCutoff':
+          result.fulfillmentCutoff = serializers.deserialize(value,
+              specifiedType: const FullType(DateTime)) as DateTime;
+          break;
+        case 'picksUnassigned':
+          result.picksUnassigned = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'picksAssigned':
+          result.picksAssigned = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'picksComplete':
+          result.picksComplete = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
+        case 'packageCount':
+          result.packageCount = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
       }
     }
 
@@ -181,6 +231,16 @@ class _$ListShipmentsApiShipment extends ListShipmentsApiShipment {
   final String shippingServiceName;
   @override
   final DateTime deliverWindowEnd;
+  @override
+  final DateTime fulfillmentCutoff;
+  @override
+  final int picksUnassigned;
+  @override
+  final int picksAssigned;
+  @override
+  final int picksComplete;
+  @override
+  final int packageCount;
 
   factory _$ListShipmentsApiShipment(
           [void updates(ListShipmentsApiShipmentBuilder b)]) =>
@@ -197,7 +257,12 @@ class _$ListShipmentsApiShipment extends ListShipmentsApiShipment {
       this.toLocation,
       this.carrier,
       this.shippingServiceName,
-      this.deliverWindowEnd})
+      this.deliverWindowEnd,
+      this.fulfillmentCutoff,
+      this.picksUnassigned,
+      this.picksAssigned,
+      this.picksComplete,
+      this.packageCount})
       : super._();
 
   @override
@@ -223,7 +288,12 @@ class _$ListShipmentsApiShipment extends ListShipmentsApiShipment {
         toLocation == other.toLocation &&
         carrier == other.carrier &&
         shippingServiceName == other.shippingServiceName &&
-        deliverWindowEnd == other.deliverWindowEnd;
+        deliverWindowEnd == other.deliverWindowEnd &&
+        fulfillmentCutoff == other.fulfillmentCutoff &&
+        picksUnassigned == other.picksUnassigned &&
+        picksAssigned == other.picksAssigned &&
+        picksComplete == other.picksComplete &&
+        packageCount == other.packageCount;
   }
 
   @override
@@ -237,17 +307,29 @@ class _$ListShipmentsApiShipment extends ListShipmentsApiShipment {
                             $jc(
                                 $jc(
                                     $jc(
-                                        $jc($jc(0, id.hashCode),
-                                            orderId.hashCode),
-                                        created.hashCode),
-                                    number.hashCode),
-                                status.hashCode),
-                            orderNumber.hashCode),
-                        fromLocation.hashCode),
-                    toLocation.hashCode),
-                carrier.hashCode),
-            shippingServiceName.hashCode),
-        deliverWindowEnd.hashCode));
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(0,
+                                                                    id.hashCode),
+                                                                orderId.hashCode),
+                                                            created.hashCode),
+                                                        number.hashCode),
+                                                    status.hashCode),
+                                                orderNumber.hashCode),
+                                            fromLocation.hashCode),
+                                        toLocation.hashCode),
+                                    carrier.hashCode),
+                                shippingServiceName.hashCode),
+                            deliverWindowEnd.hashCode),
+                        fulfillmentCutoff.hashCode),
+                    picksUnassigned.hashCode),
+                picksAssigned.hashCode),
+            picksComplete.hashCode),
+        packageCount.hashCode));
   }
 
   @override
@@ -263,7 +345,12 @@ class _$ListShipmentsApiShipment extends ListShipmentsApiShipment {
           ..add('toLocation', toLocation)
           ..add('carrier', carrier)
           ..add('shippingServiceName', shippingServiceName)
-          ..add('deliverWindowEnd', deliverWindowEnd))
+          ..add('deliverWindowEnd', deliverWindowEnd)
+          ..add('fulfillmentCutoff', fulfillmentCutoff)
+          ..add('picksUnassigned', picksUnassigned)
+          ..add('picksAssigned', picksAssigned)
+          ..add('picksComplete', picksComplete)
+          ..add('packageCount', packageCount))
         .toString();
   }
 }
@@ -322,6 +409,28 @@ class ListShipmentsApiShipmentBuilder
   set deliverWindowEnd(DateTime deliverWindowEnd) =>
       _$this._deliverWindowEnd = deliverWindowEnd;
 
+  DateTime _fulfillmentCutoff;
+  DateTime get fulfillmentCutoff => _$this._fulfillmentCutoff;
+  set fulfillmentCutoff(DateTime fulfillmentCutoff) =>
+      _$this._fulfillmentCutoff = fulfillmentCutoff;
+
+  int _picksUnassigned;
+  int get picksUnassigned => _$this._picksUnassigned;
+  set picksUnassigned(int picksUnassigned) =>
+      _$this._picksUnassigned = picksUnassigned;
+
+  int _picksAssigned;
+  int get picksAssigned => _$this._picksAssigned;
+  set picksAssigned(int picksAssigned) => _$this._picksAssigned = picksAssigned;
+
+  int _picksComplete;
+  int get picksComplete => _$this._picksComplete;
+  set picksComplete(int picksComplete) => _$this._picksComplete = picksComplete;
+
+  int _packageCount;
+  int get packageCount => _$this._packageCount;
+  set packageCount(int packageCount) => _$this._packageCount = packageCount;
+
   ListShipmentsApiShipmentBuilder();
 
   ListShipmentsApiShipmentBuilder get _$this {
@@ -337,6 +446,11 @@ class ListShipmentsApiShipmentBuilder
       _carrier = _$v.carrier;
       _shippingServiceName = _$v.shippingServiceName;
       _deliverWindowEnd = _$v.deliverWindowEnd;
+      _fulfillmentCutoff = _$v.fulfillmentCutoff;
+      _picksUnassigned = _$v.picksUnassigned;
+      _picksAssigned = _$v.picksAssigned;
+      _picksComplete = _$v.picksComplete;
+      _packageCount = _$v.packageCount;
       _$v = null;
     }
     return this;
@@ -371,7 +485,12 @@ class ListShipmentsApiShipmentBuilder
               toLocation: _toLocation?.build(),
               carrier: carrier,
               shippingServiceName: shippingServiceName,
-              deliverWindowEnd: deliverWindowEnd);
+              deliverWindowEnd: deliverWindowEnd,
+              fulfillmentCutoff: fulfillmentCutoff,
+              picksUnassigned: picksUnassigned,
+              picksAssigned: picksAssigned,
+              picksComplete: picksComplete,
+              packageCount: packageCount);
     } catch (_) {
       String _$failedField;
       try {
@@ -423,6 +542,11 @@ class _$ListShipmentsApiShipmentActions
   final FieldDispatcher<MoveShippingCarrier> carrier;
   final FieldDispatcher<String> shippingServiceName;
   final FieldDispatcher<DateTime> deliverWindowEnd;
+  final FieldDispatcher<DateTime> fulfillmentCutoff;
+  final FieldDispatcher<int> picksUnassigned;
+  final FieldDispatcher<int> picksAssigned;
+  final FieldDispatcher<int> picksComplete;
+  final FieldDispatcher<int> packageCount;
 
   _$ListShipmentsApiShipmentActions._(this.$options)
       : $replace = $options.action<ListShipmentsApiShipment>(
@@ -465,6 +589,31 @@ class _$ListShipmentsApiShipmentActions
             (a) => a?.deliverWindowEnd,
             (s) => s?.deliverWindowEnd,
             (p, b) => p?.deliverWindowEnd = b),
+        fulfillmentCutoff = $options.field<DateTime>(
+            'fulfillmentCutoff',
+            (a) => a?.fulfillmentCutoff,
+            (s) => s?.fulfillmentCutoff,
+            (p, b) => p?.fulfillmentCutoff = b),
+        picksUnassigned = $options.field<int>(
+            'picksUnassigned',
+            (a) => a?.picksUnassigned,
+            (s) => s?.picksUnassigned,
+            (p, b) => p?.picksUnassigned = b),
+        picksAssigned = $options.field<int>(
+            'picksAssigned',
+            (a) => a?.picksAssigned,
+            (s) => s?.picksAssigned,
+            (p, b) => p?.picksAssigned = b),
+        picksComplete = $options.field<int>(
+            'picksComplete',
+            (a) => a?.picksComplete,
+            (s) => s?.picksComplete,
+            (p, b) => p?.picksComplete = b),
+        packageCount = $options.field<int>(
+            'packageCount',
+            (a) => a?.packageCount,
+            (s) => s?.packageCount,
+            (p, b) => p?.packageCount = b),
         super._();
 
   factory _$ListShipmentsApiShipmentActions(
@@ -499,6 +648,11 @@ class _$ListShipmentsApiShipmentActions
         this.carrier,
         this.shippingServiceName,
         this.deliverWindowEnd,
+        this.fulfillmentCutoff,
+        this.picksUnassigned,
+        this.picksAssigned,
+        this.picksComplete,
+        this.packageCount,
       ]);
 
   @override
@@ -515,6 +669,11 @@ class _$ListShipmentsApiShipmentActions
     carrier.$reducer(reducer);
     shippingServiceName.$reducer(reducer);
     deliverWindowEnd.$reducer(reducer);
+    fulfillmentCutoff.$reducer(reducer);
+    picksUnassigned.$reducer(reducer);
+    picksAssigned.$reducer(reducer);
+    picksComplete.$reducer(reducer);
+    packageCount.$reducer(reducer);
   }
 
   @override

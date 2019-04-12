@@ -80,6 +80,9 @@ abstract class GetStockOrderApiOrder implements Built<GetStockOrderApiOrder, Get
   LoanLite get loan;
   
   @nullable
+  LoanLite get rootLoan;
+  
+  @nullable
   OrderHeaderLite get parentOrder;
   
   @nullable
@@ -186,6 +189,8 @@ abstract class GetStockOrderApiOrderActions extends ModelActions<GetStockOrderAp
   OrgUnitActions get salesOrgUnit;
   
   LoanLiteActions get loan;
+  
+  LoanLiteActions get rootLoan;
   
   OrderHeaderLiteActions get parentOrder;
   

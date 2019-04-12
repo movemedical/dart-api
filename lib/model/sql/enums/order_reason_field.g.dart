@@ -26,6 +26,13 @@ const OrderReasonField _$wireTO_LOCATION =
     const OrderReasonField._('TO_LOCATION');
 const OrderReasonField _$wireCREDIT_CARD_LAST_4 =
     const OrderReasonField._('CREDIT_CARD_LAST_4');
+const OrderReasonField _$wireHOSPITAL = const OrderReasonField._('HOSPITAL');
+const OrderReasonField _$wireHOSPITAL_SURGEON =
+    const OrderReasonField._('HOSPITAL_SURGEON');
+const OrderReasonField _$wireSALES_ORG_UNIT_HOSPITAL =
+    const OrderReasonField._('SALES_ORG_UNIT_HOSPITAL');
+const OrderReasonField _$wireHOSPITAL_BILLTO_REP =
+    const OrderReasonField._('HOSPITAL_BILLTO_REP');
 
 OrderReasonField _$orderReasonFieldValueOf(String name) {
   switch (name) {
@@ -55,6 +62,14 @@ OrderReasonField _$orderReasonFieldValueOf(String name) {
       return _$wireTO_LOCATION;
     case 'CREDIT_CARD_LAST_4':
       return _$wireCREDIT_CARD_LAST_4;
+    case 'HOSPITAL':
+      return _$wireHOSPITAL;
+    case 'HOSPITAL_SURGEON':
+      return _$wireHOSPITAL_SURGEON;
+    case 'SALES_ORG_UNIT_HOSPITAL':
+      return _$wireSALES_ORG_UNIT_HOSPITAL;
+    case 'HOSPITAL_BILLTO_REP':
+      return _$wireHOSPITAL_BILLTO_REP;
     default:
       throw new ArgumentError(name);
   }
@@ -75,6 +90,10 @@ final BuiltSet<OrderReasonField> _$orderReasonFieldValues =
   _$wireSHIPPING_SERVICE,
   _$wireTO_LOCATION,
   _$wireCREDIT_CARD_LAST_4,
+  _$wireHOSPITAL,
+  _$wireHOSPITAL_SURGEON,
+  _$wireSALES_ORG_UNIT_HOSPITAL,
+  _$wireHOSPITAL_BILLTO_REP,
 ]);
 
 Serializer<OrderReasonField> _$orderReasonFieldSerializer =

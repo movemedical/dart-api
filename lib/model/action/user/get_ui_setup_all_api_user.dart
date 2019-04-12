@@ -4,8 +4,12 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/user_perspective.dart';
+import 'package:movemedical_api/model/essentials/i18n/move_locale.dart';
+import 'package:movemedical_api/model/essentials/i18n/move_date_region.dart';
 import 'package:movemedical_api/model/contact.dart';
 import 'package:movemedical_api/model/sql/enums/sso_type.dart';
+import 'package:movemedical_api/model/sql/enums/mfa_type.dart';
+import 'package:movemedical_api/model/location.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_all_api_org_info.dart';
 import 'package:movemedical_api/model/action/user/get_ui_setup_all_api_user_permissions.dart';
 import 'package:movemedical_api/model/system_admin.dart';
@@ -13,7 +17,7 @@ import 'package:movemedical_api/model/ae.dart';
 import 'package:movemedical_api/model/hcp.dart';
 import 'package:movemedical_api/model/hcr.dart';
 import 'package:movemedical_api/model/dce.dart';
-import 'package:movemedical_api/model/removeOrRefactor/consumer.dart';
+import 'package:movemedical_api/model/remove_or_refactor/consumer.dart';
 
 part 'get_ui_setup_all_api_user.g.dart';
 
@@ -44,13 +48,37 @@ abstract class GetUiSetupAllApiUser implements Built<GetUiSetupAllApiUser, GetUi
   String get timeZone;
   
   @nullable
+  MoveLocale get locale;
+  
+  @nullable
+  MoveDateRegion get dateFormat;
+  
+  @nullable
   Contact get contact;
+  
+  @nullable
+  String get ssoId;
+  
+  @nullable
+  String get ssoName;
   
   @nullable
   SSOType get ssoType;
   
   @nullable
-  String get ssoId;
+  bool get mfaEnabled;
+  
+  @nullable
+  String get mfaId;
+  
+  @nullable
+  String get mfaRef;
+  
+  @nullable
+  MfaType get mfaType;
+  
+  @nullable
+  Location get defaultReceivingAtLocation;
   
   @nullable
   GetUiSetupAllApiOrgInfo get orgInfo;
@@ -110,11 +138,27 @@ abstract class GetUiSetupAllApiUserActions extends ModelActions<GetUiSetupAllApi
   
   FieldDispatcher<String> get timeZone;
   
+  FieldDispatcher<MoveLocale> get locale;
+  
+  FieldDispatcher<MoveDateRegion> get dateFormat;
+  
   ContactActions get contact;
+  
+  FieldDispatcher<String> get ssoId;
+  
+  FieldDispatcher<String> get ssoName;
   
   FieldDispatcher<SSOType> get ssoType;
   
-  FieldDispatcher<String> get ssoId;
+  FieldDispatcher<bool> get mfaEnabled;
+  
+  FieldDispatcher<String> get mfaId;
+  
+  FieldDispatcher<String> get mfaRef;
+  
+  FieldDispatcher<MfaType> get mfaType;
+  
+  LocationActions get defaultReceivingAtLocation;
   
   GetUiSetupAllApiOrgInfoActions get orgInfo;
   

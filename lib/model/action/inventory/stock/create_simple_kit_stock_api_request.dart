@@ -5,6 +5,7 @@ import 'package:modux/modux.dart';
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
 import 'package:movemedical_api/model/sql/enums/stock_container_type.dart';
+import 'package:movemedical_api/model/sql/enums/responsible_party_type.dart';
 
 part 'create_simple_kit_stock_api_request.g.dart';
 
@@ -20,7 +21,13 @@ abstract class CreateSimpleKitStockApiRequest implements Built<CreateSimpleKitSt
   String get kitItemId;
   
   @nullable
+  String get kitItemVersionId;
+  
+  @nullable
   String get toteItemId;
+  
+  @nullable
+  String get toteItemVersionId;
   
   @nullable
   LocationType get locationType;
@@ -39,6 +46,12 @@ abstract class CreateSimpleKitStockApiRequest implements Built<CreateSimpleKitSt
   
   @nullable
   String get containerId;
+  
+  @nullable
+  ResponsiblePartyType get responsiblePartyType;
+  
+  @nullable
+  String get responsiblePartyId;
   
   ////////////////////////////////
   /// Constructors
@@ -64,7 +77,11 @@ abstract class CreateSimpleKitStockApiRequestActions extends ModelActions<Create
   
   FieldDispatcher<String> get kitItemId;
   
+  FieldDispatcher<String> get kitItemVersionId;
+  
   FieldDispatcher<String> get toteItemId;
+  
+  FieldDispatcher<String> get toteItemVersionId;
   
   FieldDispatcher<LocationType> get locationType;
   
@@ -77,6 +94,10 @@ abstract class CreateSimpleKitStockApiRequestActions extends ModelActions<Create
   FieldDispatcher<StockContainerType> get containerType;
   
   FieldDispatcher<String> get containerId;
+  
+  FieldDispatcher<ResponsiblePartyType> get responsiblePartyType;
+  
+  FieldDispatcher<String> get responsiblePartyId;
   
   ////////////////////////////////
   /// Constructors

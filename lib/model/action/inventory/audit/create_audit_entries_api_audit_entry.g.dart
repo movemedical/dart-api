@@ -26,6 +26,18 @@ class _$CreateAuditEntriesApiAuditEntrySerializer
       Serializers serializers, CreateAuditEntriesApiAuditEntry object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.auditId != null) {
+      result
+        ..add('auditId')
+        ..add(serializers.serialize(object.auditId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.reference != null) {
+      result
+        ..add('reference')
+        ..add(serializers.serialize(object.reference,
+            specifiedType: const FullType(String)));
+    }
     if (object.auditItemId != null) {
       result
         ..add('auditItemId')
@@ -144,6 +156,14 @@ class _$CreateAuditEntriesApiAuditEntrySerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'auditId':
+          result.auditId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'reference':
+          result.reference = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'auditItemId':
           result.auditItemId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -224,6 +244,10 @@ class _$CreateAuditEntriesApiAuditEntrySerializer
 class _$CreateAuditEntriesApiAuditEntry
     extends CreateAuditEntriesApiAuditEntry {
   @override
+  final String auditId;
+  @override
+  final String reference;
+  @override
   final String auditItemId;
   @override
   final ItemCaptureType entryType;
@@ -263,7 +287,9 @@ class _$CreateAuditEntriesApiAuditEntry
       (new CreateAuditEntriesApiAuditEntryBuilder()..update(updates)).build();
 
   _$CreateAuditEntriesApiAuditEntry._(
-      {this.auditItemId,
+      {this.auditId,
+      this.reference,
+      this.auditItemId,
       this.entryType,
       this.locationType,
       this.locationId,
@@ -295,6 +321,8 @@ class _$CreateAuditEntriesApiAuditEntry
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is CreateAuditEntriesApiAuditEntry &&
+        auditId == other.auditId &&
+        reference == other.reference &&
         auditItemId == other.auditItemId &&
         entryType == other.entryType &&
         locationType == other.locationType &&
@@ -333,7 +361,13 @@ class _$CreateAuditEntriesApiAuditEntry
                                                             $jc(
                                                                 $jc(
                                                                     $jc(
-                                                                        0,
+                                                                        $jc(
+                                                                            $jc(
+                                                                                0,
+                                                                                auditId
+                                                                                    .hashCode),
+                                                                            reference
+                                                                                .hashCode),
                                                                         auditItemId
                                                                             .hashCode),
                                                                     entryType
@@ -360,6 +394,8 @@ class _$CreateAuditEntriesApiAuditEntry
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateAuditEntriesApiAuditEntry')
+          ..add('auditId', auditId)
+          ..add('reference', reference)
           ..add('auditItemId', auditItemId)
           ..add('entryType', entryType)
           ..add('locationType', locationType)
@@ -386,6 +422,14 @@ class CreateAuditEntriesApiAuditEntryBuilder
         Builder<CreateAuditEntriesApiAuditEntry,
             CreateAuditEntriesApiAuditEntryBuilder> {
   _$CreateAuditEntriesApiAuditEntry _$v;
+
+  String _auditId;
+  String get auditId => _$this._auditId;
+  set auditId(String auditId) => _$this._auditId = auditId;
+
+  String _reference;
+  String get reference => _$this._reference;
+  set reference(String reference) => _$this._reference = reference;
 
   String _auditItemId;
   String get auditItemId => _$this._auditItemId;
@@ -467,6 +511,8 @@ class CreateAuditEntriesApiAuditEntryBuilder
 
   CreateAuditEntriesApiAuditEntryBuilder get _$this {
     if (_$v != null) {
+      _auditId = _$v.auditId;
+      _reference = _$v.reference;
       _auditItemId = _$v.auditItemId;
       _entryType = _$v.entryType;
       _locationType = _$v.locationType;
@@ -506,6 +552,8 @@ class CreateAuditEntriesApiAuditEntryBuilder
   _$CreateAuditEntriesApiAuditEntry build() {
     final _$result = _$v ??
         new _$CreateAuditEntriesApiAuditEntry._(
+            auditId: auditId,
+            reference: reference,
             auditItemId: auditItemId,
             entryType: entryType,
             locationType: locationType,
@@ -550,6 +598,8 @@ class _$CreateAuditEntriesApiAuditEntryActions
       CreateAuditEntriesApiAuditEntryActions> $options;
 
   final ActionDispatcher<CreateAuditEntriesApiAuditEntry> $replace;
+  final FieldDispatcher<String> auditId;
+  final FieldDispatcher<String> reference;
   final FieldDispatcher<String> auditItemId;
   final FieldDispatcher<ItemCaptureType> entryType;
   final FieldDispatcher<LocationType> locationType;
@@ -571,6 +621,10 @@ class _$CreateAuditEntriesApiAuditEntryActions
   _$CreateAuditEntriesApiAuditEntryActions._(this.$options)
       : $replace = $options.action<CreateAuditEntriesApiAuditEntry>(
             '\$replace', (a) => a?.$replace),
+        auditId = $options.field<String>('auditId', (a) => a?.auditId,
+            (s) => s?.auditId, (p, b) => p?.auditId = b),
+        reference = $options.field<String>('reference', (a) => a?.reference,
+            (s) => s?.reference, (p, b) => p?.reference = b),
         auditItemId = $options.field<String>(
             'auditItemId',
             (a) => a?.auditItemId,
@@ -657,6 +711,8 @@ class _$CreateAuditEntriesApiAuditEntryActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
+        this.auditId,
+        this.reference,
         this.auditItemId,
         this.entryType,
         this.locationType,
@@ -679,6 +735,8 @@ class _$CreateAuditEntriesApiAuditEntryActions
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
+    auditId.$reducer(reducer);
+    reference.$reducer(reducer);
     auditItemId.$reducer(reducer);
     entryType.$reducer(reducer);
     locationType.$reducer(reducer);

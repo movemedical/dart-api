@@ -13,6 +13,7 @@ class AssociationType extends EnumClass {
   static const AssociationType DEMAND_LOAN = _$wireDEMAND_LOAN;
   static const AssociationType CASE_EVENT = _$wireCASE_EVENT;
   static const AssociationType KIT = _$wireKIT;
+  static const AssociationType TRAY = _$wireTRAY;
   
   ////////////////////////////////
   /// Constructor

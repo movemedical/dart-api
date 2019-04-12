@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/custom_field_data_type.dart';
+import 'package:built_collection/built_collection.dart';
 
 part 'get_order_reason_specification_api_order_reason_custom_field_data.g.dart';
 
@@ -20,6 +21,9 @@ abstract class GetOrderReasonSpecificationApiOrderReasonCustomFieldData implemen
   
   @nullable
   CustomFieldDataType get dataType;
+  
+  @nullable
+  BuiltList<String> get choices;
   
   @nullable
   int get sort;
@@ -52,6 +56,8 @@ abstract class GetOrderReasonSpecificationApiOrderReasonCustomFieldDataActions e
   FieldDispatcher<String> get name;
   
   FieldDispatcher<CustomFieldDataType> get dataType;
+  
+  FieldDispatcher<BuiltList<String>> get choices;
   
   FieldDispatcher<int> get sort;
   

@@ -16,6 +16,9 @@ abstract class GetItemPricingApiItemPrice implements Built<GetItemPricingApiItem
   ////////////////////////////////
   
   @nullable
+  String get id;
+  
+  @nullable
   String get itemId;
   
   @nullable
@@ -32,6 +35,9 @@ abstract class GetItemPricingApiItemPrice implements Built<GetItemPricingApiItem
   
   @nullable
   CaseUsageDisposition get caseUsageDisposition;
+  
+  @nullable
+  String get billingCodeId;
   
   ////////////////////////////////
   /// Constructors
@@ -53,6 +59,8 @@ abstract class GetItemPricingApiItemPriceActions extends ModelActions<GetItemPri
   /// Fields
   ////////////////////////////////
   
+  FieldDispatcher<String> get id;
+  
   FieldDispatcher<String> get itemId;
   
   FieldDispatcher<double> get contractPrice;
@@ -64,6 +72,8 @@ abstract class GetItemPricingApiItemPriceActions extends ModelActions<GetItemPri
   FieldDispatcher<BuiltList<GetItemPricingApiPriceInfo>> get pricingInfoList;
   
   FieldDispatcher<CaseUsageDisposition> get caseUsageDisposition;
+  
+  FieldDispatcher<String> get billingCodeId;
   
   ////////////////////////////////
   /// Constructors

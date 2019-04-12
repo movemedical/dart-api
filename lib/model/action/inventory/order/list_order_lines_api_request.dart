@@ -4,6 +4,8 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/pagination_params.dart';
+import 'package:movemedical_api/model/order_by_params.dart';
+import 'package:movemedical_api/model/action/inventory/order/list_order_lines_api_order_by.dart';
 
 part 'list_order_lines_api_request.g.dart';
 
@@ -16,7 +18,13 @@ abstract class ListOrderLinesApiRequest implements Built<ListOrderLinesApiReques
   String get orderId;
   
   @nullable
+  String get search;
+  
+  @nullable
   PaginationParams get paging;
+  
+  @nullable
+  OrderByParams<ListOrderLinesApiOrderBy> get orderBy;
   
   ////////////////////////////////
   /// Constructors
@@ -40,7 +48,11 @@ abstract class ListOrderLinesApiRequestActions extends ModelActions<ListOrderLin
   
   FieldDispatcher<String> get orderId;
   
+  FieldDispatcher<String> get search;
+  
   PaginationParamsActions get paging;
+  
+  OrderByParamsActions<ListOrderLinesApiOrderBy> get orderBy;
   
   ////////////////////////////////
   /// Constructors

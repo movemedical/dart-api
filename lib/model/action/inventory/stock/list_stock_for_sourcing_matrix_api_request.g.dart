@@ -52,6 +52,13 @@ class _$ListStockForSourcingMatrixApiRequestSerializer
             specifiedType:
                 const FullType(BuiltList, const [const FullType(String)])));
     }
+    if (object.orgUnitIds != null) {
+      result
+        ..add('orgUnitIds')
+        ..add(serializers.serialize(object.orgUnitIds,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(String)])));
+    }
     if (object.locationTypes != null) {
       result
         ..add('locationTypes')
@@ -71,6 +78,18 @@ class _$ListStockForSourcingMatrixApiRequestSerializer
         ..add('inventoryTypeId')
         ..add(serializers.serialize(object.inventoryTypeId,
             specifiedType: const FullType(String)));
+    }
+    if (object.activeCases != null) {
+      result
+        ..add('activeCases')
+        ..add(serializers.serialize(object.activeCases,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.questionableKitsTrays != null) {
+      result
+        ..add('questionableKitsTrays')
+        ..add(serializers.serialize(object.questionableKitsTrays,
+            specifiedType: const FullType(bool)));
     }
 
     return result;
@@ -108,6 +127,12 @@ class _$ListStockForSourcingMatrixApiRequestSerializer
                       const FullType(BuiltList, const [const FullType(String)]))
               as BuiltList);
           break;
+        case 'orgUnitIds':
+          result.orgUnitIds.replace(serializers.deserialize(value,
+                  specifiedType:
+                      const FullType(BuiltList, const [const FullType(String)]))
+              as BuiltList);
+          break;
         case 'locationTypes':
           result.locationTypes.replace(serializers.deserialize(value,
                   specifiedType: const FullType(
@@ -123,6 +148,14 @@ class _$ListStockForSourcingMatrixApiRequestSerializer
         case 'inventoryTypeId':
           result.inventoryTypeId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'activeCases':
+          result.activeCases = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'questionableKitsTrays':
+          result.questionableKitsTrays = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
           break;
       }
     }
@@ -142,11 +175,17 @@ class _$ListStockForSourcingMatrixApiRequest
   @override
   final BuiltList<String> locationIds;
   @override
+  final BuiltList<String> orgUnitIds;
+  @override
   final BuiltList<LocationType> locationTypes;
   @override
   final BuiltList<FacilityType> facilityTypes;
   @override
   final String inventoryTypeId;
+  @override
+  final bool activeCases;
+  @override
+  final bool questionableKitsTrays;
 
   factory _$ListStockForSourcingMatrixApiRequest(
           [void updates(ListStockForSourcingMatrixApiRequestBuilder b)]) =>
@@ -158,9 +197,12 @@ class _$ListStockForSourcingMatrixApiRequest
       this.minPercentageMatch,
       this.moveItemClasses,
       this.locationIds,
+      this.orgUnitIds,
       this.locationTypes,
       this.facilityTypes,
-      this.inventoryTypeId})
+      this.inventoryTypeId,
+      this.activeCases,
+      this.questionableKitsTrays})
       : super._();
 
   @override
@@ -180,9 +222,12 @@ class _$ListStockForSourcingMatrixApiRequest
         minPercentageMatch == other.minPercentageMatch &&
         moveItemClasses == other.moveItemClasses &&
         locationIds == other.locationIds &&
+        orgUnitIds == other.orgUnitIds &&
         locationTypes == other.locationTypes &&
         facilityTypes == other.facilityTypes &&
-        inventoryTypeId == other.inventoryTypeId;
+        inventoryTypeId == other.inventoryTypeId &&
+        activeCases == other.activeCases &&
+        questionableKitsTrays == other.questionableKitsTrays;
   }
 
   @override
@@ -192,13 +237,19 @@ class _$ListStockForSourcingMatrixApiRequest
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc(0, orderId.hashCode),
-                            minPercentageMatch.hashCode),
-                        moveItemClasses.hashCode),
-                    locationIds.hashCode),
-                locationTypes.hashCode),
-            facilityTypes.hashCode),
-        inventoryTypeId.hashCode));
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc($jc(0, orderId.hashCode),
+                                        minPercentageMatch.hashCode),
+                                    moveItemClasses.hashCode),
+                                locationIds.hashCode),
+                            orgUnitIds.hashCode),
+                        locationTypes.hashCode),
+                    facilityTypes.hashCode),
+                inventoryTypeId.hashCode),
+            activeCases.hashCode),
+        questionableKitsTrays.hashCode));
   }
 
   @override
@@ -208,9 +259,12 @@ class _$ListStockForSourcingMatrixApiRequest
           ..add('minPercentageMatch', minPercentageMatch)
           ..add('moveItemClasses', moveItemClasses)
           ..add('locationIds', locationIds)
+          ..add('orgUnitIds', orgUnitIds)
           ..add('locationTypes', locationTypes)
           ..add('facilityTypes', facilityTypes)
-          ..add('inventoryTypeId', inventoryTypeId))
+          ..add('inventoryTypeId', inventoryTypeId)
+          ..add('activeCases', activeCases)
+          ..add('questionableKitsTrays', questionableKitsTrays))
         .toString();
   }
 }
@@ -242,6 +296,12 @@ class ListStockForSourcingMatrixApiRequestBuilder
   set locationIds(ListBuilder<String> locationIds) =>
       _$this._locationIds = locationIds;
 
+  ListBuilder<String> _orgUnitIds;
+  ListBuilder<String> get orgUnitIds =>
+      _$this._orgUnitIds ??= new ListBuilder<String>();
+  set orgUnitIds(ListBuilder<String> orgUnitIds) =>
+      _$this._orgUnitIds = orgUnitIds;
+
   ListBuilder<LocationType> _locationTypes;
   ListBuilder<LocationType> get locationTypes =>
       _$this._locationTypes ??= new ListBuilder<LocationType>();
@@ -259,6 +319,15 @@ class ListStockForSourcingMatrixApiRequestBuilder
   set inventoryTypeId(String inventoryTypeId) =>
       _$this._inventoryTypeId = inventoryTypeId;
 
+  bool _activeCases;
+  bool get activeCases => _$this._activeCases;
+  set activeCases(bool activeCases) => _$this._activeCases = activeCases;
+
+  bool _questionableKitsTrays;
+  bool get questionableKitsTrays => _$this._questionableKitsTrays;
+  set questionableKitsTrays(bool questionableKitsTrays) =>
+      _$this._questionableKitsTrays = questionableKitsTrays;
+
   ListStockForSourcingMatrixApiRequestBuilder();
 
   ListStockForSourcingMatrixApiRequestBuilder get _$this {
@@ -267,9 +336,12 @@ class ListStockForSourcingMatrixApiRequestBuilder
       _minPercentageMatch = _$v.minPercentageMatch;
       _moveItemClasses = _$v.moveItemClasses?.toBuilder();
       _locationIds = _$v.locationIds?.toBuilder();
+      _orgUnitIds = _$v.orgUnitIds?.toBuilder();
       _locationTypes = _$v.locationTypes?.toBuilder();
       _facilityTypes = _$v.facilityTypes?.toBuilder();
       _inventoryTypeId = _$v.inventoryTypeId;
+      _activeCases = _$v.activeCases;
+      _questionableKitsTrays = _$v.questionableKitsTrays;
       _$v = null;
     }
     return this;
@@ -298,9 +370,12 @@ class ListStockForSourcingMatrixApiRequestBuilder
               minPercentageMatch: minPercentageMatch,
               moveItemClasses: _moveItemClasses?.build(),
               locationIds: _locationIds?.build(),
+              orgUnitIds: _orgUnitIds?.build(),
               locationTypes: _locationTypes?.build(),
               facilityTypes: _facilityTypes?.build(),
-              inventoryTypeId: inventoryTypeId);
+              inventoryTypeId: inventoryTypeId,
+              activeCases: activeCases,
+              questionableKitsTrays: questionableKitsTrays);
     } catch (_) {
       String _$failedField;
       try {
@@ -308,6 +383,8 @@ class ListStockForSourcingMatrixApiRequestBuilder
         _moveItemClasses?.build();
         _$failedField = 'locationIds';
         _locationIds?.build();
+        _$failedField = 'orgUnitIds';
+        _orgUnitIds?.build();
         _$failedField = 'locationTypes';
         _locationTypes?.build();
         _$failedField = 'facilityTypes';
@@ -351,9 +428,12 @@ class _$ListStockForSourcingMatrixApiRequestActions
   final FieldDispatcher<double> minPercentageMatch;
   final FieldDispatcher<BuiltList<MoveItemClass>> moveItemClasses;
   final FieldDispatcher<BuiltList<String>> locationIds;
+  final FieldDispatcher<BuiltList<String>> orgUnitIds;
   final FieldDispatcher<BuiltList<LocationType>> locationTypes;
   final FieldDispatcher<BuiltList<FacilityType>> facilityTypes;
   final FieldDispatcher<String> inventoryTypeId;
+  final FieldDispatcher<bool> activeCases;
+  final FieldDispatcher<bool> questionableKitsTrays;
 
   _$ListStockForSourcingMatrixApiRequestActions._(this.$options)
       : $replace = $options.action<ListStockForSourcingMatrixApiRequest>(
@@ -375,6 +455,11 @@ class _$ListStockForSourcingMatrixApiRequestActions
             (a) => a?.locationIds,
             (s) => s?.locationIds,
             (p, b) => p?.locationIds = b),
+        orgUnitIds = $options.field<BuiltList<String>>(
+            'orgUnitIds',
+            (a) => a?.orgUnitIds,
+            (s) => s?.orgUnitIds,
+            (p, b) => p?.orgUnitIds = b),
         locationTypes = $options.field<BuiltList<LocationType>>(
             'locationTypes',
             (a) => a?.locationTypes,
@@ -390,6 +475,13 @@ class _$ListStockForSourcingMatrixApiRequestActions
             (a) => a?.inventoryTypeId,
             (s) => s?.inventoryTypeId,
             (p, b) => p?.inventoryTypeId = b),
+        activeCases = $options.field<bool>('activeCases', (a) => a?.activeCases,
+            (s) => s?.activeCases, (p, b) => p?.activeCases = b),
+        questionableKitsTrays = $options.field<bool>(
+            'questionableKitsTrays',
+            (a) => a?.questionableKitsTrays,
+            (s) => s?.questionableKitsTrays,
+            (p, b) => p?.questionableKitsTrays = b),
         super._();
 
   factory _$ListStockForSourcingMatrixApiRequestActions(
@@ -413,9 +505,12 @@ class _$ListStockForSourcingMatrixApiRequestActions
         this.minPercentageMatch,
         this.moveItemClasses,
         this.locationIds,
+        this.orgUnitIds,
         this.locationTypes,
         this.facilityTypes,
         this.inventoryTypeId,
+        this.activeCases,
+        this.questionableKitsTrays,
       ]);
 
   @override
@@ -425,9 +520,12 @@ class _$ListStockForSourcingMatrixApiRequestActions
     minPercentageMatch.$reducer(reducer);
     moveItemClasses.$reducer(reducer);
     locationIds.$reducer(reducer);
+    orgUnitIds.$reducer(reducer);
     locationTypes.$reducer(reducer);
     facilityTypes.$reducer(reducer);
     inventoryTypeId.$reducer(reducer);
+    activeCases.$reducer(reducer);
+    questionableKitsTrays.$reducer(reducer);
   }
 
   @override

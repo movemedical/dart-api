@@ -35,6 +35,9 @@ class AttributableType extends EnumClass {
   static const AttributableType CUSTOMER = _$wireCUSTOMER;
   static const AttributableType AUDIT = _$wireAUDIT;
   static const AttributableType IMPORT_LOG = _$wireIMPORT_LOG;
+  static const AttributableType SHIP_TO_ADDRESS = _$wireSHIP_TO_ADDRESS;
+  static const AttributableType DELIVER_TO_ADDRESS = _$wireDELIVER_TO_ADDRESS;
+  static const AttributableType BILL_TO_ADDRESS = _$wireBILL_TO_ADDRESS;
   
   ////////////////////////////////
   /// Constructor

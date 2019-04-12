@@ -24,6 +24,7 @@ class DocReportType extends EnumClass {
   static const DocReportType ROLL_FORWARD = _$wireROLL_FORWARD;
   static const DocReportType ADJUSTMENT_EXPORT = _$wireADJUSTMENT_EXPORT;
   static const DocReportType CONSIGNMENT_LOAN_EXPORT = _$wireCONSIGNMENT_LOAN_EXPORT;
+  static const DocReportType CONSIGNMENT_REQUEST_REPORT = _$wireCONSIGNMENT_REQUEST_REPORT;
   static const DocReportType EVENT_LOAN_EXPORT = _$wireEVENT_LOAN_EXPORT;
   static const DocReportType STOCK_BARCODE = _$wireSTOCK_BARCODE;
   static const DocReportType PROOF_OF_DELIVERY = _$wirePROOF_OF_DELIVERY;

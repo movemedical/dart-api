@@ -24,6 +24,12 @@ class _$CreateCaseTypeApiRequestSerializer
   Iterable serialize(Serializers serializers, CreateCaseTypeApiRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.bizUnitId != null) {
+      result
+        ..add('bizUnitId')
+        ..add(serializers.serialize(object.bizUnitId,
+            specifiedType: const FullType(String)));
+    }
     if (object.name != null) {
       result
         ..add('name')
@@ -52,6 +58,10 @@ class _$CreateCaseTypeApiRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'bizUnitId':
+          result.bizUnitId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'name':
           result.name = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -69,6 +79,8 @@ class _$CreateCaseTypeApiRequestSerializer
 
 class _$CreateCaseTypeApiRequest extends CreateCaseTypeApiRequest {
   @override
+  final String bizUnitId;
+  @override
   final String name;
   @override
   final bool active;
@@ -77,7 +89,8 @@ class _$CreateCaseTypeApiRequest extends CreateCaseTypeApiRequest {
           [void updates(CreateCaseTypeApiRequestBuilder b)]) =>
       (new CreateCaseTypeApiRequestBuilder()..update(updates)).build();
 
-  _$CreateCaseTypeApiRequest._({this.name, this.active}) : super._();
+  _$CreateCaseTypeApiRequest._({this.bizUnitId, this.name, this.active})
+      : super._();
 
   @override
   CreateCaseTypeApiRequest rebuild(
@@ -92,18 +105,21 @@ class _$CreateCaseTypeApiRequest extends CreateCaseTypeApiRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is CreateCaseTypeApiRequest &&
+        bizUnitId == other.bizUnitId &&
         name == other.name &&
         active == other.active;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc(0, name.hashCode), active.hashCode));
+    return $jf(
+        $jc($jc($jc(0, bizUnitId.hashCode), name.hashCode), active.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('CreateCaseTypeApiRequest')
+          ..add('bizUnitId', bizUnitId)
           ..add('name', name)
           ..add('active', active))
         .toString();
@@ -114,6 +130,10 @@ class CreateCaseTypeApiRequestBuilder
     implements
         Builder<CreateCaseTypeApiRequest, CreateCaseTypeApiRequestBuilder> {
   _$CreateCaseTypeApiRequest _$v;
+
+  String _bizUnitId;
+  String get bizUnitId => _$this._bizUnitId;
+  set bizUnitId(String bizUnitId) => _$this._bizUnitId = bizUnitId;
 
   String _name;
   String get name => _$this._name;
@@ -127,6 +147,7 @@ class CreateCaseTypeApiRequestBuilder
 
   CreateCaseTypeApiRequestBuilder get _$this {
     if (_$v != null) {
+      _bizUnitId = _$v.bizUnitId;
       _name = _$v.name;
       _active = _$v.active;
       _$v = null;
@@ -149,8 +170,9 @@ class CreateCaseTypeApiRequestBuilder
 
   @override
   _$CreateCaseTypeApiRequest build() {
-    final _$result =
-        _$v ?? new _$CreateCaseTypeApiRequest._(name: name, active: active);
+    final _$result = _$v ??
+        new _$CreateCaseTypeApiRequest._(
+            bizUnitId: bizUnitId, name: name, active: active);
     replace(_$result);
     return _$result;
   }
@@ -178,12 +200,15 @@ class _$CreateCaseTypeApiRequestActions
       CreateCaseTypeApiRequestActions> $options;
 
   final ActionDispatcher<CreateCaseTypeApiRequest> $replace;
+  final FieldDispatcher<String> bizUnitId;
   final FieldDispatcher<String> name;
   final FieldDispatcher<bool> active;
 
   _$CreateCaseTypeApiRequestActions._(this.$options)
       : $replace = $options.action<CreateCaseTypeApiRequest>(
             '\$replace', (a) => a?.$replace),
+        bizUnitId = $options.field<String>('bizUnitId', (a) => a?.bizUnitId,
+            (s) => s?.bizUnitId, (p, b) => p?.bizUnitId = b),
         name = $options.field<String>(
             'name', (a) => a?.name, (s) => s?.name, (p, b) => p?.name = b),
         active = $options.field<bool>('active', (a) => a?.active,
@@ -206,6 +231,7 @@ class _$CreateCaseTypeApiRequestActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
+        this.bizUnitId,
         this.name,
         this.active,
       ]);
@@ -213,6 +239,7 @@ class _$CreateCaseTypeApiRequestActions
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
+    bizUnitId.$reducer(reducer);
     name.$reducer(reducer);
     active.$reducer(reducer);
   }

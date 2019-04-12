@@ -36,6 +36,9 @@ abstract class StockData implements Built<StockData, StockDataBuilder> {
   String get kitId;
   
   @nullable
+  bool get kitContainer;
+  
+  @nullable
   bool get virtual;
   
   @nullable
@@ -46,6 +49,9 @@ abstract class StockData implements Built<StockData, StockDataBuilder> {
   
   @nullable
   bool get hasMissing;
+  
+  @nullable
+  bool get hasUnverified;
   
   @nullable
   String get inventoryTypeId;
@@ -92,6 +98,12 @@ abstract class StockData implements Built<StockData, StockDataBuilder> {
   @nullable
   String get responsiblePartyId;
   
+  @nullable
+  String get demandLoanId;
+  
+  @nullable
+  String get consignmentLoanId;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -126,6 +138,8 @@ abstract class StockDataActions extends ModelActions<StockData, StockDataBuilder
   
   FieldDispatcher<String> get kitId;
   
+  FieldDispatcher<bool> get kitContainer;
+  
   FieldDispatcher<bool> get virtual;
   
   FieldDispatcher<bool> get verified;
@@ -133,6 +147,8 @@ abstract class StockDataActions extends ModelActions<StockData, StockDataBuilder
   FieldDispatcher<bool> get hasExtras;
   
   FieldDispatcher<bool> get hasMissing;
+  
+  FieldDispatcher<bool> get hasUnverified;
   
   FieldDispatcher<String> get inventoryTypeId;
   
@@ -163,6 +179,10 @@ abstract class StockDataActions extends ModelActions<StockData, StockDataBuilder
   FieldDispatcher<ResponsiblePartyType> get responsiblePartyType;
   
   FieldDispatcher<String> get responsiblePartyId;
+  
+  FieldDispatcher<String> get demandLoanId;
+  
+  FieldDispatcher<String> get consignmentLoanId;
   
   ////////////////////////////////
   /// Constructors

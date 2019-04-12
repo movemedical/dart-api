@@ -2,7 +2,6 @@ import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
-import 'dart:core';
 import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/action/inventory/audit/create_audit_entries_api_audit_entry.dart';
 
@@ -12,9 +11,6 @@ abstract class CreateAuditEntriesApiRequest implements Built<CreateAuditEntriesA
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
-  
-  @nullable
-  String get auditId;
   
   @nullable
   BuiltList<CreateAuditEntriesApiAuditEntry> get entries;
@@ -38,8 +34,6 @@ abstract class CreateAuditEntriesApiRequestActions extends ModelActions<CreateAu
   ////////////////////////////////
   /// Fields
   ////////////////////////////////
-  
-  FieldDispatcher<String> get auditId;
   
   FieldDispatcher<BuiltList<CreateAuditEntriesApiAuditEntry>> get entries;
   

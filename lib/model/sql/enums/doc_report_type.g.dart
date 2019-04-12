@@ -30,6 +30,8 @@ const DocReportType _$wireADJUSTMENT_EXPORT =
     const DocReportType._('ADJUSTMENT_EXPORT');
 const DocReportType _$wireCONSIGNMENT_LOAN_EXPORT =
     const DocReportType._('CONSIGNMENT_LOAN_EXPORT');
+const DocReportType _$wireCONSIGNMENT_REQUEST_REPORT =
+    const DocReportType._('CONSIGNMENT_REQUEST_REPORT');
 const DocReportType _$wireEVENT_LOAN_EXPORT =
     const DocReportType._('EVENT_LOAN_EXPORT');
 const DocReportType _$wireSTOCK_BARCODE =
@@ -154,6 +156,8 @@ DocReportType _$docReportTypeValueOf(String name) {
       return _$wireADJUSTMENT_EXPORT;
     case 'CONSIGNMENT_LOAN_EXPORT':
       return _$wireCONSIGNMENT_LOAN_EXPORT;
+    case 'CONSIGNMENT_REQUEST_REPORT':
+      return _$wireCONSIGNMENT_REQUEST_REPORT;
     case 'EVENT_LOAN_EXPORT':
       return _$wireEVENT_LOAN_EXPORT;
     case 'STOCK_BARCODE':
@@ -276,6 +280,7 @@ final BuiltSet<DocReportType> _$docReportTypeValues =
   _$wireROLL_FORWARD,
   _$wireADJUSTMENT_EXPORT,
   _$wireCONSIGNMENT_LOAN_EXPORT,
+  _$wireCONSIGNMENT_REQUEST_REPORT,
   _$wireEVENT_LOAN_EXPORT,
   _$wireSTOCK_BARCODE,
   _$wirePROOF_OF_DELIVERY,

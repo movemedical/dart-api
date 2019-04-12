@@ -82,6 +82,12 @@ class _$ListAuditItemsApiRequestSerializer
         ..add(serializers.serialize(object.hasDiff,
             specifiedType: const FullType(bool)));
     }
+    if (object.forExport != null) {
+      result
+        ..add('forExport')
+        ..add(serializers.serialize(object.forExport,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -148,6 +154,10 @@ class _$ListAuditItemsApiRequestSerializer
           result.hasDiff = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'forExport':
+          result.forExport = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -180,6 +190,8 @@ class _$ListAuditItemsApiRequest extends ListAuditItemsApiRequest {
   @override
   final bool hasDiff;
   @override
+  final bool forExport;
+  @override
   final PaginationParams paging;
 
   factory _$ListAuditItemsApiRequest(
@@ -196,6 +208,7 @@ class _$ListAuditItemsApiRequest extends ListAuditItemsApiRequest {
       this.containerIds,
       this.includeClosed,
       this.hasDiff,
+      this.forExport,
       this.paging})
       : super._();
 
@@ -221,6 +234,7 @@ class _$ListAuditItemsApiRequest extends ListAuditItemsApiRequest {
         containerIds == other.containerIds &&
         includeClosed == other.includeClosed &&
         hasDiff == other.hasDiff &&
+        forExport == other.forExport &&
         paging == other.paging;
   }
 
@@ -234,15 +248,17 @@ class _$ListAuditItemsApiRequest extends ListAuditItemsApiRequest {
                         $jc(
                             $jc(
                                 $jc(
-                                    $jc($jc(0, auditId.hashCode),
-                                        search.hashCode),
-                                    number.hashCode),
-                                itemIds.hashCode),
-                            lotIds.hashCode),
-                        serialIds.hashCode),
-                    containerIds.hashCode),
-                includeClosed.hashCode),
-            hasDiff.hashCode),
+                                    $jc(
+                                        $jc($jc(0, auditId.hashCode),
+                                            search.hashCode),
+                                        number.hashCode),
+                                    itemIds.hashCode),
+                                lotIds.hashCode),
+                            serialIds.hashCode),
+                        containerIds.hashCode),
+                    includeClosed.hashCode),
+                hasDiff.hashCode),
+            forExport.hashCode),
         paging.hashCode));
   }
 
@@ -258,6 +274,7 @@ class _$ListAuditItemsApiRequest extends ListAuditItemsApiRequest {
           ..add('containerIds', containerIds)
           ..add('includeClosed', includeClosed)
           ..add('hasDiff', hasDiff)
+          ..add('forExport', forExport)
           ..add('paging', paging))
         .toString();
   }
@@ -310,6 +327,10 @@ class ListAuditItemsApiRequestBuilder
   bool get hasDiff => _$this._hasDiff;
   set hasDiff(bool hasDiff) => _$this._hasDiff = hasDiff;
 
+  bool _forExport;
+  bool get forExport => _$this._forExport;
+  set forExport(bool forExport) => _$this._forExport = forExport;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -328,6 +349,7 @@ class ListAuditItemsApiRequestBuilder
       _containerIds = _$v.containerIds?.toBuilder();
       _includeClosed = _$v.includeClosed;
       _hasDiff = _$v.hasDiff;
+      _forExport = _$v.forExport;
       _paging = _$v.paging?.toBuilder();
       _$v = null;
     }
@@ -362,6 +384,7 @@ class ListAuditItemsApiRequestBuilder
               containerIds: _containerIds?.build(),
               includeClosed: includeClosed,
               hasDiff: hasDiff,
+              forExport: forExport,
               paging: _paging?.build());
     } catch (_) {
       String _$failedField;
@@ -419,6 +442,7 @@ class _$ListAuditItemsApiRequestActions
   final FieldDispatcher<BuiltList<String>> containerIds;
   final FieldDispatcher<bool> includeClosed;
   final FieldDispatcher<bool> hasDiff;
+  final FieldDispatcher<bool> forExport;
   final PaginationParamsActions paging;
 
   _$ListAuditItemsApiRequestActions._(this.$options)
@@ -451,6 +475,8 @@ class _$ListAuditItemsApiRequestActions
             (p, b) => p?.includeClosed = b),
         hasDiff = $options.field<bool>('hasDiff', (a) => a?.hasDiff,
             (s) => s?.hasDiff, (p, b) => p?.hasDiff = b),
+        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
+            (s) => s?.forExport, (p, b) => p?.forExport = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -493,6 +519,7 @@ class _$ListAuditItemsApiRequestActions
         this.containerIds,
         this.includeClosed,
         this.hasDiff,
+        this.forExport,
       ]);
 
   @override
@@ -507,6 +534,7 @@ class _$ListAuditItemsApiRequestActions
     containerIds.$reducer(reducer);
     includeClosed.$reducer(reducer);
     hasDiff.$reducer(reducer);
+    forExport.$reducer(reducer);
     paging.$reducer(reducer);
   }
 

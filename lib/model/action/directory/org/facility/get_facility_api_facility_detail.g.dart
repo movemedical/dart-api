@@ -234,8 +234,15 @@ class _$GetFacilityApiFacilityDetailSerializer
       result
         ..add('attributes')
         ..add(serializers.serialize(object.attributes,
-            specifiedType: const FullType(BuiltList,
-                const [const FullType(GetFacilityApiFacilityAttribute)])));
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(FacilityAttribute)])));
+    }
+    if (object.attributeContacts != null) {
+      result
+        ..add('attributeContacts')
+        ..add(serializers.serialize(object.attributeContacts,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AttributeContact)])));
     }
     if (object.customActions != null) {
       result
@@ -402,9 +409,15 @@ class _$GetFacilityApiFacilityDetailSerializer
           break;
         case 'attributes':
           result.attributes.replace(serializers.deserialize(value,
-              specifiedType: const FullType(BuiltList, const [
-                const FullType(GetFacilityApiFacilityAttribute)
-              ])) as BuiltList);
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(FacilityAttribute)]))
+              as BuiltList);
+          break;
+        case 'attributeContacts':
+          result.attributeContacts.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AttributeContact)]))
+              as BuiltList);
           break;
         case 'customActions':
           result.customActions.replace(serializers.deserialize(value,
@@ -489,7 +502,9 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
   @override
   final bool active;
   @override
-  final BuiltList<GetFacilityApiFacilityAttribute> attributes;
+  final BuiltList<FacilityAttribute> attributes;
+  @override
+  final BuiltList<AttributeContact> attributeContacts;
   @override
   final BuiltList<CustomAction> customActions;
 
@@ -533,6 +548,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
       this.defaultDeliverToAddress,
       this.active,
       this.attributes,
+      this.attributeContacts,
       this.customActions})
       : super._();
 
@@ -584,6 +600,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
         defaultDeliverToAddress == other.defaultDeliverToAddress &&
         active == other.active &&
         attributes == other.attributes &&
+        attributeContacts == other.attributeContacts &&
         customActions == other.customActions;
   }
 
@@ -607,25 +624,25 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), facilityType.hashCode), name.hashCode), contactName.hashCode), contactPhone.hashCode), email.hashCode), timeZone.hashCode), caseLoaningMethodology.hashCode), restockType.hashCode), publicVisible.hashCode), binManaged.hashCode), autoPutAway.hashCode), opsScheduleProfileName.hashCode), opsScheduleProfileId.hashCode),
-                                                                                deliveryScheduleProfileName.hashCode),
-                                                                            deliveryScheduleProfileId.hashCode),
-                                                                        courierProfileName.hashCode),
-                                                                    courierProfileId.hashCode),
-                                                                lagTime.hashCode),
-                                                            splitImplantsAndInstruments.hashCode),
-                                                        turnTimeInMinutes.hashCode),
-                                                    loanSplitMethod.hashCode),
-                                                optimizeLoans.hashCode),
-                                            customerId.hashCode),
-                                        customerName.hashCode),
-                                    customerNumber.hashCode),
-                                shipTo.hashCode),
-                            defaultBillTo.hashCode),
-                        defaultDeliverToAddressId.hashCode),
-                    defaultDeliverToAddress.hashCode),
-                active.hashCode),
-            attributes.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), facilityType.hashCode), name.hashCode), contactName.hashCode), contactPhone.hashCode), email.hashCode), timeZone.hashCode), caseLoaningMethodology.hashCode), restockType.hashCode), publicVisible.hashCode), binManaged.hashCode), autoPutAway.hashCode), opsScheduleProfileName.hashCode), opsScheduleProfileId.hashCode), deliveryScheduleProfileName.hashCode),
+                                                                                deliveryScheduleProfileId.hashCode),
+                                                                            courierProfileName.hashCode),
+                                                                        courierProfileId.hashCode),
+                                                                    lagTime.hashCode),
+                                                                splitImplantsAndInstruments.hashCode),
+                                                            turnTimeInMinutes.hashCode),
+                                                        loanSplitMethod.hashCode),
+                                                    optimizeLoans.hashCode),
+                                                customerId.hashCode),
+                                            customerName.hashCode),
+                                        customerNumber.hashCode),
+                                    shipTo.hashCode),
+                                defaultBillTo.hashCode),
+                            defaultDeliverToAddressId.hashCode),
+                        defaultDeliverToAddress.hashCode),
+                    active.hashCode),
+                attributes.hashCode),
+            attributeContacts.hashCode),
         customActions.hashCode));
   }
 
@@ -667,6 +684,7 @@ class _$GetFacilityApiFacilityDetail extends GetFacilityApiFacilityDetail {
           ..add('defaultDeliverToAddress', defaultDeliverToAddress)
           ..add('active', active)
           ..add('attributes', attributes)
+          ..add('attributeContacts', attributeContacts)
           ..add('customActions', customActions))
         .toString();
   }
@@ -839,11 +857,17 @@ class GetFacilityApiFacilityDetailBuilder
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
-  ListBuilder<GetFacilityApiFacilityAttribute> _attributes;
-  ListBuilder<GetFacilityApiFacilityAttribute> get attributes =>
-      _$this._attributes ??= new ListBuilder<GetFacilityApiFacilityAttribute>();
-  set attributes(ListBuilder<GetFacilityApiFacilityAttribute> attributes) =>
+  ListBuilder<FacilityAttribute> _attributes;
+  ListBuilder<FacilityAttribute> get attributes =>
+      _$this._attributes ??= new ListBuilder<FacilityAttribute>();
+  set attributes(ListBuilder<FacilityAttribute> attributes) =>
       _$this._attributes = attributes;
+
+  ListBuilder<AttributeContact> _attributeContacts;
+  ListBuilder<AttributeContact> get attributeContacts =>
+      _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
+  set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
+      _$this._attributeContacts = attributeContacts;
 
   ListBuilder<CustomAction> _customActions;
   ListBuilder<CustomAction> get customActions =>
@@ -890,6 +914,7 @@ class GetFacilityApiFacilityDetailBuilder
       _defaultDeliverToAddress = _$v.defaultDeliverToAddress?.toBuilder();
       _active = _$v.active;
       _attributes = _$v.attributes?.toBuilder();
+      _attributeContacts = _$v.attributeContacts?.toBuilder();
       _customActions = _$v.customActions?.toBuilder();
       _$v = null;
     }
@@ -950,6 +975,7 @@ class GetFacilityApiFacilityDetailBuilder
               defaultDeliverToAddress: _defaultDeliverToAddress?.build(),
               active: active,
               attributes: _attributes?.build(),
+              attributeContacts: _attributeContacts?.build(),
               customActions: _customActions?.build());
     } catch (_) {
       String _$failedField;
@@ -971,6 +997,8 @@ class GetFacilityApiFacilityDetailBuilder
 
         _$failedField = 'attributes';
         _attributes?.build();
+        _$failedField = 'attributeContacts';
+        _attributeContacts?.build();
         _$failedField = 'customActions';
         _customActions?.build();
       } catch (e) {
@@ -1040,7 +1068,8 @@ class _$GetFacilityApiFacilityDetailActions
   final FieldDispatcher<String> defaultDeliverToAddressId;
   final AddressActions defaultDeliverToAddress;
   final FieldDispatcher<bool> active;
-  final FieldDispatcher<BuiltList<GetFacilityApiFacilityAttribute>> attributes;
+  final FieldDispatcher<BuiltList<FacilityAttribute>> attributes;
+  final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
   final FieldDispatcher<BuiltList<CustomAction>> customActions;
 
   _$GetFacilityApiFacilityDetailActions._(this.$options)
@@ -1198,11 +1227,16 @@ class _$GetFacilityApiFacilityDetailActions
                     parent?.defaultDeliverToAddress = builder)),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        attributes = $options.field<BuiltList<GetFacilityApiFacilityAttribute>>(
+        attributes = $options.field<BuiltList<FacilityAttribute>>(
             'attributes',
             (a) => a?.attributes,
             (s) => s?.attributes,
             (p, b) => p?.attributes = b),
+        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+            'attributeContacts',
+            (a) => a?.attributeContacts,
+            (s) => s?.attributeContacts,
+            (p, b) => p?.attributeContacts = b),
         customActions = $options.field<BuiltList<CustomAction>>(
             'customActions',
             (a) => a?.customActions,
@@ -1266,6 +1300,7 @@ class _$GetFacilityApiFacilityDetailActions
         this.defaultDeliverToAddressId,
         this.active,
         this.attributes,
+        this.attributeContacts,
         this.customActions,
       ]);
 
@@ -1307,6 +1342,7 @@ class _$GetFacilityApiFacilityDetailActions
     defaultDeliverToAddress.$reducer(reducer);
     active.$reducer(reducer);
     attributes.$reducer(reducer);
+    attributeContacts.$reducer(reducer);
     customActions.$reducer(reducer);
   }
 

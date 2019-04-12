@@ -9,6 +9,9 @@ import 'package:movemedical_api/model/email.dart';
 import 'package:movemedical_api/model/phone_number.dart';
 import 'package:movemedical_api/model/sql/enums/user_perspective.dart';
 import 'package:movemedical_api/model/sql/enums/user_status.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:movemedical_api/model/essentials/model/api/physician_attribute.dart';
+import 'package:movemedical_api/model/essentials/model/api/attribute_contact.dart';
 
 part 'get_physician_api_physician_detail.g.dart';
 
@@ -56,6 +59,12 @@ abstract class GetPhysicianApiPhysicianDetail implements Built<GetPhysicianApiPh
   @nullable
   String get timeZone;
   
+  @nullable
+  BuiltList<PhysicianAttribute> get attributes;
+  
+  @nullable
+  BuiltList<AttributeContact> get attributeContacts;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -101,6 +110,10 @@ abstract class GetPhysicianApiPhysicianDetailActions extends ModelActions<GetPhy
   FieldDispatcher<UserStatus> get userStatus;
   
   FieldDispatcher<String> get timeZone;
+  
+  FieldDispatcher<BuiltList<PhysicianAttribute>> get attributes;
+  
+  FieldDispatcher<BuiltList<AttributeContact>> get attributeContacts;
   
   ////////////////////////////////
   /// Constructors

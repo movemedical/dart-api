@@ -23,6 +23,9 @@ abstract class ListLoanLinesApiLoanLine implements Built<ListLoanLinesApiLoanLin
   StockItem get stockItem;
   
   @nullable
+  int get qtyRequested;
+  
+  @nullable
   int get qtyCommitted;
   
   @nullable
@@ -65,6 +68,8 @@ abstract class ListLoanLinesApiLoanLineActions extends ModelActions<ListLoanLine
   FieldDispatcher<LoanLineStatus> get status;
   
   StockItemActions get stockItem;
+  
+  FieldDispatcher<int> get qtyRequested;
   
   FieldDispatcher<int> get qtyCommitted;
   

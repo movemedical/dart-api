@@ -15,8 +15,11 @@ const LoanStatus _$wirePLANNED = const LoanStatus._('PLANNED');
 const LoanStatus _$wireACTIVE_FILLING = const LoanStatus._('ACTIVE_FILLING');
 const LoanStatus _$wireACTIVE_FULL = const LoanStatus._('ACTIVE_FULL');
 const LoanStatus _$wireINACTIVE = const LoanStatus._('INACTIVE');
+const LoanStatus _$wireINACTIVE_RETURNING =
+    const LoanStatus._('INACTIVE_RETURNING');
 const LoanStatus _$wireCANCELED = const LoanStatus._('CANCELED');
 const LoanStatus _$wireDENIED = const LoanStatus._('DENIED');
+const LoanStatus _$wireCLOSED = const LoanStatus._('CLOSED');
 
 LoanStatus _$loanStatusValueOf(String name) {
   switch (name) {
@@ -34,10 +37,14 @@ LoanStatus _$loanStatusValueOf(String name) {
       return _$wireACTIVE_FULL;
     case 'INACTIVE':
       return _$wireINACTIVE;
+    case 'INACTIVE_RETURNING':
+      return _$wireINACTIVE_RETURNING;
     case 'CANCELED':
       return _$wireCANCELED;
     case 'DENIED':
       return _$wireDENIED;
+    case 'CLOSED':
+      return _$wireCLOSED;
     default:
       throw new ArgumentError(name);
   }
@@ -52,8 +59,10 @@ final BuiltSet<LoanStatus> _$loanStatusValues =
   _$wireACTIVE_FILLING,
   _$wireACTIVE_FULL,
   _$wireINACTIVE,
+  _$wireINACTIVE_RETURNING,
   _$wireCANCELED,
   _$wireDENIED,
+  _$wireCLOSED,
 ]);
 
 Serializer<LoanStatus> _$loanStatusSerializer = new _$LoanStatusSerializer();

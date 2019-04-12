@@ -3,6 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
+import 'package:movemedical_api/model/mobile_device_type.dart';
 
 part 'register_mobile_device_api_request.g.dart';
 
@@ -12,7 +13,16 @@ abstract class RegisterMobileDeviceApiRequest implements Built<RegisterMobileDev
   ////////////////////////////////
   
   @nullable
+  String get existingDeviceId;
+  
+  @nullable
+  MobileDeviceType get deviceType;
+  
+  @nullable
   String get token;
+  
+  @nullable
+  bool get useSandboxArn;
   
   ////////////////////////////////
   /// Constructors
@@ -34,7 +44,13 @@ abstract class RegisterMobileDeviceApiRequestActions extends ModelActions<Regist
   /// Fields
   ////////////////////////////////
   
+  FieldDispatcher<String> get existingDeviceId;
+  
+  FieldDispatcher<MobileDeviceType> get deviceType;
+  
   FieldDispatcher<String> get token;
+  
+  FieldDispatcher<bool> get useSandboxArn;
   
   ////////////////////////////////
   /// Constructors

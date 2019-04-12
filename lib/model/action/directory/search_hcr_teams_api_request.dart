@@ -40,6 +40,9 @@ abstract class SearchHcrTeamsApiRequest implements Built<SearchHcrTeamsApiReques
   bool get forCreateCase;
   
   @nullable
+  String get caseEventId;
+  
+  @nullable
   bool get withSalesOU;
   
   ////////////////////////////////
@@ -79,6 +82,8 @@ abstract class SearchHcrTeamsApiRequestActions extends ModelActions<SearchHcrTea
   FieldDispatcher<BuiltList<String>> get procedureIds;
   
   FieldDispatcher<bool> get forCreateCase;
+  
+  FieldDispatcher<String> get caseEventId;
   
   FieldDispatcher<bool> get withSalesOU;
   

@@ -22,6 +22,8 @@ const WebReport _$wireCREDIT_HOLD = const WebReport._('CREDIT_HOLD');
 const WebReport _$wireORDER_PRINTOUT = const WebReport._('ORDER_PRINTOUT');
 const WebReport _$wirePROOF_OF_DELIVERY =
     const WebReport._('PROOF_OF_DELIVERY');
+const WebReport _$wireCONSIGNMENT_LOAN_EXPORT =
+    const WebReport._('CONSIGNMENT_LOAN_EXPORT');
 
 WebReport _$webReportValueOf(String name) {
   switch (name) {
@@ -53,6 +55,8 @@ WebReport _$webReportValueOf(String name) {
       return _$wireORDER_PRINTOUT;
     case 'PROOF_OF_DELIVERY':
       return _$wirePROOF_OF_DELIVERY;
+    case 'CONSIGNMENT_LOAN_EXPORT':
+      return _$wireCONSIGNMENT_LOAN_EXPORT;
     default:
       throw new ArgumentError(name);
   }
@@ -74,6 +78,7 @@ final BuiltSet<WebReport> _$webReportValues =
   _$wireCREDIT_HOLD,
   _$wireORDER_PRINTOUT,
   _$wirePROOF_OF_DELIVERY,
+  _$wireCONSIGNMENT_LOAN_EXPORT,
 ]);
 
 Serializer<WebReport> _$webReportSerializer = new _$WebReportSerializer();

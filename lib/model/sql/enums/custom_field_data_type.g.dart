@@ -14,6 +14,7 @@ const CustomFieldDataType _$wireDATE_TIME =
     const CustomFieldDataType._('DATE_TIME');
 const CustomFieldDataType _$wireBOOLEAN =
     const CustomFieldDataType._('BOOLEAN');
+const CustomFieldDataType _$wireCHOICE = const CustomFieldDataType._('CHOICE');
 
 CustomFieldDataType _$customFieldDataTypeValueOf(String name) {
   switch (name) {
@@ -29,6 +30,8 @@ CustomFieldDataType _$customFieldDataTypeValueOf(String name) {
       return _$wireDATE_TIME;
     case 'BOOLEAN':
       return _$wireBOOLEAN;
+    case 'CHOICE':
+      return _$wireCHOICE;
     default:
       throw new ArgumentError(name);
   }
@@ -42,6 +45,7 @@ final BuiltSet<CustomFieldDataType> _$customFieldDataTypeValues =
   _$wireDATE,
   _$wireDATE_TIME,
   _$wireBOOLEAN,
+  _$wireCHOICE,
 ]);
 
 Serializer<CustomFieldDataType> _$customFieldDataTypeSerializer =

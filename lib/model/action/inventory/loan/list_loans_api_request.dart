@@ -7,6 +7,8 @@ import 'package:movemedical_api/model/location_data.dart';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
 import 'package:movemedical_api/model/date_range.dart';
 import 'dart:core';
+import 'package:built_collection/built_collection.dart';
+import 'package:movemedical_api/model/sql/enums/loan_reason.dart';
 import 'package:movemedical_api/model/pagination_params.dart';
 import 'package:movemedical_api/model/order_by_params.dart';
 import 'package:movemedical_api/model/action/inventory/loan/list_loans_api_order_by.dart';
@@ -35,6 +37,9 @@ abstract class ListLoansApiRequest implements Built<ListLoansApiRequest, ListLoa
   
   @nullable
   String get loanNumber;
+  
+  @nullable
+  BuiltList<LoanReason> get loanReasons;
   
   @nullable
   PaginationParams get paging;
@@ -73,6 +78,8 @@ abstract class ListLoansApiRequestActions extends ModelActions<ListLoansApiReque
   DateRangeActions get serviceEndDateRange;
   
   FieldDispatcher<String> get loanNumber;
+  
+  FieldDispatcher<BuiltList<LoanReason>> get loanReasons;
   
   PaginationParamsActions get paging;
   

@@ -14,7 +14,8 @@ import 'package:movemedical_api/model/sql/enums/loan_split_method.dart';
 import 'package:movemedical_api/model/customer_address.dart';
 import 'package:movemedical_api/model/address.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:movemedical_api/model/action/directory/org/facility/get_facility_api_facility_attribute.dart';
+import 'package:movemedical_api/model/essentials/model/api/facility_attribute.dart';
+import 'package:movemedical_api/model/essentials/model/api/attribute_contact.dart';
 import 'package:movemedical_api/model/custom_action.dart';
 
 part 'get_facility_api_facility_detail.g.dart';
@@ -127,7 +128,10 @@ abstract class GetFacilityApiFacilityDetail implements Built<GetFacilityApiFacil
   bool get active;
   
   @nullable
-  BuiltList<GetFacilityApiFacilityAttribute> get attributes;
+  BuiltList<FacilityAttribute> get attributes;
+  
+  @nullable
+  BuiltList<AttributeContact> get attributeContacts;
   
   @nullable
   BuiltList<CustomAction> get customActions;
@@ -220,7 +224,9 @@ abstract class GetFacilityApiFacilityDetailActions extends ModelActions<GetFacil
   
   FieldDispatcher<bool> get active;
   
-  FieldDispatcher<BuiltList<GetFacilityApiFacilityAttribute>> get attributes;
+  FieldDispatcher<BuiltList<FacilityAttribute>> get attributes;
+  
+  FieldDispatcher<BuiltList<AttributeContact>> get attributeContacts;
   
   FieldDispatcher<BuiltList<CustomAction>> get customActions;
   

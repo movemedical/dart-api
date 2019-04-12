@@ -60,6 +60,13 @@ class _$ListLoansApiRequestSerializer
         ..add(serializers.serialize(object.loanNumber,
             specifiedType: const FullType(String)));
     }
+    if (object.loanReasons != null) {
+      result
+        ..add('loanReasons')
+        ..add(serializers.serialize(object.loanReasons,
+            specifiedType:
+                const FullType(BuiltList, const [const FullType(LoanReason)])));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -112,6 +119,11 @@ class _$ListLoansApiRequestSerializer
           result.loanNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'loanReasons':
+          result.loanReasons.replace(serializers.deserialize(value,
+              specifiedType: const FullType(
+                  BuiltList, const [const FullType(LoanReason)])) as BuiltList);
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -144,6 +156,8 @@ class _$ListLoansApiRequest extends ListLoansApiRequest {
   @override
   final String loanNumber;
   @override
+  final BuiltList<LoanReason> loanReasons;
+  @override
   final PaginationParams paging;
   @override
   final OrderByParams<ListLoansApiOrderBy> orderBy;
@@ -158,6 +172,7 @@ class _$ListLoansApiRequest extends ListLoansApiRequest {
       this.serviceStartDateRange,
       this.serviceEndDateRange,
       this.loanNumber,
+      this.loanReasons,
       this.paging,
       this.orderBy})
       : super._();
@@ -180,6 +195,7 @@ class _$ListLoansApiRequest extends ListLoansApiRequest {
         serviceStartDateRange == other.serviceStartDateRange &&
         serviceEndDateRange == other.serviceEndDateRange &&
         loanNumber == other.loanNumber &&
+        loanReasons == other.loanReasons &&
         paging == other.paging &&
         orderBy == other.orderBy;
   }
@@ -191,11 +207,13 @@ class _$ListLoansApiRequest extends ListLoansApiRequest {
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, status.hashCode), location.hashCode),
-                            locationType.hashCode),
-                        serviceStartDateRange.hashCode),
-                    serviceEndDateRange.hashCode),
-                loanNumber.hashCode),
+                        $jc(
+                            $jc($jc($jc(0, status.hashCode), location.hashCode),
+                                locationType.hashCode),
+                            serviceStartDateRange.hashCode),
+                        serviceEndDateRange.hashCode),
+                    loanNumber.hashCode),
+                loanReasons.hashCode),
             paging.hashCode),
         orderBy.hashCode));
   }
@@ -209,6 +227,7 @@ class _$ListLoansApiRequest extends ListLoansApiRequest {
           ..add('serviceStartDateRange', serviceStartDateRange)
           ..add('serviceEndDateRange', serviceEndDateRange)
           ..add('loanNumber', loanNumber)
+          ..add('loanReasons', loanReasons)
           ..add('paging', paging)
           ..add('orderBy', orderBy))
         .toString();
@@ -249,6 +268,12 @@ class ListLoansApiRequestBuilder
   String get loanNumber => _$this._loanNumber;
   set loanNumber(String loanNumber) => _$this._loanNumber = loanNumber;
 
+  ListBuilder<LoanReason> _loanReasons;
+  ListBuilder<LoanReason> get loanReasons =>
+      _$this._loanReasons ??= new ListBuilder<LoanReason>();
+  set loanReasons(ListBuilder<LoanReason> loanReasons) =>
+      _$this._loanReasons = loanReasons;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -270,6 +295,7 @@ class ListLoansApiRequestBuilder
       _serviceStartDateRange = _$v.serviceStartDateRange?.toBuilder();
       _serviceEndDateRange = _$v.serviceEndDateRange?.toBuilder();
       _loanNumber = _$v.loanNumber;
+      _loanReasons = _$v.loanReasons?.toBuilder();
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
       _$v = null;
@@ -302,6 +328,7 @@ class ListLoansApiRequestBuilder
               serviceStartDateRange: _serviceStartDateRange?.build(),
               serviceEndDateRange: _serviceEndDateRange?.build(),
               loanNumber: loanNumber,
+              loanReasons: _loanReasons?.build(),
               paging: _paging?.build(),
               orderBy: _orderBy?.build());
     } catch (_) {
@@ -315,6 +342,8 @@ class ListLoansApiRequestBuilder
         _$failedField = 'serviceEndDateRange';
         _serviceEndDateRange?.build();
 
+        _$failedField = 'loanReasons';
+        _loanReasons?.build();
         _$failedField = 'paging';
         _paging?.build();
         _$failedField = 'orderBy';
@@ -353,6 +382,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
   final DateRangeActions serviceStartDateRange;
   final DateRangeActions serviceEndDateRange;
   final FieldDispatcher<String> loanNumber;
+  final FieldDispatcher<BuiltList<LoanReason>> loanReasons;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListLoansApiOrderBy> orderBy;
 
@@ -389,6 +419,11 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
                 (parent, builder) => parent?.serviceEndDateRange = builder)),
         loanNumber = $options.field<String>('loanNumber', (a) => a?.loanNumber,
             (s) => s?.loanNumber, (p, b) => p?.loanNumber = b),
+        loanReasons = $options.field<BuiltList<LoanReason>>(
+            'loanReasons',
+            (a) => a?.loanReasons,
+            (s) => s?.loanReasons,
+            (p, b) => p?.loanReasons = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -438,6 +473,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
         this.status,
         this.locationType,
         this.loanNumber,
+        this.loanReasons,
       ]);
 
   @override
@@ -449,6 +485,7 @@ class _$ListLoansApiRequestActions extends ListLoansApiRequestActions {
     serviceStartDateRange.$reducer(reducer);
     serviceEndDateRange.$reducer(reducer);
     loanNumber.$reducer(reducer);
+    loanReasons.$reducer(reducer);
     paging.$reducer(reducer);
     orderBy.$reducer(reducer);
   }

@@ -10,6 +10,7 @@ import 'package:movemedical_api/model/lot.dart';
 import 'package:movemedical_api/model/serial.dart';
 import 'package:movemedical_api/model/tag.dart';
 import 'package:movemedical_api/model/pkg.dart';
+import 'package:movemedical_api/model/shipment_lite.dart';
 import 'package:movemedical_api/model/location.dart';
 import 'package:movemedical_api/model/bin.dart';
 
@@ -58,6 +59,9 @@ abstract class ReadBarcode2ApiResponse implements Built<ReadBarcode2ApiResponse,
   
   @nullable
   Pkg get pkg;
+  
+  @nullable
+  ShipmentLite get shipmentLite;
   
   @nullable
   Location get pkgToLocation;
@@ -116,6 +120,8 @@ abstract class ReadBarcode2ApiResponseActions extends ModelActions<ReadBarcode2A
   TagActions get tag;
   
   PkgActions get pkg;
+  
+  ShipmentLiteActions get shipmentLite;
   
   LocationActions get pkgToLocation;
   

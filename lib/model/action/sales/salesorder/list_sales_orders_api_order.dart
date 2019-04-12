@@ -20,6 +20,9 @@ abstract class ListSalesOrdersApiOrder implements Built<ListSalesOrdersApiOrder,
   int get orderNumber;
   
   @nullable
+  String get poNumber;
+  
+  @nullable
   String get erpReference;
   
   @nullable
@@ -111,6 +114,8 @@ abstract class ListSalesOrdersApiOrderActions extends ModelActions<ListSalesOrde
   FieldDispatcher<String> get id;
   
   FieldDispatcher<int> get orderNumber;
+  
+  FieldDispatcher<String> get poNumber;
   
   FieldDispatcher<String> get erpReference;
   

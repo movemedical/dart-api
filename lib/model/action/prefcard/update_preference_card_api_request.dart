@@ -3,6 +3,7 @@ import 'package:built_value/serializer.dart';
 import 'package:modux/modux.dart';
 
 import 'dart:core';
+import 'package:built_collection/built_collection.dart';
 
 part 'update_preference_card_api_request.g.dart';
 
@@ -19,6 +20,9 @@ abstract class UpdatePreferenceCardApiRequest implements Built<UpdatePreferenceC
   
   @nullable
   String get description;
+  
+  @nullable
+  BuiltList<String> get orgUnitIds;
   
   @nullable
   bool get active;
@@ -48,6 +52,8 @@ abstract class UpdatePreferenceCardApiRequestActions extends ModelActions<Update
   FieldDispatcher<String> get name;
   
   FieldDispatcher<String> get description;
+  
+  FieldDispatcher<BuiltList<String>> get orgUnitIds;
   
   FieldDispatcher<bool> get active;
   

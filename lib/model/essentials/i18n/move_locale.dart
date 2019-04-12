@@ -11,6 +11,8 @@ class MoveLocale extends EnumClass {
   
   static const MoveLocale US = _$wireUS;
   static const MoveLocale FR = _$wireFR;
+  static const MoveLocale AU = _$wireAU;
+  static const MoveLocale UK = _$wireUK;
   
   ////////////////////////////////
   /// Constructor

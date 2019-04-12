@@ -38,6 +38,12 @@ class _$RequestStockHistoryReportApiResponseSerializer
         ..add(serializers.serialize(object.location,
             specifiedType: const FullType(Location)));
     }
+    if (object.responsibleParty != null) {
+      result
+        ..add('responsibleParty')
+        ..add(serializers.serialize(object.responsibleParty,
+            specifiedType: const FullType(ResponsibleParty)));
+    }
     if (object.item != null) {
       result
         ..add('item')
@@ -105,6 +111,11 @@ class _$RequestStockHistoryReportApiResponseSerializer
           result.location.replace(serializers.deserialize(value,
               specifiedType: const FullType(Location)) as Location);
           break;
+        case 'responsibleParty':
+          result.responsibleParty.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(ResponsibleParty))
+              as ResponsibleParty);
+          break;
         case 'item':
           result.item.replace(serializers.deserialize(value,
               specifiedType: const FullType(Item)) as Item);
@@ -149,6 +160,8 @@ class _$RequestStockHistoryReportApiResponse
   @override
   final Location location;
   @override
+  final ResponsibleParty responsibleParty;
+  @override
   final Item item;
   @override
   final Lot lot;
@@ -171,6 +184,7 @@ class _$RequestStockHistoryReportApiResponse
   _$RequestStockHistoryReportApiResponse._(
       {this.docReportId,
       this.location,
+      this.responsibleParty,
       this.item,
       this.lot,
       this.serial,
@@ -195,6 +209,7 @@ class _$RequestStockHistoryReportApiResponse
     return other is RequestStockHistoryReportApiResponse &&
         docReportId == other.docReportId &&
         location == other.location &&
+        responsibleParty == other.responsibleParty &&
         item == other.item &&
         lot == other.lot &&
         serial == other.serial &&
@@ -213,8 +228,10 @@ class _$RequestStockHistoryReportApiResponse
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, docReportId.hashCode),
-                                    location.hashCode),
+                                $jc(
+                                    $jc($jc(0, docReportId.hashCode),
+                                        location.hashCode),
+                                    responsibleParty.hashCode),
                                 item.hashCode),
                             lot.hashCode),
                         serial.hashCode),
@@ -229,6 +246,7 @@ class _$RequestStockHistoryReportApiResponse
     return (newBuiltValueToStringHelper('RequestStockHistoryReportApiResponse')
           ..add('docReportId', docReportId)
           ..add('location', location)
+          ..add('responsibleParty', responsibleParty)
           ..add('item', item)
           ..add('lot', lot)
           ..add('serial', serial)
@@ -253,6 +271,12 @@ class RequestStockHistoryReportApiResponseBuilder
   LocationBuilder _location;
   LocationBuilder get location => _$this._location ??= new LocationBuilder();
   set location(LocationBuilder location) => _$this._location = location;
+
+  ResponsiblePartyBuilder _responsibleParty;
+  ResponsiblePartyBuilder get responsibleParty =>
+      _$this._responsibleParty ??= new ResponsiblePartyBuilder();
+  set responsibleParty(ResponsiblePartyBuilder responsibleParty) =>
+      _$this._responsibleParty = responsibleParty;
 
   ItemBuilder _item;
   ItemBuilder get item => _$this._item ??= new ItemBuilder();
@@ -290,6 +314,7 @@ class RequestStockHistoryReportApiResponseBuilder
     if (_$v != null) {
       _docReportId = _$v.docReportId;
       _location = _$v.location?.toBuilder();
+      _responsibleParty = _$v.responsibleParty?.toBuilder();
       _item = _$v.item?.toBuilder();
       _lot = _$v.lot?.toBuilder();
       _serial = _$v.serial?.toBuilder();
@@ -323,6 +348,7 @@ class RequestStockHistoryReportApiResponseBuilder
           new _$RequestStockHistoryReportApiResponse._(
               docReportId: docReportId,
               location: _location?.build(),
+              responsibleParty: _responsibleParty?.build(),
               item: _item?.build(),
               lot: _lot?.build(),
               serial: _serial?.build(),
@@ -335,6 +361,8 @@ class RequestStockHistoryReportApiResponseBuilder
       try {
         _$failedField = 'location';
         _location?.build();
+        _$failedField = 'responsibleParty';
+        _responsibleParty?.build();
         _$failedField = 'item';
         _item?.build();
         _$failedField = 'lot';
@@ -381,6 +409,7 @@ class _$RequestStockHistoryReportApiResponseActions
   final ActionDispatcher<RequestStockHistoryReportApiResponse> $replace;
   final FieldDispatcher<String> docReportId;
   final LocationActions location;
+  final ResponsiblePartyActions responsibleParty;
   final ItemActions item;
   final LotActions lot;
   final SerialActions serial;
@@ -404,6 +433,15 @@ class _$RequestStockHistoryReportApiResponseActions
                 (s) => s?.location,
                 (b) => b?.location,
                 (parent, builder) => parent?.location = builder)),
+        responsibleParty = ResponsiblePartyActions(() => $options.stateful<
+                ResponsibleParty,
+                ResponsiblePartyBuilder,
+                ResponsiblePartyActions>(
+            'responsibleParty',
+            (a) => a.responsibleParty,
+            (s) => s?.responsibleParty,
+            (b) => b?.responsibleParty,
+            (parent, builder) => parent?.responsibleParty = builder)),
         item = ItemActions(() =>
             $options.stateful<Item, ItemBuilder, ItemActions>(
                 'item',
@@ -453,6 +491,7 @@ class _$RequestStockHistoryReportApiResponseActions
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.location,
+        this.responsibleParty,
         this.item,
         this.lot,
         this.serial,
@@ -475,6 +514,7 @@ class _$RequestStockHistoryReportApiResponseActions
     super.$reducer(reducer);
     docReportId.$reducer(reducer);
     location.$reducer(reducer);
+    responsibleParty.$reducer(reducer);
     item.$reducer(reducer);
     lot.$reducer(reducer);
     serial.$reducer(reducer);
@@ -488,6 +528,7 @@ class _$RequestStockHistoryReportApiResponseActions
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     location.$middleware(middleware);
+    responsibleParty.$middleware(middleware);
     item.$middleware(middleware);
     lot.$middleware(middleware);
     serial.$middleware(middleware);

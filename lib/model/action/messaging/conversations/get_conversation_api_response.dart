@@ -6,7 +6,7 @@ import 'dart:core';
 import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/action/messaging/conversations/get_conversation_api_participant.dart';
 import 'package:movemedical_api/model/attributable_object.dart';
-import 'package:movemedical_api/model/removeOrRefactor/message.dart';
+import 'package:movemedical_api/model/remove_or_refactor/message.dart';
 import 'package:movemedical_api/model/action/messaging/conversations/get_conversation_api_display_rules.dart';
 
 part 'get_conversation_api_response.g.dart';

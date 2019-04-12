@@ -4,7 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'package:movemedical_api/model/action/inventory/stock/barcode_scans_to_stock_api_scan.dart';
 import 'dart:core';
-import 'package:movemedical_api/model/action/inventory/stockSummary/list_stock_summary_api_stock_summary.dart';
+import 'package:movemedical_api/model/action/inventory/stock_summary/list_stock_summary_api_stock_summary.dart';
 import 'package:movemedical_api/model/stock_item.dart';
 
 part 'barcode_scans_to_stock_api_barcode_stock.g.dart';

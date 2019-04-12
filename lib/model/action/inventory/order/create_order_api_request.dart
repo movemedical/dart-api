@@ -10,7 +10,7 @@ import 'package:movemedical_api/model/location_data.dart';
 import 'package:movemedical_api/model/date_range.dart';
 import 'package:movemedical_api/model/sql/enums/location_type.dart';
 import 'package:movemedical_api/model/sql/enums/move_item_class.dart';
-import 'package:movemedical_api/model/action/caseEvent/usage/save_case_usages_api_request.dart';
+import 'package:movemedical_api/model/action/case_event/usage/save_case_usages_api_request.dart';
 import 'package:movemedical_api/model/action/inventory/order/save_order_lines_api_request.dart';
 
 part 'create_order_api_request.g.dart';
@@ -28,6 +28,9 @@ abstract class CreateOrderApiRequest implements Built<CreateOrderApiRequest, Cre
   
   @nullable
   String get shipToAddressId;
+  
+  @nullable
+  String get physicianId;
   
   @nullable
   Address get deliverToAddressOverride;
@@ -126,6 +129,8 @@ abstract class CreateOrderApiRequestActions extends ModelActions<CreateOrderApiR
   FieldDispatcher<String> get orderReasonId;
   
   FieldDispatcher<String> get shipToAddressId;
+  
+  FieldDispatcher<String> get physicianId;
   
   AddressActions get deliverToAddressOverride;
   

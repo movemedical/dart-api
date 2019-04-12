@@ -82,6 +82,9 @@ abstract class ListSalesOrdersApiRequest implements Built<ListSalesOrdersApiRequ
   String get search;
   
   @nullable
+  bool get forExport;
+  
+  @nullable
   PaginationParams get paging;
   
   @nullable
@@ -148,6 +151,8 @@ abstract class ListSalesOrdersApiRequestActions extends ModelActions<ListSalesOr
   FieldDispatcher<String> get orderNumber;
   
   FieldDispatcher<String> get search;
+  
+  FieldDispatcher<bool> get forExport;
   
   PaginationParamsActions get paging;
   

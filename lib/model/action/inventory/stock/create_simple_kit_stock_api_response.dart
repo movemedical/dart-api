@@ -12,7 +12,13 @@ abstract class CreateSimpleKitStockApiResponse implements Built<CreateSimpleKitS
   ////////////////////////////////
   
   @nullable
-  String get stockSummaryKey;
+  String get kitStockId;
+  
+  @nullable
+  String get kitStockSummaryKey;
+  
+  @nullable
+  String get toteStockId;
   
   ////////////////////////////////
   /// Constructors
@@ -34,7 +40,11 @@ abstract class CreateSimpleKitStockApiResponseActions extends ModelActions<Creat
   /// Fields
   ////////////////////////////////
   
-  FieldDispatcher<String> get stockSummaryKey;
+  FieldDispatcher<String> get kitStockId;
+  
+  FieldDispatcher<String> get kitStockSummaryKey;
+  
+  FieldDispatcher<String> get toteStockId;
   
   ////////////////////////////////
   /// Constructors

@@ -26,6 +26,9 @@ abstract class ListCustomersApiRequest implements Built<ListCustomersApiRequest,
   bool get active;
   
   @nullable
+  bool get scopeToLocationVizibility;
+  
+  @nullable
   ListCustomersApiSortBy get sortBy;
   
   @nullable
@@ -64,6 +67,8 @@ abstract class ListCustomersApiRequestActions extends ModelActions<ListCustomers
   FieldDispatcher<String> get search;
   
   FieldDispatcher<bool> get active;
+  
+  FieldDispatcher<bool> get scopeToLocationVizibility;
   
   FieldDispatcher<ListCustomersApiSortBy> get sortBy;
   

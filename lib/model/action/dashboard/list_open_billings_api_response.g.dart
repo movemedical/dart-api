@@ -26,23 +26,12 @@ class _$ListOpenBillingsApiResponseSerializer
       Serializers serializers, ListOpenBillingsApiResponse object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.pendingPoSum != null) {
+    if (object.openBillings != null) {
       result
-        ..add('pendingPoSum')
-        ..add(serializers.serialize(object.pendingPoSum,
-            specifiedType: const FullType(double)));
-    }
-    if (object.missingUsageSum != null) {
-      result
-        ..add('missingUsageSum')
-        ..add(serializers.serialize(object.missingUsageSum,
-            specifiedType: const FullType(double)));
-    }
-    if (object.unreconciledSum != null) {
-      result
-        ..add('unreconciledSum')
-        ..add(serializers.serialize(object.unreconciledSum,
-            specifiedType: const FullType(double)));
+        ..add('openBillings')
+        ..add(serializers.serialize(object.openBillings,
+            specifiedType: const FullType(BuiltList,
+                const [const FullType(ListOpenBillingsApiOpenBilling)])));
     }
 
     return result;
@@ -60,17 +49,11 @@ class _$ListOpenBillingsApiResponseSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'pendingPoSum':
-          result.pendingPoSum = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'missingUsageSum':
-          result.missingUsageSum = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
-          break;
-        case 'unreconciledSum':
-          result.unreconciledSum = serializers.deserialize(value,
-              specifiedType: const FullType(double)) as double;
+        case 'openBillings':
+          result.openBillings.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(ListOpenBillingsApiOpenBilling)
+              ])) as BuiltList);
           break;
       }
     }
@@ -81,19 +64,13 @@ class _$ListOpenBillingsApiResponseSerializer
 
 class _$ListOpenBillingsApiResponse extends ListOpenBillingsApiResponse {
   @override
-  final double pendingPoSum;
-  @override
-  final double missingUsageSum;
-  @override
-  final double unreconciledSum;
+  final BuiltList<ListOpenBillingsApiOpenBilling> openBillings;
 
   factory _$ListOpenBillingsApiResponse(
           [void updates(ListOpenBillingsApiResponseBuilder b)]) =>
       (new ListOpenBillingsApiResponseBuilder()..update(updates)).build();
 
-  _$ListOpenBillingsApiResponse._(
-      {this.pendingPoSum, this.missingUsageSum, this.unreconciledSum})
-      : super._();
+  _$ListOpenBillingsApiResponse._({this.openBillings}) : super._();
 
   @override
   ListOpenBillingsApiResponse rebuild(
@@ -108,23 +85,18 @@ class _$ListOpenBillingsApiResponse extends ListOpenBillingsApiResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ListOpenBillingsApiResponse &&
-        pendingPoSum == other.pendingPoSum &&
-        missingUsageSum == other.missingUsageSum &&
-        unreconciledSum == other.unreconciledSum;
+        openBillings == other.openBillings;
   }
 
   @override
   int get hashCode {
-    return $jf($jc($jc($jc(0, pendingPoSum.hashCode), missingUsageSum.hashCode),
-        unreconciledSum.hashCode));
+    return $jf($jc(0, openBillings.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('ListOpenBillingsApiResponse')
-          ..add('pendingPoSum', pendingPoSum)
-          ..add('missingUsageSum', missingUsageSum)
-          ..add('unreconciledSum', unreconciledSum))
+          ..add('openBillings', openBillings))
         .toString();
   }
 }
@@ -135,27 +107,18 @@ class ListOpenBillingsApiResponseBuilder
             ListOpenBillingsApiResponseBuilder> {
   _$ListOpenBillingsApiResponse _$v;
 
-  double _pendingPoSum;
-  double get pendingPoSum => _$this._pendingPoSum;
-  set pendingPoSum(double pendingPoSum) => _$this._pendingPoSum = pendingPoSum;
-
-  double _missingUsageSum;
-  double get missingUsageSum => _$this._missingUsageSum;
-  set missingUsageSum(double missingUsageSum) =>
-      _$this._missingUsageSum = missingUsageSum;
-
-  double _unreconciledSum;
-  double get unreconciledSum => _$this._unreconciledSum;
-  set unreconciledSum(double unreconciledSum) =>
-      _$this._unreconciledSum = unreconciledSum;
+  ListBuilder<ListOpenBillingsApiOpenBilling> _openBillings;
+  ListBuilder<ListOpenBillingsApiOpenBilling> get openBillings =>
+      _$this._openBillings ??=
+          new ListBuilder<ListOpenBillingsApiOpenBilling>();
+  set openBillings(ListBuilder<ListOpenBillingsApiOpenBilling> openBillings) =>
+      _$this._openBillings = openBillings;
 
   ListOpenBillingsApiResponseBuilder();
 
   ListOpenBillingsApiResponseBuilder get _$this {
     if (_$v != null) {
-      _pendingPoSum = _$v.pendingPoSum;
-      _missingUsageSum = _$v.missingUsageSum;
-      _unreconciledSum = _$v.unreconciledSum;
+      _openBillings = _$v.openBillings?.toBuilder();
       _$v = null;
     }
     return this;
@@ -176,11 +139,22 @@ class ListOpenBillingsApiResponseBuilder
 
   @override
   _$ListOpenBillingsApiResponse build() {
-    final _$result = _$v ??
-        new _$ListOpenBillingsApiResponse._(
-            pendingPoSum: pendingPoSum,
-            missingUsageSum: missingUsageSum,
-            unreconciledSum: unreconciledSum);
+    _$ListOpenBillingsApiResponse _$result;
+    try {
+      _$result = _$v ??
+          new _$ListOpenBillingsApiResponse._(
+              openBillings: _openBillings?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'openBillings';
+        _openBillings?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ListOpenBillingsApiResponse', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
@@ -208,28 +182,17 @@ class _$ListOpenBillingsApiResponseActions
       ListOpenBillingsApiResponseActions> $options;
 
   final ActionDispatcher<ListOpenBillingsApiResponse> $replace;
-  final FieldDispatcher<double> pendingPoSum;
-  final FieldDispatcher<double> missingUsageSum;
-  final FieldDispatcher<double> unreconciledSum;
+  final FieldDispatcher<BuiltList<ListOpenBillingsApiOpenBilling>> openBillings;
 
   _$ListOpenBillingsApiResponseActions._(this.$options)
       : $replace = $options.action<ListOpenBillingsApiResponse>(
             '\$replace', (a) => a?.$replace),
-        pendingPoSum = $options.field<double>(
-            'pendingPoSum',
-            (a) => a?.pendingPoSum,
-            (s) => s?.pendingPoSum,
-            (p, b) => p?.pendingPoSum = b),
-        missingUsageSum = $options.field<double>(
-            'missingUsageSum',
-            (a) => a?.missingUsageSum,
-            (s) => s?.missingUsageSum,
-            (p, b) => p?.missingUsageSum = b),
-        unreconciledSum = $options.field<double>(
-            'unreconciledSum',
-            (a) => a?.unreconciledSum,
-            (s) => s?.unreconciledSum,
-            (p, b) => p?.unreconciledSum = b),
+        openBillings =
+            $options.field<BuiltList<ListOpenBillingsApiOpenBilling>>(
+                'openBillings',
+                (a) => a?.openBillings,
+                (s) => s?.openBillings,
+                (p, b) => p?.openBillings = b),
         super._();
 
   factory _$ListOpenBillingsApiResponseActions(
@@ -248,17 +211,13 @@ class _$ListOpenBillingsApiResponseActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.pendingPoSum,
-        this.missingUsageSum,
-        this.unreconciledSum,
+        this.openBillings,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
-    pendingPoSum.$reducer(reducer);
-    missingUsageSum.$reducer(reducer);
-    unreconciledSum.$reducer(reducer);
+    openBillings.$reducer(reducer);
   }
 
   @override

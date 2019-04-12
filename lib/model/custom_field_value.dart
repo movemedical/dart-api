@@ -28,6 +28,9 @@ abstract class CustomFieldValue implements Built<CustomFieldValue, CustomFieldVa
   int get sort;
   
   @nullable
+  bool get active;
+  
+  @nullable
   bool get required;
   
   @nullable
@@ -74,6 +77,8 @@ abstract class CustomFieldValueActions extends ModelActions<CustomFieldValue, Cu
   FieldDispatcher<CustomFieldDataType> get customFieldDataType;
   
   FieldDispatcher<int> get sort;
+  
+  FieldDispatcher<bool> get active;
   
   FieldDispatcher<bool> get required;
   

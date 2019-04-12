@@ -19,6 +19,10 @@ const StockReferenceType _$wireKIT_STOCK =
     const StockReferenceType._('KIT_STOCK');
 const StockReferenceType _$wireFILE_IMPORT =
     const StockReferenceType._('FILE_IMPORT');
+const StockReferenceType _$wireLOCATION =
+    const StockReferenceType._('LOCATION');
+const StockReferenceType _$wireCASE_EVENT =
+    const StockReferenceType._('CASE_EVENT');
 
 StockReferenceType _$stockReferenceTypeValueOf(String name) {
   switch (name) {
@@ -38,6 +42,10 @@ StockReferenceType _$stockReferenceTypeValueOf(String name) {
       return _$wireKIT_STOCK;
     case 'FILE_IMPORT':
       return _$wireFILE_IMPORT;
+    case 'LOCATION':
+      return _$wireLOCATION;
+    case 'CASE_EVENT':
+      return _$wireCASE_EVENT;
     default:
       throw new ArgumentError(name);
   }
@@ -53,6 +61,8 @@ final BuiltSet<StockReferenceType> _$stockReferenceTypeValues =
   _$wireCASE_USAGE,
   _$wireKIT_STOCK,
   _$wireFILE_IMPORT,
+  _$wireLOCATION,
+  _$wireCASE_EVENT,
 ]);
 
 Serializer<StockReferenceType> _$stockReferenceTypeSerializer =

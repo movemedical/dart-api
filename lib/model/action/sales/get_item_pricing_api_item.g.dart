@@ -24,6 +24,12 @@ class _$GetItemPricingApiItemSerializer
   Iterable serialize(Serializers serializers, GetItemPricingApiItem object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.id != null) {
+      result
+        ..add('id')
+        ..add(serializers.serialize(object.id,
+            specifiedType: const FullType(String)));
+    }
     if (object.itemId != null) {
       result
         ..add('itemId')
@@ -41,6 +47,12 @@ class _$GetItemPricingApiItemSerializer
         ..add('caseUsageDisposition')
         ..add(serializers.serialize(object.caseUsageDisposition,
             specifiedType: const FullType(CaseUsageDisposition)));
+    }
+    if (object.billingCodeId != null) {
+      result
+        ..add('billingCodeId')
+        ..add(serializers.serialize(object.billingCodeId,
+            specifiedType: const FullType(String)));
     }
     if (object.construct != null) {
       result
@@ -64,6 +76,10 @@ class _$GetItemPricingApiItemSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'id':
+          result.id = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'itemId':
           result.itemId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -76,6 +92,10 @@ class _$GetItemPricingApiItemSerializer
           result.caseUsageDisposition = serializers.deserialize(value,
                   specifiedType: const FullType(CaseUsageDisposition))
               as CaseUsageDisposition;
+          break;
+        case 'billingCodeId':
+          result.billingCodeId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
           break;
         case 'construct':
           result.construct = serializers.deserialize(value,
@@ -90,11 +110,15 @@ class _$GetItemPricingApiItemSerializer
 
 class _$GetItemPricingApiItem extends GetItemPricingApiItem {
   @override
+  final String id;
+  @override
   final String itemId;
   @override
   final int quantity;
   @override
   final CaseUsageDisposition caseUsageDisposition;
+  @override
+  final String billingCodeId;
   @override
   final bool construct;
 
@@ -103,7 +127,12 @@ class _$GetItemPricingApiItem extends GetItemPricingApiItem {
       (new GetItemPricingApiItemBuilder()..update(updates)).build();
 
   _$GetItemPricingApiItem._(
-      {this.itemId, this.quantity, this.caseUsageDisposition, this.construct})
+      {this.id,
+      this.itemId,
+      this.quantity,
+      this.caseUsageDisposition,
+      this.billingCodeId,
+      this.construct})
       : super._();
 
   @override
@@ -118,26 +147,34 @@ class _$GetItemPricingApiItem extends GetItemPricingApiItem {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is GetItemPricingApiItem &&
+        id == other.id &&
         itemId == other.itemId &&
         quantity == other.quantity &&
         caseUsageDisposition == other.caseUsageDisposition &&
+        billingCodeId == other.billingCodeId &&
         construct == other.construct;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, itemId.hashCode), quantity.hashCode),
-            caseUsageDisposition.hashCode),
+        $jc(
+            $jc(
+                $jc($jc($jc(0, id.hashCode), itemId.hashCode),
+                    quantity.hashCode),
+                caseUsageDisposition.hashCode),
+            billingCodeId.hashCode),
         construct.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetItemPricingApiItem')
+          ..add('id', id)
           ..add('itemId', itemId)
           ..add('quantity', quantity)
           ..add('caseUsageDisposition', caseUsageDisposition)
+          ..add('billingCodeId', billingCodeId)
           ..add('construct', construct))
         .toString();
   }
@@ -146,6 +183,10 @@ class _$GetItemPricingApiItem extends GetItemPricingApiItem {
 class GetItemPricingApiItemBuilder
     implements Builder<GetItemPricingApiItem, GetItemPricingApiItemBuilder> {
   _$GetItemPricingApiItem _$v;
+
+  String _id;
+  String get id => _$this._id;
+  set id(String id) => _$this._id = id;
 
   String _itemId;
   String get itemId => _$this._itemId;
@@ -160,6 +201,11 @@ class GetItemPricingApiItemBuilder
   set caseUsageDisposition(CaseUsageDisposition caseUsageDisposition) =>
       _$this._caseUsageDisposition = caseUsageDisposition;
 
+  String _billingCodeId;
+  String get billingCodeId => _$this._billingCodeId;
+  set billingCodeId(String billingCodeId) =>
+      _$this._billingCodeId = billingCodeId;
+
   bool _construct;
   bool get construct => _$this._construct;
   set construct(bool construct) => _$this._construct = construct;
@@ -168,9 +214,11 @@ class GetItemPricingApiItemBuilder
 
   GetItemPricingApiItemBuilder get _$this {
     if (_$v != null) {
+      _id = _$v.id;
       _itemId = _$v.itemId;
       _quantity = _$v.quantity;
       _caseUsageDisposition = _$v.caseUsageDisposition;
+      _billingCodeId = _$v.billingCodeId;
       _construct = _$v.construct;
       _$v = null;
     }
@@ -194,9 +242,11 @@ class GetItemPricingApiItemBuilder
   _$GetItemPricingApiItem build() {
     final _$result = _$v ??
         new _$GetItemPricingApiItem._(
+            id: id,
             itemId: itemId,
             quantity: quantity,
             caseUsageDisposition: caseUsageDisposition,
+            billingCodeId: billingCodeId,
             construct: construct);
     replace(_$result);
     return _$result;
@@ -222,14 +272,18 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
       GetItemPricingApiItemBuilder, GetItemPricingApiItemActions> $options;
 
   final ActionDispatcher<GetItemPricingApiItem> $replace;
+  final FieldDispatcher<String> id;
   final FieldDispatcher<String> itemId;
   final FieldDispatcher<int> quantity;
   final FieldDispatcher<CaseUsageDisposition> caseUsageDisposition;
+  final FieldDispatcher<String> billingCodeId;
   final FieldDispatcher<bool> construct;
 
   _$GetItemPricingApiItemActions._(this.$options)
       : $replace = $options.action<GetItemPricingApiItem>(
             '\$replace', (a) => a?.$replace),
+        id = $options.field<String>(
+            'id', (a) => a?.id, (s) => s?.id, (p, b) => p?.id = b),
         itemId = $options.field<String>('itemId', (a) => a?.itemId,
             (s) => s?.itemId, (p, b) => p?.itemId = b),
         quantity = $options.field<int>('quantity', (a) => a?.quantity,
@@ -239,6 +293,11 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
             (a) => a?.caseUsageDisposition,
             (s) => s?.caseUsageDisposition,
             (p, b) => p?.caseUsageDisposition = b),
+        billingCodeId = $options.field<String>(
+            'billingCodeId',
+            (a) => a?.billingCodeId,
+            (s) => s?.billingCodeId,
+            (p, b) => p?.billingCodeId = b),
         construct = $options.field<bool>('construct', (a) => a?.construct,
             (s) => s?.construct, (p, b) => p?.construct = b),
         super._();
@@ -258,18 +317,22 @@ class _$GetItemPricingApiItemActions extends GetItemPricingApiItemActions {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
+        this.id,
         this.itemId,
         this.quantity,
         this.caseUsageDisposition,
+        this.billingCodeId,
         this.construct,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
+    id.$reducer(reducer);
     itemId.$reducer(reducer);
     quantity.$reducer(reducer);
     caseUsageDisposition.$reducer(reducer);
+    billingCodeId.$reducer(reducer);
     construct.$reducer(reducer);
   }
 

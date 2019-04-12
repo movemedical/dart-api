@@ -12,6 +12,7 @@ const AssociationType _$wireDEMAND_LOAN =
     const AssociationType._('DEMAND_LOAN');
 const AssociationType _$wireCASE_EVENT = const AssociationType._('CASE_EVENT');
 const AssociationType _$wireKIT = const AssociationType._('KIT');
+const AssociationType _$wireTRAY = const AssociationType._('TRAY');
 
 AssociationType _$associationTypeValueOf(String name) {
   switch (name) {
@@ -23,6 +24,8 @@ AssociationType _$associationTypeValueOf(String name) {
       return _$wireCASE_EVENT;
     case 'KIT':
       return _$wireKIT;
+    case 'TRAY':
+      return _$wireTRAY;
     default:
       throw new ArgumentError(name);
   }
@@ -34,6 +37,7 @@ final BuiltSet<AssociationType> _$associationTypeValues =
   _$wireDEMAND_LOAN,
   _$wireCASE_EVENT,
   _$wireKIT,
+  _$wireTRAY,
 ]);
 
 Serializer<AssociationType> _$associationTypeSerializer =

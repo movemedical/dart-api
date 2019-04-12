@@ -28,6 +28,9 @@ abstract class ListStockForSourcingMatrixApiRequest implements Built<ListStockFo
   BuiltList<String> get locationIds;
   
   @nullable
+  BuiltList<String> get orgUnitIds;
+  
+  @nullable
   BuiltList<LocationType> get locationTypes;
   
   @nullable
@@ -35,6 +38,12 @@ abstract class ListStockForSourcingMatrixApiRequest implements Built<ListStockFo
   
   @nullable
   String get inventoryTypeId;
+  
+  @nullable
+  bool get activeCases;
+  
+  @nullable
+  bool get questionableKitsTrays;
   
   ////////////////////////////////
   /// Constructors
@@ -64,11 +73,17 @@ abstract class ListStockForSourcingMatrixApiRequestActions extends ModelActions<
   
   FieldDispatcher<BuiltList<String>> get locationIds;
   
+  FieldDispatcher<BuiltList<String>> get orgUnitIds;
+  
   FieldDispatcher<BuiltList<LocationType>> get locationTypes;
   
   FieldDispatcher<BuiltList<FacilityType>> get facilityTypes;
   
   FieldDispatcher<String> get inventoryTypeId;
+  
+  FieldDispatcher<bool> get activeCases;
+  
+  FieldDispatcher<bool> get questionableKitsTrays;
   
   ////////////////////////////////
   /// Constructors

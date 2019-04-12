@@ -33,6 +33,12 @@ class _$GetExpiringItemsApiResponseSerializer
             specifiedType: const FullType(BuiltList,
                 const [const FullType(GetExpiringItemsApiExpirationLevel)])));
     }
+    if (object.building != null) {
+      result
+        ..add('building')
+        ..add(serializers.serialize(object.building,
+            specifiedType: const FullType(bool)));
+    }
 
     return result;
   }
@@ -55,6 +61,10 @@ class _$GetExpiringItemsApiResponseSerializer
                 const FullType(GetExpiringItemsApiExpirationLevel)
               ])) as BuiltList);
           break;
+        case 'building':
+          result.building = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
       }
     }
 
@@ -65,12 +75,15 @@ class _$GetExpiringItemsApiResponseSerializer
 class _$GetExpiringItemsApiResponse extends GetExpiringItemsApiResponse {
   @override
   final BuiltList<GetExpiringItemsApiExpirationLevel> expirationLevels;
+  @override
+  final bool building;
 
   factory _$GetExpiringItemsApiResponse(
           [void updates(GetExpiringItemsApiResponseBuilder b)]) =>
       (new GetExpiringItemsApiResponseBuilder()..update(updates)).build();
 
-  _$GetExpiringItemsApiResponse._({this.expirationLevels}) : super._();
+  _$GetExpiringItemsApiResponse._({this.expirationLevels, this.building})
+      : super._();
 
   @override
   GetExpiringItemsApiResponse rebuild(
@@ -85,18 +98,20 @@ class _$GetExpiringItemsApiResponse extends GetExpiringItemsApiResponse {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is GetExpiringItemsApiResponse &&
-        expirationLevels == other.expirationLevels;
+        expirationLevels == other.expirationLevels &&
+        building == other.building;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, expirationLevels.hashCode));
+    return $jf($jc($jc(0, expirationLevels.hashCode), building.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetExpiringItemsApiResponse')
-          ..add('expirationLevels', expirationLevels))
+          ..add('expirationLevels', expirationLevels)
+          ..add('building', building))
         .toString();
   }
 }
@@ -115,11 +130,16 @@ class GetExpiringItemsApiResponseBuilder
           ListBuilder<GetExpiringItemsApiExpirationLevel> expirationLevels) =>
       _$this._expirationLevels = expirationLevels;
 
+  bool _building;
+  bool get building => _$this._building;
+  set building(bool building) => _$this._building = building;
+
   GetExpiringItemsApiResponseBuilder();
 
   GetExpiringItemsApiResponseBuilder get _$this {
     if (_$v != null) {
       _expirationLevels = _$v.expirationLevels?.toBuilder();
+      _building = _$v.building;
       _$v = null;
     }
     return this;
@@ -144,7 +164,7 @@ class GetExpiringItemsApiResponseBuilder
     try {
       _$result = _$v ??
           new _$GetExpiringItemsApiResponse._(
-              expirationLevels: _expirationLevels?.build());
+              expirationLevels: _expirationLevels?.build(), building: building);
     } catch (_) {
       String _$failedField;
       try {
@@ -185,6 +205,7 @@ class _$GetExpiringItemsApiResponseActions
   final ActionDispatcher<GetExpiringItemsApiResponse> $replace;
   final FieldDispatcher<BuiltList<GetExpiringItemsApiExpirationLevel>>
       expirationLevels;
+  final FieldDispatcher<bool> building;
 
   _$GetExpiringItemsApiResponseActions._(this.$options)
       : $replace = $options.action<GetExpiringItemsApiResponse>(
@@ -195,6 +216,8 @@ class _$GetExpiringItemsApiResponseActions
                 (a) => a?.expirationLevels,
                 (s) => s?.expirationLevels,
                 (p, b) => p?.expirationLevels = b),
+        building = $options.field<bool>('building', (a) => a?.building,
+            (s) => s?.building, (p, b) => p?.building = b),
         super._();
 
   factory _$GetExpiringItemsApiResponseActions(
@@ -214,12 +237,14 @@ class _$GetExpiringItemsApiResponseActions
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
         this.expirationLevels,
+        this.building,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     expirationLevels.$reducer(reducer);
+    building.$reducer(reducer);
   }
 
   @override

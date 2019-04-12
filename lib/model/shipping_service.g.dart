@@ -44,6 +44,18 @@ class _$ShippingServiceSerializer
         ..add(serializers.serialize(object.hoursInTransit,
             specifiedType: const FullType(int)));
     }
+    if (object.active != null) {
+      result
+        ..add('active')
+        ..add(serializers.serialize(object.active,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.erpCode != null) {
+      result
+        ..add('erpCode')
+        ..add(serializers.serialize(object.erpCode,
+            specifiedType: const FullType(String)));
+    }
 
     return result;
   }
@@ -75,6 +87,14 @@ class _$ShippingServiceSerializer
           result.hoursInTransit = serializers.deserialize(value,
               specifiedType: const FullType(int)) as int;
           break;
+        case 'active':
+          result.active = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'erpCode':
+          result.erpCode = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
       }
     }
 
@@ -91,12 +111,21 @@ class _$ShippingService extends ShippingService {
   final int daysInTransit;
   @override
   final int hoursInTransit;
+  @override
+  final bool active;
+  @override
+  final String erpCode;
 
   factory _$ShippingService([void updates(ShippingServiceBuilder b)]) =>
       (new ShippingServiceBuilder()..update(updates)).build();
 
   _$ShippingService._(
-      {this.id, this.name, this.daysInTransit, this.hoursInTransit})
+      {this.id,
+      this.name,
+      this.daysInTransit,
+      this.hoursInTransit,
+      this.active,
+      this.erpCode})
       : super._();
 
   @override
@@ -114,14 +143,21 @@ class _$ShippingService extends ShippingService {
         id == other.id &&
         name == other.name &&
         daysInTransit == other.daysInTransit &&
-        hoursInTransit == other.hoursInTransit;
+        hoursInTransit == other.hoursInTransit &&
+        active == other.active &&
+        erpCode == other.erpCode;
   }
 
   @override
   int get hashCode {
     return $jf($jc(
-        $jc($jc($jc(0, id.hashCode), name.hashCode), daysInTransit.hashCode),
-        hoursInTransit.hashCode));
+        $jc(
+            $jc(
+                $jc($jc($jc(0, id.hashCode), name.hashCode),
+                    daysInTransit.hashCode),
+                hoursInTransit.hashCode),
+            active.hashCode),
+        erpCode.hashCode));
   }
 
   @override
@@ -130,7 +166,9 @@ class _$ShippingService extends ShippingService {
           ..add('id', id)
           ..add('name', name)
           ..add('daysInTransit', daysInTransit)
-          ..add('hoursInTransit', hoursInTransit))
+          ..add('hoursInTransit', hoursInTransit)
+          ..add('active', active)
+          ..add('erpCode', erpCode))
         .toString();
   }
 }
@@ -156,6 +194,14 @@ class ShippingServiceBuilder
   set hoursInTransit(int hoursInTransit) =>
       _$this._hoursInTransit = hoursInTransit;
 
+  bool _active;
+  bool get active => _$this._active;
+  set active(bool active) => _$this._active = active;
+
+  String _erpCode;
+  String get erpCode => _$this._erpCode;
+  set erpCode(String erpCode) => _$this._erpCode = erpCode;
+
   ShippingServiceBuilder();
 
   ShippingServiceBuilder get _$this {
@@ -164,6 +210,8 @@ class ShippingServiceBuilder
       _name = _$v.name;
       _daysInTransit = _$v.daysInTransit;
       _hoursInTransit = _$v.hoursInTransit;
+      _active = _$v.active;
+      _erpCode = _$v.erpCode;
       _$v = null;
     }
     return this;
@@ -189,7 +237,9 @@ class ShippingServiceBuilder
             id: id,
             name: name,
             daysInTransit: daysInTransit,
-            hoursInTransit: hoursInTransit);
+            hoursInTransit: hoursInTransit,
+            active: active,
+            erpCode: erpCode);
     replace(_$result);
     return _$result;
   }
@@ -216,6 +266,8 @@ class _$ShippingServiceActions extends ShippingServiceActions {
   final FieldDispatcher<String> name;
   final FieldDispatcher<int> daysInTransit;
   final FieldDispatcher<int> hoursInTransit;
+  final FieldDispatcher<bool> active;
+  final FieldDispatcher<String> erpCode;
 
   _$ShippingServiceActions._(this.$options)
       : $replace =
@@ -234,6 +286,10 @@ class _$ShippingServiceActions extends ShippingServiceActions {
             (a) => a?.hoursInTransit,
             (s) => s?.hoursInTransit,
             (p, b) => p?.hoursInTransit = b),
+        active = $options.field<bool>('active', (a) => a?.active,
+            (s) => s?.active, (p, b) => p?.active = b),
+        erpCode = $options.field<String>('erpCode', (a) => a?.erpCode,
+            (s) => s?.erpCode, (p, b) => p?.erpCode = b),
         super._();
 
   factory _$ShippingServiceActions(ShippingServiceActionsOptions options) =>
@@ -254,6 +310,8 @@ class _$ShippingServiceActions extends ShippingServiceActions {
         this.name,
         this.daysInTransit,
         this.hoursInTransit,
+        this.active,
+        this.erpCode,
       ]);
 
   @override
@@ -263,6 +321,8 @@ class _$ShippingServiceActions extends ShippingServiceActions {
     name.$reducer(reducer);
     daysInTransit.$reducer(reducer);
     hoursInTransit.$reducer(reducer);
+    active.$reducer(reducer);
+    erpCode.$reducer(reducer);
   }
 
   @override

@@ -163,6 +163,12 @@ class _$ListSalesOrdersApiRequestSerializer
         ..add(serializers.serialize(object.search,
             specifiedType: const FullType(String)));
     }
+    if (object.forExport != null) {
+      result
+        ..add('forExport')
+        ..add(serializers.serialize(object.forExport,
+            specifiedType: const FullType(bool)));
+    }
     if (object.paging != null) {
       result
         ..add('paging')
@@ -302,6 +308,10 @@ class _$ListSalesOrdersApiRequestSerializer
           result.search = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'forExport':
+          result.forExport = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
         case 'paging':
           result.paging.replace(serializers.deserialize(value,
                   specifiedType: const FullType(PaginationParams))
@@ -364,6 +374,8 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
   @override
   final String search;
   @override
+  final bool forExport;
+  @override
   final PaginationParams paging;
   @override
   final OrderByParams<ListSalesOrdersApiOrderBy> orderBy;
@@ -394,6 +406,7 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
       this.pendingPo,
       this.orderNumber,
       this.search,
+      this.forExport,
       this.paging,
       this.orderBy})
       : super._();
@@ -432,6 +445,7 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
         pendingPo == other.pendingPo &&
         orderNumber == other.orderNumber &&
         search == other.search &&
+        forExport == other.forExport &&
         paging == other.paging &&
         orderBy == other.orderBy;
   }
@@ -456,24 +470,24 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc(0, customerIds.hashCode), orderStatuses.hashCode), orderReasonIds.hashCode), locationIds.hashCode),
-                                                                                locationTypes.hashCode),
-                                                                            orgUnitIds.hashCode),
-                                                                        itemCategoryIds.hashCode),
-                                                                    createdByContactIds.hashCode),
-                                                                hcrIds.hashCode),
-                                                            teamIds.hashCode),
-                                                        itemIds.hashCode),
-                                                    lotIds.hashCode),
-                                                serialIds.hashCode),
-                                            createdDateRange.hashCode),
-                                        hasErpError.hashCode),
-                                    billOnly.hashCode),
-                                erpOrderNumberSearch.hashCode),
-                            poNumberSearch.hashCode),
-                        pendingPo.hashCode),
-                    orderNumber.hashCode),
-                search.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc(0, customerIds.hashCode), orderStatuses.hashCode), orderReasonIds.hashCode), locationIds.hashCode), locationTypes.hashCode),
+                                                                                orgUnitIds.hashCode),
+                                                                            itemCategoryIds.hashCode),
+                                                                        createdByContactIds.hashCode),
+                                                                    hcrIds.hashCode),
+                                                                teamIds.hashCode),
+                                                            itemIds.hashCode),
+                                                        lotIds.hashCode),
+                                                    serialIds.hashCode),
+                                                createdDateRange.hashCode),
+                                            hasErpError.hashCode),
+                                        billOnly.hashCode),
+                                    erpOrderNumberSearch.hashCode),
+                                poNumberSearch.hashCode),
+                            pendingPo.hashCode),
+                        orderNumber.hashCode),
+                    search.hashCode),
+                forExport.hashCode),
             paging.hashCode),
         orderBy.hashCode));
   }
@@ -502,6 +516,7 @@ class _$ListSalesOrdersApiRequest extends ListSalesOrdersApiRequest {
           ..add('pendingPo', pendingPo)
           ..add('orderNumber', orderNumber)
           ..add('search', search)
+          ..add('forExport', forExport)
           ..add('paging', paging)
           ..add('orderBy', orderBy))
         .toString();
@@ -622,6 +637,10 @@ class ListSalesOrdersApiRequestBuilder
   String get search => _$this._search;
   set search(String search) => _$this._search = search;
 
+  bool _forExport;
+  bool get forExport => _$this._forExport;
+  set forExport(bool forExport) => _$this._forExport = forExport;
+
   PaginationParamsBuilder _paging;
   PaginationParamsBuilder get paging =>
       _$this._paging ??= new PaginationParamsBuilder();
@@ -658,6 +677,7 @@ class ListSalesOrdersApiRequestBuilder
       _pendingPo = _$v.pendingPo;
       _orderNumber = _$v.orderNumber;
       _search = _$v.search;
+      _forExport = _$v.forExport;
       _paging = _$v.paging?.toBuilder();
       _orderBy = _$v.orderBy?.toBuilder();
       _$v = null;
@@ -705,6 +725,7 @@ class ListSalesOrdersApiRequestBuilder
               pendingPo: pendingPo,
               orderNumber: orderNumber,
               search: search,
+              forExport: forExport,
               paging: _paging?.build(),
               orderBy: _orderBy?.build());
     } catch (_) {
@@ -797,6 +818,7 @@ class _$ListSalesOrdersApiRequestActions
   final FieldDispatcher<bool> pendingPo;
   final FieldDispatcher<String> orderNumber;
   final FieldDispatcher<String> search;
+  final FieldDispatcher<bool> forExport;
   final PaginationParamsActions paging;
   final OrderByParamsActions<ListSalesOrdersApiOrderBy> orderBy;
 
@@ -886,6 +908,8 @@ class _$ListSalesOrdersApiRequestActions
             (p, b) => p?.orderNumber = b),
         search = $options.field<String>('search', (a) => a?.search,
             (s) => s?.search, (p, b) => p?.search = b),
+        forExport = $options.field<bool>('forExport', (a) => a?.forExport,
+            (s) => s?.forExport, (p, b) => p?.forExport = b),
         paging = PaginationParamsActions(() => $options.stateful<
                 PaginationParams,
                 PaginationParamsBuilder,
@@ -951,6 +975,7 @@ class _$ListSalesOrdersApiRequestActions
         this.pendingPo,
         this.orderNumber,
         this.search,
+        this.forExport,
       ]);
 
   @override
@@ -977,6 +1002,7 @@ class _$ListSalesOrdersApiRequestActions
     pendingPo.$reducer(reducer);
     orderNumber.$reducer(reducer);
     search.$reducer(reducer);
+    forExport.$reducer(reducer);
     paging.$reducer(reducer);
     orderBy.$reducer(reducer);
   }

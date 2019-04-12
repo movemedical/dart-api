@@ -17,6 +17,8 @@ const ListShipmentsApiOrderBy _$wireFROM =
 const ListShipmentsApiOrderBy _$wireTO = const ListShipmentsApiOrderBy._('TO');
 const ListShipmentsApiOrderBy _$wireSHIPPING_SERVICE =
     const ListShipmentsApiOrderBy._('SHIPPING_SERVICE');
+const ListShipmentsApiOrderBy _$wireFULFILLMENT_CUTOFF =
+    const ListShipmentsApiOrderBy._('FULFILLMENT_CUTOFF');
 
 ListShipmentsApiOrderBy _$listShipmentsApiOrderByValueOf(String name) {
   switch (name) {
@@ -32,6 +34,8 @@ ListShipmentsApiOrderBy _$listShipmentsApiOrderByValueOf(String name) {
       return _$wireTO;
     case 'SHIPPING_SERVICE':
       return _$wireSHIPPING_SERVICE;
+    case 'FULFILLMENT_CUTOFF':
+      return _$wireFULFILLMENT_CUTOFF;
     default:
       throw new ArgumentError(name);
   }
@@ -45,6 +49,7 @@ final BuiltSet<ListShipmentsApiOrderBy> _$listShipmentsApiOrderByValues =
   _$wireFROM,
   _$wireTO,
   _$wireSHIPPING_SERVICE,
+  _$wireFULFILLMENT_CUTOFF,
 ]);
 
 Serializer<ListShipmentsApiOrderBy> _$listShipmentsApiOrderBySerializer =

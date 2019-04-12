@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'dart:core';
 import 'package:movemedical_api/model/sql/enums/loan_status.dart';
+import 'package:movemedical_api/model/sql/enums/loan_reason.dart';
 
 part 'loan_lite.g.dart';
 
@@ -26,6 +27,9 @@ abstract class LoanLite implements Built<LoanLite, LoanLiteBuilder> {
   
   @nullable
   int get daysLate;
+  
+  @nullable
+  LoanReason get reason;
   
   ////////////////////////////////
   /// Constructors
@@ -56,6 +60,8 @@ abstract class LoanLiteActions extends ModelActions<LoanLite, LoanLiteBuilder, L
   FieldDispatcher<DateTime> get serviceEndDate;
   
   FieldDispatcher<int> get daysLate;
+  
+  FieldDispatcher<LoanReason> get reason;
   
   ////////////////////////////////
   /// Constructors

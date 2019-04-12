@@ -25,23 +25,50 @@ class _$ListUpcomingCasesApiRequestSerializer
   Iterable serialize(
       Serializers serializers, ListUpcomingCasesApiRequest object,
       {FullType specifiedType = FullType.unspecified}) {
-    return <Object>[];
+    final result = <Object>[];
+    if (object.paginationParams != null) {
+      result
+        ..add('paginationParams')
+        ..add(serializers.serialize(object.paginationParams,
+            specifiedType: const FullType(PaginationParams)));
+    }
+
+    return result;
   }
 
   @override
   ListUpcomingCasesApiRequest deserialize(
       Serializers serializers, Iterable serialized,
       {FullType specifiedType = FullType.unspecified}) {
-    return new ListUpcomingCasesApiRequestBuilder().build();
+    final result = new ListUpcomingCasesApiRequestBuilder();
+
+    final iterator = serialized.iterator;
+    while (iterator.moveNext()) {
+      final key = iterator.current as String;
+      iterator.moveNext();
+      final dynamic value = iterator.current;
+      switch (key) {
+        case 'paginationParams':
+          result.paginationParams.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(PaginationParams))
+              as PaginationParams);
+          break;
+      }
+    }
+
+    return result.build();
   }
 }
 
 class _$ListUpcomingCasesApiRequest extends ListUpcomingCasesApiRequest {
+  @override
+  final PaginationParams paginationParams;
+
   factory _$ListUpcomingCasesApiRequest(
           [void updates(ListUpcomingCasesApiRequestBuilder b)]) =>
       (new ListUpcomingCasesApiRequestBuilder()..update(updates)).build();
 
-  _$ListUpcomingCasesApiRequest._() : super._();
+  _$ListUpcomingCasesApiRequest._({this.paginationParams}) : super._();
 
   @override
   ListUpcomingCasesApiRequest rebuild(
@@ -55,17 +82,19 @@ class _$ListUpcomingCasesApiRequest extends ListUpcomingCasesApiRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is ListUpcomingCasesApiRequest;
+    return other is ListUpcomingCasesApiRequest &&
+        paginationParams == other.paginationParams;
   }
 
   @override
   int get hashCode {
-    return 245695328;
+    return $jf($jc(0, paginationParams.hashCode));
   }
 
   @override
   String toString() {
-    return newBuiltValueToStringHelper('ListUpcomingCasesApiRequest')
+    return (newBuiltValueToStringHelper('ListUpcomingCasesApiRequest')
+          ..add('paginationParams', paginationParams))
         .toString();
   }
 }
@@ -76,7 +105,21 @@ class ListUpcomingCasesApiRequestBuilder
             ListUpcomingCasesApiRequestBuilder> {
   _$ListUpcomingCasesApiRequest _$v;
 
+  PaginationParamsBuilder _paginationParams;
+  PaginationParamsBuilder get paginationParams =>
+      _$this._paginationParams ??= new PaginationParamsBuilder();
+  set paginationParams(PaginationParamsBuilder paginationParams) =>
+      _$this._paginationParams = paginationParams;
+
   ListUpcomingCasesApiRequestBuilder();
+
+  ListUpcomingCasesApiRequestBuilder get _$this {
+    if (_$v != null) {
+      _paginationParams = _$v.paginationParams?.toBuilder();
+      _$v = null;
+    }
+    return this;
+  }
 
   @override
   void replace(ListUpcomingCasesApiRequest other) {
@@ -93,7 +136,22 @@ class ListUpcomingCasesApiRequestBuilder
 
   @override
   _$ListUpcomingCasesApiRequest build() {
-    final _$result = _$v ?? new _$ListUpcomingCasesApiRequest._();
+    _$ListUpcomingCasesApiRequest _$result;
+    try {
+      _$result = _$v ??
+          new _$ListUpcomingCasesApiRequest._(
+              paginationParams: _paginationParams?.build());
+    } catch (_) {
+      String _$failedField;
+      try {
+        _$failedField = 'paginationParams';
+        _paginationParams?.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            'ListUpcomingCasesApiRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
@@ -121,10 +179,20 @@ class _$ListUpcomingCasesApiRequestActions
       ListUpcomingCasesApiRequestActions> $options;
 
   final ActionDispatcher<ListUpcomingCasesApiRequest> $replace;
+  final PaginationParamsActions paginationParams;
 
   _$ListUpcomingCasesApiRequestActions._(this.$options)
       : $replace = $options.action<ListUpcomingCasesApiRequest>(
             '\$replace', (a) => a?.$replace),
+        paginationParams = PaginationParamsActions(() => $options.stateful<
+                PaginationParams,
+                PaginationParamsBuilder,
+                PaginationParamsActions>(
+            'paginationParams',
+            (a) => a.paginationParams,
+            (s) => s?.paginationParams,
+            (b) => b?.paginationParams,
+            (parent, builder) => parent?.paginationParams = builder)),
         super._();
 
   factory _$ListUpcomingCasesApiRequestActions(
@@ -138,12 +206,30 @@ class _$ListUpcomingCasesApiRequestActions
   ListUpcomingCasesApiRequestBuilder $newBuilder() =>
       ListUpcomingCasesApiRequestBuilder();
 
+  BuiltList<ModuxActions> _$nested;
+  @override
+  BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
+        this.paginationParams,
+      ]);
+
   BuiltList<ActionDispatcher> _$actions;
   @override
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
       ]);
+
+  @override
+  void $reducer(ReducerBuilder reducer) {
+    super.$reducer(reducer);
+    paginationParams.$reducer(reducer);
+  }
+
+  @override
+  void $middleware(MiddlewareBuilder middleware) {
+    super.$middleware(middleware);
+    paginationParams.$middleware(middleware);
+  }
 
   FullType _$fullType;
   @override

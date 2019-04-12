@@ -23,6 +23,12 @@ abstract class ShippingService implements Built<ShippingService, ShippingService
   @nullable
   int get hoursInTransit;
   
+  @nullable
+  bool get active;
+  
+  @nullable
+  String get erpCode;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -50,6 +56,10 @@ abstract class ShippingServiceActions extends ModelActions<ShippingService, Ship
   FieldDispatcher<int> get daysInTransit;
   
   FieldDispatcher<int> get hoursInTransit;
+  
+  FieldDispatcher<bool> get active;
+  
+  FieldDispatcher<String> get erpCode;
   
   ////////////////////////////////
   /// Constructors

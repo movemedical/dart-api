@@ -24,10 +24,10 @@ class _$FacilityUpdatedPushMessageSerializer
   Iterable serialize(Serializers serializers, FacilityUpdatedPushMessage object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
-    if (object.auditId != null) {
+    if (object.facilityId != null) {
       result
-        ..add('auditId')
-        ..add(serializers.serialize(object.auditId,
+        ..add('facilityId')
+        ..add(serializers.serialize(object.facilityId,
             specifiedType: const FullType(String)));
     }
 
@@ -46,8 +46,8 @@ class _$FacilityUpdatedPushMessageSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
-        case 'auditId':
-          result.auditId = serializers.deserialize(value,
+        case 'facilityId':
+          result.facilityId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
       }
@@ -59,13 +59,13 @@ class _$FacilityUpdatedPushMessageSerializer
 
 class _$FacilityUpdatedPushMessage extends FacilityUpdatedPushMessage {
   @override
-  final String auditId;
+  final String facilityId;
 
   factory _$FacilityUpdatedPushMessage(
           [void updates(FacilityUpdatedPushMessageBuilder b)]) =>
       (new FacilityUpdatedPushMessageBuilder()..update(updates)).build();
 
-  _$FacilityUpdatedPushMessage._({this.auditId}) : super._();
+  _$FacilityUpdatedPushMessage._({this.facilityId}) : super._();
 
   @override
   FacilityUpdatedPushMessage rebuild(
@@ -79,18 +79,19 @@ class _$FacilityUpdatedPushMessage extends FacilityUpdatedPushMessage {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is FacilityUpdatedPushMessage && auditId == other.auditId;
+    return other is FacilityUpdatedPushMessage &&
+        facilityId == other.facilityId;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, auditId.hashCode));
+    return $jf($jc(0, facilityId.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('FacilityUpdatedPushMessage')
-          ..add('auditId', auditId))
+          ..add('facilityId', facilityId))
         .toString();
   }
 }
@@ -100,15 +101,15 @@ class FacilityUpdatedPushMessageBuilder
         Builder<FacilityUpdatedPushMessage, FacilityUpdatedPushMessageBuilder> {
   _$FacilityUpdatedPushMessage _$v;
 
-  String _auditId;
-  String get auditId => _$this._auditId;
-  set auditId(String auditId) => _$this._auditId = auditId;
+  String _facilityId;
+  String get facilityId => _$this._facilityId;
+  set facilityId(String facilityId) => _$this._facilityId = facilityId;
 
   FacilityUpdatedPushMessageBuilder();
 
   FacilityUpdatedPushMessageBuilder get _$this {
     if (_$v != null) {
-      _auditId = _$v.auditId;
+      _facilityId = _$v.facilityId;
       _$v = null;
     }
     return this;
@@ -130,7 +131,7 @@ class FacilityUpdatedPushMessageBuilder
   @override
   _$FacilityUpdatedPushMessage build() {
     final _$result =
-        _$v ?? new _$FacilityUpdatedPushMessage._(auditId: auditId);
+        _$v ?? new _$FacilityUpdatedPushMessage._(facilityId: facilityId);
     replace(_$result);
     return _$result;
   }
@@ -158,13 +159,13 @@ class _$FacilityUpdatedPushMessageActions
       FacilityUpdatedPushMessageActions> $options;
 
   final ActionDispatcher<FacilityUpdatedPushMessage> $replace;
-  final FieldDispatcher<String> auditId;
+  final FieldDispatcher<String> facilityId;
 
   _$FacilityUpdatedPushMessageActions._(this.$options)
       : $replace = $options.action<FacilityUpdatedPushMessage>(
             '\$replace', (a) => a?.$replace),
-        auditId = $options.field<String>('auditId', (a) => a?.auditId,
-            (s) => s?.auditId, (p, b) => p?.auditId = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
         super._();
 
   factory _$FacilityUpdatedPushMessageActions(
@@ -183,13 +184,13 @@ class _$FacilityUpdatedPushMessageActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
-        this.auditId,
+        this.facilityId,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
-    auditId.$reducer(reducer);
+    facilityId.$reducer(reducer);
   }
 
   @override

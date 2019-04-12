@@ -68,6 +68,54 @@ class _$ListPreferenceCardsApiPreferenceCardSerializer
         ..add(serializers.serialize(object.physicianName,
             specifiedType: const FullType(String)));
     }
+    if (object.facilityId != null) {
+      result
+        ..add('facilityId')
+        ..add(serializers.serialize(object.facilityId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.facilityName != null) {
+      result
+        ..add('facilityName')
+        ..add(serializers.serialize(object.facilityName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.procedureId != null) {
+      result
+        ..add('procedureId')
+        ..add(serializers.serialize(object.procedureId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.procedureName != null) {
+      result
+        ..add('procedureName')
+        ..add(serializers.serialize(object.procedureName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.subProcedureId != null) {
+      result
+        ..add('subProcedureId')
+        ..add(serializers.serialize(object.subProcedureId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.subProcedureName != null) {
+      result
+        ..add('subProcedureName')
+        ..add(serializers.serialize(object.subProcedureName,
+            specifiedType: const FullType(String)));
+    }
+    if (object.preferenceCardType != null) {
+      result
+        ..add('preferenceCardType')
+        ..add(serializers.serialize(object.preferenceCardType,
+            specifiedType: const FullType(PreferenceCardType)));
+    }
+    if (object.totalItems != null) {
+      result
+        ..add('totalItems')
+        ..add(serializers.serialize(object.totalItems,
+            specifiedType: const FullType(int)));
+    }
     if (object.active != null) {
       result
         ..add('active')
@@ -118,6 +166,39 @@ class _$ListPreferenceCardsApiPreferenceCardSerializer
           result.physicianName = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'facilityId':
+          result.facilityId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'facilityName':
+          result.facilityName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'procedureId':
+          result.procedureId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'procedureName':
+          result.procedureName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'subProcedureId':
+          result.subProcedureId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'subProcedureName':
+          result.subProcedureName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'preferenceCardType':
+          result.preferenceCardType = serializers.deserialize(value,
+                  specifiedType: const FullType(PreferenceCardType))
+              as PreferenceCardType;
+          break;
+        case 'totalItems':
+          result.totalItems = serializers.deserialize(value,
+              specifiedType: const FullType(int)) as int;
+          break;
         case 'active':
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
@@ -146,6 +227,22 @@ class _$ListPreferenceCardsApiPreferenceCard
   @override
   final String physicianName;
   @override
+  final String facilityId;
+  @override
+  final String facilityName;
+  @override
+  final String procedureId;
+  @override
+  final String procedureName;
+  @override
+  final String subProcedureId;
+  @override
+  final String subProcedureName;
+  @override
+  final PreferenceCardType preferenceCardType;
+  @override
+  final int totalItems;
+  @override
   final bool active;
 
   factory _$ListPreferenceCardsApiPreferenceCard(
@@ -161,6 +258,14 @@ class _$ListPreferenceCardsApiPreferenceCard
       this.techniqueName,
       this.physicianId,
       this.physicianName,
+      this.facilityId,
+      this.facilityName,
+      this.procedureId,
+      this.procedureName,
+      this.subProcedureId,
+      this.subProcedureName,
+      this.preferenceCardType,
+      this.totalItems,
       this.active})
       : super._();
 
@@ -184,6 +289,14 @@ class _$ListPreferenceCardsApiPreferenceCard
         techniqueName == other.techniqueName &&
         physicianId == other.physicianId &&
         physicianName == other.physicianName &&
+        facilityId == other.facilityId &&
+        facilityName == other.facilityName &&
+        procedureId == other.procedureId &&
+        procedureName == other.procedureName &&
+        subProcedureId == other.subProcedureId &&
+        subProcedureName == other.subProcedureName &&
+        preferenceCardType == other.preferenceCardType &&
+        totalItems == other.totalItems &&
         active == other.active;
   }
 
@@ -194,12 +307,32 @@ class _$ListPreferenceCardsApiPreferenceCard
             $jc(
                 $jc(
                     $jc(
-                        $jc($jc($jc(0, id.hashCode), name.hashCode),
-                            description.hashCode),
-                        techniqueId.hashCode),
-                    techniqueName.hashCode),
-                physicianId.hashCode),
-            physicianName.hashCode),
+                        $jc(
+                            $jc(
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        $jc(
+                                                            $jc(
+                                                                $jc(0,
+                                                                    id.hashCode),
+                                                                name.hashCode),
+                                                            description.hashCode),
+                                                        techniqueId.hashCode),
+                                                    techniqueName.hashCode),
+                                                physicianId.hashCode),
+                                            physicianName.hashCode),
+                                        facilityId.hashCode),
+                                    facilityName.hashCode),
+                                procedureId.hashCode),
+                            procedureName.hashCode),
+                        subProcedureId.hashCode),
+                    subProcedureName.hashCode),
+                preferenceCardType.hashCode),
+            totalItems.hashCode),
         active.hashCode));
   }
 
@@ -213,6 +346,14 @@ class _$ListPreferenceCardsApiPreferenceCard
           ..add('techniqueName', techniqueName)
           ..add('physicianId', physicianId)
           ..add('physicianName', physicianName)
+          ..add('facilityId', facilityId)
+          ..add('facilityName', facilityName)
+          ..add('procedureId', procedureId)
+          ..add('procedureName', procedureName)
+          ..add('subProcedureId', subProcedureId)
+          ..add('subProcedureName', subProcedureName)
+          ..add('preferenceCardType', preferenceCardType)
+          ..add('totalItems', totalItems)
           ..add('active', active))
         .toString();
   }
@@ -254,6 +395,42 @@ class ListPreferenceCardsApiPreferenceCardBuilder
   set physicianName(String physicianName) =>
       _$this._physicianName = physicianName;
 
+  String _facilityId;
+  String get facilityId => _$this._facilityId;
+  set facilityId(String facilityId) => _$this._facilityId = facilityId;
+
+  String _facilityName;
+  String get facilityName => _$this._facilityName;
+  set facilityName(String facilityName) => _$this._facilityName = facilityName;
+
+  String _procedureId;
+  String get procedureId => _$this._procedureId;
+  set procedureId(String procedureId) => _$this._procedureId = procedureId;
+
+  String _procedureName;
+  String get procedureName => _$this._procedureName;
+  set procedureName(String procedureName) =>
+      _$this._procedureName = procedureName;
+
+  String _subProcedureId;
+  String get subProcedureId => _$this._subProcedureId;
+  set subProcedureId(String subProcedureId) =>
+      _$this._subProcedureId = subProcedureId;
+
+  String _subProcedureName;
+  String get subProcedureName => _$this._subProcedureName;
+  set subProcedureName(String subProcedureName) =>
+      _$this._subProcedureName = subProcedureName;
+
+  PreferenceCardType _preferenceCardType;
+  PreferenceCardType get preferenceCardType => _$this._preferenceCardType;
+  set preferenceCardType(PreferenceCardType preferenceCardType) =>
+      _$this._preferenceCardType = preferenceCardType;
+
+  int _totalItems;
+  int get totalItems => _$this._totalItems;
+  set totalItems(int totalItems) => _$this._totalItems = totalItems;
+
   bool _active;
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
@@ -269,6 +446,14 @@ class ListPreferenceCardsApiPreferenceCardBuilder
       _techniqueName = _$v.techniqueName;
       _physicianId = _$v.physicianId;
       _physicianName = _$v.physicianName;
+      _facilityId = _$v.facilityId;
+      _facilityName = _$v.facilityName;
+      _procedureId = _$v.procedureId;
+      _procedureName = _$v.procedureName;
+      _subProcedureId = _$v.subProcedureId;
+      _subProcedureName = _$v.subProcedureName;
+      _preferenceCardType = _$v.preferenceCardType;
+      _totalItems = _$v.totalItems;
       _active = _$v.active;
       _$v = null;
     }
@@ -299,6 +484,14 @@ class ListPreferenceCardsApiPreferenceCardBuilder
             techniqueName: techniqueName,
             physicianId: physicianId,
             physicianName: physicianName,
+            facilityId: facilityId,
+            facilityName: facilityName,
+            procedureId: procedureId,
+            procedureName: procedureName,
+            subProcedureId: subProcedureId,
+            subProcedureName: subProcedureName,
+            preferenceCardType: preferenceCardType,
+            totalItems: totalItems,
             active: active);
     replace(_$result);
     return _$result;
@@ -334,6 +527,14 @@ class _$ListPreferenceCardsApiPreferenceCardActions
   final FieldDispatcher<String> techniqueName;
   final FieldDispatcher<String> physicianId;
   final FieldDispatcher<String> physicianName;
+  final FieldDispatcher<String> facilityId;
+  final FieldDispatcher<String> facilityName;
+  final FieldDispatcher<String> procedureId;
+  final FieldDispatcher<String> procedureName;
+  final FieldDispatcher<String> subProcedureId;
+  final FieldDispatcher<String> subProcedureName;
+  final FieldDispatcher<PreferenceCardType> preferenceCardType;
+  final FieldDispatcher<int> totalItems;
   final FieldDispatcher<bool> active;
 
   _$ListPreferenceCardsApiPreferenceCardActions._(this.$options)
@@ -368,6 +569,40 @@ class _$ListPreferenceCardsApiPreferenceCardActions
             (a) => a?.physicianName,
             (s) => s?.physicianName,
             (p, b) => p?.physicianName = b),
+        facilityId = $options.field<String>('facilityId', (a) => a?.facilityId,
+            (s) => s?.facilityId, (p, b) => p?.facilityId = b),
+        facilityName = $options.field<String>(
+            'facilityName',
+            (a) => a?.facilityName,
+            (s) => s?.facilityName,
+            (p, b) => p?.facilityName = b),
+        procedureId = $options.field<String>(
+            'procedureId',
+            (a) => a?.procedureId,
+            (s) => s?.procedureId,
+            (p, b) => p?.procedureId = b),
+        procedureName = $options.field<String>(
+            'procedureName',
+            (a) => a?.procedureName,
+            (s) => s?.procedureName,
+            (p, b) => p?.procedureName = b),
+        subProcedureId = $options.field<String>(
+            'subProcedureId',
+            (a) => a?.subProcedureId,
+            (s) => s?.subProcedureId,
+            (p, b) => p?.subProcedureId = b),
+        subProcedureName = $options.field<String>(
+            'subProcedureName',
+            (a) => a?.subProcedureName,
+            (s) => s?.subProcedureName,
+            (p, b) => p?.subProcedureName = b),
+        preferenceCardType = $options.field<PreferenceCardType>(
+            'preferenceCardType',
+            (a) => a?.preferenceCardType,
+            (s) => s?.preferenceCardType,
+            (p, b) => p?.preferenceCardType = b),
+        totalItems = $options.field<int>('totalItems', (a) => a?.totalItems,
+            (s) => s?.totalItems, (p, b) => p?.totalItems = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
         super._();
@@ -396,6 +631,14 @@ class _$ListPreferenceCardsApiPreferenceCardActions
         this.techniqueName,
         this.physicianId,
         this.physicianName,
+        this.facilityId,
+        this.facilityName,
+        this.procedureId,
+        this.procedureName,
+        this.subProcedureId,
+        this.subProcedureName,
+        this.preferenceCardType,
+        this.totalItems,
         this.active,
       ]);
 
@@ -409,6 +652,14 @@ class _$ListPreferenceCardsApiPreferenceCardActions
     techniqueName.$reducer(reducer);
     physicianId.$reducer(reducer);
     physicianName.$reducer(reducer);
+    facilityId.$reducer(reducer);
+    facilityName.$reducer(reducer);
+    procedureId.$reducer(reducer);
+    procedureName.$reducer(reducer);
+    subProcedureId.$reducer(reducer);
+    subProcedureName.$reducer(reducer);
+    preferenceCardType.$reducer(reducer);
+    totalItems.$reducer(reducer);
     active.$reducer(reducer);
   }
 

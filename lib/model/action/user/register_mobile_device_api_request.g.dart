@@ -26,11 +26,29 @@ class _$RegisterMobileDeviceApiRequestSerializer
       Serializers serializers, RegisterMobileDeviceApiRequest object,
       {FullType specifiedType = FullType.unspecified}) {
     final result = <Object>[];
+    if (object.existingDeviceId != null) {
+      result
+        ..add('existingDeviceId')
+        ..add(serializers.serialize(object.existingDeviceId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.deviceType != null) {
+      result
+        ..add('deviceType')
+        ..add(serializers.serialize(object.deviceType,
+            specifiedType: const FullType(MobileDeviceType)));
+    }
     if (object.token != null) {
       result
         ..add('token')
         ..add(serializers.serialize(object.token,
             specifiedType: const FullType(String)));
+    }
+    if (object.useSandboxArn != null) {
+      result
+        ..add('useSandboxArn')
+        ..add(serializers.serialize(object.useSandboxArn,
+            specifiedType: const FullType(bool)));
     }
 
     return result;
@@ -48,9 +66,22 @@ class _$RegisterMobileDeviceApiRequestSerializer
       iterator.moveNext();
       final dynamic value = iterator.current;
       switch (key) {
+        case 'existingDeviceId':
+          result.existingDeviceId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'deviceType':
+          result.deviceType = serializers.deserialize(value,
+                  specifiedType: const FullType(MobileDeviceType))
+              as MobileDeviceType;
+          break;
         case 'token':
           result.token = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'useSandboxArn':
+          result.useSandboxArn = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
           break;
       }
     }
@@ -61,13 +92,21 @@ class _$RegisterMobileDeviceApiRequestSerializer
 
 class _$RegisterMobileDeviceApiRequest extends RegisterMobileDeviceApiRequest {
   @override
+  final String existingDeviceId;
+  @override
+  final MobileDeviceType deviceType;
+  @override
   final String token;
+  @override
+  final bool useSandboxArn;
 
   factory _$RegisterMobileDeviceApiRequest(
           [void updates(RegisterMobileDeviceApiRequestBuilder b)]) =>
       (new RegisterMobileDeviceApiRequestBuilder()..update(updates)).build();
 
-  _$RegisterMobileDeviceApiRequest._({this.token}) : super._();
+  _$RegisterMobileDeviceApiRequest._(
+      {this.existingDeviceId, this.deviceType, this.token, this.useSandboxArn})
+      : super._();
 
   @override
   RegisterMobileDeviceApiRequest rebuild(
@@ -81,18 +120,28 @@ class _$RegisterMobileDeviceApiRequest extends RegisterMobileDeviceApiRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is RegisterMobileDeviceApiRequest && token == other.token;
+    return other is RegisterMobileDeviceApiRequest &&
+        existingDeviceId == other.existingDeviceId &&
+        deviceType == other.deviceType &&
+        token == other.token &&
+        useSandboxArn == other.useSandboxArn;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, token.hashCode));
+    return $jf($jc(
+        $jc($jc($jc(0, existingDeviceId.hashCode), deviceType.hashCode),
+            token.hashCode),
+        useSandboxArn.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('RegisterMobileDeviceApiRequest')
-          ..add('token', token))
+          ..add('existingDeviceId', existingDeviceId)
+          ..add('deviceType', deviceType)
+          ..add('token', token)
+          ..add('useSandboxArn', useSandboxArn))
         .toString();
   }
 }
@@ -103,15 +152,33 @@ class RegisterMobileDeviceApiRequestBuilder
             RegisterMobileDeviceApiRequestBuilder> {
   _$RegisterMobileDeviceApiRequest _$v;
 
+  String _existingDeviceId;
+  String get existingDeviceId => _$this._existingDeviceId;
+  set existingDeviceId(String existingDeviceId) =>
+      _$this._existingDeviceId = existingDeviceId;
+
+  MobileDeviceType _deviceType;
+  MobileDeviceType get deviceType => _$this._deviceType;
+  set deviceType(MobileDeviceType deviceType) =>
+      _$this._deviceType = deviceType;
+
   String _token;
   String get token => _$this._token;
   set token(String token) => _$this._token = token;
+
+  bool _useSandboxArn;
+  bool get useSandboxArn => _$this._useSandboxArn;
+  set useSandboxArn(bool useSandboxArn) =>
+      _$this._useSandboxArn = useSandboxArn;
 
   RegisterMobileDeviceApiRequestBuilder();
 
   RegisterMobileDeviceApiRequestBuilder get _$this {
     if (_$v != null) {
+      _existingDeviceId = _$v.existingDeviceId;
+      _deviceType = _$v.deviceType;
       _token = _$v.token;
+      _useSandboxArn = _$v.useSandboxArn;
       _$v = null;
     }
     return this;
@@ -132,8 +199,12 @@ class RegisterMobileDeviceApiRequestBuilder
 
   @override
   _$RegisterMobileDeviceApiRequest build() {
-    final _$result =
-        _$v ?? new _$RegisterMobileDeviceApiRequest._(token: token);
+    final _$result = _$v ??
+        new _$RegisterMobileDeviceApiRequest._(
+            existingDeviceId: existingDeviceId,
+            deviceType: deviceType,
+            token: token,
+            useSandboxArn: useSandboxArn);
     replace(_$result);
     return _$result;
   }
@@ -161,13 +232,31 @@ class _$RegisterMobileDeviceApiRequestActions
       RegisterMobileDeviceApiRequestActions> $options;
 
   final ActionDispatcher<RegisterMobileDeviceApiRequest> $replace;
+  final FieldDispatcher<String> existingDeviceId;
+  final FieldDispatcher<MobileDeviceType> deviceType;
   final FieldDispatcher<String> token;
+  final FieldDispatcher<bool> useSandboxArn;
 
   _$RegisterMobileDeviceApiRequestActions._(this.$options)
       : $replace = $options.action<RegisterMobileDeviceApiRequest>(
             '\$replace', (a) => a?.$replace),
+        existingDeviceId = $options.field<String>(
+            'existingDeviceId',
+            (a) => a?.existingDeviceId,
+            (s) => s?.existingDeviceId,
+            (p, b) => p?.existingDeviceId = b),
+        deviceType = $options.field<MobileDeviceType>(
+            'deviceType',
+            (a) => a?.deviceType,
+            (s) => s?.deviceType,
+            (p, b) => p?.deviceType = b),
         token = $options.field<String>(
             'token', (a) => a?.token, (s) => s?.token, (p, b) => p?.token = b),
+        useSandboxArn = $options.field<bool>(
+            'useSandboxArn',
+            (a) => a?.useSandboxArn,
+            (s) => s?.useSandboxArn,
+            (p, b) => p?.useSandboxArn = b),
         super._();
 
   factory _$RegisterMobileDeviceApiRequestActions(
@@ -187,13 +276,19 @@ class _$RegisterMobileDeviceApiRequestActions
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
+        this.existingDeviceId,
+        this.deviceType,
         this.token,
+        this.useSandboxArn,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
+    existingDeviceId.$reducer(reducer);
+    deviceType.$reducer(reducer);
     token.$reducer(reducer);
+    useSandboxArn.$reducer(reducer);
   }
 
   @override

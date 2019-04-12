@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:movemedical_api/model/action/dashboard/get_expiring_items_api_expiration_level.dart';
+import 'dart:core';
 
 part 'get_expiring_items_api_response.g.dart';
 
@@ -14,6 +15,9 @@ abstract class GetExpiringItemsApiResponse implements Built<GetExpiringItemsApiR
   
   @nullable
   BuiltList<GetExpiringItemsApiExpirationLevel> get expirationLevels;
+  
+  @nullable
+  bool get building;
   
   ////////////////////////////////
   /// Constructors
@@ -36,6 +40,8 @@ abstract class GetExpiringItemsApiResponseActions extends ModelActions<GetExpiri
   ////////////////////////////////
   
   FieldDispatcher<BuiltList<GetExpiringItemsApiExpirationLevel>> get expirationLevels;
+  
+  FieldDispatcher<bool> get building;
   
   ////////////////////////////////
   /// Constructors

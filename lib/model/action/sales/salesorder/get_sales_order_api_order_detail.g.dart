@@ -141,6 +141,12 @@ class _$GetSalesOrderApiOrderDetailSerializer
         ..add(serializers.serialize(object.deliverToAddress,
             specifiedType: const FullType(CustomerAddress)));
     }
+    if (object.physician != null) {
+      result
+        ..add('physician')
+        ..add(serializers.serialize(object.physician,
+            specifiedType: const FullType(Physician)));
+    }
     if (object.poNumber != null) {
       result
         ..add('poNumber')
@@ -312,6 +318,10 @@ class _$GetSalesOrderApiOrderDetailSerializer
                   specifiedType: const FullType(CustomerAddress))
               as CustomerAddress);
           break;
+        case 'physician':
+          result.physician.replace(serializers.deserialize(value,
+              specifiedType: const FullType(Physician)) as Physician);
+          break;
         case 'poNumber':
           result.poNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -412,6 +422,8 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
   @override
   final CustomerAddress deliverToAddress;
   @override
+  final Physician physician;
+  @override
   final String poNumber;
   @override
   final String erpReference;
@@ -460,6 +472,7 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
       this.shipToAddress,
       this.billToAddress,
       this.deliverToAddress,
+      this.physician,
       this.poNumber,
       this.erpReference,
       this.toInventoryType,
@@ -506,6 +519,7 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
         shipToAddress == other.shipToAddress &&
         billToAddress == other.billToAddress &&
         deliverToAddress == other.deliverToAddress &&
+        physician == other.physician &&
         poNumber == other.poNumber &&
         erpReference == other.erpReference &&
         toInventoryType == other.toInventoryType &&
@@ -540,14 +554,14 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orderNumber.hashCode), createdDate.hashCode), createdBy.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode),
-                                                                                opsOrgUnit.hashCode),
-                                                                            salesOrgUnit.hashCode),
-                                                                        restockOrders.hashCode),
-                                                                    caseEvent.hashCode),
-                                                                shipToAddress.hashCode),
-                                                            billToAddress.hashCode),
-                                                        deliverToAddress.hashCode),
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orderNumber.hashCode), createdDate.hashCode), createdBy.hashCode), status.hashCode), email.hashCode), attention.hashCode), orderReason.hashCode), moveItemClass.hashCode), location.hashCode), deliveryWindow.hashCode), sourceStartDate.hashCode), opsOrgUnit.hashCode),
+                                                                                salesOrgUnit.hashCode),
+                                                                            restockOrders.hashCode),
+                                                                        caseEvent.hashCode),
+                                                                    shipToAddress.hashCode),
+                                                                billToAddress.hashCode),
+                                                            deliverToAddress.hashCode),
+                                                        physician.hashCode),
                                                     poNumber.hashCode),
                                                 erpReference.hashCode),
                                             toInventoryType.hashCode),
@@ -584,6 +598,7 @@ class _$GetSalesOrderApiOrderDetail extends GetSalesOrderApiOrderDetail {
           ..add('shipToAddress', shipToAddress)
           ..add('billToAddress', billToAddress)
           ..add('deliverToAddress', deliverToAddress)
+          ..add('physician', physician)
           ..add('poNumber', poNumber)
           ..add('erpReference', erpReference)
           ..add('toInventoryType', toInventoryType)
@@ -700,6 +715,11 @@ class GetSalesOrderApiOrderDetailBuilder
   set deliverToAddress(CustomerAddressBuilder deliverToAddress) =>
       _$this._deliverToAddress = deliverToAddress;
 
+  PhysicianBuilder _physician;
+  PhysicianBuilder get physician =>
+      _$this._physician ??= new PhysicianBuilder();
+  set physician(PhysicianBuilder physician) => _$this._physician = physician;
+
   String _poNumber;
   String get poNumber => _$this._poNumber;
   set poNumber(String poNumber) => _$this._poNumber = poNumber;
@@ -786,6 +806,7 @@ class GetSalesOrderApiOrderDetailBuilder
       _shipToAddress = _$v.shipToAddress?.toBuilder();
       _billToAddress = _$v.billToAddress?.toBuilder();
       _deliverToAddress = _$v.deliverToAddress?.toBuilder();
+      _physician = _$v.physician?.toBuilder();
       _poNumber = _$v.poNumber;
       _erpReference = _$v.erpReference;
       _toInventoryType = _$v.toInventoryType?.toBuilder();
@@ -841,6 +862,7 @@ class GetSalesOrderApiOrderDetailBuilder
               shipToAddress: _shipToAddress?.build(),
               billToAddress: _billToAddress?.build(),
               deliverToAddress: _deliverToAddress?.build(),
+              physician: _physician?.build(),
               poNumber: poNumber,
               erpReference: erpReference,
               toInventoryType: _toInventoryType?.build(),
@@ -878,6 +900,8 @@ class GetSalesOrderApiOrderDetailBuilder
         _billToAddress?.build();
         _$failedField = 'deliverToAddress';
         _deliverToAddress?.build();
+        _$failedField = 'physician';
+        _physician?.build();
 
         _$failedField = 'toInventoryType';
         _toInventoryType?.build();
@@ -947,6 +971,7 @@ class _$GetSalesOrderApiOrderDetailActions
   final CustomerAddressActions shipToAddress;
   final CustomerAddressActions billToAddress;
   final CustomerAddressActions deliverToAddress;
+  final PhysicianActions physician;
   final FieldDispatcher<String> poNumber;
   final FieldDispatcher<String> erpReference;
   final InventoryTypeActions toInventoryType;
@@ -1067,6 +1092,13 @@ class _$GetSalesOrderApiOrderDetailActions
             (s) => s?.deliverToAddress,
             (b) => b?.deliverToAddress,
             (parent, builder) => parent?.deliverToAddress = builder)),
+        physician = PhysicianActions(() =>
+            $options.stateful<Physician, PhysicianBuilder, PhysicianActions>(
+                'physician',
+                (a) => a.physician,
+                (s) => s?.physician,
+                (b) => b?.physician,
+                (parent, builder) => parent?.physician = builder)),
         poNumber = $options.field<String>('poNumber', (a) => a?.poNumber,
             (s) => s?.poNumber, (p, b) => p?.poNumber = b),
         erpReference = $options.field<String>(
@@ -1165,6 +1197,7 @@ class _$GetSalesOrderApiOrderDetailActions
         this.shipToAddress,
         this.billToAddress,
         this.deliverToAddress,
+        this.physician,
         this.toInventoryType,
         this.toHomeLocation,
         this.toResponsibleParty,
@@ -1218,6 +1251,7 @@ class _$GetSalesOrderApiOrderDetailActions
     shipToAddress.$reducer(reducer);
     billToAddress.$reducer(reducer);
     deliverToAddress.$reducer(reducer);
+    physician.$reducer(reducer);
     poNumber.$reducer(reducer);
     erpReference.$reducer(reducer);
     toInventoryType.$reducer(reducer);
@@ -1244,6 +1278,7 @@ class _$GetSalesOrderApiOrderDetailActions
     shipToAddress.$middleware(middleware);
     billToAddress.$middleware(middleware);
     deliverToAddress.$middleware(middleware);
+    physician.$middleware(middleware);
     toInventoryType.$middleware(middleware);
     toHomeLocation.$middleware(middleware);
     toResponsibleParty.$middleware(middleware);

@@ -68,17 +68,41 @@ class _$UpdateUserProfileApiRequestSerializer
         ..add(serializers.serialize(object.defaultBizUnitId,
             specifiedType: const FullType(String)));
     }
+    if (object.ssoId != null) {
+      result
+        ..add('ssoId')
+        ..add(serializers.serialize(object.ssoId,
+            specifiedType: const FullType(String)));
+    }
+    if (object.ssoName != null) {
+      result
+        ..add('ssoName')
+        ..add(serializers.serialize(object.ssoName,
+            specifiedType: const FullType(String)));
+    }
     if (object.ssoType != null) {
       result
         ..add('ssoType')
         ..add(serializers.serialize(object.ssoType,
             specifiedType: const FullType(SSOType)));
     }
-    if (object.ssoId != null) {
+    if (object.mfaEnabled != null) {
       result
-        ..add('ssoId')
-        ..add(serializers.serialize(object.ssoId,
+        ..add('mfaEnabled')
+        ..add(serializers.serialize(object.mfaEnabled,
+            specifiedType: const FullType(bool)));
+    }
+    if (object.mfaId != null) {
+      result
+        ..add('mfaId')
+        ..add(serializers.serialize(object.mfaId,
             specifiedType: const FullType(String)));
+    }
+    if (object.mfaType != null) {
+      result
+        ..add('mfaType')
+        ..add(serializers.serialize(object.mfaType,
+            specifiedType: const FullType(MfaType)));
     }
 
     return result;
@@ -124,13 +148,29 @@ class _$UpdateUserProfileApiRequestSerializer
           result.defaultBizUnitId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'ssoId':
+          result.ssoId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
+        case 'ssoName':
+          result.ssoName = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'ssoType':
           result.ssoType = serializers.deserialize(value,
               specifiedType: const FullType(SSOType)) as SSOType;
           break;
-        case 'ssoId':
-          result.ssoId = serializers.deserialize(value,
+        case 'mfaEnabled':
+          result.mfaEnabled = serializers.deserialize(value,
+              specifiedType: const FullType(bool)) as bool;
+          break;
+        case 'mfaId':
+          result.mfaId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
+          break;
+        case 'mfaType':
+          result.mfaType = serializers.deserialize(value,
+              specifiedType: const FullType(MfaType)) as MfaType;
           break;
       }
     }
@@ -155,9 +195,17 @@ class _$UpdateUserProfileApiRequest extends UpdateUserProfileApiRequest {
   @override
   final String defaultBizUnitId;
   @override
+  final String ssoId;
+  @override
+  final String ssoName;
+  @override
   final SSOType ssoType;
   @override
-  final String ssoId;
+  final bool mfaEnabled;
+  @override
+  final String mfaId;
+  @override
+  final MfaType mfaType;
 
   factory _$UpdateUserProfileApiRequest(
           [void updates(UpdateUserProfileApiRequestBuilder b)]) =>
@@ -171,8 +219,12 @@ class _$UpdateUserProfileApiRequest extends UpdateUserProfileApiRequest {
       this.defaultOpsOrgUnitId,
       this.defaultSalesOrgUnitId,
       this.defaultBizUnitId,
+      this.ssoId,
+      this.ssoName,
       this.ssoType,
-      this.ssoId})
+      this.mfaEnabled,
+      this.mfaId,
+      this.mfaType})
       : super._();
 
   @override
@@ -195,8 +247,12 @@ class _$UpdateUserProfileApiRequest extends UpdateUserProfileApiRequest {
         defaultOpsOrgUnitId == other.defaultOpsOrgUnitId &&
         defaultSalesOrgUnitId == other.defaultSalesOrgUnitId &&
         defaultBizUnitId == other.defaultBizUnitId &&
+        ssoId == other.ssoId &&
+        ssoName == other.ssoName &&
         ssoType == other.ssoType &&
-        ssoId == other.ssoId;
+        mfaEnabled == other.mfaEnabled &&
+        mfaId == other.mfaId &&
+        mfaType == other.mfaType;
   }
 
   @override
@@ -208,15 +264,27 @@ class _$UpdateUserProfileApiRequest extends UpdateUserProfileApiRequest {
                     $jc(
                         $jc(
                             $jc(
-                                $jc($jc(0, currentPassword.hashCode),
-                                    newPassword.hashCode),
-                                timezone.hashCode),
-                            erpUserId.hashCode),
-                        defaultOpsOrgUnitId.hashCode),
-                    defaultSalesOrgUnitId.hashCode),
-                defaultBizUnitId.hashCode),
-            ssoType.hashCode),
-        ssoId.hashCode));
+                                $jc(
+                                    $jc(
+                                        $jc(
+                                            $jc(
+                                                $jc(
+                                                    $jc(
+                                                        0,
+                                                        currentPassword
+                                                            .hashCode),
+                                                    newPassword.hashCode),
+                                                timezone.hashCode),
+                                            erpUserId.hashCode),
+                                        defaultOpsOrgUnitId.hashCode),
+                                    defaultSalesOrgUnitId.hashCode),
+                                defaultBizUnitId.hashCode),
+                            ssoId.hashCode),
+                        ssoName.hashCode),
+                    ssoType.hashCode),
+                mfaEnabled.hashCode),
+            mfaId.hashCode),
+        mfaType.hashCode));
   }
 
   @override
@@ -229,8 +297,12 @@ class _$UpdateUserProfileApiRequest extends UpdateUserProfileApiRequest {
           ..add('defaultOpsOrgUnitId', defaultOpsOrgUnitId)
           ..add('defaultSalesOrgUnitId', defaultSalesOrgUnitId)
           ..add('defaultBizUnitId', defaultBizUnitId)
+          ..add('ssoId', ssoId)
+          ..add('ssoName', ssoName)
           ..add('ssoType', ssoType)
-          ..add('ssoId', ssoId))
+          ..add('mfaEnabled', mfaEnabled)
+          ..add('mfaId', mfaId)
+          ..add('mfaType', mfaType))
         .toString();
   }
 }
@@ -273,13 +345,29 @@ class UpdateUserProfileApiRequestBuilder
   set defaultBizUnitId(String defaultBizUnitId) =>
       _$this._defaultBizUnitId = defaultBizUnitId;
 
+  String _ssoId;
+  String get ssoId => _$this._ssoId;
+  set ssoId(String ssoId) => _$this._ssoId = ssoId;
+
+  String _ssoName;
+  String get ssoName => _$this._ssoName;
+  set ssoName(String ssoName) => _$this._ssoName = ssoName;
+
   SSOType _ssoType;
   SSOType get ssoType => _$this._ssoType;
   set ssoType(SSOType ssoType) => _$this._ssoType = ssoType;
 
-  String _ssoId;
-  String get ssoId => _$this._ssoId;
-  set ssoId(String ssoId) => _$this._ssoId = ssoId;
+  bool _mfaEnabled;
+  bool get mfaEnabled => _$this._mfaEnabled;
+  set mfaEnabled(bool mfaEnabled) => _$this._mfaEnabled = mfaEnabled;
+
+  String _mfaId;
+  String get mfaId => _$this._mfaId;
+  set mfaId(String mfaId) => _$this._mfaId = mfaId;
+
+  MfaType _mfaType;
+  MfaType get mfaType => _$this._mfaType;
+  set mfaType(MfaType mfaType) => _$this._mfaType = mfaType;
 
   UpdateUserProfileApiRequestBuilder();
 
@@ -292,8 +380,12 @@ class UpdateUserProfileApiRequestBuilder
       _defaultOpsOrgUnitId = _$v.defaultOpsOrgUnitId;
       _defaultSalesOrgUnitId = _$v.defaultSalesOrgUnitId;
       _defaultBizUnitId = _$v.defaultBizUnitId;
-      _ssoType = _$v.ssoType;
       _ssoId = _$v.ssoId;
+      _ssoName = _$v.ssoName;
+      _ssoType = _$v.ssoType;
+      _mfaEnabled = _$v.mfaEnabled;
+      _mfaId = _$v.mfaId;
+      _mfaType = _$v.mfaType;
       _$v = null;
     }
     return this;
@@ -323,8 +415,12 @@ class UpdateUserProfileApiRequestBuilder
             defaultOpsOrgUnitId: defaultOpsOrgUnitId,
             defaultSalesOrgUnitId: defaultSalesOrgUnitId,
             defaultBizUnitId: defaultBizUnitId,
+            ssoId: ssoId,
+            ssoName: ssoName,
             ssoType: ssoType,
-            ssoId: ssoId);
+            mfaEnabled: mfaEnabled,
+            mfaId: mfaId,
+            mfaType: mfaType);
     replace(_$result);
     return _$result;
   }
@@ -359,8 +455,12 @@ class _$UpdateUserProfileApiRequestActions
   final FieldDispatcher<String> defaultOpsOrgUnitId;
   final FieldDispatcher<String> defaultSalesOrgUnitId;
   final FieldDispatcher<String> defaultBizUnitId;
-  final FieldDispatcher<SSOType> ssoType;
   final FieldDispatcher<String> ssoId;
+  final FieldDispatcher<String> ssoName;
+  final FieldDispatcher<SSOType> ssoType;
+  final FieldDispatcher<bool> mfaEnabled;
+  final FieldDispatcher<String> mfaId;
+  final FieldDispatcher<MfaType> mfaType;
 
   _$UpdateUserProfileApiRequestActions._(this.$options)
       : $replace = $options.action<UpdateUserProfileApiRequest>(
@@ -394,10 +494,18 @@ class _$UpdateUserProfileApiRequestActions
             (a) => a?.defaultBizUnitId,
             (s) => s?.defaultBizUnitId,
             (p, b) => p?.defaultBizUnitId = b),
-        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
-            (s) => s?.ssoType, (p, b) => p?.ssoType = b),
         ssoId = $options.field<String>(
             'ssoId', (a) => a?.ssoId, (s) => s?.ssoId, (p, b) => p?.ssoId = b),
+        ssoName = $options.field<String>('ssoName', (a) => a?.ssoName,
+            (s) => s?.ssoName, (p, b) => p?.ssoName = b),
+        ssoType = $options.field<SSOType>('ssoType', (a) => a?.ssoType,
+            (s) => s?.ssoType, (p, b) => p?.ssoType = b),
+        mfaEnabled = $options.field<bool>('mfaEnabled', (a) => a?.mfaEnabled,
+            (s) => s?.mfaEnabled, (p, b) => p?.mfaEnabled = b),
+        mfaId = $options.field<String>(
+            'mfaId', (a) => a?.mfaId, (s) => s?.mfaId, (p, b) => p?.mfaId = b),
+        mfaType = $options.field<MfaType>('mfaType', (a) => a?.mfaType,
+            (s) => s?.mfaType, (p, b) => p?.mfaType = b),
         super._();
 
   factory _$UpdateUserProfileApiRequestActions(
@@ -423,8 +531,12 @@ class _$UpdateUserProfileApiRequestActions
         this.defaultOpsOrgUnitId,
         this.defaultSalesOrgUnitId,
         this.defaultBizUnitId,
-        this.ssoType,
         this.ssoId,
+        this.ssoName,
+        this.ssoType,
+        this.mfaEnabled,
+        this.mfaId,
+        this.mfaType,
       ]);
 
   @override
@@ -437,8 +549,12 @@ class _$UpdateUserProfileApiRequestActions
     defaultOpsOrgUnitId.$reducer(reducer);
     defaultSalesOrgUnitId.$reducer(reducer);
     defaultBizUnitId.$reducer(reducer);
-    ssoType.$reducer(reducer);
     ssoId.$reducer(reducer);
+    ssoName.$reducer(reducer);
+    ssoType.$reducer(reducer);
+    mfaEnabled.$reducer(reducer);
+    mfaId.$reducer(reducer);
+    mfaType.$reducer(reducer);
   }
 
   @override

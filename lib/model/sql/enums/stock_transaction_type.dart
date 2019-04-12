@@ -18,6 +18,8 @@ class StockTransactionType extends EnumClass {
   static const StockTransactionType PICK_STOCK_SWAPPED = _$wirePICK_STOCK_SWAPPED;
   static const StockTransactionType PKG_SHIPPED = _$wirePKG_SHIPPED;
   static const StockTransactionType PKG_DELIVERED = _$wirePKG_DELIVERED;
+  static const StockTransactionType KIT_CONTAINER_ASSIGNED = _$wireKIT_CONTAINER_ASSIGNED;
+  static const StockTransactionType KIT_CONTAINER_UNASSIGNED = _$wireKIT_CONTAINER_UNASSIGNED;
   static const StockTransactionType KIT_COMPONENT_STOCK_ASSIGNED = _$wireKIT_COMPONENT_STOCK_ASSIGNED;
   static const StockTransactionType KIT_COMPONENT_STOCK_UNASSIGNED = _$wireKIT_COMPONENT_STOCK_UNASSIGNED;
   static const StockTransactionType AUDIT_COUNTED = _$wireAUDIT_COUNTED;
@@ -44,6 +46,9 @@ class StockTransactionType extends EnumClass {
   static const StockTransactionType INSPECTED_STOCK_SWAPPED = _$wireINSPECTED_STOCK_SWAPPED;
   static const StockTransactionType INSPECTED_CONFIRMED = _$wireINSPECTED_CONFIRMED;
   static const StockTransactionType VIRTUAL_STOCK_REALIZED = _$wireVIRTUAL_STOCK_REALIZED;
+  static const StockTransactionType KIT_CONTAINER_INSPECTED = _$wireKIT_CONTAINER_INSPECTED;
+  static const StockTransactionType TRAY_INSPECTED = _$wireTRAY_INSPECTED;
+  static const StockTransactionType CASE_TRANSITION_TO_POST_OP = _$wireCASE_TRANSITION_TO_POST_OP;
   static const StockTransactionType PKG_CONFIRMED = _$wirePKG_CONFIRMED;
   static const StockTransactionType TRAY_EVAL = _$wireTRAY_EVAL;
   static const StockTransactionType KIT_EVAL = _$wireKIT_EVAL;

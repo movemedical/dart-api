@@ -42,6 +42,9 @@ abstract class ListWebServiceLogsApiWebServiceLog implements Built<ListWebServic
   WebServiceLogInitiatorType get logInitiator;
   
   @nullable
+  String get reference;
+  
+  @nullable
   String get request;
   
   @nullable
@@ -84,6 +87,8 @@ abstract class ListWebServiceLogsApiWebServiceLogActions extends ModelActions<Li
   FieldDispatcher<WebServiceDirection> get direction;
   
   FieldDispatcher<WebServiceLogInitiatorType> get logInitiator;
+  
+  FieldDispatcher<String> get reference;
   
   FieldDispatcher<String> get request;
   

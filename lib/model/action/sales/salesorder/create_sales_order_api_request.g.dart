@@ -48,6 +48,12 @@ class _$CreateSalesOrderApiRequestSerializer
         ..add(serializers.serialize(object.deliverToId,
             specifiedType: const FullType(String)));
     }
+    if (object.physicianId != null) {
+      result
+        ..add('physicianId')
+        ..add(serializers.serialize(object.physicianId,
+            specifiedType: const FullType(String)));
+    }
     if (object.hcrId != null) {
       result
         ..add('hcrId')
@@ -177,6 +183,10 @@ class _$CreateSalesOrderApiRequestSerializer
           result.deliverToId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
           break;
+        case 'physicianId':
+          result.physicianId = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String;
+          break;
         case 'hcrId':
           result.hcrId = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String;
@@ -260,6 +270,8 @@ class _$CreateSalesOrderApiRequest extends CreateSalesOrderApiRequest {
   @override
   final String deliverToId;
   @override
+  final String physicianId;
+  @override
   final String hcrId;
   @override
   final DateTime saleDate;
@@ -301,6 +313,7 @@ class _$CreateSalesOrderApiRequest extends CreateSalesOrderApiRequest {
       this.shipToId,
       this.billToId,
       this.deliverToId,
+      this.physicianId,
       this.hcrId,
       this.saleDate,
       this.bizUnitId,
@@ -336,6 +349,7 @@ class _$CreateSalesOrderApiRequest extends CreateSalesOrderApiRequest {
         shipToId == other.shipToId &&
         billToId == other.billToId &&
         deliverToId == other.deliverToId &&
+        physicianId == other.physicianId &&
         hcrId == other.hcrId &&
         saleDate == other.saleDate &&
         bizUnitId == other.bizUnitId &&
@@ -374,10 +388,10 @@ class _$CreateSalesOrderApiRequest extends CreateSalesOrderApiRequest {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc(0, orderReasonId.hashCode),
-                                                                                shipToId.hashCode),
-                                                                            billToId.hashCode),
-                                                                        deliverToId.hashCode),
+                                                                            $jc($jc($jc(0, orderReasonId.hashCode), shipToId.hashCode),
+                                                                                billToId.hashCode),
+                                                                            deliverToId.hashCode),
+                                                                        physicianId.hashCode),
                                                                     hcrId.hashCode),
                                                                 saleDate.hashCode),
                                                             bizUnitId.hashCode),
@@ -403,6 +417,7 @@ class _$CreateSalesOrderApiRequest extends CreateSalesOrderApiRequest {
           ..add('shipToId', shipToId)
           ..add('billToId', billToId)
           ..add('deliverToId', deliverToId)
+          ..add('physicianId', physicianId)
           ..add('hcrId', hcrId)
           ..add('saleDate', saleDate)
           ..add('bizUnitId', bizUnitId)
@@ -444,6 +459,10 @@ class CreateSalesOrderApiRequestBuilder
   String _deliverToId;
   String get deliverToId => _$this._deliverToId;
   set deliverToId(String deliverToId) => _$this._deliverToId = deliverToId;
+
+  String _physicianId;
+  String get physicianId => _$this._physicianId;
+  set physicianId(String physicianId) => _$this._physicianId = physicianId;
 
   String _hcrId;
   String get hcrId => _$this._hcrId;
@@ -529,6 +548,7 @@ class CreateSalesOrderApiRequestBuilder
       _shipToId = _$v.shipToId;
       _billToId = _$v.billToId;
       _deliverToId = _$v.deliverToId;
+      _physicianId = _$v.physicianId;
       _hcrId = _$v.hcrId;
       _saleDate = _$v.saleDate;
       _bizUnitId = _$v.bizUnitId;
@@ -573,6 +593,7 @@ class CreateSalesOrderApiRequestBuilder
               shipToId: shipToId,
               billToId: billToId,
               deliverToId: deliverToId,
+              physicianId: physicianId,
               hcrId: hcrId,
               saleDate: saleDate,
               bizUnitId: bizUnitId,
@@ -634,6 +655,7 @@ class _$CreateSalesOrderApiRequestActions
   final FieldDispatcher<String> shipToId;
   final FieldDispatcher<String> billToId;
   final FieldDispatcher<String> deliverToId;
+  final FieldDispatcher<String> physicianId;
   final FieldDispatcher<String> hcrId;
   final FieldDispatcher<DateTime> saleDate;
   final FieldDispatcher<String> bizUnitId;
@@ -669,6 +691,11 @@ class _$CreateSalesOrderApiRequestActions
             (a) => a?.deliverToId,
             (s) => s?.deliverToId,
             (p, b) => p?.deliverToId = b),
+        physicianId = $options.field<String>(
+            'physicianId',
+            (a) => a?.physicianId,
+            (s) => s?.physicianId,
+            (p, b) => p?.physicianId = b),
         hcrId = $options.field<String>(
             'hcrId', (a) => a?.hcrId, (s) => s?.hcrId, (p, b) => p?.hcrId = b),
         saleDate = $options.field<DateTime>('saleDate', (a) => a?.saleDate,
@@ -757,6 +784,7 @@ class _$CreateSalesOrderApiRequestActions
         this.shipToId,
         this.billToId,
         this.deliverToId,
+        this.physicianId,
         this.hcrId,
         this.saleDate,
         this.bizUnitId,
@@ -781,6 +809,7 @@ class _$CreateSalesOrderApiRequestActions
     shipToId.$reducer(reducer);
     billToId.$reducer(reducer);
     deliverToId.$reducer(reducer);
+    physicianId.$reducer(reducer);
     hcrId.$reducer(reducer);
     saleDate.$reducer(reducer);
     bizUnitId.$reducer(reducer);

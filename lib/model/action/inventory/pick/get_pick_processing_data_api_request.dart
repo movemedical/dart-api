@@ -14,6 +14,9 @@ abstract class GetPickProcessingDataApiRequest implements Built<GetPickProcessin
   @nullable
   String get shipmentId;
   
+  @nullable
+  String get orderId;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -35,6 +38,8 @@ abstract class GetPickProcessingDataApiRequestActions extends ModelActions<GetPi
   ////////////////////////////////
   
   FieldDispatcher<String> get shipmentId;
+  
+  FieldDispatcher<String> get orderId;
   
   ////////////////////////////////
   /// Constructors

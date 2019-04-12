@@ -4,6 +4,7 @@ import 'package:modux/modux.dart';
 
 import 'package:movemedical_api/model/sql/enums/stock_container_type.dart';
 import 'dart:core';
+import 'package:movemedical_api/model/sql/enums/zone_type.dart';
 import 'package:movemedical_api/model/sql/enums/bin_type.dart';
 
 part 'stock_container.g.dart';
@@ -18,6 +19,15 @@ abstract class StockContainer implements Built<StockContainer, StockContainerBui
   
   @nullable
   String get containerId;
+  
+  @nullable
+  String get zoneId;
+  
+  @nullable
+  ZoneType get zoneType;
+  
+  @nullable
+  String get zoneName;
   
   @nullable
   String get binName;
@@ -90,6 +100,12 @@ abstract class StockContainerActions extends ModelActions<StockContainer, StockC
   FieldDispatcher<StockContainerType> get containerType;
   
   FieldDispatcher<String> get containerId;
+  
+  FieldDispatcher<String> get zoneId;
+  
+  FieldDispatcher<ZoneType> get zoneType;
+  
+  FieldDispatcher<String> get zoneName;
   
   FieldDispatcher<String> get binName;
   

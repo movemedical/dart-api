@@ -204,6 +204,20 @@ class _$GetOrgUnitApiOrgUnitDetailSerializer
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
+    if (object.attributes != null) {
+      result
+        ..add('attributes')
+        ..add(serializers.serialize(object.attributes,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(OrgUnitAttribute)])));
+    }
+    if (object.attributeContacts != null) {
+      result
+        ..add('attributeContacts')
+        ..add(serializers.serialize(object.attributeContacts,
+            specifiedType: const FullType(
+                BuiltList, const [const FullType(AttributeContact)])));
+    }
 
     return result;
   }
@@ -340,6 +354,18 @@ class _$GetOrgUnitApiOrgUnitDetailSerializer
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
+        case 'attributes':
+          result.attributes.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(OrgUnitAttribute)]))
+              as BuiltList);
+          break;
+        case 'attributeContacts':
+          result.attributeContacts.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(
+                      BuiltList, const [const FullType(AttributeContact)]))
+              as BuiltList);
+          break;
       }
     }
 
@@ -408,6 +434,10 @@ class _$GetOrgUnitApiOrgUnitDetail extends GetOrgUnitApiOrgUnitDetail {
   final bool allowMixedInventoryTypeUsage;
   @override
   final bool active;
+  @override
+  final BuiltList<OrgUnitAttribute> attributes;
+  @override
+  final BuiltList<AttributeContact> attributeContacts;
 
   factory _$GetOrgUnitApiOrgUnitDetail(
           [void updates(GetOrgUnitApiOrgUnitDetailBuilder b)]) =>
@@ -443,7 +473,9 @@ class _$GetOrgUnitApiOrgUnitDetail extends GetOrgUnitApiOrgUnitDetail {
       this.requirementsLeadTimeHours,
       this.allowRemoteUsage,
       this.allowMixedInventoryTypeUsage,
-      this.active})
+      this.active,
+      this.attributes,
+      this.attributeContacts})
       : super._();
 
   @override
@@ -488,7 +520,9 @@ class _$GetOrgUnitApiOrgUnitDetail extends GetOrgUnitApiOrgUnitDetail {
         requirementsLeadTimeHours == other.requirementsLeadTimeHours &&
         allowRemoteUsage == other.allowRemoteUsage &&
         allowMixedInventoryTypeUsage == other.allowMixedInventoryTypeUsage &&
-        active == other.active;
+        active == other.active &&
+        attributes == other.attributes &&
+        attributeContacts == other.attributeContacts;
   }
 
   @override
@@ -511,26 +545,26 @@ class _$GetOrgUnitApiOrgUnitDetail extends GetOrgUnitApiOrgUnitDetail {
                                                                 $jc(
                                                                     $jc(
                                                                         $jc(
-                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), parentOuId.hashCode), parentOuName.hashCode), parentOuPublicName.hashCode), rootOuId.hashCode), rootOuName.hashCode), rootOuPublicName.hashCode), opsOuId.hashCode),
-                                                                                opsOuName.hashCode),
-                                                                            opsOuPublicName.hashCode),
-                                                                        ouReference.hashCode),
-                                                                    name.hashCode),
-                                                                publicName.hashCode),
-                                                            email.hashCode),
-                                                        salesOu.hashCode),
-                                                    opsOu.hashCode),
-                                                signUpAllowed.hashCode),
-                                            publicListing.hashCode),
-                                        description.hashCode),
-                                    label.hashCode),
-                                schema.hashCode),
-                            bottom.hashCode),
-                        fulfillmentLeadTimeHours.hashCode),
-                    requirementsLeadTimeHours.hashCode),
-                allowRemoteUsage.hashCode),
-            allowMixedInventoryTypeUsage.hashCode),
-        active.hashCode));
+                                                                            $jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc($jc(0, id.hashCode), orgId.hashCode), orgType.hashCode), orgName.hashCode), parentOuId.hashCode), parentOuName.hashCode), parentOuPublicName.hashCode), rootOuId.hashCode), rootOuName.hashCode), rootOuPublicName.hashCode), opsOuId.hashCode), opsOuName.hashCode), opsOuPublicName.hashCode),
+                                                                                ouReference.hashCode),
+                                                                            name.hashCode),
+                                                                        publicName.hashCode),
+                                                                    email.hashCode),
+                                                                salesOu.hashCode),
+                                                            opsOu.hashCode),
+                                                        signUpAllowed.hashCode),
+                                                    publicListing.hashCode),
+                                                description.hashCode),
+                                            label.hashCode),
+                                        schema.hashCode),
+                                    bottom.hashCode),
+                                fulfillmentLeadTimeHours.hashCode),
+                            requirementsLeadTimeHours.hashCode),
+                        allowRemoteUsage.hashCode),
+                    allowMixedInventoryTypeUsage.hashCode),
+                active.hashCode),
+            attributes.hashCode),
+        attributeContacts.hashCode));
   }
 
   @override
@@ -565,7 +599,9 @@ class _$GetOrgUnitApiOrgUnitDetail extends GetOrgUnitApiOrgUnitDetail {
           ..add('requirementsLeadTimeHours', requirementsLeadTimeHours)
           ..add('allowRemoteUsage', allowRemoteUsage)
           ..add('allowMixedInventoryTypeUsage', allowMixedInventoryTypeUsage)
-          ..add('active', active))
+          ..add('active', active)
+          ..add('attributes', attributes)
+          ..add('attributeContacts', attributeContacts))
         .toString();
   }
 }
@@ -704,6 +740,18 @@ class GetOrgUnitApiOrgUnitDetailBuilder
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
+  ListBuilder<OrgUnitAttribute> _attributes;
+  ListBuilder<OrgUnitAttribute> get attributes =>
+      _$this._attributes ??= new ListBuilder<OrgUnitAttribute>();
+  set attributes(ListBuilder<OrgUnitAttribute> attributes) =>
+      _$this._attributes = attributes;
+
+  ListBuilder<AttributeContact> _attributeContacts;
+  ListBuilder<AttributeContact> get attributeContacts =>
+      _$this._attributeContacts ??= new ListBuilder<AttributeContact>();
+  set attributeContacts(ListBuilder<AttributeContact> attributeContacts) =>
+      _$this._attributeContacts = attributeContacts;
+
   GetOrgUnitApiOrgUnitDetailBuilder();
 
   GetOrgUnitApiOrgUnitDetailBuilder get _$this {
@@ -738,6 +786,8 @@ class GetOrgUnitApiOrgUnitDetailBuilder
       _allowRemoteUsage = _$v.allowRemoteUsage;
       _allowMixedInventoryTypeUsage = _$v.allowMixedInventoryTypeUsage;
       _active = _$v.active;
+      _attributes = _$v.attributes?.toBuilder();
+      _attributeContacts = _$v.attributeContacts?.toBuilder();
       _$v = null;
     }
     return this;
@@ -791,12 +841,19 @@ class GetOrgUnitApiOrgUnitDetailBuilder
               requirementsLeadTimeHours: requirementsLeadTimeHours,
               allowRemoteUsage: allowRemoteUsage,
               allowMixedInventoryTypeUsage: allowMixedInventoryTypeUsage,
-              active: active);
+              active: active,
+              attributes: _attributes?.build(),
+              attributeContacts: _attributeContacts?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'email';
         _email?.build();
+
+        _$failedField = 'attributes';
+        _attributes?.build();
+        _$failedField = 'attributeContacts';
+        _attributeContacts?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetOrgUnitApiOrgUnitDetail', _$failedField, e.toString());
@@ -860,6 +917,8 @@ class _$GetOrgUnitApiOrgUnitDetailActions
   final FieldDispatcher<bool> allowRemoteUsage;
   final FieldDispatcher<bool> allowMixedInventoryTypeUsage;
   final FieldDispatcher<bool> active;
+  final FieldDispatcher<BuiltList<OrgUnitAttribute>> attributes;
+  final FieldDispatcher<BuiltList<AttributeContact>> attributeContacts;
 
   _$GetOrgUnitApiOrgUnitDetailActions._(this.$options)
       : $replace = $options.action<GetOrgUnitApiOrgUnitDetail>(
@@ -965,6 +1024,16 @@ class _$GetOrgUnitApiOrgUnitDetailActions
             (p, b) => p?.allowMixedInventoryTypeUsage = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
+        attributes = $options.field<BuiltList<OrgUnitAttribute>>(
+            'attributes',
+            (a) => a?.attributes,
+            (s) => s?.attributes,
+            (p, b) => p?.attributes = b),
+        attributeContacts = $options.field<BuiltList<AttributeContact>>(
+            'attributeContacts',
+            (a) => a?.attributeContacts,
+            (s) => s?.attributeContacts,
+            (p, b) => p?.attributeContacts = b),
         super._();
 
   factory _$GetOrgUnitApiOrgUnitDetailActions(
@@ -1018,6 +1087,8 @@ class _$GetOrgUnitApiOrgUnitDetailActions
         this.allowRemoteUsage,
         this.allowMixedInventoryTypeUsage,
         this.active,
+        this.attributes,
+        this.attributeContacts,
       ]);
 
   @override
@@ -1053,6 +1124,8 @@ class _$GetOrgUnitApiOrgUnitDetailActions
     allowRemoteUsage.$reducer(reducer);
     allowMixedInventoryTypeUsage.$reducer(reducer);
     active.$reducer(reducer);
+    attributes.$reducer(reducer);
+    attributeContacts.$reducer(reducer);
   }
 
   @override

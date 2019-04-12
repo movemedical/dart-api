@@ -13,6 +13,8 @@ class OrderReasonGroup extends EnumClass {
   static const OrderReasonGroup DEMAND_LOAN_RETURN = _$wireDEMAND_LOAN_RETURN;
   static const OrderReasonGroup PAR_LOAN = _$wirePAR_LOAN;
   static const OrderReasonGroup PAR_LOAN_RETURN = _$wirePAR_LOAN_RETURN;
+  static const OrderReasonGroup PAR_LOAN_COMPLIANCE = _$wirePAR_LOAN_COMPLIANCE;
+  static const OrderReasonGroup PAR_LOAN_COMPLIANCE_RETURN = _$wirePAR_LOAN_COMPLIANCE_RETURN;
   static const OrderReasonGroup TRANSFER = _$wireTRANSFER;
   static const OrderReasonGroup INFLATE = _$wireINFLATE;
   static const OrderReasonGroup DEFLATE = _$wireDEFLATE;

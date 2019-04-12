@@ -18,6 +18,9 @@ abstract class ListStockForSourcingMatrixApiLineAvailability implements Built<Li
   @nullable
   BuiltList<String> get availableStockIds;
   
+  @nullable
+  BuiltList<String> get availableQuestionableStockIds;
+  
   ////////////////////////////////
   /// Constructors
   ////////////////////////////////
@@ -41,6 +44,8 @@ abstract class ListStockForSourcingMatrixApiLineAvailabilityActions extends Mode
   FieldDispatcher<String> get locationKey;
   
   FieldDispatcher<BuiltList<String>> get availableStockIds;
+  
+  FieldDispatcher<BuiltList<String>> get availableQuestionableStockIds;
   
   ////////////////////////////////
   /// Constructors

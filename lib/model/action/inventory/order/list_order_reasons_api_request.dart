@@ -27,6 +27,9 @@ abstract class ListOrderReasonsApiRequest implements Built<ListOrderReasonsApiRe
   bool get active;
   
   @nullable
+  bool get forCreate;
+  
+  @nullable
   PaginationParams get paging;
   
   ////////////////////////////////
@@ -56,6 +59,8 @@ abstract class ListOrderReasonsApiRequestActions extends ModelActions<ListOrderR
   FieldDispatcher<BuiltList<OrderReasonGroup>> get reasonGroups;
   
   FieldDispatcher<bool> get active;
+  
+  FieldDispatcher<bool> get forCreate;
   
   PaginationParamsActions get paging;
   

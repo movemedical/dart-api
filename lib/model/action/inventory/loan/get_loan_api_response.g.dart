@@ -27,6 +27,20 @@ class _$GetLoanApiResponseSerializer
         ..add(serializers.serialize(object.loan,
             specifiedType: const FullType(GetLoanApiLoan)));
     }
+    if (object.displayRules != null) {
+      result
+        ..add('displayRules')
+        ..add(serializers.serialize(object.displayRules,
+            specifiedType: const FullType(GetLoanApiDisplayRules)));
+    }
+    if (object.consignmentLoanFields != null) {
+      result
+        ..add('consignmentLoanFields')
+        ..add(serializers.serialize(object.consignmentLoanFields,
+            specifiedType: const FullType(BuiltList, const [
+              const FullType(GetConsignmentLoanFieldsApiLoanFieldData)
+            ])));
+    }
 
     return result;
   }
@@ -46,6 +60,17 @@ class _$GetLoanApiResponseSerializer
           result.loan.replace(serializers.deserialize(value,
               specifiedType: const FullType(GetLoanApiLoan)) as GetLoanApiLoan);
           break;
+        case 'displayRules':
+          result.displayRules.replace(serializers.deserialize(value,
+                  specifiedType: const FullType(GetLoanApiDisplayRules))
+              as GetLoanApiDisplayRules);
+          break;
+        case 'consignmentLoanFields':
+          result.consignmentLoanFields.replace(serializers.deserialize(value,
+              specifiedType: const FullType(BuiltList, const [
+                const FullType(GetConsignmentLoanFieldsApiLoanFieldData)
+              ])) as BuiltList);
+          break;
       }
     }
 
@@ -56,11 +81,18 @@ class _$GetLoanApiResponseSerializer
 class _$GetLoanApiResponse extends GetLoanApiResponse {
   @override
   final GetLoanApiLoan loan;
+  @override
+  final GetLoanApiDisplayRules displayRules;
+  @override
+  final BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>
+      consignmentLoanFields;
 
   factory _$GetLoanApiResponse([void updates(GetLoanApiResponseBuilder b)]) =>
       (new GetLoanApiResponseBuilder()..update(updates)).build();
 
-  _$GetLoanApiResponse._({this.loan}) : super._();
+  _$GetLoanApiResponse._(
+      {this.loan, this.displayRules, this.consignmentLoanFields})
+      : super._();
 
   @override
   GetLoanApiResponse rebuild(void updates(GetLoanApiResponseBuilder b)) =>
@@ -73,18 +105,24 @@ class _$GetLoanApiResponse extends GetLoanApiResponse {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is GetLoanApiResponse && loan == other.loan;
+    return other is GetLoanApiResponse &&
+        loan == other.loan &&
+        displayRules == other.displayRules &&
+        consignmentLoanFields == other.consignmentLoanFields;
   }
 
   @override
   int get hashCode {
-    return $jf($jc(0, loan.hashCode));
+    return $jf($jc($jc($jc(0, loan.hashCode), displayRules.hashCode),
+        consignmentLoanFields.hashCode));
   }
 
   @override
   String toString() {
     return (newBuiltValueToStringHelper('GetLoanApiResponse')
-          ..add('loan', loan))
+          ..add('loan', loan)
+          ..add('displayRules', displayRules)
+          ..add('consignmentLoanFields', consignmentLoanFields))
         .toString();
   }
 }
@@ -98,11 +136,28 @@ class GetLoanApiResponseBuilder
       _$this._loan ??= new GetLoanApiLoanBuilder();
   set loan(GetLoanApiLoanBuilder loan) => _$this._loan = loan;
 
+  GetLoanApiDisplayRulesBuilder _displayRules;
+  GetLoanApiDisplayRulesBuilder get displayRules =>
+      _$this._displayRules ??= new GetLoanApiDisplayRulesBuilder();
+  set displayRules(GetLoanApiDisplayRulesBuilder displayRules) =>
+      _$this._displayRules = displayRules;
+
+  ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData> _consignmentLoanFields;
+  ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
+      get consignmentLoanFields => _$this._consignmentLoanFields ??=
+          new ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>();
+  set consignmentLoanFields(
+          ListBuilder<GetConsignmentLoanFieldsApiLoanFieldData>
+              consignmentLoanFields) =>
+      _$this._consignmentLoanFields = consignmentLoanFields;
+
   GetLoanApiResponseBuilder();
 
   GetLoanApiResponseBuilder get _$this {
     if (_$v != null) {
       _loan = _$v.loan?.toBuilder();
+      _displayRules = _$v.displayRules?.toBuilder();
+      _consignmentLoanFields = _$v.consignmentLoanFields?.toBuilder();
       _$v = null;
     }
     return this;
@@ -125,12 +180,20 @@ class GetLoanApiResponseBuilder
   _$GetLoanApiResponse build() {
     _$GetLoanApiResponse _$result;
     try {
-      _$result = _$v ?? new _$GetLoanApiResponse._(loan: _loan?.build());
+      _$result = _$v ??
+          new _$GetLoanApiResponse._(
+              loan: _loan?.build(),
+              displayRules: _displayRules?.build(),
+              consignmentLoanFields: _consignmentLoanFields?.build());
     } catch (_) {
       String _$failedField;
       try {
         _$failedField = 'loan';
         _loan?.build();
+        _$failedField = 'displayRules';
+        _displayRules?.build();
+        _$failedField = 'consignmentLoanFields';
+        _consignmentLoanFields?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             'GetLoanApiResponse', _$failedField, e.toString());
@@ -160,6 +223,9 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
 
   final ActionDispatcher<GetLoanApiResponse> $replace;
   final GetLoanApiLoanActions loan;
+  final GetLoanApiDisplayRulesActions displayRules;
+  final FieldDispatcher<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>
+      consignmentLoanFields;
 
   _$GetLoanApiResponseActions._(this.$options)
       : $replace = $options.action<GetLoanApiResponse>(
@@ -171,6 +237,21 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
             (s) => s?.loan,
             (b) => b?.loan,
             (parent, builder) => parent?.loan = builder)),
+        displayRules = GetLoanApiDisplayRulesActions(() => $options.stateful<
+                GetLoanApiDisplayRules,
+                GetLoanApiDisplayRulesBuilder,
+                GetLoanApiDisplayRulesActions>(
+            'displayRules',
+            (a) => a.displayRules,
+            (s) => s?.displayRules,
+            (b) => b?.displayRules,
+            (parent, builder) => parent?.displayRules = builder)),
+        consignmentLoanFields =
+            $options.field<BuiltList<GetConsignmentLoanFieldsApiLoanFieldData>>(
+                'consignmentLoanFields',
+                (a) => a?.consignmentLoanFields,
+                (s) => s?.consignmentLoanFields,
+                (p, b) => p?.consignmentLoanFields = b),
         super._();
 
   factory _$GetLoanApiResponseActions(
@@ -187,6 +268,7 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
   @override
   BuiltList<ModuxActions> get $nested => _$nested ??= BuiltList<ModuxActions>([
         this.loan,
+        this.displayRules,
       ]);
 
   BuiltList<ActionDispatcher> _$actions;
@@ -194,18 +276,22 @@ class _$GetLoanApiResponseActions extends GetLoanApiResponseActions {
   BuiltList<ActionDispatcher> get $actions =>
       _$actions ??= BuiltList<ActionDispatcher>([
         this.$replace,
+        this.consignmentLoanFields,
       ]);
 
   @override
   void $reducer(ReducerBuilder reducer) {
     super.$reducer(reducer);
     loan.$reducer(reducer);
+    displayRules.$reducer(reducer);
+    consignmentLoanFields.$reducer(reducer);
   }
 
   @override
   void $middleware(MiddlewareBuilder middleware) {
     super.$middleware(middleware);
     loan.$middleware(middleware);
+    displayRules.$middleware(middleware);
   }
 
   FullType _$fullType;

@@ -68,18 +68,6 @@ class _$ListCustomersApiCustomerDetailsSerializer
         ..add(serializers.serialize(object.active,
             specifiedType: const FullType(bool)));
     }
-    if (object.city != null) {
-      result
-        ..add('city')
-        ..add(serializers.serialize(object.city,
-            specifiedType: const FullType(String)));
-    }
-    if (object.state != null) {
-      result
-        ..add('state')
-        ..add(serializers.serialize(object.state,
-            specifiedType: const FullType(String)));
-    }
 
     return result;
   }
@@ -124,14 +112,6 @@ class _$ListCustomersApiCustomerDetailsSerializer
           result.active = serializers.deserialize(value,
               specifiedType: const FullType(bool)) as bool;
           break;
-        case 'city':
-          result.city = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
-        case 'state':
-          result.state = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String;
-          break;
       }
     }
 
@@ -155,10 +135,6 @@ class _$ListCustomersApiCustomerDetails
   final String formattedName;
   @override
   final bool active;
-  @override
-  final String city;
-  @override
-  final String state;
 
   factory _$ListCustomersApiCustomerDetails(
           [void updates(ListCustomersApiCustomerDetailsBuilder b)]) =>
@@ -171,9 +147,7 @@ class _$ListCustomersApiCustomerDetails
       this.customerNumber,
       this.name,
       this.formattedName,
-      this.active,
-      this.city,
-      this.state})
+      this.active})
       : super._();
 
   @override
@@ -195,9 +169,7 @@ class _$ListCustomersApiCustomerDetails
         customerNumber == other.customerNumber &&
         name == other.name &&
         formattedName == other.formattedName &&
-        active == other.active &&
-        city == other.city &&
-        state == other.state;
+        active == other.active;
   }
 
   @override
@@ -206,16 +178,12 @@ class _$ListCustomersApiCustomerDetails
         $jc(
             $jc(
                 $jc(
-                    $jc(
-                        $jc(
-                            $jc($jc($jc(0, id.hashCode), hsOrgId.hashCode),
-                                hsOrgName.hashCode),
-                            customerNumber.hashCode),
-                        name.hashCode),
-                    formattedName.hashCode),
-                active.hashCode),
-            city.hashCode),
-        state.hashCode));
+                    $jc($jc($jc(0, id.hashCode), hsOrgId.hashCode),
+                        hsOrgName.hashCode),
+                    customerNumber.hashCode),
+                name.hashCode),
+            formattedName.hashCode),
+        active.hashCode));
   }
 
   @override
@@ -227,9 +195,7 @@ class _$ListCustomersApiCustomerDetails
           ..add('customerNumber', customerNumber)
           ..add('name', name)
           ..add('formattedName', formattedName)
-          ..add('active', active)
-          ..add('city', city)
-          ..add('state', state))
+          ..add('active', active))
         .toString();
   }
 }
@@ -270,14 +236,6 @@ class ListCustomersApiCustomerDetailsBuilder
   bool get active => _$this._active;
   set active(bool active) => _$this._active = active;
 
-  String _city;
-  String get city => _$this._city;
-  set city(String city) => _$this._city = city;
-
-  String _state;
-  String get state => _$this._state;
-  set state(String state) => _$this._state = state;
-
   ListCustomersApiCustomerDetailsBuilder();
 
   ListCustomersApiCustomerDetailsBuilder get _$this {
@@ -289,8 +247,6 @@ class ListCustomersApiCustomerDetailsBuilder
       _name = _$v.name;
       _formattedName = _$v.formattedName;
       _active = _$v.active;
-      _city = _$v.city;
-      _state = _$v.state;
       _$v = null;
     }
     return this;
@@ -319,9 +275,7 @@ class ListCustomersApiCustomerDetailsBuilder
             customerNumber: customerNumber,
             name: name,
             formattedName: formattedName,
-            active: active,
-            city: city,
-            state: state);
+            active: active);
     replace(_$result);
     return _$result;
   }
@@ -356,8 +310,6 @@ class _$ListCustomersApiCustomerDetailsActions
   final FieldDispatcher<String> name;
   final FieldDispatcher<String> formattedName;
   final FieldDispatcher<bool> active;
-  final FieldDispatcher<String> city;
-  final FieldDispatcher<String> state;
 
   _$ListCustomersApiCustomerDetailsActions._(this.$options)
       : $replace = $options.action<ListCustomersApiCustomerDetails>(
@@ -382,10 +334,6 @@ class _$ListCustomersApiCustomerDetailsActions
             (p, b) => p?.formattedName = b),
         active = $options.field<bool>('active', (a) => a?.active,
             (s) => s?.active, (p, b) => p?.active = b),
-        city = $options.field<String>(
-            'city', (a) => a?.city, (s) => s?.city, (p, b) => p?.city = b),
-        state = $options.field<String>(
-            'state', (a) => a?.state, (s) => s?.state, (p, b) => p?.state = b),
         super._();
 
   factory _$ListCustomersApiCustomerDetailsActions(
@@ -412,8 +360,6 @@ class _$ListCustomersApiCustomerDetailsActions
         this.name,
         this.formattedName,
         this.active,
-        this.city,
-        this.state,
       ]);
 
   @override
@@ -426,8 +372,6 @@ class _$ListCustomersApiCustomerDetailsActions
     name.$reducer(reducer);
     formattedName.$reducer(reducer);
     active.$reducer(reducer);
-    city.$reducer(reducer);
-    state.$reducer(reducer);
   }
 
   @override
