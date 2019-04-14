@@ -64,7 +64,7 @@ void main() {
     final api = store.service<ApiService>();
 
     store.actions.loginCommand.onResult((event, result) {
-      print('Result!!! -> ${result}');
+//      print('Result!!! -> ${result}');
     });
 
     final future = store.actions.loginCommand(
@@ -74,16 +74,51 @@ void main() {
           ..password = 'move'));
 
     final result = await future;
-
-    final setupFuture = store.actions.setupCommand(
-        builder: (b) => b
-          ..appVersion = '1.0.0'
-          ..platformVersion = 'Dart 2.2',
-        timeout: Duration(seconds: 600));
-
-    final setupResult = await setupFuture;
     print(result);
-    print(setupResult);
+
+    {
+      final watch = Stopwatch();
+      watch.start();
+      for (int i = 0; i < 30; i++) {
+        final start = DateTime.now();
+        final setupFuture = store.actions.loginCommand(
+            request: LoginRequest((b) => b
+              ..session = ''
+              ..email = 'admin@movemedical.com'
+              ..password = 'move'));
+
+        setupFuture.cancel();
+        final setupResult = await setupFuture;
+        print(DateTime.now().difference(start).inMilliseconds);
+//      print(
+//          '${setupResult.code} ${setupResult.value?.code} ${setupResult.value?.value?.uiSetup?.user?.displayName}');
+      }
+      watch.stop();
+      print('Total: ${(watch.elapsedMicroseconds / 1000.0 / 100.0)}ms / call');
+    }
+
+    final watch = Stopwatch();
+    final futures = <Future>[];
+    watch.start();
+    for (int i = 0; i < 30; i++) {
+      final start = DateTime.now();
+      final setupFuture = store.actions.setupCommand(
+          builder: (b) => b
+            ..appVersion = '1.0.0'
+            ..platformVersion = 'Dart 2.2',
+          timeout: Duration(seconds: 600));
+
+      futures.add(setupFuture);
+//      final setupResult = await setupFuture;
+//      print(DateTime.now().difference(start).inMilliseconds);
+//      print(
+//          '${setupResult.code} ${setupResult.value?.code} ${setupResult.value?.value?.uiSetup?.user?.displayName}');
+    }
+    final list = await Future.wait(futures);
+    watch.stop();
+    print('Total: ${(watch.elapsedMicroseconds / 1000.0 / 100.0)}ms / call');
+
+//    print(list);
   });
 }
 
