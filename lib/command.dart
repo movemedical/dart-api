@@ -134,6 +134,7 @@ abstract class ApiState implements Built<ApiState, ApiStateBuilder> {
   static Serializer<ApiState> get serializer => _$apiStateSerializer;
 }
 
+///
 class ApiFuture<
         Req extends Built<Req, ReqBuilder>,
         ReqBuilder extends Builder<Req, ReqBuilder>,
@@ -188,11 +189,13 @@ abstract class ApiDispatcher<
     Resp,
     RespBuilder,
     Actions> {
+  /// Relative Uri path.
   String get path;
 
   ApiFuture<Req, ReqBuilder, Resp, RespBuilder, Actions> call(
       {Req request,
       void builder(ReqBuilder),
+      // Default timeout to 30 seconds.
       Duration timeout = const Duration(seconds: 30)}) {
     final r = create(
         request: request, builder: builder, timeout: timeout, path: path);
@@ -358,14 +361,14 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
   static const moveSessionId = 'move-session-id';
 
   ApiService(Store store, ApiActions actions)
-      : httpFactory = store.httpFactory,
-        wsFactory = store.wsFactory,
-        _pool = HttpPoolClient(store.httpFactory, 1, 16),
+      : _pool = HttpPoolClient(store.httpFactory, 1, 16),
         super(store, actions);
 
   final HttpPoolClient _pool;
-  final HttpClientFactory httpFactory;
-  final WebSocketFactory wsFactory;
+
+  HttpClientFactory get httpFactory => store.httpFactory;
+
+  WebSocketFactory get wsFactory => store.wsFactory;
 
   ws.WebSocketChannel _ws;
   StreamSubscription _wsSubscription;
@@ -484,7 +487,7 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
     try {
       Duration timeout = command.timeout;
       if (!command.hasTimeout) {
-        timeout = Duration(seconds: 15);
+        timeout = Duration(seconds: 30);
       } else if (command.timeout.inMilliseconds < 1000) {
         timeout = Duration(seconds: 1);
       }

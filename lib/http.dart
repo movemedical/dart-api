@@ -61,7 +61,6 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
       _timer?.cancel();
       _timer = null;
       final conn = _conn;
-      conn?._call = null;
 
       if (_canceled) {
         conn?.cancel();
@@ -127,7 +126,7 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
     if (_conn != null) {
       pool._idle.remove(_conn);
       pool._active.add(this);
-      _onConn();
+      _prepareSend();
       return completer.future;
     }
 
@@ -144,7 +143,7 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
       _conn = HttpConn(pool, pool.factory());
       pool._active.add(this);
       _startTimer();
-      _onConn();
+      _prepareSend();
     }
 
     return completer.future;
@@ -171,11 +170,12 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
     if (_conn != null) return false;
 
     _conn = conn;
-    _onConn();
+    _prepareSend();
     return true;
   }
 
-  void _onConn() {
+  ///
+  void _prepareSend() {
     if (_conn == null) {
       if (!completer.isCompleted) {
         completer.complete(HttpCallResult.error(
@@ -184,8 +184,6 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
       }
       return;
     }
-
-    _conn._call = this;
 
     try {
       // Create Http Request.
@@ -198,7 +196,7 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
     } catch (e, stackTrace) {
       if (!completer.isCompleted) {
         completer.complete(HttpCallResult.error(
-            elapsed, HttpCallErrorCode.error,
+            elapsed, HttpCallErrorCode.request,
             error: e, stackTrace: stackTrace));
       }
       return;
@@ -241,6 +239,7 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
   }
 
   void _send() {
+    if (completer.isCompleted) return;
     try {
       _responseFuture = _conn._client.send(_request);
       if (_responseFuture == null)
@@ -264,14 +263,14 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
   }
 
   Future _onResponse() async {
+    if (completer.isCompleted) return;
     try {
       Uint8List buffer;
       if (_response.stream != null) {
         await for (var chunk in _response.stream) {
-          // Check if closing.
-          if (completer.isCompleted) {
-            return;
-          }
+          // Check if closed.
+          if (completer.isCompleted) return;
+
           if (buffer == null) {
             buffer = Uint8List.fromList(chunk);
           } else {
@@ -289,6 +288,7 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
   }
 
   void _deserialize(Uint8List buffer) {
+    if (completer.isCompleted) return;
     if (buffer != null && buffer.length > 0 && respSerializer != null) {
       try {
         final f = jsonService.deserialize(respSerializer, buffer);
@@ -325,6 +325,19 @@ class HttpCall<ReqT, RespT> extends LinkedListEntry<HttpCall> {
 
 /// Manages a pool of platform agnostic Http connections.
 class HttpPoolClient {
+  HttpPoolClient(this.factory, this._min, this._max) {
+    if (_min < 0) _min = 0;
+    if (_max < _min) _max = _min;
+    if (_max < 1) _max = 1;
+
+    // Warm up the pool.
+    if (_min > 0) {
+      for (var i = 0; i < _min; i++) {
+        _idle.add(HttpConn(this, factory()));
+      }
+    }
+  }
+
   final HttpClientFactory factory;
   final _active = LinkedList<HttpCall>();
   final _backlog = LinkedList<HttpCall>();
@@ -333,22 +346,15 @@ class HttpPoolClient {
   bool _closing = false;
   int _min = 1;
   int _max = 15;
-  int _bgThreshold = 4096;
   int _maxBacklog = 250;
 
+  int get minConnections => _min;
+
+  int get maxConnections => _max;
+
+  int get maxBacklog => _maxBacklog;
+
   int get totalConnections => _active.length + _idle.length;
-
-  HttpPoolClient(this.factory, this._min, this._max) {
-    if (_min < 0) _min = 0;
-    if (_max < _min) _max = _min;
-    if (_max < 1) _max = 1;
-
-    if (_min > 0) {
-      for (var i = 0; i < _min; i++) {
-        _idle.add(HttpConn(this, factory()));
-      }
-    }
-  }
 
   void close() {
     _closing = true;
@@ -380,10 +386,10 @@ class HttpPoolClient {
     return c;
   }
 
-  bool isActive(HttpConn conn) => conn.list == _active;
-
+  ///
   bool isIdle(HttpConn conn) => conn.list == _idle;
 
+  ///
   void _forceClose(HttpConn conn) {
     try {
       conn?.unlink();
@@ -403,6 +409,7 @@ class HttpPoolClient {
     if (_active.length >= _max) {}
   }
 
+  ///
   void _dequeue() {
     if (_closing) return;
     if (_backlog.isEmpty) return;
@@ -435,6 +442,7 @@ class HttpPoolClient {
     }
   }
 
+  ///
   void _close(HttpConn conn,
       {dynamic error = null, dynamic stackTrace = null}) {
     if (_closing) {
@@ -459,13 +467,13 @@ class HttpPoolClient {
   }
 }
 
+///
 class HttpConn extends LinkedListEntry<HttpConn> {
   HttpConn(this._pool, this._client) {}
 
   final DateTime created = DateTime.now();
   final HttpPoolClient _pool;
   final http.Client _client;
-  HttpCall _call;
 
   void close() {
     _pool?._close(this);
@@ -478,39 +486,5 @@ class HttpConn extends LinkedListEntry<HttpConn> {
     } catch (e) {}
 
     _pool._dequeue();
-  }
-}
-
-class HttpConnFuture extends LinkedListEntry<HttpConnFuture> {
-  final _completer = Completer<HttpConn>();
-  Timer _timer;
-
-  HttpConnFuture(Duration timeout) {
-    if (timeout == null) {
-      timeout = Duration(seconds: 5);
-    } else if (timeout.inMilliseconds < 1000) {
-      timeout = Duration(seconds: 2);
-    } else if (timeout.inSeconds > 60) {
-      timeout = Duration(seconds: 60);
-    }
-    _timer = Timer(timeout, () {
-      if (!_completer.isCompleted) {
-        unlink();
-        _completer.completeError(TimeoutException('timed-out'));
-      }
-    });
-  }
-
-  void complete(HttpConn conn) {
-    unlink();
-    _completer.complete(conn);
-  }
-
-  void cancel() {
-    _timer?.cancel();
-    _timer = null;
-    unlink();
-    if (_completer.isCompleted) return;
-    _completer.completeError('canceled');
   }
 }

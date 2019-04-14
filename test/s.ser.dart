@@ -5,6 +5,11 @@ import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
 import 'package:movemedical_api/command.dart';
 import 'package:movemedical_api/state/push.dart';
+import 'package:movemedical_api/state/action/inventory/shipment/list_shipments_api.dart';
+import 'package:movemedical_api/model/action/inventory/shipment/list_shipments_api_order_by.dart';
+import 'package:movemedical_api/model/action/inventory/shipment/list_shipments_api_shipment.dart';
+import 'package:movemedical_api/model/sql/enums/shipment_status.dart';
+import 'package:movemedical_api/model/sql/enums/move_shipping_carrier.dart';
 
 import 's.ser.gg.dart';
 
@@ -17,9 +22,20 @@ Serializers _create(SerializersBuilder b) {
   // Add DateTime serializers.
   b.add(Iso8601DateTimeSerializer());
 
+  b..add(ListShipmentsApiResponse.serializer);
+  b..add(ListShipmentsApiShipment.serializer);
+  b..add(ShipmentStatus.serializer);
+  b..add(MoveShippingCarrier.serializer);
+
   b
     ..addBuilderFactory(
         FullType(BuiltList, [FullType(String)]), () => ListBuilder<String>());
+
+  b
+    ..addBuilderFactory(
+        const FullType(
+            BuiltList, const [const FullType(ListShipmentsApiShipment)]),
+        () => ListBuilder<ListShipmentsApiShipment>());
 
   // Json serialization plugin.
   b.addPlugin(StandardJsonPlugin());

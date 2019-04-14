@@ -6,9 +6,7 @@ import 'command.dart';
 
 part 'login.g.dart';
 
-////////////////////////////////
-/// Login Command
-////////////////////////////////
+/// Login Request
 abstract class LoginRequest
     implements Built<LoginRequest, LoginRequestBuilder> {
   @nullable
@@ -27,6 +25,7 @@ abstract class LoginRequest
   static Serializer<LoginRequest> get serializer => _$loginRequestSerializer;
 }
 
+/// Login Request Model
 abstract class LoginRequestActions extends ModelActions<LoginRequest,
     LoginRequestBuilder, LoginRequestActions> {
   FieldDispatcher<String> get email;
@@ -41,7 +40,7 @@ abstract class LoginRequestActions extends ModelActions<LoginRequest,
       _$LoginRequestActions;
 }
 
-///
+/// Login Response.
 abstract class LoginResponse
     implements Built<LoginResponse, LoginResponseBuilder> {
   @nullable
@@ -66,6 +65,7 @@ abstract class LoginResponse
   static Serializer<LoginResponse> get serializer => _$loginResponseSerializer;
 }
 
+///
 abstract class LoginDispatcher extends ApiDispatcher<LoginRequest,
     LoginRequestBuilder, LoginResponse, LoginResponseBuilder, LoginDispatcher> {
   @override
