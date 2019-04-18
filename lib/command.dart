@@ -232,32 +232,33 @@ abstract class ApiDispatcher<
     super.$middleware(builder);
   }
 
-  StoreSubscription<
-      CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-          CommandResult<ApiResult<Resp>>>> onResponse(
-      Function(
-              ModuxEvent<
-                  CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-                      CommandResult<ApiResult<Resp>>>>,
-              Resp response)
-          handler) {
-    return onResult((ev, r) {
-      handler?.call(ev, r?.value?.value);
-    });
+  StoreSubscription<Resp> onResponse(Function(Resp response) handler) {
+    if (handler != null) {
+      return $store.listenMap<
+          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+              CommandResult<ApiResult<Resp>>>,
+          Resp>($result, (p) => p?.payload?.value?.value, handler);
+    } else {
+      return $store.subscribeMap<
+          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+              CommandResult<ApiResult<Resp>>>,
+          Resp>($result, (p) => p?.payload?.value?.value);
+    }
   }
 
-  StoreSubscription<
-      CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-          CommandResult<ApiResult<Resp>>>> onApiResult(
-      Function(
-              ModuxEvent<
-                  CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
-                      CommandResult<ApiResult<Resp>>>>,
-              ApiResult<Resp> result)
-          handler) {
-    return onResult((ev, r) {
-      handler?.call(ev, r?.value);
-    });
+  StoreSubscription<ApiResult<Resp>> onApiResult(
+      Function(ApiResult<Resp> response) handler) {
+    if (handler != null) {
+      return $store.listenMap<
+          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+              CommandResult<ApiResult<Resp>>>,
+          ApiResult<Resp>>($result, (p) => p?.payload?.value, handler);
+    } else {
+      return $store.subscribeMap<
+          CommandPayload<ApiCommand<Req>, ApiResult<Resp>, Actions,
+              CommandResult<ApiResult<Resp>>>,
+          ApiResult<Resp>>($result, (p) => p?.payload?.value);
+    }
   }
 }
 
@@ -379,10 +380,10 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
   Serializers get serializers => store.serializers;
 
   @override
-  void init() {
-    actions.loginCommand.onResult((ev, r) => _onLoggedIn(r?.value?.value));
+  Future init() async {
+    actions.loginCommand.onResult((r) => _onLoggedIn(r?.value?.value));
 
-    actions.setupCommand.onResult((ev, r) {
+    actions.setupCommand.onResult((r) {
       actions.activeSetup(ApiResult.unwrap(r));
     });
 
@@ -390,13 +391,14 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
   }
 
   @override
-  void dispose() {
-    super.dispose();
+  Future dispose() async {
     _pool?.close();
     _wsTimer?.cancel();
     _wsTimer = null;
+    _wsSubscription?.cancel();
     _ws?.sink?.close();
     _ws = null;
+    super.dispose();
   }
 
   void _connectWs(LoginResponse login) {
@@ -406,6 +408,17 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
     actions.wsUrl(url);
 
     _tryConnectWs();
+  }
+
+  void _disconnectWs() {
+    _wsTimer?.cancel();
+    _wsSubscription?.cancel();
+    _ws?.sink?.close();
+    _wsTimer = null;
+    _wsSubscription = null;
+    _ws = null;
+    actions.wsConnected(null);
+    actions.wsDisconnected(DateTime.now());
   }
 
   void _tryConnectWs() {
@@ -428,7 +441,10 @@ class ApiService extends StatefulActionsService<ApiState, ApiStateBuilder,
   void _onLoggedIn(LoginResponse response) {
     actions.activeLogin(response);
 
-    if (response == null) return;
+    if (response == null) {
+      _disconnectWs();
+      return;
+    }
 
     // Connect WebSocket.
     _connectWs(response);

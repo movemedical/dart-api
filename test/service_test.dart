@@ -80,7 +80,7 @@ void main() {
       ..appVersion = 'Move Dart - 1.0.0');
     final api = store.service<ApiService>();
 
-    store.actions.loginCommand.onResult((event, result) {
+    store.actions.loginCommand.onResult((result) {
 //      print('Result!!! -> ${result}');
     });
 

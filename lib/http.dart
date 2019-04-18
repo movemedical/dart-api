@@ -358,9 +358,12 @@ class HttpPoolClient {
 
   void close() {
     _closing = true;
-    _active.forEach((c) => c.cancel());
-    _idle.forEach((c) => _forceClose(c));
-    _backlog.forEach((c) => c.cancel());
+    List.of(_backlog).forEach((c) => c.cancel());
+    List.of(_active).forEach((c) => c.cancel());
+    List.of(_idle).forEach((c) => _forceClose(c));
+//    _active.forEach((c) => c.cancel());
+//    _idle.forEach((c) => _forceClose(c));
+//    _backlog.forEach((c) => c.cancel());
   }
 
   HttpCall<ReqT, RespT> call<ReqT, RespT>(
